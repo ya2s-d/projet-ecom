@@ -230,6 +230,20 @@ Format de restitution : `nom | URL | catégorie | ticket | âge | canaux d'ads`
 
 **Étape 4 — Trendtrack, concurrents.** Sur la survivante seulement : prix, angles, pages produit, ancienneté.
 
+**Étape 5 — Le test, paramètres arrêtés.** 7 jours × 40 $/jour = **280 $** (~470 clics à 0,60 $ de CPC, ~28 % du budget pub). Search exact match + CPC manuel, conformément à la règle 9.
+
+Seuils de décision, posés AVANT lancement :
+
+| Résultat à J+7 (~470 clics) | Décision |
+|---|---|
+| 0 vente | Mort. On coupe. Pas de prolongation |
+| 1 à 3 ventes | Sous l'équilibre mais vivant. On corrige **la page et l'offre**, jamais les enchères, et on repart 7 jours |
+| 4 ventes et + | À l'équilibre ou au-dessus. On continue |
+
+**Règle dure : on ne touche à rien avant J+7.** Ni budget, ni enchères, ni mots-clés. Sur 470 clics étalés sur 7 jours, ce qu'on voit à J+3 est du bruit.
+
+**Pourquoi le ticket ne descend pas sous 70 $** (refus confirmé le 5 sept.) : à PV 60 $ la marge tombe à ~38 $, donc la conversion à l'équilibre passe de **0,88 % à 1,58 %**. Le CPC ne baisse pas quand le prix baisse — il faut presque le double de conversion pour le même clic.
+
 **Astuce gratuite à garder** : ajouter `/products.json` à l'URL d'une boutique Shopify renvoie son catalogue complet, prix et variantes compris.
 
 ---
