@@ -1,0 +1,5 @@
+- [Profil de Yasser](yasser-profil.md) — 17 ans, Bruxelles, e-commerçant, 1 000 € de budget, Google Ads only
+- [Comment travailler avec Yasser](style-travail-yasser.md) — verdicts fermes, gates chiffrées, le blocage est l'exécution pas la sélection
+- [Projet e-commerce : état](projet-ellery-etat.md) — Ellery et padel abandonnés, config figée, recherche produit en cours
+- [Le filtre colonisation](filtre-colonisation-produit.md) — vérifier qui tient déjà la catégorie AVANT de mesurer volume et CPC
+- [Le filtre marque (axe F)](filtre-marque-decide-achat.md) — si l'acheteur cite une marque, un inconnu ne peut pas gagner

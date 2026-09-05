@@ -1,0 +1,10 @@
+# Données personnelles — ne jamais versionner
+CV*.pdf
+*CV-Yasser*
+.env
+*.key
+
+# Système
+Thumbs.db
+.DS_Store
+desktop.ini
