@@ -190,6 +190,8 @@ L'exception historique : **ticket élevé + zéro marque + léger = catégories 
 7. Vérifier l'âge et la concentration d'une catégorie avant d'invoquer un précédent (erreur du pickleball invoqué pour le padel)
 8. Le de minimis US est mort : ~35-40 % de droits sur chaque colis. Toujours exiger un **prix DDP écrit**
 9. Pas de PMax, pas de broad match, pas de Display avant 30-50 conversions. Search exact match + CPC manuel au lancement
+10. **Un produit qui cartonne sur Meta/TikTok ne prouve rien sur Google Search.** Meta = découverte, on crée le besoin. Google = intention, le besoin existe et la personne tape. Un produit peut faire 100k $ sur Meta avec zéro volume de recherche. Les données Meta/TikTok servent uniquement à prouver que le produit **se vend** — jamais à valider le canal. Seul le Keyword Planner tranche
+11. Les articles « best X 2026 » sont du contenu affilié Amazon : ils listent structurellement ce qui est sur Amazon. **Ne plus les utiliser comme source de l'axe F** — ils ne peuvent retourner qu'un seul verdict. Même biais sur les avis d'outils portant un code promo. Source correcte : les boutiques qui achètent réellement du trafic (Trendtrack, Google Ads Transparency Center, la SERP)
 
 ---
 
@@ -203,6 +205,32 @@ L'exception historique : **ticket élevé + zéro marque + léger = catégories 
 **Padel, si jamais utile** : 1 073 000 joueurs US en 2025 (SFIA), 1 000+ terrains dans 31 États, `padel racket` = 10k-100k rech./mois à 1,35 € d'enchère haute, usines chinoises à 18,50-25 $/unité (NEXPadel produit pour StarVie, Nordicdots, Reebok, NOX).
 
 **Dossiers archivés** : voir `dossiers/`. `DOSSIER-TRANSMISSION-ELLERY.pdf` (23 p.) contient des structures réutilisables — plan Google Ads, landing page, mécanique de garantie, scoring, plan 90 jours.
+
+---
+
+## 9 bis. Protocole de sourcing produit — arrêté le 5 septembre 2026
+
+**Décision de Yasser : abonnement Trendtrack pris** (mensuel). Source de candidats = les boutiques qui chiffrent réellement, plus les listicles.
+
+**Étape 1 — Yasser, Trendtrack.** Sortir 20-30 boutiques.
+
+| Filtre | Valeur |
+|---|---|
+| Pays | United States |
+| Ticket moyen | 80-250 $ |
+| Âge boutique | < 18 mois — une boutique jeune qui chiffre = preuve empirique qu'un inconnu gagne dans cette catégorie **maintenant**. C'est l'axe F répondu par les données |
+| Croissance | positive sur 3 mois |
+| Exclure | médical · animalier · batterie lithium · marques connues |
+
+Format de restitution : `nom | URL | catégorie | ticket | âge | canaux d'ads`
+
+**Étape 2 — Claude.** Axes F, A, D + poids + économie DDP sur chaque catégorie. Tableau scoré, on garde 3.
+
+**Étape 3 — Yasser, Keyword Planner.** Éliminatoire. Seuils posés avant mesure : volume mot-clé acheteur ≥ 10k/mois US · enchère haute ≤ 1,00 € · ≥ 3 mots-clés acheteur en tranche 1k-10k · demande présente en Q4.
+
+**Étape 4 — Trendtrack, concurrents.** Sur la survivante seulement : prix, angles, pages produit, ancienneté.
+
+**Astuce gratuite à garder** : ajouter `/products.json` à l'URL d'une boutique Shopify renvoie son catalogue complet, prix et variantes compris.
 
 ---
 
