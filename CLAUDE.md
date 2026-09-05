@@ -50,7 +50,7 @@ Réaffirmée plusieurs fois après discussion. **Ne pas la rouvrir.**
 | Marché | **États-Unis** |
 | Acquisition | **Google Ads uniquement** (refus explicite de TikTok) |
 | Modèle | **Dropshipping** depuis la Chine, 7-12 jours de livraison |
-| Budget total | **1 000 €** |
+| Budget total | **1 000 €** de tests + **396 € de réserve intouchable**, arbitré par Yasser le 5 sept. 2026. La réserve n'est pas un coussin : c'est le **deuxième essai** — au 2e test il y aura un compte Ads avec historique, une boutique debout et des données de conversion. Ne jamais proposer de la consommer |
 | Variantes | **1 produit, 3 coloris/versions max.** Les tailles (S/M/L) ne comptent pas et sont illimitées |
 | Saison | Doit **vendre pendant le Q4** |
 
