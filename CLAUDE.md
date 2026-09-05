@@ -60,7 +60,7 @@ Réaffirmée plusieurs fois après discussion. **Ne pas la rouvrir.**
 
 ### Étage 1 — Gates éliminatoires (un « non » = éliminé, aucun score calculé)
 
-Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 1 kg** · ticket 70-250 $ · marge ≥ 50 $ · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
+Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 70-250 $ · marge ≥ 50 $ · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
 
 ### Étage 2 — Score sur 100
 
@@ -158,6 +158,25 @@ L'exception historique : **ticket élevé + zéro marque + léger = catégories 
 | — | Cadeaux de condoléances | Axe F passe parfaitement, mais ticket 7-50 $ |
 | — | Papier peint repositionnable | 30-60 $ le rouleau |
 
+**Batch du 5 septembre 2026 — 11 catégories testées à l'axe F, générées depuis des SERP « objet défini par une occasion ou une matière ».**
+
+| Catégorie | Ce que sortent les articles « best X 2026 » | Sort |
+|---|---|---|
+| Steel tongue drum | RAV Vast, Idiopan, Meinl, Yinama, Four Uncles | 🔴 F — marques + Amazon dès 60 $ |
+| Urne funéraire (humain) | Pas de marque produit, mais 8 spécialistes US en une page : Urns.com, Stardust, GetUrns, Urn Garden, Mainely, OneWorld, EVR, Pulvis | 🔴 A — catégorie possédée |
+| Boîte à musique | Aucune marque | 🔴 Ticket — best-sellers Amazon 20-50 $ |
+| Orrery / système solaire | Aucune marque (KALWEL, Cosmos Museum = vendeurs Amazon/Etsy) | 🔴 Volume microscopique |
+| Menorah | Michael Aram, Dreidel Co + Judaica Webstore / Judaica.com / Weitzman | 🔴 A — ticket 20-80 $ |
+| Tufting gun | AK-I, Duo, KRD-1, Riiai, Clawlab, Tufting World | 🔴 F — usines chinoises déjà en DTC |
+| Boîte à énigmes bois | ROKR/Robotime, PICKFORU, Intrism, Puzzle Potato | 🔴 F — Robotime = usine chinoise en DTC |
+| Backgammon premium | Silverman & Co, Crisloid (depuis 1950), Yellow Mountain Imports | 🔴 F + ancre AMEROUS sous 60 $ |
+| Pare-étincelles / fireplace screen | Plow & Hearth, Amagabeli, JamesGrenco | 🔴 Poids — fonte 8-15 kg, hors fret aérien |
+| Fontaine d'intérieur | Alpine Corporation, HoMedics, Bits & Pieces, Umbra | 🔴 F |
+| Boîte à bijoux | SONGMICS sous 30 $, Homde, AKOZLIN, BAGSMART | 🔴 Ancre |
+| Horloge murale XXL | Wayfair / Houzz / Clock Depot, Bulova, Ashley | 🔴 A |
+| Art mural métal | Styles listés, pas de marques → **axe F passe** | 🟠 Meurt sur l'axe D — achat de goût pur, aucune réassurance à vendre |
+| Crèche de Noël (nativity set) | Types, matières, nombre de pièces. Marques (Fontanini, Lenox) explicitement positionnées **au-dessus de 250 $** | 🟠 **Seule survivante — ~62/100 estimé.** Voir section 10 |
+
 ---
 
 ## 8. Les règles de méthode
@@ -179,7 +198,7 @@ L'exception historique : **ticket élevé + zéro marque + léger = catégories 
 **Bloc de calibration Keyword Planner** — à passer avant toute nouvelle session de mesure, pour vérifier que les réglages n'ont pas bougé (US · anglais · Google seul · 12 mois) :
 `hair topper` doit ressortir à **10k-100k / 1,20 €** d'enchère haute, et `monofilament hair topper` à **0,89 €**.
 
-**Bloquant permanent** : le compte Google Ads est **suspendu** (validation du moyen de paiement, 24-72 h). Indépendant du produit, à débloquer quoi qu'il arrive.
+**Compte Google Ads : débloqué** (confirmé par Yasser le 5 sept. 2026). L'étape 4 de l'ordre d'application (Keyword Planner) est donc de nouveau exécutable.
 
 **Padel, si jamais utile** : 1 073 000 joueurs US en 2025 (SFIA), 1 000+ terrains dans 31 États, `padel racket` = 10k-100k rech./mois à 1,35 € d'enchère haute, usines chinoises à 18,50-25 $/unité (NEXPadel produit pour StarVie, Nordicdots, Reebok, NOX).
 
@@ -189,8 +208,50 @@ L'exception historique : **ticket élevé + zéro marque + léger = catégories 
 
 ## 10. État actuel et prochaine action
 
-**Recherche produit en cours.** Aucun candidat ne tient à ce jour. Le dernier en date (padel) est tombé sur l'axe F.
+*Mis à jour le 5 septembre 2026.*
 
-**La piste à explorer** : section 6 — descendre le ticket à 80-130 $ dans une catégorie à CPC bas qui passe l'axe F.
+**Compte Google Ads : débloqué.** Le seul bloquant permanent est levé.
 
-**Action indépendante du produit, à faire quoi qu'il arrive** : débloquer le compte Google Ads (validation du moyen de paiement, 24-72 h de délai mort).
+### Le mécanisme qui tue tout — découvert sur le batch du 5 sept.
+
+Sur 11 catégories testées, toutes meurent contre l'un de trois murs :
+
+1. **Marque héritage occidentale** — Crisloid (1950), Alpine, Bits & Pieces, Plow & Hearth, Byers' Choice, Fontanini, Woodstock
+2. **Usine chinoise déjà en DTC sous son propre nom** — Yinama, ROKR/Robotime, Clawlab, SONGMICS, Glitzhome, AMEROUS, ZEXUIRU
+3. **Ancre Amazon sous 50 % du prix de vente visé**
+
+**Les murs 2 et 3 sont le même phénomène.** L'usine qui pourrait fournir Yasser vend déjà en direct sur Amazon à 40-60 % de son prix cible. Autrement dit : *toute catégorie simultanément cherchée sur Google et sourçable en dropship 1 pièce depuis la Chine a déjà son usine listée sur Amazon.*
+
+### La conséquence — la seule porte de sortie restante
+
+Il faut un produit **qu'Amazon ne peut pas ancrer**, c'est-à-dire un produit **configuré ou ajusté à la commande** : l'acheteur doit choisir une taille, une mesure, une couleur à assortir, ou une compatibilité. Amazon gère mal ce type d'achat, donc aucune référence générique n'y fixe de plancher — et c'est mécaniquement un **achat de réassurance** (axe D), puisque c'est le service et la garantie qui ferment la vente.
+
+C'est exactement ce qu'était le hair topper (mesure + color match + consultation). Il faut retrouver cette structure **hors médical et hors cheveux**.
+
+### Le seul candidat encore debout
+
+**Crèche de Noël (nativity set)** — ~62/100 estimé, donc sous le seuil de 70.
+
+| Axe | Lecture |
+|---|---|
+| F — marque | 🟢 Passe. Les guides classent par matière, taille et nombre de pièces. Fontanini et Lenox sont explicitement rangés **au-dessus de 250 $** : sous ce prix, la marque ne décide pas l'achat |
+| A — colonisation | 🟠 Faible. Couche dense de détaillants spécialisés (Hobby Lobby, Christianbook, Deseret Book, Jolly Christmas Shop, Yonder Star, St Nicks) + ancre Amazon (Glitzhome 12 pcs) à 40-60 $, soit ~50 % d'un PV à 99 $ — pile sur la limite du sous-critère |
+| C — demande | 🔴 **Persistance nulle.** Le produit est mort le 26 décembre. Coûte ~7 pts |
+| D — nature d'achat | 🟢 Réassurance : « est-ce que ça arrive avant Noël, et est-ce que ça arrive intact ». Garantie casse + date de livraison garantie = argument de vente réel |
+| Économie | 🟢 Bande de marché documentée à **60-120 $** pour une crèche résine 9-11 pièces peinte main. 2-3 kg |
+| Risque | 🔴 **Deadline dure.** Livraison 7-12 j depuis la Chine → la fenêtre de vente se ferme vers le 8 décembre. Même classe de risque que les coffrets de mariage (produit #5) |
+
+**Statut : à creuser, pas un GO.** L'étape suivante est l'étape 4 de l'ordre d'application, et elle appartient à Yasser (Keyword Planner).
+
+### Seuils posés AVANT mesure — crèche de Noël
+
+Passer d'abord le bloc de calibration de la section 9.
+
+| Mesure | Seuil de survie |
+|---|---|
+| `nativity set` — volume US, 12 mois | ≥ 10k-100k / mois |
+| `nativity set` — enchère haute | **≤ 1,00 €**. Au-dessus = mort |
+| Mots-clés acheteur (pas informationnels) dans la tranche 1k-10k | ≥ 3 |
+| Google Trends | Le pic doit démarrer **avant le 20 octobre**. S'il démarre en novembre, la fenêtre est trop courte |
+
+Économie de référence : PV 99 $ − DDP 22 $ − frais 3 $ − retours 6 % → marge ≈ 68 $. À 1,00 € de CPC, équilibre à **1,47 %** de conversion ; à 0,60 €, équilibre à **0,88 %**.
