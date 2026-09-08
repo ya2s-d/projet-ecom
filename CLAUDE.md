@@ -60,7 +60,7 @@ Réaffirmée plusieurs fois après discussion. **Ne pas la rouvrir.**
 
 ### Étage 1 — Gates éliminatoires (un « non » = éliminé, aucun score calculé)
 
-Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 70-250 $ · marge ≥ 50 $ · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
+Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 70-250 $ · marge ≥ 50 $ · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
 
 ### Étage 2 — Score sur 100
 
@@ -248,25 +248,64 @@ Seuils de décision, posés AVANT lancement :
 
 ---
 
-## 9 ter. PRODUIT RETENU — décidé le 8 septembre 2026
+## 9 ter. Journée du 8 septembre 2026 — 3 candidats tués, 1 méthode trouvée
 
-**Panneau mural métal personnalisé (monogramme / nom de famille).** Modèle observé : **zanvos.com**.
+**Volume analysé** : 500 boutiques + 240 annonceurs Google via Trendtrack, 40 ads Meta à pain point, ~1 700 crédits.
 
-Décision prise par Yasser après une journée complète de recherche (30 produits au cimetière, 500 boutiques et 240 annonceurs Google analysés via Trendtrack). Il a explicitement relâché les gates de concurrence et de colonisation : « je suis vraiment ouvert à tout, même aux produits qu'on a pu rayer, tant que ça fait entre 1 et 10 produits max ».
+### Tués ce jour
 
-| Critère | Lecture |
-|---|---|
-| Preuve de rentabilité | **1 416 jours d'ads actives** chez Zanvos — le signal le plus long de tout l'échantillon. 60 ads live, 37 377 fans FB, reach 91K |
-| Ancre Amazon | **Aucune possible.** Le monogramme est configuré à la commande : Amazon ne peut pas référencer « les initiales de cette famille ». C'est le seul mécanisme qui ait battu ce mur |
-| Axe D | Réassurance, pas goût. La garantie « livré avant Noël ou remboursé » est l'argument de vente |
-| Sourcing | Découpe laser acier, 8-15 $/pièce en Chine, à l'unité. Léger, sans certification, sans batterie, sans FDA |
-| Fit Q4 | Cadeau de Noël explicite, mais vend toute l'année (mariage, crémaillère, anniversaire) |
-| Faiblesse assumée | Etsy est saturé sur « custom metal monogram wall art ». Accepté par Yasser |
-| Risque SAV | Faute de frappe dans le monogramme · délai de production usine · date de coupure stricte avant Noël |
+| Candidat | Score estimé | Motif de mort |
+|---|---|---|
+| Hatori — aiguiseur rotatif | 82/100 | 🔴 **CPC.** `rolling knife sharpener` 2,64 € · `knife sharpener` 1,74 € · seul `best way to sharpen knives` passe à 0,99 € mais c'est informationnel. Équilibre exigé : 4,7 % de conversion |
+| TeslaHubs — kit anti-bruit | 78/100 | 🔴 Axe A — 6 spécialistes Tesla (EVAAM, RPM, Abstract Ocean, T-Launch, SoundSkins, Dynamat), kits dès 15,99 $ |
+| Prime Lifts — semelles rehaussantes | 75/100 | 🔴 Ancre Amazon 6,60-22 $ |
+| **Zanvos — panneau métal personnalisé** | — | 🔴 **Personnalisation refusée par Yasser.** 1 416 j d'ads actives, aucune ancre Amazon possible, mais le sur-mesure est écarté par principe. Ne plus le reproposer |
+| ElitePeel — pelle à pizza | 68/100 | Ancre Amazon 25-50 $ |
 
-**Dernier gate ouvert** : le CPC. Seuil posé avant mesure — **enchère haute ≤ 1,00 €** sur `custom metal wall art`, `personalized metal sign`, `monogram wall decor`, `family name sign`. Au-dessus, on tue.
+### Ce qui a été relâché par Yasser le 8 sept.
 
-**Rétroplanning** : échantillon commandé semaine du 8 sept → reçu ~20 sept → boutique montée en parallèle → campagne le 1er octobre → verdict le 8 octobre selon les seuils de la section 9 bis.
+- **Concurrence et colonisation** : plus éliminatoires. « je suis vraiment ouvert à tout, même aux produits qu'on a pu rayer, tant que ça fait entre 1 et 10 produits max »
+- **Contrainte ajoutée** : ni sur-mesure ni personnalisation
+
+### LA méthode — partir du CPC, pas du produit
+
+Trente et un produits sont morts, et **c'est toujours le CPC qui les a tués**, jamais le produit. La section 6 le disait déjà sans qu'on s'en serve : *les catégories qui passent l'axe F sont celles où personne n'enchérit*.
+
+**Nouvel ordre d'application** :
+
+```
+1. Keyword Planner : "Découvrir de nouveaux mots-clés", seed large
+2. Trier par enchère de haut de page (haute) CROISSANT
+3. Filtrer volume >= 10k/mois
+4. Garder les clusters à >= 3 mots-clés acheteurs sous 1,00 EUR
+5. SEULEMENT ENSUITE : remonter au produit, puis axes F / A / D
+```
+
+C'est gratuit, illimité, et c'est la seule étape qu'on n'avait jamais faite en premier.
+
+### Cluster trouvé — rangement de bijoux (8 sept. 2026)
+
+13 mots-clés acheteurs sous 1,00 €, dont 5 en tranche 10k-100k.
+
+| Mot-clé | Volume | Enchère haute |
+|---|---|---|
+| `jewelry box` (head) | 100k – 1M | 1,04 € |
+| `travel jewelry case` | 10k – 100k | 0,91 € |
+| `jewelry armoire` | 10k – 100k | 0,90 € |
+| `jewelry organizer` | 10k – 100k | 0,86 € |
+| `holder for rings` | 10k – 100k | 0,78 € |
+| `holders jewelers` | 10k – 100k | 0,63 € |
+| `large jewelry box` · `jewelry cabinet` · `jewelry storage` · `mens jewelry box` · `jewelry box organizer` · `small jewelry box` · `mirror jewelry box` | 1k – 10k | 0,68 – 0,97 € |
+
+**Tension à connaître** : le CPC bas vit du côté générique. Les termes premium doublent — `leather jewelry box` 2,00 €, `wolf jewelry box` 2,06 €, `jewelry case` 1,43 €.
+
+**Créneau exploitable** : coffret à bijoux de bonne taille, à tiroirs, avec miroir. Ni armoire (10-25 kg, mort sur le poids), ni mini-coffret à 20 $.
+
+**Économie** : PV 119 $ − DDP 43 $ (2 kg) − frais 3 $ − retours 6 % → **marge 66 $**. À 0,90 € de CPC, équilibre à **1,47 %**. Le test de 280 $ achète ~290 clics → 4-5 ventes à 1,5 %.
+
+**Réserve** : les variations `+900 %` / `-90 %` du Keyword Planner sont réciproques et suspectes — artefact de changement de tranche. À croiser avec Google Trends avant de conclure (règle 4).
+
+**Statut : candidat vivant, gate CPC franchi.** Reste à faire : axes F et A sur le coffret premium (SONGMICS à 30 $ est l'ancre connue, gate relâché), puis sourcing.
 
 ---
 
