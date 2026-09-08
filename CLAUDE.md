@@ -248,6 +248,28 @@ Seuils de décision, posés AVANT lancement :
 
 ---
 
+## 9 ter. PRODUIT RETENU — décidé le 8 septembre 2026
+
+**Panneau mural métal personnalisé (monogramme / nom de famille).** Modèle observé : **zanvos.com**.
+
+Décision prise par Yasser après une journée complète de recherche (30 produits au cimetière, 500 boutiques et 240 annonceurs Google analysés via Trendtrack). Il a explicitement relâché les gates de concurrence et de colonisation : « je suis vraiment ouvert à tout, même aux produits qu'on a pu rayer, tant que ça fait entre 1 et 10 produits max ».
+
+| Critère | Lecture |
+|---|---|
+| Preuve de rentabilité | **1 416 jours d'ads actives** chez Zanvos — le signal le plus long de tout l'échantillon. 60 ads live, 37 377 fans FB, reach 91K |
+| Ancre Amazon | **Aucune possible.** Le monogramme est configuré à la commande : Amazon ne peut pas référencer « les initiales de cette famille ». C'est le seul mécanisme qui ait battu ce mur |
+| Axe D | Réassurance, pas goût. La garantie « livré avant Noël ou remboursé » est l'argument de vente |
+| Sourcing | Découpe laser acier, 8-15 $/pièce en Chine, à l'unité. Léger, sans certification, sans batterie, sans FDA |
+| Fit Q4 | Cadeau de Noël explicite, mais vend toute l'année (mariage, crémaillère, anniversaire) |
+| Faiblesse assumée | Etsy est saturé sur « custom metal monogram wall art ». Accepté par Yasser |
+| Risque SAV | Faute de frappe dans le monogramme · délai de production usine · date de coupure stricte avant Noël |
+
+**Dernier gate ouvert** : le CPC. Seuil posé avant mesure — **enchère haute ≤ 1,00 €** sur `custom metal wall art`, `personalized metal sign`, `monogram wall decor`, `family name sign`. Au-dessus, on tue.
+
+**Rétroplanning** : échantillon commandé semaine du 8 sept → reçu ~20 sept → boutique montée en parallèle → campagne le 1er octobre → verdict le 8 octobre selon les seuils de la section 9 bis.
+
+---
+
 ## 10. État actuel et prochaine action
 
 *Mis à jour le 5 septembre 2026.*
