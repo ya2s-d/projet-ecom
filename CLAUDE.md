@@ -60,7 +60,7 @@ Réaffirmée plusieurs fois après discussion. **Ne pas la rouvrir.**
 
 ### Étage 1 — Gates éliminatoires (un « non » = éliminé, aucun score calculé)
 
-Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 60-250 $ · marge ≥ 50 $ · **marge en $ ≥ enchère haute en € × 70** (gate ajouté le 11 sept. 2026 — voir 9 quater) · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
+Max 3 coloris · ~~pas de médical~~ → **gate levé par Yasser le 11 sept. 2026.** Sa seule justification était le compte Ads suspendu, or le compte est débloqué depuis le 5 sept. Ce qui fait suspendre un compte n'est pas le médical mais **l'allégation de santé** (soigne, traite, fait maigrir) : c'est l'allégation qui reste interdite, pas la catégorie · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 60-250 $ · marge ≥ 50 $ · **marge en $ ≥ enchère haute en € × 70** (gate ajouté le 11 sept. 2026 — voir 9 quater) · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
 
 ### Étage 2 — Score sur 100
 
@@ -119,6 +119,8 @@ Les trois gates sont largement incompatibles entre elles :
 3. Ticket élevé + pas de marque → produit lourd/volumineux → **poids échoue**
 
 L'exception historique : **ticket élevé + zéro marque + léger = catégories privées ou stigmatisées** (les hair toppers en étaient l'archétype). Or presque toutes sont médicales, donc bloquées par le compte Ads suspendu.
+
+> **11 septembre 2026 — cette exception est rouverte.** Le compte est débloqué et Yasser a levé le gate médical. C'est le déblocage le plus important de tout le dossier : la seule structure qui ait jamais scoré au-dessus de 70 (hair topper, 76/100) redevient accessible. Ce qui reste interdit, ce n'est pas la catégorie médicale — c'est **l'allégation de santé** dans l'annonce et sur la page.
 
 **Piste de sortie identifiée, non encore explorée à fond** : descendre le ticket à 80-130 $ dans une catégorie à CPC bas. Les catégories qui passent l'axe F sont précisément celles où personne n'enchérit, donc à CPC bas — c'est cohérent.
 Économie type : PV 99 $ − DDP 22 $ − frais 3 $ − retours 6 % → **marge ≈ 68 $**. À 0,50 $ de CPC, équilibre à **0,74 %** de conversion. 430 $ d'ads = 860 clics = ~13 ventes à 1,5 %. Plus de commandes que n'importe quel scénario high-ticket — et **à ce stade le nombre de commandes compte plus que la marge par commande** (avis, données, historique de compte).
@@ -472,6 +474,68 @@ Ce qui n'est pas réglé :
 **Le motif, confirmé pour la 3e fois en 4 jours.** tryvitapeak (8 sept.), apexlaboratories (10 sept.), Vitalia (11 sept.) : dès qu'on filtre « boutique jeune + gros trafic + peu de produits », on tombe sur un complément. Ce n'est pas un hasard — c'est le seul produit où un inconnu peut payer le clic, parce que le client rachète. Et c'est le seul que le gate médical interdit.
 
 **Précision utile, sans rouvrir le gate** : ce qui fait suspendre un compte Google Ads, c'est l'**allégation de santé** (soigne, traite, fait maigrir), pas le complément en soi. Vitalia est en plein dedans. Décision de Yasser du 8 sept. maintenue : les compléments, c'est après avoir fait du cash, pas maintenant.
+
+
+### 11 septembre, fin de journée — le gate médical tombe
+
+Yasser : « mais qui a dit pas de medical ?? je prend avec grand plaisir meme ».
+
+**Il a raison et le gate n'aurait pas dû survivre au 5 septembre.** Sa justification écrite était « compte Google Ads suspendu = tolérance zéro ». Le compte est débloqué depuis le 5 septembre (section 9). La prémisse est morte, le gate avec.
+
+**Ce que ça ne débloque pas : les compléments sur Google.** Ce n'était pas le gate médical qui les tuait, c'est le budget.
+
+| | |
+|---|---|
+| Mots-clés compléments mesurés le 8 sept. | 1,79 – 5,32 € |
+| À 1,79 €, ce que 280 € achètent | **156 clics** → 2,3 ventes à 1,5 % → case indécidable |
+| Pourquoi apexlaboratories y arrive | 806 ads live, historique de compte, données de conversion, budget très au-dessus de 40 €/jour. Il amortit sur la LTV d'abonnement |
+
+À 40 €/jour, un CPC à 1,79 € est illisible quoi qu'il arrive. **Le gate médical levé ne change rien aux gélules.**
+
+**Ce que ça débloque vraiment** : la phrase de la section 6. *Ticket élevé + zéro marque + léger = catégories privées ou stigmatisées, presque toutes médicales, donc bloquées.* C'est l'exception qui a produit le seul score au-dessus de 70 de tout le dossier (hair topper, 76/100). Elle redevient accessible.
+
+**La ligne rouge qui reste** : l'**allégation**. « Soigne », « traite », « fait maigrir », un nom de maladie → suspension. Un produit physique vendu sur le confort, l'usage et la garantie → autorisé. C'est la formulation qui est interdite, pas la catégorie.
+
+### Les deux tests, et lequel tranche
+
+```
+1. Enchère haute ≤ 0,70 €      (plafond de lisibilité, imposé par 40 €/jour)
+2. marge en $ ≥ CPC en € × 70  (plafond de rentabilité)
+```
+
+À 40 €/jour et sur un ticket ≥ 99 $, **c'est presque toujours le test 1 qui tranche**. Le test 2 ne mord que sur les produits sous ~60 $.
+
+### Batch « catégories privées » — plafonds posés avant mesure (11 sept.)
+
+Toutes à mesurer contre **0,70 €**. Physiques, non-prescription, < 3 kg, hors cheveux (bannis définitivement, voir #14).
+
+| # | Catégorie | PV visé | Marge | Pourquoi elle est candidate |
+|---|---|---|---|---|
+| **1** | **Lampe de luminothérapie (SAD)** | 99 $ | ~62 $ | Pic oct→févr = Q4 **plus** janvier-février. < 2 kg, pas de batterie. Catégorie fragmentée : Verilux, Carex, Circadian Optics, Northern Light, aucun ne domine. Achat de réassurance (intensité, distance, garantie) |
+| 2 | Anti-ronflement | 79 $ | ~50 $ | Catégorie gênante donc peu d'enchérisseurs. Très léger. Réassurance pure |
+| 3 | Plancher pelvien / kegel | 129 $ | ~82 $ | Privé, quasi aucune marque occidentale, léger. Structure hair topper |
+| 4 | Compression pneumatique jambes | 179 $ | ~100 $ | Ticket élevé, réassurance. Risque : 2-3 kg et ancre Amazon 80-150 $ |
+| 5 | Iontophorèse / hyperhidrose | 249 $ | ~155 $ | Très privé, quasi zéro marque grand public. ⚠️ **Dispositif FDA classe II** → certification lourde, à vérifier avant tout |
+
+Mots-clés à mesurer :
+
+```
+light therapy lamp · sad lamp · happy light · 10000 lux light therapy
+sun lamp · bright light therapy · daylight lamp · seasonal affective disorder lamp
+
+anti snoring device · snoring mouthpiece · stop snoring device
+snoring solution · mouth guard for snoring · chin strap snoring
+
+pelvic floor trainer · kegel exerciser · pelvic floor device · kegel trainer
+
+leg compression massager · air compression leg massager
+compression boots recovery · leg massager for circulation
+
+iontophoresis machine · hyperhidrosis treatment device
+sweaty hands treatment · excessive sweating device
+```
+
+**À ne pas faire : lâcher l'humidificateur pour ça.** Le devis DDP est en cours et c'est 48 h. Les deux avancent en parallèle. Le schéma « 17 produits analysés, zéro lancé » (section 2) se rejoue exactement comme ça — une piste neuve qui arrive juste avant le moment de s'engager.
 
 
 ## 10. État actuel et prochaine action
