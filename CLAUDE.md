@@ -452,6 +452,28 @@ Ce qui n'est pas réglé :
 **Sourcing et devis : Yasser s'en occupe, il sait faire.** Ne pas lui écrire de brief fournisseur (rappelé le 11 sept.).
 
 
+### shopvitalia.co — examiné le 11 septembre, mort sur 4 gates
+
+| Donnée | Valeur |
+|---|---|
+| Produit | **1 seul — Cayenne Softgels, 24,99 $** |
+| Créée | 17 juin 2026 (3 mois) |
+| Trafic | 31 485 visites (juil.) → **48 603 (août)**, +54 % sur 30 j |
+| Ads | **62 Meta actives** · 44 Google live dont **14 Search + 6 Shopping** |
+| Pays des ads Meta | US 26 % · GB 20 % · CA 19 % · AU 19 % · NZ 17 % — blast multi-pays anglophone |
+
+| Gate | Lecture |
+|---|---|
+| Ticket 60-250 $ | 🔴 24,99 $ |
+| Pas de médical | 🔴 Complément. Le cayenne se vend sur la circulation / le métabolisme, donc sur allégation |
+| marge ≥ CPC × 70 | 🔴 Marge ~19 $ → CPC max **0,27 €**. Les mots-clés compléments mesurés le 8 sept. sortent à 1,79-5,32 € |
+| Canal | 🔴 62 Meta contre 14 Search. Produit Meta |
+
+**Le motif, confirmé pour la 3e fois en 4 jours.** tryvitapeak (8 sept.), apexlaboratories (10 sept.), Vitalia (11 sept.) : dès qu'on filtre « boutique jeune + gros trafic + peu de produits », on tombe sur un complément. Ce n'est pas un hasard — c'est le seul produit où un inconnu peut payer le clic, parce que le client rachète. Et c'est le seul que le gate médical interdit.
+
+**Précision utile, sans rouvrir le gate** : ce qui fait suspendre un compte Google Ads, c'est l'**allégation de santé** (soigne, traite, fait maigrir), pas le complément en soi. Vitalia est en plein dedans. Décision de Yasser du 8 sept. maintenue : les compléments, c'est après avoir fait du cash, pas maintenant.
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
