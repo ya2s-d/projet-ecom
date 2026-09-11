@@ -1,7 +1,7 @@
 # Projet e-commerce — contexte permanent
 
 > Ce fichier se charge automatiquement dans toute session Claude ouverte sur ce dossier.
-> **À lire en entier avant de répondre.** Dernière mise à jour : 5 septembre 2026.
+> **À lire en entier avant de répondre.** Dernière mise à jour : 11 septembre 2026.
 
 ---
 
@@ -60,7 +60,7 @@ Réaffirmée plusieurs fois après discussion. **Ne pas la rouvrir.**
 
 ### Étage 1 — Gates éliminatoires (un « non » = éliminé, aucun score calculé)
 
-Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 70-250 $ · marge ≥ 50 $ · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
+Max 3 coloris · pas de médical (compte Google Ads suspendu = tolérance zéro) · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 60-250 $ · marge ≥ 50 $ · **marge en $ ≥ enchère haute en € × 70** (gate ajouté le 11 sept. 2026 — voir 9 quater) · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
 
 ### Étage 2 — Score sur 100
 
@@ -192,6 +192,8 @@ L'exception historique : **ticket élevé + zéro marque + léger = catégories 
 9. Pas de PMax, pas de broad match, pas de Display avant 30-50 conversions. Search exact match + CPC manuel au lancement
 10. **Un produit qui cartonne sur Meta/TikTok ne prouve rien sur Google Search.** Meta = découverte, on crée le besoin. Google = intention, le besoin existe et la personne tape. Un produit peut faire 100k $ sur Meta avec zéro volume de recherche. Les données Meta/TikTok servent uniquement à prouver que le produit **se vend** — jamais à valider le canal. Seul le Keyword Planner tranche
 11. Les articles « best X 2026 » sont du contenu affilié Amazon : ils listent structurellement ce qui est sur Amazon. **Ne plus les utiliser comme source de l'axe F** — ils ne peuvent retourner qu'un seul verdict. Même biais sur les avis d'outils portant un code promo. Source correcte : les boutiques qui achètent réellement du trafic (Trendtrack, Google Ads Transparency Center, la SERP)
+12. **Le CPC dit à quel prix vendre, pas l'inverse.** `marge en $ ≥ enchère haute en € × 70`, sinon la conversion à l'équilibre dépasse 1,5 % et le produit est mort avant le premier clic. Ce test coûte 60 secondes et se pose **avant** toute mesure
+13. **Un CPC bas est un prix de marché, pas une opportunité.** Personne n'enchérit 2 € là où le gagnant gagne 13 $. Trier par CPC croissant sélectionne les catégories les moins chères, donc celles qui échouent au gate de marge. Ce qu'on cherche est le **ratio**, pas le CPC
 
 ---
 
@@ -309,9 +311,90 @@ C'est gratuit, illimité, et c'est la seule étape qu'on n'avait jamais faite en
 
 ---
 
+---
+
+## 9 quater. Journée du 11 septembre 2026 — la loi du ratio marge/CPC
+
+### Le batch de 36 têtes de mots-clés — 6 survivants, puis 0
+
+36 têtes pré-filtrées, mesurées par Yasser au Keyword Planner (US · Google · août 2025-juil. 2026). Seuils posés avant mesure : volume ≥ 10k **et** enchère haute ≤ 1,00 €.
+
+**Ont passé le gate CPC** : `trunk organizer` 0,55 € · `foam roller` 0,57 € · `tool bag` 0,69 € · `spice rack` 0,76 € · `makeup organizer` 0,84 € (tous 10k-100k) · `shoe rack` 0,97 € (100k-1M).
+
+**Limites** : `knife block` 1,02 € · `storage baskets` 1,04 €.
+
+**Recalés** : serving tray 1,16 · floating shelf 1,21 · wind chime 1,29 · toiletry bag 1,39 · desk pad 1,39 · picture frame set 1,67 · watch box 1,74 · packing cubes 1,79 · record storage 1,85 · hammock 1,87 · throw blanket 1,91 · yoga mat 2,11 · laptop stand 2,75 · lock box 3,04 · emergency kit 3,57. Sous 1,00 € mais volume 1k-10k seulement : camping hammock 0,99 · fireproof bag 0,67.
+
+**Les 6 survivants sont morts ensuite, tous par le même mécanisme** : le prix médian du marché est en dessous de ce que leur CPC exige. Un seul (`tool bag`) meurt d'abord sur l'axe F (Veto Pro Pac, Klein, Milwaukee Packout).
+
+### LA règle — marge ≥ CPC × 70
+
+`Conversion à l'équilibre = CPC / marge`. À 1,5 % de conversion (plafond réaliste sur trafic froid Google Search, sans avis ni ancienneté) :
+
+> **marge en $ ≥ enchère haute en € × 70**
+
+| Enchère haute | Marge minimum | PV minimum (marge ≈ 60 % du PV) |
+|---|---|---|
+| 0,30 € | 22 $ | ~37 $ |
+| 0,50 € | 36 $ | ~60 $ |
+| 0,75 € | 54 $ | ~90 $ |
+| 1,00 € | 73 $ | ~122 $ |
+| 1,50 € | 109 $ | ~180 $ |
+| 2,00 € | 145 $ | ~240 $ |
+| 3,00 € | 218 $ | ~365 $ |
+
+**Le CPC dit à quel prix il faut vendre.** Pas l'inverse.
+
+**Erreur reconnue** : le ratio marge/CPC est dans l'axe B de la grille (section 4) depuis le début. Il a été utilisé comme composante de score, jamais comme gate. C'est ce qui a laissé passer 36 mots-clés puis 6 catégories mortes d'avance.
+
+### Corollaire — un CPC bas n'est pas une opportunité
+
+**Le CPC est le prix que le marché met sur la marge de la catégorie.** Personne n'enchérit 2 € sur un mot-clé où le gagnant gagne 13 $. Chercher « le CPC le plus bas » sélectionne donc mécaniquement **les catégories les moins chères**, c'est-à-dire celles qui échouent au gate de marge. La méthode CPC-first du 8 septembre, appliquée seule, est auto-destructrice.
+
+La bonne cible n'est pas un CPC bas — c'est un **ratio marge/CPC ≥ 70**, donc une **anomalie de prix** : ticket élevé là où les annonceurs sont absents. Le hair topper en était une (1,20 € pour 250 $ de ticket, ratio ≈ 125). C'est pour ça qu'il scorait 76.
+
+### Conséquence sur le plancher de ticket
+
+Le plancher n'est pas une préférence, c'est une conséquence : les enchères hautes US sur mots-clés acheteurs descendent rarement sous 0,50 €, donc la marge plancher est **36 $**, donc le **PV plancher est ~60 $**. Le gate ticket passe de 70-250 $ à **60-250 $** — et pas un dollar en dessous.
+
+### Nouvel ordre d'application
+
+```
+1. Prix médian du marché : 60-250 $ ?          (Amazon + 3 boutiques, 60 secondes)
+2. CPC max autorisé = marge / 70               (posé AVANT de mesurer)
+3. Keyword Planner : l'enchère haute est-elle sous ce plafond ?
+4. Axes F / A / D
+5. Poids, sourcing, devis DDP
+```
+
+### Trendtrack — top 30 des jeunes boutiques US (11 sept.)
+
+Filtres : marché principal US · créée entre mars 2025 et mars 2026 · ≥ 20 000 visites/mois · ≤ 10 produits. **516 boutiques correspondent**, 30 analysées, triées par trafic.
+
+| Boutique | Créée | Visites/mois | Produits | Ticket | Google Search | Meta |
+|---|---|---|---|---|---|---|
+| apexlaboratories.com | sept. 2025 | 358 641 | 7 | 90-125 $ | **806** | **0** |
+| menerals.com | mars 2025 | 511 924 | 10 | 75-210 $ | 88 | 564 |
+| spin360fan.com | sept. 2025 | 361 874 | 10 | 190 $ + recharges 39 $ | 29 | 1 760 |
+| tryravine.com | nov. 2025 | 298 796 | 5 | 200-240 $ | 24 | 581 |
+| theflightwall.com | juin 2025 | 280 195 | 2 | 175-499 $ | 14 | 158 |
+| doughguy.co | avril 2025 | 448 975 | 6 | 119 $ | 0 | 1 |
+| screenzen.co | sept. 2025 | 848 551 | 1 | 49 $ | 0 | 2 |
+
+**Le fait** : sur les 30 plus grosses jeunes boutiques US à ≤ 10 produits, **zéro** est un produit physique non-médical acquis principalement en Google Search. Les deux seules qui vivent réellement sur Google Search (apexlaboratories 806 ads / 0 Meta, menerals 88) sont des **compléments vendus en abonnement** : elles peuvent payer 2-3 € le clic parce qu'elles amortissent sur la LTV, pas sur la première commande. Les autres sont Meta (Ravine, FlightWall, Spin360) ou organiques/PR (doughguy 449k visites avec 1 ad, screenzen 848k avec 0).
+
+**apexlaboratories est fermée à Yasser** : GLP+ et allégations de perte de poids = suspension de compte Ads. Tolérance zéro maintenue.
+
+### La seule structure qui fait passer le ratio sans ticket élevé
+
+Le ratio se calcule sur la **marge cumulée par client**, pas par commande. Un consommable ou une recharge multiplie la marge par le nombre de réachats sans toucher au CPC. C'est le modèle d'apexlaboratories et de menerals — et celui de spin360fan (machine 190 $ + pods parfumés 39 $).
+
+**Piste à qualifier : machine + consommable, hors médical et hors complément.** Proposée par Yasser le 8 septembre, elle est la seule à réconcilier « ticket accessible » et « ratio ≥ 70 ». Non encore mesurée.
+
+
 ## 10. État actuel et prochaine action
 
-*Mis à jour le 5 septembre 2026.*
+*Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
 
 **Compte Google Ads : débloqué.** Le seul bloquant permanent est levé.
 
