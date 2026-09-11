@@ -682,6 +682,20 @@ Test de 280 € à 0,51 € → **549 clics**. À 1,5 % : 8 ventes × 77 $ = 631
 **Risque non chiffré** : les 0,51 € sont une moyenne sur 12 mois. En pleine saison (oct-nov), quand les annonceurs rallument, ce CPC montera. De combien, inconnu.
 
 
+### Google Trends — seuils posés AVANT mesure (11 sept., relance de Yasser)
+
+Trou relevé par Yasser : la règle 4 impose de croiser les tranches du Keyword Planner avec Google Trends, et ça n'avait pas été fait sur la luminothérapie. Seuils posés **avant** d'ouvrir Trends.
+
+Terme : `light therapy lamp` · États-Unis · 5 ans.
+
+| Mesure | Seuil de survie |
+|---|---|
+| Démarrage du pic | **Avant le 20 octobre.** S'il démarre en novembre, la fenêtre est trop courte pour un lancement au 1er octobre |
+| Fin du pic | **Tenir jusqu'en février.** Si ça retombe fin décembre, la saison fait 2 mois et non 5 — le plan de 3 cycles de cash ne tient plus |
+| Tendance sur 5 ans | **Stable ou montante.** Si chaque pic annuel est plus bas que le précédent, la catégorie meurt et on arrête |
+| Montée en août-septembre | **Visible.** Sinon le +900 % sur 3 mois du Keyword Planner est un artefact de changement de tranche (réserve déjà notée en 9 ter) |
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
