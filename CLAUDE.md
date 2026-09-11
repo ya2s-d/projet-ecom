@@ -608,6 +608,80 @@ laser for toenail fungus · fungus nail laser
 ```
 
 
+### Luminothérapie SAD — le candidat, scoré le 11 septembre au soir
+
+**Cluster de mots-clés** (US · Google · août 2025-juil. 2026), seuil 0,70 € :
+
+| Mot-clé | Volume | Enchère haute | Indice concurrence |
+|---|---|---|---|
+| `happy light` | 10k-100k | **0,43 €** | 68 |
+| `sun lamp` | 10k-100k | **0,49 €** | 85 |
+| `sad lamp` | 10k-100k | **0,51 €** | 87 |
+| `seasonal affective disorder lamp` | 10k-100k | **0,51 €** | 87 |
+| `light therapy lamp` | 10k-100k | **0,60 €** | **35** (« Moyen ») |
+| `daylight lamp` | 1k-10k | 0,67 € | 100 |
+| `light therapy box` | 1k-10k | 0,83 € | 93 |
+| `10000 lux light therapy` | 1k-10k | 0,90 € | 100 |
+
+**Cinq mots-clés acheteurs en 10k-100k sous 0,60 €.** Record du dossier — le précédent était `cool mist humidifier` à 0,58 €, seul.
+
+Réserves : `happy light` est la marque déposée de Verilux (donc recherche de marque) et `sun lamp` est ambigu (bronzage). **Le cœur propre est `sad lamp` + `light therapy lamp` + `seasonal affective disorder lamp`** : 3 génériques, 10k-100k, 0,51-0,60 €.
+
+**Axes F et A — mesurés, pas supposés**
+
+| | verilux.com | circadianoptics.com |
+|---|---|---|
+| Visites/mois (août) | 35 529 | 7 887 |
+| Courbe 6 mois | 50k → 39k → 29k → 26k → 27,5k → 35,5k | 11k → 13k → 7,7k → 5,7k → 6,7k → 7,9k |
+| **Ads Google live** | **0** (historique 60 Search, plus rien) | **1** |
+| Ads Meta | 0 | 0 |
+| Prix | HappyLight Lumi Plus **42,99 $** · SmartLight 79,99 $ | Luxy 39,99 · Lumos 2.0 69,99 · Lampu 79,99 $ |
+
+`northernlighttechnologies.com` : **absent de l'index Trendtrack**. `carex` : introuvable — le mot est un genre botanique (laîche), la requête renvoie des boutiques de jardinage. **24 crédits gaspillés sur cette requête.** Les deux marques du segment premium ne sont donc pas des boutiques DTC : elles vendent via Amazon et le retail, et n'achètent pas de Search en direct.
+
+🟢 **Axe F passe** — le « leader » fait 35k visites, décline, et a arrêté d'enchérir. Le n°2 fait 7 887 visites avec une annonce.
+🟠 **Axe A partiel** — personne n'achète le trafic, mais l'ancre Amazon Verilux à 42,99 $ représente **29 % d'un PV à 149 $**, sous le seuil de 50 % du sous-critère. Nuance : l'ancre est une petite lampe de bureau, pas un panneau 10 000 lux — mais l'acheteur voit les deux sur la même SERP, donc l'ancre mord.
+
+**Prix du marché confirmé par Yasser le 11 sept.** : la bande 130-250 $ pour les grands panneaux tient, un peu moins pour les modèles sur pied.
+
+**Économie, PV 149 $ (grand panneau, 1,5-2,5 kg)**
+
+```
+PV                    149 $
+DDP (1,5-2,5 kg)      −60 $
+Frais                  −3 $
+Retours 6 %            −9 $
+──────────────────────────
+Marge                  77 $      ratio 151 (seuil 70)
+Équilibre              0,73 %
+```
+
+Test de 280 € à 0,51 € → **549 clics**. À 1,5 % : 8 ventes × 77 $ = 631 $. **À 1 % : 5,5 ventes = 423 $, encore rentable.** Premier produit du dossier qui gagne de l'argent à 1 % de conversion.
+
+**Score : 65/100**
+
+| Axe | Note | Motif |
+|---|---|---|
+| A — Colonisation | **14/30** | Personne n'achète le trafic (fort), mais ancre Amazon à 29 % du PV (faible) |
+| B — Économie | **23/25** | Marge 77 $, ratio 151, poids 1,5-2,5 kg |
+| C — Demande | **14/20** | 5 mots-clés 10k-100k, intention acheteur, mais saison courte : oct→févr, mort de mars à septembre |
+| D — Défendabilité | **8/15** | Mi-specs mi-réassurance. Garantie 60 j « satisfait ou remboursé » est le seul levier contre 20 ans d'avis Verilux |
+| E — Exécution | **6/10** | ETL/UL obligatoire en 120 V · retours plus élevés qu'ailleurs (produit à effet subjectif) |
+
+**65 = « à creuser », sous le seuil de 70.** C'est le 2e meilleur score du dossier après le hair topper (76), devant le padel (74) — et contrairement au padel, il ne meurt sur aucun axe.
+
+**Pourquoi le 65 sous-estime le candidat pour l'objectif actuel** : l'axe C pénalise la persistance après décembre. Or l'objectif énoncé le 11 sept. est « faire du cash puis passer à Meta », pas construire une marque sur 12 mois. Une saison de 5 mois qui démarre **maintenant** (oct → févr) couvre exactement la fenêtre nécessaire : lancement octobre, encaissement jusqu'en février, bascule Meta en mars.
+
+**Deux conditions avant de lancer, non négociables**
+
+1. **DDP ≤ 60 $** pour un panneau 10 000 lux rendu US. Au-delà, la marge passe sous 70 $ et le ratio se dégrade.
+2. **ETL ou UL confirmé par écrit** par le fournisseur.
+
+**Décision de positionnement imposée par l'ancre** : interdiction de vendre une petite lampe de bureau — c'est le terrain de Verilux à 43 $. Le produit est le **grand panneau**, et la page doit justifier 149 $ contre 43 $ en une phrase : surface éclairée et lux **à distance d'usage réelle**, pas « 10 000 lux » au contact.
+
+**Risque non chiffré** : les 0,51 € sont une moyenne sur 12 mois. En pleine saison (oct-nov), quand les annonceurs rallument, ce CPC montera. De combien, inconnu.
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
