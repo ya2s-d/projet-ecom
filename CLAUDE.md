@@ -538,6 +538,76 @@ sweaty hands treatment · excessive sweating device
 **À ne pas faire : lâcher l'humidificateur pour ça.** Le devis DDP est en cours et c'est 48 h. Les deux avancent en parallèle. Le schéma « 17 produits analysés, zéro lancé » (section 2) se rejoue exactement comme ça — une piste neuve qui arrive juste avant le moment de s'engager.
 
 
+### L'objectif réel, énoncé par Yasser le 11 septembre au soir
+
+> « il me faut un peu de cash, faire tourner au moins quelque chose, avoir 2k de budget et passer à Meta »
+
+**Ce n'est plus « trouver la meilleure niche pour 12 mois ». C'est « transformer 1 000 € en 2 000 € le plus vite possible », pour financer un budget Meta.** Le critère de sélection change : le **nombre de commandes** prime sur la marge par commande (ce que disait déjà la section 6), et la vitesse prime sur la défendabilité à long terme.
+
+**Le calcul, à marge 62 € et CPC 0,58 €**
+
+```
+CAC          = CPC / conversion = 0,58 / 0,015  = 38,7 €
+Profit/vente = 62 − 38,7                        = 23,3 €
+```
+
+| Cycle de 7 j | Budget engagé | Ventes | Profit | Cumul |
+|---|---|---|---|---|
+| 1 | 1 000 € | 26 | 605 € | 605 € |
+| 2 | 1 605 € | 41 | 966 € | 1 571 € |
+| 3 | 2 571 € | 66 | 1 548 € | 3 119 € |
+
+**≈ 3 semaines pour atteindre 2 000 € de cash**, à condition que la conversion tienne 1,5 %.
+
+**Le point de rupture — la conversion, pas le CPC.** À 1 % au lieu de 1,5 % :
+
+```
+CAC          = 0,58 / 0,01 = 58 €
+Profit/vente = 62 − 58     = 4 €     → le plan ne fonctionne plus
+```
+
+Le CPC décide si le test est **lisible**. La conversion décide s'il est **rentable**. Sur un site neuf sans avis, 0,8-1,5 % est la fourchette réaliste — donc après le choix du produit, le vrai travail est **la page** : garantie écrite, date de livraison affichée, preuves. C'est l'axe D appliqué, et c'est le seul levier que Yasser contrôle entièrement.
+
+### Batch « catégories privées » — 47 mots-clés, seuil 0,70 € (11 sept.)
+
+Les blocs 5 et 8 portent un risque d'allégation / dispositif FDA. Les blocs 3 et 6 sont les plus propres : privés, physiques, aucune allégation nécessaire pour vendre.
+
+```
+# 1 — Luminothérapie (PV 99 $, marge ~62 $)
+light therapy lamp · sad lamp · happy light · 10000 lux light therapy
+sun lamp · bright light therapy lamp · daylight lamp · light therapy box
+seasonal affective disorder lamp · sunrise alarm clock
+
+# 2 — Anti-ronflement (PV 79 $, marge ~50 $)
+anti snoring device · snoring mouthpiece · stop snoring device · snoring solution
+mouth guard for snoring · chin strap for snoring · anti snoring mouthpiece · nasal dilator
+
+# 3 — Plancher pelvien (PV 129 $, marge ~82 $)
+pelvic floor trainer · kegel exerciser · pelvic floor device
+kegel trainer · pelvic floor therapy device
+
+# 4 — Compression jambes (PV 179 $, marge ~100 $)
+leg compression massager · air compression leg massager · compression boots recovery
+leg massager for circulation · foot and leg massager · calf massager
+
+# 5 — Hyperhidrose ⚠️ dispositif FDA classe II (PV 249 $, marge ~155 $)
+iontophoresis machine · hyperhidrosis treatment · sweaty hands treatment
+excessive sweating device · antiperspirant for hyperhidrosis
+
+# 6 — Incontinence lavable (PV 69 $, marge ~43 $)
+washable incontinence underwear · incontinence underwear for women
+incontinence underwear for men · bladder leak underwear · reusable incontinence pads
+
+# 7 — Acouphènes (PV 129 $, marge ~82 $)
+tinnitus relief device · tinnitus masker · tinnitus treatment device
+white noise machine for tinnitus
+
+# 8 — Mycose des ongles ⚠️ allégation forte (PV 149 $, marge ~92 $)
+toenail fungus laser device · nail fungus treatment device
+laser for toenail fungus · fungus nail laser
+```
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
