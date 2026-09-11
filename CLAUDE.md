@@ -696,6 +696,55 @@ Terme : `light therapy lamp` · États-Unis · 5 ans.
 | Montée en août-septembre | **Visible.** Sinon le +900 % sur 3 mois du Keyword Planner est un artefact de changement de tranche (réserve déjà notée en 9 ter) |
 
 
+### Moissanite — concurrents stables (11 sept., relance de Yasser)
+
+332 boutiques correspondent. Le filtre qualité de Trendtrack n'en retient que **2** à fort signal.
+
+| | theardant.com (ARDANT) | icecartel.com |
+|---|---|---|
+| Créée | déc. 2021 (~5 ans) | nov. 2022 (~3 ans) |
+| Visites/mois | **377 832** | 264 762 |
+| Courbe mars→août | 336k → 237k → 253k → 253k → 303k → **378k** | 247k → 245k → 294k → 363k → 344k → 265k |
+| Produits | 111 | 820 |
+| Prix | Boucles moissanite **68-88 $** | **Chaîne tennis moissanite argent 925 / or 14k : 682 $** |
+| Google live / **Search** | 127 / **204** | 48 / **67** |
+| Meta | 1 556 | **1 269**, en explosion : 94 → 1 309 en 6 mois |
+| TikTok | 22 400 abonnés, **343 ads TikTok** | 19 600 abonnés, 0 ad |
+
+**Première catégorie du dossier où les acteurs achètent vraiment du Google Search** (204 et 67 ads Search). Et les deux sont stables ou en croissance, pas des pics.
+
+**Mais le problème structurel est net : 111 et 820 produits.** La bijouterie se vend en catalogue — le client veut choisir parmi cinquante modèles. Avec 1 produit et 3 variantes (configuration figée, section 3), Yasser ne peut pas jouer ce jeu. C'est le même mur que l'art mural métal : **achat de goût, pas de réassurance** (axe D).
+
+Le seul sous-segment compatible serait la **bague de fiançailles** — achat unique, réfléchi, ticket élevé, réassurance pure (certificat, garantie, retour). Mais c'est aussi le plus disputé : Brilliant Earth, James Allen, Blue Nile, Charles & Colvard. À trancher au Keyword Planner, pas avant.
+
+### Jeunes boutiques qui ont réellement scalé — méthode corrigée (11 sept.)
+
+**Correction de méthode** : trier par `growth30d` renvoie l'artefact de mesure (25 boutiques sans rapport qui font toutes ×10 le même mois). On trie désormais par **trafic**, et on lit les courbes soi-même. Une vraie montée est **progressive sur 4-6 mois** ; un saut unique depuis le plancher de détection n'en est pas une.
+
+Filtres : US · créée depuis déc. 2025 · ≥ 30 000 visites/mois · ≤ 15 produits. **224 boutiques**, 30 analysées.
+
+| Boutique | Créée | Courbe mars→août | Ticket | **Search** | Meta |
+|---|---|---|---|---|---|
+| **desktronic.com** | déc. 2025 | 1,9k → 30k → 169k → 279k → 194k → 221k | **449-549 $** (bureaux) | **119** | 814 |
+| **panthertechnology.com** | mai 2026 | 0 → 0,2k → 15k → 106k → **454k** | **299-499 $** | 17 | **0** |
+| vaebo.com | mars 2026 | 0 → 53k → 77k → **170k** | 140 $ | 0 | 0 |
+| tryfascial.com | déc. 2025 | 0 → 3,6k → 26k → 43k → **196k** | 70 $ | 12 | 0 |
+| joinem.co | déc. 2025 | 6,8k → 19k → 22k → 133k → 837k → **2 305k** | 69-76 $ (**semaglutide GLP-1**) | 0 | **2 801** |
+| north-alpine.com | févr. 2026 | 8,8k → 41k → 460k → 1 155k → 1 935k → 1 811k | 30-50 $ | 11 | 1 060 |
+| maggies-tanks.com | avril 2026 | 0 → 1,6k → 51k → **208k** | 25-40 $ | 50 | 1 409 |
+| holior.com | mars 2026 | 0 → 7,2k → 19k → 112k → **349k** | 40 $ (compléments) | 6 | 0 |
+| yoracare.com | févr. 2026 | 1,2k → 14k → 56k → 117k → 176k → 259k | 17-29 $ | 2 | 829 |
+
+**Répartition des 30 :** compléments/santé **6** · mode à ticket bas **4** · digital/infoproduit **4** · **produit physique à ticket élevé : 3**.
+
+**Les deux seuls pertinents, et pourquoi ils ne marchent pas pour lui :**
+
+- **desktronic** — la preuve qu'un inconnu de 9 mois vend du 500 $ en Google Search (119 ads Search). Mais un bureau assis-debout pèse **30-50 kg** : mort sur le gate poids, et c'est du fret maritime, pas du dropship aérien 1 pièce.
+- **panthertechnology** — 299-499 $, **zéro Meta**, 454k visites en 4 mois. Les noms (Eclipse, Solstice, Sculpted Rubber Band) indiquent de l'**horlogerie**, déjà au cimetière (#13). Et 454k visites avec 17 ads Search ne viennent pas de Google : organique ou influence, non réplicable à 40 €/jour.
+
+**Cinquième confirmation en quatre jours** : filtrer « jeune + gros trafic + peu de produits » renvoie systématiquement des compléments, de la mode bon marché, du digital, ou des sources de trafic non réplicables. **Le produit physique à 150-250 $ acquis principalement en Google Search n'apparaît pas dans l'index.**
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
