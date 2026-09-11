@@ -392,6 +392,66 @@ Le ratio se calcule sur la **marge cumulée par client**, pas par commande. Un c
 **Piste à qualifier : machine + consommable, hors médical et hors complément.** Proposée par Yasser le 8 septembre, elle est la seule à réconcilier « ticket accessible » et « ratio ≥ 70 ». Non encore mesurée.
 
 
+### Le deuxième plafond — 0,70 € imposé par le budget (11 sept. 2026)
+
+Rappel de Yasser : **40 € / jour maximum sur Google Ads.** Le test arrêté est 7 jours × 40 € = 280 €.
+
+Il faut **~400 clics** pour qu'un résultat soit lisible. En dessous, « 0 vente » ne prouve rien et la grille de décision (0 / 1-3 / 4+) ne tranche pas.
+
+> **280 € / 400 clics = 0,70 € d'enchère haute maximum.**
+
+C'est un **plafond de lisibilité, indépendant de la marge**. Il se cumule avec le gate du ratio (marge ≥ CPC × 70) et c'est le plus contraignant des deux.
+
+| Enchère haute | Clics en 7 j | Ventes à 1,5 % | Lisible ? |
+|---|---|---|---|
+| 0,58 € | 483 | 7,2 | ✅ |
+| 0,70 € | 400 | 6,0 | ✅ limite |
+| 0,75 € | 373 | 5,6 | 🟠 |
+| 1,00 € | 280 | 4,2 | 🟠 |
+| 1,20 € | 233 | 3,5 | 🔴 |
+| 2,00 € | 140 | 2,1 | 🔴 |
+| 4,00 € | 70 | 1,1 | 🔴 |
+
+**Conséquence — la colonne « CPC max avec recharges / LTV » est annulée.** Elle montait à 2,00-2,20 € sur le sous-vide et le diffuseur. Inutilisable : à 2,00 €, le test achète 140 clics et finit à 2 ventes, soit la case « vivant mais on ne sait pas ». La LTV ne sert à rien tant que le test n'est pas lisible. **On mesure le CPC contre 0,70 €, pas contre la LTV.**
+
+### Résultat du batch machine + consommable (11 sept.)
+
+| Catégorie | Meilleur mot-clé acheteur | Verdict |
+|---|---|---|
+| **Humidificateur** | `cool mist humidifier` 10k-100k / **0,58 €** · `humidifier` 100k-1M / 0,75 € · `large room humidifier` 1k-10k / 1,08 € | 🟢 **Seul survivant** |
+| Sous vide | `vacuum sealer` 10k-100k / 1,20 · 1,29 · 1,57 € | 🔴 Plafond 0,70 € |
+| Hydroponique | `indoor herb garden` 1,26 € (-90 % 3 mois) · `indoor garden` 4,21 € | 🔴 |
+| Nettoyeur ultrasons | `ultrasonic jewelry cleaner` 1,59 € · `ultrasonic cleaner` 1,99 € | 🔴 |
+| **Diffuseur de parfum** | `scent diffuser` 10k-100k / **3,98 €** · `scent machine` 4,36 € | 🔴 **Recommandé #1 à tort** |
+| Distributeur savon auto | `foaming soap dispenser` 1,68 € · `touchless` 2,09 € | 🔴 |
+| Fumoir à cocktail | `cocktail smoker` 1,51-1,69 € · `whiskey smoker` 2,16 € | 🔴 |
+
+**Piège relevé** : `smoking gun` sort à 0,62 € sur 10k-100k avec un indice de concurrence de **1**. Personne n'enchérit parce qu'en anglais l'expression signifie « preuve accablante » — trafic non commercial. Application directe de la règle 5.
+
+**Erreur reconnue** : le diffuseur de parfum a été classé #1 sur la foi de Pura (1,07M de visites, 231 ads Search). Lecture inversée — une grosse marque qui pilonne le Search fait **monter** le prix du clic. C'est la règle 13, violée dans le message qui l'annonçait.
+
+### Humidificateur — état au 11 septembre
+
+🟢 **Premier produit en 31 à franchir le gate CPC.** Saisonnalité idéale : pic octobre → février, donc tout le Q4 **plus** janvier-février (contrairement à la crèche, morte le 26 décembre).
+
+**Structure de campagne qui en découle** : tête de campagne sur `cool mist humidifier` (0,58 €, exact match), **pas** sur `humidifier` (0,75 €). 483 clics contre 373 pour le même budget, soit +30 % de signal.
+
+Ce qui n'est pas réglé :
+
+| Point | État |
+|---|---|
+| Poids volumétrique | 2 kg réels mais carton ~4,4 kg volumétriques, facturés par le fret aérien. **DDP estimé 70-85 $** |
+| PV plancher | À 129 $ → marge 40 $ → ratio 53, échoue. Il faut **PV ≥ 155 $** (marge ~68 $, ratio 91) |
+| Ancre Amazon | Levoit 50-80 $. Sur PV 159 $ → ancre à 31-50 %, le sous-critère de l'axe A tombe |
+| Axe F | **Levoit (Vesync)** = usine chinoise en DTC **et** n°1 Amazon. Murs 2 et 3 réunis |
+| Certification | 120 V → **ETL/UL obligatoire aux US**. À faire confirmer par écrit |
+| Axe D | 🟠 Achat sur specs (litres, surface, dB). Seul angle de réassurance viable : **anti-moisissure / facilité de nettoyage**, le point de douleur de la catégorie (pari de Canopy) |
+
+**La mesure qui tranche n'est plus un mot-clé, c'est un prix DDP écrit.** DDP à 55 $ → marge 90 $ à PV 159 $, confortable. DDP à 85 $ → mort.
+
+**Sourcing et devis : Yasser s'en occupe, il sait faire.** Ne pas lui écrire de brief fournisseur (rappelé le 11 sept.).
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
