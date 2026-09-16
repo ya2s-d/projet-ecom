@@ -745,6 +745,71 @@ Filtres : US · créée depuis déc. 2025 · ≥ 30 000 visites/mois · ≤ 15 p
 **Cinquième confirmation en quatre jours** : filtrer « jeune + gros trafic + peu de produits » renvoie systématiquement des compléments, de la mode bon marché, du digital, ou des sources de trafic non réplicables. **Le produit physique à 150-250 $ acquis principalement en Google Search n'apparaît pas dans l'index.**
 
 
+### Marché US de la luminothérapie — cartographie Trendtrack complète (16 sept. 2026)
+
+Méthode : deux passes `find_similar_shops` (sur circadianoptics.com et lumie.com) pour énumérer le champ concurrentiel sans se limiter aux marques connues, puis lookups exacts pour récupérer les données publicitaires réelles (le payload `find_similar_shops` ne porte pas `platformMix` — la colonne Search y est toujours à 0, ne pas la lire).
+
+| Boutique | Pays | Créée | Âge | Visites/mois | Courbe mars→août (k) | Prod. | **Search** | Meta |
+|---|---|---|---|---|---|---|---|---|
+| **byloftie.com** (Loftie) | US | juin 2020 | 6 ans | **216 400** | 196→158→159→160→244→216 | 25 | **45** | **458** |
+| lumie.com | GB | juil. 2022 | 4 ans | 111 030 | 135→117→101→96→115→111 | 158 | 0 | 83 |
+| myluminette.com | BE | janv. 2023 | 3,5 ans | 101 474 | 100→90→71→58→55→**101,5** | 17 | 0 | 59 |
+| dansklysterapi.dk | DK | oct. 2014 | 12 ans | 46 104 | 3→2,5→3,2→2,7→**25,8→46,1** | 72 | 0 | 0 |
+| lysterapi.no | NO | nov. 2024 | 2 ans | 40 674 | 19→20→39→20→30→41 | 92 | 0 | 1 |
+| verilux.com | US | août 2016 | 10 ans | 35 529 | 50→39→29→26→27,5→35,5 | 31 | **0** | 0 |
+| **solacewake.com.au** | AU | **janv. 2026** | **8 mois** | **33 787** | **2→4,9→19,6→38,1→23,7→33,8** | **1** | **9** | **1** |
+| ottlite.com | US | mars 2024 | 2,5 ans | 31 131 | 20→28→27,5→27→41→31 | 215 | 0 | 0 |
+| honeywellsmartlighting.com | **CN** | nov. 2022 | 4 ans | 26 463 | 32→22→34→42,5→54→26,5 | 29 | 0 | **220** |
+| **helloambient.com** | US | **sept. 2025** | **12 mois** | **23 687** | 10→13→13,4→11,1→14,7→**23,7** | **1** | **2** | 3 |
+| lysterapi.dk | DK | déc. 2022 | 4 ans | 20 529 | 17→17→11→17→14→20,5 | 121 | 0 | 34 |
+| cet.org | US | mars 1996 | 30 ans | 18 293 | 20→23→17→17→21→18 | 29 | 0 | 0 |
+| **day-lights.com** (**Carex**) | US | nov. 2023 | 3 ans | **13 658** | 15→15→16→21→17→13,7 | 9 | **19** | **0** |
+| circadianoptics.com | US | oct. 2024 | 2 ans | 7 887 | 11→13→7,7→5,7→6,7→7,9 | 9 | 1 | 0 |
+
+**Prix relevés** : Carex Day-Light Elite **189,99 $** · Carex Classic Plus **169,99 $** · Loftie Lamp **279,99 $** · Loftie Clock 169,99 $ · Luminette 179-229 $ · Honeywell 189,99-799,99 $ · Lumie 49,98-119 $ · CET 40-189 $ · Verilux 42,99-79,99 $ · Circadian 39,99-79,99 $ · OttLite 31,99 $ · SOLACE WAKE 179,99 AUD · Ambient « Dreamie » 249 $.
+
+**`day-lights.com` est la boutique DTC de Carex** — introuvable le 11 sept. parce que la requête `carex` renvoie des boutiques de jardinage (genre botanique). Correction du trou signalé ce jour-là.
+
+### Les cinq enseignements
+
+**1 — La bande premium est confirmée par trois sources indépendantes : 170-280 $.** Carex à 169,99 et 189,99 $, Loftie Lamp à 279,99 $, Luminette à 179-229 $. **Un PV à 149 $ est donc SOUS le marché premium, pas au-dessus.** Marge de manœuvre jusqu'à 169 $ si besoin.
+
+**2 — Personne ne domine, et le marché est petit.** Le plus gros acteur purement SAD (Carex) fait **13 658 visites/mois**. Verilux 35k et en déclin sur 10 ans d'ancienneté. Circadian 7,9k. CET, fondée en 1996, 18k. Aucun mur de marque.
+
+**3 — Le marché entier achète ~76 annonces Search.** Loftie 45 · Carex 19 · Solace 9 · Ambient 2 · Circadian 1 · tous les autres 0. Pour comparaison, **Polywood seul en a 1 103** sur le mobilier. L'axe A est validé définitivement : la catégorie n'est pas disputée sur Google Search.
+
+**4 — La saison démarre maintenant, et ça se voit dans le trafic réel, pas seulement dans Trends.** Dansk Lysterapi : 2,7k → 25,8k → **46,1k** en deux mois (**×17**). Luminette : 54,9k → **101,5k** (+85 %). Lysterapi.no : 20,3 → 40,7k. Verilux : 27,5 → 35,5k. Les boutiques nordiques décollent en août-septembre. Confirmation indépendante de la saisonnalité.
+
+**5 — Le précédent qui compte : SOLACE.**
+
+```
+solacewake.com.au
+Créée le 1er janvier 2026          →  8 mois et demi
+1 SEUL produit : réveil lumineux Bluetooth, 179,99 AUD (~115 €)
+Trafic : 2,0k → 4,9k → 19,6k → 38,1k → 23,7k → 33,8k    ×16 en 5 mois
+9 annonces Google, toutes en Search  ·  1 seule annonce Meta, constante depuis avril
+100 % Australie
+```
+
+**C'est exactement le plan de Yasser, exécuté par quelqu'un d'autre il y a huit mois, sur un marché anglophone, et ça marche.** Mono-produit, ticket ~115-180, Google Search, zéro Meta.
+
+**Nuance honnête** : SOLACE vend un **réveil lumineux**, pas un panneau SAD 10 000 lux. Produit voisin, usage différent. Mais `sunrise alarm clock` a été mesuré à **0,76 € en 10k-100k**, donc sous le plafond de 1,07 €. C'est une variante à considérer, pas un remplacement — Philips SmartSleep et Loftie (279,99 $) occupent ce segment, donc l'axe F y est plus risqué que sur le panneau SAD.
+
+**helloambient.com** (12 mois, 1 produit à 249 $, +61 % sur 30 j) est le deuxième jeune mono-produit du champ, mais ses 23 687 visites viennent de 6 annonces au total — le trafic n'est donc pas payant. Source inconnue, non réplicable en l'état.
+
+### Conséquence sur le dossier luminothérapie
+
+| Axe | Avant le 16 sept. | Après |
+|---|---|---|
+| A — Colonisation | 14/30 (ancre Amazon à 29 %) | **20/30** — 76 ads Search sur tout le marché, aucun acteur au-dessus de 36k visites, et le premium à 170-280 $ éloigne l'ancre Verilux à 43 $ |
+| Prix de vente | 149 $ « au-dessus du marché ? » | **149 $ est sous Carex (169,99) et Loftie (279,99).** Confortable |
+| Saison | Trends seul | **Confirmée par le trafic réel** de 4 boutiques nordiques |
+
+**Score révisé : 71/100.** Passe le seuil des 70 pour la première fois depuis le hair topper.
+
+**Rien d'autre n'a changé : le DDP reste le seul chiffre manquant.**
+
+
 ## 10. État actuel et prochaine action
 
 *Écrit le 5 septembre 2026. **Largement dépassé — voir 9 ter et 9 quater.** La crèche de Noël est morte (persistance nulle + deadline du 8 décembre, impossible à tenir au 11 septembre). Le mécanisme des trois murs décrit ci-dessous reste valable et se complète maintenant de la loi du ratio marge/CPC (9 quater).*
