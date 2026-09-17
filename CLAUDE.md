@@ -60,7 +60,7 @@ Réaffirmée plusieurs fois après discussion. **Ne pas la rouvrir.**
 
 ### Étage 1 — Gates éliminatoires (un « non » = éliminé, aucun score calculé)
 
-Max 3 coloris · ~~pas de médical~~ → **gate levé par Yasser le 11 sept. 2026.** Sa seule justification était le compte Ads suspendu, or le compte est débloqué depuis le 5 sept. Ce qui fait suspendre un compte n'est pas le médical mais **l'allégation de santé** (soigne, traite, fait maigrir) : c'est l'allégation qui reste interdite, pas la catégorie · pas d'animalier · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 60-250 $ · marge ≥ 50 $ · **marge en $ ≥ enchère haute en € × 70** (gate ajouté le 11 sept. 2026 — voir 9 quater) · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
+Max 3 coloris · ~~pas de médical~~ → **gate levé par Yasser le 11 sept. 2026.** Sa seule justification était le compte Ads suspendu, or le compte est débloqué depuis le 5 sept. Ce qui fait suspendre un compte n'est pas le médical mais **l'allégation de santé** (soigne, traite, fait maigrir) : c'est l'allégation qui reste interdite, pas la catégorie · ~~pas d'animalier~~ → **gate levé par Yasser le 17 sept. 2026** (« on poursuit sur pawira ») · **< 3 kg** (relevé de 1 kg par Yasser le 5 sept. 2026 ; plafond fixé par le fret aérien Chine→US à ~8-10 $/kg, au-delà la marge passe sous 50 $) · ticket 60-250 $ · marge ≥ 50 $ · **marge en $ ≥ enchère haute en € × 70** (gate ajouté le 11 sept. 2026 — voir 9 quater) · cherché sur Google · pas de certification lourde · pas de batterie lithium (interdite en aérien) · sourçable en dropship 1 pièce · **ni sur-mesure ni personnalisation** (refusé par Yasser le 8 sept. 2026 — référence fixe uniquement) · tracking + colis neutre · pas de risque brevet · retours structurellement bas · demande compatible Q4.
 
 ### Étage 2 — Score sur 100
 
@@ -808,6 +808,83 @@ Trafic : 2,0k → 4,9k → 19,6k → 38,1k → 23,7k → 33,8k    ×16 en 5 mois
 **Score révisé : 71/100.** Passe le seuil des 70 pour la première fois depuis le hair topper.
 
 **Rien d'autre n'a changé : le DDP reste le seul chiffre manquant.**
+
+
+### 17 septembre 2026 — la lampe meurt, le gate animalier tombe, pawira arrive
+
+**La luminothérapie SAD est morte, tuée par Yasser :** « pas de concu = pas d'argent sur le marché ». Il a raison et les chiffres étaient les miens — Carex vend des lampes SAD depuis trente ans et fait **13 658 visites/mois**, le marché entier achète 76 annonces. Ce n'était pas un marché inexploité, c'était un marché inexistant. La règle 13 (« un CPC bas est un prix de marché ») avait été appliquée au `smoking gun` et pas à la lampe.
+
+**Règle 14 — le test de taille du marché.**
+> **Le leader d'une catégorie doit faire ≥ 100 000 visites/mois.** En dessous, le marché est trop petit quel que soit le CPC.
+
+Vérification : luminothérapie SAD leader 13 658 🔴 · moissanite 377 832 🟢 · fontaines à chat **967 347** 🟢.
+
+**Décorticage des jeunes boutiques à ticket élevé (250-500 $)** — panthertechnology (montre connectée 299/499 $ + chargeur 19 $), luffu (bague connectée 249,99 $), nuropod (900 $ + chargeur 25 $), omi.me (179 $), viwoods (tablette e-ink 279 $), getcartablet (99,99 $) : **toutes de l'électronique portable, donc toutes du lithium.** À ce prix il faut de la technologie, et la technologie portable a une batterie. Le gate lithium ferme tout le segment. Et panthertechnology / luffu / pollen-robotics font 85-454k visites avec **zéro publicité** — trafic presse/Reddit/influence, non réplicable à 430 €.
+
+**Correction demandée par Yasser** : ne pas regarder que Search, mais Google en entier (Shopping inclus). Ma règle 9 excluait PMax et j'avais jeté Shopping avec — ce n'est pas la même chose. ⚠️ **Précaution de lecture** : le comptage d'annonces sous-estime structurellement Shopping (une campagne sur 500 produits = 1-2 « annonces », 20 annonces Search = 20). On ne peut donc pas conclure que Shopping est marginal depuis ce compteur.
+
+---
+
+## Le candidat — fontaine à eau pour chat (17 sept. 2026)
+
+**`pawira.com`** — trouvée en cherchant les boutiques US qui achètent réellement du Google.
+
+```
+Créée juin 2025            15 mois
+232 245 visites/mois       +45 % sur 30 jours
+13 produits · basée CA · trafic US 82 % · CA 11 %
+
+Fontaine à eau inox              180 $   (variante A/B à 89,99 $)
+Recharges filtres × 8 (4 mois)    39,99 $  (variantes A/B 24,99 / 31,99)
+
+223 annonces Google  contre  90 Meta   →  ratio 2,5 : 1
+(91 Search · 18 Shopping · 33 YouTube · 81 autres)
+```
+
+**Machine + consommable, ticket dans la bande, Google-dominant, sans batterie, par une boutique de quinze mois.** C'est la structure proposée par Yasser le 8 septembre, enfin trouvée.
+
+### Le marché — 20 concurrents cartographiés
+
+| Boutique | Pays | Créée | Visites | Prod | Courbe mars→août (k) | Prix |
+|---|---|---|---|---|---|---|
+| **kittyspout.com** | CA | févr. 2021 | **967 347** | 226 | 720→576→668→618→882→**967** | 29,99-59,95 $ |
+| **selenepets.com** | US | **mars 2025** | **444 289** | 408 | 11,4→6,5→52,4→306→305→**444** (**×39**) | 89,98 $ |
+| officialkittyfountain | CA | févr. 2021 | 114 369 | 226 | 16,8→25,6→28,9→40 | 29,95-119,95 $ |
+| uahpet.com | HK | mars 2022 | 88 851 | 57 | 163→114→114→133→128→89 | 25,99 / **349 $** |
+| pethealthinsiders.com | GB | mars 2023 | 73 923 | 23 | 0→3,8→23,6→33,8→74,2→73,9 | — |
+| miaustore.com | — | 2014 | 65 289 | 147 | stable 55-65 | 7,9-16,9 $ |
+| **theflowzy.com** | AU | mars 2025 | 40 440 | **11** | 15,9→13,1→21→16,4→21,9→**40,4** | 45 / **209,99 $** |
+| uk.petlibro.com | US | 2022 | 33 758 | 60 | 60→46→24→25→28,5→33,8 | **149,99 $** |
+| elfinfountain.com | HK | juil. 2023 | 29 232 | 16 | stable ~30 | 9,99-69,99 $ |
+| trinktiger.de | DE | mai 2025 | 27 934 | 22 | ~20-30 | 64,99-89,99 $ |
+| **trypurestream.com** | US | nov. 2024 | 26 285 | **8** | 0→0→13,2→28,5→23→26,3 | — |
+| **doggyspout.com** | CA | **mars 2026** | 20 184 | 21 | 0→7,4→8→17,1→26,3→20,2 | 74,95 $ |
+| **goodorigins.shop** | US | **avril 2026** | 17 804 | **11** | 0→0→0→0,6→9→**17,8** | **99 / 29,99 $** |
+| **yeapaw.com** | US | mars 2025 | 14 020 | **3** | 3,3→1,8→16,2→4→8→14 | **109,99 $** |
+| **vasapet.com** | US | avril 2024 | 10 452 | **2** | 8,8→4→4,8→5,8→5,5→10,5 | **129,99 / 19,99 $** |
+| brookfountains.com | US | mai 2024 | 8 523 | 10 | ~8,5 | 89,95 / 15,50 $ |
+| pawaii.com | US | déc. 2021 | 8 325 | 17 | ~8 | 69,99 / 25-39,99 $ |
+
+**Les cinq faits qui comptent**
+
+1. **Le leader fait 967 347 visites.** Règle 14 franchie dix fois. Il y a de l'argent, contrairement à la lampe.
+2. **selenepets a fait ×39 en six mois**, créée en mars 2025. Scale récent et réel.
+3. **Le segment premium est peuplé et actif** : uahpet 349 $ · theflowzy 209,99 $ · pawira 180 $ · petlibro 149,99 $ · vasapet 129,99 $ · yeapaw 109,99 $ · goodorigins 99 $. **Sept boutiques entre 99 et 349 $.** L'ancre Amazon (25-60 $) existe mais ne tue pas le premium — contrairement à la lampe, c'est démontré par la présence de sept acteurs.
+4. **Les petits catalogues gagnent** : vasapet 2 produits, yeapaw 3, trypurestream 8, goodorigins 11, theflowzy 11.
+5. **Ça se lance encore maintenant** : goodorigins créée en avril 2026 (5 mois, 0→17,8k), doggyspout en mars 2026 (6 mois, 0→20,2k).
+
+**Risques identifiés**
+
+| Point | État |
+|---|---|
+| **PETLIBRO** | Marque-usine chinoise leader des fontaines, présente (uk.petlibro 33,7k). Mur n°2 potentiel — mais elle **décline** (60→33,7k) et son prix est à 149,99 $, pas en dessous |
+| Ancre Amazon | Fontaines à 25-60 $ sur Amazon → 14-33 % d'un PV à 180 $, sous le seuil de 50 %. **Mais sept boutiques vivent au-dessus de 99 $**, donc l'ancre ne ferme pas le segment |
+| kittyspout | 967k visites mais 226 produits — catalogue, pas mono-produit. Ce n'est pas le même jeu |
+| Batterie | Certaines fontaines sont sans fil → **exiger un modèle sur secteur** au sourcing |
+
+**Économie estimée** : PV 180 $ − DDP ~50 $ (inox, 1,5-2,5 kg) − frais 4 $ − retours 8 % → **marge ~112 $**. Ratio à 1,07 € : **105**. Plafond effectif = **1,07 €** (budget), pas le ratio (qui autoriserait 1,57 €).
+
+**Prochaine étape : porte 1, Keyword Planner, par Yasser.**
 
 
 ## 10. État actuel et prochaine action
