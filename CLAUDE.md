@@ -1036,3 +1036,124 @@ bamboraco vend une **garantie payante en SKU séparé** à 4,99 $, et c'est la s
 La France redeviendra intéressante avec du cash et un compte Meta, sur un produit rendu à 12-18 € vendu 39-49 €. Ce n'est pas la configuration actuelle.
 
 **On reste US, sur la fontaine à 129 $.** Le chiffre manquant reste le même : les mesures Keyword Planner.
+
+
+### 24 septembre 2026 — la fontaine et l'AFM meurent, le théorème se ferme
+
+Mesures Keyword Planner rendues par Yasser (US · Google · sept. 2025 - août 2026).
+
+#### Fontaine à chat — 🔴 morte sur les deux plafonds
+
+| Mot-clé | Volume | **Enchère haute** |
+|---|---|---|
+| `stainless steel cat fountain` | 10k-100k | **3,15 €** |
+| `pet water fountain` | 1k-10k | **2,74 €** |
+| `cat drinking fountain` | 10k-100k | **2,58 €** |
+| `cat water fountain` | 10k-100k | **2,58 €** |
+| `cat fountain` | 10k-100k | **2,46 €** |
+| `automatic cat water fountain` | 1k-10k | **2,46 €** |
+| `cat fountain filter` | 1k-10k | 2,18 € |
+| `cat water dispenser` | 1k-10k | 1,57 € |
+| `cat water fountain filter` | 1k-10k | **1,08 €** (le seul proche — et c'est le consommable) |
+
+```
+Ratio  : marge 79 $ / 2,58 €  =  31         (seuil 70)      🔴
+Budget : 430 € / 2,58 €       =  167 clics  (il en faut 400) 🔴
+```
+Passer le ratio à 2,58 € exigerait **181 $ de marge**, soit un PV ~300 $. N'existe pas dans la catégorie.
+
+**Pourquoi pawira y arrive et pas nous — la leçon qui manquait.** Ils achètent 91 annonces Search à 2,58 € sur un produit à 180 $ (ratio 43, sous le seuil). Ils ne rentabilisent pas la première commande : ils rentabilisent **les recharges de filtres à 39,99 $ tous les 4 mois**, avec 15 mois d'historique de compte et des avis. C'est le modèle apexlaboratories, déjà écrit le 11 septembre.
+
+⚠️ **Contradiction non vue au moment de recommander pawira** : la structure machine + consommable est précisément celle qui rend le CPC inabordable à un nouvel entrant — les installés enchérissent sur leur LTV, le nouveau sur sa première vente.
+
+#### AFM Disabler — 🟢 seul en 33 à franchir les deux plafonds, puis 🔴 mort sur 4 gates
+
+| Mot-clé | Volume | Enchère haute |
+|---|---|---|
+| **`afm disabler`** | **10k-100k** | **0,98 €** ✅ |
+| `afm disabler delete` | 100-1k | 0,91 € |
+| `afm delete` | 1k-10k | 1,02 € |
+| `dfm disabler` | 1k-10k | 1,07 € |
+| `chevy afm disabler` | 100-1k | 1,10 € |
+| `gm afm disabler` | 100-1k | 1,16 € |
+| `range afm disabler` | 1k-10k | 1,24 € (**recherche de marque**) |
+
+Le générique (10k-100k) est ~10× le volume de la marque (1k-10k) : signal d'axe F favorable.
+Prix relevés : **Range Technology 219,99-265,95 $ sur Amazon**, 280,95 $ en direct, pro 399-649 $. mynexdrive 89,95 $.
+
+**Puis mort sur 4 gates :**
+
+| Gate | Lecture |
+|---|---|
+| Ancre Amazon | 🔴 **6 clones** — BENOWO, OBDCAR, OBDDFM, OBDAFM, Chatbrid, TOPDON. OBDCAR positionné « budget-friendly » |
+| Axe F | 🔴 **TOPDON**, l'archétype du mur n°2 cité en section 5, est dans la catégorie |
+| Brevet | 🔴 Range revendique une techno brevetée ; firmware fuité en 2021, PCB/enclosures identiques sur tous les clones |
+| Canal | 🔴 mynexdrive : **357 Meta / 52 Google** (6,9 : 1), trafic en plateau 38k depuis juin |
+
+**Erreur reconnue** : marge de 117 $ annoncée sur la foi du prix Range à 255 $, **sans avoir vérifié le prix des clones** — quinze minutes après avoir identifié cette exacte erreur sur pawira.
+
+---
+
+### LE THÉORÈME — pourquoi 33 produits sont morts
+
+La section 10 avait écrit la moitié :
+> *toute catégorie simultanément cherchée sur Google et sourçable en dropship 1 pièce depuis la Chine a déjà son usine listée sur Amazon.*
+
+Le corollaire manquant :
+
+```
+Yasser PEUT sourcer le produit
+   →  n'importe qui peut  →  quelqu'un l'a fait  →  prix Amazon écrasé
+   →  MORT sur l'ancre
+
+Yasser NE PEUT PAS le sourcer (brevet, firmware, certif, exclusivité usine)
+   →  MORT sur le sourcing
+```
+
+**Ces deux branches couvrent tout l'ensemble des produits dropshippables. Il n'y a pas de troisième branche.**
+
+La seule sortie était écrite en section 10 — *un produit configuré ou ajusté à la commande* — et **Yasser l'a fermée le 8 septembre** en refusant le sur-mesure. 25 produits sont morts depuis. Ce n'est pas de la malchance, c'est arithmétique.
+
+### Règle 15 — pourquoi Google Search à 430 € est structurellement perdant
+
+```
+CPC max du gagnant installé  =  conversion × marge × commandes par client
+CPC max de Yasser            =  1,5 %      × marge × 1
+```
+
+| | pawira | Yasser, même produit |
+|---|---|---|
+| Conversion | ~2,5 % (15 mois, avis) | 1,5 % |
+| Marge | 112 $ | 79 $ |
+| Commandes/client | 2 (recharges) | 1 |
+| **CPC soutenable** | **5,60 €** | **1,18 €** |
+
+> **Sur toute catégorie mature, Yasser peut payer 3 à 5× moins cher le clic que le gagnant installé.**
+
+Donc gagner sur Google Search exige une catégorie **sans gagnant installé** — donc sans argent (lampe SAD, 13 658 visites) ou restreinte par Google (humidor). Fermé des deux côtés.
+
+### Ce qui n'est PAS une échappatoire
+
+**Allonger le test ne change rien.** `430 € / 400 clics = 1,07 €` quelle que soit la durée. 14 ou 21 jours n'achètent pas un clic de plus — la durée change l'étalement, pas le volume.
+
+**Il n'existe que deux leviers : le prix du clic (canal) ou la marge (produit non-ancrable).**
+
+### Axe G — le test qui remplace la chasse au CPC
+
+> **La page produit doit-elle poser une question à l'acheteur avant qu'il puisse commander ?**
+>
+> - Elle peut être un simple « Add to cart » → **Amazon l'ancre** → 🔴
+> - Elle doit demander « ton modèle ? ta mesure ? ta teinte ? » → **Amazon ne sait pas faire** → 🟢
+
+**Distinction capitale, jamais posée** : *ajustement* ≠ *fabrication*. Le refus du 8 septembre visait la fabrication à la demande (livre bébé → MOQ 100-500 ; Zanvos → gravure). Un produit à **grille de compatibilité ou de mesure** est du **stock standard avec une aide au choix sur la page** : zéro MOQ, zéro fabrication, référence fixe. La contrainte de Yasser est respectée à la lettre.
+
+C'est la structure du hair topper (mesure + color match) — 76/100, meilleur score du dossier, mort sur l'affinité et non sur les chiffres.
+
+### Les deux choix posés le 24 septembre — en attente d'arbitrage
+
+| | Choix | Argument |
+|---|---|---|
+| 🟢 **A** *(recommandé)* | Rouvrir « ajusté », version sans MOQ | Garde Google, le compte et la compétence. Attaque le vrai problème : **l'ancre Amazon, pas le canal** |
+| 🟠 B | Meta pour le premier test | 30 jeunes boutiques US scalées → Meta majoritaire · 60 FR → Meta 58 fois sur 60 · mynexdrive 357/52 · pawira Google-dominant mais 15 mois d'historique. Sur Meta un bon créa fait **baisser** le coût ; sur Google aucun créa ne compense l'absence d'historique de compte |
+
+Non recommandé en premier : B demande d'apprendre un canal alors qu'il reste 1 jour.
