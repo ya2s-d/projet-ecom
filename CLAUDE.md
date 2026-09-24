@@ -936,3 +936,103 @@ Passer d'abord le bloc de calibration de la section 9.
 | Google Trends | Le pic doit démarrer **avant le 20 octobre**. S'il démarre en novembre, la fenêtre est trop courte |
 
 Économie de référence : PV 99 $ − DDP 22 $ − frais 3 $ − retours 6 % → marge ≈ 68 $. À 1,00 € de CPC, équilibre à **1,47 %** de conversion ; à 0,60 €, équilibre à **0,88 %**.
+
+
+### Marché français — analyse complète (24 sept. 2026)
+
+Demandée par Yasser pendant qu'il mesure ses mots-clés. Méthode : 3 pulls Trendtrack, `main_market_countries: ["FR"]`, créées depuis janv. 2025, ≤ 15 produits. **220 boutiques** avec ≥ 20 ads actives, **159** avec ≥ 40. Les 60 premières lues (tri par ads, puis par trafic).
+
+**Verdict : la France ne passe pas les gates du dossier. Ce n'est pas le CPC qui la tue — c'est la TVA et le plafond de ticket.**
+
+#### Fait 1 — le plafond de ticket français est à 60 €
+
+Sur 60 boutiques jeunes avec budget pub réel, **aucune au-dessus de 90 €**. Médiane ~35 €.
+
+| Ticket du bestseller | Nombre |
+|---|---|
+| 84,99 - 89,99 € | 1 (eyespro.fr) |
+| 79,98 - 79,99 € | 2 |
+| 59 - 59,99 € | 6 |
+| 25 - 49,90 € | **48** |
+
+La bande réelle du marché FR jeune est **25-60 €**. Le gate ticket du dossier (60-250 $) touche à peine son plafond.
+
+#### Fait 2 — la TVA, ligne qui n'existe pas dans le modèle US
+
+```
+Fontaine à chat, référence FR (griffedamour, ClayFlow) :
+PV TTC                       59,90 €
+− TVA 20%                    −9,98 €
+= PV HT                      49,92 €
+− DDP Chine→FR (2 kg inox)   −45,00 €   (produit ~20 + fret ~18 + TVA import ~7)
+− frais                       −2,00 €
+− retours 8%                  −4,79 €
+= MARGE                       −1,87 €
+```
+
+Pour atteindre les 35 € de marge qu'exige la règle ×70 à 0,50 € de CPC : `PV ≥ 109 € TTC`, soit **82 % au-dessus du leader français** sur un produit identique.
+
+#### Fait 3 — la France est un marché Meta, pas Google
+
+Inverse exact de pawira (223 Google / 90 Meta).
+
+| Boutique | Visites | Google | Meta | Ratio |
+|---|---|---|---|---|
+| reveline.fr | 26 144 | 2 | 983 | **1 : 490** |
+| lyphea.com | 213 357 | 18 | 660 | 1 : 37 |
+| titanoxfrance.com | 180 831 | 11 | 452 | 1 : 41 |
+| lynae.co | 733 012 | 102 | 794 | 1 : 8 |
+| lelamier.com | 623 321 | 22 | 323 | 1 : 15 |
+| nuclever.fr | 215 080 | 60 | 374 | 1 : 6 |
+| **bamboraco.com** | 97 146 | **380** | 120 | **3 : 1** 🟢 |
+| **eyespro.fr** | 27 976 | **49** | 22 | **2 : 1** 🟢 |
+
+**2 boutiques Google-dominantes sur 60.**
+
+#### Fait 4 — le test dure 3 semaines, pas 7 jours
+
+`fontaine à eau pour chat` FR sortira en 1k-10k/mois (÷5 à ÷8 du volume US). À 5k/mois : 1 150 recherches/semaine × 10 % de CTR en position 1-2 = **115 clics/semaine** → 400 clics lisibles demandent **3,5 semaines**.
+
+| | 🇺🇸 US | 🇫🇷 FR |
+|---|---|---|
+| Durée d'un cycle | 7 jours | **21-25 jours** |
+| 3 cycles pour 2 000 € de cash | **3 semaines** | **9-10 semaines** |
+
+La France est **3× plus lente** pour le même argent — contre l'objectif énoncé le 11 sept.
+
+#### Les gates réécrits pour la France
+
+| Gate | Valeur US | Valeur FR réelle | Passe ? |
+|---|---|---|---|
+| Ticket | 60-250 $ | marché à 25-60 € | 🔴 |
+| marge ≥ CPC × 70 | CPC max 1,12 € | marge 20-34 € → **CPC max 0,29-0,49 €** | 🔴 |
+| Plafond budget (430 €/400 clics) | 1,07 € | 1,07 € (inchangé) | 🟢 |
+| Leader ≥ 100k visites (règle 14) | kittyspout 967k | griffedamour **56 753**, et c'est un catalogue de 397 produits — donc pas du trafic fontaine | 🟠 |
+| Canal Google | pawira 2,5 : 1 | 2 boutiques sur 60 | 🔴 |
+
+**Le gate qui mord s'inverse.** Aux US c'est le plafond de lisibilité (1,07 €) ; en France c'est la règle ×70 (0,29-0,49 €) — et 0,29 € est *sous* le plancher du marché FR des mots-clés acheteurs.
+
+#### Les 2 candidats testés à l'arbitrage
+
+| Candidat | Arbitrable FR ? |
+|---|---|
+| Fontaine à chat | 🔴 Le produit oui, le prix non. Référence FR **59,90 €** (griffedamour, ClayFlow céramique + filtres 25 €, 56 753 visites, FR 81 %, Google 19 live dont Shopping 73 / Search 25). Il faudrait 109 € |
+| AFM Disabler | 🔴 Structurellement américain — quasi aucun moteur GM Active Fuel Management dans le parc européen |
+
+#### Ce que la France a quand même montré — machine + consommable existe
+
+| Boutique | Machine | Consommable | Trafic | Canal |
+|---|---|---|---|---|
+| **lelamier.com** | Rasoir ALZ-PREMIUM **59 €** | Pack 100 lames **25 €** | 623k | Meta 15 : 1 |
+| **getmielle.com** | Kit beauté pieds **79,98 €** | Recharges 60 disques **22,21 €** | 61k | Meta 5 : 1 |
+| **bamboraco.com** | Porte-bébé sling **44 $** | Poche 19 $ + **garantie à vie 4,99 $** | 97k | **Google 3 : 1** |
+
+bamboraco vend une **garantie payante en SKU séparé** à 4,99 $, et c'est la seule Google-dominante du lot. À retenir pour la page produit, pas comme produit.
+
+#### Décision
+
+**Ne pas lancer en France**, ni en premier ni en deuxième test tant que le cash n'est pas fait. Le motif n'est pas la taille du marché (lynae 733k, lelamier 623k) : c'est que **20 % de TVA sur un ticket plafonné à 60 € laisse structurellement 20-34 € de marge**, donc un CPC maximum de 0,29-0,49 €, sous le prix de marché du clic — et que les rares gagnants y gagnent sur Meta.
+
+La France redeviendra intéressante avec du cash et un compte Meta, sur un produit rendu à 12-18 € vendu 39-49 €. Ce n'est pas la configuration actuelle.
+
+**On reste US, sur la fontaine à 129 $.** Le chiffre manquant reste le même : les mesures Keyword Planner.
