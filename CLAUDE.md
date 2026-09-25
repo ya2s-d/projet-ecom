@@ -1305,3 +1305,93 @@ Batch « catégories privées », bloc 2, écrit le 11 septembre : *« Anti-ronf
 **🔴 LIGNE ROUGE ABSOLUE.** trysleepease écrit « **Eliminates Snoring & Sleep Apnea** ». L'apnée du sommeil est une **pathologie diagnostiquée** — c'est mot pour mot ce que le dossier interdit depuis le 11 septembre (*« soigne, traite, un nom de maladie → suspension »*). Reprendre cet angle fait sauter le compte, sur Meta comme sur Google.
 
 **Angle autorisé** : le conjoint et le sommeil partagé. « Ta partenaire dort dans l'autre chambre », « confort nocturne », « 60 nuits satisfait ou remboursé ». **Zéro mot médical, zéro avant/après** (Meta les interdit en santé/fitness).
+
+
+### 25 septembre, soir — Lymphelia analysée, et la métrique de détection corrigée
+
+Yasser a repéré `trylymphelia.com` : « 69 ads active et il est là depuis seulement 19 jours ça veut dire qu'il scale fortement ».
+
+**Données réelles :**
+```
+trylymphelia.com
+Créée le 6 septembre 2026          →  19 jours   ✅ l'âge était juste
+Boutique FR (EUR)  ·  ads ciblées DE à 100 %     →  ALLEMAGNE, ni US ni France
+3 produits :
+   « Lymphelia Lymph Balance Tropfen – Pflanzlicher Kräuterkomplex »   28,90 €
+   « Bestellschutz » (protection de commande)                           2,99 €
+Meta : 59 actives  ·  courbe 16 → 32 → 46 → 59
+Google : 0   ·   Trafic indexé : 0
+```
+
+**Quatre corrections :**
+
+1. **Ce n'est pas un produit physique** — des gouttes de plantes à 28,90 €. 8e complément remonté par ce type de filtre depuis le 8 sept.
+2. **Ni US ni France** — 100 % des ads ciblent DE, et l'Allemagne applique le **HWG**, la loi la plus stricte d'Europe sur les allégations santé.
+3. **Le ticket rend le test impossible** : marge ~21,45 € (+2,99 de Bestellschutz = 24,44 €) → seuil J+7 = **17,6 ventes**. En France, TVA comprise, marge 16,60 € → **26 ventes**. Intenable à 61 €/jour sans historique.
+4. **Le marché est saturé de clones** — 18 boutiques sur le drainage lymphatique, bande de prix collée à 30-60 $, leader `lymphoria.co` à **3 528 559 visites** et 1 243 créas (déjà dans les favoris de Yasser depuis le 8 sept.). Lymphelia est le 19e entrant.
+
+| Boutique | Pays | Créée | Visites | Meta | Prix |
+|---|---|---|---|---|---|
+| **lymphoria.co** | US | juin 2025 | **3 528 559** | **1 243** | 39,99 $ |
+| lymphsystemsupport.com | — | — | 274 331 | 149 | en déclin 594→441→245→162 |
+| nuflos.com | US | juin 2025 | 156 734 | 3 | 39,95 $ |
+| trynaturesroots.com | US | oct. 2025 | 114 431 | 0 | 39,95 $ |
+| nuvara.it | FR→IT | mars 2026 | 32 769 | 58 | 49,90 € |
+| trynativebloom.com | US | janv. 2026 | 24 066 | 180 | 39,99 $ |
+| **limfae.com** | **FR** | août 2025 | 21 326 | 0 | **149,90 / 99,90 / 79,90 €** |
+| sonvital.com | ES | févr. 2026 | 20 427 | 232 | 59,90 € |
+| myerlona-it.com | — | avril 2026 | 16 693 | 340 | 79,80 € |
+
+### Règle 16 — la métrique de détection d'un lancement qui marche
+
+> **« Jeune + beaucoup d'ads » ne mesure rien.**
+> ```
+> Semaine 1-3   →  TOUT LE MONDE monte. C'est le budget de lancement.
+> Semaine 4-8   →  celui qui perd de l'argent COUPE
+>                  celui qui gagne DOUBLE
+> ```
+> **Le bon filtre : créée il y a 45 à 90 jours + croissance des ads > 50 % sur 30 jours + trafic non nul.**
+
+Repère : mynexdrive était à 56 créas à J+21 et sa courbe a monté 6 mois. Lymphelia à J+19 n'a encore rien prouvé — **son trafic indexé est à 0**.
+
+### Le pull corrigé — 11 boutiques sur tout le marché US
+
+Filtres : US · créée du 15 juin au 10 août 2026 · ≤ 12 produits · ≥ 40 ads · **adsGrowth last30d > 50 %**.
+**Le filtre de Yasser rendait 217 boutiques. Celui-ci en rend 11.**
+
+| Boutique | Âge | Trafic | Meta (courbe) | Google | Produit / prix |
+|---|---|---|---|---|---|
+| somerwell.shop | 64 j | 4 590 | 0→84→307→546→739→**767** | 0 | Books & Literature, aucun produit indexé 🟠 |
+| **olfiastudio.com** | **100 j** | **2 012 → 11 240 (×5,6)** | 37→29→90→170→180→**210** | **44** | **Diffuseur 69,90 $ + Botanical Wax 39,90 $** + Aroma 49,90 |
+| tgideashair.com | 84 j | 2 722 | 0→54→107→154→**200** | 0 | Shampoing romarin 26,95 $ + **Next Day 3,95 $** |
+| skill-doc.com | 68 j | 13 766 | 22→39→59→101→**149** | 0 | 1 produit non indexé |
+| pondet.com | 101 j | 3 246 | 3→39→62→108→**129** | 4 | Salon de jardin 568-1 240 $ 🔴 poids |
+| **riviage.com** | 84 j | 2 982 | 3→24→47→82→**100** | 0 | **Pommeau 69,99 $ + Shipping Protection 4,99 $** |
+| lennoxmason.com | 75 j | 6 602 | 13→31→45→70→**99** | 0 | Apparel |
+| oasmobility.eu | 67 j | 306 | 2→24→74→45→**62** | 0 | Fauteuil roulant 1 089 € 🔴 lithium + EU |
+| earclear.store | 61 j | 692 | 17→42→56→89→**75** | 0 | Sticky Ear Cleaner 19,99 $ |
+| shopvitalia.co | 100 j | 48 603 | 8→41→50→96→**95** | 46 | Cayenne 24,99 $ — déjà tué le 11 sept. |
+| thecookwaresociety.com | 77 j | 8 129 | 0→11→58→**50** | 26 | Cookware |
+
+**Lecture décisive : une seule des 11 a un vrai décollage de TRAFIC.** Les autres ont des créas qui montent et un trafic plat — elles paient sans convertir.
+
+### Le diffuseur de parfum ressuscite — par la porte Meta
+
+`olfiastudio.com` est la seule à décoller. Et c'est **le diffuseur de parfum**, recommandé n°1 à tort le 11 septembre puis tué par `scent diffuser` à **3,98 €** de CPC Google.
+
+**Ce n'est pas une contradiction, c'est exactement ce que le choix B était censé rouvrir** : 3,98 € était le prix d'une enchère Google sur un mot-clé. Sur Meta il n'y a pas d'enchère sur mot-clé. Le produit était bon, le canal était faux. olfiastudio le démontre sur 100 jours.
+
+```
+PV                      69,90 $
+− produit (~12 $)       −12,00
+− frais                  −3,00
+− retours 8 %            −5,60
+= marge                  49,30 $   (+4,99 Shipping Protection = 54,29 $)
+Seuil J+7 : 430 € / 49 $  =  8,8 ventes
+```
+Structure machine + consommable, comme spin360fan (189,99 + pods 39).
+
+### Shipping Protection — 6e confirmation indépendante
+
+tryravine 4,99 $ · myhematix 3,90 $ · bamboraco 4,99 $ · **riviage 4,99 $** · **tgideashair « Next Day processing » 3,95 $** · **Lymphelia « Bestellschutz » 2,99 €**.
+Ce n'est plus une astuce repérée sur trois boutiques : c'est un **standard du marché**. À mettre sur la page quel que soit le produit.
