@@ -1157,3 +1157,151 @@ C'est la structure du hair topper (mesure + color match) — 76/100, meilleur sc
 | 🟠 B | Meta pour le premier test | 30 jeunes boutiques US scalées → Meta majoritaire · 60 FR → Meta 58 fois sur 60 · mynexdrive 357/52 · pawira Google-dominant mais 15 mois d'historique. Sur Meta un bon créa fait **baisser** le coût ; sur Google aucun créa ne compense l'absence d'historique de compte |
 
 Non recommandé en premier : B demande d'apprendre un canal alors qu'il reste 1 jour.
+
+
+---
+
+## 25 septembre 2026 — choix B acté : Meta pour le premier test
+
+Yasser a tranché : **B**.
+
+### Les règles qui tombent
+
+| Règle | Sort |
+|---|---|
+| Plafond 1,07 € | 🔴 **Morte** — elle venait de « 400 clics à 430 € » sur une enchère Google |
+| `marge ≥ CPC × 70` | 🔴 **Morte** — calibrée sur la conversion Google Search |
+| Keyword Planner comme gate | 🔴 **Mort** — reste utile pour vérifier qu'une demande existe, ne décide plus |
+| Règle 10 (« Meta ne prouve rien ») | 🔄 **S'inverse** — c'est maintenant la preuve recherchée |
+| Ticket 60-250 $ | 🔄 **S'ouvre** — voir la bande Meta ci-dessous |
+
+### Pourquoi Meta, chiffré
+
+```
+GOOGLE, fontaine, 430 € à 2,58 €        =  167 clics.  Plafond dur.
+META,   430 € à 20 $ de CPM, CTR 1,5 %  =  345 clics
+META,   430 € à 12 $ de CPM, CTR 3 %    =  690 clics   ← avec un bon créa
+```
+
+**Sur Google le CPC est une enchère : un bon Quality Score rend 20-30 %. Sur Meta un bon créa rend 300-400 %.** La variable de contrôle passe de l'enchère (subie) au créa (fabriqué).
+
+### Le prix d'entrée, affiché par les données du dossier
+
+reveline.fr **983** · lynae.co 794 · lyphea.com 660 · **mynexdrive 357** (de 4 à 357 en 6 mois, ~2/jour) · pawira 90.
+**Les gagnants Meta font 300 à 1 000 créas, pas 5.** La production de créas est le travail réel, pas la sélection produit.
+
+### LE THÉORÈME DE L'ANCRE EST UN THÉORÈME GOOGLE
+
+Correction majeure de ce qui a été écrit le 24 septembre.
+
+```
+GOOGLE  →  l'acheteur a TAPÉ le mot-clé
+           ton annonce à 79 $ ET Amazon à 24,99 $ sont sur LA MÊME PAGE
+           →  l'ancre mord à plein
+
+META    →  l'acheteur ne cherchait RIEN
+           Amazon est à 3 actions : quitter le feed, ouvrir, chercher
+           →  l'ancre ne se voit pas au moment de la décision
+```
+
+C'est la vraie différence de Meta — pas le CPM, la **disparition du comparateur au moment de l'achat**. Ça explique north-alpine (30-50 $ pour un produit à 3 $), lelamier (rasoir 59 € qui existe à 10 €), lynae (24,90 €) : aucun ne survivrait sur une SERP Google.
+
+### La bande de ticket Meta — mesurée sur 30 boutiques US
+
+Pull : US · créée depuis juin 2025 · ≤ 12 produits · ≥ 150 ads actives · **217 boutiques**, 30 lues.
+
+| Bande | Boutiques |
+|---|---|
+| **19,95 - 55 $** | **24 sur 30** |
+| 87 - 299 $ | spin360 189,99 · tryravine 239,99 · trysleepease 299 · kineto-flex 87 · bohobed 69-129 |
+
+**La bande 80-150 $ est quasi vide** : c'est la zone où l'acheteur compare *et* où Amazon a un équivalent.
+
+**Correction de la règle** : il ne suffit pas d'être différent d'Amazon, il faut être dans une **classe de produit différente**. trysleepease vend 299 $ face à de l'anti-ronflement Amazon à 20-60 $ et fait 0 → 114k en 5 mois : une bandelette nasale à 20 $ et un dispositif à 299 $ ne sont pas comparables dans la tête de l'acheteur. **L'ancre ne mord qu'à l'intérieur d'une classe.**
+
+### Ce que B rouvre — et le raisonnement Google qu'il corrige
+
+Le 11 septembre : *« À 40 €/jour, un CPC à 1,79 € est illisible quoi qu'il arrive. Le gate médical levé ne change rien aux gélules. »*
+**C'était un raisonnement Google.** Sur Meta il n'y a pas d'enchère sur mot-clé. Les compléments redeviennent techniquement accessibles — et ils dominent : **Health / Beauty & Fitness = 15 des 30 boutiques lues**. La décision du 8 sept. (« les compléments, c'est après avoir fait du cash ») reste celle de Yasser, mais elle n'est plus adossée à une contrainte technique.
+
+### Hatori — ne ressuscite pas
+
+Le 82/100 datait du 8 sept., **avant** vérification de l'ancre. Amazon : rolling sharpener multi-angle à **24,99 $**, et **Hatori vend lui-même sur Amazon** (B0HHGXT8L5), plus HATORII (clone) et BIRDBAK. Mur 2 + mur 3.
+
+### Le levier « Shipping Protection » — nouveau, à appliquer quel que soit le produit
+
+Trois boutiques indépendantes vendent une assurance en SKU séparé : **tryravine 4,99 $ · myhematix 3,90 $ · bamboraco « Lifetime Warranty » 4,99 $**.
+
+```
+Coût réel : ~0 $        Attaché à ~80-100 % des commandes (case pré-cochée)
+Sur une marge de 34 $ → +4,99 $ = +15 % de marge      Effet sur le CPA : AUCUN
+```
+Seul levier du dossier qui améliore le ratio sans toucher au prix, au produit ni au trafic.
+
+### Protocole de test Meta — seuils posés AVANT mesure
+
+```
+430 €  ·  7 jours × 61 €/jour  ·  1 campagne Ventes
+Optimisation : AJOUT AU PANIER (pas Achat)
+Audience : BROAD — US, 18-65, zéro intérêt. Le créa fait le ciblage en 2026
+1 ad set · 4 à 6 créas · placements automatiques · pas de retargeting
+```
+
+**Coût honnête du choix B** : à 430 € sur 7 jours, Meta ne sortira **pas** de la phase d'apprentissage (50 événements/semaine/ad set requis, 12 à 28 produits). Le résultat sera **moins fiable** que le même budget sur Google. Optimiser sur Ajout au panier atténue, ne supprime pas.
+
+**J+3 (~185 €) — le créa vit ou meurt**
+
+| Métrique | Seuil |
+|---|---|
+| CTR lien sortant | ≥ 1,2 % |
+| CPC sortant | ≤ 1,00 $ |
+| Coût par ajout panier | ≤ 15 $ |
+
+**J+7 (430 €) — le produit vit ou meurt.** Le seuil n'est plus « 4 ventes » : `ventes à l'équilibre = 430 € / marge`
+
+| Marge | Ventes exigées |
+|---|---|
+| 30 $ | 14,3 |
+| 40 $ | 10,8 |
+| 50 $ | 8,6 |
+| 70 $ | 6,1 |
+| 100 $ | 4,3 |
+
+- **< 50 % du seuil** → mort, on coupe
+- **50-99 %** → on corrige la page et l'offre, jamais les créas ni le budget
+- **≥ 100 %** → on continue
+
+### Pull US Meta — 30 boutiques lues (25 sept.)
+
+| Boutique | Créée | Visites | Prod | Meta | Produit / prix |
+|---|---|---|---|---|---|
+| **arcticgoddess.com** | juin 2025 | 151 293 (26,8→151,3) | **1** | **2 160** | « Arctic Organ & Herb Superfood for Mature Women » **125 $** — complément |
+| spin360fan.com | sept. 2025 | 361 874 | 10 | 1 998 | Spin360 Fan 189,99 $ + **Scent Pods 39 $** |
+| **trysleepease.co** | **avril 2026** | 114 392 (**0→114,4 en 5 mois**) | **2** | 1 277 | « SleepEase Pro » **299 $** + **Contact Patches 49,99 $** |
+| infimaker.com | févr. 2026 | 117 613 (0→117,6) | 4 | 1 282 | CNC 5 axes, « VIP Deposit **50 $ remboursable** » — précommande |
+| **tryravine.com** | nov. 2025 | 298 796 | 5 | 817 | FieldOps 239,99 + earbuds 199,99 + **Shipping Protection 4,99 $** |
+| myhematix.com | nov. 2025 | 164 955 | 7 | 1 076 | Bracelet hématite 39,99 + **jeu concours Apple Watch 0 $** + **Shipping Protection 3,90 $** |
+| holdmategear.com | juil. 2025 | 64 639 | 8 | 1 233 | Holdmate Pro 29 + **Tether Patches 7,99** + Pouch Kit 39 |
+| kineto-flex.com | oct. 2025 | 100 243 | 9 | 775 | « Ultimate Flexibility Bundle » 87 $ — **produit digital, hors scope** |
+| north-alpine.com | févr. 2026 | 1 811 164 | 8 | 1 082 | Apparel 29,90-49,99 $ |
+| lymphoria.co | juin 2025 | **3 528 559** | 6 | 1 243 | 39,99 $ |
+| alevia.com | oct. 2025 | 797 804 | 3 | 1 012 | 39,99 $ |
+
+**Répartition des 30** : Health / Beauty & Fitness **15** · Apparel **6** · autres **9**.
+
+### Le candidat — anti-ronflement (déjà sur la liste du 11 sept., jamais mesuré)
+
+Batch « catégories privées », bloc 2, écrit le 11 septembre : *« Anti-ronflement · PV visé **79 $** · marge ~50 $ · catégorie gênante donc peu d'enchérisseurs · très léger · réassurance pure »*. **Jamais mesuré** — seule la luminothérapie l'a été. Et trysleepease y vend à **299 $**, soit ×4 l'estimation.
+
+| Critère | Lecture |
+|---|---|
+| Ticket | 🟢 299 $ + consommable 49,99 $ |
+| Poids | 🟢 < 300 g |
+| Lithium | 🟠 selon le modèle — **exiger du filaire ou du passif** |
+| Axe D | 🟢 Réassurance pure — catégorie gênante, le client achète la garantie |
+| Preuve de marché | 🟢 0 → 114 392 visites en 5 mois, 1 277 créas Meta |
+| Structure | 🟢 Machine + consommable |
+
+**🔴 LIGNE ROUGE ABSOLUE.** trysleepease écrit « **Eliminates Snoring & Sleep Apnea** ». L'apnée du sommeil est une **pathologie diagnostiquée** — c'est mot pour mot ce que le dossier interdit depuis le 11 septembre (*« soigne, traite, un nom de maladie → suspension »*). Reprendre cet angle fait sauter le compte, sur Meta comme sur Google.
+
+**Angle autorisé** : le conjoint et le sommeil partagé. « Ta partenaire dort dans l'autre chambre », « confort nocturne », « 60 nuits satisfait ou remboursé ». **Zéro mot médical, zéro avant/après** (Meta les interdit en santé/fitness).
