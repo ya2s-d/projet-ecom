@@ -1395,3 +1395,145 @@ Structure machine + consommable, comme spin360fan (189,99 + pods 39).
 
 tryravine 4,99 $ · myhematix 3,90 $ · bamboraco 4,99 $ · **riviage 4,99 $** · **tgideashair « Next Day processing » 3,95 $** · **Lymphelia « Bestellschutz » 2,99 €**.
 Ce n'est plus une astuce repérée sur trois boutiques : c'est un **standard du marché**. À mettre sur la page quel que soit le produit.
+
+
+---
+
+## 25 septembre, soirée — 7 candidats tués, le gate de l'ancre relâché, produit choisi
+
+### Les 7 vérifications de la soirée
+
+| Boutique | Vend | Coût réel vérifié | Multiple | Motif de mort |
+|---|---|---|---|---|
+| graceease.com | Débardeur soutien-gorge 34,95 $ | ~8 $ | ×4 | **Trustpilot détruit** : « ships used or returned products », « difficulty obtaining refunds ». 3 vidéos YouTube « Scam or Legit? » en un mois. Même produit que maggies-tanks |
+| tystrap.com | Sangle patellaire 39,90 $ | AliExpress | ×5 | **6 clones Amazon** sous le même nom (Tyiiplus, Heapbulb, VOLERA, Vcetyo…). « 45 000+ avis » sur une boutique de 3 mois = inventé. « Pain-Free in 48 Hours » = allégation |
+| getflexibrace.com | Genouillère 120 $ (SE 100 %) | 15-50 $ | ×3 | **`flexibrace.com` existe déjà aux US**, vendu sur Amazon/eBay sous ce nom. Marché des genouillères = un des plus saturés |
+| nordband (4 domaines) | Bracelet message 29,99-39,99 $ | ~2 $ | — | « Don't Let The Hard Days Win » = **phrase phare de MantraBand®**, vendue par Etsy, Amazon, Mint & Lily, Hope Rings… **Ils arbitrent US → Scandinavie**, le sens inverse |
+| trycrunchy.com | Fontaine « filterless » 179,95 $ | 45-80 $ | ×3 | HUTACT 45,99 · DENZUS 59,99 · ONEISALL 79,99, même argument « sans filtre ». Batterie 4000 mAh → lithium |
+| trysleepease.co | EMS anti-ronflement 299 $ | **3,56 $ (Sunsky)** | **×84** | Nom déjà sur Amazon (B0H8HKFYB3) + 2 sites « officiels » concurrents. USB-C → lithium. « Eliminates Sleep Apnea » |
+| petpivoe.com | Litière AutoScooper 149 $ | — | — | **9 kg (20 lbs)**, motorisée, **déjà sur Amazon et Walmart** sous le nom PetPivot |
+
+**Zéro exception sur sept.** Tout ce qui scale sur Meta en 2026 est une commodité chinoise vendue 3 à 84 fois son prix de gros.
+
+Également écartés : plancher pelvien (Elvie, Perifit, kGoal tous sur Amazon avec app Bluetooth → lithium + certification ; segment pro à 10 995 $) · waggingrights (marque UK établie, 1 056 avis Trustpilot, siège auto 2-5 kg volumineux).
+
+### La décision — quel gate relâcher
+
+Les 8 gates simultanés définissent un ensemble vide (théorème du 24 sept., confirmé une 7e fois). Arbitrage :
+
+| Gate | Coût de le relâcher |
+|---|---|
+| Poids (3 → 8 kg) | Fret maritime + stock upfront. **Impossible à 430 €** |
+| Lithium | Contrainte aérienne réelle. **Impossible** |
+| Ticket (→ 30-50 $) | Marge 20-30 $ → seuil 14-21 ventes. Très dur |
+| 🟢 **Ancre Amazon** | **Coût logistique nul.** C'est ce que font 100 % des gagnants Meta, et c'est précisément ce que Meta permet (l'acheteur ne compare pas) |
+
+**Décision de Yasser, 25 sept. : on relâche l'ancre Amazon.** « on pourra retravailler l'offre plus tard ».
+
+**La ligne qui sépare ça d'une arnaque** : le produit fait ce qu'on dit · la garantie est honorée · les avis ne sont pas inventés · les délais sont annoncés · aucune allégation santé. Les 7 boutiques ci-dessus mentent sur au moins un de ces points. Ce n'est pas nécessaire pour vendre.
+
+### Nouveau critère de sélection produit (voie 1)
+
+```
+1.  Le point de douleur se DÉMONTRE en 8 secondes de vidéo
+2.  Aucune allégation santé nécessaire pour vendre
+3.  Aucun gate cassé : < 3 kg · pas de lithium · pas de certif · pas de rachat obligatoire
+```
+**Arrêter de chercher le produit introuvable sur Temu — il n'existe pas.**
+
+---
+
+## LE PRODUIT — pommeau de douche FILTRANT (25 sept. 2026)
+
+### Le marché, 15 acteurs cartographiés
+
+| Boutique | Pays | Créée | Visites | Prod | **Meta** | Prix |
+|---|---|---|---|---|---|---|
+| **eskiin.com** | US | mai 2023 | **969 366** | 33 | **934** | 36 / **149** / **169 $** |
+| **afina.com** | US | oct. 2023 | 277 160 | 31 | **533** | 29 / 40 / **129 $** |
+| sproos.co | US | août 2021 | 99 058 | 36 | 268 | 36 / **148** / 69 $ |
+| theshowerheadstore | US | 2016 | 97 262 | 100 | **27** | 99,95 / 179,95 |
+| cloverandcove.com | NL | juil. 2024 | 65 292 | 10 | 113 | 54,99 / 34,99 |
+| elarohome.com | HK | déc. 2025 | 60 061 | 689 | 149 | 24,95 / 19,90 |
+| stone-stream.com | US | sept. 2022 | 46 259 | 72 | 7 | 15,95 / 34,95 |
+| purestream.ch | CH | mai 2023 | 44 197 | 15 | 60 | 59,90 / 32,90 |
+| showery.co.uk | GB | 2018 | 43 041 | 59 | 44 | 29,99 / 39,99 |
+| lucinn.com | SG | sept. 2024 | 40 417 | 34 | 171 | 42 / 109 |
+| pureshower.com.br | BR | avril 2025 | 36 712 | 54 | 196 | — |
+| **getseoni.com** | **FR** | sept. 2024 | 33 477 | **7** | 102 | 24,17 / 77,50 € |
+| mineralstream.co | US | janv. 2021 | 33 043 | 93 | **0** | 48,99 |
+| myoasishair.com | US | mars 2025 | 24 010 | 15 | **545** | 50 / 19,95 |
+| mizseishower.com | US | avril 2020 | 21 734 | 16 | 25 | 249 / 269 $ |
+
+Hors Trendtrack : **Jolie 122 $** (« clinically tested ») · **Canopy 125 $** · **Afina 89-129 $** · Act+Acre.
+
+### Le fait qui décide du positionnement
+
+```
+PRESSION seule  →  15 à 55 $     stone-stream 15,95 · elarohome 24,95 · showery 29,99 · clover 54,99
+FILTRANT        →  89 à 169 $    Afina 89-129 · Jolie 122 · Canopy 125 · eskiin 149-169
+```
+
+**Le premium appartient au FILTRE, pas à la pression.** riviage vend 69,99 $ un pommeau pression : il est dans le trou, et fait 2 982 visites contre 969 366 pour eskiin.
+
+**Positionnement retenu : pommeau FILTRANT à 79-99 $** — sous Jolie/Canopy/Afina/eskiin, au-dessus de la commodité. Même logique que la lampe SAD à 149 $ sous Carex 169 — sauf qu'ici le leader fait **969 000 visites** au lieu de 13 658 (règle 14 franchie).
+
+### Meta seul : validé par les données
+
+| Acteur | Meta | Lecture |
+|---|---|---|
+| eskiin (leader) | **934** | pur Meta |
+| myoasishair | **545** | pur Meta |
+| afina | 533 | pur Meta |
+| sproos | 268 | pur Meta |
+| theshowerheadstore (2016) | **27** | ancien modèle SEO/retail |
+| mineralstream (2021) | **0** | idem |
+
+**Le marché s'est déplacé sur Meta récemment** : les acteurs d'avant 2022 achètent 0-27 créas, ceux d'après 2023 sont à 100-934.
+
+### L'offre
+
+| | |
+|---|---|
+| PV | **79-99 $** |
+| Consommable | Le filtre, **29 $** (modèle Afina : 26 $ en abonnement) |
+| Angle | **« l'eau de ta ville détruit tes cheveux »** — chlore, calcaire, tirage de couleur. **Pas** « plus de pression » |
+| Créa | **Le filtre usagé sorti après 30 jours. Marron.** Se filme en 10 secondes |
+| Shipping Protection | 4,99 $ en SKU séparé (7 confirmations indépendantes) |
+
+### Les 7 specs à faire confirmer par écrit au fournisseur
+
+| # | Spec | Pourquoi |
+|---|---|---|
+| 1 | **Filetage 1/2" NPT** | Standard US. Le G1/2 européen ne visse pas. **Piège n°1** |
+| 2 | **Débit ≤ 2,5 GPM** | Norme fédérale US. CA et NY plafonnent à **1,8 GPM** |
+| 3 | **Média : KDF-55 + charbon actif** | Ce que font Jolie et Afina. Les billes colorées seules ne filtrent rien |
+| 4 | Durée filtre : 3 mois / 10 000 gallons | Promesse standard du marché = le consommable |
+| 5 | Corps ABS chromé **et** inox 304 | Demander les deux devis |
+| 6 | Poids unitaire + carton + volumétrique | Gate : < 500 g |
+| 7 | **Prix DDP écrit, 1 pièce** | Règle 8. Pas EXW, pas FOB |
+
+Demander le **filtre séparément** : prix unitaire et pack de 3.
+
+### Deux interdits
+
+🔴 **Ne pas copier « clinically tested to reduce hair shedding »** — c'est la formule de Jolie, qui a une étude. Sans étude c'est une allégation, et c'est ce qui fait sauter les comptes.
+
+🔴 **L'angle porte sur ce que le filtre RETIENT, jamais sur le résultat capillaire.** On montre, le client conclut. Plus fort qu'une promesse, et zéro exposition.
+
+### Liens de sourcing
+
+```
+1688 (prix usine réel)
+  https://s.1688.com/selloffer/offer_search.htm?keywords=过滤花洒
+  https://s.1688.com/selloffer/offer_search.htm?keywords=花洒滤芯
+  https://s.1688.com/selloffer/offer_search.htm?keywords=增压过滤花洒
+
+Alibaba
+  https://www.alibaba.com/trade/search?SearchText=filtered+shower+head
+  https://www.alibaba.com/trade/search?SearchText=KDF+shower+filter+cartridge
+
+Concurrents (ajouter /products.json pour le catalogue complet)
+  eskiin.com · afina.com · sproos.co · cloverandcove.com · getseoni.com
+  jolieskinco.com · getcanopy.co (hors Trendtrack, à lire à la main)
+```
