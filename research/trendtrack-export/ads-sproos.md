@@ -26,14 +26,26 @@ Sproos vend le **design et la couleur**. Zéro allégation, zéro exposition ré
 "a setup that doesn't scream 'dude in college'"
 ```
 
-**Et ça tient depuis 486 jours.** Les ads les plus dupliquées de Sproos tournent depuis
-**449 à 486 jours** — soit 15 à 16 mois sans interruption. Sur Meta, une créa qui vit 16 mois
-n'est pas un test, c'est une rente. Aucune ad d'Afina n'a plus de 74 jours.
+**Et ces créas tournent depuis 486 jours.** Les ads les plus dupliquées de Sproos ont
+**449 à 486 jours** — 15 à 16 mois sans interruption. Aucune ad d'Afina n'a plus de 74 jours.
+
+⚠️ **Mais le trafic de Sproos s'effondre** (relevé du même jour, `marche-snapshot-2oct.md`) :
+```
+49 → 80 → 174 → 191 → 111 → 99 k      pic en juin, −48 % depuis
+```
+J'avais d'abord lu ces 486 jours comme une rente. C'est au mieux incomplet : des créas de
+16 mois sur un trafic divisé par deux peuvent aussi vouloir dire **qu'ils n'ont rien renouvelé,
+et que c'est pour ça qu'ils baissent.** Les deux lectures sont compatibles avec les données
+et je ne peux pas trancher.
+
+**Ce qui reste solide** : l'angle design / couleur / locataire existe, il est unique dans la
+catégorie, et il ne demande **aucune allégation santé**. C'est son seul avantage certain.
+**Ce qui ne tient pas** : en faire l'angle principal du lancement. → angle n°2 à tester.
 
 | Ce que ça prouve | Pourquoi ça vaut de l'or pour VERRA |
 |---|---|
 | L'angle « esthétique » convertit sur le même produit | Zéro allégation santé à écrire, donc **zéro risque de compte** |
-| Il tient 16 mois, pas 3 semaines | Ce n'est pas un angle de lancement, c'est un angle de fond |
+| Les créas tiennent 16 mois | ⚠️ sur un trafic en baisse de 48 %. Non concluant |
 | Personne d'autre ne le joue | Afina, Jolie, eskiin, myoasishair : tous sur la santé |
 
 **Hypothèse à retenir (pas une certitude)** : le marché a deux portes. La porte « toxines » est
