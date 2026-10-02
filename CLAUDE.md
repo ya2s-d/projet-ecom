@@ -1537,3 +1537,126 @@ Concurrents (ajouter /products.json pour le catalogue complet)
   eskiin.com · afina.com · sproos.co · cloverandcove.com · getseoni.com
   jolieskinco.com · getcanopy.co (hors Trendtrack, à lire à la main)
 ```
+
+
+---
+
+## 2 octobre 2026 — export Trendtrack avant expiration, et 8 corrections du dossier
+
+Abonnement Trendtrack expire le **5 octobre**. Tout est sauvegardé dans
+**`research/trendtrack-export/`** (9 fichiers, ~4 000 lignes) : 120 ads avec copies intégrales et
+transcripts vidéo, 95 emails des 3 leaders, snapshot de 20 boutiques. **Lire `README.md` en premier.**
+
+### LA correction qui change la boutique
+
+**Le best-seller de la catégorie est la cartouche de rechange, pas le pommeau.** Mesuré sur les
+rangs de vente réels de Trendtrack, pas supposé :
+
+| Rang de vente | eskiin | Afina |
+|---|---|---|
+| **1** | **Replacement Filter 36 $** | **Replacement Filter 29 $** |
+| 2 | Showerhead 149 $ | Replacement Filter 40 $ |
+| 3 | Handheld 169 $ | Showerhead **129 $** |
+| 5 et 7 | — | **Buy 4 Get 2 Free 149 $** · **Buy 2 Get 1 Free 59 $** |
+
+→ **Le filtre seul (29 $), le pack de 2 (59 $) et le pack de 4 (149 $) doivent être en ligne le
+jour de l'ouverture.** Le pack de 4 rapporte plus que le pommeau et ne coûte aucune publicité :
+il se vend par email au client déjà acquis. C'est la ligne qui finance le CPA.
+
+### Les 7 autres corrections
+
+| Point | Dossier avant | Mesuré le 2 oct. |
+|---|---|---|
+| Ads d'Afina | 533 | **1 150** sur **4 pages Facebook** (Afina 609 · Showerlabs 347 · Afina Water Wellness 166 · page perso du fondateur 28). **Tout comptage d'ads par page de marque dans ce dossier est un plancher** |
+| Prix d'Afina | 89-129 $ | **129-159 $ affiché, 99 $ payé.** Soldé à −50 % toutes les 6-8 semaines (Memorial Day, été, Labor Day, printemps) |
+| Garantie | — | **Afina 90 jours** · eskiin 60 · Jolie 60 |
+| Durée du filtre | 3 mois (spec n°4 du brief fournisseur) | **60 jours chez Afina.** Notre spec promet plus long que ce que vend le n°2 → demander la durée **en gallons**, pas en mois |
+| Plus gros annonceur Meta | eskiin | **water2.com, 904 créas** sur 13 produits, 294k visites, 99-129 $. Absent du dossier. Puis filterbaby 514 · santevia 428 · flowpure 417 · helloklean 416 |
+| myoasishair | US | **Espagne à 100 %** (19 ads /20 ciblent ES, copy espagnole). Pas un concurrent, mais une preuve que le produit tient hors US : 715 créas, ads de 443 jours |
+| getcanopy.co | concurrent à 125 $ | **mort** : 426k → 145k (−66 %), 197 produits, best-sellers à 1,98 $ |
+
+### ⚠️ dermatologist-reviews.com — la machine à faux classements
+
+376 443 visites/mois · **zéro produit** · 125 ads Meta · créée nov. 2025.
+C'est d'où viennent les « Rated #1 by Oasis Health » et les « dermatologist recommended » de la
+catégorie. **Ce n'est pas de la presse, c'est de l'affiliation achetée.** Ne jamais acheter ce
+badge, et ne jamais lire le « #1 » d'un concurrent comme une validation.
+
+### Les 3 meilleurs hooks du marché — tous gratuits, zéro allégation
+
+```
+« How's the water? »                              (Jolie)
+  You notice when it's too hot. You notice when it's too cold.
+  But how often do you think about what's in it?
+
+« This is why travel skin happens ✈️ »            (Afina)
+  New city, same routine, totally different results?
+
+« Builder grade shower head got you down? »       (Sproos)
+```
+Le premier ne contient aucune affirmation, donc rien d'interdit. Le deuxième prouve la thèse par
+l'expérience du lecteur. Le troisième désigne le produit que 90 % des Américains ont déjà.
+
+**À mettre partout** : `Try VERRA risk-free | Free returns within 60 days` — en préheader de
+chaque email et en bandeau de la page produit. Jolie le fait sur 15 emails sur 25.
+
+### Les trois modèles email, et celui qu'on copie
+
+| | eskiin | Afina | Jolie |
+|---|---|---|---|
+| Emails/semaine | **8,01** | **1,09** | 2,02 |
+| Promo dominante | BOGO permanent | aucune | **aucune, 0 sur 25** |
+| Visites/mois | 969 366 | 277 160 | 214 346 |
+
+Les trois dépassent 214 000 visites : il n'y a pas une bonne méthode. Mais la méthode eskiin
+exige une base installée. **On copie Afina** : 1 email/semaine, éducation, zéro promo — c'est
+aussi la moins exposée côté allégations. Séquence de 6 emails écrite dans `emails-eskiin.md`.
+
+### Deux mécaniques confirmées par deux acteurs indépendants
+
+**La loterie du remboursement**, à 6 jours d'écart et avec le même émoji 👀 dans l'objet :
+eskiin rembourse 1 commande par heure pendant 24 h, puis nomme les gagnants (« Annie K. a
+commandé… ») ; Afina en rembourse 5. Coût plafonné d'avance, et seulement si on vend.
+**Version Yasser : 3 commandes sur la semaine de test, à garder en réserve pour relancer un J+4 mou.**
+
+**Le pivot saisonnier** : les 3 leaders basculent sur l'angle automne entre le 11 et le
+27 septembre, en même temps. La fenêtre de la catégorie s'ouvre maintenant — le lancement
+d'octobre tombe dedans.
+
+### Le prix d'entrée réel du canal
+
+Une créa gagnante chez eskiin : **8 à 25 variantes, 100 à 294 jours**. Pas 4 créas sur 7 jours.
+Et **eskiin n'envoie jamais sur une fiche produit Shopify** — `eskiin.com/products/*` = zéro ad
+active. Tout part sur des `/pages/` dédiées : `/pages/handheld` (16 ads sur 20),
+`/pages/adv-0003-9-reasons-hh` (advertorials numérotés), `/pages/holiday-flip-game` (LP gamifiée),
+`/pages/senior-wellness` (LP par segment), `/pages/maddiepov` (LP par créateur).
+
+### Sproos — l'angle sans allégation, et pourquoi il passe en n°2
+
+Sproos vend le même produit sur l'angle **design / couleur / locataire** : « 8 colorways »,
+« Damage-Free Installation », « No tools, no plumber », « renter-friendly ». **Zéro allégation
+santé.** Ses créas tournent depuis 486 jours.
+
+**Mais son trafic a perdu 48 % depuis son pic de juin** (191k → 99k). Des créas de 16 mois sur un
+trafic divisé par deux peuvent signifier « ça tient » ou « ils n'ont rien renouvelé, et c'est
+pour ça qu'ils baissent ». Je ne peux pas trancher. → **Angle n°2 à tester, pas angle principal.**
+Ce qui reste certain : c'est le seul angle du marché qui n'expose à rien.
+
+### Ce qu'on ne copie sous aucun prétexte
+
+```
+"clinically proven" · "reduces hair shedding" · "81% of users"
+"eczema" · "hormone disruptors" · "sleep apnea" · tout pourcentage inventé
+```
+eskiin a 969 000 visites, Jolie a une étude clinique et un référencement Target. Les deux ont des
+avocats. Un compte Meta neuf n'a ni l'un ni l'autre. **La règle du 25 septembre tient : l'angle
+porte sur ce que le filtre RETIENT, jamais sur le résultat.** On montre, le client conclut.
+
+### Sur la France, sans rouvrir la décision
+
+`puurefilters.com`, boutique **française** créée en novembre 2024 : **607 764 visites/mois**,
+131 créas Meta, pommeau à **54,90 €** — plus une version UK à 167 385 visites. `pureva.com`
+(FR) : 117 635 visites, 256 créas, 49,90-79,90 €.
+Ça ne contredit pas l'analyse du 24 septembre, qui tuait la France sur **le ticket et la TVA** :
+54,90 € est pile dans la bande 25-60 € relevée ce jour-là. **On reste US.** Mais c'est noté pour
+le jour où il y aura du cash et un compte Meta chaud.
