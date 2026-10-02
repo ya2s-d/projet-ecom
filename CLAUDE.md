@@ -1660,3 +1660,87 @@ porte sur ce que le filtre RETIENT, jamais sur le résultat.** On montre, le cli
 Ça ne contredit pas l'analyse du 24 septembre, qui tuait la France sur **le ticket et la TVA** :
 54,90 € est pile dans la bande 25-60 € relevée ce jour-là. **On reste US.** Mais c'est noté pour
 le jour où il y aura du cash et un compte Meta chaud.
+
+### Complément du 2 octobre — Hello Klean et Water2, deux acteurs hors du radar initial
+
+**`research/trendtrack-export/ads-helloklean.md` et `ads-water2.md`.**
+
+🟢 **La formule qui autorise à parler du chlore** — trouvée chez Water2 (243 M de reach cumulé,
+1 596 ads actives), qui l'écrit dans **chacune** de ses annonces :
+```
+Filter capabilities and/or contaminants referenced are reference to the efficacy of the
+filter and not the presence of said item in all water.
+```
+Traduit : *les contaminants mentionnés décrivent ce que le filtre est **capable** de retenir,
+pas ce qui est **garanti présent** dans ton eau.* C'est la formulation juridique de la règle du
+25 septembre, validée en production. **Version VERRA à mettre en bas de chaque annonce et sur la
+page produit** :
+```
+Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed
+presence of those substances in your water. Individual results vary. Not a medical device and
+not intended to diagnose, treat, cure or prevent any condition.
+```
+
+**Les pourcentages** : jamais « removes 99 % », toujours « catches **up to** 99.99 %* » avec
+astérisque et mention d'un test indépendant. **Aucun pourcentage avant d'avoir le rapport de
+test du fournisseur par écrit** — à ajouter aux 7 specs à faire confirmer.
+
+**Le format créa n°1 à tester** : le **dialogue à deux personnages** de Water2. Un sceptique pose
+l'objection, l'autre la lève. Trois objections par vidéo. Zéro acteur payé, zéro UGC acheté.
+Les trois objections de notre produit : « ça va faire baisser la pression » · « il faut un
+plombier » · « 89 $ pour un pommeau ? ». Transcript intégral dans `ads-water2.md`.
+
+**L'ennemi désigné n'est pas un concurrent, c'est l'objet que la cible a déjà.** Water2 n'attaque
+jamais les autres filtres : il attaque la carafe Brita. Moule : *« [la solution actuelle] a l'air
+pratique… jusqu'à ce que [4 frictions réelles]. »* Pour VERRA, l'ennemi est **le pommeau d'origine
+de l'appartement** — le *builder grade*.
+
+**Premières dépenses Meta réelles du dossier.** Hello Klean et Water2 ciblent l'UE/UK, donc Meta
+publie reach et dépense (null sur les ads US) :
+
+| | Reach cumulé | Dépense sur les créas lues |
+|---|---|---|
+| Hello Klean | 203 982 095 | **~90 700 $ sur 20 créas** (236 actives) · une seule à 8 592 $ |
+| Water2 | 243 462 832 | **~137 700 $ sur 10 créas** (1 596 actives) · une seule à **42 408 $** sur 241 jours |
+
+**Ce que ça impose d'admettre** : un installé de cette catégorie dépense de l'ordre du million
+par an. À 430 €, le test **ne départage pas un produit, il départage un créa.** Les seuils J+3
+(CTR ≥ 1,2 % · CPC sortant ≤ 1,00 $ · coût par ajout panier ≤ 15 $) restent les bons ; le seuil
+J+7 en ventes est une indication, pas un verdict.
+**Ce que ça ne change pas** : Meta n'est pas une enchère sur mot-clé, et le reach de Hello Klean
+est réparti sur 28 à 38 pays. L'argument du 25 septembre tient.
+
+### Le troisième angle du marché, jamais relevé : LE CALCAIRE SUR LES SURFACES
+
+| Angle | Qui le tient | Risque d'allégation |
+|---|---|---|
+| Toxines / peau et cheveux | eskiin, Afina, Jolie, Oasis | 🔴 élevé |
+| Design / couleur / locataire | Sproos (−48 % de trafic) | 🟢 nul |
+| **Calcaire sur les surfaces + filtre intelligent** | **Hello Klean** (419k visites, 416 ads) | 🟢 **nul** |
+
+Le calcaire sur le marbre et la robinetterie est **visible, photographiable et strictement non
+médical**. Ça se démontre en 8 secondes — le critère n°1 du 25 septembre — et on n'a même pas
+besoin du filtre marron. Signature de Hello Klean : **« Same bathroom, better water. »**
+
+**Leur différenciation produit** : filtre qui suit sa durée de vie **en litres, pas en mois**,
+plus une alerte de température. ⚠️ **Question de sourcing** : existe-t-il une version à LED
+**alimentée par le débit** (micro-turbine, zéro pile) ou un indicateur thermochromique ?
+Si oui, c'est le différenciateur de VERRA sans casser le gate lithium. Si c'est sur pile, on oublie.
+
+### Garanties du marché, relevées
+
+| Acteur | Garantie |
+|---|---|
+| Water2 | 100 jours |
+| Afina | 90 jours |
+| eskiin · Jolie · Sproos | **60 jours** ← le standard de la catégorie douche |
+
+On prend 60 jours, mais avec la formulation de Water2, qui est gratuite et meilleure :
+**« On day 59, if you don't love it, you get all your money back. »**
+
+### Les landing pages : 3 acteurs sur 3
+
+eskiin, Hello Klean et Water2 n'envoient **jamais** sur une fiche produit Shopify nue. Tout part
+sur des `/pages/` dédiées : advertorials numérotés, comparatifs « vs la carafe », LP par segment,
+LP par créateur, LP gamifiée, bundle produit + consommable, lien d'abonnement.
+**Ce n'est pas une préférence, c'est le standard du canal.**

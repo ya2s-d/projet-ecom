@@ -19,6 +19,8 @@ marché US, pour le lancement VERRA.
 | `emails-eskiin.md` | **40 emails**, 8/semaine. Calendrier complet du BOGO Labor Day + la loterie du remboursement | 151 |
 | `emails-afina.md` | 30 emails, 1/semaine, éducation. **Les 8 angles sans allégation** | 184 |
 | `emails-jolie.md` | 25 emails, zéro promo sur 25. **Les 7 meilleurs hooks de la catégorie** | 140 |
+| **`ads-helloklean.md`** | 20 ads. ⭐ **Les premières dépenses Meta réelles du dossier** (90 700 $ sur 20 créas). Le filtre intelligent + **l'angle calcaire** | 160 |
+| **`ads-water2.md`** | 15 ads du plus gros annonceur de la filtration (1 596 actives). ⭐ **Les disclaimers qui règlent le problème des allégations** + le format créa dialogue | 230 |
 
 ## Les 6 choses à retenir si tu ne lis qu'un paragraphe
 
@@ -48,3 +50,19 @@ marché US, pour le lancement VERRA.
 6. **Ce qu'on ne copie pas**, sous aucun prétexte : « clinically proven », « reduces hair
    shedding », « eczema », « hormone disruptors », « sleep apnea », tout pourcentage inventé.
    eskiin et Jolie ont des études et des avocats. Un compte Meta neuf n'a ni l'un ni l'autre.
+
+7. **Mais il existe une formule qui autorise à parler du chlore et des métaux lourds**, et elle
+   vient de Water2, 243 millions de reach cumulé, qui l'écrit dans chacune de ses annonces :
+   > *Filter capabilities and/or contaminants referenced are reference to the efficacy of the
+   > filter and not the presence of said item in all water.*
+
+   À mettre en bas de chaque annonce et sur la page produit. Version VERRA dans `ads-water2.md`.
+
+8. **Le format créa n°1 à tester** n'est pas un UGC acheté : c'est le **dialogue à deux
+   personnages** de Water2, qui pose et lève trois objections. Transcript intégral dans
+   `ads-water2.md`. Coût de production : deux personnes et un téléphone.
+
+9. **Il y a trois angles dans la catégorie, pas un.** Toxines/santé (eskiin, Afina, Jolie —
+   risque élevé) · design/couleur/locataire (Sproos, −48 % de trafic — risque nul) ·
+   **calcaire sur les surfaces + filtre intelligent** (Hello Klean, 419k visites — risque nul).
+   Le troisième est le meilleur rapport signal/risque et il n'est tenu par personne aux US.
