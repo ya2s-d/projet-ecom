@@ -1839,3 +1839,36 @@ Typo : **Jost**, une seule famille.
 
 Détail complet : `research/brand/plush-identite.md`.
 Board visuel : https://claude.ai/artifact/UseJuJH2yCQpZRxcECtChc
+
+### Logo verrouillé — 3 octobre 2026
+
+**`plush`, tout en bas de casse, graisse haute, espacement serré, `#141414`.** Choisi par Yasser
+parmi trois essais (bold bas de casse / light capitale initiale / le premier), motif : « c'est
+celle qui me parle le plus ». L'affinité est un critère du dossier (section 2), et le verrouillage
+du logo était le vrai enjeu — pas le dernier pourcent de typographie.
+
+| | Verrouillé |
+|---|---|
+| Casse | **`plush`** en bas de casse — registre eskiin / sproos / jolie, et ça sert le sens du mot |
+| Graisse | **haute** |
+| Espacement | **serré** (0 à +30). L'espacement large ne marche qu'en capitales |
+| Couleur | `#141414` sur `#F6F2ED` · version inversée en `#F6F2ED` sur `#141414` |
+| Pictogramme | **aucun** |
+
+**Correction de ce que j'avais écrit le 3 oct. au matin** : j'avais imposé les capitales. C'était
+une erreur de registre — eskiin, sproos et jolie sont tous en bas de casse, et « plush » veut dire
+*doux*. Yasser avait raison avant moi.
+
+**Usage figé** : `plush` en bas de casse dans le logo · `Plush` avec majuscule dans tous les
+textes (ads, emails, site). Jamais « PLUSH! ».
+
+**Le logo n'est pas une police, c'est un dessin figé.** Une fois exporté en SVG, la police
+d'origine n'a plus d'importance. **Jost reste la police de tout le reste** — titres, textes, site,
+ads, emails — et là, jamais Poppins, Montserrat, Arial ni Helvetica.
+
+**Le seul contrôle qui reste, 2 minutes et une fois pour toutes** : imprimer le logo à **40 mm en
+noir et blanc** et regarder **le trou du `s`**. S'il se remplit, descendre d'une graisse. C'est le
+seul risque d'une graisse haute à petite taille, et il se règle avant d'imprimer 300 stickers.
+
+**Fichiers à produire** : `plush-noir.svg` · `plush-blanc.svg` · `plush-noir.png` (fond
+transparent, 2000 px). Sans le SVG, les stickers et la boîte sont impossibles à sortir proprement.

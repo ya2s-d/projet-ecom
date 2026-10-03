@@ -21,8 +21,8 @@ Plush World LLC (Seattle), en instruments médicaux.
 **Défaut connu, assumé** : « plush » veut aussi dire peluche. Sans effet ici — acquisition 100 %
 Meta, l'acheteur ne fait pas de recherche, et l'association adulte dominante est la serviette.
 
-**Usage figé** : `PLUSH` en capitales dans le logo · `Plush` en minuscules dans le corps de texte,
-les ads et les emails. Jamais « plush » tout en bas de casse, jamais « PLUSH! ».
+**Usage figé (révisé le 3 oct.)** : **`plush` tout en bas de casse dans le logo** · `Plush` avec
+majuscule dans le corps de texte, les ads et les emails. Jamais « PLUSH! ».
 
 ---
 
@@ -43,11 +43,12 @@ Trois raisons :
 
 | Réglage | Valeur |
 |---|---|
-| Casse | **CAPITALES** |
-| Espacement des lettres | **Large.** Monte-le jusqu'à ce que l'écart entre les lettres fasse la largeur de l'intérieur du U. Dans Canva : ~80 à 150, juge à l'œil |
-| Graisse | **Medium ou Semibold.** Pas Bold (se bouche à 40 mm), pas Light (disparaît) |
-| Polices (Google Fonts, gratuites, usage commercial OK) | **Jost** (géométrique, architectural) · **DM Sans** (neutre, moderne) · **Figtree** (un peu plus chaud) |
-| 🔴 À éviter | **Poppins et Montserrat** — les deux polices de template Canva. Reconnaissables au premier coup d'œil |
+| Casse | **bas de casse** — `plush` |
+| Espacement des lettres | **serré**, 0 à +30 maximum. L'espacement large ne marche qu'en capitales |
+| Graisse | **haute** (Bold / SemiBold) — choix de Yasser le 3 oct. ⚠️ seul point à vérifier : le contrepoinçon du `s` à 40 mm |
+| Police du LOGO | figée dans le SVG. Une fois exporté, ce n'est plus une police, c'est de l'artwork |
+| Police de TOUT LE RESTE (titres, textes, site, ads, emails) | **Jost** · à défaut **DM Sans** ou **Figtree** — Google Fonts, gratuites, usage commercial OK |
+| 🔴 À éviter partout sauf le logo | **Poppins, Montserrat, Arial, Helvetica** |
 
 ### Couleurs — 5, et un métier pour chacune
 
