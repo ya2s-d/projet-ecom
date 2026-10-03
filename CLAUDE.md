@@ -1809,3 +1809,33 @@ Décision structurante : **wordmark seul, aucun pictogramme.** Une IA de logo aj
 goutte d'eau, et goutte d'eau + pommeau stylisé = signature dropship. Les marques de la bande de
 prix visée vivent toutes sur un wordmark (eskiin, Afina, Jolie, Sproos, Canopy, Caraway).
 Et à 40 mm, un pictogramme plus un mot font deux taches.
+
+### L'image de marque PLUSH — l'idée, arrêtée le 3 octobre
+
+Référence donnée par Yasser : **Naked Paper**. Ce qu'on leur prend n'est pas le look, c'est la
+**structure** : toute leur marque tient sur une idée que le produit prouve tout seul — *le papier
+est brun parce qu'il n'est pas blanchi* (« We didn't make it brown, nature did »). La couleur du
+produit est à la fois la marque, la preuve, la palette et le titre.
+
+```
+Naked Paper  :  papier brun  →  pas de blanchiment       →  preuve visible
+PLUSH        :  filtre brun  →  ce que l'eau a laissé    →  preuve visible
+```
+
+**La ligne de marque : « We didn't make it brown. Your water did. »**
+Elle décrit l'objet, pas un résultat sur le corps — donc elle fait le travail du disclaimer
+Water2 toute seule. Zéro allégation.
+
+**Conséquence n°1 — l'objet héros n'est pas le pommeau, c'est la cartouche, en paire neuve /
+jour 30.** Ce n'est pas esthétique, c'est les rangs de vente : filtre n°1 chez eskiin ET Afina.
+
+**Conséquence n°2 — la photo à faire avant toutes les autres** : visser le pommeau chez lui,
+30 jours, sortir la cartouche, la poser à côté d'une neuve sur fond Paper.
+
+**Palette figée** : Ink `#141414` · Paper `#F6F2ED` (fond de tout, jamais blanc) ·
+**Day 30 `#A86B45` — la couleur d'un filtre à 30 jours**, 5 % de la surface max ·
+Stone `#C9C2B8` (traits seulement) · Smoke `#6B6660` (texte secondaire).
+Typo : **Jost**, une seule famille.
+
+Détail complet : `research/brand/plush-identite.md`.
+Board visuel : https://claude.ai/artifact/UseJuJH2yCQpZRxcECtChc
