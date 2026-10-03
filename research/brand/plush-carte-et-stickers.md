@@ -1,6 +1,9 @@
 # PLUSH — carte d'insert + stickers : textes définitifs
 
-> Arrêté le 3 octobre 2026. À envoyer au fournisseur avec le logo.
+> Réécrit le 3 octobre 2026 après trois corrections de Yasser :
+> **(1)** l'avatar client manquait → `plush-avatar-client.md`, à lire avant celui-ci ·
+> **(2)** aucune vidéo n'existe et il n'y en aura pas → **tous les QR vidéo supprimés,
+> l'installation est entièrement sur le carton** · **(3)** une seule carte, pas deux.
 > ⚠️ Remplacer `tryplush.com` par le domaine réel avant impression.
 
 ## La règle qui gouverne tout
@@ -8,187 +11,156 @@
 **C'est la Chine qui imprime et qui insère. Tu ne pourras corriger ni une faute, ni un prix,
 ni une offre.** Donc :
 
-1. **Le minimum de mots possible** — chaque mot anglais est un risque de coquille irréparable
-2. **Rien d'imprimé qui puisse périmer** — tout ce qui bouge vit derrière le QR
-3. **Le QR pointe vers un chemin de TON domaine**, jamais vers un service gratuit de QR
+1. **Le minimum de mots possible** — chaque mot anglais est une coquille irréparable
+2. **Rien d'imprimé qui puisse périmer** — ni date, ni prix, ni pourcentage
+3. **Le QR pointe vers un chemin de TON domaine**, jamais vers un générateur de QR gratuit
    (leurs redirections expirent ou passent payantes, et la carte est tirée à 300 exemplaires)
 
----
-
-## DEUX BOÎTES → DEUX CARTES
-
-L'offre a deux SKU, dans deux boîtes distinctes :
-
-| Boîte | Contenu | Client |
-|---|---|---|
-| **A** | Le pommeau filtrant, cartouche déjà dedans | **Première commande.** Il ne connaît ni le produit ni la marque |
-| **B** | Cartouches de rechange seules (× 1, × 2, × 4) | **Il a déjà racheté.** C'est le client le plus rentable du dossier |
-
-**Deux cartes, et aucun risque d'erreur** : la carte est liée à **la boîte**, pas à la commande.
-Le fournisseur n'a aucune décision à prendre — chaque boîte reçoit toujours la même carte.
-
-**Et les deux clients n'ont rien à voir.** Le premier doit réussir son installation et découvrir
-la preuve au jour 30. Le second **tient déjà la cartouche brune dans la main en ouvrant le colis**
-— c'est le meilleur moment de tout le parcours pour demander la photo, et c'est aussi le moment
-de basculer l'abonnement.
-
-⚠️ **Demander le prix pour DEUX modèles de carte.** Un second design peut porter des frais de
-calage. S'ils dépassent 1 $/unité, on tombe sur une carte unique et l'installation passe
-entièrement derrière le QR.
+**Conséquence du « pas de vidéo » : un seul QR sur toute la carte.** C'est mieux que trois.
+Un QR unique se scanne, trois se regardent.
 
 ---
 
-## CARTE A — boîte du pommeau — 100 × 150 mm (4 × 6"), recto-verso
+## UNE SEULE CARTE — 100 × 150 mm (4 × 6"), recto-verso
 
-**Son job n'est pas de dire merci.** C'est de (1) réussir l'installation, (2) déclencher le
-jour 30, (3) vendre la cartouche de rechange. Le « merci », tous les dropshippers l'impriment
-et il ne rapporte rien.
+Elle part dans **les deux boîtes** (pommeau et recharges). Le fournisseur n'a aucune décision à
+prendre, zéro frais de calage d'un second design, zéro risque d'inversion.
 
-### RECTO — l'installation (c'est ce qui évite les remboursements)
+---
+
+## RECTO — merci, puis l'installation
 
 ```
 plush
 
 
-2 minutes. No tools.
+Thank you.
+You're one of our first customers. That matters more than you think.
 
 
-1   Unscrew the old one.
+────────────────────────────────────────────────────
 
-2   Hand-tighten the new one.
-
-3   Run it 30 seconds before your first shower.
-    New filters release a little carbon dust.
+INSTALLING YOUR PLUSH                 2 minutes. No tools.
 
 
-Install video and help
+1   Turn the water off.
 
-[ QR ]
-tryplush.com/start
+2   Unscrew your old shower head by hand, counter-clockwise.
+    If it won't budge, grip it with a dry dish towel.
+
+3   Check the rubber washer sitting inside the Plush head.
+    It's already in there. Leave it.
+
+4   Screw Plush on by hand, clockwise, until it stops.
+    Hand-tight is tight enough. No wrench. No tape. No plumber.
+
+5   Run the water for 30 seconds before your first shower.
+    A new filter releases a little carbon dust.
+    It's normal, and it only happens once.
+
+
+────────────────────────────────────────────────────
+
+Something's off? hello@tryplush.com — we answer the same day.
 ```
 
-**La ligne 3 est la plus rentable de la carte.** Un filtre charbon neuf relâche de la poussière
-noire au premier passage. Si tu ne le dis pas, c'est la réclamation n°1 — et un remboursement
-coûte la marge entière.
+### Pourquoi ces 5 étapes-là
 
-### VERSO — le jour 30, la preuve, la garantie
-
-```
-Day 30: take the filter out and look at it.
-
-
-[ photo cartouche neuve ]        [ photo cartouche jour 30 ]
-
-
-We didn't make it brown. Your water did.
-
-
-If what you see surprises you, send us the photo.
-
-[ QR ]   tryplush.com/day30
-
-────────────────────────────────────────────
-
-60 nights to decide.
-On day 59, if you don't love it, you get all your money back.
-
-hello@tryplush.com
-
-
-Filter capabilities refer to what the filter is designed to reduce, not to the
-guaranteed presence of those substances in your water.
-```
-
-### Pourquoi chaque ligne du verso est là
-
-| Ligne | Ce qu'elle fait |
+| Étape | Ce qu'elle évite |
 |---|---|
-| « take the filter out and look at it » | **On ne demande pas un avis, on provoque le moment où la preuve existe.** La photo du filtre marron est la meilleure créa du dossier, et c'est le client qui la produit |
-| « We didn't make it brown. Your water did. » | La ligne de marque. Elle décrit **l'objet**, pas un résultat sur le corps → zéro allégation |
-| « If what you see surprises you » | **Zéro étoile demandée, zéro note exigée.** Demander « laisse 5 étoiles » est ce qui a détruit graceease sur Trustpilot. On demande une photo |
-| « On day 59… » | Formulation de Water2. Même garantie, racontée du point de vue du client au dernier moment possible |
-| La mention légale | Formule Water2, validée en production sur 1 596 annonces. Elle autorise à montrer le filtre brun |
+| 2 — *dry dish towel* | Le pommeau d'origine est entartré et collé. Sans ce détail, elle abandonne et demande un remboursement |
+| 3 — *le joint est déjà dedans* | **La cause n°1 de fuite** sur un pommeau : le joint tombe et personne ne le remarque. Une fuite = un avis à 1 étoile |
+| 4 — *no tape* | Le joint fait l'étanchéité, le téflon est inutile ici. Si on ne le dit pas, elle croit qu'il lui manque quelque chose |
+| 5 — *carbon dust* | **La ligne la plus rentable de la carte.** Un charbon neuf relâche de la poussière noire au premier passage. Sans cette phrase, c'est la réclamation n°1 — et un remboursement coûte la marge entière |
+
+⚠️ **À confirmer au fournisseur avant impression** : la cartouche arrive-t-elle **déjà montée
+dans le pommeau** ? Si elle est livrée à part, il faut une étape de plus et l'étape 3 change.
 
 ---
 
----
-
-## CARTE B — boîte des cartouches de rechange
-
-Le job n'est plus d'installer ni de rassurer : **c'est de rendre le prochain rachat automatique.**
-Chez Afina, le pack « Buy 4 Get 2 Free » est au rang 5 des ventes et la cartouche seule au rang 1.
-Cette carte est la seule publicité qui ne coûte rien.
-
-### RECTO — le remplacement
+## VERSO — le jour 30, l'avis, le code
 
 ```
-plush
-
-
-Swap takes 60 seconds.
+DAY 30 — DO THIS ONE THING
 
 
 1   Unscrew the head.
 
-2   Take the old filter out. Drop the new one in.
+2   Pull the filter out.
 
-3   Hand-tighten.
-
-4   Run it 30 seconds before your next shower.
-    A new filter releases a little carbon dust.
+3   Hold it next to a new one.
 
 
-How-to video
-
-[ QR ]
-tryplush.com/swap
-```
-
-### VERSO — la preuve, puis l'abonnement
-
-```
-Before you throw the old one out, look at it.
+    [ photo cartouche neuve ]        [ photo cartouche jour 30 ]
 
 
-[ photo cartouche neuve ]        [ photo cartouche usagée ]
+    We didn't make it brown. Your water did.
 
 
-We didn't make it brown. Your water did.
+────────────────────────────────────────────────────
+
+Show us.
 
 
-Send us the photo, and never think about this again:
-set your refills to arrive on their own.
+      [  QR  ]        Scan it, add your photo, tell us what you saw.
+                      It takes about a minute.
 
-[ QR ]   tryplush.com/refill
+                      tryplush.com/review
+
+
+────────────────────────────────────────────────────
+
+Your code:   PLUSHFAM
+Use it on refill filters. No minimum. No expiry.
+tryplush.com/refill
 
 
 hello@tryplush.com
-
 
 Filter capabilities refer to what the filter is designed to reduce, not to the
 guaranteed presence of those substances in your water.
 ```
 
-### Pourquoi « Before you throw the old one out »
+### Pourquoi le verso est dans cet ordre
 
-**Ce client tient la cartouche brune dans la main au moment précis où il lit cette ligne.**
-Pas au jour 30, pas sur une promesse : maintenant, l'objet dans la main. C'est le meilleur moment
-du parcours pour obtenir la photo — et c'est gratuit.
+**Filtre d'abord, avis ensuite, code en dernier.** L'ordre n'est pas décoratif :
 
-**Un seul QR par face.** La page `/refill` porte les deux actions (envoyer la photo, activer
-l'abonnement). Deux QR sur une même face font hésiter et personne ne scanne.
+| Position | Raison |
+|---|---|
+| **1. Le filtre brun** | Elle a la preuve **dans la main** au moment où elle lit la suite. Un avis demandé avant la preuve est un avis poli ; demandé après, c'est un avis qui raconte quelque chose |
+| **2. L'avis** | On écrit **« tell us what you saw »**, jamais « leave us 5 stars ». Demander une note est ce qui a détruit graceease sur Trustpilot (« ships used products », 3 vidéos « Scam or Legit? » en un mois). On demande un **récit et une photo** |
+| **3. Le code** | En dernier, pour qu'il ne ressemble pas à un paiement contre l'avis. Un code placé **avant** l'avis transforme la demande en achat d'avis — c'est interdit par Amazon, Google et Trustpilot, et ça se voit |
 
-**Aucun prix imprimé.** Le pack de 4 et l'abonnement vivent derrière le QR, où ils se corrigent
-en dix secondes.
+### Le code promo — les 3 règles d'un code imprimé
 
-## LES 2 STICKERS
+| Règle | Pourquoi |
+|---|---|
+| **Aucun chiffre dans le nom** — `PLUSHFAM`, pas `PLUSH20` | Tu peux passer de 20 % à 15 % ou à 25 % **dans Shopify, sans réimprimer 300 cartes**. C'est toute l'astuce |
+| **Aucune date imprimée** — « no expiry » | Une date imprimée périme le stock de cartes. La durée se pilote dans Shopify |
+| **Limité à 1 usage par client, dans Shopify** | Un code imprimé finit toujours sur Honey et RetailMeNot. La limite par client rend la fuite indolore |
+
+**Valeur recommandée : −20 % sur les cartouches de rechange, sans minimum.**
+Sur une cartouche à 29 $ ça coûte ~6 $. À comparer avec Afina, dont le pack « Buy 4 Get 2 Free »
+est un −33 % permanent et se classe au rang 5 de ses ventes. 20 % est généreux sans brader, et
+le rachat de cartouche est **le produit n°1 de la catégorie chez eskiin comme chez Afina**.
+
+### Ce que la page /review doit faire, puisqu'il n'y a pas de vidéo
+
+Une page simple, sur ton domaine, trois blocs :
+1. **Un champ photo + un champ texte libre.** Rien d'autre, pas de formulaire à 8 cases
+2. Juste en dessous : **les recharges, avec le code déjà appliqué**
+3. Et l'abonnement en option secondaire
+
+C'est la seule page qui transforme un client en deuxième commande **et** en contenu publicitaire.
+
+---
+
+## LES 2 STICKERS — inchangés, dans les deux boîtes
 
 | | Quoi | Où | Taille |
 |---|---|---|---|
 | **1** | Le logo `plush` seul | Extérieur de la boîte, centré | **40 × 40 mm** (ou 45 × 18 mm si le mot seul) |
-| **2** | Le sticker de date | **Collé sur la carte**, à l'intérieur — **dans les DEUX boîtes** | **50 × 25 mm** |
-
-### Texte du sticker n°2
+| **2** | Le rappel de date | **Collé sur la carte**, à l'intérieur | **50 × 25 mm** |
 
 ```
 plush
@@ -197,20 +169,15 @@ Installed:   ___ / ___
 Replace by:  ___ / ___
 ```
 
-**Les DEUX dates sont des blancs**, et c'est volontaire. La durée réelle du filtre n'est pas
-tranchée : notre spec fournisseur dit 3 mois, Afina vend 60 jours. Tant que le chiffre n'est pas
-confirmé **en gallons**, on n'imprime aucune durée — elle vit sur la page derrière le QR, où
-elle se corrige en dix secondes.
+**Les DEUX dates sont des blancs**, volontairement. La durée réelle du filtre n'est pas tranchée :
+la spec fournisseur dit 3 mois, Afina vend 60 jours. Tant que le chiffre n'est pas confirmé
+**en gallons**, on n'imprime aucune durée.
 
-**Un sticker neuf part dans chaque boîte, y compris les recharges** : à chaque remplacement le
-client en colle un nouveau, et le cycle repart. C'est ce qui transforme un achat unique en
-abonnement, sans abonnement.
+**Un sticker neuf dans chaque boîte, recharges comprises** : à chaque remplacement elle en colle
+un nouveau et le cycle repart. **C'est un rappel de rachat qui ne dépend ni de ta délivrabilité
+email ni de sa mémoire.**
 
-Le client écrit ses dates et colle le sticker dans la douche. **C'est un rappel de rachat qui ne
-dépend ni de ta délivrabilité email ni de ta mémoire**, et le filtre est le produit n°1 de la
-catégorie chez eskiin comme chez Afina.
-
-**Vinyle MAT obligatoire sur les deux.** Sur du brillant, le marqueur bave et part à l'eau.
+**Vinyle MAT obligatoire** — sur du brillant, le marqueur bave et part à l'eau.
 
 ---
 
@@ -231,40 +198,41 @@ catégorie chez eskiin comme chez Afina.
 ## Le bloc à envoyer au fournisseur
 
 ```
-TWO DIFFERENT CARDS — do not mix them up.
+ONE CARD, same card in every box (showerhead boxes and refill boxes).
 
-CARD A — goes in the SHOWERHEAD box only.
-CARD B — goes in the REPLACEMENT FILTER box only.
-
-Both cards: 100 x 150 mm, double sided, 350 gsm, matte lamination, full colour,
-3 mm bleed. Print exactly as in the supplied PDFs, no changes.
+CARD — 100 x 150 mm, double sided, 350 gsm, matte lamination, full colour,
+3 mm bleed. Print exactly as in the supplied PDF, no changes.
 
 STICKER 1 — logo, 40 x 40 mm, MATTE waterproof vinyl, black on white.
-            Apply to the outside of the box, centered. BOTH boxes.
+            Apply to the outside of the box, centered.
 
 STICKER 2 — date reminder, 50 x 25 mm, MATTE waterproof vinyl, black on white.
-            Apply on top of the card inside the box. BOTH boxes.
+            Apply on top of the card inside the box.
             MATTE is required: the customer writes on it with a pen.
 
-Please quote the price for BOTH card designs, and tell me if there is any
-setup fee for the second design.
+One card and both stickers go in every single box.
 
-Please send a photo of both printed cards and both stickers next to a ruler
+QUESTION — please confirm in writing: is the filter cartridge already installed
+inside the showerhead when it ships, or is it packed separately?
+
+Please send a photo of the printed card and both stickers next to a ruler
 before applying them to more than 10 units.
 ```
 
 ### Les 3 contrôles avant la série
 
-1. **Le prix** — demander le devis **avec et sans** carte insérée. 0,10 à 0,30 $ est normal.
-   Au-delà de 1 $, on refuse : à 30 € de DDP plafond, c'est 3 % de la cible pour un bout de carton
+1. **Le prix** — devis **avec et sans** carte insérée. 0,10 à 0,30 $ est normal. Au-delà de 1 $,
+   on refuse : à 30 $ de DDP plafond, c'est 3 % pour un bout de carton
 2. **La photo avec la règle** — avant qu'il en insère 100
 3. **Le QR scanné depuis cette photo-là**, pas depuis ton écran
 
 ---
 
-## Ce qui bloque encore le recto
+## Ce qui bloque encore
 
-Les 3 étapes d'installation dépendent du produit réel : filetage, position de la cartouche,
-montée d'usine ou à insérer. **Impossible à dessiner sans un exemplaire en main.**
-
-Le verso, les 2 stickers et la page `tryplush.com/start` se font dès maintenant.
+| Point | État |
+|---|---|
+| Cartouche pré-montée ou à part | **À faire confirmer par écrit.** L'étape 3 du recto en dépend |
+| Les 2 photos du verso | Il faut un exemplaire et 30 jours de douches. **Chemin critique de toute la marque** |
+| Le domaine | `tryplush.com` est un placeholder dans tout ce fichier |
+| Les pages `/review` et `/refill` | À créer avant d'imprimer : un QR qui tombe sur une 404 est pire que pas de QR |

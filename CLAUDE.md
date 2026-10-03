@@ -1896,3 +1896,59 @@ j'avais signalé ne se matérialise pas à cette graisse-là.**
 
 **Reste à produire** : la version à **fond transparent** (site, Shopify, favicon), la version
 **blanche** sur fond foncé, le **favicon** (le `p` seul, 512 × 512), et le **recadrage** serré.
+
+### L'avatar client — posé le 3 octobre 2026
+
+Trou relevé par Yasser : *« faut placer l'avatar client pour savoir comment lui parler »*. Toute
+la copy de la carte avait été écrite sans destinataire. **Fiche complète :
+`research/brand/plush-avatar-client.md`** — elle gouverne désormais les ads, les emails, la page
+produit et la carte.
+
+```
+Megan, 34 ans, Columbus (Ohio) · locataire ou propriétaire depuis moins de 3 ans
+Ménage 60-110k $ · achète sur son téléphone, le soir
+```
+
+Dérivée des copies réelles des 7 concurrents de `research/trendtrack-export/`, qui convergent sur
+un seul avatar : Sproos (« builder grade », « renter-friendly »), Afina (« travel skin »), Jolie
+(peau et cheveux), eskiin (LP par segment et par créatrice), Hello Klean (calcaire sur les
+surfaces), Water2 (ennemi = la carafe Brita).
+
+**Le point qui décide de tout** : *elle achète des produits depuis des mois pour un problème
+qu'aucun produit ne règle.* Elle a changé trois fois de shampooing. Elle n'a jamais pensé à l'eau,
+ou elle a cru qu'il fallait un plombier. ⚠️ **On n'affirme jamais que l'eau abîme ses cheveux** —
+on montre ce que le filtre retient, elle fait le lien seule.
+
+**Ses 3 peurs, et ce sont exactement les 3 objections du dialogue Water2** : « ça n'ira pas sur ma
+douche » · « ça va tuer la pression » · « 89 $ pour un pommeau ? ».
+
+**Ton** : « you » toujours · 8-12 mots par phrase · contractions oui · **zéro point
+d'exclamation** · une amie qui s'y connaît, pas un labo.
+
+### La carte d'insert — 3 corrections de Yasser le 3 octobre
+
+| Correction | Conséquence |
+|---|---|
+| L'avatar manquait | Fiche écrite avant de réécrire la copy |
+| **Aucune vidéo n'existe et il n'y en aura pas** | Tous les QR vidéo supprimés. **L'installation est entièrement imprimée sur le carton**, en 5 étapes. Il ne reste **qu'un seul QR** sur toute la carte |
+| Une seule carte, pas deux | Même carte dans les deux boîtes → zéro frais de calage, zéro risque d'inversion |
+
+**Structure retenue** : recto = merci court + 5 étapes d'installation · verso = jour 30 en
+3 étapes + la paire de cartouches + QR d'avis + **code promo**.
+
+**L'ordre du verso n'est pas décoratif** : filtre d'abord, avis ensuite, code **en dernier**. Un
+code placé avant la demande d'avis transforme la demande en achat d'avis — interdit par Amazon,
+Google et Trustpilot. Et on écrit « tell us what you saw », jamais « leave us 5 stars » : demander
+une note est ce qui a détruit graceease sur Trustpilot.
+
+**Les 3 règles d'un code promo imprimé en Chine** :
+1. **Aucun chiffre dans le nom** — `PLUSHFAM`, jamais `PLUSH20`. La valeur se change dans Shopify
+   sans réimprimer 300 cartes. C'est toute l'astuce
+2. **Aucune date imprimée** — « no expiry », la durée se pilote dans Shopify
+3. **1 usage par client dans Shopify** — un code imprimé finit toujours sur Honey
+
+Valeur recommandée : **−20 % sur les cartouches**, sans minimum (Afina fait un −33 % permanent via
+« Buy 4 Get 2 Free », rang 5 de ses ventes).
+
+**Question à poser au fournisseur par écrit** : la cartouche arrive-t-elle **déjà montée dans le
+pommeau** ou emballée à part ? L'étape 3 du recto en dépend.
