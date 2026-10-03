@@ -1744,3 +1744,68 @@ eskiin, Hello Klean et Water2 n'envoient **jamais** sur une fiche produit Shopif
 sur des `/pages/` dédiées : advertorials numérotés, comparatifs « vs la carafe », LP par segment,
 LP par créateur, LP gamifiée, bundle produit + consommable, lien d'abonnement.
 **Ce n'est pas une préférence, c'est le standard du canal.**
+
+
+---
+
+## 3 octobre 2026 — le nom est verrouillé : PLUSH
+
+**VERRA est mort**, repéré par Yasser lui-même : **Verra Mobility** (NASDAQ : VRRM) est une société
+américaine cotée avec **~120 dépôts de marques**, et **verra.org** est le registre mondial des
+crédits carbone — donc un mot dont il ne prendra jamais la SERP.
+
+Également écartés après vérification : **Corra** (fade) · **Vella** (ne veut rien dire, et
+« vella » = *vieille* en catalan/galicien — Font Vella signifie littéralement « vieille
+fontaine ») · **Fount** (rejeté par Yasser) · **Raina** (🔴 `rainabathfittings.com` vend des
+pommeaux de douche — collision frontale en classe 11) · **Nimba** (🔴 `nimba.co` = marque
+lifestyle « wellness pour femmes modernes », exactement l'audience) · **Thalo** (🔴 4 entités
+dont Thalo Fragrance, fabricant *home care*).
+
+**Erreur reconnue** : j'ai justifié Vella sur une étymologie fausse (*vellus* n'est pas la racine
+de *velvet* — c'est *villus* ; *vellum* vient de *vitellus*, le veau). Et j'ai jugé des noms sur
+des racines latines alors que le seul juge est l'oreille américaine.
+
+### LE NOM
+
+```
+PLUSH
+Hard water in. Soft water out.
+```
+
+**Plush** = doux, moelleux, luxueux. C'est le mot que les Américains emploient déjà pour les
+serviettes et les hôtels. **Le nom est la promesse**, dans un mot que la cliente a déjà en bouche.
+1 syllabe, 5 lettres — le plus court du dossier, et il survit au test des 40 mm.
+
+| Vérification | État |
+|---|---|
+| **Classe 11** (robinetterie, douche) | 🟢 **libre** |
+| Marque de douche ou de filtre à eau | 🟢 aucune |
+| Seul dépôt « PLUSH » trouvé | Plush World LLC (Seattle), **instruments médicaux** — pas de conflit |
+| Force de la marque | 🟢 **suggestif, pas descriptif** (un pommeau n'est pas « plush ») → enregistrable |
+| Défaut assumé | « plush » = peluche. Sans effet : acquisition 100 % Meta, l'acheteur ne cherche pas |
+
+**Le test qui a tranché** : dire le nom à voix haute à la fin de sa propre annonce.
+*« Hard water in. Soft water out. — PLUSH. »* Verra passait ce test, Corra et Fount non.
+
+**Usage figé** : `PLUSH` en capitales dans le logo, `Plush` en minuscules partout ailleurs.
+
+### Règle 17 — un nom de marque se juge à l'oreille du marché, pas sur son étymologie
+
+Le bon test, dans l'ordre :
+```
+1. Ça sonne à côté de Jolie, Canopy, Caraway, Parachute ?   (le registre du prix visé)
+2. Un Américain l'épelle après l'avoir entendu UNE fois ?   (il entend le nom dans une vidéo
+                                                             Meta, puis il le tape)
+3. Ça survit à 5-6 lettres, 40 mm, une couleur ?            (le sticker de la boîte)
+```
+Et le territoire sémantique : toute la catégorie est sur **pure / flow / stream / clean** — quatre
+mots inappropriables. **RAIN est pris en classe 11** (Raina Bath Fittings, RAINSHOWER de
+S.C. Johnson). **SOFT était vide**, et c'est littéralement le produit.
+
+**Identité complète (logo, typo, couleurs, fichiers, réponses au questionnaire d'une IA de logo) :
+`research/brand/plush-identite.md`.**
+
+Décision structurante : **wordmark seul, aucun pictogramme.** Une IA de logo ajoute toujours une
+goutte d'eau, et goutte d'eau + pommeau stylisé = signature dropship. Les marques de la bande de
+prix visée vivent toutes sur un wordmark (eskiin, Afina, Jolie, Sproos, Canopy, Caraway).
+Et à 40 mm, un pictogramme plus un mot font deux taches.
