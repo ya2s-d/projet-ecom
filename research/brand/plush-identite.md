@@ -46,7 +46,8 @@ Trois raisons :
 | Casse | **bas de casse** — `plush` |
 | Espacement des lettres | **serré**, 0 à +30 maximum. L'espacement large ne marche qu'en capitales |
 | Graisse | **haute** (Bold / SemiBold) — choix de Yasser le 3 oct. ⚠️ seul point à vérifier : le contrepoinçon du `s` à 40 mm |
-| Police du LOGO | figée dans le SVG. Une fois exporté, ce n'est plus une police, c'est de l'artwork |
+| Police du LOGO | **League Spartan Bold** (SIL Open Font License, gratuite, usage commercial OK, dispo sur Google Fonts). Identifiée dans le PDF exporté le 3 oct. : sous-ensemble embarqué `AAAAAA+LeagueSpartan-Bold` |
+| Couleur du logo dans le fichier livré | `#222222` — à aligner avec le `#141414` du système, ou l'inverse. Les deux ne doivent pas coexister |
 | Police de TOUT LE RESTE (titres, textes, site, ads, emails) | **Jost** · à défaut **DM Sans** ou **Figtree** — Google Fonts, gratuites, usage commercial OK |
 | 🔴 À éviter partout sauf le logo | **Poppins, Montserrat, Arial, Helvetica** |
 

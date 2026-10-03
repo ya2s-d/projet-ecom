@@ -1872,3 +1872,27 @@ seul risque d'une graisse haute à petite taille, et il se règle avant d'imprim
 
 **Fichiers à produire** : `plush-noir.svg` · `plush-blanc.svg` · `plush-noir.png` (fond
 transparent, 2000 px). Sans le SVG, les stickers et la boîte sont impossibles à sortir proprement.
+
+### Le fichier logo livré — lu et vérifié le 3 octobre
+
+`Logo_Typographique_Noir_Beige.pdf`, 11 347 octets, 1 page de 1500 × 1500 pt.
+
+| Fait | Lecture |
+|---|---|
+| **Vectoriel** | 🟢 **Oui.** Texte réel, police embarquée (`FontFile2`, sous-ensemble `AAAAAA+LeagueSpartan-Bold`). Aucun XObject image. **Un export PDF de Canva est vectoriel** — le PDF suffit au fournisseur pour l'impression, le SVG n'est pas indispensable |
+| **Police** | **League Spartan Bold** — SIL Open Font License, gratuite, usage commercial OK, sur Google Fonts |
+| Couleur du texte | `#222222` (`.1333 .1333 .1333 rg`), pas `#141414` |
+| Fond | **Blanc pur peint** (`1 1 1 rg`, rectangle plein), malgré le nom de fichier « Beige ». Donc **ni transparent, ni Paper** |
+| Occupation | Le mot fait **~723 pt de large sur une page de 1500** (48 %) et **~320 pt de haut** (21 %) → beaucoup de vide autour, à recadrer |
+
+**Erreur reconnue** : j'avais dit que la police ressemblait à Poppins et conseillé d'en changer.
+C'est **League Spartan**, qui est un bien meilleur choix — open source, géométrique, et beaucoup
+moins vue que Poppins ou Montserrat. Le conseil était faux, le fichier est bon.
+
+**Le test des 40 mm se règle par la géométrie, pas par une impression** : à 40 mm de large, la
+hauteur d'x fait ~7 mm et l'épaisseur de trait ~2,5 mm, donc les ouvertures du `s` tournent autour
+du millimètre — très au-dessus des ~0,2 mm que perd une impression vinyle. **Le risque que
+j'avais signalé ne se matérialise pas à cette graisse-là.**
+
+**Reste à produire** : la version à **fond transparent** (site, Shopify, favicon), la version
+**blanche** sur fond foncé, le **favicon** (le `p` seul, 512 × 512), et le **recadrage** serré.
