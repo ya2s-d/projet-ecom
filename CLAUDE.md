@@ -2012,3 +2012,59 @@ hash, **non signées**, donc elles ne meurent pas en 24 h comme les liens de la 
 ⚠️ Le domaine est **bloqué par le proxy réseau de l'environnement Claude** (403 au CONNECT), donc
 aucun téléchargement de fichier n'est possible depuis une session — mais les liens s'ouvrent
 normalement depuis un navigateur.
+
+### 4 octobre, suite — les statiques, et deux corrections de méthode
+
+**66 publicités statiques** encore actives relevées sur US + UK/EU + FR, classées par dépense Meta
+publiée. `research/trendtrack-export/ads-statiques-4oct.md` · galerie :
+https://claude.ai/artifact/HSTpawSZk6pdLAthAoDD6b
+
+#### ⚠️ Correction — `duplicates` ne veut pas dire la même chose partout
+
+Le tri par variantes sur le marché US entier remonte des ads à **27 978 « variantes »** chez un
+labo B2B dont le reach est à 1. Ce ne sont pas des tests créa, ce sont des **catalogues
+dynamiques** : une campagne sur 400 produits compte 400 variantes.
+
+> **Le test créa réel vit entre 2 et ~100 variantes. Au-delà, c'est un catalogue.**
+
+Le classement du matin (eskiin 25, Hello Klean 51, Filterbaby 21) reste dans la bande valide.
+
+#### ⚠️ Correction — trier le marché entier par reach ne sert à rien
+
+Sans filtre, le top statique UK/EU est **Shopify, Uber, Adobe, Canva, Birkenstock, Turo**. Des
+annonceurs de marque qui achètent de la notoriété. Il faut **plafonner les likes de page**
+(250 000) pour faire apparaître les DTC.
+
+#### Le classement utile — statiques DTC, dépense vérifiée
+
+| $ | Var | Jours | Marque | Ce qu'il y a à voler |
+|---|---|---|---|---|
+| **228 718** | 96 | 458 | **Loop Earplugs** | Le **bundle 3 produits** vendu en une seule image |
+| 170 844 | 32 | 443 | Benjamin Berner | Copy de **4 mots** : « Swiss Genuine Leather Luxury Sneakers » |
+| **144 712** | **2** | **497** | **Serenium** (coussin, IT) | Point de douleur pur, 497 jours sur **2 variantes** |
+| **144 521** | 7 | 150 | **Chāmpo Haircare** (UK) | **La citation cliente comme visuel entier** — cheveux, audience de Megan |
+| 137 845 | 4 | 172 | Natur Gesund Check (DE) | Le **format chronologique** : jour 3 / semaine 2 / semaine 3 |
+| **136 305** | **3** | **697** | **Callie France** | 697 jours sur 3 variantes. La rente |
+| 121 752 | 75 | 338 | Virgin Voyages | « There's a deal waiting behind this post. Go on, tap it » |
+| 97 269 | 2 | **856** | My Variations (FR) | 856 jours sur **une seule image** |
+| 66 087 | 8 | **1 011** | My Variations (FR) | **L'avis client en copy intégrale**, 1 011 jours |
+| — | 19 | **1 506** | Space Artsy | **Record du relevé.** « Have you ever seen Aurora? » |
+
+#### Les quatre formats statiques qui durent
+
+1. **La citation cliente en visuel** — Chāmpo (144k $), My Variations (1 011 jours). Zéro
+   production, zéro acteur. **Le seul format que Plush peut sortir le jour 1**, dès le premier avis
+2. **Le point de douleur en une phrase** — Serenium : *« Fatigué de te réveiller avec une douleur
+   au cou ? »* 497 jours, 2 variantes
+3. **La chronologie** — Natur Gesund Check : jour 3 / semaine 2 / semaine 3. **C'est le jour 30 de
+   Plush**, déjà validé à 137 845 $ sur un autre produit
+4. **La copy ultra-courte** — Benjamin Berner 4 mots, Threadheads *« The perfect gift doesn't exi- »*
+
+#### Le fait qui concerne directement Plush
+
+**La catégorie filtre à douche ne dépense quasiment rien en statique.** Sur tout le champ eau /
+douche / calcaire, la plus grosse statique est à **15 078 $** (Libra Cases), Hello Klean à
+4 477 $, Water2 à 3 306 $. À comparer aux **21 066 $ et 42 408 $** de leurs vidéos.
+
+→ **Le marché est vidéo. Le statique y est un espace vide**, et c'est le format le moins cher à
+produire pour Yasser. Ce n'est pas une preuve que ça marche — c'est une asymétrie à tester.
