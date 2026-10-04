@@ -1952,3 +1952,63 @@ Valeur recommandée : **−20 % sur les cartouches**, sans minimum (Afina fait u
 
 **Question à poser au fournisseur par écrit** : la cartouche arrive-t-elle **déjà montée dans le
 pommeau** ou emballée à part ? L'étape 3 du recto en dépend.
+
+### 4 octobre 2026 — classement des ads concurrentes, dernier jour d'abonnement
+
+**135 annonces Meta actives** relevées et classées sur 10 concurrents, dédupliquées par créa.
+Fichiers : `research/trendtrack-export/ads-classement-4oct.md` (+ `.json`).
+Galerie cliquable : https://claude.ai/artifact/A3EiV4vTFVofygJY2dCQJ1
+
+#### Ce que « marche le mieux » peut vouloir dire — et ce que ça ne veut pas dire
+
+| Signal | Dispo | Valeur |
+|---|---|---|
+| Reach / dépense estimée | 🟢 **UE + UK uniquement** | Meta ne publie que là. **Sur une ad US, `reach: 0` ne veut pas dire zéro, ça veut dire non publié** — piège de lecture |
+| **Variantes** (`duplicates`) | 🟢 partout | Meilleur proxy US : personne ne décline 25 variantes d'une créa qui perd |
+| **Jours de diffusion** | 🟢 partout | Une créa qui perd est coupée en moins d'une semaine |
+| ROAS, conversion | 🔴 jamais | Une créa très diffusée prouve qu'elle rapporte au moins ce qu'elle coûte. Rien de plus |
+
+#### Les chiffres durs — palier 1, dépense vérifiée
+
+| Dépense | Reach | Annonceur | Lecture |
+|---|---|---|---|
+| **55 880 $** | 6 208 943 | **Oasis Biolabs** (myoasishair) | La plus grosse créa unique du dossier, et elle est **espagnole** |
+| 50 232 $ | 5 581 355 | Oasis Biolabs | 443 jours de diffusion |
+| **42 408 $** | 4 711 962 | Water2 | L'image « Think about it 👇 » contre la carafe |
+| 35 169 $ | 3 907 659 | Water2 / **Bear Grylls** | 444 jours. La page d'un partenaire, pas celle de la marque |
+| 21 066 $ | 2 340 657 | Hello Klean | |
+| 19 882 $ | 2 209 089 | Hello Klean | |
+
+#### Palier 2 — US, proxy variantes × jours
+
+| Score | Var | Jours | Marque |
+|---|---|---|---|
+| 5 875 | **25** | 235 | Eskiin |
+| 5 863 | 13 | **451** | Sproos |
+| 5 481 | **21** | 261 | Filterbaby — créa BOGO |
+| 4 928 | 22 | 224 | Eskiin |
+| 4 650 | 10 | 465 | Sproos |
+
+**Hello Klean pousse le plus loin la déclinaison** : jusqu'à **51 variantes** sur une seule créa.
+C'est le chiffre à retenir sur le coût d'entrée du canal.
+
+#### Trois mécaniques repérées dans ce relevé
+
+1. **Water2 fait porter ses plus grosses dépenses par des pages tierces** — Bear Grylls (13 M de
+   likes), The Durham Derwent, 90s Baby Show, CRS Nutrition. 4 des 10 plus grosses dépenses du
+   dossier sortent d'une page qui n'est pas la marque. Chaque partenaire a **son propre code promo**
+   (`CRS`, `the_durham_derwent`, `90SBABY`) — c'est de l'affiliation tracée, pas du branding.
+2. **Filterbaby démolit nommément le concurrent** : *« They are literally white labeling generic
+   $4 filters from Alibaba and slapping their label on it. »* 🔴 Angle interdit à Plush — c'est
+   exactement ce qu'est notre produit. Le relever, pas le copier.
+3. **La démo en 8 secondes existe déjà**, chez Filterbaby : mesurer le chlore d'un verre, y plonger
+   la main 30 secondes, remesurer, zéro. Format parfait, **conclusion interdite** (« it went right
+   into my blood » = allégation santé).
+
+#### Note technique à conserver
+
+Les médias Trendtrack sont sur **`medias.trendtrack.io`**, pas sur le CDN Facebook : URL à nom de
+hash, **non signées**, donc elles ne meurent pas en 24 h comme les liens de la bibliothèque Meta.
+⚠️ Le domaine est **bloqué par le proxy réseau de l'environnement Claude** (403 au CONNECT), donc
+aucun téléchargement de fichier n'est possible depuis une session — mais les liens s'ouvrent
+normalement depuis un navigateur.
