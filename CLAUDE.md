@@ -2068,3 +2068,55 @@ douche / calcaire, la plus grosse statique est à **15 078 $** (Libra Cases), He
 
 → **Le marché est vidéo. Le statique y est un espace vide**, et c'est le format le moins cher à
 produire pour Yasser. Ce n'est pas une preuve que ça marche — c'est une asymétrie à tester.
+
+### 4 octobre, audit de couverture — les trous comblés
+
+Question de Yasser : *« t'as bien récupéré même les ads statiques ET vidéo de eskiin et de mes
+autres concurrents ? »* **Non, pas au départ.** Le tri `mostDuplicates` sans filtre de format
+remonte ce qui domine chez chaque marque, donc un seul des deux formats. Audit puis comblage.
+
+| Marque | Vidéo | Statique | Total |
+|---|---|---|---|
+| Eskiin | 31 | 8 | 39 |
+| Jolie | 19 | 7 | 26 |
+| Oasis Biolabs (myoasishair) | 12 | 8 | 20 |
+| Afina (3 pages) | 10 | 19 | 29 |
+| Hello Klean | 9 | 5 | 14 |
+| Water2 | 8 | 2 | 10 |
+| **Santevia** *(nouveau)* | 5 | 0 | 5 |
+| Sproos | 5 | 0 | 5 |
+| Filterbaby | 3 | 2 | 5 |
+
+**171 annonces au total.** `research/trendtrack-export/ads-classement-4oct.md`
+
+#### ⚠️ Deux pièges de requête, à retenir
+
+| Requête | Problème |
+|---|---|
+| `afina.com` | Remonte **Barrafina** (restaurant Dubaï), **Serafina** (uniformes AR), **Petrafina** (BR). Toujours requêter **`afina.com/products`** |
+| `eskiin.com/products` | **Zéro résultat** — eskiin n'envoie jamais sur une fiche produit. Requêter **`eskiin.com/pages`** |
+
+#### Le fait structurel découvert en comblant
+
+**eskiin n'a que 25 statiques au total** sur **452 annonces live** → il est à **~95 % vidéo**.
+Hello Klean pareil : 25 statiques sur 454 live. Ce n'était pas un trou de ma collecte, c'est la
+réalité du marché — et ça confirme l'asymétrie notée plus haut : **le statique est un espace vide
+dans cette catégorie.**
+
+#### Les statiques d'eskiin pointent vers ses LP, et c'est ça l'info
+
+`/pages/sp6-bogo` · `/pages/handheld-bogo` · **`/pages/game-fall-sale-box-flip`** (LP gamifiée,
+lancée il y a 4 jours, déjà 3 créas). Aucune ne va sur `/products/`. Le standard du canal, encore.
+
+#### Santevia — nouvel acteur, et il vend un FILTRE DE BAIN
+
+427 ads live. Sa créa n°1 absolue (**rang 1, 660 jours, 301 207 reach, 2 711 $**) n'est pas le
+système de filtration d'eau, c'est le **filtre de bain**. Deux formats à voler, zéro allégation :
+
+1. **Le démontage du filtre en direct** (481 j) — *« Let's see what's inside my bath filter.
+   Let's open up this little bag and see what's inside. »* **C'est la version filmable de la
+   cartouche brune, et elle n'attend pas 30 jours.**
+2. **Le dialogue intérieur** (598 j) — *« You need to stop taking chlorine baths. Who said that? »*
+
+⚠️ Leur copy reste interdite à Plush : *« worsen eczema »*, *« fluoride can be a neurotoxin »*,
+*« may cause thyroid and neurological problems »*. Le format se vole, la phrase non.
