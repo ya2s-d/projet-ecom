@@ -66,3 +66,32 @@ marché US, pour le lancement VERRA.
    risque élevé) · design/couleur/locataire (Sproos, −48 % de trafic — risque nul) ·
    **calcaire sur les surfaces + filtre intelligent** (Hello Klean, 419k visites — risque nul).
    Le troisième est le meilleur rapport signal/risque et il n'est tenu par personne aux US.
+
+---
+
+## Mise à jour du 4 octobre 2026 — fichier de référence unique
+
+**`ads-final-4oct.md`** (+ `ads-final-4oct.json`) remplace `ads-classement-4oct.md` et
+`ads-statiques-4oct.md` : il contient les deux, plus 10 annonceurs jamais interrogés.
+
+```
+294 créas dédupliquées · 52 pages Facebook · 884 778 $ de dépense Meta vérifiée
+98 308 590 de reach cumulé · 199 vidéos / 95 statiques
+```
+
+Galerie cliquable, filtrable par marque et par format :
+https://claude.ai/artifact/P4tqNnT979YyLxRiCywNp9
+
+**Les trois choses à lire en premier dans ce fichier :**
+
+1. **Puure** — plus gros annonceur du dossier (338 000 $, 154 ads live, 82,4 M de reach), et sa
+   créa n°1 à 72 991 $ est **exactement la cartouche brune à côté d'une neuve**, soit l'objet
+   héros de Plush arrêté le 3 octobre. Sa phrase nomme les contaminants : à ne pas reprendre.
+2. **Le rapport de qualité d'eau par région** (Pureva) — meilleur mécanisme du relevé, gratuit,
+   zéro exposition juridique, et il capture l'email avant l'achat.
+3. **Lucinn et Unchemed** — deux concurrents US inconnus du dossier jusqu'ici, dont la copy est
+   intégralement interdite à Plush (faux médecins, pourcentages d'acné, allégations
+   thérapeutiques). Le format se vole, la phrase non.
+
+⚠️ **Déduplication** : dédupliquer sur `collationId` seul fait disparaître les lignes saisies à
+la main (elles n'en ont pas). Clé correcte : `collationId` → `id` → index.

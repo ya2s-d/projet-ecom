@@ -2120,3 +2120,183 @@ système de filtration d'eau, c'est le **filtre de bain**. Deux formats à voler
 
 ⚠️ Leur copy reste interdite à Plush : *« worsen eczema »*, *« fluoride can be a neurotoxin »*,
 *« may cause thyroid and neurological problems »*. Le format se vole, la phrase non.
+
+### 4 octobre, clôture — tout le champ relevé : 294 créas, 52 pages, 884 778 $ vérifiés
+
+Dernier jour d'abonnement. Dix annonceurs jamais interrogés ajoutés au relevé.
+Fichier unique de référence : **`research/trendtrack-export/ads-final-4oct.md`** (+ `.json`).
+Galerie cliquable, filtrable par marque et par format : https://claude.ai/artifact/P4tqNnT979YyLxRiCywNp9
+
+```
+294 créas dédupliquées · 52 pages Facebook · 884 778 $ de dépense Meta vérifiée
+98 308 590 de reach cumulé · 199 vidéos / 95 statiques
+```
+
+#### PUURE — le plus gros annonceur du dossier, et il fait déjà Plush
+
+```
+puurefilters.com + uk./fr./de.  ·  154 ads live  ·  82 431 592 de reach  ·  3 951 546 / 30 j
+338 000 $ vérifiés sur 10 créas  ·  produit : filtre de ROBINET inox, pas un pommeau
+Offre inversée : « the stainless steel filter is free. You just cover the cartridges »
+```
+
+**Sa créa n°1 — 72 991 $, 8 110 063 de reach, 453 jours, 14 variantes :**
+> *« This is what our Puure Filter caught after just a few weeks. [...] the difference is pretty
+> clear when you look at **a fresh cartridge next to that**. »*
+
+🟢 **C'est la cartouche brune posée à côté d'une neuve — l'objet héros arrêté le 3 octobre.**
+Validation la plus forte du dossier : pas une intuition, la créa la plus chère de la catégorie,
+453 jours de diffusion, construite exactement comme la nôtre.
+🔴 **Et l'avertissement** : leur phrase nomme PFAS, microplastiques, rouille, 150 contaminants.
+Plush montre la cartouche et **ne nomme pas ce qu'il y a dedans** (règle du 25 sept., disclaimer
+Water2 du 2 oct.).
+
+Trois autres mécaniques, toutes sans allégation :
+
+| $ | Jours | Mécanique |
+|---|---|---|
+| 36 019 | 208 | **« This is a water filter in 1970, and this is a water filter in 2026 »** — porté par une page tierce (Keith Maynard). Meilleur hook du relevé pour Plush : attaque le *builder grade* par son âge, zéro affirmation sur un corps |
+| 13 000 | 363 | **La série de 5 cartouches** — *« Five cartridges, 90 days. That last one, it used to be white. »* Version supérieure du jour 30 : une cartouche est une anecdote, cinq sont une courbe |
+| 12 171 | 395 | **La série éditoriale** — *« Things You Didn't Know You Can Buy Plastic Free, Part 4 »* |
+
+**3e confirmation des pages tierces** : Puure/Keith Maynard 36 019 $ · Water2/Bear Grylls
+35 169 $ · Water2/Durham Derwent 12 518 $ · Water2/90s Baby 7 937 $ · Water2/CRS 7 124 $.
+
+#### Trois concurrents US que le dossier n'avait jamais vus
+
+| | Lecture |
+|---|---|
+| 🔴 **lucinn.com** | 175 ads live. **Plus gros score US du relevé : 21 672** (43 var × 504 j) et 8 224 (16 × 514). Pages satellites (Velvet Hair Salon, « Dr James Fetterman ») + liens d'affiliation. Copy entièrement interdite : *« #1 Recommendation by Dermatologists »*, *« 87% Reported Less Acne Breakouts »*, *« fixed what years of medication couldn't »*, *« stops germs before they touch your body »*, *« your water is making you ugly »*. **À voler quand même** : l'advertorial narratif `/pages/toxic-soil-theory-hair-loss` (*« She'd lived in her town her whole life and never thought twice about the water. Sure, it smelled a little like a pool sometimes. »* — aucune affirmation, c'est le hook Jolie en version longue) et la créa « on augmente les prix de 25 % » qui justifie le ticket par le KDF-55 |
+| 🔴 **unchemed.com** | Annoncé par une page au nom de **« Dr. Emily Harrison, PhD, MD » (192 ads live)** — un médecin qui n'existe pas. *« America's #1 Filtered Showerhead »*, *« 15-stage »*, *« 85 000+ customers »*. Même machine que `dermatologist-reviews.com` (2 oct.) |
+| 🟢 **vedyaonline.com** (Vedya Home) | **45 variantes STATIQUES sur 120 jours et 32 sur 213.** Seul gros joueur statique de la catégorie |
+
+⚠️ **Trois « numéro un » simultanés** : Lucinn « #1 by Dermatologists », Unchemed « America's #1 »,
+GetSeoni « #1 Pommeau Filtrant ». Le badge s'achète. Ne jamais l'acheter, ne jamais le lire comme
+une validation.
+
+#### Correction — « le statique est un espace vide » était à moitié faux
+
+Écrit le 4 oct. au matin sur la foi d'eskiin (25 statiques / 452 ads) et Hello Klean (25 / 454).
+Vrai pour eux, **faux comme règle du marché** : Vedya tient 45 variantes statiques sur 120 jours.
+**Le statique marche dans cette catégorie, il est juste sous-utilisé par les leaders.**
+L'asymétrie reste la bonne cible — mais ce n'est plus un pari aveugle, il y a un précédent.
+
+**Deuxième correction** : eskiin n'est pas le plus gros annonceur, ni water2. C'est **Puure**, et
+son produit n'est même pas un pommeau. Le plancher du comptage par page remonte encore :
+Oasis Biolabs **539** ads live, Water2 931, FlowPure 480.
+
+#### 🟢 LE mécanisme à copier — le rapport de qualité d'eau par région (Pureva, 3 065 $, 150 j)
+
+```
+pureva.com/pages/rapport-qualite-eau-du-robinet   «  Que contient l'eau de votre région ? »
+« On a compilé toutes les données publiques, région par région, et on en a fait un rapport
+  clair et gratuit. En quelques secondes, tu sais exactement ce qu'il y a dans ton eau. »
+```
+
+**Le meilleur mécanisme du relevé entier, et il est gratuit.** Les rapports CCR annuels de
+qualité d'eau sont **publics et obligatoires** pour chaque réseau américain. Donc :
+
+1. Elle entre son code postal → elle reçoit **sa** donnée, pas une affirmation
+2. On cite ce que **sa ville** publie — zéro exposition, c'est de la donnée publique relayée
+3. Ça capture un email **avant** l'achat, donc ça finance le CPA sur la 2e commande
+4. Ça résout le trou de l'avatar : *« elle n'a jamais pensé à l'eau »*
+
+Forme la plus aboutie de la règle du 25 septembre : **on montre, le client conclut.**
+
+#### 🟠 GetSeoni — le comparatif classé, et le dialogue qui traite la peur n°3 de Megan
+
+`getseoni.com`, 122 ads live, pommeau filtrant **77,50 €**, 45 153 $ vérifiés, LP dédiée
+`/pages/comparatif-pommeaux-douche` (6 211 $, 95 j). Leur créa à 14 480 $ est un **tier-list
+filmé qui note les concurrents par leur nom** (« Ecovia → F », « pommeaux à billes → D »).
+
+🟢 **Le critère « le vrai coût sur un an » est à prendre tel quel.** Seul angle qui justifie 89 $
+contre 25 $ sans parler du corps : un pommeau à 25 $ dont la cartouche coûte 15 $ tous les 2 mois
+coûte **115 $ la première année**. Ça retourne l'ancre Amazon au lieu de la subir.
+🔴 **Mais nommer et noter une marque expose à la diffamation commerciale.** Version autorisée :
+**on compare des types de produit, jamais des marques.**
+
+**Leur dialogue à deux voix est le modèle exact** — et c'est la seule créa du relevé qui traite
+de front la peur n°3 de l'avatar (*« 89 $ pour un pommeau ? »*) :
+> *« — T'as quand même pas acheté le pommeau à 79 € ? — Bah si. — 79 € pour un pommeau de
+> douche ? Tu regardes trop Instagram. — Très bien, continue de te laver avec une eau aussi sale
+> que ça. — Attends, mais c'est quoi cette couleur ? »*
+
+Elle retourne l'objection avec **la cartouche**, pas avec un argument. 4e confirmation du format
+dialogue (Water2, Santevia, GetSeoni).
+
+#### Les trois offres inversées — et pourquoi on n'en prend aucune
+
+| Marque | Offre | Ads live | Dépense |
+|---|---|---|---|
+| Puure | **Filtre inox GRATUIT, tu paies les cartouches** | 154 | 338 000 $ |
+| FlowPure | **6 mois de cartouches offerts** · record de longévité : **678 et 711 jours**, 48 et 32 variantes, 6 pays | 480 | 28 237 $ |
+| Clover & Cove | **Buy 1 Get 1 Free** permanent · 446 jours sur 58 variantes dans 14 pays, copy de 6 mots | 110 | 8 517 $ |
+
+Un BOGO double le coût produit et le poids du colis ; un pommeau gratuit transforme le test en
+acquisition d'abonnés qu'un compte neuf ne sait pas retenir. **Le test de 430 € mesure une créa,
+pas une offre** (admis le 2 oct.). On garde pommeau 89 $ + cartouche 29 $ + pack de 4 à 149 $ +
+Shipping Protection 4,99 $.
+
+Copy FlowPure reprenable telle quelle : **« The Last Water Filter You'll Ever Buy »** · *instant
+filtered water (no waiting like pitchers)* · *installs in 60 seconds (no plumber needed)*.
+⚠️ *« independently lab certified »* et tout `up to X %` exigent **le rapport de test du
+fournisseur par écrit** — déjà au brief depuis le 2 oct. Sans le rapport, aucun chiffre.
+
+#### Showery UK — l'autre moitié du marché, confirmée fermée
+
+63 ads live, 4 804 689 de reach, créa n°1 à 7 361 $ sur 481 jours. **Vend la pression**, le filtre
+en 4e ligne. Et 43 041 visites contre 969 366 pour eskiin — le positionnement pression est bien
+le trou du marché (établi le 25 sept. : pression 15-55 $, filtrant 89-169 $). `stone-stream.com`
+confirme : 7 ads live, 291 de reach sur sa meilleure, depuis 2022.
+
+🟢 **Deux emprunts** : la **liste de situations** (*« low-pressure showers · older UK homes ·
+flats and apartments · upstairs bathrooms · rental properties »*) — elle laisse l'acheteuse se
+reconnaître au lieu de lui affirmer quelque chose, et `rental properties` est l'angle Sproos.
+Et le premier mot de StoneStream : **« Limescale on your screen, dry skin, dull hair? That's hard
+water. »** — le calcaire sur la paroi, angle Hello Klean, **la seule chose de la catégorie qui se
+photographie au téléphone sans attendre 30 jours.**
+
+#### La liste close des interdits
+
+```
+ALLÉGATION DE SANTÉ OU DE RÉSULTAT CORPOREL
+  clinically proven · reduces hair shedding · 87% reported less acne breakouts
+  fixed what years of medication couldn't · stops germs before they touch your body
+  removes 99% sans "up to" ni rapport de test · your water is making you ugly
+  conseillé par les dermatologues · 86% des cheveux moins cassants
+  eczema · neurotoxin · thyroid · sleep apnea
+
+AUTORITÉ ACHETÉE OU INVENTÉE
+  #1 Recommended by Dermatologists · America's #1 · un médecin qui n'existe pas
+  un nombre de clients ou d'avis supérieur à la réalité
+
+NOMMER ET NOTER UN CONCURRENT
+  « Ecovia : F » · « white labeling generic $4 filters from Alibaba »
+  (on compare des TYPES de produit, jamais des marques)
+```
+
+**Autorisé, et c'est tout ce dont on a besoin** : la cartouche neuve à côté de celle du jour 30 ·
+la série de 5 cartouches sur 90 jours · le calcaire sur la paroi · « this is a shower head in
+1970, and this is one in 2026 » · la liste de situations · le coût réel sur 12 mois · le rapport
+de qualité d'eau de sa ville · « On day 59, if you don't love it, you get all your money back. »
+
+#### Sur la France, sans rouvrir la décision
+
+`pureva.com` 63 795 $ vérifiés, `getseoni.com` 45 153 $ à **77,50 €** le pommeau filtrant — le
+produit exact de Plush, sur le marché que le 24 septembre avait fermé. **Ça ne contredit rien** :
+l'analyse tuait la France sur le **ticket et la TVA**, pas sur l'existence du marché. 77,50 € TTC
+= 64,58 € HT, et il faut 35 € de marge. **On reste US.** Noté pour le jour où il y aura du cash.
+
+#### Pièges de requête accumulés
+
+| Requête | Problème |
+|---|---|
+| `afina.com` | Remonte Barrafina, Serafina, Petrafina → **`afina.com/products`** |
+| `eskiin.com/products` | Zéro résultat, eskiin n'envoie jamais sur une fiche → **`eskiin.com/pages`** |
+| `shower filter` générique | Remonte Eureka Forbes (Inde), Scrubsy-India, moodytiger — et des pages de faux praticiens |
+| tri par reach sans filtre | Remonte Shopify, Uber, Adobe, Canva → plafonner `max_facebook_likes: 250000` |
+| tri par `growth30d` | Artefact de mesure → trier par trafic et lire les courbes |
+| déduplication par `collationId` | ⚠️ **Les lignes saisies à la main n'en ont pas.** Dédupliquer sur `collationId` puis `id` puis un index, sinon 29 créas disparaissent d'un coup |
+
+**Crédits à la clôture : ~3 366.** Abonnement expiré le 5 octobre. Tout est dans
+`research/trendtrack-export/`.
