@@ -80,7 +80,7 @@ Water2 n'attaque jamais les autres filtres : il attaque la carafe Brita.
 | We didn't make it brown. Your water did. | Removes 99 % of chlorine |
 | 2 minutes. No tools. No plumber. | Easy installation process |
 | Look at the filter. | Transform your hair |
-| Your routine didn't change. Your water did. | Say goodbye to bad hair days! |
+| You've upgraded everything but the water. | Say goodbye to bad hair days! |
 | On day 59, if you don't love it, you get all your money back. | 30-day money-back guarantee* |
 
 **Elle n'est pas naïve.** Elle a vu mille pubs Meta cette semaine. Ce qui la fait cliquer n'est
@@ -89,47 +89,15 @@ qu'elle peut vérifier chez elle** (la cartouche au jour 30).
 
 ---
 
-## Le resserrage du 15 octobre — le DÉCLENCHEUR, pas le symptôme
-
-Relance de Yasser : *« à qui va-t-on vraiment parler ? »* Le fichier décrivait un **état**
-(cheveux ternes, peau qui tire) — or un état, elle vit avec depuis des mois. Ça ne fait pas
-cliquer. Il y avait pourtant une ligne jamais exploitée plus haut :
-
-> *« Elle a déménagé il y a un à trois ans. Depuis, quelque chose a changé. »*
-
-**C'est ça l'avatar, et il se resserre à une phrase :**
-
-```
-Une femme dont les cheveux et la peau ont changé quand elle a déménagé,
-et qui passe depuis un an à acheter des produits pour réparer ça.
-```
-
-Pas « une femme qui tient à ses cheveux » — il y en a des millions, et eskiin leur parle déjà
-avec 934 créas.
-
-### Pourquoi ce resserrage vaut de l'argent
-
-| | |
-|---|---|
-| **Le problème a une date** | Elle peut pointer le moment. On ne crée pas le problème, on nomme une énigme qu'elle a déjà |
-| **La cause n'est pas son corps** | C'est le réseau d'eau de sa ville. Donc on explique tout sans rien affirmer sur elle — la règle du fichier, enfin applicable |
-| **Personne ne l'occupe** | Sur les **294 annonces relevées le 4 octobre, zéro** utilise le déménagement. *Hair* et *skin* sont saturés ; le déclencheur est vide |
-| **Ça rend le rapport d'eau évident** | Le mécanisme Pureva (le meilleur du relevé) devient naturel : *ta nouvelle ville publie son rapport, le voilà* |
-| **C'est ciblable** | « Recently moved » était un segment comportemental Meta — à vérifier dans le gestionnaire, ces options bougent |
-
-### Ce que ça donne en accroche
-
-```
-Did your hair change when you moved?        ← la question
-Your routine didn't change. Your water did. ← l'affirmation
-```
-
-La deuxième est la structure de la ligne de marque — *« We didn't make it brown. Your water
-did. »* — appliquée au déclencheur. Même rythme, même mécanique, zéro allégation.
-
-### Deux corrections apportées au tableau ci-dessus
+## Deux corrections au tableau ci-dessus — 15 octobre
 
 | Ligne retirée | Motif |
 |---|---|
-| ~~`Hard water in. Soft water out.`~~ | **Factuellement faux.** Un filtre KDF-55 + charbon retire le chlore et les métaux lourds, **pas** le calcium ni le magnésium — adoucir exige un échange d'ions (résine + sel), que Yasser a lui-même rayé le 5 sept. (produit #10). Elle verrait la promesse non tenue sur sa paroi. Remplacé par **`City water in. Plush water out.`** : « city water » est vérifiable, « plush water » est défini par la marque, donc inattaquable |
-| ~~`Same bathroom. Better water.`~~ | **C'est la signature de Hello Klean**, mot pour mot (relevé le 2 oct.). Remplacé par la ligne du déclencheur |
+| ~~`Hard water in. Soft water out.`~~ | **Factuellement faux.** Un filtre KDF-55 + charbon retire le chlore et les métaux lourds, **pas** le calcium ni le magnésium — adoucir exige un échange d'ions (résine + sel), rayé par Yasser le 5 sept. (produit #10). Elle verrait la promesse non tenue sur sa paroi. → **`City water in. Plush water out.`** : « city water » est vérifiable, « plush water » est défini par la marque, donc inattaquable |
+| ~~`Same bathroom. Better water.`~~ | **Signature de Hello Klean**, mot pour mot (relevé le 2 oct.) → **`You've upgraded everything but the water.`** |
+
+**Piste écartée le 15 octobre : le déménagement.** Envisagée comme déclencheur (« tes cheveux ont
+changé quand tu as déménagé »), écartée par Yasser — *« c'est un cas trop précis »*. Il a raison :
+c'est un segment, pas le marché, et rétrécir l'audience à 61 €/jour sans phase d'apprentissage
+coûte plus que ça ne rapporte. **L'angle général reste : elle a tout optimisé en aval de l'eau,
+jamais l'eau.**
