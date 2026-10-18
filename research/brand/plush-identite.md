@@ -185,7 +185,9 @@ rapport de labo existe.
 
 ```
 TAGLINE
-  Hard water in. Soft water out.
+  City water in. Plush water out.
+  (corrigé le 18 oct. — « Hard water in. Soft water out. » était faux : le filtre ne retire
+   pas le calcaire. Voir plush-avatar-client.md, corrections du 15 oct.)
 
 GARANTIE   — préheader de chaque email + bandeau de la page produit
   On day 59, if you don't love it, you get all your money back.
