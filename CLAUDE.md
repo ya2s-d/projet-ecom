@@ -2314,4 +2314,4 @@ Pour l'instant seule la couverture existe : `assets/produit/plush-cadeau-ebook.j
 | Sous-titre | *What's in your city's water, and what to do about it.* |
 | Rôle | Cadeau n°2 de la section bundle, offert avec toute commande. Affiché « FREE ~~$20~~ » — décision de Yasser, point déjà discuté, ne pas le rouvrir |
 | Fond | Les rapports annuels de qualité d'eau (CCR), publics et obligatoires pour chaque réseau US : comment trouver celui de sa ville et le lire. Puis la routine douche, l'installation, le jour 30 de la cartouche |
-| Règles | Charte `research/brand/plush-identite.md` (Paper, Ink, Day 30) · zéro allégation santé · liste des interdits de la section 9 quater |
+| Règles | Charte `research/brand/plush-identite.md` (Paper, Ink, Day 30) · zéro allégation santé · « La liste close des interdits » (4 oct.) |
