@@ -1,0 +1,161 @@
+{%- comment -%}
+  PLUSH — badges de confiance, version « Liquid personnalisé ».
+  Colle tout ce code dans un bloc « Liquid personnalisé ».
+
+  POUR MODIFIER : change seulement le texte entre les guillemets, juste en dessous.
+  - b1 à b4 = les 4 badges, dans l'ordre d'affichage.
+  - Icônes possibles : install, trial, parcel, truck, secure, filter, refund, support, check
+  - Ton propre logo : colle son lien dans b1_img (Contenu > Fichiers > copier le lien).
+    Laisse '' pour garder l'icône.
+  - Pour cacher un badge : mets son titre à ''.
+  - mobile : 'grid' = 2 × 2, icône à gauche · 'row' = 4 sur une ligne
+{%- endcomment -%}
+
+{%- liquid
+  assign b1_icon = 'install'
+  assign b1_title = 'Tool-Free Install'
+  assign b1_sub = 'No plumber needed'
+  assign b1_img = ''
+
+  assign b2_icon = 'trial'
+  assign b2_title = '60-Day Trial'
+  assign b2_sub = 'Love it or get a refund'
+  assign b2_img = ''
+
+  assign b3_icon = 'parcel'
+  assign b3_title = 'Free U.S. Shipping'
+  assign b3_sub = 'Tracked, 7–12 business days'
+  assign b3_img = ''
+
+  assign b4_icon = 'secure'
+  assign b4_title = 'Secure Checkout'
+  assign b4_sub = 'Encrypted payment'
+  assign b4_img = ''
+
+  assign mobile = 'grid'
+  assign c_icon = '#8A4524'
+  assign c_text = '#141414'
+  assign c_card = '#F6F2ED'
+  assign space_top = 8
+  assign space_bottom = 8
+
+  assign c_tint = c_icon | color_modify: 'alpha', 0.12
+  assign n = 0
+  if b1_title != blank
+    assign n = n | plus: 1
+  endif
+  if b2_title != blank
+    assign n = n | plus: 1
+  endif
+  if b3_title != blank
+    assign n = n | plus: 1
+  endif
+  if b4_title != blank
+    assign n = n | plus: 1
+  endif
+-%}
+
+<div
+  class="plush-tb plush-tb--{{ mobile }}"
+  style="--pt-icon:{{ c_icon }};--pt-tint:{{ c_tint }};--pt-text:{{ c_text }};--pt-card:{{ c_card }};--pt-n:{{ n | at_least: 1 }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+>
+  <ul class="pt-grid" role="list">
+    {%- for i in (1..4) -%}
+      {%- liquid
+        case i
+          when 1
+            assign b_icon = b1_icon
+            assign b_title = b1_title
+            assign b_sub = b1_sub
+            assign b_img = b1_img
+          when 2
+            assign b_icon = b2_icon
+            assign b_title = b2_title
+            assign b_sub = b2_sub
+            assign b_img = b2_img
+          when 3
+            assign b_icon = b3_icon
+            assign b_title = b3_title
+            assign b_sub = b3_sub
+            assign b_img = b3_img
+          when 4
+            assign b_icon = b4_icon
+            assign b_title = b4_title
+            assign b_sub = b4_sub
+            assign b_img = b4_img
+        endcase
+      -%}
+      {%- if b_title != blank -%}
+        <li class="pt-item">
+          <span class="pt-ic{% if b_img != blank %} pt-ic--img{% endif %}">
+            {%- if b_img != blank -%}
+              <img src="{{ b_img }}" alt="" width="80" height="80" loading="lazy">
+            {%- else -%}
+              {%- case b_icon -%}
+                {%- when 'install' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7a4 4 0 0 1 4 4"/><path d="M8 13a6 6 0 0 1 12 0z"/><path d="M10 16v1.5M14 16v2.5M18 16v1.5"/></svg>
+                {%- when 'trial' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><text x="12" y="18" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">60</text></svg>
+                {%- when 'parcel' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8.5 4.3v9.4L12 21l-8.5-4.3V7.3z"/><path d="M3.5 7.3L12 11.6l8.5-4.3M12 11.6V21M7.8 5.1l8.5 4.4"/></svg>
+                {%- when 'truck' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11.5v10H2.5zM14 10h4.2l3.3 3.4v3.1H14"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17.5" cy="17.5" r="1.9"/></svg>
+                {%- when 'secure' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/><path d="M12 14.5v2.5"/></svg>
+                {%- when 'filter' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg>
+                {%- when 'refund' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+                {%- when 'support' -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10.5H10l-5 4v-4H4z"/><path d="M8 10h8M8 13h5"/></svg>
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              {%- endcase -%}
+            {%- endif -%}
+          </span>
+          <span class="pt-txt">
+            <span class="pt-t">
+              {%- assign words = b_title | split: ' ' -%}
+              {%- for w in words -%}{%- unless forloop.first -%}{{ ' ' }}{%- endunless -%}<span class="pt-w">{{ w | escape }}</span>{%- endfor -%}
+            </span>
+            {%- if b_sub != blank -%}
+              <span class="pt-s">{{ b_sub | escape }}</span>
+            {%- endif -%}
+          </span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+
+<style>
+  .plush-tb{container-type:inline-size;background:var(--pt-card);border-radius:16px;padding:16px 14px;color:var(--pt-text)}
+  .plush-tb *{box-sizing:border-box}
+  .plush-tb .pt-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}
+  .plush-tb .pt-item{display:flex;align-items:center;gap:10px;min-width:0;margin:0}
+  .plush-tb .pt-ic{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--pt-tint);color:var(--pt-icon);display:flex;align-items:center;justify-content:center}
+  .plush-tb .pt-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+  .plush-tb .pt-ic--img{background:none}
+  .plush-tb .pt-ic img{width:100%;height:100%;object-fit:contain;display:block}
+  .plush-tb .pt-txt{display:flex;flex-direction:column;min-width:0}
+  .plush-tb .pt-t{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;line-height:1.25;text-wrap:balance}
+  .plush-tb .pt-w{white-space:nowrap}
+  .plush-tb .pt-s{margin-top:3px;font-size:12px;line-height:1.3;opacity:.7}
+
+  .plush-tb--row .pt-grid{grid-template-columns:repeat(var(--pt-n),minmax(0,1fr));gap:8px}
+  .plush-tb--row .pt-item{flex-direction:column;text-align:center;gap:8px}
+  .plush-tb--row .pt-t{font-size:10.5px;letter-spacing:.03em}
+  .plush-tb--row .pt-s{display:none}
+
+  @container (min-width:620px){
+    .plush-tb .pt-grid,
+    .plush-tb--row .pt-grid{grid-template-columns:repeat(var(--pt-n),minmax(0,1fr));gap:20px}
+    .plush-tb .pt-item,
+    .plush-tb--row .pt-item{flex-direction:column;text-align:center;gap:12px}
+    .plush-tb .pt-ic{flex-basis:56px;width:56px;height:56px}
+    .plush-tb .pt-ic svg{width:28px;height:28px;stroke-width:1.5}
+    .plush-tb .pt-t,
+    .plush-tb--row .pt-t{font-size:13px;letter-spacing:.05em}
+    .plush-tb--row .pt-s{display:block}
+  }
+</style>
