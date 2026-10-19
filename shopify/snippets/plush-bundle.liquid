@@ -7,9 +7,11 @@
   Admin Shopify > Contenu > Métaobjets > Plush bundle > main.
   Chaque champ y a son nom (Pack 1 — Titre, Cadeau 1 — Image…).
 
-  AFFICHAGE : rendu à la fin de snippets/product-variant-picker.liquid,
-  uniquement pour un produit qui a une option « Pack ». Le sélecteur
-  du thème est masqué et piloté par les cartes (prix, panier, URL).
+  AFFICHAGE : un bloc « Liquid personnalisé » dans la fiche produit,
+  placé sous le titre, contenant :
+  {% render 'plush-bundle', product: product %}
+  Le sélecteur de variantes du thème est masqué et piloté par les
+  cartes (prix, panier, URL).
 
   CHAQUE CARTE = UNE VARIANTE DU PRODUIT, dans l'ordre de l'admin.
   Carte 1 = 1re variante, carte 2 = 2e variante, carte 3 = 3e.
