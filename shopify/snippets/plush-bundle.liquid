@@ -3,28 +3,64 @@
   PLUSH — Sélecteur de bundle + cadeaux offerts
   À placer sous le titre, au-dessus du bouton « Ajouter au panier ».
 
-  INSTALLATION
-  1. Boutique en ligne > Thèmes > … > Modifier le code
-     > snippets > « Ajouter un nouveau snippet » > plush-bundle
-     > coller tout ce fichier > Enregistrer.
-  2. Personnaliser > page Produit > bloc « Informations sur le produit »
-     > Ajouter un bloc > « Liquid personnalisé » (Custom Liquid)
-     > coller l'appel {% render 'plush-bundle' … %}
-     > glisser le bloc entre le titre et les boutons d'achat.
-  3. Dans le même bloc produit, retirer « Sélecteur de variante »
-     et « Prix » du thème : les cartes affichent déjà les leurs.
+  OÙ MODIFIER LES TEXTES ET LES IMAGES
+  Admin Shopify > Contenu > Métaobjets > Plush bundle > main.
+  Chaque champ y a son nom (Pack 1 — Titre, Cadeau 1 — Image…).
+
+  AFFICHAGE : rendu à la fin de snippets/product-variant-picker.liquid,
+  uniquement pour un produit qui a une option « Pack ». Le sélecteur
+  du thème est masqué et piloté par les cartes (prix, panier, URL).
 
   CHAQUE CARTE = UNE VARIANTE DU PRODUIT, dans l'ordre de l'admin.
   Carte 1 = 1re variante, carte 2 = 2e variante, carte 3 = 3e.
 
-  Tous les textes se changent dans l'appel {% render %}, sans
-  toucher à ce fichier. Un paramètre absent = valeur par défaut.
+  Sans métaobjet, les textes peuvent aussi être passés en
+  paramètres du {% render %} (o1_title, g1_label…).
   Promo : « LAUNCH OFFER • SAVE 15% » → la partie après « • »
   s'affiche en surbrillance.
   ============================================================
 {%- endcomment -%}
 
 {%- liquid
+  # Contenu modifiable dans l'admin : Contenu > Métaobjets > Plush bundle > main.
+  # S'il existe, il remplace les paramètres passés au render.
+  assign pb = shop.metaobjects.plush_bundle.main
+  if pb
+    assign selected = pb.selected.value
+    assign o1_title = pb.o1_title.value
+    assign o1_tag = pb.o1_tag.value
+    assign o1_includes = pb.o1_includes.value
+    assign o1_promo = pb.o1_promo.value
+    assign o1_note = pb.o1_note.value
+    assign o2_title = pb.o2_title.value
+    assign o2_tag = pb.o2_tag.value
+    assign o2_includes = pb.o2_includes.value
+    assign o2_promo = pb.o2_promo.value
+    assign o2_note = pb.o2_note.value
+    assign o3_title = pb.o3_title.value
+    assign o3_tag = pb.o3_tag.value
+    assign o3_includes = pb.o3_includes.value
+    assign o3_promo = pb.o3_promo.value
+    assign o3_note = pb.o3_note.value
+    assign gifts_title = pb.gifts_title.value
+    assign gifts_title_rest = pb.gifts_title_rest.value
+    assign gifts_badge = pb.gifts_badge.value
+    assign g1_label = pb.g1_label.value
+    assign g1_image = pb.g1_image.value
+    assign g1_value = pb.g1_value.value
+    assign g2_label = pb.g2_label.value
+    assign g2_image = pb.g2_image.value
+    assign g2_value = pb.g2_value.value
+    assign g3_label = pb.g3_label.value
+    assign g3_image = pb.g3_image.value
+    assign g3_value = pb.g3_value.value
+    assign g4_label = pb.g4_label.value
+    assign g4_image = pb.g4_image.value
+    assign g4_value = pb.g4_value.value
+    assign accent = pb.accent.value
+    assign highlight = pb.highlight.value
+  endif
+
   assign uid = 'pb-' | append: product.id
   assign sel = selected | default: 1
   assign count = options | default: product.variants.size
@@ -96,7 +132,7 @@
         endcase
       -%}
       {%- if i <= count and v -%}
-        <label class="pb-opt{% if i == sel %} is-on{% endif %}{% unless v.available %} is-out{% endunless %}" data-variant="{{ v.id }}" data-i="{{ i }}">
+        <label class="pb-opt{% if i == sel %} is-on{% endif %}{% unless v.available %} is-out{% endunless %}" data-variant="{{ v.id }}" data-i="{{ i }}" data-options="{{ v.options | json | escape }}">
           <input
             type="radio"
             name="{{ uid }}-opt"
@@ -177,11 +213,17 @@
           <div class="pb-gift">
             <div class="pb-gbox">
               <span class="pb-gbadge">
-                {{- g_badge | default: 'FREE' -}}
+                {{- g_badge | default: gifts_badge | default: 'FREE' -}}
                 {%- if g_value != blank %} <s>{{ g_value }}</s>{%- endif -%}
               </span>
               {%- if g_img != blank -%}
-                <img src="{{ g_img }}" alt="{{ g_label | escape }}" loading="lazy" width="300" height="300">
+                {%- comment -%} Image choisie dans l'admin (objet) ou lien collé (texte) {%- endcomment -%}
+                {%- if g_img.id -%}
+                  {%- assign g_src = g_img | image_url: width: 400 -%}
+                {%- else -%}
+                  {%- assign g_src = g_img -%}
+                {%- endif -%}
+                <img src="{{ g_src }}" alt="{{ g_label | escape }}" loading="lazy" width="300" height="300">
               {%- else -%}
                 <span class="pb-ph">Image</span>
               {%- endif -%}
@@ -195,6 +237,9 @@
 </div>
 
 <style>
+  {%- comment -%} Le sélecteur du thème reste dans la page (il pilote le prix et le panier) mais il est masqué : les cartes le remplacent. {%- endcomment -%}
+  variant-radios[data-url="{{ product.url }}"],
+  variant-selects[data-url="{{ product.url }}"]{display:none!important}
   #{{ uid }}{margin:16px 0 20px;color:var(--pb-ink);font:inherit}
   #{{ uid }} *{box-sizing:border-box}
   #{{ uid }} .pb-opts{display:flex;flex-direction:column;gap:12px}
@@ -257,6 +302,29 @@
     var productIds = [{% for v in product.variants %}'{{ v.id }}'{% unless forloop.last %},{% endunless %}{% endfor %}];
 
     var section = root.closest('.shopify-section');
+    var optNames = {{ product.options | json }};
+    var productUrl = {{ product.url | json }};
+
+    // Sélectionne la même variante dans le sélecteur du thème (variant-radios / variant-selects),
+    // pour que le thème mette lui-même à jour le prix, l'URL et le formulaire d'achat.
+    function syncPicker(values) {
+      var pickers = (section || document).querySelectorAll('variant-radios, variant-selects');
+      var picker = null;
+      pickers.forEach(function (p) { if (!picker && p.dataset.url === productUrl) picker = p; });
+      if (!picker) return false;
+      var last = null;
+      values.forEach(function (val, i) {
+        var name = optNames[i];
+        picker.querySelectorAll('input[type="radio"]').forEach(function (r) {
+          if (r.name === name && r.value === val && !r.checked) { r.checked = true; last = r; }
+        });
+        picker.querySelectorAll('select').forEach(function (s) {
+          if (s.name === 'options[' + name + ']' && s.value !== val) { s.value = val; last = s; }
+        });
+      });
+      if (last) last.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    }
 
     function targets() {
       var out = [];
@@ -276,6 +344,7 @@
         c.querySelector('input').checked = on;
       });
       var id = card.dataset.variant;
+      try { syncPicker(JSON.parse(card.dataset.options || '[]')); } catch (e) {}
       targets().forEach(function (el) {
         if (el.tagName === 'SELECT' && !el.querySelector('option[value="' + id + '"]')) return;
         el.value = id;
