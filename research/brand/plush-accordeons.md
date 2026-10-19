@@ -1,4 +1,4 @@
-# PLUSH — textes des onglets de la page produit (brouillon v1, 19 oct. 2026)
+# PLUSH — textes des onglets de la page produit (v2, 19 oct. 2026 — onglets 1, 2 et 4 validés par Yasser)
 
 > Demandé par Yasser : même structure que les onglets d'eskiin (Why eskiin · Key Benefits ·
 > Filter Replacement · What's Included In The Box), réécrite pour Megan (voir
@@ -54,7 +54,6 @@ If you can open a jar, you can install Plush.
 
 • Fits the standard U.S. ½-inch shower arm, the one in almost every home and apartment.  [à confirmer : filetage 1/2" NPT]
 • Unscrew your old shower head by hand. Stuck? A cloth and a wrench free it in seconds.
-• Wrap the thread with the plumber's tape in the box.  [à confirmer : téflon fourni]
 • Screw Plush on, hand-tight. Run the water for 30 seconds before your first shower.  [à confirmer : rinçage conseillé par le fournisseur]
 
 Renting? Keep your old shower head in a drawer. Swap it back the day you move out.
@@ -74,16 +73,21 @@ Your filter does the work, so it needs a fresh one every 60 days.  [à confirmer
 ## 5. What's in the Box
 
 ```
+In every box:
 • 1 Plush filtered shower head, chrome
-• 1 filter cartridge, already installed  [à confirmer]
-• 1 spare filter cartridge (Plush Duo only)
-• Plumber's tape  [à confirmer]
-• A short note from us, with your 5-step install printed on it
+• 1 filter cartridge, already installed inside
+• A thank-you card from us, with your 5-step install printed on it
 
-Plus, by email after your order: your free eBook, Plush: Know Your Water.  [quand il existera]
+With Plush Duo, you also get:
+• 1 spare filter cartridge, in its own box
+
+Plus, by email after your order: your free eBook, Plush: Know Your Water.
 
 Free U.S. shipping, tracked, 7–12 business days.
 ```
+
+> Retiré le 19 oct. : le ruban téflon (« plumber's tape »), non confirmé par le fournisseur —
+> aussi retiré de l'étape d'installation de l'onglet 3. À remettre seulement s'il est fourni.
 
 ---
 
