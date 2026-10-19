@@ -44,9 +44,6 @@
     assign o3_includes = pb.o3_includes.value
     assign o3_promo = pb.o3_promo.value
     assign o3_note = pb.o3_note.value
-    assign o1_image = pb.o1_image.value
-    assign o2_image = pb.o2_image.value
-    assign o3_image = pb.o3_image.value
     assign gifts_title = pb.gifts_title.value
     assign gifts_title_rest = pb.gifts_title_rest.value
     assign gifts_badge = pb.gifts_badge.value
@@ -132,21 +129,18 @@
             assign o_inc = o1_includes | default: ''
             assign o_promo = o1_promo | default: ''
             assign o_note = o1_note | default: ''
-            assign o_img = o1_image | default: ''
           when 2
             assign o_title = o2_title | default: ''
             assign o_tag = o2_tag | default: ''
             assign o_inc = o2_includes | default: ''
             assign o_promo = o2_promo | default: ''
             assign o_note = o2_note | default: ''
-            assign o_img = o2_image | default: ''
           when 3
             assign o_title = o3_title | default: ''
             assign o_tag = o3_tag | default: ''
             assign o_inc = o3_includes | default: ''
             assign o_promo = o3_promo | default: ''
             assign o_note = o3_note | default: ''
-            assign o_img = o3_image | default: ''
         endcase
       -%}
       {%- if i <= count and v -%}
@@ -159,30 +153,8 @@
             {% unless v.available %}disabled{% endunless %}
           >
           {%- if o_tag != blank -%}<span class="pb-pill">{{ o_tag }}</span>{%- endif -%}
-          {%- liquid
-            # Miniature : image choisie dans la fiche > photo de la variante > n-ième photo du produit > photo principale
-            assign pimg = product.images[vi] | default: ''
-            assign thumb = o_img | default: ''
-            if thumb == blank
-              assign thumb = v.image | default: ''
-            endif
-            if thumb == blank
-              assign thumb = pimg
-            endif
-            if thumb == blank
-              assign thumb = product.featured_image | default: ''
-            endif
-          -%}
           <span class="pb-head">
             <span class="pb-dot" aria-hidden="true"></span>
-            {%- if thumb != blank -%}
-              {%- if thumb.id -%}
-                {%- assign tsrc = thumb | image_url: width: 160 -%}
-              {%- else -%}
-                {%- assign tsrc = thumb -%}
-              {%- endif -%}
-              <img class="pb-thumb" src="{{ tsrc }}" alt="" loading="lazy" width="56" height="56">
-            {%- endif -%}
             <span class="pb-name">
               <span class="pb-title">{{ o_title | default: v.title }}</span>
               {%- unless v.available -%}<span class="pb-soldout">Sold out</span>{%- endunless -%}
@@ -216,7 +188,6 @@
               {%- if o_promo != blank -%}
                 {%- assign parts = o_promo | split: ' • ' -%}
                 <span class="pb-promo">
-                  <svg class="pb-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3.2L17.5 8.5"/></svg>
                   <span>
                     {{- parts[0] -}}
                     {%- if parts.size > 1 %} • <b class="pb-hl">{{ parts[1] }}</b>{%- endif -%}
@@ -297,22 +268,20 @@
   {%- comment -%} Le sélecteur du thème reste dans la page (il pilote le prix et le panier) mais il est masqué : les cartes le remplacent. {%- endcomment -%}
   variant-radios[data-url="{{ product.url }}"],
   variant-selects[data-url="{{ product.url }}"]{display:none!important}
-  #{{ uid }}{margin:16px 0 20px;color:var(--pb-ink);font:inherit}
+  #{{ uid }}{margin:16px 0 20px;color:var(--pb-ink);font:inherit;container-type:inline-size}
   #{{ uid }} *{box-sizing:border-box}
   #{{ uid }} .pb-opts{display:flex;flex-direction:column;gap:18px;padding-top:10px}
-  #{{ uid }} .pb-opt{position:relative;display:block;cursor:pointer;border:1.5px solid var(--pb-line);border-radius:12px;padding:14px 16px;background:transparent;transition:border-color .15s,background-color .15s}
+  #{{ uid }} .pb-opt{position:relative;display:block;cursor:pointer;border:1.5px solid var(--pb-line);border-radius:12px;padding:16px 14px 14px;background:transparent;transition:border-color .15s,background-color .15s}
   #{{ uid }} .pb-opt.is-on{border-color:var(--pb-ink);background:var(--pb-card);box-shadow:0 1px 0 rgba(0,0,0,.04)}
   #{{ uid }} .pb-opt.is-out{cursor:not-allowed;opacity:.5}
   #{{ uid }} .pb-opt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
   #{{ uid }} .pb-opt:has(input:focus-visible){outline:2px solid var(--pb-accent);outline-offset:2px}
   #{{ uid }} .pb-head{display:flex;align-items:center;gap:12px}
   #{{ uid }} .pb-dot{flex:0 0 22px;height:22px;border-radius:50%;border:2px solid var(--pb-line);background:#fff;position:relative}
-  #{{ uid }} .pb-thumb{flex:0 0 56px;width:56px;height:56px;border-radius:10px;object-fit:contain;background:#fff;border:1px solid var(--pb-line);padding:3px}
-  #{{ uid }} .pb-opt:not(.is-on) .pb-thumb{opacity:.75}
   #{{ uid }} .is-on .pb-dot{border-color:var(--pb-ink);background:var(--pb-ink)}
   #{{ uid }} .is-on .pb-dot::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--pb-light)}
   #{{ uid }} .pb-name{flex:1;display:flex;flex-direction:column;min-width:0}
-  #{{ uid }} .pb-title{font-weight:600;font-size:16px;line-height:1.25}
+  #{{ uid }} .pb-title{font-weight:600;font-size:16px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   #{{ uid }} .pb-opt:not(.is-on) .pb-title{color:var(--pb-muted)}
   #{{ uid }} .pb-pill{position:absolute;top:0;left:18px;transform:translateY(-50%);background:var(--pb-accent);color:var(--pb-light);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1;padding:6px 11px;border-radius:999px;box-shadow:0 2px 6px rgba(138,69,36,.25)}
   #{{ uid }} .pb-soldout{font-weight:600;font-size:13px;color:var(--pb-muted);margin-top:2px}
@@ -320,14 +289,14 @@
   #{{ uid }} .pb-now{font-weight:700;font-size:17px;color:var(--pb-accent)}
   #{{ uid }} .pb-opt:not(.is-on) .pb-now{color:var(--pb-muted);font-weight:600}
   #{{ uid }} .pb-was{font-size:13px;color:var(--pb-muted);margin-top:2px}
-  #{{ uid }} .pb-chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px;padding-left:34px}
-  #{{ uid }} .pb-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 7px;border-radius:999px;background:#fff;border:1px solid var(--pb-line);font-size:13px;font-weight:600;line-height:1.2}
+  #{{ uid }} .pb-chips{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:10px;padding-left:34px}
+  #{{ uid }} .pb-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px 4px 6px;border-radius:999px;background:#fff;border:1px solid var(--pb-line);font-size:12px;font-size:clamp(10.5px,3.6cqi,12.5px);font-weight:600;line-height:1.2;white-space:nowrap}
   #{{ uid }} .pb-plus{font-weight:700;color:var(--pb-accent)}
-  #{{ uid }} .pb-ic{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:var(--pb-accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-ic{width:15px;height:15px;flex:0 0 15px;fill:none;stroke:var(--pb-accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
   #{{ uid }} .pb-opt:not(.is-on) .pb-chip{background:transparent;color:var(--pb-muted)}
   #{{ uid }} .pb-more{display:block}
   #{{ uid }} .pb-opt:not(.is-on) .pb-more{display:none}
-  #{{ uid }} .pb-promo{position:relative;overflow:hidden;display:flex;align-items:center;gap:8px;margin-top:14px;padding:10px 12px;border-radius:8px;background:var(--pb-accent);color:var(--pb-light);font-weight:700;font-size:13px;letter-spacing:.01em;line-height:1.3;text-transform:uppercase}
+  #{{ uid }} .pb-promo{position:relative;overflow:hidden;display:flex;align-items:center;gap:6px;margin-top:12px;padding:9px 12px;border-radius:8px;background:var(--pb-accent);color:var(--pb-light);font-weight:700;font-size:12px;font-size:clamp(10.5px,3.9cqi,13px);letter-spacing:0;line-height:1.3;text-transform:uppercase}
   #{{ uid }} .pb-promo::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);animation:pbShine 3.8s ease-in-out infinite}
   @keyframes pbShine{0%,55%{left:-60%}100%{left:130%}}
   @media (prefers-reduced-motion:reduce){#{{ uid }} .pb-promo::after{display:none}}
@@ -335,7 +304,7 @@
   #{{ uid }} .pb-check circle{fill:var(--pb-hl)}
   #{{ uid }} .pb-check path{fill:none;stroke:var(--pb-accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
   #{{ uid }} .pb-hl{color:var(--pb-hl)}
-  #{{ uid }} .pb-note{display:flex;align-items:flex-start;gap:8px;margin-top:10px;font-size:14px;line-height:1.45;color:var(--pb-muted)}
+  #{{ uid }} .pb-note{display:flex;align-items:flex-start;gap:8px;margin-top:10px;font-size:13px;line-height:1.45;color:var(--pb-muted)}
   #{{ uid }} .pb-note .pb-ic{margin-top:1px}
 
   #{{ uid }} .pb-gtitle{display:flex;align-items:center;gap:12px;margin:22px 0 14px;font-size:14px;color:var(--pb-accent);text-align:center}
