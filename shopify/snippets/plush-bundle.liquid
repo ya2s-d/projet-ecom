@@ -1,0 +1,313 @@
+{%- comment -%}
+  ============================================================
+  PLUSH — Sélecteur de bundle + cadeaux offerts
+  À placer sous le titre, au-dessus du bouton « Ajouter au panier ».
+
+  INSTALLATION
+  1. Boutique en ligne > Thèmes > … > Modifier le code
+     > snippets > « Ajouter un nouveau snippet » > plush-bundle
+     > coller tout ce fichier > Enregistrer.
+  2. Personnaliser > page Produit > bloc « Informations sur le produit »
+     > Ajouter un bloc > « Liquid personnalisé » (Custom Liquid)
+     > coller l'appel {% render 'plush-bundle' … %}
+     > glisser le bloc entre le titre et les boutons d'achat.
+  3. Dans le même bloc produit, retirer « Sélecteur de variante »
+     et « Prix » du thème : les cartes affichent déjà les leurs.
+
+  CHAQUE CARTE = UNE VARIANTE DU PRODUIT, dans l'ordre de l'admin.
+  Carte 1 = 1re variante, carte 2 = 2e variante, carte 3 = 3e.
+
+  Tous les textes se changent dans l'appel {% render %}, sans
+  toucher à ce fichier. Un paramètre absent = valeur par défaut.
+  Promo : « LAUNCH OFFER • SAVE 15% » → la partie après « • »
+  s'affiche en surbrillance.
+  ============================================================
+{%- endcomment -%}
+
+{%- liquid
+  assign uid = 'pb-' | append: product.id
+  assign sel = selected | default: 1
+  assign count = options | default: product.variants.size
+  if count > 3
+    assign count = 3
+  endif
+
+  assign c_accent = accent | default: '#8A4524'
+  assign c_ink = ink | default: '#141414'
+  assign c_card = card | default: '#F6F2ED'
+  assign c_line = line | default: '#C9C2B8'
+  assign c_muted = muted | default: '#6B6660'
+  assign c_light = light | default: '#EFE7DA'
+  assign c_hl = highlight | default: '#FFD9B8'
+
+  assign g_title = gifts_title | default: 'FREE GIFTS'
+  assign g_title_rest = gifts_title_rest | default: 'With Your Order'
+
+  assign g1_label = g1_label | default: ''
+  assign g2_label = g2_label | default: ''
+  assign g3_label = g3_label | default: ''
+  assign g4_label = g4_label | default: ''
+
+  assign gcount = 0
+  if g1_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+  if g2_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+  if g3_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+  if g4_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+-%}
+
+<div
+  id="{{ uid }}"
+  class="pb"
+  data-selected="{{ sel }}"
+  style="--pb-accent:{{ c_accent }};--pb-ink:{{ c_ink }};--pb-card:{{ c_card }};--pb-line:{{ c_line }};--pb-muted:{{ c_muted }};--pb-light:{{ c_light }};--pb-hl:{{ c_hl }};--pb-cols:{{ gcount | at_least: 1 }};"
+>
+  <div class="pb-opts" role="radiogroup">
+    {%- for i in (1..3) -%}
+      {%- liquid
+        assign vi = i | minus: 1
+        assign v = product.variants[vi]
+        case i
+          when 1
+            assign o_title = o1_title | default: ''
+            assign o_tag = o1_tag | default: ''
+            assign o_inc = o1_includes | default: ''
+            assign o_promo = o1_promo | default: ''
+            assign o_note = o1_note | default: ''
+          when 2
+            assign o_title = o2_title | default: ''
+            assign o_tag = o2_tag | default: ''
+            assign o_inc = o2_includes | default: ''
+            assign o_promo = o2_promo | default: ''
+            assign o_note = o2_note | default: ''
+          when 3
+            assign o_title = o3_title | default: ''
+            assign o_tag = o3_tag | default: ''
+            assign o_inc = o3_includes | default: ''
+            assign o_promo = o3_promo | default: ''
+            assign o_note = o3_note | default: ''
+        endcase
+      -%}
+      {%- if i <= count and v -%}
+        <label class="pb-opt{% if i == sel %} is-on{% endif %}{% unless v.available %} is-out{% endunless %}" data-variant="{{ v.id }}" data-i="{{ i }}">
+          <input
+            type="radio"
+            name="{{ uid }}-opt"
+            value="{{ v.id }}"
+            {% if i == sel %}checked{% endif %}
+            {% unless v.available %}disabled{% endunless %}
+          >
+          <span class="pb-head">
+            <span class="pb-dot" aria-hidden="true"></span>
+            <span class="pb-name">
+              <span class="pb-title">{{ o_title | default: v.title }}</span>
+              {%- if o_tag != blank -%}<span class="pb-tag">{{ o_tag }}</span>{%- endif -%}
+              {%- unless v.available -%}<span class="pb-tag pb-soldout">Sold out</span>{%- endunless -%}
+            </span>
+            <span class="pb-price">
+              <span class="pb-now">{{ v.price | money }}</span>
+              {%- if v.compare_at_price > v.price -%}
+                <s class="pb-was">{{ v.compare_at_price | money }}</s>
+              {%- endif -%}
+            </span>
+          </span>
+
+          {%- if o_inc != blank -%}
+            <span class="pb-inc">{{ o_inc }}</span>
+          {%- endif -%}
+
+          {%- if o_promo != blank or o_note != blank -%}
+            <span class="pb-more">
+              {%- if o_promo != blank -%}
+                {%- assign parts = o_promo | split: ' • ' -%}
+                <span class="pb-promo">
+                  <svg class="pb-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><path d="M7 12.5l3.2 3.2L17.5 8.5"/></svg>
+                  <span>
+                    {{- parts[0] -}}
+                    {%- if parts.size > 1 %} • <b class="pb-hl">{{ parts[1] }}</b>{%- endif -%}
+                  </span>
+                </span>
+              {%- endif -%}
+              {%- if o_note != blank -%}
+                <span class="pb-note">{{ o_note }}</span>
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+        </label>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- if gcount > 0 -%}
+    <div class="pb-gtitle"><span><b>{{ g_title }}</b> {{ g_title_rest }}</span></div>
+    <div class="pb-gifts">
+      {%- for i in (1..4) -%}
+        {%- liquid
+          case i
+            when 1
+              assign g_label = g1_label | default: ''
+              assign g_img = g1_image | default: ''
+              assign g_badge = g1_badge | default: ''
+              assign g_value = g1_value | default: ''
+            when 2
+              assign g_label = g2_label | default: ''
+              assign g_img = g2_image | default: ''
+              assign g_badge = g2_badge | default: ''
+              assign g_value = g2_value | default: ''
+            when 3
+              assign g_label = g3_label | default: ''
+              assign g_img = g3_image | default: ''
+              assign g_badge = g3_badge | default: ''
+              assign g_value = g3_value | default: ''
+            when 4
+              assign g_label = g4_label | default: ''
+              assign g_img = g4_image | default: ''
+              assign g_badge = g4_badge | default: ''
+              assign g_value = g4_value | default: ''
+          endcase
+        -%}
+        {%- if g_label != blank -%}
+          <div class="pb-gift">
+            <div class="pb-gbox">
+              <span class="pb-gbadge">
+                {{- g_badge | default: 'FREE' -}}
+                {%- if g_value != blank %} <s>{{ g_value }}</s>{%- endif -%}
+              </span>
+              {%- if g_img != blank -%}
+                <img src="{{ g_img }}" alt="{{ g_label | escape }}" loading="lazy" width="300" height="300">
+              {%- else -%}
+                <span class="pb-ph">Image</span>
+              {%- endif -%}
+            </div>
+            <span class="pb-glabel">{{ g_label }}</span>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  #{{ uid }}{margin:16px 0 20px;color:var(--pb-ink);font:inherit}
+  #{{ uid }} *{box-sizing:border-box}
+  #{{ uid }} .pb-opts{display:flex;flex-direction:column;gap:12px}
+  #{{ uid }} .pb-opt{position:relative;display:block;cursor:pointer;border:1.5px solid var(--pb-line);border-radius:12px;padding:14px 16px;background:transparent;transition:border-color .15s,background-color .15s}
+  #{{ uid }} .pb-opt.is-on{border-color:var(--pb-ink);background:var(--pb-card);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+  #{{ uid }} .pb-opt.is-out{cursor:not-allowed;opacity:.5}
+  #{{ uid }} .pb-opt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+  #{{ uid }} .pb-opt:has(input:focus-visible){outline:2px solid var(--pb-accent);outline-offset:2px}
+  #{{ uid }} .pb-head{display:flex;align-items:flex-start;gap:12px}
+  #{{ uid }} .pb-dot{flex:0 0 22px;height:22px;margin-top:1px;border-radius:50%;border:2px solid var(--pb-line);background:#fff;position:relative}
+  #{{ uid }} .is-on .pb-dot{border-color:var(--pb-ink);background:var(--pb-ink)}
+  #{{ uid }} .is-on .pb-dot::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--pb-light)}
+  #{{ uid }} .pb-name{flex:1;display:flex;flex-direction:column;min-width:0}
+  #{{ uid }} .pb-title{font-weight:600;font-size:16px;line-height:1.25}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-title{color:var(--pb-muted)}
+  #{{ uid }} .pb-tag{font-weight:600;font-size:13px;color:var(--pb-accent);line-height:1.3;margin-top:2px}
+  #{{ uid }} .pb-soldout{color:var(--pb-muted)}
+  #{{ uid }} .pb-price{display:flex;flex-direction:column;align-items:flex-end;text-align:right;line-height:1.2}
+  #{{ uid }} .pb-now{font-weight:700;font-size:17px;color:var(--pb-accent)}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-now{color:var(--pb-muted);font-weight:600}
+  #{{ uid }} .pb-was{font-size:13px;color:var(--pb-muted);margin-top:2px}
+  #{{ uid }} .pb-inc{display:block;font-size:14px;line-height:1.45;margin-top:12px;padding-top:12px;border-top:1px solid var(--pb-line)}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-inc{color:var(--pb-muted);border-top:0;padding-top:0;margin-top:4px;padding-left:34px}
+  #{{ uid }} .pb-more{display:block}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-more{display:none}
+  #{{ uid }} .pb-promo{display:flex;align-items:center;gap:10px;margin-top:12px;padding:11px 14px;border-radius:8px;background:var(--pb-accent);color:var(--pb-light);font-weight:700;font-size:14px;letter-spacing:.02em;text-transform:uppercase}
+  #{{ uid }} .pb-check{flex:0 0 22px;width:22px;height:22px}
+  #{{ uid }} .pb-check circle{fill:var(--pb-hl)}
+  #{{ uid }} .pb-check path{fill:none;stroke:var(--pb-accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-hl{color:var(--pb-hl)}
+  #{{ uid }} .pb-note{display:block;margin-top:10px;font-size:14px;line-height:1.45;color:var(--pb-muted)}
+
+  #{{ uid }} .pb-gtitle{display:flex;align-items:center;gap:12px;margin:22px 0 14px;font-size:14px;color:var(--pb-accent);text-align:center}
+  #{{ uid }} .pb-gtitle::before,#{{ uid }} .pb-gtitle::after{content:"";flex:1;height:1.5px;background:var(--pb-accent)}
+  #{{ uid }} .pb-gtitle b{font-weight:700}
+  #{{ uid }} .pb-gifts{display:grid;grid-template-columns:repeat(var(--pb-cols),minmax(0,1fr));gap:10px}
+  #{{ uid }} .pb-gift{display:flex;flex-direction:column;align-items:center;text-align:center}
+  #{{ uid }} .pb-gbox{position:relative;width:100%;aspect-ratio:1/1;border:1.5px dashed var(--pb-accent);border-radius:10px;background:var(--pb-card);display:flex;align-items:center;justify-content:center;padding:10px;margin-top:9px}
+  #{{ uid }} .pb-gbox img{width:100%;height:100%;object-fit:contain;display:block}
+  #{{ uid }} .pb-gbadge{position:absolute;top:0;left:50%;transform:translate(-50%,-55%);white-space:nowrap;background:var(--pb-ink);color:var(--pb-light);font-size:11px;font-weight:700;letter-spacing:.03em;padding:3px 7px;border-radius:5px}
+  #{{ uid }} .pb-gbadge s{opacity:.7;font-weight:600}
+  #{{ uid }} .pb-ph{font-size:12px;color:var(--pb-muted)}
+  #{{ uid }} .pb-glabel{margin-top:8px;font-size:13px;font-weight:600;line-height:1.3}
+  @media (max-width:380px){
+    #{{ uid }} .pb-gifts{gap:7px}
+    #{{ uid }} .pb-glabel{font-size:12px}
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('{{ uid }}');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = '1';
+
+    var cards = root.querySelectorAll('.pb-opt');
+    var ids = [];
+    cards.forEach(function (c) { ids.push(c.dataset.variant); });
+    {%- comment -%} Tous les ID de variantes du produit, pour ne viser que ses formulaires {%- endcomment -%}
+    var productIds = [{% for v in product.variants %}'{{ v.id }}'{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+    var section = root.closest('.shopify-section');
+
+    function targets() {
+      var out = [];
+      document.querySelectorAll('form[action*="/cart/add"] [name="id"]').forEach(function (el) {
+        var mine = productIds.indexOf(String(el.value)) !== -1;
+        var sameSection = section && el.closest('.shopify-section') === section;
+        if (mine || sameSection) out.push(el);
+      });
+      return out;
+    }
+
+    function apply(card) {
+      if (!card || card.classList.contains('is-out')) return;
+      cards.forEach(function (c) {
+        var on = c === card;
+        c.classList.toggle('is-on', on);
+        c.querySelector('input').checked = on;
+      });
+      var id = card.dataset.variant;
+      targets().forEach(function (el) {
+        if (el.tagName === 'SELECT' && !el.querySelector('option[value="' + id + '"]')) return;
+        el.value = id;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      try {
+        var url = new URL(window.location.href);
+        url.searchParams.set('variant', id);
+        window.history.replaceState({}, '', url.toString());
+      } catch (e) {}
+    }
+
+    cards.forEach(function (c) {
+      c.addEventListener('click', function (e) {
+        if (e.target.tagName === 'INPUT') return; // clavier : laisser le radio changer seul
+        e.preventDefault();
+        apply(c);
+      });
+      c.querySelector('input').addEventListener('change', function () { apply(c); });
+    });
+
+    // Le formulaire « Ajouter au panier » est plus bas dans la page :
+    // on attend qu'il existe avant de forcer la variante par défaut.
+    function init() {
+      var fromUrl = null;
+      try { fromUrl = new URL(window.location.href).searchParams.get('variant'); } catch (e) {}
+      var start = (fromUrl && ids.indexOf(fromUrl) !== -1)
+        ? root.querySelector('.pb-opt[data-variant="' + fromUrl + '"]')
+        : root.querySelector('.pb-opt[data-i="' + root.dataset.selected + '"]');
+      apply(start || cards[0]);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })();
+</script>
