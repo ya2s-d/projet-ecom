@@ -42,6 +42,9 @@
     assign o3_includes = pb.o3_includes.value
     assign o3_promo = pb.o3_promo.value
     assign o3_note = pb.o3_note.value
+    assign o1_image = pb.o1_image.value
+    assign o2_image = pb.o2_image.value
+    assign o3_image = pb.o3_image.value
     assign gifts_title = pb.gifts_title.value
     assign gifts_title_rest = pb.gifts_title_rest.value
     assign gifts_badge = pb.gifts_badge.value
@@ -99,6 +102,16 @@
   endif
 -%}
 
+{%- comment -%} Icônes de la marque (trait Rust, 24×24) {%- endcomment -%}
+{%- capture ic_head -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7a4 4 0 0 1 4 4"/><path d="M8 13a6 6 0 0 1 12 0z"/><path d="M10 16v1.5M14 16v2.5M18 16v1.5"/></svg>{%- endcapture -%}
+{%- capture ic_filter -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg>{%- endcapture -%}
+{%- capture ic_check -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{%- endcapture -%}
+{%- capture ic_truck -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11.5v10H2.5zM14 10h4.2l3.3 3.4v3.1H14"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17.5" cy="17.5" r="1.9"/></svg>{%- endcapture -%}
+{%- capture ic_book -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C9.8 5 6.8 4.5 3 5v13.5c3.8-.5 6.8 0 9 1.5 2.2-1.5 5.2-2 9-1.5V5c-3.8-.5-6.8 0-9 1.5z"/><path d="M12 6.5V20"/></svg>{%- endcapture -%}
+{%- capture ic_tag -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V3.5h8.5L21 13l-8 8z"/><circle cx="7.5" cy="8" r="1.6"/></svg>{%- endcapture -%}
+{%- capture ic_gift -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9C10.5 5 6 5 6 7.5S12 9 12 9zM12 9c1.5-4 6-4 6-1.5S12 9 12 9z"/></svg>{%- endcapture -%}
+{%- capture ic_cycle -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>{%- endcapture -%}
+
 <div
   id="{{ uid }}"
   class="pb"
@@ -117,18 +130,21 @@
             assign o_inc = o1_includes | default: ''
             assign o_promo = o1_promo | default: ''
             assign o_note = o1_note | default: ''
+            assign o_img = o1_image | default: ''
           when 2
             assign o_title = o2_title | default: ''
             assign o_tag = o2_tag | default: ''
             assign o_inc = o2_includes | default: ''
             assign o_promo = o2_promo | default: ''
             assign o_note = o2_note | default: ''
+            assign o_img = o2_image | default: ''
           when 3
             assign o_title = o3_title | default: ''
             assign o_tag = o3_tag | default: ''
             assign o_inc = o3_includes | default: ''
             assign o_promo = o3_promo | default: ''
             assign o_note = o3_note | default: ''
+            assign o_img = o3_image | default: ''
         endcase
       -%}
       {%- if i <= count and v -%}
@@ -140,12 +156,34 @@
             {% if i == sel %}checked{% endif %}
             {% unless v.available %}disabled{% endunless %}
           >
+          {%- if o_tag != blank -%}<span class="pb-pill">{{ o_tag }}</span>{%- endif -%}
+          {%- liquid
+            # Miniature : image choisie dans la fiche > photo de la variante > n-ième photo du produit > photo principale
+            assign pimg = product.images[vi] | default: ''
+            assign thumb = o_img | default: ''
+            if thumb == blank
+              assign thumb = v.image | default: ''
+            endif
+            if thumb == blank
+              assign thumb = pimg
+            endif
+            if thumb == blank
+              assign thumb = product.featured_image | default: ''
+            endif
+          -%}
           <span class="pb-head">
             <span class="pb-dot" aria-hidden="true"></span>
+            {%- if thumb != blank -%}
+              {%- if thumb.id -%}
+                {%- assign tsrc = thumb | image_url: width: 160 -%}
+              {%- else -%}
+                {%- assign tsrc = thumb -%}
+              {%- endif -%}
+              <img class="pb-thumb" src="{{ tsrc }}" alt="" loading="lazy" width="56" height="56">
+            {%- endif -%}
             <span class="pb-name">
               <span class="pb-title">{{ o_title | default: v.title }}</span>
-              {%- if o_tag != blank -%}<span class="pb-tag">{{ o_tag }}</span>{%- endif -%}
-              {%- unless v.available -%}<span class="pb-tag pb-soldout">Sold out</span>{%- endunless -%}
+              {%- unless v.available -%}<span class="pb-soldout">Sold out</span>{%- endunless -%}
             </span>
             <span class="pb-price">
               <span class="pb-now">{{ v.price | money }}</span>
@@ -156,7 +194,19 @@
           </span>
 
           {%- if o_inc != blank -%}
-            <span class="pb-inc">{{ o_inc }}</span>
+            {%- comment -%} « Includes: Shower head + 2 filters » devient des pastilles avec icône {%- endcomment -%}
+            {%- assign inc = o_inc | remove: 'Includes:' | strip -%}
+            {%- assign items = inc | split: ' + ' -%}
+            <span class="pb-chips">
+              {%- for it in items -%}
+                {%- assign low = it | downcase -%}
+                {%- if forloop.index > 1 -%}<span class="pb-plus" aria-hidden="true">+</span>{%- endif -%}
+                <span class="pb-chip">
+                  {%- if low contains 'head' -%}{{ ic_head }}{%- elsif low contains 'filter' or low contains 'cartridge' -%}{{ ic_filter }}{%- else -%}{{ ic_check }}{%- endif -%}
+                  <span>{{ it | strip }}</span>
+                </span>
+              {%- endfor -%}
+            </span>
           {%- endif -%}
 
           {%- if o_promo != blank or o_note != blank -%}
@@ -172,7 +222,7 @@
                 </span>
               {%- endif -%}
               {%- if o_note != blank -%}
-                <span class="pb-note">{{ o_note }}</span>
+                <span class="pb-note">{{ ic_cycle }}<span>{{ o_note }}</span></span>
               {%- endif -%}
             </span>
           {%- endif -%}
@@ -225,7 +275,12 @@
                 {%- endif -%}
                 <img src="{{ g_src }}" alt="{{ g_label | escape }}" loading="lazy" width="300" height="300">
               {%- else -%}
-                <span class="pb-ph">Image</span>
+                {%- comment -%} Pas d'image choisie : icône de la marque selon le nom du cadeau {%- endcomment -%}
+                {%- assign gl = g_label | downcase -%}
+                {%- if gl contains 'ship' or gl contains 'deliver' -%}{{ ic_truck }}
+                {%- elsif gl contains 'book' or gl contains 'guide' -%}{{ ic_book }}
+                {%- elsif gl contains 'discount' or gl contains 'off' or gl contains '%' -%}{{ ic_tag }}
+                {%- else -%}{{ ic_gift }}{%- endif -%}
               {%- endif -%}
             </div>
             <span class="pb-glabel">{{ g_label }}</span>
@@ -242,35 +297,44 @@
   variant-selects[data-url="{{ product.url }}"]{display:none!important}
   #{{ uid }}{margin:16px 0 20px;color:var(--pb-ink);font:inherit}
   #{{ uid }} *{box-sizing:border-box}
-  #{{ uid }} .pb-opts{display:flex;flex-direction:column;gap:12px}
+  #{{ uid }} .pb-opts{display:flex;flex-direction:column;gap:18px;padding-top:10px}
   #{{ uid }} .pb-opt{position:relative;display:block;cursor:pointer;border:1.5px solid var(--pb-line);border-radius:12px;padding:14px 16px;background:transparent;transition:border-color .15s,background-color .15s}
   #{{ uid }} .pb-opt.is-on{border-color:var(--pb-ink);background:var(--pb-card);box-shadow:0 1px 0 rgba(0,0,0,.04)}
   #{{ uid }} .pb-opt.is-out{cursor:not-allowed;opacity:.5}
   #{{ uid }} .pb-opt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
   #{{ uid }} .pb-opt:has(input:focus-visible){outline:2px solid var(--pb-accent);outline-offset:2px}
-  #{{ uid }} .pb-head{display:flex;align-items:flex-start;gap:12px}
-  #{{ uid }} .pb-dot{flex:0 0 22px;height:22px;margin-top:1px;border-radius:50%;border:2px solid var(--pb-line);background:#fff;position:relative}
+  #{{ uid }} .pb-head{display:flex;align-items:center;gap:12px}
+  #{{ uid }} .pb-dot{flex:0 0 22px;height:22px;border-radius:50%;border:2px solid var(--pb-line);background:#fff;position:relative}
+  #{{ uid }} .pb-thumb{flex:0 0 56px;width:56px;height:56px;border-radius:10px;object-fit:contain;background:#fff;border:1px solid var(--pb-line);padding:3px}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-thumb{opacity:.75}
   #{{ uid }} .is-on .pb-dot{border-color:var(--pb-ink);background:var(--pb-ink)}
   #{{ uid }} .is-on .pb-dot::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--pb-light)}
   #{{ uid }} .pb-name{flex:1;display:flex;flex-direction:column;min-width:0}
   #{{ uid }} .pb-title{font-weight:600;font-size:16px;line-height:1.25}
   #{{ uid }} .pb-opt:not(.is-on) .pb-title{color:var(--pb-muted)}
-  #{{ uid }} .pb-tag{font-weight:600;font-size:13px;color:var(--pb-accent);line-height:1.3;margin-top:2px}
-  #{{ uid }} .pb-soldout{color:var(--pb-muted)}
+  #{{ uid }} .pb-pill{position:absolute;top:0;left:18px;transform:translateY(-50%);background:var(--pb-accent);color:var(--pb-light);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1;padding:6px 11px;border-radius:999px;box-shadow:0 2px 6px rgba(138,69,36,.25)}
+  #{{ uid }} .pb-soldout{font-weight:600;font-size:13px;color:var(--pb-muted);margin-top:2px}
   #{{ uid }} .pb-price{display:flex;flex-direction:column;align-items:flex-end;text-align:right;line-height:1.2}
   #{{ uid }} .pb-now{font-weight:700;font-size:17px;color:var(--pb-accent)}
   #{{ uid }} .pb-opt:not(.is-on) .pb-now{color:var(--pb-muted);font-weight:600}
   #{{ uid }} .pb-was{font-size:13px;color:var(--pb-muted);margin-top:2px}
-  #{{ uid }} .pb-inc{display:block;font-size:14px;line-height:1.45;margin-top:12px;padding-top:12px;border-top:1px solid var(--pb-line)}
-  #{{ uid }} .pb-opt:not(.is-on) .pb-inc{color:var(--pb-muted);border-top:0;padding-top:0;margin-top:4px;padding-left:34px}
+  #{{ uid }} .pb-chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:12px;padding-left:34px}
+  #{{ uid }} .pb-chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 7px;border-radius:999px;background:#fff;border:1px solid var(--pb-line);font-size:13px;font-weight:600;line-height:1.2}
+  #{{ uid }} .pb-plus{font-weight:700;color:var(--pb-accent)}
+  #{{ uid }} .pb-ic{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:var(--pb-accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-chip{background:transparent;color:var(--pb-muted)}
   #{{ uid }} .pb-more{display:block}
   #{{ uid }} .pb-opt:not(.is-on) .pb-more{display:none}
-  #{{ uid }} .pb-promo{display:flex;align-items:center;gap:10px;margin-top:12px;padding:11px 14px;border-radius:8px;background:var(--pb-accent);color:var(--pb-light);font-weight:700;font-size:14px;letter-spacing:.02em;text-transform:uppercase}
-  #{{ uid }} .pb-check{flex:0 0 22px;width:22px;height:22px}
+  #{{ uid }} .pb-promo{position:relative;overflow:hidden;display:flex;align-items:center;gap:8px;margin-top:14px;padding:10px 12px;border-radius:8px;background:var(--pb-accent);color:var(--pb-light);font-weight:700;font-size:13px;letter-spacing:.01em;line-height:1.3;text-transform:uppercase}
+  #{{ uid }} .pb-promo::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);animation:pbShine 3.8s ease-in-out infinite}
+  @keyframes pbShine{0%,55%{left:-60%}100%{left:130%}}
+  @media (prefers-reduced-motion:reduce){#{{ uid }} .pb-promo::after{display:none}}
+  #{{ uid }} .pb-check{flex:0 0 20px;width:20px;height:20px}
   #{{ uid }} .pb-check circle{fill:var(--pb-hl)}
   #{{ uid }} .pb-check path{fill:none;stroke:var(--pb-accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
   #{{ uid }} .pb-hl{color:var(--pb-hl)}
-  #{{ uid }} .pb-note{display:block;margin-top:10px;font-size:14px;line-height:1.45;color:var(--pb-muted)}
+  #{{ uid }} .pb-note{display:flex;align-items:flex-start;gap:8px;margin-top:10px;font-size:14px;line-height:1.45;color:var(--pb-muted)}
+  #{{ uid }} .pb-note .pb-ic{margin-top:1px}
 
   #{{ uid }} .pb-gtitle{display:flex;align-items:center;gap:12px;margin:22px 0 14px;font-size:14px;color:var(--pb-accent);text-align:center}
   #{{ uid }} .pb-gtitle::before,#{{ uid }} .pb-gtitle::after{content:"";flex:1;height:1.5px;background:var(--pb-accent)}
@@ -281,7 +345,7 @@
   #{{ uid }} .pb-gbox img{width:100%;height:100%;object-fit:contain;display:block}
   #{{ uid }} .pb-gbadge{position:absolute;top:0;left:50%;transform:translate(-50%,-55%);white-space:nowrap;background:var(--pb-ink);color:var(--pb-light);font-size:11px;font-weight:700;letter-spacing:.03em;padding:3px 7px;border-radius:5px}
   #{{ uid }} .pb-gbadge s{opacity:.7;font-weight:600}
-  #{{ uid }} .pb-ph{font-size:12px;color:var(--pb-muted)}
+  #{{ uid }} .pb-gic{width:46%;height:46%;fill:none;stroke:var(--pb-accent);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
   #{{ uid }} .pb-glabel{margin-top:8px;font-size:13px;font-weight:600;line-height:1.3}
   @media (max-width:380px){
     #{{ uid }} .pb-gifts{gap:7px}
