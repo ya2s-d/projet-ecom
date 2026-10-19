@@ -2328,5 +2328,8 @@ avant de changer de produit.
 - Livraison US facturée **19,95 €** (zone « International » : US, CA, GB, AU…) alors que la page
   affiche « FREE Shipping »
 - **Un seul marché actif : Pays-Bas.** Boutique montée sur un modèle néerlandais
-- Correction proposée : marché États-Unis en USD + zone US à 0 $ « Free Shipping · 7–12 business
-  days », US retirés de la zone International. En attente de l'OK de Yasser
+- ✅ **Corrigé le 19 oct. avec l'OK de Yasser** : marché « United States » créé (USD), marché
+  Pays-Bas supprimé ; zones Domestic / UE / International supprimées ; une seule zone
+  « United States » avec « Free Shipping · 7–12 business days » à 0 $
+- Reste ouvert : la zone couvre aussi Alaska, Hawaï, Porto Rico, Guam et les adresses militaires
+  (AA/AE/AP). À confirmer avec le fournisseur, sinon retirer ces États de la zone
