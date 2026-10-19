@@ -49,8 +49,7 @@ Trois raisons :
 | Police du LOGO | **League Spartan Bold** (SIL Open Font License, gratuite, usage commercial OK, dispo sur Google Fonts). Identifiée dans le PDF exporté le 3 oct. : sous-ensemble embarqué `AAAAAA+LeagueSpartan-Bold` |
 | Couleur du logo dans le fichier livré | `#222222` — à aligner avec le `#141414` du système, ou l'inverse. Les deux ne doivent pas coexister |
 | Police de TOUT LE RESTE (titres, textes, site, ads, emails) | **Jost** · à défaut **DM Sans** ou **Figtree** — Google Fonts, gratuites, usage commercial OK |
-| ✅ **Police du site, décision de Yasser le 19 oct. 2026** | **Poppins** (titres SemiBold 600, texte Regular 400, boutons SemiBold 600). Remplace Jost : choix d'affinité, même registre qu'eskiin. Ne pas rouvrir |
-| 🔴 À éviter | **Montserrat, Arial, Helvetica** |
+| 🔴 À éviter partout sauf le logo | **Poppins, Montserrat, Arial, Helvetica** |
 
 ### Couleurs — 5, et un métier pour chacune
 
