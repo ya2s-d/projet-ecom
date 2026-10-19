@@ -2315,3 +2315,18 @@ Pour l'instant seule la couverture existe : `assets/produit/plush-cadeau-ebook.j
 | Rôle | Cadeau n°2 de la section bundle, offert avec toute commande. Affiché « FREE ~~$20~~ » — décision de Yasser, point déjà discuté, ne pas le rouvrir |
 | Fond | Les rapports annuels de qualité d'eau (CCR), publics et obligatoires pour chaque réseau US : comment trouver celui de sa ville et le lire. Puis la routine douche, l'installation, le jour 30 de la cartouche |
 | Règles | Charte `research/brand/plush-identite.md` (Paper, Ink, Day 30) · zéro allégation santé · « La liste close des interdits » (4 oct.) |
+
+## 19 octobre 2026 — nouveau revenu, et deux bloquants de lancement
+
+**Yasser travaille chez Pizza Hut : ~600-800 €/mois.** Le test de 430 € n'est plus un coup unique :
+environ un test toutes les 5-6 semaines s'il en met la moitié de côté. La réserve de 396 € reste
+intouchable. Enveloppe mensuelle de test : à fixer par Yasser, **avant** de voir les résultats.
+Conséquence de méthode : un test raté ne tue pas Plush — on change la créa d'abord (2-3 tests)
+avant de changer de produit.
+
+**Bloquants trouvés dans les réglages Shopify le 19 oct.** (à vérifier avant tout lancement) :
+- Livraison US facturée **19,95 €** (zone « International » : US, CA, GB, AU…) alors que la page
+  affiche « FREE Shipping »
+- **Un seul marché actif : Pays-Bas.** Boutique montée sur un modèle néerlandais
+- Correction proposée : marché États-Unis en USD + zone US à 0 $ « Free Shipping · 7–12 business
+  days », US retirés de la zone International. En attente de l'OK de Yasser
