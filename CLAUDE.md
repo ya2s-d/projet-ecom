@@ -2333,3 +2333,15 @@ avant de changer de produit.
   « United States » avec « Free Shipping · 7–12 business days » à 0 $
 - Reste ouvert : la zone couvre aussi Alaska, Hawaï, Porto Rico, Guam et les adresses militaires
   (AA/AE/AP). À confirmer avec le fournisseur, sinon retirer ces États de la zone
+
+## 20 octobre 2026 — devis fournisseur reçu
+
+| Offre | Contenu | Prix fournisseur | Prix de vente | Marge après frais Shopify et 6 % de retours (1 € = 1,16 $) |
+|---|---|---|---|---|
+| **Plush Solo** | pommeau + cartouche + boîte logo + carte de remerciement | **21,50 €** | 59,99 $ | **~29 $** → seuil du test de 430 € : ~17 ventes |
+| **Plush Duo** | idem + cartouche de rechange | **27,50 €** | 74,99 $ | **~36 $** → seuil : ~14 ventes |
+
+La cartouche de rechange coûte donc **6 €** de plus dans le Duo, vendue 15 $ de plus : le Duo est
+la meilleure offre en marge absolue, d'où « Best Value » sélectionné par défaut.
+**Non confirmé** : que ces prix soient **DDP** (livraison US + droits inclus, règle 8). Sinon la
+marge est fausse. Manque aussi : le prix d'une cartouche seule envoyée seule (produit de recharge).
