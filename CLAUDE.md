@@ -2346,3 +2346,18 @@ la meilleure offre en marge absolue, d'où « Best Value » sélectionné par d�
 ✅ **DDP confirmé par Yasser le 20 oct.** : prix finaux, livraison US et droits de douane inclus.
 Les marges ci-dessus sont donc les vraies. Manque encore : le prix d'une cartouche seule envoyée
 seule (produit de recharge).
+
+### 20 oct., soir — fournisseur n° 2, préféré par Yasser
+
+Fournisseur avec qui Yasser a **déjà travaillé**, jugé 100 % fiable, plus rapide à répondre et à
+livrer. Prix annoncés : **Solo 16,20 €** · **Duo 23,90 €** → la cartouche de rechange coûte **7,70 €**.
+
+| | Fournisseur 1 | Fournisseur 2 | Fournisseur 2 + ~2 € de cartes et stickers |
+|---|---|---|---|
+| Solo — marge | ~29,40 $ | **~35,60 $** | ~33,30 $ |
+| Duo — marge | ~36,60 $ | **~40,30 $** | ~38,00 $ |
+
+Même dans le pire cas (cartes et stickers facturés en plus), il reste moins cher que le n° 1.
+**À confirmer avant de basculer** : prix livrés US droits inclus (DDP) · même modèle (KDF-55 +
+charbon, filetage 1/2" NPT, cartouche pré-montée) · cartes et stickers inclus ou non · délai exact
+(si < 7-12 jours : mettre à jour le texte de livraison au paiement, les onglets et le badge).
