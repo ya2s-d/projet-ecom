@@ -2339,9 +2339,9 @@ avant de changer de produit.
 | Offre | Contenu | Prix fournisseur | Prix de vente | Marge après frais Shopify et 6 % de retours (1 € = 1,16 $) |
 |---|---|---|---|---|
 | **Plush Solo** | pommeau + cartouche + boîte logo + carte de remerciement | **21,50 €** | 59,99 $ | **~29 $** → seuil du test de 430 € : ~17 ventes |
-| **Plush Duo** | idem + cartouche de rechange | **27,50 €** | 74,99 $ | **~36 $** → seuil : ~14 ventes |
+| **Plush Duo** | idem + cartouche de rechange | **27,08 €** (corrigé par Yasser le 20 oct., pas 27,50) | 74,99 $ | **~36,60 $** → seuil : ~13,6 ventes |
 
-La cartouche de rechange coûte donc **6 €** de plus dans le Duo, vendue 15 $ de plus : le Duo est
+La cartouche de rechange coûte donc **5,58 €** de plus dans le Duo, vendue 15 $ de plus : le Duo est
 la meilleure offre en marge absolue, d'où « Best Value » sélectionné par défaut.
 ✅ **DDP confirmé par Yasser le 20 oct.** : prix finaux, livraison US et droits de douane inclus.
 Les marges ci-dessus sont donc les vraies. Manque encore : le prix d'une cartouche seule envoyée
