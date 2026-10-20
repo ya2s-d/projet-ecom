@@ -2352,14 +2352,22 @@ seule (produit de recharge).
 Fournisseur avec qui Yasser a **déjà travaillé**, jugé 100 % fiable, plus rapide à répondre et à
 livrer. Prix annoncés : **Solo 16,20 €** · **Duo 23,90 €** → la cartouche de rechange coûte **7,70 €**.
 
-| | Fournisseur 1 | Fournisseur 2 | Fournisseur 2 + ~2 € de cartes et stickers |
-|---|---|---|---|
-| Solo — marge | ~29,40 $ | **~35,60 $** | ~33,30 $ |
-| Duo — marge | ~36,60 $ | **~40,30 $** | ~38,00 $ |
+**Cartes et stickers : NON inclus — 2 € la carte + 2 € le sticker** (réponse du 20 oct.).
+Le fournisseur 1 les facturait 0,50 € pièce (20,50 € sans, 21,50 € avec).
 
-Même dans le pire cas (cartes et stickers facturés en plus), il reste moins cher que le n° 1.
+| Coût rendu US | Solo | Duo | Marge Duo | Ventes pour rembourser 430 € |
+|---|---|---|---|---|
+| Fournisseur 1 (carte + sticker inclus) | 21,50 € | 27,08 € | 36,60 $ | 13,6 |
+| Fournisseur 2 à 2 € + 2 € | 20,20 € | **27,90 €** | 35,70 $ | 14,0 |
+| Fournisseur 2 à 0,50 € + 0,50 € (cible) | 17,20 € | 24,90 € | 39,10 $ | 12,7 |
+
+À 4 €, le n° 2 reste moins cher sur le Solo (−1,30 €) mais devient **plus cher sur le Duo
+(+0,82 €)**, l'offre affichée par défaut. Point de bascule : **carte + sticker ≤ 3,18 € les deux**.
+Négociation envoyée le 20 oct., cible 0,50 € pièce. Seuil posé avant sa réponse : même s'il
+refuse, on reste chez le n° 2 — l'écart est de ~11 € sur tout le test (~14 Duo × 0,82 €),
+moins qu'un seul colis perdu chez un fournisseur moins fiable.
+⚠️ Mon « pire cas » de ~2 € pour les deux était faux : c'est 4 €.
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
-**Reste à confirmer** : cartes et stickers inclus ou non (question posée, en attente)
 (si < 7-12 jours : mettre à jour le texte de livraison au paiement, les onglets et le badge).
