@@ -2359,6 +2359,7 @@ livrer. Prix annoncés : **Solo 16,20 €** · **Duo 23,90 €** → la cartouch
 
 Même dans le pire cas (cartes et stickers facturés en plus), il reste moins cher que le n° 1.
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
-**Reste à confirmer** : prix livrés US droits inclus (DDP) · cartes et stickers inclus ou non
-(question posée, en attente) · délai exact
+✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
+On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
+**Reste à confirmer** : cartes et stickers inclus ou non (question posée, en attente)
 (si < 7-12 jours : mettre à jour le texte de livraison au paiement, les onglets et le badge).
