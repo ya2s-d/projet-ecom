@@ -61,7 +61,7 @@ INSTALLING YOUR PLUSH                 2 minutes. No tools.
 
 ────────────────────────────────────────────────────
 
-Something's off? hello@tryplush.com — we answer the same day.
+Something's off? [TON EMAIL] — we answer the same day.
 ```
 
 ### Pourquoi ces 5 étapes-là
@@ -88,10 +88,10 @@ DAY 30 — DO THIS ONE THING
 
 2   Pull the filter out.
 
-3   Hold it next to a new one.
+3   Look at the color. Compare it with the drawing below.
 
 
-    [ photo cartouche neuve ]        [ photo cartouche jour 30 ]
+    [ dessin : cartouche neuve, blanche ]   [ dessin : cartouche jour 30, couleur Day 30 #A86B45 ]
 
 
     We didn't make it brown. Your water did.
@@ -105,17 +105,16 @@ Show us.
       [  QR  ]        Scan it, add your photo, tell us what you saw.
                       It takes about a minute.
 
-                      tryplush.com/review
+                      [TON-DOMAINE]/review
 
 
 ────────────────────────────────────────────────────
 
 Your code:   PLUSHFAM
 Use it on refill filters. No minimum. No expiry.
-tryplush.com/refill
 
 
-hello@tryplush.com
+[TON EMAIL]
 
 Filter capabilities refer to what the filter is designed to reduce, not to the
 guaranteed presence of those substances in your water.
@@ -232,7 +231,7 @@ before applying them to more than 10 units.
 
 | Point | État |
 |---|---|
-| Cartouche pré-montée ou à part | **À faire confirmer par écrit.** L'étape 3 du recto en dépend |
-| Les 2 photos du verso | Il faut un exemplaire et 30 jours de douches. **Chemin critique de toute la marque** |
-| Le domaine | `tryplush.com` est un placeholder dans tout ce fichier |
-| Les pages `/review` et `/refill` | À créer avant d'imprimer : un QR qui tombe sur une 404 est pire que pas de QR |
+| Cartouche pré-montée ou à part | ✅ Pré-montée (Yasser, 19 oct.) |
+| Les 2 visuels du verso | ✅ **Réglé le 20 oct.** : des **dessins** de cartouches (neuve / couleur Day 30) remplacent les photos, qui n'existeront pas avant l'impression. Et l'étape 3 ne demande plus une cartouche neuve : l'acheteur du Solo n'en a pas |
+| Le domaine | ⚠️ **La boutique n'a pas de domaine** (20 oct. : `fjviid-pb.myshopify.com`). À acheter **avant** d'imprimer : le QR et l'email en dépendent |
+| La page `/review` | À créer avant d'imprimer : un QR qui tombe sur une 404 est pire que pas de QR. Le lien `/refill` est **retiré de la carte** (20 oct.) : le code marche sur le site sans URL imprimée |
