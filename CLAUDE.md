@@ -2343,5 +2343,6 @@ avant de changer de produit.
 
 La cartouche de rechange coûte donc **6 €** de plus dans le Duo, vendue 15 $ de plus : le Duo est
 la meilleure offre en marge absolue, d'où « Best Value » sélectionné par défaut.
-**Non confirmé** : que ces prix soient **DDP** (livraison US + droits inclus, règle 8). Sinon la
-marge est fausse. Manque aussi : le prix d'une cartouche seule envoyée seule (produit de recharge).
+✅ **DDP confirmé par Yasser le 20 oct.** : prix finaux, livraison US et droits de douane inclus.
+Les marges ci-dessus sont donc les vraies. Manque encore : le prix d'une cartouche seule envoyée
+seule (produit de recharge).
