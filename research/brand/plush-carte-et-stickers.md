@@ -78,40 +78,26 @@ dans le pommeau** ? Si elle est livrée à part, il faut une étape de plus et l
 
 ---
 
-## VERSO — le jour 30, l'avis, le code
+## VERSO — version du 20 oct. 2026 (sans photo, sans dessin, sans QR)
+
+> Décision de Yasser le 20 oct. : pas de visuel de cartouches, pas de QR. Le verso garde la
+> comparaison au moment du changement de filtre, puis un merci et le code.
 
 ```
-DAY 30 — DO THIS ONE THING
+THE DAY YOU CHANGE YOUR FILTER
 
+Hold the old one next to the new one.
 
-1   Unscrew the head.
-
-2   Pull the filter out.
-
-3   Look at the color. Compare it with the drawing below.
-
-
-    [ dessin : cartouche neuve, blanche ]   [ dessin : cartouche jour 30, couleur Day 30 #A86B45 ]
-
-
-    We didn't make it brown. Your water did.
+We didn't make it brown. Your water did.
 
 
 ────────────────────────────────────────────────────
 
-Show us.
+A little thank-you.
+You trusted a brand this new. Here's a code for your next order.
 
-
-      [  QR  ]        Scan it, add your photo, tell us what you saw.
-                      It takes about a minute.
-
-                      [TON-DOMAINE]/review
-
-
-────────────────────────────────────────────────────
-
-Your code:   PLUSHFAM
-Use it on refill filters. No minimum. No expiry.
+            PLUSHFAM
+       No minimum. No expiry.
 
 
 [TON EMAIL]
@@ -120,7 +106,14 @@ Filter capabilities refer to what the filter is designed to reduce, not to the
 guaranteed presence of those substances in your water.
 ```
 
-### Pourquoi le verso est dans cet ordre
+Pourquoi « the day you change your filter » plutôt que « Day 90 » : la durée du filtre n'est pas
+confirmée (la page produit dit 60 jours, à confirmer), et une durée imprimée en Chine ne se corrige
+plus. Ce jour-là, tout le monde a une cartouche neuve en main, donc la comparaison marche aussi
+pour l'acheteur du Solo.
+
+### (Archive) Version du 3 oct. — ancien ordre du verso
+
+
 
 **Filtre d'abord, avis ensuite, code en dernier.** L'ordre n'est pas décoratif :
 
