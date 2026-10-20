@@ -2358,6 +2358,7 @@ livrer. Prix annoncés : **Solo 16,20 €** · **Duo 23,90 €** → la cartouch
 | Duo — marge | ~36,60 $ | **~40,30 $** | ~38,00 $ |
 
 Même dans le pire cas (cartes et stickers facturés en plus), il reste moins cher que le n° 1.
-**À confirmer avant de basculer** : prix livrés US droits inclus (DDP) · même modèle (KDF-55 +
-charbon, filetage 1/2" NPT, cartouche pré-montée) · cartes et stickers inclus ou non · délai exact
+✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
+**Reste à confirmer** : prix livrés US droits inclus (DDP) · cartes et stickers inclus ou non
+(question posée, en attente) · délai exact
 (si < 7-12 jours : mettre à jour le texte de livraison au paiement, les onglets et le badge).
