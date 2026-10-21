@@ -1904,6 +1904,11 @@ la copy de la carte avait été écrite sans destinataire. **Fiche complète :
 `research/brand/plush-avatar-client.md`** — elle gouverne désormais les ads, les emails, la page
 produit et la carte.
 
+**v2 le 21 oct.** (demandée par Yasser pour la copy, les avis et les ads) : prix réels (74,99 $),
+4e peur (« encore un truc Amazon à 15 $ »), ses mots relevés mot pour mot, les 4 questions de
+demande d'avis, les règles FTC (jusqu'à 53 088 $ par faux avis), 7 accroches ads en image fixe.
+Peur n° 2 (la pression) sans réponse tant que le **test du seau** n'est pas fait sur l'échantillon.
+
 ```
 Megan, 34 ans, Columbus (Ohio) · locataire ou propriétaire depuis moins de 3 ans
 Ménage 60-110k $ · achète sur son téléphone, le soir
