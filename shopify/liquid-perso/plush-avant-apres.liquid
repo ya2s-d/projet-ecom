@@ -1,0 +1,147 @@
+{%- comment -%}
+  PLUSH — section Avant / Après, version « Liquid personnalisé ».
+  Colle tout ce code dans un bloc « Liquid personnalisé » de la page produit.
+
+  TES 2 VIDÉOS
+  1. Contenu > Fichiers > Importer : importe tes 2 vidéos (.mp4).
+  2. Clique sur chaque vidéo > copie le lien (il commence par https://cdn.shopify.com/).
+  3. Colle-les entre les guillemets de video_before et video_after, juste en dessous.
+  Tant qu'un lien est vide, la case montre un rappel au lieu de la vidéo.
+
+  FORMAT DES VIDÉOS
+  - ratio = la forme des cases. '4 / 3' (paysage, par défaut), '1 / 1' (carré),
+    '4 / 5' (vidéo filmée au téléphone, en hauteur).
+  - Les vidéos tournent en boucle, sans le son, comme un GIF.
+
+  LE BOUTON remonte jusqu'au choix Duo / Solo. Le prix affiché vient tout seul de ta fiche
+  produit : si tu changes un prix dans Shopify, il change ici aussi.
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign video_before = ''
+  assign video_after = ''
+  assign ratio = '4 / 3'
+
+  assign label_before = 'Before'
+  assign caption_before = 'Your shower head'
+  assign label_after = 'After'
+  assign caption_after = 'Plush filtered'
+
+  assign headline = 'Your shower head came with the place.'
+  assign text = 'Plush filters your city water right before it reaches you. Swap it in 2 minutes, no tools.'
+  assign button = 'Get Plush'
+  assign note = 'Free U.S. shipping · 60-day money-back guarantee'
+  assign show_price = true
+
+  assign c_ink = '#141414'
+  assign c_muted = '#6B6660'
+  assign c_accent = '#8A4524'
+  assign space_top = 32
+  assign space_bottom = 32
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div
+  class="plush-ba"
+  style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+>
+  <div class="pba-media">
+    {%- for i in (1..2) -%}
+      {%- liquid
+        if i == 1
+          assign v_src = video_before
+          assign v_label = label_before
+          assign v_caption = caption_before
+          assign v_mod = 'before'
+          assign v_hint = 'video_before'
+        else
+          assign v_src = video_after
+          assign v_label = label_after
+          assign v_caption = caption_after
+          assign v_mod = 'after'
+          assign v_hint = 'video_after'
+        endif
+      -%}
+      <figure class="pba-card pba-card--{{ v_mod }}">
+        {%- if v_src != blank -%}
+          <video src="{{ v_src }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+        {%- else -%}
+          <div class="pba-empty">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
+            <span>Colle le lien de ta vidéo dans <b>{{ v_hint }}</b></span>
+          </div>
+        {%- endif -%}
+        <figcaption class="pba-tag">
+          <b>{{ v_label | escape }}</b>
+          <span>{{ v_caption | escape }}</span>
+        </figcaption>
+      </figure>
+    {%- endfor -%}
+  </div>
+
+  <div class="pba-copy">
+    <h2 class="pba-title">{{ headline | escape }}</h2>
+    {%- if text != blank -%}
+      <p class="pba-text">{{ text | escape }}</p>
+    {%- endif -%}
+    {%- if show_price and product -%}
+      <p class="pba-price">
+        {%- if product.price_varies -%}<span class="pba-from">From{{ ' ' }}</span>{%- endif -%}
+        {{ product.price_min | money }}
+      </p>
+    {%- endif -%}
+    <a href="#" class="pba-btn" data-plush-ba-cta>{{ button | escape }}</a>
+    {%- if note != blank -%}
+      <p class="pba-note">{{ note | escape }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .plush-ba{container-type:inline-size;font-family:'Poppins',sans-serif;color:var(--pba-ink);text-align:center}
+  .plush-ba *{box-sizing:border-box}
+  .plush-ba .pba-media{display:grid;grid-template-columns:1fr;gap:10px}
+  .plush-ba .pba-card{position:relative;margin:0;aspect-ratio:var(--pba-ratio);border-radius:18px;overflow:hidden;background:#141414}
+  .plush-ba .pba-card video{width:100%;height:100%;object-fit:cover;display:block}
+  .plush-ba .pba-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;color:rgba(255,255,255,.7);font-size:13px;line-height:1.4}
+  .plush-ba .pba-empty svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linejoin:round}
+  .plush-ba .pba-empty b{color:#fff;font-weight:600}
+  .plush-ba .pba-tag{position:absolute;left:12px;top:12px;display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 5px;border-radius:999px;background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:500;line-height:1;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .plush-ba .pba-tag b{padding:5px 10px;border-radius:999px;background:#fff;color:#141414;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+  .plush-ba .pba-card--after .pba-tag b{background:var(--pba-accent);color:#fff}
+  .plush-ba .pba-copy{max-width:460px;margin:0 auto}
+  .plush-ba .pba-title{margin:26px auto 10px;max-width:20ch;font-family:inherit;font-size:28px;font-size:clamp(24px,7.4cqi,38px);font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--pba-ink);text-wrap:balance}
+  .plush-ba .pba-text{margin:0 auto 18px;max-width:32ch;font-size:15px;line-height:1.5;color:var(--pba-muted);text-wrap:pretty}
+  .plush-ba .pba-price{margin:0 0 14px;font-size:22px;font-weight:600;color:var(--pba-ink)}
+  .plush-ba .pba-from{font-size:15px;font-weight:500;color:var(--pba-muted)}
+  .plush-ba .pba-btn{display:block;width:100%;padding:17px 20px;border-radius:12px;background:var(--pba-accent);color:#fff;font-size:16px;font-weight:600;letter-spacing:.01em;text-decoration:none;transition:filter .15s}
+  .plush-ba .pba-btn:hover{filter:brightness(1.08)}
+  .plush-ba .pba-note{margin:12px 0 0;font-size:13px;line-height:1.4;color:var(--pba-muted)}
+
+  @container (min-width:640px){
+    .plush-ba .pba-media{grid-template-columns:1fr 1fr;gap:16px}
+    .plush-ba .pba-tag{left:16px;top:16px;font-size:13px}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('[data-plush-ba-cta]').forEach(function (btn) {
+      if (btn.dataset.ready) return;
+      btn.dataset.ready = '1';
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.querySelector('div.pb[data-selected]') || document.querySelector('form[action*="/cart/add"]');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+</script>
