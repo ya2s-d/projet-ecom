@@ -1,5 +1,5 @@
 {%- comment -%}
-  PLUSH — section Avant / Après, version « Liquid personnalisé ».
+  PLUSH — section Avant / Après « côte à côte », version « Liquid personnalisé ».
   Colle tout ce code dans un bloc « Liquid personnalisé » de la page produit.
 
   TES 2 VIDÉOS
@@ -9,8 +9,8 @@
   Tant qu'un lien est vide, la case montre un rappel au lieu de la vidéo.
 
   FORMAT DES VIDÉOS
-  - ratio = la forme des cases. '4 / 3' (paysage, par défaut), '1 / 1' (carré),
-    '4 / 5' (vidéo filmée au téléphone, en hauteur).
+  - ratio = la forme des 2 cases. '9 / 14' (vidéo filmée au téléphone, par défaut),
+    '4 / 5' (un peu moins haute), '1 / 1' (carré).
   - Les vidéos tournent en boucle, sans le son, comme un GIF.
 
   LE BOUTON remonte jusqu'au choix Duo / Solo. Le prix affiché vient tout seul de ta fiche
@@ -21,7 +21,7 @@
 {%- liquid
   assign video_before = ''
   assign video_after = ''
-  assign ratio = '4 / 3'
+  assign ratio = '9 / 14'
 
   assign label_before = 'Before'
   assign caption_before = 'Your shower head'
@@ -49,6 +49,8 @@
   class="plush-ba"
   style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
 >
+  <h2 class="pba-title">{{ headline | escape }}</h2>
+
   <div class="pba-media">
     {%- for i in (1..2) -%}
       {%- liquid
@@ -66,25 +68,24 @@
           assign v_hint = 'video_after'
         endif
       -%}
-      <figure class="pba-card pba-card--{{ v_mod }}">
-        {%- if v_src != blank -%}
-          <video src="{{ v_src }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
-        {%- else -%}
-          <div class="pba-empty">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
-            <span>Colle le lien de ta vidéo dans <b>{{ v_hint }}</b></span>
-          </div>
-        {%- endif -%}
-        <figcaption class="pba-tag">
-          <b>{{ v_label | escape }}</b>
-          <span>{{ v_caption | escape }}</span>
-        </figcaption>
+      <figure class="pba-item pba-item--{{ v_mod }}">
+        <div class="pba-card">
+          {%- if v_src != blank -%}
+            <video src="{{ v_src }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+          {%- else -%}
+            <div class="pba-empty">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
+              <span>Colle le lien dans <b>{{ v_hint }}</b></span>
+            </div>
+          {%- endif -%}
+          <span class="pba-tag">{{ v_label | escape }}</span>
+        </div>
+        <figcaption class="pba-cap">{{ v_caption | escape }}</figcaption>
       </figure>
     {%- endfor -%}
   </div>
 
   <div class="pba-copy">
-    <h2 class="pba-title">{{ headline | escape }}</h2>
     {%- if text != blank -%}
       <p class="pba-text">{{ text | escape }}</p>
     {%- endif -%}
@@ -104,18 +105,19 @@
 <style>
   .plush-ba{container-type:inline-size;font-family:'Poppins',sans-serif;color:var(--pba-ink);text-align:center}
   .plush-ba *{box-sizing:border-box}
-  .plush-ba .pba-media{display:grid;grid-template-columns:1fr;gap:10px}
-  .plush-ba .pba-card{position:relative;margin:0;aspect-ratio:var(--pba-ratio);border-radius:18px;overflow:hidden;background:#141414}
+  .plush-ba .pba-title{margin:0 auto 18px;max-width:20ch;font-family:inherit;font-size:28px;font-size:clamp(24px,7.4cqi,38px);font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--pba-ink);text-wrap:balance}
+  .plush-ba .pba-media{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px;margin:0 auto}
+  .plush-ba .pba-item{margin:0;min-width:0}
+  .plush-ba .pba-card{position:relative;aspect-ratio:var(--pba-ratio);border-radius:16px;overflow:hidden;background:#141414}
   .plush-ba .pba-card video{width:100%;height:100%;object-fit:cover;display:block}
-  .plush-ba .pba-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;color:rgba(255,255,255,.7);font-size:13px;line-height:1.4}
-  .plush-ba .pba-empty svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linejoin:round}
-  .plush-ba .pba-empty b{color:#fff;font-weight:600}
-  .plush-ba .pba-tag{position:absolute;left:12px;top:12px;display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 5px;border-radius:999px;background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:500;line-height:1;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-  .plush-ba .pba-tag b{padding:5px 10px;border-radius:999px;background:#fff;color:#141414;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
-  .plush-ba .pba-card--after .pba-tag b{background:var(--pba-accent);color:#fff}
+  .plush-ba .pba-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;color:rgba(255,255,255,.7);font-size:12px;line-height:1.4}
+  .plush-ba .pba-empty svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linejoin:round}
+  .plush-ba .pba-empty b{color:#fff;font-weight:600;word-break:break-word}
+  .plush-ba .pba-tag{position:absolute;left:8px;top:8px;padding:5px 10px;border-radius:999px;background:#fff;color:#141414;font-size:10px;font-weight:600;line-height:1;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+  .plush-ba .pba-item--after .pba-tag{background:var(--pba-accent);color:#fff}
+  .plush-ba .pba-cap{margin-top:8px;font-size:13px;line-height:1.3;color:var(--pba-muted)}
   .plush-ba .pba-copy{max-width:460px;margin:0 auto}
-  .plush-ba .pba-title{margin:26px auto 10px;max-width:20ch;font-family:inherit;font-size:28px;font-size:clamp(24px,7.4cqi,38px);font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--pba-ink);text-wrap:balance}
-  .plush-ba .pba-text{margin:0 auto 18px;max-width:32ch;text-align:left;font-size:15px;line-height:1.5;color:var(--pba-muted);text-wrap:pretty}
+  .plush-ba .pba-text{margin:18px auto 16px;max-width:32ch;text-align:left;font-size:15px;line-height:1.5;color:var(--pba-muted);text-wrap:pretty}
   .plush-ba .pba-price{margin:0 0 14px;font-size:22px;font-weight:600;color:var(--pba-ink)}
   .plush-ba .pba-from{font-size:15px;font-weight:500;color:var(--pba-muted)}
   .plush-ba .pba-btn{display:block;width:100%;padding:17px 20px;border-radius:12px;background:var(--pba-accent);color:#fff;font-size:16px;font-weight:600;letter-spacing:.01em;text-decoration:none;transition:filter .15s}
@@ -123,8 +125,9 @@
   .plush-ba .pba-note{margin:12px 0 0;font-size:13px;line-height:1.4;color:var(--pba-muted)}
 
   @container (min-width:640px){
-    .plush-ba .pba-media{grid-template-columns:1fr 1fr;gap:16px}
-    .plush-ba .pba-tag{left:16px;top:16px;font-size:13px}
+    .plush-ba .pba-media{gap:14px}
+    .plush-ba .pba-tag{left:12px;top:12px;font-size:11px}
+    .plush-ba .pba-cap{font-size:14px}
   }
 </style>
 
