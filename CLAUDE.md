@@ -2390,6 +2390,8 @@ le n° 1). Le lot est remboursé dès la ~6e commande Duo. Logo sur la boîte : 
 boîte générique imposée, pas d'autre boîte possible).
 ✅ **Confirmé par Yasser** : les 9,72 € valent pour des cartes **16 × 14 cm** · **1 seul sticker par
 commande**, sur la boîte uniquement (rien sur la cartouche) → 100 stickers = 100 commandes.
+🔴 **Fournisseur n° 3 (nouvel agent, brief du 21 oct.) : KO** — Solo 25 € · Duo 39 €, soit +8,67 € et
++14,97 € par commande face au n° 2. **Fournisseur retenu : le n° 2.**
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
