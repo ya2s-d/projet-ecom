@@ -2372,6 +2372,11 @@ Négociation envoyée le 20 oct., cible 0,50 € pièce. Seuil posé avant sa r�
 refuse, on reste chez le n° 2 — l'écart est de ~11 € sur tout le test (~14 Duo × 0,82 €),
 moins qu'un seul colis perdu chez un fournisseur moins fiable.
 ⚠️ Mon « pire cas » de ~2 € pour les deux était faux : c'est 4 €.
+**22 oct. — cartes en lot : 9,72 € les 200** (≈ 0,05 € la carte, contre 2 € à l'unité). Validé :
+même à 14 commandes seulement, ça coûte ~2,70 € de plus que le tarif à 0,50 € du n° 1, et c'est
+40× moins cher que 2 €. Duo avec carte en lot + sticker à 2 € = **25,95 €**, déjà sous le n° 1.
+Reste : demander le même lot pour les stickers. ⚠️ **Avant d'imprimer** : la carte contient
+`[TON EMAIL]` deux fois et la boutique n'a pas de domaine — 200 cartes figent l'adresse.
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
