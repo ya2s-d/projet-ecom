@@ -2382,6 +2382,12 @@ Reste : demander le même lot pour les stickers. ⚠️ **Avant d'imprimer** : l
 **Boîte 18 × 16 × 13,5 cm** : carte **16 × 14 cm** à plat sur le pommeau (max 16,5 × 14,5) ·
 sticker logo **11 × 5 cm** centré sur le dessus. Schéma : `research/brand/plush-boite-schema.png`.
 ⚠️ Vérifier que les 9,72 € / 200 cartes valent pour **ce format**, pas pour une carte de visite.
+**22 oct., soir — stickers en lot : 100 pour 8,60 €** (≈ 0,09 € pièce). Avec les cartes (9,72 € / 200) :
+achat unique **18,32 €**, puis **Solo 16,33 €** et **Duo 24,03 €** par commande (fournisseur n° 2).
+Marges : Solo ~35,40 $ · **Duo ~40,10 $** → seuil du test de 430 € : **~12,4 Duo** (contre 13,6 chez
+le n° 1). Le lot est remboursé dès la ~6e commande Duo. Logo sur la boîte : face imprimée
+18 × 13,5 cm, sticker 2,6 × 1,1 cm à 1,2 cm du bord gauche et 3,1 cm du bas (choix de Yasser,
+boîte générique imposée, pas d'autre boîte possible).
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
