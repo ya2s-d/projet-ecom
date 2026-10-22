@@ -2382,16 +2382,25 @@ Reste : demander le même lot pour les stickers. ⚠️ **Avant d'imprimer** : l
 **Boîte 18 × 16 × 13,5 cm** : carte **16 × 14 cm** à plat sur le pommeau (max 16,5 × 14,5) ·
 sticker logo **11 × 5 cm** centré sur le dessus. Schéma : `research/brand/plush-boite-schema.png`.
 ⚠️ Vérifier que les 9,72 € / 200 cartes valent pour **ce format**, pas pour une carte de visite.
-**22 oct., soir — stickers en lot : 100 pour 8,60 €** (≈ 0,09 € pièce). Avec les cartes (9,72 € / 200) :
-achat unique **18,32 €**, puis **Solo 16,33 €** et **Duo 24,03 €** par commande (fournisseur n° 2).
-Marges : Solo ~35,40 $ · **Duo ~40,10 $** → seuil du test de 430 € : **~12,4 Duo** (contre 13,6 chez
-le n° 1). Le lot est remboursé dès la ~6e commande Duo. Logo sur la boîte : face imprimée
-18 × 13,5 cm, sticker 2,6 × 1,1 cm à 1,2 cm du bord gauche et 3,1 cm du bas (choix de Yasser,
-boîte générique imposée, pas d'autre boîte possible).
-✅ **Confirmé par Yasser** : les 9,72 € valent pour des cartes **16 × 14 cm** · **1 seul sticker par
-commande**, sur la boîte uniquement (rien sur la cartouche) → 100 stickers = 100 commandes.
-🔴 **Fournisseur n° 3 (nouvel agent, brief du 21 oct.) : KO** — Solo 25 € · Duo 39 €, soit +8,67 € et
-+14,97 € par commande face au n° 2. **Fournisseur retenu : le n° 2.**
+### 22 oct., soir — DÉCISION : fournisseur n° 1 retenu (corrigé par Yasser)
+
+⚠️ **Mes notes ci-dessus sur le n° 2 « retenu » étaient fausses.** Le tarif 16,20 / 23,90 € du n° 2
+était un ancien tarif : son **prix final est Solo 25 € · Duo 39 €** → 🔴 KO, trop cher.
+Et les lots de cartes et de stickers viennent du **n° 1**, pas du n° 2.
+
+**Fournisseur retenu : le n° 1** — Solo **21,50 €** · Duo **27,08 €** · DDP.
+Lots chez lui : **200 cartes 16 × 14 cm = 9,72 €** · **100 stickers = 8,60 €** → achat unique **18,32 €**.
+1 seul sticker par commande, sur la boîte uniquement → 100 stickers = 100 commandes.
+
+| Par commande | Solo | Duo | Marge Duo | Seuil du test (430 €) |
+|---|---|---|---|---|
+| 21,50 / 27,08 + lots (0,05 € + 0,09 €) | 21,63 € | 27,21 € | ~36,45 $ | ~13,7 Duo |
+| Si 20,50 / 26,08 + lots (carte et sticker plus inclus dans le prix) | 20,63 € | 26,21 € | ~37,60 $ | ~13,3 Duo |
+
+⚠️ **Question ouverte** : le 20 oct., 21,50 € = 20,50 € de produit + 1 € pour carte et sticker. Si les
+lots remplacent ce 1 €, le prix par commande doit redescendre à 20,50 / 26,08 €. À faire préciser.
+Logo sur la boîte : face imprimée 18 × 13,5 cm, sticker 2,6 × 1,1 cm à 1,2 cm du bord gauche et
+3,1 cm du bas (choix de Yasser, boîte générique imposée, pas d'autre boîte possible).
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
