@@ -2377,6 +2377,11 @@ même à 14 commandes seulement, ça coûte ~2,70 € de plus que le tarif à 0,
 40× moins cher que 2 €. Duo avec carte en lot + sticker à 2 € = **25,95 €**, déjà sous le n° 1.
 Reste : demander le même lot pour les stickers. ⚠️ **Avant d'imprimer** : la carte contient
 `[TON EMAIL]` deux fois et la boutique n'a pas de domaine — 200 cartes figent l'adresse.
+**Domaine (22 oct., vérifié via Shopify)** : `tryplush.com` **pris** · `plushshower.com` **disponible
+(16 $ la 1re année)** · `tryplush.shop` 10 $ · `tryplush.store` 9 $. Recommandé : `plushshower.com`.
+**Boîte 18 × 16 × 13,5 cm** : carte **16 × 14 cm** à plat sur le pommeau (max 16,5 × 14,5) ·
+sticker logo **11 × 5 cm** centré sur le dessus. Schéma : `research/brand/plush-boite-schema.png`.
+⚠️ Vérifier que les 9,72 € / 200 cartes valent pour **ce format**, pas pour une carte de visite.
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
