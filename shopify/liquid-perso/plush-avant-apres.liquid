@@ -8,9 +8,15 @@
   3. Colle-les entre les guillemets de video_before et video_after, juste en dessous.
   Tant qu'un lien est vide, la case montre un rappel au lieu de la vidéo.
 
+  VERSION PC (facultatif)
+  Sur PC les cases sont horizontales. Si tes vidéos sont filmées à la verticale, le PC coupe
+  le haut et le bas. Pour éviter ça, filme aussi une version à l'horizontale et colle-la dans
+  video_before_pc et video_after_pc. Vide = le PC reprend la vidéo du téléphone, recadrée.
+
   FORMAT DES VIDÉOS
-  - ratio = la forme des 2 cases. '9 / 14' (vidéo filmée au téléphone, par défaut),
+  - ratio = la forme des 2 cases sur téléphone. '9 / 14' (vertical, par défaut),
     '4 / 5' (un peu moins haute), '1 / 1' (carré).
+  - ratio_pc = la forme des 2 cases sur PC. '16 / 9' (horizontal, par défaut), '4 / 3'.
   - Sur PC : pc_width = largeur des 2 vidéos ensemble, pc_gap = espace entre les deux (en px).
   - Les vidéos tournent en boucle, sans le son, comme un GIF.
 
@@ -25,8 +31,11 @@
 {%- liquid
   assign video_before = ''
   assign video_after = ''
+  assign video_before_pc = ''
+  assign video_after_pc = ''
   assign ratio = '9 / 14'
-  assign pc_width = 920
+  assign ratio_pc = '16 / 9'
+  assign pc_width = 1200
   assign pc_gap = 48
 
   assign label_before = 'Before'
@@ -55,7 +64,7 @@
 
 <div
   class="plush-ba"
-  style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};--pba-pc-w:{{ pc_width }}px;--pba-pc-gap:{{ pc_gap }}px;margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+  style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};--pba-ratio-pc:{{ ratio_pc }};--pba-pc-w:{{ pc_width }}px;--pba-pc-gap:{{ pc_gap }}px;margin:{{ space_top }}px 0 {{ space_bottom }}px;"
 >
   <h2 class="pba-title">{{ headline | escape }}</h2>
 
@@ -64,12 +73,14 @@
       {%- liquid
         if i == 1
           assign v_src = video_before
+          assign v_src_pc = video_before_pc
           assign v_label = label_before
           assign v_caption = caption_before
           assign v_mod = 'before'
           assign v_hint = 'video_before'
         else
           assign v_src = video_after
+          assign v_src_pc = video_after_pc
           assign v_label = label_after
           assign v_caption = caption_after
           assign v_mod = 'after'
@@ -79,7 +90,10 @@
       <figure class="pba-item pba-item--{{ v_mod }}">
         <div class="pba-card">
           {%- if v_src != blank -%}
-            <video src="{{ v_src }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+            <video{% if v_src_pc != blank %} class="pba-v-m"{% endif %} src="{{ v_src }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+            {%- if v_src_pc != blank -%}
+              <video class="pba-v-pc" src="{{ v_src_pc }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+            {%- endif -%}
           {%- else -%}
             <div class="pba-empty">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
@@ -133,6 +147,7 @@
   .plush-ba .pba-item{margin:0;min-width:0}
   .plush-ba .pba-card{position:relative;aspect-ratio:var(--pba-ratio);border-radius:16px;overflow:hidden;background:#141414}
   .plush-ba .pba-card video{width:100%;height:100%;object-fit:cover;display:block}
+  .plush-ba .pba-card .pba-v-pc{display:none}
   .plush-ba .pba-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;color:rgba(255,255,255,.7);font-size:12px;line-height:1.4}
   .plush-ba .pba-empty svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linejoin:round}
   .plush-ba .pba-empty b{color:#fff;font-weight:600;word-break:break-word}
@@ -160,6 +175,9 @@
   }
   @container (min-width:900px){
     .plush-ba .pba-media{max-width:var(--pba-pc-w);gap:var(--pba-pc-gap)}
+    .plush-ba .pba-card{aspect-ratio:var(--pba-ratio-pc)}
+    .plush-ba .pba-card .pba-v-m{display:none}
+    .plush-ba .pba-card .pba-v-pc{display:block}
     .plush-ba .pba-tag{left:16px;top:16px}
     .plush-ba .pba-cap{margin-top:12px;font-size:15px}
   }
