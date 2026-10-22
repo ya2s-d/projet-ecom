@@ -13,6 +13,9 @@
     '4 / 5' (un peu moins haute), '1 / 1' (carré).
   - Les vidéos tournent en boucle, sans le son, comme un GIF.
 
+  SOUS LES VIDÉOS : 2 coches (check_1, check_2). Mets '' pour en cacher une.
+  SOUS LE BOUTON : 2 garanties avec icône (perk_1, perk_2). Mets '' pour en cacher une.
+
   LE BOUTON remonte jusqu'au choix Duo / Solo. Le prix affiché vient tout seul de ta fiche
   produit : si tu changes un prix dans Shopify, il change ici aussi.
   Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
@@ -29,15 +32,17 @@
   assign caption_after = 'Plush filtered'
 
   assign headline = 'Your shower head came with the place.'
-  assign text = 'Plush filters your city water right before it reaches you. Swap it in 2 minutes, no tools.'
+  assign check_1 = 'Filters chlorine'
+  assign check_2 = '2-min install, no tools'
   assign button = 'Get Plush'
-  assign note = 'Free U.S. shipping · 60-day money-back guarantee'
+  assign perk_1 = 'Free U.S. shipping'
+  assign perk_2 = '60-day money back'
   assign show_price = true
 
   assign c_ink = '#141414'
   assign c_muted = '#6B6660'
   assign c_accent = '#8A4524'
-  assign space_top = 32
+  assign space_top = 16
   assign space_bottom = 32
 -%}
 
@@ -85,10 +90,18 @@
     {%- endfor -%}
   </div>
 
+  {%- if check_1 != blank or check_2 != blank -%}
+    <ul class="pba-checks" role="list">
+      {%- if check_1 != blank -%}
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ check_1 | escape }}</li>
+      {%- endif -%}
+      {%- if check_2 != blank -%}
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ check_2 | escape }}</li>
+      {%- endif -%}
+    </ul>
+  {%- endif -%}
+
   <div class="pba-copy">
-    {%- if text != blank -%}
-      <p class="pba-text">{{ text | escape }}</p>
-    {%- endif -%}
     {%- if show_price and product -%}
       <p class="pba-price">
         {%- if product.price_varies -%}<span class="pba-from">From{{ ' ' }}</span>{%- endif -%}
@@ -96,8 +109,15 @@
       </p>
     {%- endif -%}
     <a href="#" class="pba-btn" data-plush-ba-cta>{{ button | escape }}</a>
-    {%- if note != blank -%}
-      <p class="pba-note">{{ note | escape }}</p>
+    {%- if perk_1 != blank or perk_2 != blank -%}
+      <ul class="pba-perks" role="list">
+        {%- if perk_1 != blank -%}
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11.5v10H2.5zM14 10h4.2l3.3 3.4v3.1H14"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17.5" cy="17.5" r="1.9"/></svg>{{ perk_1 | escape }}</li>
+        {%- endif -%}
+        {%- if perk_2 != blank -%}
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>{{ perk_2 | escape }}</li>
+        {%- endif -%}
+      </ul>
     {%- endif -%}
   </div>
 </div>
@@ -117,17 +137,23 @@
   .plush-ba .pba-item--after .pba-tag{background:var(--pba-accent);color:#fff}
   .plush-ba .pba-cap{margin-top:8px;font-size:13px;line-height:1.3;color:var(--pba-muted)}
   .plush-ba .pba-copy{max-width:460px;margin:0 auto}
-  .plush-ba .pba-text{margin:18px auto 16px;max-width:32ch;text-align:left;font-size:15px;line-height:1.5;color:var(--pba-muted);text-wrap:pretty}
-  .plush-ba .pba-price{margin:0 0 14px;font-size:22px;font-weight:600;color:var(--pba-ink)}
+  .plush-ba ul.pba-checks,.plush-ba ul.pba-perks{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center}
+  .plush-ba ul.pba-checks{gap:6px 16px;margin:20px auto 0}
+  .plush-ba .pba-checks li{display:inline-flex;align-items:center;gap:5px;margin:0;font-size:14px;font-weight:500;line-height:1.3;color:var(--pba-ink)}
+  .plush-ba .pba-checks svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--pba-accent);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .plush-ba ul.pba-perks{gap:6px 18px;margin:12px 0 0}
+  .plush-ba .pba-perks li{display:inline-flex;align-items:center;gap:6px;margin:0;font-size:13px;font-weight:500;line-height:1.3;color:var(--pba-muted)}
+  .plush-ba .pba-perks svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--pba-accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .plush-ba .pba-price{margin:16px 0 14px;font-size:22px;font-weight:600;color:var(--pba-ink)}
   .plush-ba .pba-from{font-size:15px;font-weight:500;color:var(--pba-muted)}
   .plush-ba .pba-btn{display:block;width:100%;padding:17px 20px;border-radius:12px;background:var(--pba-accent);color:#fff;font-size:16px;font-weight:600;letter-spacing:.01em;text-decoration:none;transition:filter .15s}
   .plush-ba .pba-btn:hover{filter:brightness(1.08)}
-  .plush-ba .pba-note{margin:12px 0 0;font-size:13px;line-height:1.4;color:var(--pba-muted)}
 
   @container (min-width:640px){
     .plush-ba .pba-media{gap:14px}
     .plush-ba .pba-tag{left:12px;top:12px;font-size:11px}
     .plush-ba .pba-cap{font-size:14px}
+    .plush-ba .pba-checks li{font-size:15px}
   }
 </style>
 
