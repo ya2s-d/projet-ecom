@@ -11,6 +11,7 @@
   FORMAT DES VIDÉOS
   - ratio = la forme des 2 cases. '9 / 14' (vidéo filmée au téléphone, par défaut),
     '4 / 5' (un peu moins haute), '1 / 1' (carré).
+  - Sur PC : pc_width = largeur des 2 vidéos ensemble, pc_gap = espace entre les deux (en px).
   - Les vidéos tournent en boucle, sans le son, comme un GIF.
 
   SOUS LES VIDÉOS : 2 coches (check_1, check_2). Mets '' pour en cacher une.
@@ -25,6 +26,8 @@
   assign video_before = ''
   assign video_after = ''
   assign ratio = '9 / 14'
+  assign pc_width = 920
+  assign pc_gap = 48
 
   assign label_before = 'Before'
   assign caption_before = 'Your shower head'
@@ -52,7 +55,7 @@
 
 <div
   class="plush-ba"
-  style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+  style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};--pba-pc-w:{{ pc_width }}px;--pba-pc-gap:{{ pc_gap }}px;margin:{{ space_top }}px 0 {{ space_bottom }}px;"
 >
   <h2 class="pba-title">{{ headline | escape }}</h2>
 
@@ -154,6 +157,11 @@
     .plush-ba .pba-tag{left:12px;top:12px;font-size:11px}
     .plush-ba .pba-cap{font-size:14px}
     .plush-ba .pba-checks li{font-size:15px}
+  }
+  @container (min-width:900px){
+    .plush-ba .pba-media{max-width:var(--pba-pc-w);gap:var(--pba-pc-gap)}
+    .plush-ba .pba-tag{left:16px;top:16px}
+    .plush-ba .pba-cap{margin-top:12px;font-size:15px}
   }
 </style>
 
