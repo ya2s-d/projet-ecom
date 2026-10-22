@@ -2388,6 +2388,8 @@ Marges : Solo ~35,40 $ · **Duo ~40,10 $** → seuil du test de 430 € : **~12,
 le n° 1). Le lot est remboursé dès la ~6e commande Duo. Logo sur la boîte : face imprimée
 18 × 13,5 cm, sticker 2,6 × 1,1 cm à 1,2 cm du bord gauche et 3,1 cm du bas (choix de Yasser,
 boîte générique imposée, pas d'autre boîte possible).
+✅ **Confirmé par Yasser** : les 9,72 € valent pour des cartes **16 × 14 cm** · **1 seul sticker par
+commande**, sur la boîte uniquement (rien sur la cartouche) → 100 stickers = 100 commandes.
 ✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
