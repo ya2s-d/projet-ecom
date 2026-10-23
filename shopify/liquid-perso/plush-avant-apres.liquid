@@ -20,7 +20,7 @@
   - Sur PC : pc_width = largeur des 2 vidéos ensemble, pc_gap = espace entre les deux (en px).
   - Les vidéos tournent en boucle, sans le son, comme un GIF.
 
-  SOUS LES VIDÉOS : 2 coches (check_1, check_2). Mets '' pour en cacher une.
+  SOUS LES VIDÉOS : 4 coches (check_1 à check_4). Mets '' pour en cacher une.
   SOUS LE BOUTON : 2 garanties avec icône (perk_1, perk_2). Mets '' pour en cacher une.
 
   LE BOUTON remonte jusqu'au choix Duo / Solo. Le prix affiché vient tout seul de ta fiche
@@ -44,8 +44,10 @@
   assign caption_after = 'Plush filtered'
 
   assign headline = 'Your shower head came with the place.'
-  assign check_1 = 'Filters chlorine'
-  assign check_2 = '2-min install, no tools'
+  assign check_1 = 'Softer-feeling hair'
+  assign check_2 = 'No more tight skin'
+  assign check_3 = 'No more pool smell'
+  assign check_4 = '2-min install'
   assign button = 'Get Plush'
   assign perk_1 = 'Free U.S. shipping'
   assign perk_2 = '60-day money back'
@@ -107,14 +109,15 @@
     {%- endfor -%}
   </div>
 
-  {%- if check_1 != blank or check_2 != blank -%}
+  {%- assign checks = check_1 | append: '|' | append: check_2 | append: '|' | append: check_3 | append: '|' | append: check_4 | split: '|' -%}
+  {%- assign checks_text = checks | join: '' -%}
+  {%- if checks_text != blank -%}
     <ul class="pba-checks" role="list">
-      {%- if check_1 != blank -%}
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ check_1 | escape }}</li>
-      {%- endif -%}
-      {%- if check_2 != blank -%}
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ check_2 | escape }}</li>
-      {%- endif -%}
+      {%- for c in checks -%}
+        {%- if c != blank -%}
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ c | escape }}</li>
+        {%- endif -%}
+      {%- endfor -%}
     </ul>
   {%- endif -%}
 
@@ -156,7 +159,7 @@
   .plush-ba .pba-cap{margin-top:8px;font-size:13px;line-height:1.3;color:var(--pba-muted)}
   .plush-ba .pba-copy{max-width:460px;margin:0 auto}
   .plush-ba ul.pba-checks,.plush-ba ul.pba-perks{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center}
-  .plush-ba ul.pba-checks{gap:6px 16px;margin:20px auto 0}
+  .plush-ba ul.pba-checks{display:grid;grid-template-columns:auto auto;justify-content:center;gap:8px 18px;margin:20px auto 0;text-align:left}
   .plush-ba .pba-checks li{display:inline-flex;align-items:center;gap:5px;margin:0;font-size:14px;font-weight:500;line-height:1.3;color:var(--pba-ink)}
   .plush-ba .pba-checks svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--pba-accent);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
   .plush-ba ul.pba-perks{gap:8px;margin:12px 0 0}
@@ -172,6 +175,7 @@
     .plush-ba .pba-tag{left:12px;top:12px;font-size:11px}
     .plush-ba .pba-cap{font-size:14px}
     .plush-ba .pba-checks li{font-size:15px}
+    .plush-ba ul.pba-checks{display:flex;gap:8px 24px}
   }
   @container (min-width:900px){
     .plush-ba .pba-media{max-width:var(--pba-pc-w);gap:var(--pba-pc-gap)}
