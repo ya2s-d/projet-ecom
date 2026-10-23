@@ -1,0 +1,243 @@
+{%- comment -%}
+  PLUSH — section Résultats avant / après « façon Afina », version « Liquid personnalisé ».
+  Colle tout ce code dans un bloc ou une section « Liquid personnalisé ».
+
+  2 onglets (Hair / Skin), 3 paires avant / après par onglet.
+  Sur PC les 3 paires sont côte à côte. Sur téléphone, une paire à la fois, on glisse au doigt.
+
+  TES PHOTOS (12 en tout)
+  1. Contenu > Fichiers > Importer : importe tes photos.
+  2. Clique sur chaque photo > copie le lien (il commence par https://cdn.shopify.com/).
+  3. Colle-le entre les guillemets : t1_ = onglet 1 (Hair), t2_ = onglet 2 (Skin).
+     before_1 / after_1 = 1re paire, before_2 / after_2 = 2e paire, etc.
+  4. label_1, label_2, label_3 = l'étiquette sous chaque photo « après ». Mets la vraie durée.
+
+  RÈGLE : uniquement des photos de vrais clients Plush, avec leur accord écrit.
+  Jamais de photos de concurrents, d'internet ou d'IA. Pas d'acné ni de problème de peau
+  médical dans l'onglet Skin.
+
+  SÉCURITÉ : sur ta boutique en ligne, une paire n'apparaît que si ses 2 photos sont remplies.
+  Tant qu'aucune paire n'est complète, la section entière est invisible pour tes clients.
+  Dans l'éditeur de thème, tu vois des cases grises à la place des photos manquantes.
+
+  LES ÉTOILES
+  Si une appli d'avis (Judge.me, Loox, Okendo…) enregistre la note sur ta fiche produit,
+  les étoiles prennent la vraie note toutes seules. Sinon, remplis rating_value (ex : '4.8')
+  et rating_count (ex : '120') avec tes VRAIS chiffres. Vide = la ligne ne s'affiche pas.
+
+  Police : Funnel Display, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign rating_value = ''
+  assign rating_count = ''
+  assign rating_text = 'Happy Customers'
+  assign headline = 'Change the water. See the difference.'
+  assign note = 'Real Plush customers. Individual results vary.'
+
+  assign tab_1 = 'Hair'
+  assign t1_before_1 = ''
+  assign t1_after_1 = ''
+  assign t1_label_1 = 'After 4 weeks'
+  assign t1_before_2 = ''
+  assign t1_after_2 = ''
+  assign t1_label_2 = 'After 6 weeks'
+  assign t1_before_3 = ''
+  assign t1_after_3 = ''
+  assign t1_label_3 = 'After 8 weeks'
+
+  assign tab_2 = 'Skin'
+  assign t2_before_1 = ''
+  assign t2_after_1 = ''
+  assign t2_label_1 = 'After 4 weeks'
+  assign t2_before_2 = ''
+  assign t2_after_2 = ''
+  assign t2_label_2 = 'After 6 weeks'
+  assign t2_before_3 = ''
+  assign t2_after_3 = ''
+  assign t2_label_3 = 'After 8 weeks'
+
+  assign c_ink = '#141414'
+  assign c_muted = '#6B6660'
+  assign c_accent = '#8A4524'
+  assign c_card = '#F6F2ED'
+  assign c_tab_off = '#E4DACB'
+
+  if rating_value == blank and product.metafields.reviews.rating.value != blank
+    assign rating_value = product.metafields.reviews.rating.value.rating | round: 1
+    assign rating_count = product.metafields.reviews.rating_count.value
+  endif
+
+  assign n1 = 0
+  if t1_before_1 != blank and t1_after_1 != blank
+    assign n1 = n1 | plus: 1
+  endif
+  if t1_before_2 != blank and t1_after_2 != blank
+    assign n1 = n1 | plus: 1
+  endif
+  if t1_before_3 != blank and t1_after_3 != blank
+    assign n1 = n1 | plus: 1
+  endif
+  assign n2 = 0
+  if t2_before_1 != blank and t2_after_1 != blank
+    assign n2 = n2 | plus: 1
+  endif
+  if t2_before_2 != blank and t2_after_2 != blank
+    assign n2 = n2 | plus: 1
+  endif
+  if t2_before_3 != blank and t2_after_3 != blank
+    assign n2 = n2 | plus: 1
+  endif
+
+  assign show_1 = false
+  assign show_2 = false
+  if request.design_mode or n1 > 0
+    assign show_1 = true
+  endif
+  if request.design_mode or n2 > 0
+    assign show_2 = true
+  endif
+  assign first_tab = 1
+  unless show_1
+    assign first_tab = 2
+  endunless
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+{%- if show_1 or show_2 -%}
+<div class="plush-res" style="--rs-ink:{{ c_ink }};--rs-muted:{{ c_muted }};--rs-accent:{{ c_accent }};--rs-card:{{ c_card }};--rs-off:{{ c_tab_off }};">
+  {%- if rating_value != blank -%}
+    <p class="rs-rating">
+      <span class="rs-stars" aria-label="{{ rating_value }} out of 5">
+        {%- for s in (1..5) -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>{%- endfor -%}
+      </span>
+      {{ rating_value }}/5{% if rating_count != blank %} — {{ rating_count }}+ {{ rating_text | escape }}{% endif %}
+    </p>
+  {%- endif -%}
+  <h2 class="rs-title">{{ headline | escape }}</h2>
+
+  {%- if show_1 and show_2 -%}
+    <div class="rs-tabs" role="tablist">
+      <button type="button" class="rs-tab is-on" role="tab" aria-selected="true" data-rs-tab="1">{{ tab_1 | escape }}</button>
+      <button type="button" class="rs-tab" role="tab" aria-selected="false" data-rs-tab="2">{{ tab_2 | escape }}</button>
+    </div>
+  {%- endif -%}
+
+  {%- for t in (1..2) -%}
+    {%- if t == 1 and show_1 == false -%}{%- continue -%}{%- endif -%}
+    {%- if t == 2 and show_2 == false -%}{%- continue -%}{%- endif -%}
+    <div class="rs-panel{% if t == first_tab %} is-on{% endif %}" role="tabpanel" data-rs-panel="{{ t }}">
+      <div class="rs-row">
+        {%- for i in (1..3) -%}
+          {%- liquid
+            assign k = t | append: '-' | append: i
+            case k
+              when '1-1'
+                assign b = t1_before_1
+                assign a = t1_after_1
+                assign l = t1_label_1
+              when '1-2'
+                assign b = t1_before_2
+                assign a = t1_after_2
+                assign l = t1_label_2
+              when '1-3'
+                assign b = t1_before_3
+                assign a = t1_after_3
+                assign l = t1_label_3
+              when '2-1'
+                assign b = t2_before_1
+                assign a = t2_after_1
+                assign l = t2_label_1
+              when '2-2'
+                assign b = t2_before_2
+                assign a = t2_after_2
+                assign l = t2_label_2
+              else
+                assign b = t2_before_3
+                assign a = t2_after_3
+                assign l = t2_label_3
+            endcase
+            unless request.design_mode
+              if b == blank or a == blank
+                continue
+              endif
+            endunless
+          -%}
+          <div class="rs-card">
+            <div class="rs-before">
+              {%- if b != blank -%}<img src="{{ b }}" alt="Before" loading="lazy">{%- else -%}<span class="rs-empty">Photo avant {{ i }}</span>{%- endif -%}
+            </div>
+            <div class="rs-after">
+              <div class="rs-after-img">
+                {%- if a != blank -%}<img src="{{ a }}" alt="{{ l | escape }}" loading="lazy">{%- else -%}<span class="rs-empty">Photo après {{ i }}</span>{%- endif -%}
+              </div>
+              <span class="rs-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16.5v-9M8 11l4-4 4 4"/></svg>{{ l | escape }}</span>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endfor -%}
+
+  {%- if note != blank -%}<p class="rs-note">{{ note | escape }}</p>{%- endif -%}
+</div>
+{%- endif -%}
+
+<style>
+  .plush-res{container-type:inline-size;font-family:'Funnel Display',sans-serif;color:var(--rs-ink);text-align:center;padding:48px 0}
+  .plush-res *{box-sizing:border-box}
+  .plush-res .rs-rating{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px;font-size:15px;font-weight:400;color:var(--rs-ink)}
+  .plush-res .rs-stars{display:inline-flex;gap:1px}
+  .plush-res .rs-stars svg{width:17px;height:17px;fill:var(--rs-accent)}
+  .plush-res .rs-title{margin:0 auto 22px;max-width:22ch;font-family:inherit;font-size:28px;font-size:clamp(26px,8.5cqi,46px);font-weight:500;line-height:1.08;letter-spacing:-.035em;color:var(--rs-ink);text-wrap:balance}
+  .plush-res .rs-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px;margin:0 auto 22px}
+  .plush-res .rs-tab{padding:14px 10px;border:0;border-radius:10px;background:var(--rs-off);color:var(--rs-muted);font:500 16px 'Funnel Display',sans-serif;cursor:pointer}
+  .plush-res .rs-tab.is-on{background:var(--rs-accent);color:#fff}
+  .plush-res .rs-panel{display:none}
+  .plush-res .rs-panel.is-on{display:block}
+  .plush-res .rs-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 6px;scrollbar-width:none}
+  .plush-res .rs-row::-webkit-scrollbar{display:none}
+  .plush-res .rs-card{flex:0 0 86%;display:grid;grid-template-columns:1.15fr 1fr;gap:8px;padding:8px;border-radius:14px;background:var(--rs-card);scroll-snap-align:start}
+  .plush-res .rs-before,.plush-res .rs-after-img{position:relative;border-radius:10px;overflow:hidden;background:#D9D0C3}
+  .plush-res .rs-before{aspect-ratio:3 / 4}
+  .plush-res .rs-after{display:flex;flex-direction:column;gap:8px}
+  .plush-res .rs-after-img{flex:1}
+  .plush-res img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .plush-res .rs-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:8px;font-size:12px;color:var(--rs-muted)}
+  .plush-res .rs-pill{display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 6px;border-radius:8px;background:var(--rs-accent);color:#fff;font-size:14px;font-weight:500;white-space:nowrap}
+  .plush-res .rs-pill svg{flex:none;width:18px;height:18px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .plush-res .rs-note{margin:14px 0 0;font-size:12px;color:var(--rs-muted)}
+
+  @container (min-width:900px){
+    .plush-res .rs-tabs{grid-template-columns:auto auto;justify-content:center}
+    .plush-res .rs-tab{min-width:180px}
+    .plush-res .rs-row{justify-content:center;overflow:visible;gap:24px}
+    .plush-res .rs-card{flex:0 1 420px}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('.plush-res').forEach(function (root) {
+      if (root.dataset.ready) return;
+      root.dataset.ready = '1';
+      var tabs = root.querySelectorAll('[data-rs-tab]');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var n = tab.getAttribute('data-rs-tab');
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.classList.toggle('is-on', on);
+            t.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          root.querySelectorAll('[data-rs-panel]').forEach(function (p) {
+            p.classList.toggle('is-on', p.getAttribute('data-rs-panel') === n);
+          });
+        });
+      });
+    });
+  })();
+</script>
