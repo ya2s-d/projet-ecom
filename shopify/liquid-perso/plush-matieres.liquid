@@ -1,0 +1,192 @@
+{%- comment -%}
+  PLUSH — section Matières « façon Naked Paper », version « Liquid personnalisé ».
+  Colle tout ce code dans une section « Liquid personnalisé ».
+
+  PC : la cartouche au centre, 3 matières à gauche, 3 à droite.
+  Téléphone : une matière à la fois, image + texte glissent ensemble
+  (flèches en bas à droite, ou en glissant au doigt).
+
+  TES IMAGES (Contenu > Fichiers > Importer, puis copie le lien https://cdn.shopify.com/...)
+  - center_image : la cartouche seule, fond transparent (au centre, sur PC)
+  - image_1 à image_6 : une image par matière, fond transparent
+  Image vide = sur ta boutique, rien ne s'affiche à sa place. Dans l'éditeur de thème,
+  tu vois une case en pointillés pour savoir où elle ira.
+
+  LES TEXTES : name_1 à name_6 et text_1 à text_6. 1-2-3 à gauche, 4-5-6 à droite sur PC.
+  On parle de ce qu'elle RESSENT (feels). Jamais « antibacterial », ni de chiffres sans test.
+
+  full_width = true : la couleur de fond va d'un bord à l'autre de l'écran.
+  Si la couleur passe par-dessus autre chose, mets false : la section devient une carte arrondie.
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign eyebrow = 'Inside every Plush cartridge'
+  assign headline = "What's between the water and your skin."
+  assign center_image = ''
+
+  assign name_1 = 'Vitamin C'
+  assign text_1 = 'Beads built to neutralize chlorine. Water that feels gentler on skin and hair.'
+  assign image_1 = ''
+  assign name_2 = 'Calcium Sulfite'
+  assign text_2 = 'Reduces chlorine, even in hot water, so your skin feels soft, not tight.'
+  assign image_2 = ''
+  assign name_3 = 'PP Cotton'
+  assign text_3 = "Traps sand, rust and sediment first. You'll see it on the cartridge."
+  assign image_3 = ''
+  assign name_4 = 'KDF-55'
+  assign text_4 = 'Reduces chlorine as water flows through. Hair that feels smoother, wash after wash.'
+  assign image_4 = ''
+  assign name_5 = 'Activated Carbon'
+  assign text_5 = 'Catches chlorine and that pool smell before the water reaches you.'
+  assign image_5 = ''
+  assign name_6 = 'Steel Mesh'
+  assign text_6 = 'Holds every layer in place, shower after shower.'
+  assign image_6 = ''
+
+  assign full_width = true
+  assign c_bg = '#8A4524'
+  assign c_text = '#F6F2ED'
+  assign c_button = '#F6F2ED'
+  assign c_arrow = '#8A4524'
+  assign space_top = 0
+  assign space_bottom = 0
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div
+  class="plush-mat{% if full_width %} plush-mat--full{% endif %}"
+  style="--mt-bg:{{ c_bg }};--mt-text:{{ c_text }};--mt-btn:{{ c_button }};--mt-arrow:{{ c_arrow }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+>
+  <div class="mt-head">
+    {%- if eyebrow != blank -%}<p class="mt-eyebrow">{{ eyebrow | escape }}</p>{%- endif -%}
+    {%- if headline != blank -%}<h2 class="mt-title">{{ headline | escape }}</h2>{%- endif -%}
+  </div>
+
+  <div class="mt-wrap">
+    {%- if center_image != blank -%}
+      <div class="mt-center"><img src="{{ center_image }}" alt="Plush filter cartridge" loading="lazy"></div>
+    {%- elsif request.design_mode -%}
+      <div class="mt-center"><span class="mt-empty mt-empty--center">Image : la cartouche (fond transparent)</span></div>
+    {%- endif -%}
+
+    <ul class="mt-list" role="list" data-mt-track>
+      {%- for i in (1..6) -%}
+        {%- liquid
+          case i
+            when 1
+              assign n = name_1
+              assign t = text_1
+              assign im = image_1
+            when 2
+              assign n = name_2
+              assign t = text_2
+              assign im = image_2
+            when 3
+              assign n = name_3
+              assign t = text_3
+              assign im = image_3
+            when 4
+              assign n = name_4
+              assign t = text_4
+              assign im = image_4
+            when 5
+              assign n = name_5
+              assign t = text_5
+              assign im = image_5
+            else
+              assign n = name_6
+              assign t = text_6
+              assign im = image_6
+          endcase
+        -%}
+        <li class="mt-item mt-item--{{ i }}">
+          {%- if im != blank -%}
+            <div class="mt-img"><img src="{{ im }}" alt="{{ n | escape }}" loading="lazy"></div>
+          {%- elsif request.design_mode -%}
+            <div class="mt-img"><span class="mt-empty">Image {{ i }}</span></div>
+          {%- endif -%}
+          <span class="mt-num">0{{ i }}</span>
+          <h3 class="mt-name">{{ n | escape }}</h3>
+          <p class="mt-text">{{ t | escape }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <div class="mt-nav">
+      <button type="button" class="mt-btn" data-mt-prev aria-label="Previous">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </button>
+      <button type="button" class="mt-btn" data-mt-next aria-label="Next">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .plush-mat{container-type:inline-size;background:var(--mt-bg);color:var(--mt-text);font-family:'Poppins',sans-serif;text-align:center;border-radius:20px;overflow:hidden}
+  .plush-mat--full{border-radius:0;overflow:visible;box-shadow:0 0 0 100vmax var(--mt-bg);clip-path:inset(0 -100vmax)}
+  .plush-mat *{box-sizing:border-box}
+  .plush-mat .mt-head{padding:44px 20px 0}
+  .plush-mat .mt-eyebrow{margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mt-text);opacity:.75}
+  .plush-mat .mt-title{margin:0 auto;max-width:18ch;font-family:inherit;font-size:28px;font-size:clamp(26px,7.6cqi,42px);font-weight:600;line-height:1.12;letter-spacing:-.02em;color:var(--mt-text);text-wrap:balance}
+  .plush-mat .mt-wrap{padding:30px 0 32px}
+  .plush-mat .mt-center{display:none}
+  .plush-mat ul.mt-list{list-style:none;margin:0;padding:0 8%;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .plush-mat ul.mt-list::-webkit-scrollbar{display:none}
+  .plush-mat .mt-item{flex:0 0 100%;margin:0;padding:0 6%;scroll-snap-align:center}
+  .plush-mat .mt-img{position:relative;width:70%;max-width:280px;aspect-ratio:1 / 1;margin:0 auto 22px;border-radius:50%;background:rgba(255,255,255,.12)}
+  .plush-mat .mt-img img{position:absolute;inset:11%;width:78%;height:78%;object-fit:contain}
+  .plush-mat .mt-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:12px;border:1px dashed rgba(255,255,255,.5);border-radius:inherit;font-size:13px;opacity:.8}
+  .plush-mat .mt-num{display:block;margin:0 0 4px;font-size:12px;font-weight:600;letter-spacing:.08em;opacity:.7}
+  .plush-mat .mt-name{margin:0 0 8px;font-family:inherit;font-size:21px;font-weight:600;letter-spacing:-.01em;color:var(--mt-text)}
+  .plush-mat .mt-text{margin:0;font-size:15px;line-height:1.55;color:var(--mt-text);opacity:.9;text-wrap:pretty}
+  .plush-mat .mt-nav{display:flex;justify-content:flex-end;gap:10px;padding:28px 16px 0}
+  .plush-mat .mt-btn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:var(--mt-btn);cursor:pointer}
+  .plush-mat .mt-btn svg{width:20px;height:20px;fill:none;stroke:var(--mt-arrow);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  @container (min-width:900px){
+    .plush-mat .mt-head{padding:72px 4% 0}
+    .plush-mat .mt-wrap{display:grid;grid-template-columns:1fr minmax(260px,28%) 1fr;grid-template-rows:repeat(3,auto);align-items:center;column-gap:5%;row-gap:48px;max-width:1340px;margin:0 auto;padding:48px 4% 80px}
+    .plush-mat .mt-center{display:block;position:relative;grid-column:2;grid-row:1 / 4;min-height:360px}
+    .plush-mat .mt-center img{display:block;width:100%;height:auto}
+    .plush-mat .mt-empty--center{border-radius:24px}
+    .plush-mat ul.mt-list{display:contents}
+    .plush-mat .mt-item{padding:0;max-width:360px;justify-self:center}
+    .plush-mat .mt-item--1,.plush-mat .mt-item--2,.plush-mat .mt-item--3{grid-column:1}
+    .plush-mat .mt-item--4,.plush-mat .mt-item--5,.plush-mat .mt-item--6{grid-column:3}
+    .plush-mat .mt-item--1,.plush-mat .mt-item--4{grid-row:1}
+    .plush-mat .mt-item--2,.plush-mat .mt-item--5{grid-row:2}
+    .plush-mat .mt-item--3,.plush-mat .mt-item--6{grid-row:3}
+    .plush-mat .mt-img{width:96px;margin-bottom:12px}
+    .plush-mat .mt-name{font-size:19px}
+    .plush-mat .mt-text{font-size:14.5px}
+    .plush-mat .mt-nav{display:none}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('.plush-mat').forEach(function (root) {
+      if (root.dataset.ready) return;
+      root.dataset.ready = '1';
+      var track = root.querySelector('[data-mt-track]');
+      function step(dir) {
+        var item = track.querySelector('.mt-item');
+        if (!item) return;
+        var w = item.getBoundingClientRect().width;
+        var max = track.scrollWidth - track.clientWidth;
+        var next = track.scrollLeft + dir * w;
+        if (next > max + 2) next = 0;
+        if (next < -2) next = max;
+        track.scrollTo({ left: next, behavior: 'smooth' });
+      }
+      root.querySelector('[data-mt-prev]').addEventListener('click', function () { step(-1); });
+      root.querySelector('[data-mt-next]').addEventListener('click', function () { step(1); });
+    });
+  })();
+</script>
