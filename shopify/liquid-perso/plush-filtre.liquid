@@ -17,7 +17,7 @@
   chute de cheveux, « treats », « repairs », « prevents », ni de chiffres sans étude.
 
   COULEUR : c_bg = le fond, c_text = le texte.
-  Police : Funnel Display, uniquement dans ce bloc. Le reste du site n'est pas touché.
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
 {%- endcomment -%}
 
 {%- liquid
@@ -52,7 +52,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <div class="plush-flt" style="--fl-bg:{{ c_bg }};--fl-text:{{ c_text }};">
   <div class="fl-wrap">
@@ -124,10 +124,10 @@
 </div>
 
 <style>
-  .plush-flt{container-type:inline-size;position:relative;overflow:hidden;background-color:var(--fl-bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");color:var(--fl-text);font-family:'Funnel Display',sans-serif}
+  .plush-flt{container-type:inline-size;position:relative;overflow:hidden;background-color:var(--fl-bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");color:var(--fl-text);font-family:'Poppins',sans-serif}
   .plush-flt *{box-sizing:border-box}
   .plush-flt .fl-wrap{position:relative;padding:44px 16px 0}
-  .plush-flt .fl-title{position:relative;z-index:2;margin:0 0 24px;max-width:none;font-family:inherit;font-size:30px;font-size:clamp(28px,8.4cqi,46px);font-weight:500;line-height:1.05;letter-spacing:-.035em;color:var(--fl-text)}
+  .plush-flt .fl-title{position:relative;z-index:2;margin:0 0 24px;max-width:none;font-family:inherit;font-size:30px;font-size:clamp(26px,7.6cqi,42px);font-weight:600;line-height:1.12;letter-spacing:-.02em;color:var(--fl-text)}
   .plush-flt .fl-left{position:relative}
   .plush-flt .fl-product{position:absolute;z-index:2;top:-24px;right:-56px;width:52%;max-width:320px;height:auto;pointer-events:none;filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
   .plush-flt .fl-cards{display:grid;gap:14px}
@@ -166,7 +166,7 @@
 
   @container (min-width:900px){
     .plush-flt .fl-wrap{display:grid;grid-template-columns:minmax(0,640px) minmax(0,1fr);grid-template-areas:'title title' 'left right';column-gap:56px;max-width:1340px;margin:0 auto;padding:80px 4% 0}
-    .plush-flt .fl-title{grid-area:title;max-width:none;margin-bottom:48px;font-size:46px}
+    .plush-flt .fl-title{grid-area:title;max-width:none;margin-bottom:48px;font-size:42px}
     .plush-flt .fl-left{grid-area:left;padding-bottom:80px}
     .plush-flt .fl-product{display:none}
     .plush-flt .fl-cards{grid-template-columns:1fr 1fr;gap:18px}
