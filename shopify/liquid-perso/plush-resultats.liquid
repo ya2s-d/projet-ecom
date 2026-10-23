@@ -23,7 +23,11 @@
   LES ÉTOILES
   Si une appli d'avis (Judge.me, Loox, Okendo…) enregistre la note sur ta fiche produit,
   les étoiles prennent la vraie note toutes seules. Sinon, remplis rating_value (ex : '4.8')
-  et rating_count (ex : '120') avec tes VRAIS chiffres. Vide = la ligne ne s'affiche pas.
+  et rating_count (ex : '120') avec tes VRAIS chiffres.
+  Tant que c'est vide : dans l'éditeur de thème tu vois une note d'exemple pour voir le rendu,
+  mais sur ta boutique en ligne la ligne d'étoiles ne s'affiche pas.
+
+  ESPACES : space_top = marge au-dessus de la section, space_bottom = en dessous (en px).
 
   Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
 {%- endcomment -%}
@@ -62,10 +66,19 @@
   assign c_accent = '#8A4524'
   assign c_card = '#F6F2ED'
   assign c_tab_off = '#E4DACB'
+  assign space_top = 20
+  assign space_bottom = 48
 
-  if rating_value == blank and product.metafields.reviews.rating.value != blank
-    assign rating_value = product.metafields.reviews.rating.value.rating | round: 1
-    assign rating_count = product.metafields.reviews.rating_count.value
+  if rating_value == blank
+    assign auto_rating = product.metafields.reviews.rating.value.rating | default: ''
+    if auto_rating != ''
+      assign rating_value = auto_rating | round: 1
+      assign rating_count = product.metafields.reviews.rating_count.value | default: ''
+    endif
+  endif
+  assign rating_demo = false
+  if rating_value == blank and request.design_mode
+    assign rating_demo = true
   endif
 
   assign n1 = 0
@@ -108,13 +121,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 {%- if show_1 or show_2 -%}
-<div class="plush-res" style="--rs-ink:{{ c_ink }};--rs-muted:{{ c_muted }};--rs-accent:{{ c_accent }};--rs-card:{{ c_card }};--rs-off:{{ c_tab_off }};">
-  {%- if rating_value != blank -%}
+<div class="plush-res" style="--rs-ink:{{ c_ink }};--rs-muted:{{ c_muted }};--rs-accent:{{ c_accent }};--rs-card:{{ c_card }};--rs-off:{{ c_tab_off }};padding:{{ space_top }}px 0 {{ space_bottom }}px;">
+  {%- if rating_value != blank or rating_demo -%}
     <p class="rs-rating">
       <span class="rs-stars" aria-label="{{ rating_value }} out of 5">
         {%- for s in (1..5) -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>{%- endfor -%}
       </span>
-      {{ rating_value }}/5{% if rating_count != blank %} — {{ rating_count }}+ {{ rating_text | escape }}{% endif %}
+      {%- if rating_demo -%}
+        4.9/5 — 120+ {{ rating_text | escape }} <span class="rs-demo">(exemple, visible seulement dans l'éditeur)</span>
+      {%- else -%}
+        {{ rating_value }}/5{% if rating_count != blank %} — {{ rating_count }}+ {{ rating_text | escape }}{% endif %}
+      {%- endif -%}
     </p>
   {%- endif -%}
   <h2 class="rs-title">{{ headline | escape }}</h2>
@@ -187,11 +204,12 @@
 {%- endif -%}
 
 <style>
-  .plush-res{container-type:inline-size;font-family:'Poppins',sans-serif;color:var(--rs-ink);text-align:center;padding:48px 0}
+  .plush-res{container-type:inline-size;font-family:'Poppins',sans-serif;color:var(--rs-ink);text-align:center}
   .plush-res *{box-sizing:border-box}
-  .plush-res .rs-rating{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px;font-size:15px;font-weight:400;color:var(--rs-ink)}
+  .plush-res .rs-rating{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 8px;margin:0 0 12px;font-size:15px;font-weight:400;color:var(--rs-ink)}
   .plush-res .rs-stars{display:inline-flex;gap:1px}
   .plush-res .rs-stars svg{width:17px;height:17px;fill:var(--rs-accent)}
+  .plush-res .rs-demo{font-size:11px;color:var(--rs-muted)}
   .plush-res .rs-title{margin:0 auto 22px;max-width:22ch;font-family:inherit;font-size:28px;font-size:clamp(26px,7.6cqi,42px);font-weight:600;line-height:1.12;letter-spacing:-.02em;color:var(--rs-ink);text-wrap:balance}
   .plush-res .rs-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px;margin:0 auto 22px}
   .plush-res .rs-tab{padding:14px 10px;border:0;border-radius:10px;background:var(--rs-off);color:var(--rs-muted);font:500 16px 'Poppins',sans-serif;cursor:pointer}
