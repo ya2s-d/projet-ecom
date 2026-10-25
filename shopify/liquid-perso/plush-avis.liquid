@@ -1,0 +1,297 @@
+{%- comment -%}
+  PLUSH — section Avis clients « façon Afina », version « Liquid personnalisé ».
+  Colle tout ce code dans une section « Liquid personnalisé ».
+
+  PC : 4 avis visibles, flèches dessous pour voir les suivants (cachées s'il y en a 4 ou moins).
+  Téléphone : un avis à la fois, on glisse au doigt.
+  Toutes les cartes ont la même hauteur : photos, étoiles et prénoms restent alignés.
+
+  TES AVIS (jusqu'à 8) — uniquement de VRAIS avis, copiés depuis ton appli d'avis (Judge.me…)
+  - photo_1 : le lien de la photo du client (Contenu > Fichiers). Vide = une case avec son initiale.
+  - name_1 : le prénom et l'initiale, ex : 'Megan R.'
+  - stars_1 : la note qu'il a donnée, de 1 à 5.
+  - text_1 : le texte de son avis, tel qu'il l'a écrit.
+  - badge_1 : 'Verified buyer' SEULEMENT s'il a acheté. S'il a reçu le produit gratuitement,
+    mets 'Received a free product'. Mets '' pour ne rien afficher.
+  Un avis sans texte ne s'affiche pas. Tant qu'aucun avis n'est rempli, la section est
+  invisible pour tes clients (dans l'éditeur, tu vois des cartes d'exemple vides).
+
+  LES ÉTOILES DU HAUT : rating_value (ex : '4.8') et rating_count (ex : '120') = tes VRAIS
+  chiffres. Si ton appli d'avis enregistre la note sur la fiche produit, elle s'affiche toute
+  seule. Vide = la ligne ne s'affiche pas.
+
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign rating_value = ''
+  assign rating_count = ''
+  assign rating_text = 'Happy Customers'
+  assign headline = 'What customers notice after switching to Plush'
+
+  assign photo_1 = ''
+  assign name_1 = ''
+  assign stars_1 = 5
+  assign text_1 = ''
+  assign badge_1 = 'Verified buyer'
+
+  assign photo_2 = ''
+  assign name_2 = ''
+  assign stars_2 = 5
+  assign text_2 = ''
+  assign badge_2 = 'Verified buyer'
+
+  assign photo_3 = ''
+  assign name_3 = ''
+  assign stars_3 = 5
+  assign text_3 = ''
+  assign badge_3 = 'Verified buyer'
+
+  assign photo_4 = ''
+  assign name_4 = ''
+  assign stars_4 = 5
+  assign text_4 = ''
+  assign badge_4 = 'Verified buyer'
+
+  assign photo_5 = ''
+  assign name_5 = ''
+  assign stars_5 = 5
+  assign text_5 = ''
+  assign badge_5 = 'Verified buyer'
+
+  assign photo_6 = ''
+  assign name_6 = ''
+  assign stars_6 = 5
+  assign text_6 = ''
+  assign badge_6 = 'Verified buyer'
+
+  assign photo_7 = ''
+  assign name_7 = ''
+  assign stars_7 = 5
+  assign text_7 = ''
+  assign badge_7 = 'Verified buyer'
+
+  assign photo_8 = ''
+  assign name_8 = ''
+  assign stars_8 = 5
+  assign text_8 = ''
+  assign badge_8 = 'Verified buyer'
+
+  assign c_ink = '#141414'
+  assign c_muted = '#6B6660'
+  assign c_accent = '#8A4524'
+  assign c_tile = '#E4DACB'
+  assign space_top = 20
+  assign space_bottom = 48
+
+  if rating_value == blank
+    assign auto_rating = product.metafields.reviews.rating.value.rating | default: ''
+    if auto_rating != ''
+      assign rating_value = auto_rating | round: 1
+      assign rating_count = product.metafields.reviews.rating_count.value | default: ''
+    endif
+  endif
+
+  assign all_text = text_1 | append: text_2 | append: text_3 | append: text_4 | append: text_5 | append: text_6 | append: text_7 | append: text_8
+  assign show_section = false
+  if all_text != blank or request.design_mode
+    assign show_section = true
+  endif
+-%}
+
+{%- if show_section -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="plush-rev" style="--rv-ink:{{ c_ink }};--rv-muted:{{ c_muted }};--rv-accent:{{ c_accent }};--rv-tile:{{ c_tile }};padding:{{ space_top }}px 0 {{ space_bottom }}px;">
+  <div class="rv-head">
+    {%- if rating_value != blank -%}
+      <p class="rv-rating">
+        <span class="rv-stars" aria-label="{{ rating_value }} out of 5">
+          {%- for s in (1..5) -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>{%- endfor -%}
+        </span>
+        {{ rating_value }}/5{% if rating_count != blank %} — {{ rating_count }}+ {{ rating_text | escape }}{% endif %}
+      </p>
+    {%- endif -%}
+    {%- if headline != blank -%}<h2 class="rv-title">{{ headline | escape }}</h2>{%- endif -%}
+  </div>
+
+  <ul class="rv-track" role="list" data-rv-track>
+    {%- for i in (1..8) -%}
+      {%- liquid
+        case i
+          when 1
+            assign ph = photo_1
+            assign nm = name_1
+            assign st = stars_1
+            assign tx = text_1
+            assign bd = badge_1
+          when 2
+            assign ph = photo_2
+            assign nm = name_2
+            assign st = stars_2
+            assign tx = text_2
+            assign bd = badge_2
+          when 3
+            assign ph = photo_3
+            assign nm = name_3
+            assign st = stars_3
+            assign tx = text_3
+            assign bd = badge_3
+          when 4
+            assign ph = photo_4
+            assign nm = name_4
+            assign st = stars_4
+            assign tx = text_4
+            assign bd = badge_4
+          when 5
+            assign ph = photo_5
+            assign nm = name_5
+            assign st = stars_5
+            assign tx = text_5
+            assign bd = badge_5
+          when 6
+            assign ph = photo_6
+            assign nm = name_6
+            assign st = stars_6
+            assign tx = text_6
+            assign bd = badge_6
+          when 7
+            assign ph = photo_7
+            assign nm = name_7
+            assign st = stars_7
+            assign tx = text_7
+            assign bd = badge_7
+          else
+            assign ph = photo_8
+            assign nm = name_8
+            assign st = stars_8
+            assign tx = text_8
+            assign bd = badge_8
+        endcase
+        assign demo = false
+        if tx == blank
+          if request.design_mode and all_text == blank and i <= 4
+            assign demo = true
+          else
+            continue
+          endif
+        endif
+        assign st = st | plus: 0
+        if st > 5
+          assign st = 5
+        endif
+        if st < 1
+          assign st = 1
+        endif
+      -%}
+      <li class="rv-card">
+        <div class="rv-photo">
+          {%- if ph != blank -%}
+            <img src="{{ ph }}" alt="{{ nm | escape }}" loading="lazy">
+          {%- elsif demo -%}
+            <span class="rv-initial rv-initial--demo">Photo client {{ i }}</span>
+          {%- else -%}
+            <span class="rv-initial">{{ nm | slice: 0 | upcase }}</span>
+          {%- endif -%}
+        </div>
+        <p class="rv-rate">
+          <span class="rv-stars" aria-label="{{ st }} out of 5">
+            {%- for s in (1..5) -%}<svg viewBox="0 0 24 24" aria-hidden="true"{% if s > st %} class="is-off"{% endif %}><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>{%- endfor -%}
+          </span>
+          {{ st }}/5
+        </p>
+        <p class="rv-text">
+          {%- if demo -%}<span class="rv-demo">Ici, le texte d'un vrai avis client.</span>{%- else -%}“{{ tx | escape }}”{%- endif -%}
+        </p>
+        <div class="rv-who">
+          <span class="rv-name">
+            <svg class="rv-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.3l3 3 6-6.3"/></svg>
+            {%- if demo -%}Prénom N.{%- else -%}{{ nm | escape }}{%- endif -%}
+          </span>
+          {%- if bd != blank -%}<span class="rv-badge">{{ bd | escape }}</span>{%- endif -%}
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  <div class="rv-nav">
+    <button type="button" class="rv-btn" data-rv-prev aria-label="Previous reviews">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    </button>
+    <button type="button" class="rv-btn" data-rv-next aria-label="Next reviews">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</div>
+{%- endif -%}
+
+<style>
+  .plush-rev{container-type:inline-size;font-family:'Poppins',sans-serif;color:var(--rv-ink)}
+  .plush-rev *{box-sizing:border-box}
+  .plush-rev .rv-head{text-align:center;padding:0 20px;margin-bottom:28px}
+  .plush-rev .rv-rating{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 8px;margin:0 0 12px;font-size:15px;color:var(--rv-ink)}
+  .plush-rev .rv-stars{display:inline-flex;gap:1px}
+  .plush-rev .rv-stars svg{width:17px;height:17px;fill:var(--rv-accent)}
+  .plush-rev .rv-stars svg.is-off{fill:var(--rv-tile)}
+  .plush-rev .rv-title{margin:0 auto;max-width:20ch;font-family:inherit;font-size:28px;font-size:clamp(26px,7.6cqi,42px);font-weight:600;line-height:1.12;letter-spacing:-.02em;color:var(--rv-ink);text-wrap:balance}
+  .plush-rev ul.rv-track{list-style:none;margin:0;padding:0 20px;display:flex;align-items:stretch;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .plush-rev ul.rv-track::-webkit-scrollbar{display:none}
+  .plush-rev .rv-card{flex:0 0 78%;display:flex;flex-direction:column;margin:0;scroll-snap-align:start}
+  .plush-rev .rv-card:first-child{margin-left:auto}
+  .plush-rev .rv-card:last-child{margin-right:auto}
+  .plush-rev .rv-photo{position:relative;aspect-ratio:4 / 5;border-radius:14px;overflow:hidden;background:var(--rv-tile)}
+  .plush-rev .rv-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .plush-rev .rv-initial{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:600;color:var(--rv-accent)}
+  .plush-rev .rv-initial--demo{font-size:13px;font-weight:400;color:var(--rv-muted)}
+  .plush-rev .rv-rate{display:flex;align-items:center;gap:8px;margin:16px 0 10px;font-size:15px;font-weight:500}
+  .plush-rev .rv-text{flex:1;margin:0;font-size:15px;line-height:1.6;color:#4a4642}
+  .plush-rev .rv-demo{color:var(--rv-muted);font-style:italic}
+  .plush-rev .rv-who{display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;justify-content:space-between;gap:4px 10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--rv-tile);font-size:14px}
+  .plush-rev .rv-name{display:inline-flex;align-items:center;gap:7px;font-weight:500;min-width:0}
+  .plush-rev .rv-check{flex:none;width:18px;height:18px}
+  .plush-rev .rv-check circle{fill:var(--rv-ink)}
+  .plush-rev .rv-check path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .plush-rev .rv-badge{flex:none;color:var(--rv-muted);font-size:13px}
+  .plush-rev .rv-nav{display:none}
+
+  @container (min-width:900px){
+    .plush-rev ul.rv-track{--rv-pad:max(4cqi, calc((100cqi - 1340px) / 2 + 54px));gap:24px;padding:0 var(--rv-pad);scroll-padding:0 var(--rv-pad)}
+    .plush-rev .rv-card{flex:0 0 calc((100cqi - 2 * var(--rv-pad) - 72px) / 4)}
+    .plush-rev .rv-nav{display:flex;justify-content:center;gap:10px;margin-top:32px}
+    .plush-rev .rv-btn{display:flex;align-items:center;justify-content:center;width:46px;height:46px;padding:0;border:1px solid var(--rv-ink);border-radius:50%;background:transparent;color:var(--rv-ink);cursor:pointer;transition:background .15s,color .15s}
+    .plush-rev .rv-btn:hover{background:var(--rv-ink);color:#fff}
+    .plush-rev .rv-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .plush-rev.rv-static .rv-nav{display:none}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('.plush-rev').forEach(function (root) {
+      if (root.dataset.ready) return;
+      root.dataset.ready = '1';
+      var track = root.querySelector('[data-rv-track]');
+      function sync() {
+        root.classList.toggle('rv-static', track.scrollWidth <= track.clientWidth + 2);
+        var rows = root.querySelectorAll('.rv-who');
+        var max = 0;
+        rows.forEach(function (r) { r.style.minHeight = ''; max = Math.max(max, r.offsetHeight); });
+        rows.forEach(function (r) { r.style.minHeight = max + 'px'; });
+      }
+      function step(dir) {
+        var card = track.querySelector('.rv-card');
+        if (!card) return;
+        var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        track.scrollBy({ left: dir * (card.getBoundingClientRect().width + gap), behavior: 'smooth' });
+      }
+      root.querySelector('[data-rv-prev]').addEventListener('click', function () { step(-1); });
+      root.querySelector('[data-rv-next]').addEventListener('click', function () { step(1); });
+      window.addEventListener('resize', sync);
+      window.addEventListener('load', sync);
+      if (document.fonts) document.fonts.ready.then(sync);
+      sync();
+    });
+  })();
+</script>
