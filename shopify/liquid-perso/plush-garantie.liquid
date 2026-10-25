@@ -1,0 +1,125 @@
+{%- comment -%}
+  PLUSH — section Garantie « façon Afina », version « Liquid personnalisé ».
+  Colle tout ce code dans une section « Liquid personnalisé ».
+
+  PC : le texte et le bouton à gauche, la photo à droite.
+  Téléphone : le texte et le bouton en haut, la photo en dessous.
+
+  TA PHOTO : Contenu > Fichiers > Importer, puis copie le lien (https://cdn.shopify.com/...)
+  et colle-le dans image. De préférence une photo détourée (fond transparent), comme Afina.
+  Vide = sur ta boutique, la section s'affiche sans photo. Dans l'éditeur de thème, tu vois
+  une case en pointillés pour savoir où elle ira.
+
+  LE BOUTON remonte jusqu'au choix Duo / Solo, comme celui de la section avant / après.
+
+  RETOURS : n'écris « We cover return shipping » que si c'est vraiment le cas.
+
+  full_width = true : la couleur de fond va d'un bord à l'autre de l'écran.
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign eyebrow = 'Risk-free for 60 days'
+  assign headline = 'Feel the difference or send it back.'
+  assign text = "Try Plush through weeks of showers. If your hair and skin don't feel different, send it back within 60 days for a full refund."
+  assign button = 'Try Plush risk-free'
+  assign badge_1 = '60-day money back'
+  assign badge_2 = 'Free U.S. shipping'
+  assign image = ''
+
+  assign full_width = true
+  assign c_bg = '#8A4524'
+  assign c_text = '#F6F2ED'
+  assign c_button = '#F6F2ED'
+  assign c_button_text = '#141414'
+  assign space_top = 0
+  assign space_bottom = 0
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div
+  class="plush-gar{% if full_width %} plush-gar--full{% endif %}"
+  style="--gr-bg:{{ c_bg }};--gr-text:{{ c_text }};--gr-btn:{{ c_button }};--gr-btn-text:{{ c_button_text }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+>
+  <div class="gr-wrap">
+    <div class="gr-copy">
+      {%- if eyebrow != blank -%}
+        <p class="gr-eyebrow">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-3 8-7 9.5-4-1.5-7-5.2-7-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></svg>
+          {{ eyebrow | escape }}
+        </p>
+      {%- endif -%}
+      <h2 class="gr-title">{{ headline | escape }}</h2>
+      {%- if text != blank -%}<p class="gr-text">{{ text | escape }}</p>{%- endif -%}
+      <a href="#" class="gr-btn" data-plush-gar-cta>{{ button | escape }}</a>
+      {%- if badge_1 != blank or badge_2 != blank -%}
+        <ul class="gr-badges" role="list">
+          {%- if badge_1 != blank -%}
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>{{ badge_1 | escape }}</li>
+          {%- endif -%}
+          {%- if badge_2 != blank -%}
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11.5v10H2.5zM14 10h4.2l3.3 3.4v3.1H14"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17.5" cy="17.5" r="1.9"/></svg>{{ badge_2 | escape }}</li>
+          {%- endif -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    {%- if image != blank -%}
+      <div class="gr-media"><img src="{{ image }}" alt="Woman after a shower with Plush" loading="lazy"></div>
+    {%- elsif request.design_mode -%}
+      <div class="gr-media"><span class="gr-empty">Ta photo (détourée, fond transparent)</span></div>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .plush-gar{container-type:inline-size;position:relative;overflow:hidden;background:var(--gr-bg);color:var(--gr-text);font-family:'Poppins',sans-serif;border-radius:20px}
+  .plush-gar--full{border-radius:0;overflow:visible;box-shadow:0 0 0 100vmax var(--gr-bg);clip-path:inset(0 -100vmax)}
+  .plush-gar *{box-sizing:border-box}
+  .plush-gar .gr-wrap{position:relative;padding:44px 20px 0}
+  .plush-gar .gr-eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:14px;font-weight:500;color:var(--gr-text)}
+  .plush-gar .gr-eyebrow svg{flex:none;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .plush-gar .gr-title{margin:0 0 16px;max-width:16ch;font-family:inherit;font-size:32px;font-size:clamp(30px,8.6cqi,48px);font-weight:600;line-height:1.08;letter-spacing:-.02em;color:var(--gr-text);text-wrap:balance}
+  .plush-gar .gr-text{margin:0 0 24px;max-width:46ch;font-size:16px;line-height:1.55;color:var(--gr-text);opacity:.92}
+  .plush-gar .gr-btn{display:block;width:100%;padding:18px 20px;border-radius:12px;background:var(--gr-btn);color:var(--gr-btn-text);font-size:17px;font-weight:600;text-align:center;text-decoration:none;transition:filter .15s}
+  .plush-gar .gr-btn:hover{filter:brightness(.96)}
+  .plush-gar ul.gr-badges{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:16px 0 0;padding:0}
+  .plush-gar .gr-badges li{display:inline-flex;align-items:center;gap:6px;margin:0;font-size:13px;font-weight:500;color:var(--gr-text)}
+  .plush-gar .gr-badges svg{flex:none;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .plush-gar .gr-media{position:relative;width:100%;max-width:440px;aspect-ratio:4 / 5;margin:32px auto 0}
+  .plush-gar .gr-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:bottom}
+  .plush-gar .gr-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;font-size:13px;border:1px dashed rgba(255,255,255,.5);border-bottom:0;border-radius:220px 220px 0 0;opacity:.8}
+  .plush-gar .gr-wrap:not(:has(.gr-media)){padding-bottom:44px}
+
+  @container (min-width:900px){
+    .plush-gar .gr-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;column-gap:6%;max-width:1340px;margin:0 auto;padding:0 4%;min-height:560px}
+    .plush-gar .gr-copy{padding:72px 0}
+    .plush-gar .gr-title{font-size:46px}
+    .plush-gar .gr-text{font-size:17px}
+    .plush-gar .gr-btn{max-width:600px}
+    .plush-gar ul.gr-badges{max-width:600px}
+    .plush-gar .gr-media{align-self:stretch;max-width:none;aspect-ratio:auto;min-height:560px;margin:32px 0 0}
+    .plush-gar .gr-wrap:not(:has(.gr-media)){padding-bottom:0}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('[data-plush-gar-cta]').forEach(function (btn) {
+      if (btn.dataset.ready) return;
+      btn.dataset.ready = '1';
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.querySelector('div.pb[data-selected]') || document.querySelector('form[action*="/cart/add"]');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+</script>
