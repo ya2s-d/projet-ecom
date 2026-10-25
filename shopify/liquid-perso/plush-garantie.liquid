@@ -93,9 +93,9 @@
   .plush-gar ul.gr-badges{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:16px 0 0;padding:0}
   .plush-gar .gr-badges li{display:inline-flex;align-items:center;gap:6px;margin:0;font-size:13px;font-weight:500;color:var(--gr-text)}
   .plush-gar .gr-badges svg{flex:none;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-  .plush-gar .gr-media{position:relative;width:100%;max-width:440px;aspect-ratio:4 / 5;margin:32px auto 0}
-  .plush-gar .gr-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:bottom}
-  .plush-gar .gr-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;font-size:13px;border:1px dashed rgba(255,255,255,.5);border-bottom:0;border-radius:220px 220px 0 0;opacity:.8}
+  .plush-gar .gr-media{position:relative;margin:28px -20px 0}
+  .plush-gar .gr-media img{display:block;width:100%;height:auto}
+  .plush-gar .gr-empty{position:relative;height:300px;margin:0 20px;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;font-size:13px;border:1px dashed rgba(255,255,255,.5);border-bottom:0;border-radius:220px 220px 0 0;opacity:.8}
   .plush-gar .gr-wrap:not(:has(.gr-media)){padding-bottom:44px}
 
   @container (min-width:900px){
@@ -106,7 +106,9 @@
     .plush-gar .gr-text{font-size:17px}
     .plush-gar .gr-btn{max-width:600px}
     .plush-gar ul.gr-badges{max-width:600px}
-    .plush-gar .gr-media{align-self:stretch;max-width:none;aspect-ratio:auto;min-height:560px;margin:32px 0 0}
+    .plush-gar .gr-media{align-self:stretch;min-height:560px;margin:32px 0 0}
+    .plush-gar .gr-media img{position:absolute;inset:0;height:100%;object-fit:contain;object-position:bottom}
+    .plush-gar .gr-empty{position:absolute;inset:0;height:auto;margin:0}
     .plush-gar .gr-wrap:not(:has(.gr-media)){padding-bottom:0}
   }
 </style>
