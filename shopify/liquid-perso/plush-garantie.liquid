@@ -14,7 +14,9 @@
 
   RETOURS : n'écris « We cover return shipping » que si c'est vraiment le cas.
 
-  full_width = true : la couleur de fond va d'un bord à l'autre de l'écran.
+  CARTE : la section est une carte aux coins arrondis, entourée du fond de ton site.
+  card_margin = l'espace entre la carte et les bords de l'écran (en px).
+  full_width = true : la couleur va d'un bord à l'autre de l'écran, sans carte.
   Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
 {%- endcomment -%}
 
@@ -27,7 +29,8 @@
   assign badge_2 = 'Free U.S. shipping'
   assign image = ''
 
-  assign full_width = true
+  assign full_width = false
+  assign card_margin = 14
   assign c_bg = '#8A4524'
   assign c_text = '#F6F2ED'
   assign c_button = '#F6F2ED'
@@ -42,7 +45,7 @@
 
 <div
   class="plush-gar{% if full_width %} plush-gar--full{% endif %}"
-  style="--gr-bg:{{ c_bg }};--gr-text:{{ c_text }};--gr-btn:{{ c_button }};--gr-btn-text:{{ c_button_text }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+  style="--gr-bg:{{ c_bg }};--gr-text:{{ c_text }};--gr-btn:{{ c_button }};--gr-btn-text:{{ c_button_text }};--gr-side:{{ card_margin }}px;margin:{{ space_top }}px auto {{ space_bottom }}px;"
 >
   <div class="gr-wrap">
     <div class="gr-copy">
@@ -77,6 +80,7 @@
 
 <style>
   .plush-gar{container-type:inline-size;position:relative;overflow:hidden;background:var(--gr-bg);color:var(--gr-text);font-family:'Poppins',sans-serif;border-radius:20px}
+  .plush-gar:not(.plush-gar--full){width:calc(100% - var(--gr-side) * 2);max-width:1400px}
   .plush-gar--full{border-radius:0;overflow:visible;box-shadow:0 0 0 100vmax var(--gr-bg);clip-path:inset(0 -100vmax)}
   .plush-gar *{box-sizing:border-box}
   .plush-gar .gr-wrap{position:relative;padding:44px 20px 0}
@@ -95,6 +99,7 @@
   .plush-gar .gr-wrap:not(:has(.gr-media)){padding-bottom:44px}
 
   @container (min-width:900px){
+    .plush-gar:not(.plush-gar--full){border-radius:28px}
     .plush-gar .gr-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;column-gap:6%;max-width:1340px;margin:0 auto;padding:0 4%;min-height:560px}
     .plush-gar .gr-copy{padding:72px 0}
     .plush-gar .gr-title{font-size:46px}
