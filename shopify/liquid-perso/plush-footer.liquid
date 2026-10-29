@@ -103,6 +103,8 @@
           {%- if shop.privacy_policy -%}<li><a href="{{ shop.privacy_policy.url }}">Privacy policy</a></li>{%- endif -%}
           {%- if shop.terms_of_service -%}<li><a href="{{ shop.terms_of_service.url }}">Terms of service</a></li>{%- endif -%}
           {%- if shop.refund_policy -%}<li><a href="{{ shop.refund_policy.url }}">Refund policy</a></li>{%- endif -%}
+          {%- assign privacy_choices = pages['data-sharing-opt-out'] -%}
+          {%- if privacy_choices.url and privacy_choices.url != blank -%}<li><a href="{{ privacy_choices.url }}">Your privacy choices</a></li>{%- endif -%}
         </ul>
       </div>
     </nav>
