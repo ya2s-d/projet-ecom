@@ -1,0 +1,215 @@
+{%- comment -%}
+  PLUSH — page Contact (maquette validée le 1er nov.), version « Liquid personnalisé ».
+
+  INSTALLATION
+  1. Personnaliser > en haut, choisis Pages > Contact.
+  2. Masque (icône œil) les sections de démo : la bannière « Need Help? / Conact Us »,
+     le texte, le formulaire « Get in touch » et la liste de collections.
+  3. Ajouter une section > « Liquid personnalisé » > colle tout ce code.
+     Marge supérieure 0 et marge inférieure 0.
+  4. Enregistrer, puis envoie-toi un message de test depuis une autre adresse email.
+     S'il arrive dans les spams de Gmail : « Non spam », les suivants arriveront normalement.
+
+  OÙ ARRIVENT LES MESSAGES : à l'email de ta boutique (Paramètres > Général > Email de la
+  boutique), aujourd'hui info.tryplush@gmail.com. « Répondre » dans Gmail répond au client.
+  L'email affiché sur la page est le même, lu en direct : change-le dans les réglages et la page
+  suit. contact_email = '...' force une autre adresse (ex. hello@plushshower.com).
+{%- endcomment -%}
+
+{%- liquid
+  assign eyebrow = 'CONTACT'
+  assign headline = "We're here to help."
+  assign intro = 'Questions about your order, your shower or your water? Write to us. A real person replies within 2 business days.'
+  assign topic_1 = 'My order'
+  assign topic_2 = 'Returns & guarantee'
+  assign topic_3 = 'Installing Plush'
+  assign topic_4 = 'Something else'
+  assign button = 'Send message'
+  assign note = 'A real person reads every message. We reply within 2 business days.'
+  assign contact_email = ''
+  assign reply_title = 'Replies within 2 business days'
+  assign reply_text = 'Monday to Friday, from a real person.'
+  assign faq_text = 'Installation, cartridges, shipping:'
+  assign faq_link = '/products/plush-filtered-showerhead'
+  assign guarantee = "On day 59, if you don't love it, you get all your money back."
+
+  if contact_email == blank
+    assign contact_email = shop.email
+  endif
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="plush-contact" id="plush-contact">
+  <div class="pct-in">
+    <div class="pct-top">
+      <p class="pct-eye">{{ eyebrow | escape }}</p>
+      <h1 class="pct-title">{{ headline | escape }}</h1>
+      <p class="pct-intro">{{ intro | escape }}</p>
+    </div>
+
+    <div class="pct-grid">
+      <div class="pct-card">
+        {%- form 'contact', id: 'PlushContactForm', class: 'pct-form' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="pct-ok" role="status">
+              <span class="pct-ok__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></span>
+              <p class="pct-ok__title">Message sent.</p>
+              <p class="pct-ok__text" data-pct-thanks>We'll reply within 2 business days. Check your spam folder just in case.</p>
+            </div>
+          {%- else -%}
+            {%- if form.errors -%}
+              <div class="pct-errors" role="alert">{{ form.errors | default_errors }}</div>
+            {%- endif -%}
+            <div class="pct-row">
+              <div class="pct-field">
+                <label for="PlushContact-name">Name <span>(optional)</span></label>
+                <input id="PlushContact-name" type="text" name="contact[name]" autocomplete="name" placeholder="Your name" value="{{ form.name | escape }}">
+              </div>
+              <div class="pct-field">
+                <label for="PlushContact-email">Email</label>
+                <input id="PlushContact-email" type="email" name="contact[email]" autocomplete="email" placeholder="you@email.com" required value="{{ form.email | escape }}">
+              </div>
+            </div>
+            <div class="pct-field">
+              <label for="PlushContact-order">Order number <span>(if you have one)</span></label>
+              <input id="PlushContact-order" type="text" name="contact[Order number]" placeholder="#1001">
+            </div>
+            <fieldset class="pct-field pct-topics">
+              <legend>What's it about?</legend>
+              <div class="pct-chips">
+                {%- assign topics = topic_1 | append: '|' | append: topic_2 | append: '|' | append: topic_3 | append: '|' | append: topic_4 | split: '|' -%}
+                {%- for t in topics -%}
+                  {%- if t != blank -%}
+                    <label class="pct-chip"><input type="radio" name="contact[Topic]" value="{{ t | escape }}"{% if forloop.first %} checked{% endif %}><span>{{ t | escape }}</span></label>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </fieldset>
+            <div class="pct-field">
+              <label for="PlushContact-body">Message</label>
+              <textarea id="PlushContact-body" name="contact[body]" rows="6" required placeholder="Tell us everything. The more details, the faster we can help.">{{ form.body | escape }}</textarea>
+            </div>
+            <button type="submit" class="pct-btn">{{ button | escape }}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="pct-note">{{ note | escape }}</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+
+      <div class="pct-side">
+        {%- if contact_email != blank -%}
+          <div class="pct-tile">
+            <span class="pct-tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <div><b>Email us directly</b><span><a href="mailto:{{ contact_email | escape }}">{{ contact_email | escape }}</a></span></div>
+          </div>
+        {%- endif -%}
+        <div class="pct-tile">
+          <span class="pct-tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><b>{{ reply_title | escape }}</b><span>{{ reply_text | escape }}</span></div>
+        </div>
+        {%- if faq_link != blank -%}
+          <div class="pct-tile">
+            <span class="pct-tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>
+            <div><b>Quick answers</b><span>{{ faq_text | escape }} <a href="{{ faq_link }}">see the FAQ</a></span></div>
+          </div>
+        {%- endif -%}
+        <div class="pct-promise">
+          <span class="pct-promise__word" aria-hidden="true">plush</span>
+          <b>{{ guarantee | escape }}</b>
+          <span>60-day money-back guarantee{% if shop.refund_policy %} · <a href="{{ shop.refund_policy.url }}">Refund policy</a>{% endif %}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var root = document.getElementById('plush-contact');
+    if (!root) return;
+    var form = root.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', function () {
+        try {
+          var n = form.querySelector('[name="contact[name]"]');
+          var e = form.querySelector('[name="contact[email]"]');
+          sessionStorage.setItem('plushContact', JSON.stringify({ n: n ? n.value.trim() : '', e: e ? e.value.trim() : '' }));
+        } catch (err) {}
+      });
+    }
+    var thanks = root.querySelector('[data-pct-thanks]');
+    if (thanks) {
+      try {
+        var d = JSON.parse(sessionStorage.getItem('plushContact') || '{}');
+        if (d.e) {
+          thanks.textContent = (d.n ? 'Thanks, ' + d.n.split(' ')[0] + '. ' : 'Thanks. ') + "We'll reply to " + d.e + ' within 2 business days. Check your spam folder just in case.';
+        }
+        sessionStorage.removeItem('plushContact');
+      } catch (err) {}
+      root.scrollIntoView({ block: 'start' });
+    }
+  })();
+</script>
+
+<style>
+  .plush-contact{container-type:inline-size;background:#F6F2ED;color:#141414;font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:0;padding:88px 48px 96px}
+  .plush-contact *{box-sizing:border-box}
+  .plush-contact p{margin:0}
+  .plush-contact .pct-in{max-width:1180px;margin:0 auto}
+  .plush-contact .pct-top{max-width:640px;margin:0 auto 52px;text-align:center}
+  .plush-contact .pct-eye{margin:0 0 16px;font-size:13px;letter-spacing:.22em;font-weight:600;color:#8A4524}
+  .plush-contact .pct-title{margin:0 0 16px;font-family:'Poppins',sans-serif;font-size:clamp(38px,5cqi,64px);line-height:1.02;letter-spacing:-.035em;font-weight:600;color:#141414}
+  .plush-contact .pct-intro{font-size:17px;line-height:1.6;color:#6B6660}
+  .plush-contact .pct-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:start}
+  .plush-contact .pct-card{background:#fff;border-radius:24px;padding:34px;box-shadow:0 24px 50px -36px rgba(60,30,10,.35)}
+  .plush-contact .pct-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .plush-contact .pct-field{margin:0 0 18px;padding:0;border:0;min-width:0}
+  .plush-contact .pct-field label,.plush-contact .pct-field legend{display:block;margin:0 0 8px;padding:0;font-size:13px;font-weight:600;color:#141414}
+  .plush-contact .pct-field label span{font-weight:400;color:#9b948b}
+  .plush-contact input[type="text"],.plush-contact input[type="email"],.plush-contact textarea{display:block;width:100%;height:52px;margin:0;padding:0 16px;border:1px solid #DDD5CA;border-radius:14px;background:#FBF9F6;font:400 15px 'Poppins',sans-serif;color:#141414;box-shadow:none;outline:none;-webkit-appearance:none;appearance:none}
+  .plush-contact textarea{height:140px;padding:14px 16px;line-height:1.5;resize:vertical}
+  .plush-contact input::placeholder,.plush-contact textarea::placeholder{color:#a59d93;opacity:1}
+  .plush-contact input:focus,.plush-contact textarea:focus{border-color:#8A4524;background:#fff;box-shadow:0 0 0 4px rgba(138,69,36,.1)}
+  .plush-contact .pct-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .plush-contact .pct-chip{position:relative;display:inline-flex;margin:0;cursor:pointer}
+  .plush-contact .pct-chip input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+  .plush-contact .pct-chip span{display:inline-block;padding:9px 14px;border:1px solid #DDD5CA;border-radius:99px;background:#fff;font-size:13.5px;font-weight:500;color:#141414;transition:background .15s ease,color .15s ease,border-color .15s ease}
+  .plush-contact .pct-chip input:checked + span{background:#141414;border-color:#141414;color:#F6F2ED}
+  .plush-contact .pct-chip input:focus-visible + span{outline:2px solid #8A4524;outline-offset:2px}
+  .plush-contact .pct-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;margin:6px 0 0;padding:0 24px;border:0;border-radius:99px;background:#8A4524;color:#F6F2ED;font:600 16.5px 'Poppins',sans-serif;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+  .plush-contact .pct-btn svg{width:18px;height:18px;flex:none}
+  .plush-contact .pct-btn:hover{transform:translateY(-1px);box-shadow:0 12px 26px -14px rgba(60,25,10,.6)}
+  .plush-contact .pct-note{margin-top:14px;text-align:center;font-size:12.5px;line-height:1.5;color:#6B6660}
+  .plush-contact .pct-errors{margin:0 0 18px;padding:12px 16px;border-radius:14px;background:#FBEDEB;color:#8E2A1D;font-size:14px;line-height:1.5}
+  .plush-contact .pct-errors ul{margin:0;padding-left:18px}
+  .plush-contact .pct-ok{text-align:center;padding:30px 0}
+  .plush-contact .pct-ok__icon{width:72px;height:72px;margin:0 auto 20px;border-radius:99px;background:#8A4524;color:#F6F2ED;display:flex;align-items:center;justify-content:center}
+  .plush-contact .pct-ok__icon svg{width:34px;height:34px}
+  .plush-contact .pct-ok__title{font-size:24px;font-weight:600;letter-spacing:-.02em}
+  .plush-contact .pct-ok__text{max-width:360px;margin:10px auto 0;font-size:15px;line-height:1.6;color:#6B6660}
+  .plush-contact .pct-side{display:flex;flex-direction:column;gap:14px}
+  .plush-contact .pct-tile{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:center;padding:20px;border-radius:20px;background:#fff}
+  .plush-contact .pct-tile__icon{width:48px;height:48px;border-radius:14px;background:#F6F2ED;color:#8A4524;display:flex;align-items:center;justify-content:center}
+  .plush-contact .pct-tile__icon svg{width:24px;height:24px}
+  .plush-contact .pct-tile b{display:block;font-size:15px;font-weight:600}
+  .plush-contact .pct-tile span:not(.pct-tile__icon){display:block;margin-top:2px;font-size:13.5px;line-height:1.45;color:#6B6660;word-break:break-word}
+  .plush-contact .pct-tile a{color:#8A4524;font-weight:600;text-decoration:none}
+  .plush-contact .pct-tile a:hover{text-decoration:underline}
+  .plush-contact .pct-promise{position:relative;overflow:hidden;padding:24px;border-radius:20px;background:#8A4524;color:#F6F2ED}
+  .plush-contact .pct-promise__word{position:absolute;right:-18px;bottom:-46px;font-size:120px;font-weight:700;letter-spacing:-.06em;line-height:1;opacity:.08;pointer-events:none}
+  .plush-contact .pct-promise b{position:relative;display:block;max-width:300px;font-size:18px;line-height:1.35;font-weight:600;letter-spacing:-.01em}
+  .plush-contact .pct-promise span:not(.pct-promise__word){position:relative;display:block;margin-top:10px;font-size:13px;opacity:.8}
+  .plush-contact .pct-promise a{color:inherit;text-decoration:underline}
+  @container (max-width:760px){
+    .plush-contact .pct-in{padding:0}
+    .plush-contact .pct-grid{grid-template-columns:1fr}
+    .plush-contact .pct-row{grid-template-columns:1fr;gap:0}
+    .plush-contact .pct-card{padding:24px 20px}
+    .plush-contact .pct-top{margin-bottom:30px}
+    .plush-contact .pct-intro{font-size:15.5px}
+  }
+  @media (max-width:760px){
+    .plush-contact{padding:56px 18px 64px}
+  }
+</style>
