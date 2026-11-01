@@ -13,11 +13,10 @@
   - banner_image : le lien de ta bannière Canva 1200 × 500 (Contenu > Fichiers > copier le lien).
     Vide = pas de bannière.
   - gift_image : le lien de la couverture de l'ebook. Vide = une icône à la place.
-  - cartridge_handle : le handle du produit « cartouche seule » (24 $) quand tu l'auras créé.
-    Le panier affichera alors « Instead of $24 on its own » sous le Duo, et proposera une
-    cartouche en plus aux clients qui ont déjà le Duo.
-  - protection_handle : le handle du produit « Shipping Protection » (4,99 $) quand tu l'auras créé.
-    Vide = la carte ne s'affiche pas.
+  - cartridge_handle : « plush-replacement-cartridge » (cartouche seule, 24 $, créée le 1er nov.).
+    Avec le Solo : « + $15 » pour passer au Duo, « Instead of $24 on its own ». Avec le Duo :
+    carte « Extra cartridge + $24 ». Vide = ces mentions disparaissent.
+  - protection_handle : « shipping-protection » (4,99 $, créé le 1er nov.). Vide = pas de carte.
   - sale_end : la même date que ton bandeau. Le compte à rebours disparaît tout seul après.
   - ship_min_days / ship_max_days : le délai affiché (5 à 12 jours ouvrés). eta_style = 'dates'
     affiche des dates (ex. Nov 6 – Nov 17) au lieu du nombre de jours.
@@ -31,8 +30,8 @@
   assign plush_handle = 'plush-filtered-showerhead'
   assign solo_variant_id = 55519393382739
   assign duo_variant_id = 55512601166163
-  assign cartridge_handle = ''
-  assign protection_handle = ''
+  assign cartridge_handle = 'plush-replacement-cartridge'
+  assign protection_handle = 'shipping-protection'
 
   assign banner_image = ''
   assign banner_link = ''
@@ -240,6 +239,10 @@
                         <a href="{{ item.url }}" class="pc-thumb" tabindex="-1" aria-hidden="true">
                           {%- if item.image -%}
                             <img src="{{ item.image | image_url: width: 240 }}" alt="" width="120" height="120" loading="lazy">
+                          {%- elsif protection_handle != blank and item.product.handle == protection_handle -%}
+                            {{ pc_shield }}
+                          {%- else -%}
+                            {{ pc_cart }}
                           {%- endif -%}
                         </a>
                         <div class="pc-item__mid">
@@ -253,11 +256,16 @@
                           {%- for discount in item.line_level_discount_allocations -%}
                             <span class="pc-item__disc">{{ discount.discount_application.title | escape }} (−{{ discount.amount | money }})</span>
                           {%- endfor -%}
+                          {%- if protection_handle != blank and item.product.handle == protection_handle -%}
+                            <span class="pc-item__var">Lost or damaged? We resend it.</span>
+                            <input type="hidden" name="updates[]" value="{{ item.quantity }}" data-quantity-variant-id="{{ item.variant.id }}" data-index="{{ idx }}" id="Drawer-quantity-{{ idx }}">
+                          {%- else -%}
                           <quantity-input class="pc-qty">
                             <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ item.product.title | escape }}">{{ pc_minus }}</button>
                             <input class="quantity__input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" step="1" data-quantity-variant-id="{{ item.variant.id }}" data-index="{{ idx }}" id="Drawer-quantity-{{ idx }}" aria-label="Quantity for {{ item.product.title | escape }}">
                             <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ item.product.title | escape }}">{{ pc_plus }}</button>
                           </quantity-input>
+                          {%- endif -%}
                           <div id="CartDrawer-LineItemError-{{ idx }}" class="cart-item__error" role="alert">
                             <small class="cart-item__error-text"></small>
                           </div>
@@ -530,7 +538,7 @@
   .pc-thumb{width:76px;height:76px;border-radius:14px;background:var(--pc-cream);display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--pc-brown)}
   .pc-thumb img{width:84%;height:84%;object-fit:contain}
   .pc-thumb--gift img{width:100%;height:100%;object-fit:cover}
-  .pc-thumb--gift svg{width:30px;height:30px}
+  .pc-thumb svg{width:30px;height:30px}
   .pc-item__mid{min-width:0}
   .pc-item__name{display:block;font-size:14.5px;line-height:1.3;font-weight:600;color:var(--pc-ink);text-decoration:none}
   .pc-item__var{display:block;margin-top:2px;font-size:12.5px;line-height:1.35;color:#6B6660}
@@ -560,8 +568,8 @@
   .pc-label{margin:4px 4px -4px;font-size:12px;letter-spacing:.16em;font-weight:600;color:#6B6660;text-transform:uppercase}
   .pc-card{background:#fff;border-radius:18px;padding:16px}
   .pc-up{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center}
-  .pc-up__icon{width:52px;height:52px;border-radius:12px;background:var(--pc-paper);color:var(--pc-brown);display:flex;align-items:center;justify-content:center}
-  .pc-up__icon svg{width:26px;height:26px}
+  .pc-up .pc-up__icon{width:52px;height:52px;border-radius:12px;background:var(--pc-paper);color:var(--pc-brown);display:flex;align-items:center;justify-content:center}
+  .pc-up .pc-up__icon svg{width:26px;height:26px}
   .pc-up b{display:block;font-size:14px;line-height:1.3;font-weight:600}
   .pc-up span{display:block;font-size:12.5px;line-height:1.4;color:#6B6660}
   .pc-up .pc-up__save{margin-top:3px;color:var(--pc-brown);font-weight:600}
@@ -609,15 +617,17 @@
   .pc-empty__btn{margin-top:12px;display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 34px;border-radius:99px;background:var(--pc-brown);color:var(--pc-paper);font-size:16px;font-weight:600;text-decoration:none}
   .pc-empty__btn:hover{color:var(--pc-paper)}
 
-  /* Blocs ajoutés par des apps (ex. Judge.me « cart drawer widget ») : pleine largeur, en carte */
+  /* Blocs ajoutés par des apps (ex. Judge.me « Customers rate this store ») : masqués dans le panier */
   .pc-empty{align-items:stretch}
   .pc-empty .pc-empty__icon,.pc-empty .pc-empty__btn{align-self:center}
-  .pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]){width:100%;margin:22px 0 0 !important}
-  .pc-body > :not([class*="pc-"]):not(cart-drawer-items){margin:0 !important;padding:18px 16px !important;border-radius:18px;background:#fff;text-align:center}
-  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) :first-child,.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) :first-child{margin-top:0 !important}
-  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) :last-child,.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) :last-child{margin-bottom:0 !important}
-  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) *,.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) *{font-family:'Poppins',sans-serif !important}
-  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) :is(h1,h2,h3,h4,h5,h6),.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) :is(h1,h2,h3,h4,h5,h6){font-size:17px !important;line-height:1.3 !important;font-weight:600 !important;letter-spacing:-.01em !important}
+  .pc-drawer [class*="jdgm"],.pc-drawer [id*="jdgm"],.pc-drawer [class*="judgeme"],.pc-drawer [id*="judgeme"],
+  .pc-scroll > :not(.pc-top):not(.pc-body),
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items),
+  .pc-drawer cart-drawer-items > :not(form),
+  .pc-drawer #CartDrawer-Form > :not(#CartDrawer-CartItems):not(#CartDrawer-CartErrors),
+  .pc-drawer #CartDrawer-CartItems > :not(.pc-items):not(#CartDrawer-LiveRegionText):not(#CartDrawer-LineItemStatus),
+  .pc-foot > :not([class*="pc-"]),
+  .pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]){display:none !important}
 
   @keyframes pc-spin{to{transform:rotate(360deg)}}
   @media screen and (max-height:650px){.drawer__inner.pc-drawer{overflow:hidden}}
