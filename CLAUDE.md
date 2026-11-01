@@ -2323,7 +2323,9 @@ Pour l'instant seule la couverture existe : `assets/produit/plush-cadeau-ebook.j
 
 ## 19 octobre 2026 — nouveau revenu, et deux bloquants de lancement
 
-**Yasser travaille chez Pizza Hut : ~600-800 €/mois.** Le test de 430 € n'est plus un coup unique :
+**Yasser travaille chez Pizza Hut : ~1 100-1 150 €/mois** (corrigé par Yasser le 1er nov. ; le
+« 600-800 € » du 19 oct. était faux). **Au 1er nov. : 1 580 € disponibles (535 + 845 + 200), plus
+~1 200 € attendus dans les jours qui suivent.** Le test de 430 € n'est plus un coup unique :
 environ un test toutes les 5-6 semaines s'il en met la moitié de côté. La réserve de 396 € reste
 intouchable. Enveloppe mensuelle de test : à fixer par Yasser, **avant** de voir les résultats.
 Conséquence de méthode : un test raté ne tue pas Plush — on change la créa d'abord (2-3 tests)
