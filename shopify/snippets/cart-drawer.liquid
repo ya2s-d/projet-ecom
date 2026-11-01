@@ -606,6 +606,16 @@
   .pc-empty__btn{margin-top:12px;display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 34px;border-radius:99px;background:var(--pc-brown);color:var(--pc-paper);font-size:16px;font-weight:600;text-decoration:none}
   .pc-empty__btn:hover{color:var(--pc-paper)}
 
+  /* Blocs ajoutés par des apps (ex. Judge.me « cart drawer widget ») : pleine largeur, en carte */
+  .pc-empty{align-items:stretch}
+  .pc-empty .pc-empty__icon,.pc-empty .pc-empty__btn{align-self:center}
+  .pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]){width:100%;margin:22px 0 0 !important}
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items){margin:0 !important;padding:18px 16px !important;border-radius:18px;background:#fff;text-align:center}
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) :first-child,.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) :first-child{margin-top:0 !important}
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) :last-child,.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) :last-child{margin-bottom:0 !important}
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) *,.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) *{font-family:'Poppins',sans-serif !important}
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items) :is(h1,h2,h3,h4,h5,h6),.pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]) :is(h1,h2,h3,h4,h5,h6){font-size:17px !important;line-height:1.3 !important;font-weight:600 !important;letter-spacing:-.01em !important}
+
   @keyframes pc-spin{to{transform:rotate(360deg)}}
   @media screen and (max-height:650px){.drawer__inner.pc-drawer{overflow:hidden}}
   @media (prefers-reduced-motion:reduce){.pc-fill,.pc-checkout,.pc-up__btn{transition:none}}
