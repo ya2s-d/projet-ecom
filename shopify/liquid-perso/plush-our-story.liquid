@@ -1,0 +1,315 @@
+{%- comment -%}
+  PLUSH — page « Our Story » (maquette A validée le 1er nov.), version « Liquid personnalisé ».
+
+  INSTALLATION (5 minutes)
+  1. Personnaliser > menu déroulant du haut > Pages > « Créer un modèle ».
+     Nom : our-story · Basé sur : la page par défaut > Créer.
+     → Un modèle à part, sinon la section s'afficherait sur toutes tes pages.
+  2. Dans ce nouveau modèle, masque (icône œil) la section qui affiche le titre de la page.
+  3. Ajouter une section > « Liquid personnalisé » > colle tout ce code.
+     Marge supérieure 0 et marge inférieure 0. Enregistrer.
+  4. Admin > Boutique en ligne > Pages > Our Story > colonne de droite, « Modèle de thème » :
+     choisis our-story > Enregistrer.
+
+  LE PRIX ET LE LIEN viennent du produit, en direct (product_handle).
+  PHOTO DU HAUT : product_image = le même lien de pommeau détouré que sur l'accueil (PNG,
+  fond transparent). Vide = la photo principale du produit, dans une carte.
+  LA PREUVE : proof_image = ta vraie photo, une cartouche neuve à côté de celle du jour 30,
+  dès que ton échantillon y est. Vide = les deux pastilles de couleur. Jamais la photo d'un
+  autre produit.
+  LE MOT DU FONDATEUR : vide founder_hi et founder_p1 pour le cacher.
+  LES PROMESSES T'ENGAGENT : 02 = tous les avis sont publiés, 3 étoiles comprises (règle la
+  publication automatique de Judge.me sur toutes les notes) · 03 = tu réponds sous 2 jours ouvrés.
+  LES TEXTES : uniquement des phrases vraies. Pas de promesse santé, zéro point d'exclamation.
+  Police : Poppins, uniquement dans ce bloc.
+{%- endcomment -%}
+
+{%- liquid
+  assign product_handle = 'plush-filtered-showerhead'
+  assign product_image = ''
+  assign proof_image = ''
+
+  assign eyebrow = 'OUR STORY'
+  assign headline = "You've upgraded everything"
+  assign headline_accent = 'but the water.'
+  assign lead = 'Your shampoo has a routine. Your skincare has a routine. Your shower head came with the apartment.'
+  assign portrait_tag = 'Plush · Filtered Showerhead'
+
+  assign proof_title = "We didn't make it brown. Your water did."
+  assign proof_text = "Put a fresh cartridge next to one after 30 days of showers. The color is what the filter held back. That's the whole idea behind Plush: you don't have to take our word for it. You can see it."
+  assign proof_small = "Every city's water is different, so no two cartridges look the same."
+  assign chip_0 = 'Day 0'
+  assign chip_0_text = 'Fresh cartridge'
+  assign chip_30 = 'Day 30'
+  assign chip_30_text = 'Same cartridge'
+
+  assign why_1_title = 'The question'
+  assign why_1_text = "How's the water? Most of us never ask. We choose our shampoo, our towels, our soap, then rinse it all off with whatever comes out of the wall."
+  assign why_2_title = 'What we found'
+  assign why_2_text = 'Filtered shower heads that looked like hardware-store leftovers. Or beautiful ones, priced like a spa day.'
+  assign why_3_title = 'Why Plush'
+  assign why_3_text = 'One that looks like it belongs in your bathroom, at a fair price, with a cartridge that shows you what it caught.'
+
+  assign promises_title = 'Four promises we keep.'
+  assign promises_text = 'The rules we hold ourselves to, written down so you can hold us to them too.'
+  assign promise_1_title = 'The truth before day 30.'
+  assign promise_1_text = "We tell you what the filter is designed to catch, and what it won't do. It won't soften hard water: that takes a whole-home softener."
+  assign promise_2_title = 'Only real reviews.'
+  assign promise_2_text = 'Every review comes from a real order. We never write our own, and we never hide the 3-star ones.'
+  assign promise_3_title = 'A real person answers.'
+  assign promise_3_text = 'Write to us and a human replies within 2 business days.'
+  assign promise_3_link = 'Contact us'
+  assign contact_url = '/pages/contact'
+  assign promise_4_title = '60 days to decide.'
+  assign promise_4_text = "On day 59, if you don't love it, you get all your money back."
+  assign promise_4_link = 'Refund policy'
+
+  assign founder_label = 'A NOTE FROM THE FOUNDER'
+  assign founder_hi = "Hi, I'm Yasser, the CEO of Plush."
+  assign founder_p1 = "Plush is a small brand. There's no call center and no script. When you write to us, I read every message myself."
+  assign founder_p2 = "I'd rather earn your trust than ask for it. So everything on this page is something we actually do, not something we hope you'll believe."
+  assign founder_p3 = 'Thanks for being here.'
+  assign founder_name = 'Yasser'
+  assign founder_role = 'CEO, Plush'
+
+  assign cta_line_1 = 'City water in.'
+  assign cta_line_2 = 'Plush water out.'
+  assign cta_button = 'Shop Plush'
+  assign cta_note = 'Free US shipping · 60-day guarantee'
+  assign big_word = 'plush'
+-%}
+
+{%- liquid
+  assign p = all_products[product_handle]
+  assign link = routes.all_products_collection_url
+  assign price_label = ''
+  assign alt = 'Plush'
+  if p != blank and p.handle != blank
+    assign link = p.url
+    assign alt = p.title | escape
+    assign price_money = p.price_min | money
+    if p.price_varies
+      assign price_label = 'From ' | append: price_money
+    else
+      assign price_label = price_money
+    endif
+  endif
+
+  assign img = product_image | strip
+  assign shape = 'cutout'
+  if img != blank
+    if img contains '?'
+      assign img = img | append: '&width=1200'
+    else
+      assign img = img | append: '?width=1200'
+    endif
+  elsif p.featured_image
+    assign img = p.featured_image | image_url: width: 1200
+    assign shape = 'card'
+  endif
+
+  assign proof = proof_image | strip
+  if proof != blank
+    if proof contains '?'
+      assign proof = proof | append: '&width=1200'
+    else
+      assign proof = proof | append: '?width=1200'
+    endif
+  endif
+
+  assign refund_url = ''
+  if shop.refund_policy
+    assign refund_url = shop.refund_policy.url
+  endif
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="plush-story" id="plush-story">
+  <div class="pst-in">
+
+    <div class="pst-hero">
+      <div class="pst-hero__txt">
+        {%- if eyebrow != blank -%}<p class="pst-eye">{{ eyebrow | escape }}</p>{%- endif -%}
+        <h1 class="pst-h1">{{ headline | escape }} <span>{{ headline_accent | escape }}</span></h1>
+        {%- if lead != blank -%}<p class="pst-lead">{{ lead | escape }}</p>{%- endif -%}
+      </div>
+      <a class="pst-portrait" href="{{ link }}" aria-label="{{ alt }}">
+        <span class="pst-portrait__word" aria-hidden="true">{{ big_word | escape }}</span>
+        {%- if portrait_tag != blank -%}<span class="pst-portrait__tag">{{ portrait_tag | escape }}</span>{%- endif -%}
+        {%- if img != blank -%}
+          <img class="pst-portrait__img{% if shape == 'card' %} is-card{% endif %}" src="{{ img }}" alt="{{ alt }}" loading="lazy" width="1200" height="1200">
+        {%- endif -%}
+      </a>
+    </div>
+
+    <div class="pst-proof">
+      <div class="pst-proof__media">
+        {%- if proof != blank -%}
+          <img class="pst-proof__img" src="{{ proof }}" alt="{{ chip_0_text | escape }}, {{ chip_30 | downcase | escape }}" loading="lazy" width="1200" height="1200">
+        {%- else -%}
+          <div class="pst-chips" role="img" aria-label="{{ chip_0 | escape }}: {{ chip_0_text | escape }}. {{ chip_30 | escape }}: {{ chip_30_text | escape }}.">
+            <div class="pst-chip pst-chip--0"><b>{{ chip_0 | escape }}</b><span>{{ chip_0_text | escape }}</span></div>
+            <div class="pst-chip pst-chip--30"><b>{{ chip_30 | escape }}</b><span>{{ chip_30_text | escape }}</span></div>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="pst-proof__txt">
+        <h2 class="pst-h2">{{ proof_title | escape }}</h2>
+        {%- if proof_text != blank -%}<p class="pst-body">{{ proof_text | escape }}</p>{%- endif -%}
+        {%- if proof_small != blank -%}<p class="pst-small">{{ proof_small | escape }}</p>{%- endif -%}
+      </div>
+    </div>
+
+    <div class="pst-why">
+      <div class="pst-why__item"><p class="pst-why__label">{{ why_1_title | escape }}</p><p class="pst-why__text">{{ why_1_text | escape }}</p></div>
+      <div class="pst-why__item"><p class="pst-why__label">{{ why_2_title | escape }}</p><p class="pst-why__text">{{ why_2_text | escape }}</p></div>
+      <div class="pst-why__item"><p class="pst-why__label">{{ why_3_title | escape }}</p><p class="pst-why__text">{{ why_3_text | escape }}</p></div>
+    </div>
+
+    <div class="pst-ph">
+      <h2 class="pst-h2">{{ promises_title | escape }}</h2>
+      {%- if promises_text != blank -%}<p class="pst-ph__text">{{ promises_text | escape }}</p>{%- endif -%}
+    </div>
+    <div class="pst-prom">
+      <div class="pst-pr"><span class="pst-pr__n">01</span><p class="pst-pr__t">{{ promise_1_title | escape }}</p><p class="pst-pr__d">{{ promise_1_text | escape }}</p></div>
+      <div class="pst-pr"><span class="pst-pr__n">02</span><p class="pst-pr__t">{{ promise_2_title | escape }}</p><p class="pst-pr__d">{{ promise_2_text | escape }}</p></div>
+      <div class="pst-pr"><span class="pst-pr__n">03</span><p class="pst-pr__t">{{ promise_3_title | escape }}</p><p class="pst-pr__d">{{ promise_3_text | escape }}{% if contact_url != blank and promise_3_link != blank %} <a href="{{ contact_url }}">{{ promise_3_link | escape }}&nbsp;→</a>{% endif %}</p></div>
+      <div class="pst-pr"><span class="pst-pr__n">04</span><p class="pst-pr__t">{{ promise_4_title | escape }}</p><p class="pst-pr__d">{{ promise_4_text | escape }}{% if refund_url != blank and promise_4_link != blank %} <a href="{{ refund_url }}">{{ promise_4_link | escape }}&nbsp;→</a>{% endif %}</p></div>
+    </div>
+
+    {%- if founder_hi != blank or founder_p1 != blank -%}
+      <div class="pst-fn">
+        {%- if founder_label != blank -%}<p class="pst-fn__label">{{ founder_label | escape }}</p>{%- endif -%}
+        {%- if founder_hi != blank -%}<p class="pst-fn__hi">{{ founder_hi | escape }}</p>{%- endif -%}
+        {%- if founder_p1 != blank -%}<p class="pst-fn__p">{{ founder_p1 | escape }}</p>{%- endif -%}
+        {%- if founder_p2 != blank -%}<p class="pst-fn__p">{{ founder_p2 | escape }}</p>{%- endif -%}
+        {%- if founder_p3 != blank -%}<p class="pst-fn__p">{{ founder_p3 | escape }}</p>{%- endif -%}
+        {%- if founder_name != blank -%}
+          <div class="pst-fn__sig">
+            <span class="pst-fn__mono" aria-hidden="true">{{ founder_name | slice: 0 | upcase | escape }}</span>
+            <span class="pst-fn__who"><span class="pst-fn__name">{{ founder_name | escape }}</span>{%- if founder_role != blank -%}<span class="pst-fn__role">{{ founder_role | escape }}</span>{%- endif -%}</span>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="pst-cta">
+      <span class="pst-cta__word" aria-hidden="true">{{ big_word | escape }}</span>
+      <p class="pst-cta__title">{{ cta_line_1 | escape }}<br>{{ cta_line_2 | escape }}</p>
+      <div class="pst-cta__right">
+        <a class="pst-btn" href="{{ link }}">{{ cta_button | escape }}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="pst-cta__note">{% if price_label != blank %}{{ price_label }} · {% endif %}{{ cta_note | escape }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .plush-story{container-type:inline-size;background:#F6F2ED;color:#141414;font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:0;padding:80px 48px 96px}
+  .plush-story *{box-sizing:border-box}
+  .plush-story p{margin:0}
+  .plush-story a{text-decoration:none}
+  .plush-story .pst-in{max-width:1180px;margin:0 auto}
+  .plush-story .pst-eye{margin:0 0 18px;font-size:13px;letter-spacing:.22em;font-weight:600;color:#8A4524}
+
+  .plush-story .pst-hero{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center;margin-bottom:72px}
+  .plush-story .pst-h1{margin:0 0 26px;font-family:'Poppins',sans-serif;font-size:clamp(40px,5.6cqi,76px);line-height:.98;letter-spacing:-.045em;font-weight:600;color:#141414;text-transform:none;text-wrap:balance}
+  .plush-story .pst-h1 span{color:#8A4524}
+  .plush-story .pst-lead{max-width:520px;font-size:19px;line-height:1.6;color:#6B6660}
+  .plush-story .pst-portrait{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1.08;border-radius:28px;background:#8A4524;overflow:hidden}
+  .plush-story .pst-portrait__word{position:absolute;left:-10px;bottom:-.27em;font-size:clamp(140px,15cqi,210px);font-weight:700;letter-spacing:-.06em;line-height:1;color:#F6F2ED;opacity:.08;pointer-events:none}
+  .plush-story .pst-portrait__tag{position:absolute;z-index:2;top:22px;left:22px;padding:8px 14px;border-radius:99px;background:rgba(246,242,237,.14);color:#F6F2ED;font-size:12.5px;font-weight:500;letter-spacing:.02em}
+  .plush-story .pst-portrait__img{position:relative;display:block;width:74%;height:auto;margin:0;border:0;filter:drop-shadow(0 30px 40px rgba(40,15,5,.45));transition:transform .4s ease}
+  .plush-story .pst-portrait__img.is-card{width:70%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;filter:none;box-shadow:0 30px 50px -24px rgba(30,10,0,.6)}
+  .plush-story .pst-portrait:hover .pst-portrait__img{transform:scale(1.03)}
+
+  .plush-story .pst-proof{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;margin-bottom:72px;padding:56px;border-radius:28px;background:#fff}
+  .plush-story .pst-chips{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .plush-story .pst-chip{display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:3/4.2;padding:18px 20px;border-radius:22px}
+  .plush-story .pst-chip b{font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+  .plush-story .pst-chip span{margin-top:2px;font-size:12.5px;line-height:1.4;opacity:.75}
+  .plush-story .pst-chip--0{background:#F1EBE2;border:1px solid #E2D9CC;color:#141414}
+  .plush-story .pst-chip--30{background:#8A4524;color:#F6F2ED}
+  .plush-story .pst-proof__img{display:block;width:100%;height:auto;margin:0;border:0;aspect-ratio:1/1;object-fit:cover;border-radius:22px}
+  .plush-story .pst-h2{margin:0 0 18px;font-family:'Poppins',sans-serif;font-size:clamp(30px,3.3cqi,44px);line-height:1.05;letter-spacing:-.035em;font-weight:600;color:#141414;text-transform:none;text-wrap:balance}
+  .plush-story .pst-body{font-size:17px;line-height:1.65;color:#3D3935}
+  .plush-story .pst-small{margin-top:18px;padding-top:16px;border-top:1px solid #E7E0D6;font-size:13.5px;line-height:1.5;color:#6B6660}
+
+  .plush-story .pst-why{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:72px;border-top:1px solid #C9C2B8}
+  .plush-story .pst-why__item{padding:28px 32px 0 0}
+  .plush-story .pst-why__item + .pst-why__item{padding-left:32px;border-left:1px solid #C9C2B8}
+  .plush-story .pst-why__label{margin-bottom:12px;font-size:13px;letter-spacing:.18em;font-weight:600;color:#8A4524;text-transform:uppercase}
+  .plush-story .pst-why__text{font-size:19px;line-height:1.5;letter-spacing:-.01em;color:#141414}
+
+  .plush-story .pst-ph{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:26px}
+  .plush-story .pst-ph .pst-h2{margin:0}
+  .plush-story .pst-ph__text{max-width:330px;font-size:15px;line-height:1.55;color:#6B6660}
+  .plush-story .pst-prom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:72px}
+  .plush-story .pst-pr{display:grid;grid-template-columns:64px 1fr;gap:6px 18px;align-content:start;padding:30px 32px;border-radius:22px;background:#fff}
+  .plush-story .pst-pr__n{grid-row:span 2;font-size:40px;font-weight:600;letter-spacing:-.04em;line-height:1;color:#8A4524}
+  .plush-story .pst-pr__t{font-size:19px;font-weight:600;letter-spacing:-.015em;line-height:1.3;color:#141414}
+  .plush-story .pst-pr__d{font-size:15px;line-height:1.6;color:#6B6660}
+  .plush-story .pst-pr__d a{color:#8A4524;font-weight:600;white-space:nowrap}
+  .plush-story .pst-pr__d a:hover{text-decoration:underline}
+
+  .plush-story .pst-fn{max-width:760px;margin:0 auto 72px;padding:48px 56px;border-radius:24px;background:#fff;box-shadow:0 30px 60px -44px rgba(60,30,10,.35)}
+  .plush-story .pst-fn__label{margin-bottom:22px;font-size:13px;letter-spacing:.18em;font-weight:600;color:#8A4524}
+  .plush-story .pst-fn__hi{margin-bottom:16px;font-size:26px;line-height:1.25;font-weight:600;letter-spacing:-.02em;color:#141414}
+  .plush-story .pst-fn__p{font-size:17px;line-height:1.7;color:#3D3935}
+  .plush-story .pst-fn__p + .pst-fn__p{margin-top:14px}
+  .plush-story .pst-fn__sig{display:flex;align-items:center;gap:14px;margin-top:28px;padding-top:22px;border-top:1px solid #E7E0D6}
+  .plush-story .pst-fn__mono{display:flex;align-items:center;justify-content:center;flex:none;width:46px;height:46px;border-radius:99px;background:#8A4524;color:#F6F2ED;font-size:19px;font-weight:600;line-height:1}
+  .plush-story .pst-fn__name{display:block;font-size:16px;font-weight:600;line-height:1.3;color:#141414}
+  .plush-story .pst-fn__role{display:block;font-size:13.5px;line-height:1.4;color:#6B6660}
+
+  .plush-story .pst-cta{position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:32px;padding:56px;border-radius:28px;background:#8A4524;color:#F6F2ED}
+  .plush-story .pst-cta__word{position:absolute;right:-20px;bottom:-.29em;font-size:240px;font-weight:700;letter-spacing:-.06em;line-height:1;opacity:.07;pointer-events:none}
+  .plush-story .pst-cta__title{position:relative;font-size:clamp(32px,3.5cqi,46px);line-height:1.04;letter-spacing:-.035em;font-weight:600;color:#F6F2ED}
+  .plush-story .pst-cta__right{position:relative;text-align:center}
+  .plush-story .pst-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:60px;padding:0 34px;border-radius:99px;background:#F6F2ED;color:#141414;font:600 17px 'Poppins',sans-serif;transition:transform .2s ease,box-shadow .2s ease}
+  .plush-story .pst-btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px -14px rgba(20,8,0,.6)}
+  .plush-story .pst-btn svg{width:18px;height:18px;flex:none}
+  .plush-story .pst-cta__note{display:block;margin-top:14px;font-size:13px;line-height:1.5;opacity:.85}
+
+  @container (max-width:900px){
+    .plush-story .pst-hero{gap:36px}
+    .plush-story .pst-proof{gap:36px;padding:40px}
+    .plush-story .pst-pr{padding:26px 24px}
+  }
+  @container (max-width:760px){
+    .plush-story .pst-hero{grid-template-columns:1fr;gap:30px;margin-bottom:44px}
+    .plush-story .pst-h1{margin-bottom:18px;font-size:clamp(36px,12cqi,52px)}
+    .plush-story .pst-lead{font-size:16.5px}
+    .plush-story .pst-portrait{aspect-ratio:1/.9}
+    .plush-story .pst-portrait__img{width:62%}
+    .plush-story .pst-portrait__img.is-card{width:64%}
+    .plush-story .pst-proof{grid-template-columns:1fr;gap:28px;margin-bottom:44px;padding:26px 22px}
+    .plush-story .pst-h2{font-size:31px}
+    .plush-story .pst-body{font-size:16px}
+    .plush-story .pst-why{grid-template-columns:1fr;margin-bottom:44px}
+    .plush-story .pst-why__item{padding:22px 0}
+    .plush-story .pst-why__item + .pst-why__item{padding-left:0;border-left:0;border-top:1px solid #C9C2B8}
+    .plush-story .pst-why__text{font-size:17px}
+    .plush-story .pst-ph{display:block}
+    .plush-story .pst-ph__text{margin-top:10px}
+    .plush-story .pst-prom{grid-template-columns:1fr;margin-bottom:44px}
+    .plush-story .pst-pr{grid-template-columns:48px 1fr;gap:4px 14px;padding:24px 22px}
+    .plush-story .pst-pr__n{font-size:30px}
+    .plush-story .pst-pr__t{font-size:17px}
+    .plush-story .pst-fn{margin-bottom:44px;padding:32px 24px}
+    .plush-story .pst-fn__hi{font-size:22px}
+    .plush-story .pst-fn__p{font-size:16px}
+    .plush-story .pst-cta{flex-direction:column;align-items:flex-start;padding:36px 26px}
+    .plush-story .pst-cta__word{font-size:150px}
+    .plush-story .pst-cta__title{font-size:34px}
+    .plush-story .pst-cta__right{width:100%;text-align:left}
+    .plush-story .pst-btn{width:100%}
+  }
+  @media (max-width:760px){
+    .plush-story{padding:48px 18px 64px}
+  }
+</style>
