@@ -107,6 +107,9 @@ A few things before you try it:
 - Use it for at least a week before posting anything. We want your honest take.
 - Ideas if you post: your old shower head next to Plush, the install, the cartridge
   after a week or two.
+- Optional: if you have chlorine test strips (the pool kind), dip one in your tap water
+  and one in water from Plush, and show both strips side by side. Just the strips,
+  no conclusions needed.
 - Please don't say it treats or fixes hair, skin or any condition. Just your real
   experience with the shower.
 - If you post, add #gifted or #ad. It's the law in the US (FTC), and it protects you too.
