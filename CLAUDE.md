@@ -2308,6 +2308,23 @@ l'analyse tuait la France sur le **ticket et la TVA**, pas sur l'existence du ma
 
 ---
 
+## 2 novembre 2026 — top 100 des créas concurrentes et plan du test 1
+
+Page : https://claude.ai/artifact/JiPpREDxNfqn8wkba4rJNc · données annotées : `research/top100-creas.json`
+· angles : `research/angles-concurrents.md` · démarchage : `research/gifting/kit-demarchage.md`.
+
+Classement des 278 pubs eau/douche de l'export du 4 oct. sur leur meilleure preuve (dépense vérifiée
+UE/UK, ou jours × variantes), 12 créas max par marque. **43 copiables = 536 323 $ vérifiés, 64 % de
+l'argent prouvé du top 100** · 31 « format seulement » · 26 interdites (corps, « #1 », calcaire).
+Le plus gros de l'argent prouvé n'est pas sur la peau.
+
+**Test 1** : 3 angles × 2 accroches — la cartouche (n°1 Puure 72 991 $) · l'ennemi = le pommeau
+d'origine (n°15 Water2 42 408 $, n°21 avant/maintenant 36 019 $) · l'objection prix en dialogue
+(n°86 GetSeoni). Réglages et seuils du 25 sept. inchangés. Budget : 430 € min, 650 € recommandé.
+
+**Krea** est connecté à la session mais le compte est en plan gratuit à **0 crédit** au 2 nov. :
+aucune génération possible sans plan payant.
+
 ## À faire plus tard — l'ebook « Know Your Water » (demandé par Yasser le 19 oct. 2026)
 
 **Engagement pris : écrire et designer l'ebook entier**, pas seulement la couverture.
