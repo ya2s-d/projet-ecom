@@ -1,0 +1,160 @@
+{%- comment -%}
+  PLUSH — Page produit de la cartouche : 2 offres (achat seul / abonnement), même style que le
+  sélecteur Solo / Duo de la page du pommeau. Version « Liquid personnalisé ».
+
+  INSTALLATION (10 minutes)
+  1. Personnaliser > menu du haut « Page d'accueil » > Produits > « + Créer un modèle »
+     > nom : cartouche > basé sur « Produit par défaut » > Créer.
+  2. Dans « Informations sur le produit » : supprime le bloc « Liquid personnalisé » qui contient
+     plush-bundle (les cartes Solo / Duo et les cadeaux), puis Ajouter un bloc > « Liquid
+     personnalisé » > colle tout ce code > glisse le bloc juste sous le titre.
+  3. Supprime les sections et les blocs qui parlent du pommeau (avant / après, installation…).
+  4. Enregistrer. Puis Produits > Plush Replacement Cartridge > à droite « Modèle de thème »
+     > cartouche > Enregistrer.
+  5. L'abonnement : Applications > « Shopify Subscriptions » (gratuite, par Shopify) > Créer un
+     plan > livraison tous les 3 mois > remise 5 $ > produit : Plush Replacement Cartridge.
+     La carte « Subscribe & save » apparaît toute seule dès que le plan existe.
+
+  LES PRIX VIENNENT TOUT SEULS DE SHOPIFY :
+  - Achat seul = le prix de la cartouche (Produits > Plush Replacement Cartridge).
+  - Abonnement = le prix du plan créé dans l'app Shopify Subscriptions.
+    Tant que le plan n'existe pas, seule la carte « One-time purchase » s'affiche.
+
+  POUR MODIFIER : change seulement le texte entre les guillemets, juste en dessous.
+  - sub_every : le rythme, en anglais. Il doit être le même que celui du plan dans l'app.
+  - L'abonnement n'est jamais pré-sélectionné : aux US, la cliente doit le choisir elle-même.
+{%- endcomment -%}
+
+{%- liquid
+  assign sub_every = 'every 3 months'
+  assign one_title = 'One-time purchase'
+  assign one_chip = '1 cartridge'
+  assign one_note = 'Order again whenever you need it.'
+  assign sub_title = 'Subscribe & save'
+  assign sub_chip = '1 cartridge'
+  assign sub_promo = 'Subscriber price • Cancel anytime'
+  assign fit_line = 'Fits every Plush shower head. Unscrew the old one, screw in the new one. No tools.'
+
+  assign v = product.selected_or_first_available_variant
+  assign alloc = v.selling_plan_allocations | first
+  assign uid = 'pk-' | append: product.id
+  assign ids = product.variants | map: 'id' | join: ','
+  if alloc
+    assign save = v.price | minus: alloc.price
+  endif
+-%}
+
+{%- capture ic_filter -%}<svg class="pk-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg>{%- endcapture -%}
+{%- capture ic_cycle -%}<svg class="pk-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>{%- endcapture -%}
+{%- capture ic_check -%}<svg class="pk-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{%- endcapture -%}
+
+<div id="{{ uid }}" class="pk" data-ids="{{ ids }}">
+  <div class="pk-opts" role="radiogroup" aria-label="Purchase options">
+    {%- unless product.requires_selling_plan -%}
+      <label class="pk-opt is-on" data-plan="">
+        <input type="radio" name="{{ uid }}-opt" value="" checked>
+        <span class="pk-head">
+          <span class="pk-dot" aria-hidden="true"></span>
+          <span class="pk-title">{{ one_title }}</span>
+          <span class="pk-price"><span class="pk-now">{{ v.price | money }}</span></span>
+        </span>
+        <span class="pk-chips"><span class="pk-chip">{{ ic_filter }}<span>{{ one_chip }}</span></span></span>
+        <span class="pk-more"><span class="pk-note">{{ ic_check }}<span>{{ one_note }}</span></span></span>
+      </label>
+    {%- endunless -%}
+
+    {%- if alloc -%}
+      <label class="pk-opt{% if product.requires_selling_plan %} is-on{% endif %}" data-plan="{{ alloc.selling_plan.id }}">
+        <input type="radio" name="{{ uid }}-opt" value="{{ alloc.selling_plan.id }}"{% if product.requires_selling_plan %} checked{% endif %}>
+        {%- if save > 0 -%}<span class="pk-pill">Save {{ save | money_without_trailing_zeros }} every time</span>{%- endif -%}
+        <span class="pk-head">
+          <span class="pk-dot" aria-hidden="true"></span>
+          <span class="pk-title">{{ sub_title }}</span>
+          <span class="pk-price">
+            <span class="pk-now">{{ alloc.price | money }}</span>
+            {%- if save > 0 -%}<s class="pk-was">{{ v.price | money }}</s>{%- endif -%}
+          </span>
+        </span>
+        <span class="pk-chips"><span class="pk-chip">{{ ic_filter }}<span>{{ sub_chip }} {{ sub_every }}</span></span></span>
+        <span class="pk-more">
+          {%- assign parts = sub_promo | split: ' • ' -%}
+          <span class="pk-promo"><span>{{ parts[0] }}{% if parts.size > 1 %} • <b>{{ parts[1] }}</b>{% endif %}</span></span>
+          <span class="pk-note">{{ ic_cycle }}<span>You pay {{ alloc.price | money }} today, then {{ alloc.price | money }} {{ sub_every }} until you cancel. Skip or cancel anytime, online, in one click.</span></span>
+        </span>
+      </label>
+    {%- endif -%}
+  </div>
+  <p class="pk-fit">{{ fit_line }}</p>
+</div>
+
+<style>
+  #price-{{ section.id }}{display:none!important}
+  #{{ uid }}{--pk-accent:#8A4524;--pk-ink:#141414;--pk-card:#F6F2ED;--pk-line:#C9C2B8;--pk-muted:#6B6660;--pk-light:#EFE7DA;margin:16px 0 20px;color:var(--pk-ink);font-family:'Poppins',sans-serif;container-type:inline-size}
+  #{{ uid }} *{box-sizing:border-box}
+  #{{ uid }} .pk-opts{display:flex;flex-direction:column;gap:18px;padding-top:10px}
+  #{{ uid }} .pk-opt{position:relative;display:block;cursor:pointer;padding:16px 14px 14px;border:1.5px solid var(--pk-line);border-radius:12px;background:transparent;transition:border-color .15s,background-color .15s}
+  #{{ uid }} .pk-opt.is-on{border-color:var(--pk-ink);background:var(--pk-card);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+  #{{ uid }} .pk-opt input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  #{{ uid }} .pk-opt:has(input:focus-visible){outline:2px solid var(--pk-accent);outline-offset:2px}
+  #{{ uid }} .pk-head{display:flex;align-items:center;gap:12px}
+  #{{ uid }} .pk-dot{position:relative;flex:0 0 22px;height:22px;border:2px solid var(--pk-line);border-radius:50%;background:#fff}
+  #{{ uid }} .is-on .pk-dot{border-color:var(--pk-ink);background:var(--pk-ink)}
+  #{{ uid }} .is-on .pk-dot::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--pk-light)}
+  #{{ uid }} .pk-title{flex:1;min-width:0;font-weight:600;font-size:16px;line-height:1.25}
+  #{{ uid }} .pk-opt:not(.is-on) .pk-title{color:var(--pk-muted)}
+  #{{ uid }} .pk-pill{position:absolute;top:0;left:18px;transform:translateY(-50%);padding:6px 11px;border-radius:999px;background:var(--pk-accent);color:var(--pk-light);font-size:11px;font-weight:700;line-height:1;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 2px 6px rgba(138,69,36,.25)}
+  #{{ uid }} .pk-price{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;text-align:right}
+  #{{ uid }} .pk-now{color:var(--pk-accent);font-weight:700;font-size:17px}
+  #{{ uid }} .pk-opt:not(.is-on) .pk-now{color:var(--pk-muted);font-weight:600}
+  #{{ uid }} .pk-was{margin-top:2px;color:var(--pk-muted);font-size:13px}
+  #{{ uid }} .pk-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;padding-left:34px}
+  #{{ uid }} .pk-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px 4px 6px;border:1px solid var(--pk-line);border-radius:999px;background:#fff;font-size:12.5px;font-weight:600;line-height:1.2;white-space:nowrap}
+  #{{ uid }} .pk-opt:not(.is-on) .pk-chip{background:transparent;color:var(--pk-muted)}
+  #{{ uid }} .pk-ic{flex:0 0 15px;width:15px;height:15px;fill:none;stroke:var(--pk-accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pk-opt:not(.is-on) .pk-more{display:none}
+  #{{ uid }} .pk-promo{position:relative;display:flex;align-items:center;margin-top:12px;padding:9px 12px;overflow:hidden;border-radius:8px;background:var(--pk-accent);color:var(--pk-light);font-size:12px;font-weight:700;line-height:1.3;text-transform:uppercase}
+  #{{ uid }} .pk-promo b{color:#FFD9B8}
+  #{{ uid }} .pk-note{display:flex;align-items:flex-start;gap:7px;margin-top:10px;color:var(--pk-muted);font-size:13px;line-height:1.45}
+  #{{ uid }} .pk-note .pk-ic{margin-top:2px}
+  #{{ uid }} .pk-fit{margin:14px 2px 0;color:var(--pk-muted);font-size:13px;line-height:1.5}
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('{{ uid }}');
+    if (!root) return;
+    var ids = root.getAttribute('data-ids').split(',');
+    function forms() {
+      return Array.prototype.filter.call(document.querySelectorAll('form[action*="/cart/add"]'), function (f) {
+        var id = f.querySelector('[name="id"]');
+        return id && ids.indexOf(String(id.value)) > -1;
+      });
+    }
+    function apply(plan) {
+      forms().forEach(function (f) {
+        var inp = f.querySelector('input[name="selling_plan"]');
+        if (!inp) {
+          inp = document.createElement('input');
+          inp.type = 'hidden';
+          inp.name = 'selling_plan';
+          f.appendChild(inp);
+        }
+        inp.value = plan || '';
+        inp.disabled = !plan;
+      });
+    }
+    root.addEventListener('change', function (e) {
+      if (!e.target.matches('input[type="radio"]')) return;
+      root.querySelectorAll('.pk-opt').forEach(function (o) {
+        o.classList.toggle('is-on', o.contains(e.target));
+      });
+      apply(e.target.value);
+    });
+    var on = root.querySelector('input[type="radio"]:checked');
+    apply(on ? on.value : '');
+    document.addEventListener('DOMContentLoaded', function () {
+      var c = root.querySelector('input[type="radio"]:checked');
+      apply(c ? c.value : '');
+    });
+  })();
+</script>
