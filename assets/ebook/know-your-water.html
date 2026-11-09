@@ -5,161 +5,341 @@
 <title>Plush: Know Your Water</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
   @page { size: 8.5in 11in; margin: 0; }
-  :root { --brown:#8A4524; --brown-d:#6B3A2A; --bone:#EFE7DA; --paper:#F7F2EA; --ink:#1F1D24; --muted:#6B6660; --line:#E2D6C5; --tan:#C9A27E; }
+  :root { --brown:#8A4524; --brown-d:#6B3A2A; --bone:#EFE7DA; --paper:#F6F2ED; --ink:#141414; --soft:#3B3733; --muted:#6B6660; --line:#E2D6C5; --tan:#C9A27E; --d30:#A86B45; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: #ddd; }
+  html, body { background: #ccc; }
   body { font-family: 'Poppins', sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .page { position: relative; width: 8.5in; height: 11in; overflow: hidden; background: var(--paper); page-break-after: always; break-after: page; }
   .page:last-child { page-break-after: auto; break-after: auto; }
-  .in { position: absolute; inset: 0.75in 0.8in 0.85in; }
-  .top { position: absolute; top: 0.38in; left: 0.8in; right: 0.8in; display: flex; justify-content: space-between; align-items: center; font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .in { position: absolute; inset: 0.78in 0.8in 0.8in; }
+  .top { position: absolute; top: 0.38in; left: 0.8in; right: 0.8in; display: flex; justify-content: space-between; align-items: center; font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); z-index: 3; }
   .top img { height: 15px; }
-  .num { position: absolute; bottom: 0.4in; right: 0.8in; font-size: 10px; color: var(--muted); letter-spacing: .1em; }
-  .foot { position: absolute; bottom: 0.4in; left: 0.8in; font-size: 9.5px; color: var(--muted); }
-  .kicker { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brown); }
-  .chap { font-size: 84px; font-weight: 700; line-height: .9; color: var(--brown); letter-spacing: -.03em; }
-  h1 { font-size: 38px; line-height: 1.12; font-weight: 600; letter-spacing: -.02em; margin: 10px 0 16px; }
-  h2 { font-size: 19px; line-height: 1.3; font-weight: 600; margin: 22px 0 8px; }
-  p { font-size: 13.5px; line-height: 1.65; margin: 0 0 10px; }
-  .lead { font-size: 16px; line-height: 1.6; color: #3B3733; }
+  .num { position: absolute; bottom: 0.38in; right: 0.8in; font-size: 10px; color: var(--muted); letter-spacing: .1em; z-index: 3; }
+  .kicker { font-size: 11.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--brown); }
+  .chap { font-size: 64px; font-weight: 700; line-height: .9; color: var(--brown); letter-spacing: -.03em; }
+  h1 { font-size: 36px; line-height: 1.1; font-weight: 600; letter-spacing: -.025em; margin: 10px 0 14px; }
+  h2 { font-size: 17.5px; line-height: 1.3; font-weight: 600; margin: 18px 0 6px; }
+  p { font-size: 13px; line-height: 1.62; margin: 0 0 9px; color: var(--soft); }
+  b, strong { font-weight: 600; color: var(--ink); }
+  .lead { font-size: 15.5px; line-height: 1.58; color: var(--soft); }
   .muted { color: var(--muted); }
-  b, strong { font-weight: 600; }
-  .box { background: var(--bone); border-radius: 14px; padding: 16px 18px; margin: 16px 0; }
-  .box p:last-child { margin-bottom: 0; }
-  .note { border-left: 3px solid var(--brown); padding: 4px 0 4px 16px; margin: 18px 0; }
-  .note p { font-size: 14px; }
-  .steps { list-style: none; counter-reset: s; margin: 14px 0; }
-  .steps li { counter-increment: s; position: relative; padding: 0 0 14px 52px; font-size: 13.5px; line-height: 1.6; }
-  .steps li::before { content: counter(s); position: absolute; left: 0; top: -2px; width: 34px; height: 34px; border-radius: 50%; background: var(--brown); color: #fff; font-weight: 600; font-size: 15px; display: grid; place-items: center; }
-  .steps li b { display: block; font-size: 15px; margin-bottom: 2px; }
-  table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 12px 0 6px; }
-  th { text-align: left; font-weight: 600; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 8px 8px; border-bottom: 1.5px solid var(--ink); }
-  td { padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.45; }
-  td.h { background: #fff; }
-  .mock th { background: var(--ink); color: var(--paper); border: 0; }
+  .small { font-size: 10.5px; line-height: 1.55; }
+  .box { background: var(--bone); border-radius: 14px; padding: 15px 18px; margin: 14px 0; }
+  .box p:last-child, .card p:last-child, .note p:last-child { margin-bottom: 0; }
+  .note { border-left: 3px solid var(--brown); padding: 3px 0 3px 16px; margin: 16px 0; }
+  .note p { font-size: 13.5px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 15px 16px; }
+  .card h3 { font-size: 14.5px; font-weight: 600; margin: 8px 0 5px; line-height: 1.3; }
+  .card p { font-size: 12px; line-height: 1.55; margin: 0; }
+  .ic { width: 22px; height: 22px; fill: none; stroke: var(--brown); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; display: block; }
+  .ic-c { width: 42px; height: 42px; border-radius: 50%; background: var(--bone); display: grid; place-items: center; flex: none; }
+  .steps { list-style: none; counter-reset: s; margin: 12px 0; }
+  .steps li { counter-increment: s; position: relative; padding: 0 0 13px 50px; font-size: 13px; line-height: 1.58; color: var(--soft); }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: -2px; width: 33px; height: 33px; border-radius: 50%; background: var(--brown); color: #fff; font-weight: 600; font-size: 14.5px; display: grid; place-items: center; }
+  .steps li b { display: block; font-size: 14.5px; margin-bottom: 1px; }
+  table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin: 12px 0 6px; }
+  th { text-align: left; font-weight: 600; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 8px; border-bottom: 1.5px solid var(--ink); }
+  td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.45; color: var(--soft); }
+  .mock th { background: var(--ink); color: var(--paper); border: 0; position: relative; }
   .mock td { background: #fff; }
-  .mock .hl { background: #F4E2D3; font-weight: 600; }
-  .tag { display: inline-block; padding: 2px 8px; border-radius: 99px; background: var(--brown); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: .06em; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
-  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
-  .card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-  .card p { font-size: 12.5px; line-height: 1.55; margin: 0; }
-  .gloss { display: grid; grid-template-columns: 92px 1fr; gap: 9px 14px; margin: 12px 0; font-size: 12.5px; line-height: 1.5; }
+  .mock .hl { background: #F4E2D3; font-weight: 600; color: var(--ink); }
+  .pin { display: inline-grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: var(--brown); color: #fff; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; letter-spacing: 0; }
+  .tag { display: inline-block; padding: 3px 10px; border-radius: 99px; background: var(--brown); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+  .gloss { display: grid; grid-template-columns: 96px 1fr; gap: 8px 14px; margin: 10px 0; font-size: 12.5px; line-height: 1.5; color: var(--soft); }
   .gloss dt { font-weight: 700; color: var(--brown); }
-  .gloss dd { margin: 0; }
-  .scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 14px 0 8px; }
-  .scale div { border-radius: 12px; padding: 12px; color: var(--ink); }
-  .scale b { display: block; font-size: 14px; }
-  .scale span { font-size: 11.5px; line-height: 1.45; display: block; margin-top: 3px; }
-  .s1 { background: #F4ECE0; } .s2 { background: #E9D7C2; } .s3 { background: #D8B793; } .s4 { background: #B9875E; color: #fff !important; }
-  .s4 b, .s4 span { color: #fff; }
-  .field { display: flex; align-items: flex-end; gap: 12px; padding: 13px 0 6px; border-bottom: 1px solid #CDBFAA; font-size: 13px; }
-  .field span { flex: none; font-weight: 600; }
-  .check { display: inline-flex; align-items: center; gap: 6px; margin-right: 16px; font-weight: 400; }
-  .check i { width: 13px; height: 13px; border: 1.5px solid var(--ink); border-radius: 3px; display: inline-block; }
-  .toc { list-style: none; margin: 18px 0; }
-  .toc li { display: flex; gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-  .toc li span { width: 34px; color: var(--brown); font-weight: 700; }
-  .toc li em { margin-left: auto; font-style: normal; color: var(--muted); font-size: 12.5px; }
-  .sign { margin-top: 22px; font-size: 14px; }
+  .sign { margin-top: 18px; font-size: 13.5px; color: var(--soft); }
   .sign b { display: block; font-size: 16px; }
-  .dark { background: var(--brown); color: var(--paper); }
-  .dark .top, .dark .num, .dark .foot { color: rgba(247,242,234,.7); }
-  .cover { background: #000; }
-  .cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
-  .pair { display: flex; gap: 18px; align-items: center; margin: 16px 0; }
-  .pair .pic { flex: none; width: 170px; height: 170px; border-radius: 16px; background: var(--bone); display: grid; place-items: center; }
-  .pair .pic img { width: 150px; }
-  .big-line { font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; }
-  .small { font-size: 11.5px; line-height: 1.55; }
+  .big-line { font-size: 30px; line-height: 1.18; font-weight: 600; letter-spacing: -.02em; color: var(--ink); }
+  .photo { display: block; width: 100%; object-fit: cover; border-radius: 18px; }
+  .cut { display: block; object-fit: contain; }
+  .dark { background: var(--brown); }
+  .dark .top, .dark .num { color: rgba(246,242,237,.7); }
+  .dark .top img { filter: brightness(0) invert(1); opacity: .85; }
+  .dark p, .dark .lead { color: #F3E9DD; }
+  .dark h1, .dark b, .dark .big-line { color: #fff; }
+  .src { font-size: 9.5px; line-height: 1.5; color: var(--muted); }
+
+  /* cover */
+  .cover { background: var(--bone); }
+  .cover .cv-photo { position: absolute; top: 0; right: 0; height: 11in; width: auto; }
+  .cover .cv-txt { position: absolute; top: 0.85in; left: 0.75in; width: 4.25in; }
+  .cover .cv-logo { height: 34px; display: block; margin-bottom: 1.15in; }
+  .cover .cv-title { font-size: 66px; line-height: .96; font-weight: 600; letter-spacing: -.035em; color: var(--ink); margin: 14px 0 22px; }
+  .cover .cv-sub { font-family: 'Lora', serif; font-style: italic; font-size: 22px; line-height: 1.4; color: var(--brown-d); max-width: 3.6in; }
+  .cover .cv-list { margin-top: 0.42in; list-style: none; }
+  .cover .cv-list li { display: flex; align-items: center; gap: 10px; font-size: 12.5px; font-weight: 500; color: var(--soft); padding: 7px 0; border-bottom: 1px solid rgba(138,69,36,.18); width: 2.9in; }
+  .cover .cv-list li span { width: 22px; height: 22px; border-radius: 50%; background: var(--brown); color: #fff; font-size: 10px; font-weight: 700; display: grid; place-items: center; flex: none; }
+
+  /* parts map */
+  .parts { margin: 20px 0 6px; display: grid; gap: 10px; }
+  .part { display: grid; grid-template-columns: 70px 1fr auto; gap: 14px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; }
+  .part .pn { font-size: 30px; font-weight: 700; color: var(--brown); letter-spacing: -.03em; line-height: 1; }
+  .part h3 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .part p { font-size: 12px; margin: 0; line-height: 1.5; }
+  .part em { font-style: normal; font-size: 11px; color: var(--muted); white-space: nowrap; }
+
+  /* ratio infographic */
+  .ratio { display: grid; grid-template-columns: 1fr 52px 1.5fr; align-items: center; margin: 8px 0 14px; }
+  .ratio .ri { text-align: center; }
+  .ratio .ri b { display: block; font-size: 17px; margin-top: 10px; }
+  .ratio .ri span { font-size: 12px; color: var(--muted); }
+  .ratio .vs { text-align: center; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .1em; }
+  .tiny-wrap { height: 220px; display: grid; place-items: center; }
+  .tiny-ring { width: 46px; height: 46px; border: 1.5px dashed var(--brown); border-radius: 50%; display: grid; place-items: center; }
+  .tiny { width: 2px; height: 2px; border-radius: 50%; background: var(--brown); }
+  .big-dot { width: 220px; height: 220px; border-radius: 50%; margin: 0 auto; background: radial-gradient(circle at 35% 30%, #B97F5E 0%, var(--brown) 55%, var(--brown-d) 100%); display: grid; place-items: center; color: #F6F2ED; font-size: 13px; font-weight: 500; text-align: center; line-height: 1.35; }
+
+  /* phone mock */
+  .phone { width: 196px; height: 372px; border: 9px solid #1E1B19; border-radius: 32px; background: #fff; padding: 30px 12px 12px; position: relative; box-shadow: 0 24px 40px -26px rgba(40,20,5,.55); flex: none; }
+  .phone::before { content: ""; position: absolute; top: 9px; left: 50%; width: 54px; height: 6px; margin-left: -27px; border-radius: 99px; background: #1E1B19; }
+  .phone .bar { display: flex; align-items: center; gap: 7px; height: 32px; padding: 0 11px; border-radius: 99px; background: #F1ECE5; font-size: 9.5px; color: var(--soft); }
+  .phone .bar svg { width: 13px; height: 13px; stroke: var(--muted); fill: none; stroke-width: 2; flex: none; }
+  .phone .r { padding: 10px 3px; border-bottom: 1px solid #EEE7DE; }
+  .phone .r i { display: block; font-style: normal; font-size: 8px; color: var(--muted); }
+  .phone .r b { display: block; font-size: 10px; line-height: 1.35; color: var(--brown); margin: 2px 0; }
+  .phone .r span { font-size: 8.5px; line-height: 1.4; color: var(--soft); display: block; }
+  .phone .pdf { display: inline-block; padding: 1px 5px; border-radius: 3px; background: var(--bone); font-size: 7.5px; font-weight: 700; color: var(--brown); margin-right: 4px; }
+
+  /* hardness scale */
+  .scale { display: grid; grid-template-columns: repeat(4, 1fr); margin: 12px 0 6px; border-radius: 12px; overflow: hidden; }
+  .scale div { padding: 12px 12px 11px; }
+  .scale b { display: block; font-size: 13.5px; }
+  .scale span { font-size: 11px; line-height: 1.45; display: block; margin-top: 3px; }
+  .s1 { background: #F4ECE0; } .s2 { background: #E9D7C2; } .s3 { background: #D8B793; } .s4 { background: #B9875E; }
+  .s4 b, .s4 span { color: #fff; }
+
+  /* routine cards */
+  .habits { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .habit { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; display: grid; grid-template-columns: 42px 1fr; gap: 6px 14px; }
+  .habit .hn { font-size: 11px; font-weight: 700; color: var(--brown); letter-spacing: .1em; }
+  .habit h3 { font-size: 15px; font-weight: 600; line-height: 1.3; margin: 0 0 4px; }
+  .habit p { font-size: 12px; line-height: 1.55; margin: 0; }
+  .habit.hero { background: var(--brown); border-color: var(--brown); }
+  .habit.hero h3, .habit.hero p, .habit.hero .hn { color: #F6F2ED; }
+  .habit.hero .ic-c { background: rgba(246,242,237,.16); }
+  .habit.hero .ic { stroke: #F6F2ED; }
+  .habit.hero .tag { background: #F6F2ED; color: var(--brown); margin-top: 9px; }
+
+  /* timeline */
+  .tl { list-style: none; position: relative; margin: 14px 0 0; }
+  .tl::before { content: ""; position: absolute; left: 25px; top: 12px; bottom: 30px; width: 2px; background: var(--line); }
+  .tl li { position: relative; display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 0 0 17px; }
+  .tl .t { position: relative; z-index: 1; justify-self: start; width: 52px; padding: 5px 0; text-align: center; border-radius: 99px; background: var(--brown); color: #fff; font-size: 11.5px; font-weight: 600; letter-spacing: .03em; }
+  .tl li.soft .t { background: var(--paper); color: var(--brown); box-shadow: inset 0 0 0 1.5px var(--brown); }
+  .tl h3 { font-size: 14.5px; font-weight: 600; line-height: 1.35; }
+  .tl p { font-size: 12.5px; line-height: 1.5; margin: 2px 0 0; }
+  .days { margin-top: 22px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px 20px; }
+  .days h2 { margin: 0 0 14px; font-size: 15.5px; }
+  .dline { display: grid; grid-template-columns: repeat(5, 1fr); position: relative; }
+  .dline::before { content: ""; position: absolute; left: 10%; right: 10%; top: 13px; height: 2px; background: var(--line); }
+  .dline .d { position: relative; text-align: center; }
+  .dline .d i { display: block; width: 28px; height: 28px; border-radius: 50%; margin: 0 auto 8px; background: #fff; box-shadow: inset 0 0 0 2px var(--brown); }
+  .dline .d.on i { background: var(--brown); }
+  .dline .d span { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .dline .d b { display: block; font-size: 13px; margin-top: 2px; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+  .facts div { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 12px; font-weight: 600; }
+  .facts .ic { width: 20px; height: 20px; flex: none; }
+
+  /* rhythm rows */
+  .rows { margin-top: 16px; display: grid; gap: 12px; }
+  .row { display: grid; grid-template-columns: 150px 1fr; gap: 18px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; align-items: start; }
+  .row .when { display: flex; flex-direction: column; gap: 8px; }
+  .row .when b { font-size: 15px; line-height: 1.25; }
+  .row ul { list-style: none; }
+  .row li { position: relative; padding-left: 16px; font-size: 12.5px; line-height: 1.55; color: var(--soft); margin-bottom: 5px; }
+  .row li:last-child { margin-bottom: 0; }
+  .row li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--d30); }
+  .row.hero { background: var(--bone); border-color: var(--bone); }
+
+  /* compare */
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 12px; }
+  .cmp > div { border-radius: 16px; padding: 18px 20px; }
+  .cmp .a { background: #fff; border: 1px solid var(--line); }
+  .cmp .b { background: var(--brown); }
+  .cmp h3 { font-size: 15.5px; font-weight: 600; margin-bottom: 8px; }
+  .cmp .b h3, .cmp .b li { color: #F6F2ED; }
+  .cmp ul { list-style: none; }
+  .cmp li { position: relative; padding-left: 20px; font-size: 12.5px; line-height: 1.5; color: var(--soft); margin-bottom: 6px; }
+  .cmp li::before { content: ""; position: absolute; left: 1px; top: 7px; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--muted); }
+  .cmp .b li::before { border-color: #F6F2ED; background: #F6F2ED; }
+
+  /* layers */
+  .layers { list-style: none; margin: 4px 0 0; }
+  .layers li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .layers li:last-child { border-bottom: 0; }
+  .layers .n { width: 28px; height: 28px; border-radius: 50%; background: var(--bone); color: var(--brown); font-size: 12px; font-weight: 700; display: grid; place-items: center; }
+  .layers b { display: block; font-size: 13.5px; }
+  .layers span { font-size: 12px; line-height: 1.5; color: var(--soft); }
+
+  /* install */
+  .inst { list-style: none; margin: 14px 0 0; display: grid; gap: 10px; }
+  .inst li { display: grid; grid-template-columns: 52px 1fr; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 12px 16px; }
+  .inst .ic-c { width: 52px; height: 52px; position: relative; }
+  .inst .ic-c .ic { width: 24px; height: 24px; }
+  .inst .ic-c em { position: absolute; top: -4px; right: -4px; width: 19px; height: 19px; border-radius: 50%; background: var(--brown); color: #fff; font-size: 10px; font-weight: 700; font-style: normal; display: grid; place-items: center; }
+  .inst b { display: block; font-size: 14px; line-height: 1.35; }
+  .inst span { font-size: 12px; line-height: 1.5; color: var(--soft); }
+
+  /* day 30 */
+  .slots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0 20px; }
+  .slot { height: 2.75in; border-radius: 18px; display: grid; place-items: center; position: relative; }
+  .slot.full { background: var(--paper); }
+  .slot.full img { width: 2.15in; }
+  .slot.empty { border: 2px dashed rgba(246,242,237,.6); color: #F6F2ED; text-align: center; }
+  .slot.empty p { font-size: 13px; color: #F6F2ED; margin: 0; }
+  .slot .lab { position: absolute; top: 12px; left: 14px; font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--brown); }
+  .slot.empty .lab { color: #F6F2ED; }
+
+  /* water card */
+  .field { display: flex; align-items: flex-end; gap: 12px; padding: 12px 0 6px; border-bottom: 1px solid #CDBFAA; font-size: 12.5px; color: var(--soft); }
+  .field span { flex: none; font-weight: 600; color: var(--ink); }
+  .check { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; font-weight: 400; }
+  .check i { width: 13px; height: 13px; border: 1.5px solid var(--ink); border-radius: 3px; display: inline-block; }
+
+  /* faq */
+  .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .faq div { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+  .faq h3 { font-size: 14px; font-weight: 600; line-height: 1.35; margin-bottom: 6px; }
+  .faq p { font-size: 12px; line-height: 1.55; margin: 0; }
+
+  .code { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border: 1.5px dashed var(--brown); border-radius: 10px; background: #fff; font-size: 17px; font-weight: 700; letter-spacing: .12em; color: var(--brown); }
 </style>
 </head>
 <body>
 
 <!-- 1. COVER -->
-<section class="page cover"><img src="cover.jpg" alt="Plush: Know Your Water"></section>
+<section class="page cover">
+  <img class="cv-photo" src="img/cover-plush-shower.jpg" alt="">
+  <div class="cv-txt">
+    <img class="cv-logo" src="plush-logo.png" alt="plush">
+    <p class="kicker">A free guide from Plush</p>
+    <h1 class="cv-title">Know Your Water</h1>
+    <p class="cv-sub">What's in your city's water, and what to do about it.</p>
+    <ul class="cv-list">
+      <li><span>1</span>Read your city's water report</li>
+      <li><span>2</span>Build a better shower routine</li>
+      <li><span>3</span>Get the most from your Plush</li>
+    </ul>
+  </div>
+</section>
 
 <!-- 2. WELCOME -->
 <section class="page">
   <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
   <div class="in">
+    <img class="cut" src="img/cut-2.png" alt="Plush shower head and cartridge" style="position:absolute;top:-0.1in;right:-0.15in;width:2.35in">
     <p class="kicker">Before you start</p>
-    <h1>Your water already has a report card. Let's read it.</h1>
-    <p class="lead">Every city water system in the U.S. publishes a report about its water, once a year. It's public, it's free, and almost nobody reads it.</p>
-    <p>This guide shows you where to find yours, and how to read it in about 30 seconds. No scare tactics, no lab coat. Just your city's own numbers, and what they mean.</p>
-    <ul class="toc">
-      <li><span>01</span>Your water has a report card<em>page 3</em></li>
-      <li><span>02</span>Find yours in 3 minutes<em>page 4</em></li>
-      <li><span>03</span>Read it in 30 seconds<em>page 5</em></li>
-      <li><span>04</span>Chlorine or chloramine?<em>page 7</em></li>
-      <li><span>05</span>Hard water, in numbers<em>page 8</em></li>
-      <li><span>06</span>Install Plush in 2 minutes<em>page 9</em></li>
-      <li><span>07</span>Day 30: look at your cartridge<em>page 10</em></li>
-      <li><span>08</span>Your water card<em>page 11</em></li>
-    </ul>
+    <h1 style="max-width:4.3in">You chose your shampoo. Nobody chose your water.</h1>
+    <p class="lead" style="max-width:4.4in">Everything on your shower shelf was picked by you. The water came with the apartment, the house, the city.</p>
+    <p class="lead" style="max-width:5.6in">This guide shows you what's in it, in plain words. Then it builds a better shower routine around it, step by step.</p>
+    <div class="parts">
+      <div class="part"><div class="pn">01</div><div><h3>Know your water</h3><p>Find your city's water report and read it in 30 seconds.</p></div><em>pages 3–9</em></div>
+      <div class="part"><div class="pn">02</div><div><h3>Your shower routine</h3><p>Six daily habits, a 10-minute shower, and what to do each week.</p></div><em>pages 10–14</em></div>
+      <div class="part"><div class="pn">03</div><div><h3>Your Plush</h3><p>How it works, the install, Day 30 and your next cartridge.</p></div><em>pages 15–20</em></div>
+    </div>
+    <div class="box" style="margin-top:16px"><p><b>No scare tactics, no lab coat.</b> Your city's own numbers, what they mean, and simple habits you can start tonight.</p></div>
     <div class="sign">Thanks for being here.<b>Yasser</b><span class="muted">CEO, Plush</span></div>
   </div>
   <div class="num">2</div>
 </section>
 
-<!-- 3. CHAPTER 1 -->
+<!-- 3. PART 1 OPENER -->
 <section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
+  <img src="img/shower-old-head.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:4.55in;object-fit:cover;object-position:50% 40%">
+  <div style="position:absolute;top:3.78in;left:0.8in;padding:8px 14px;border-radius:99px;background:rgba(246,242,237,.92);font-size:12px;font-weight:500;color:var(--ink)">Your shower head came with the place.</div>
+  <div style="position:absolute;top:4.95in;left:0.8in;right:0.8in;bottom:0.7in">
+    <p class="kicker">Part 1 · Know your water</p>
+    <h1>The biggest ingredient in your routine</h1>
+    <div class="ratio">
+      <div class="ri"><div class="tiny-wrap"><div class="tiny-ring"><div class="tiny"></div></div></div><b>1 teaspoon</b><span>of shampoo</span></div>
+      <div class="vs">VS</div>
+      <div class="ri"><div class="big-dot">about 16<br>gallons</div><b>About 12,000 teaspoons</b><span>of water, in one shower</span></div>
+    </div>
+    <p>A typical shower runs about 16 gallons through your shower head. Shower every day and that's nearly 6,000 gallons a year. <b>Your hair and skin meet that water before they meet any product.</b> So it's worth knowing what's in it.</p>
+    <p class="src">Typical shower: about 16 gallons over about 8 minutes (Alliance for Water Efficiency, Home Water Works). 1 U.S. teaspoon is about 4.9 mL. Circles drawn to scale by area.</p>
+  </div>
+  <div class="num">3</div>
+</section>
+
+<!-- 4. CH 1 -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 1 · Know your water</span></div>
   <div class="in">
+    <svg viewBox="0 0 150 190" style="position:absolute;top:0;right:0;width:1.55in" aria-hidden="true">
+      <rect x="6" y="6" width="138" height="178" rx="10" fill="#fff" stroke="#E2D6C5" stroke-width="2"/>
+      <rect x="20" y="22" width="70" height="8" rx="4" fill="#8A4524"/>
+      <rect x="20" y="38" width="108" height="5" rx="2.5" fill="#E2D6C5"/>
+      <rect x="20" y="49" width="94" height="5" rx="2.5" fill="#E2D6C5"/>
+      <rect x="20" y="68" width="110" height="12" rx="3" fill="#141414"/>
+      <rect x="20" y="84" width="110" height="10" fill="#F6F2ED"/><rect x="20" y="98" width="110" height="10" fill="#F4E2D3"/>
+      <rect x="20" y="112" width="110" height="10" fill="#F6F2ED"/><rect x="20" y="126" width="110" height="10" fill="#F6F2ED"/>
+      <rect x="20" y="148" width="100" height="5" rx="2.5" fill="#E2D6C5"/><rect x="20" y="159" width="80" height="5" rx="2.5" fill="#E2D6C5"/>
+      <circle cx="118" cy="103" r="15" fill="none" stroke="#8A4524" stroke-width="2.5"/>
+    </svg>
     <div class="chap">01</div>
-    <h1>Your water has a report card</h1>
-    <p class="lead">It's called a Consumer Confidence Report, or CCR. Some cities call it a Water Quality Report. Same thing.</p>
+    <h1 style="max-width:4.6in">Your water has a report card</h1>
+    <p class="lead" style="max-width:4.7in">It's called a Consumer Confidence Report, or CCR. Some cities call it a Water Quality Report. Same thing.</p>
     <h2>Who has to publish it</h2>
     <p>Every community water system in the U.S. That's any system serving at least 25 people, or 15 homes, all year. If you pay a water bill to a city or a utility, you're covered. The rule comes from the Safe Drinking Water Act.</p>
     <h2>When</h2>
     <p>Every year, by July 1. It covers the year before. So the report you'll find this year shows last year's tests.</p>
     <h2>What's in it</h2>
     <div class="grid2">
-      <div class="card"><h3>Where your water comes from</h3><p>A river, a lake, a reservoir, or groundwater from wells.</p></div>
-      <div class="card"><h3>How it's treated</h3><p>The steps your utility uses before the water reaches your pipes.</p></div>
-      <div class="card"><h3>What was detected</h3><p>Every regulated substance found in testing, with the level measured.</p></div>
-      <div class="card"><h3>Any violations</h3><p>Whether a legal limit was exceeded, and what the utility did about it.</p></div>
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2.7s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/></svg></div><h3>Where it comes from</h3><p>A river, a lake, a reservoir, or groundwater from wells.</p></div>
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3>How it's treated</h3><p>The steps your utility uses before the water reaches your pipes.</p></div>
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>What was detected</h3><p>Every regulated substance found in testing, with the level measured.</p></div>
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4M12 17v.5"/></svg></div><h3>Any violations</h3><p>Whether a legal limit was exceeded, and what the utility did about it.</p></div>
     </div>
     <div class="note"><p><b>On a private well?</b> Wells aren't covered by these reports. You'd have to test the water yourself, with a certified lab.</p></div>
-    <div class="box"><p>The report talks about drinking water. Your shower runs on the same water, from the same pipes.</p></div>
-  </div>
-  <div class="num">3</div>
-</section>
-
-<!-- 4. CHAPTER 2 -->
-<section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
-  <div class="in">
-    <div class="chap">02</div>
-    <h1>Find yours in 3 minutes</h1>
-    <p class="lead">Four ways. The first one works most of the time.</p>
-    <ol class="steps">
-      <li><b>Search for it</b>Type <i>"[your city] water quality report"</i> or <i>"[your city] consumer confidence report"</i>. Most utilities post it as a PDF on their website.</li>
-      <li><b>Look at your water bill</b>The utility's name is on it. Many bills also print the link to the report, often near the bottom.</li>
-      <li><b>Use the EPA's search</b>Go to <b style="display:inline">epa.gov/ccr</b> and use "Find your local CCR". Pick your state, then your water system.</li>
-      <li><b>Call and ask</b>Call the number on your water bill and ask for the "Consumer Confidence Report". They're required to make it available to you.</li>
-    </ol>
-    <div class="note"><p><b>Renting?</b> Your landlord may pay the water bill, but the report still covers your water. Search by your city or your utility's name.</p></div>
-    <div class="box">
-      <p><b>Tip.</b> Big cities sometimes have several water systems. If your report lists more than one, look for the area or ZIP code that matches your home.</p>
-    </div>
+    <div class="box"><p>The report talks about drinking water. Your shower runs on the same water, from the same pipes. <b>Your shower head is the last stop before it reaches you.</b></p></div>
   </div>
   <div class="num">4</div>
 </section>
 
-<!-- 5. CHAPTER 3 (1/2) -->
+<!-- 5. CH 2 -->
 <section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 1 · Know your water</span></div>
+  <div class="in">
+    <div class="chap">02</div>
+    <h1>Find yours in 3 minutes</h1>
+    <p class="lead">Four ways. The first one works most of the time.</p>
+    <div style="display:flex;gap:28px;align-items:flex-start;margin-top:8px">
+      <ol class="steps" style="flex:1;margin-top:6px">
+        <li><b>Search for it</b>Type <i>"[your city] water quality report"</i> or <i>"[your city] consumer confidence report"</i>. Most utilities post it as a PDF on their website.</li>
+        <li><b>Look at your water bill</b>The utility's name is on it. Many bills also print the link to the report, often near the bottom.</li>
+        <li><b>Use the EPA's search</b>Go to <b style="display:inline">epa.gov/ccr</b> and use "Find your local CCR". Pick your state, then your water system.</li>
+        <li><b>Call and ask</b>Call the number on your water bill and ask for the "Consumer Confidence Report". They're required to make it available to you.</li>
+      </ol>
+      <div class="phone" aria-hidden="true">
+        <div class="bar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>[your city] water quality report</div>
+        <div class="r"><i>yourcity.gov › water</i><b>Annual Water Quality Report</b><span><span class="pdf">PDF</span>Results from last year's testing, by your water utility.</span></div>
+        <div class="r"><i>yourcity.gov › utilities</i><b>Consumer Confidence Report (CCR)</b><span>Where your water comes from, what was detected, and how it's treated.</span></div>
+        <div class="r" style="border:0"><i>epa.gov › ccr</i><b>Find your local CCR</b><span>Search by state and water system.</span></div>
+      </div>
+    </div>
+    <div class="note"><p><b>Renting?</b> Your landlord may pay the water bill, but the report still covers your water. Search by your city or your utility's name.</p></div>
+    <div class="box"><p><b>Tip.</b> Big cities sometimes have several water systems. If your report lists more than one, look for the area or ZIP code that matches your home.</p></div>
+    <p class="src">Search screen above is an illustration. Your results will look different.</p>
+  </div>
+  <div class="num">5</div>
+</section>
+
+<!-- 6. CH 3 -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 1 · Know your water</span></div>
   <div class="in">
     <div class="chap">03</div>
     <h1>Read it in 30 seconds</h1>
     <p class="lead">Skip the intro pages. Go straight to the big table. It usually looks like this.</p>
     <table class="mock">
-      <tr><th>Substance</th><th>Unit</th><th>MCL</th><th>Your level</th><th>Range</th><th>Violation</th><th>Likely source</th></tr>
-      <tr><td>Chlorine</td><td>ppm</td><td>MRDL 4</td><td class="hl">1.2</td><td>0.6 – 2.0</td><td class="hl">No</td><td>Water additive used to control microbes</td></tr>
+      <tr><th>Substance</th><th>Unit</th><th>MCL <span class="pin">2</span></th><th>Your level <span class="pin">2</span></th><th>Range</th><th>Violation <span class="pin">1</span></th><th>Likely source</th></tr>
+      <tr><td><b>Chlorine</b> <span class="pin">3</span></td><td>ppm</td><td>MRDL 4</td><td class="hl">1.2</td><td>0.6 – 2.0</td><td class="hl">No</td><td>Water additive used to control microbes</td></tr>
       <tr><td>Nitrate</td><td>ppm</td><td>10</td><td class="hl">1.4</td><td>ND – 2.8</td><td class="hl">No</td><td>Runoff from fertilizer use</td></tr>
       <tr><td>Total trihalomethanes</td><td>ppb</td><td>80</td><td class="hl">34</td><td>18 – 51</td><td class="hl">No</td><td>By-product of drinking water disinfection</td></tr>
     </table>
@@ -168,16 +348,16 @@
     <ol class="steps">
       <li><b>The Violation column</b>"No" all the way down means every result was within the legal limits that year.</li>
       <li><b>Your level next to the MCL</b>The MCL is the legal limit. Your city's number should sit below it. The gap tells you how far below.</li>
-      <li><b>The disinfectant line</b>It says "chlorine" or "chloramine". Write down which one. Chapter 4 explains why.</li>
+      <li><b>The disinfectant line</b>It says "chlorine" or "chloramine". Write it down on your water card. Chapter 04 explains why it matters.</li>
     </ol>
     <div class="box"><p><b>Detected doesn't mean unsafe.</b> Reports list everything that was found, even at levels far below the limits. The report gives you the numbers. What you do with them is up to you.</p></div>
   </div>
-  <div class="num">5</div>
+  <div class="num">6</div>
 </section>
 
-<!-- 6. CHAPTER 3 (2/2) -->
+<!-- 7. GLOSSARY -->
 <section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 1 · Know your water</span></div>
   <div class="in">
     <p class="kicker">03 · Read it in 30 seconds</p>
     <h1>The words, decoded</h1>
@@ -198,35 +378,40 @@
       <tr><td><b>ppm</b></td><td>parts per million</td><td>mg/L (milligrams per liter)</td></tr>
       <tr><td><b>ppb</b></td><td>parts per billion</td><td>µg/L (micrograms per liter)</td></tr>
     </table>
-    <p class="muted small">1 ppm = 1,000 ppb. Always compare numbers in the same unit.</p>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card" style="display:flex;gap:14px;align-items:center"><svg viewBox="0 0 60 60" style="width:54px;flex:none" aria-hidden="true"><path d="M30 6s-14 15-14 25a14 14 0 0 0 28 0C44 21 30 6 30 6z" fill="#8A4524"/></svg><p><b>1 ppm</b> is about one drop of water in a 13-gallon kitchen trash can full of water.</p></div>
+      <div class="card" style="display:flex;gap:14px;align-items:center"><svg viewBox="0 0 60 60" style="width:54px;flex:none" aria-hidden="true"><path d="M30 22s-6 6.5-6 10.5a6 6 0 0 0 12 0C36 28.5 30 22 30 22z" fill="#8A4524"/></svg><p><b>1 ppb</b> is about one drop in 13,000 gallons. That's a backyard pool.</p></div>
+    </div>
+    <p class="src">1 ppm = 1,000 ppb. Always compare numbers in the same unit. A drop is about 0.05 mL.</p>
   </div>
-  <div class="num">6</div>
+  <div class="num">7</div>
 </section>
 
-<!-- 7. CHAPTER 4 -->
+<!-- 8. CH 4 -->
 <section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 1 · Know your water</span></div>
   <div class="in">
     <div class="chap">04</div>
     <h1>Chlorine or chloramine?</h1>
     <p class="lead">Your utility adds a disinfectant to keep the water clean all the way through the pipes to your tap. That's required, and it's a good thing.</p>
     <div class="grid2">
-      <div class="card"><h3>Chlorine</h3><p>The classic. It's the reason some showers smell a little like a swimming pool.</p></div>
-      <div class="card"><h3>Chloramine</h3><p>Chlorine combined with a small amount of ammonia. It lasts longer in big pipe networks, so many large cities use it.</p></div>
+      <div class="card"><div class="ic-c" style="font-weight:700;color:var(--brown);font-size:13px">Cl</div><h3>Chlorine</h3><p>The classic. It's the reason some showers smell a little like a swimming pool.</p></div>
+      <div class="card"><div class="ic-c" style="font-weight:700;color:var(--brown);font-size:11px">NH₂Cl</div><h3>Chloramine</h3><p>Chlorine combined with a small amount of ammonia. It lasts longer in big pipe networks, so many large cities use it.</p></div>
     </div>
-    <p>More than one in five Americans gets water treated with chloramine, according to the EPA.</p>
+    <p>More than one in five Americans gets water treated with chloramine, according to the EPA. Federal rules cap both at <b>4 ppm</b> (4 mg/L), as a yearly average.</p>
     <h2>How to know which one you have</h2>
     <p>Find the disinfectant line in your report. Look for <b>chlorine</b>, <b>free chlorine</b>, <b>total chlorine</b>, <b>chloramine</b>, <b>chloramines</b> or <b>monochloramine</b>. Still not sure? Your utility will tell you in one phone call.</p>
     <h2>Why it's worth knowing</h2>
     <p>Filters are built for specific jobs. Different filter materials handle different things, at different speeds. Knowing which disinfectant your city uses helps you judge any filter honestly, including ours.</p>
+    <div class="note"><p><b>Straight talk.</b> Plush's cartridge is built around chlorine. Chloramine is harder to filter for every kind of shower filter, ours included. If your city uses it, now you know what to expect.</p></div>
     <div class="box"><p><b>A good question to ask any filter brand:</b> "What is your cartridge designed to reduce, and was it tested?" A clear brand will give you a clear answer.</p></div>
   </div>
-  <div class="num">7</div>
+  <div class="num">8</div>
 </section>
 
-<!-- 8. CHAPTER 5 -->
+<!-- 9. CH 5 -->
 <section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 1 · Know your water</span></div>
   <div class="in">
     <div class="chap">05</div>
     <h1>Hard water, in numbers</h1>
@@ -238,63 +423,284 @@
       <div class="s3"><b>Hard</b><span>121 – 180 mg/L<br>7.1 – 10.5 gpg</span></div>
       <div class="s4"><b>Very hard</b><span>over 180 mg/L<br>over 10.5 gpg</span></div>
     </div>
-    <p class="small muted">Scale used by the U.S. Geological Survey.</p>
+    <p class="src">Scale used by the U.S. Geological Survey.</p>
     <h2>What you'll notice</h2>
-    <p>White spots on glass and faucets. A crust on the shower head. Soap that doesn't lather much.</p>
+    <div class="grid3">
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><circle cx="10" cy="9" r=".9"/><circle cx="14.5" cy="12" r=".9"/><circle cx="9.5" cy="15.5" r=".9"/><circle cx="14" cy="17" r=".9"/></svg></div><h3>White spots</h3><p>On glass doors, tiles and faucets, once the water dries.</p></div>
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h5a4 4 0 0 1 4 4v1"/><path d="M9 10h10l-1.2 3.5H10.2z"/><path d="M11 17h.01M14 18.5h.01M17 17h.01"/></svg></div><h3>A crust on the head</h3><p>A white or tan crust around the holes of your shower head.</p></div>
+      <div class="card"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><circle cx="8" cy="14" r="4"/><circle cx="15.5" cy="9" r="3"/><circle cx="17" cy="16.5" r="2"/></svg></div><h3>Less lather</h3><p>Soap and shampoo that don't foam up as much as you'd expect.</p></div>
+    </div>
     <div class="note"><p><b>Straight talk.</b> Plush is not a water softener. No shower filter removes hardness. If very hard water and white spots are your main problem, a water softener is the right tool. We'd rather tell you now.</p></div>
     <div class="box"><p><b>Quick fix for spots.</b> Wipe the glass with equal parts white vinegar and water, then rinse. A squeegee after each shower keeps them from coming back.</p></div>
-  </div>
-  <div class="num">8</div>
-</section>
-
-<!-- 9. CHAPTER 6 -->
-<section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
-  <div class="in">
-    <div class="chap">06</div>
-    <h1>Install Plush in 2 minutes</h1>
-    <p class="lead">No tools. No plumber. Plush fits the standard U.S. ½-inch shower arm.</p>
-    <ol class="steps">
-      <li><b>Turn the water off.</b></li>
-      <li><b>Unscrew your old shower head by hand, counter-clockwise.</b>If it won't budge, grip it with a dry dish towel.</li>
-      <li><b>Check the rubber washer inside the Plush head.</b>It's already in there. Leave it.</li>
-      <li><b>Screw Plush on by hand, clockwise, until it stops.</b>Hand-tight is tight enough. No wrench, no tape.</li>
-      <li><b>Run the water for 30 seconds before your first shower.</b>A new filter releases a little carbon dust. It's normal, and it only happens once.</li>
-    </ol>
-    <div class="note"><p><b>Moving out?</b> Screw your old shower head back on and take Plush with you. Nothing to repair, nothing to leave behind.</p></div>
-    <div class="box"><p><b>Something's off?</b> Email <b>info.tryplush@gmail.com</b>. A real person reads every message.</p></div>
   </div>
   <div class="num">9</div>
 </section>
 
-<!-- 10. CHAPTER 7 -->
-<section class="page dark">
-  <div class="top"><img src="plush-logo.png" alt="plush" style="filter:brightness(0) invert(1);opacity:.85"><span>Know your water</span></div>
+<!-- 10. PART 2 OPENER -->
+<section class="page" style="background:var(--bone)">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 2 · Your shower routine</span></div>
   <div class="in">
-    <div class="chap" style="color:#F7F2EA">07</div>
-    <h1>Day 30: look at your cartridge</h1>
-    <p class="lead" style="color:#F3E9DD">On day 30, unscrew the cartridge and hold it next to a new one. Or next to the photo below.</p>
-    <div class="pair">
-      <div class="pic"><img src="cartridge.png" alt="A new Plush cartridge"></div>
+    <div style="display:grid;grid-template-columns:1fr 3.6in;gap:28px;margin-top:0.2in;align-items:start">
       <div>
-        <p class="big-line">We didn't make it brown. Your water did.</p>
-        <p style="color:#F3E9DD">What you see is what stayed in the cartridge instead of coming out of your shower head.</p>
+        <p class="kicker">Part 2 · Your shower routine</p>
+        <h1 style="font-size:44px;line-height:1.03;letter-spacing:-.035em;margin:12px 0 18px">Upgrade the routine. Start with the water.</h1>
+        <p class="lead">You've built a routine around products. This part rebuilds it around the one thing every product touches first.</p>
+        <ol class="layers" style="margin-top:18px">
+          <li><span class="n" style="background:#fff">1</span><div><b>Six daily habits</b><span>The first one changes the water. The other five are free. Page 11.</span></div></li>
+          <li><span class="n" style="background:#fff">2</span><div><b>Your 10-minute shower</b><span>A simple order for hair-wash days. Page 12.</span></div></li>
+          <li><span class="n" style="background:#fff">3</span><div><b>Week, month, year</b><span>Small habits that keep everything in shape. Page 13.</span></div></li>
+        </ol>
       </div>
+      <img class="photo" src="img/shower-routine.jpg" alt="Woman with her eyes closed under a shower" style="height:5.55in">
     </div>
-    <p style="color:#F3E9DD">Every city's water is different, so every cartridge looks different. Some turn tan, some turn rust, some barely change. A color isn't a verdict on your water. It just shows you the filter at work.</p>
-    <h2 style="color:#fff">When to change it</h2>
-    <p style="color:#F3E9DD">About every 3 months, or sooner if the flow feels weaker. Unscrew the old one, screw in the new one. No tools.</p>
-    <div class="box" style="background:rgba(247,242,234,.12)"><p style="color:#fff"><b>Never run out.</b> Get a new cartridge every 3 months with Subscribe &amp; save, and cancel anytime: <b>myplush.us/products/plush-replacement-cartridge</b></p></div>
-    <p style="color:#F3E9DD">Took a day-30 photo? Send it to <b>info.tryplush@gmail.com</b>. We'd love to see what you saw.</p>
+    <div class="box" style="background:#fff;margin-top:26px;padding:20px 22px"><p style="font-size:15px;line-height:1.55"><b>The idea in one line.</b> Products work on the surface. The water touches everything first. So a good routine starts at the shower head.</p></div>
   </div>
   <div class="num">10</div>
 </section>
 
-<!-- 11. WORKSHEET -->
+<!-- 11. SIX HABITS -->
 <section class="page">
-  <div class="top"><img src="plush-logo.png" alt="plush"><span>Know your water</span></div>
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 2 · Your shower routine</span></div>
   <div class="in">
-    <div class="chap">08</div>
+    <p class="kicker">Every day</p>
+    <h1>Six habits for a better shower</h1>
+    <p class="lead">Five of them cost nothing. The first one is the only step that works on the water itself.</p>
+    <div class="habits">
+      <div class="habit hero" style="grid-column:1 / -1">
+        <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg></div>
+        <div><div class="hn">HABIT 1</div><h3>Filter the water first</h3><p>Every other step happens after the water has already reached you. Filtering at the shower head is the only step that changes the water itself, for every minute of every shower.</p><span class="tag">This is where Plush comes in</span></div>
+      </div>
+      <div class="habit">
+        <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M14 14.8V4.5a2 2 0 0 0-4 0v10.3a4 4 0 1 0 4 0z"/><path d="M12 11v6"/></svg></div>
+        <div><div class="hn">HABIT 2</div><h3>Warm, not hot</h3><p>Very hot water can leave skin feeling tight. Warm feels almost as good, without the tight feeling after.</p></div>
+      </div>
+      <div class="habit">
+        <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div>
+        <div><div class="hn">HABIT 3</div><h3>5 to 10 minutes</h3><p>Plenty of time to wash and rinse. Longer just means more time under the water, and a bigger water bill.</p></div>
+      </div>
+      <div class="habit">
+        <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M10 2h4v3l2 2v13a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V7l2-2z"/><path d="M8 12h8"/></svg></div>
+        <div><div class="hn">HABIT 4</div><h3>Scalp first, ends last</h3><p>Shampoo goes on your scalp. Conditioner goes on the lengths and ends. Rinse both well.</p></div>
+      </div>
+      <div class="habit">
+        <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M6 3h12v14H6z"/><path d="M6 17v4h12v-4M10 8h4"/></svg></div>
+        <div><div class="hn">HABIT 5</div><h3>Pat, don't rub</h3><p>Press the towel against your skin and hair. Put your lotion on while your skin is still a little damp.</p></div>
+      </div>
+      <div class="habit" style="grid-column:1 / -1">
+        <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M4 9h16v3H4z"/><path d="M12 12v9M7 5.5v.01M12 4.5v.01M17 5.5v.01"/></svg></div>
+        <div><div class="hn">HABIT 6</div><h3>20 seconds of squeegee</h3><p>Hard water dries into white spots. One pass on the glass after each shower, and it stays clear. Keep the squeegee on a hook inside the shower so you don't skip it.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="num">11</div>
+</section>
+
+<!-- 12. 10-MINUTE SHOWER -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 2 · Your shower routine</span></div>
+  <img class="cut" src="img/cut-10.png" alt="A hand running through wet hair" style="position:absolute;top:0.9in;right:-0.3in;width:3.55in">
+  <div class="in">
+    <p class="kicker">Hair-wash days</p>
+    <h1 style="max-width:4.2in">Your 10-minute shower</h1>
+    <p class="lead" style="max-width:4.3in">A simple order that works. On other days, skip the hair steps.</p>
+    <ol class="tl">
+      <li><span class="t">0:00</span><div><h3>Water on. Warm, not hot.</h3><p>Give it a few seconds to reach the right temperature.</p></div></li>
+      <li><span class="t">0:30</span><div><h3>Wet your hair all the way.</h3><p>A full minute. Shampoo spreads better on hair that's soaked.</p></div></li>
+      <li><span class="t">1:30</span><div><h3>Shampoo your scalp.</h3><p>Fingertips, not nails. The suds wash the lengths on their way down.</p></div></li>
+      <li><span class="t">3:30</span><div><h3>Conditioner on the ends.</h3><p>Leave it in while you wash your body.</p></div></li>
+      <li><span class="t">4:00</span><div><h3>Body wash.</h3><p>Your hands or a soft cloth. Save scrubs for once or twice a week.</p></div></li>
+      <li><span class="t">7:00</span><div><h3>Rinse everything.</h3><p>Conditioner out, soap off. Take your time here.</p></div></li>
+      <li class="soft"><span class="t">9:00</span><div><h3>A cooler last rinse, if you like it.</h3><p>Totally optional. Some people love it.</p></div></li>
+      <li><span class="t">9:30</span><div><h3>Water off. Squeegee. Pat dry.</h3><p>Then lotion, while your skin is still a little damp.</p></div></li>
+    </ol>
+    <div class="box" style="margin-top:4px"><p><b>Every one of those 10 minutes runs through your shower head.</b> That's why, in this routine, the filter comes first.</p></div>
+    <div class="grid2">
+      <div class="card"><h3 style="margin-top:0">Body-only days</h3><p>Water on, body wash, rinse, off. Five minutes is plenty.</p></div>
+      <div class="card"><h3 style="margin-top:0">Between hair washes</h3><p>Keep your hair out of the water with a clip, or just rinse the scalp with water.</p></div>
+    </div>
+  </div>
+  <div class="num">12</div>
+</section>
+
+<!-- 13. RHYTHM -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 2 · Your shower routine</span></div>
+  <div class="in">
+    <p class="kicker">Week, month, year</p>
+    <h1>Beyond the daily</h1>
+    <p class="lead">A few small habits keep your shower, your hair and your filter in shape. Put them in your phone's calendar once, and forget about them.</p>
+    <div class="rows">
+      <div class="row">
+        <div class="when"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><b>Every week</b></div>
+        <ul>
+          <li>Hard water? A clarifying shampoo every week or two helps lift mineral and product buildup.</li>
+          <li>Wipe the face of your shower head with a cloth and a little white vinegar.</li>
+          <li>Wash your bath towels often. Damp towels get musty fast.</li>
+        </ul>
+      </div>
+      <div class="row hero">
+        <div class="when"><div class="ic-c" style="background:#fff"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><b>Every 30 days</b></div>
+        <ul>
+          <li>Day 30: unscrew your cartridge and look at it (page 17).</li>
+          <li>Snap a photo next to a fresh one. It's the best way to see your water.</li>
+        </ul>
+      </div>
+      <div class="row hero">
+        <div class="when"><div class="ic-c" style="background:#fff"><svg class="ic" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg></div><b>Every 60 days</b></div>
+        <ul>
+          <li>Change your cartridge. Go by the calendar, not the color (page 18).</li>
+          <li>Set your next reminder the same day.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="when"><div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><b>Every year,<br>after July 1</b></div>
+        <ul>
+          <li>Your city publishes a new water report.</li>
+          <li>Take 3 minutes to read it, and update your water card (page 19).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="days">
+      <h2>Your first 120 days with Plush</h2>
+      <div class="dline">
+        <div class="d on"><i></i><span>Day 0</span><b>Install</b></div>
+        <div class="d"><i></i><span>Day 30</span><b>Look</b></div>
+        <div class="d on"><i></i><span>Day 60</span><b>New cartridge</b></div>
+        <div class="d"><i></i><span>Day 90</span><b>Look</b></div>
+        <div class="d on"><i></i><span>Day 120</span><b>New cartridge</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="num">13</div>
+</section>
+
+<!-- 14. THE STEP A BOTTLE CAN'T DO -->
+<section class="page">
+  <img src="img/plush-marble.jpg" alt="The Plush shower head on a marble counter" style="position:absolute;top:0;left:0;width:100%;height:6.15in;object-fit:cover;object-position:50% 0%">
+  <div style="position:absolute;top:0.85in;left:0.8in;width:3.05in">
+    <p class="kicker">The one step that matters most</p>
+    <h1 style="font-size:33px">The step a bottle can't do</h1>
+    <p style="font-size:13.5px">Shampoo, conditioner, serum, body wash. Every product works after the water has already reached you. <b>Plush works on the water.</b></p>
+  </div>
+  <div style="position:absolute;top:6.4in;left:0.8in;right:0.8in">
+    <div class="cmp">
+      <div class="a"><h3>Your products</h3><ul><li>Work on the surface</li><li>Go on after the water</li><li>Rinse off with that same water</li></ul></div>
+      <div class="b"><h3>Plush</h3><ul><li>Sits between your pipes and you</li><li>Filters the water as it flows</li><li>Changes the one ingredient you never picked</li></ul></div>
+    </div>
+    <div class="box" style="display:flex;gap:18px;align-items:center;margin:0"><div style="font-size:30px;font-weight:700;color:var(--brown);letter-spacing:-.03em;white-space:nowrap">48¢ a day</div><p style="margin:0">About what a fresh cartridge every 60 days costs, for every shower you take. Plush Duo already includes your second cartridge.</p></div>
+    <div class="facts">
+      <div><svg class="ic" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>60-day money back</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>Free U.S. shipping</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2-minute install</div>
+    </div>
+    <p class="src" style="margin-top:10px">Based on a $29 cartridge used for 60 days. Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary.</p>
+  </div>
+  <div class="num">14</div>
+</section>
+
+<!-- 15. HOW PLUSH WORKS -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 3 · Your Plush</span></div>
+  <div class="in">
+    <p class="kicker">Part 3 · Your Plush</p>
+    <h1>How Plush works</h1>
+    <p class="lead">Water runs through the cartridge before it reaches you. Every layer has one job.</p>
+    <div style="display:grid;grid-template-columns:2.55in 1fr;gap:26px;margin-top:16px;align-items:start">
+      <div style="background:var(--bone);border-radius:18px;padding:18px 12px;display:grid;place-items:center"><img class="cut" src="img/cut-7.png" alt="Inside a Plush cartridge" style="width:2.05in"></div>
+      <ol class="layers">
+        <li><span class="n">1</span><div><b>Fine mesh and filter cotton</b><span>Catch sediment and particles before they reach you.</span></div></li>
+        <li><span class="n">2</span><div><b>KDF-55</b><span>Copper and zinc granules that turn free chlorine into chloride, the same chloride found in table salt.</span></div></li>
+        <li><span class="n">3</span><div><b>Calcium sulfite</b><span>Reacts with chlorine fast, even in hot water.</span></div></li>
+        <li><span class="n">4</span><div><b>Activated carbon</b><span>Catches leftover chlorine and the smell that comes with it.</span></div></li>
+        <li><span class="n">5</span><div><b>Vitamin C beads</b><span>One more layer that reacts with chlorine.</span></div></li>
+      </ol>
+    </div>
+    <div style="display:grid;grid-template-columns:1.3in 1fr;gap:20px;align-items:center;margin-top:18px">
+      <img class="cut" src="img/cut-9.png" alt="Fine steel mesh" style="width:1.3in;border-radius:50%">
+      <div class="note" style="margin:0"><p><b>What it won't do:</b> soften hard water. Removing calcium and magnesium takes a whole-home softener, not a shower head. We'd rather tell you now than on day 30.</p></div>
+    </div>
+    <div class="box"><p><b>Why the cartridge needs changing.</b> Every layer works by reacting with or holding on to what passes through. Over time it fills up. That's why it gets a fresh start every 60 days.</p></div>
+    <p class="src">Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary. Plush is not a medical device and is not intended to diagnose, treat, cure or prevent any condition.</p>
+  </div>
+  <div class="num">15</div>
+</section>
+
+<!-- 16. INSTALL -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 3 · Your Plush</span></div>
+  <div class="in">
+    <img class="cut" src="img/cut-0.png" alt="Plush shower head and cartridge" style="position:absolute;top:-0.15in;right:-0.1in;width:2.2in">
+    <p class="kicker">Part 3 · Your Plush</p>
+    <h1 style="max-width:4.4in">Install Plush in 2 minutes</h1>
+    <p class="lead" style="max-width:4.4in">If you can open a jar, you can install Plush. It fits the standard U.S. ½-inch shower arm. No tools, no plumber.</p>
+    <ol class="inst">
+      <li><div class="ic-c"><em>1</em><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v5M8 3h8M5 11h14v5H5zM19 13.5h2.5M2.5 13.5H5"/></svg></div><div><b>Turn the water off.</b></div></li>
+      <li><div class="ic-c"><em>2</em><svg class="ic" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><div><b>Unscrew your old shower head by hand, counter-clockwise.</b><span>Stuck? Wrap it in a cloth and turn it gently with a wrench.</span></div></li>
+      <li><div class="ic-c"><em>3</em><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg></div><div><b>Check the rubber washer inside the Plush head.</b><span>It's already in there. Leave it.</span></div></li>
+      <li><div class="ic-c"><em>4</em><svg class="ic" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div><div><b>Screw Plush on by hand, clockwise, until it stops.</b><span>Hand-tight is tight enough.</span></div></li>
+      <li><div class="ic-c"><em>5</em><svg class="ic" viewBox="0 0 24 24"><path d="M12 2.7s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div><div><b>Run the water for 30 seconds before your first shower.</b><span>A new filter can release a little carbon dust. It's normal, and it only happens once.</span></div></li>
+    </ol>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><h3 style="margin-top:0">Moving out?</h3><p>Keep your old shower head in a drawer. Swap it back the day you move out, and take Plush with you.</p></div>
+      <div class="card"><h3 style="margin-top:0">Something's off?</h3><p>Email <b>info.tryplush@gmail.com</b>. A real person reads every message and replies within 2 business days.</p></div>
+    </div>
+  </div>
+  <div class="num">16</div>
+</section>
+
+<!-- 17. DAY 30 -->
+<section class="page dark">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 3 · Your Plush</span></div>
+  <div class="in">
+    <p class="kicker" style="color:#F3D5BF">Day 30</p>
+    <h1>Look at your cartridge</h1>
+    <p class="lead">On day 30, unscrew your cartridge and hold it next to a fresh one. No fresh one at hand? Use this page.</p>
+    <div class="slots">
+      <div class="slot full"><span class="lab">Day 0</span><img src="img/cartridge-new.png" alt="A fresh Plush cartridge"></div>
+      <div class="slot empty"><span class="lab">Day 30</span><div><svg viewBox="0 0 24 24" style="width:30px;height:30px;fill:none;stroke:#F6F2ED;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 8px;display:block"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg><p>Hold yours here</p></div></div>
+    </div>
+    <p class="big-line">We didn't make it brown.<br>Your water did.</p>
+    <p style="margin-top:12px">What you see is what stayed in the cartridge instead of coming out of your shower head.</p>
+    <p>Every city's water is different, so every cartridge looks different. Some turn tan, some turn rust, some barely change. A color isn't a verdict on your water. It just shows you the filter at work.</p>
+    <div class="box" style="background:rgba(246,242,237,.12)"><p style="color:#fff">Took a day-30 photo? Send it to <b>info.tryplush@gmail.com</b>. We'd love to see what you saw.</p></div>
+  </div>
+  <div class="num">17</div>
+</section>
+
+<!-- 18. EVERY 60 DAYS -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Part 3 · Your Plush</span></div>
+  <div class="in">
+    <img class="cut" src="img/cartridge-new.png" alt="A Plush replacement cartridge" style="position:absolute;top:-0.05in;right:0;width:1.9in">
+    <p class="kicker">Every 60 days</p>
+    <h1 style="max-width:4.5in">A fresh cartridge, no tools</h1>
+    <p class="lead" style="max-width:4.5in">Go by the calendar, not the color. Depending on your water, a cartridge can look clean and still be used up.</p>
+    <ol class="steps" style="margin-top:18px">
+      <li><b>Turn the water off.</b></li>
+      <li><b>Unscrew the old cartridge, screw in the new one.</b>No tools needed.</li>
+      <li><b>Run the water for 30 seconds.</b>Same as on day one.</li>
+    </ol>
+    <div class="card" style="display:flex;gap:16px;align-items:center;margin:6px 0 14px">
+      <div class="ic-c"><svg class="ic" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></div>
+      <p style="margin:0"><b>Set the reminder now.</b> Open your phone's calendar and add "New Plush cartridge" 60 days after your install date. Then again on the day you change it.</p>
+    </div>
+    <div class="box" style="padding:20px 22px">
+      <p style="font-size:16px;margin-bottom:6px"><b>Never run out</b></p>
+      <p>Order your next cartridge at <b>myplush.us/products/plush-replacement-cartridge</b></p>
+      <p style="margin:12px 0 8px">Your thank-you code for your next order:</p>
+      <span class="code">PLUSHFAM</span>
+      <p class="small muted" style="margin-top:8px">20% off your next order. One use per customer.</p>
+    </div>
+    <div class="note"><p><b>Got Plush Duo?</b> Your second cartridge is already in the box. Day 60 is covered.</p></div>
+  </div>
+  <div class="num">18</div>
+</section>
+
+<!-- 19. WATER CARD -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Your water card</span></div>
+  <div class="in">
+    <p class="kicker">Fill it in once</p>
     <h1>Your water card</h1>
     <p class="lead">Fill it in with your report open. Print it, or screenshot it and keep it on your phone.</p>
     <div class="field"><span>City</span></div>
@@ -302,26 +708,55 @@
     <div class="field"><span>Report year</span></div>
     <div class="field"><span>Water source</span><label class="check"><i></i>River or lake</label><label class="check"><i></i>Groundwater</label><label class="check"><i></i>Both</label></div>
     <div class="field"><span>Disinfectant</span><label class="check"><i></i>Chlorine</label><label class="check"><i></i>Chloramine</label><label class="check"><i></i>Not sure</label></div>
-    <div class="field"><span>Hardness</span><span style="font-weight:400">______ mg/L or ______ gpg</span></div>
+    <div class="field"><span>Hardness</span><span style="font-weight:400;color:var(--soft)">______ mg/L or ______ gpg</span></div>
     <div class="field"><span>Hardness level</span><label class="check"><i></i>Soft</label><label class="check"><i></i>Moderate</label><label class="check"><i></i>Hard</label><label class="check"><i></i>Very hard</label></div>
     <div class="field"><span>Any violations?</span><label class="check"><i></i>None</label><label class="check"><i></i>Yes, for:</label></div>
-    <div class="field"><span>Plush installed on</span></div>
-    <div class="field"><span>Day 30 check</span></div>
-    <div class="field"><span>Next cartridge</span></div>
+    <h2 style="margin-top:22px">My Plush dates</h2>
+    <div class="field"><span>Installed on</span></div>
+    <div class="field"><span>Day 30 look</span></div>
+    <div class="field"><span>Day 60: new cartridge</span></div>
+    <div class="field"><span>Day 120: new cartridge</span></div>
+    <div class="field"><span>Day 180: new cartridge</span></div>
+    <h2 style="margin-top:22px">My routine</h2>
+    <div class="field" style="flex-wrap:wrap;row-gap:8px"><label class="check"><i></i>Warm, not hot</label><label class="check"><i></i>5 to 10 minutes</label><label class="check"><i></i>Pat, don't rub</label><label class="check"><i></i>Squeegee</label><label class="check"><i></i>Weekly clarifying wash</label></div>
   </div>
-  <div class="num">11</div>
+  <div class="num">19</div>
 </section>
 
-<!-- 12. BACK -->
+<!-- 20. FAQ -->
+<section class="page">
+  <div class="top"><img src="plush-logo.png" alt="plush"><span>Questions</span></div>
+  <div class="in">
+    <p class="kicker">Good questions</p>
+    <h1>Straight answers</h1>
+    <p class="lead">The questions we get the most, answered without the fine print.</p>
+    <div class="faq">
+      <div><h3>Will Plush fit my shower?</h3><p>Plush fits the standard U.S. ½-inch shower arm, the one in almost every home and apartment. If it doesn't fit yours, you have 60 days to send it back for a full refund.</p></div>
+      <div><h3>Will it lower my water pressure?</h3><p>Any filter sits in the water's path, so we won't promise you more pressure. Here's what we can promise: if it doesn't feel right in your shower, you have 60 days to send it back for a full refund.</p></div>
+      <div><h3>Is Plush a water softener?</h3><p>No. Removing the minerals in hard water takes a whole-home softener, not a shower head. Plush is made to reduce chlorine and catch sediment.</p></div>
+      <div><h3>How often should I change the cartridge?</h3><p>Every 60 days. Go by the calendar, not the color. With Plush Duo, your second cartridge is already in the box.</p></div>
+      <div><h3>Why does my cartridge turn brown?</h3><p>Depending on your water, your cartridge can come out darker than it went in. That's what it caught before the water reached you. We didn't make it brown. Your water did.</p></div>
+      <div><h3>I'm renting. Is that okay?</h3><p>Yes. No tools, no plumber, nothing to drill. Keep your old shower head in a drawer and swap it back the day you move out.</p></div>
+    </div>
+    <div class="box" style="margin-top:14px;display:flex;gap:18px;align-items:center">
+      <div style="font-size:40px;font-weight:700;color:var(--brown);letter-spacing:-.04em;line-height:1">60</div>
+      <p style="margin:0"><b>Try it for 60 days.</b> On day 59, if you don't love it, you get all your money back. Email <b>info.tryplush@gmail.com</b> with your order number.</p>
+    </div>
+  </div>
+  <div class="num">20</div>
+</section>
+
+<!-- 21. BACK -->
 <section class="page" style="background:var(--bone)">
   <div class="in" style="display:flex;flex-direction:column">
     <img src="plush-logo.png" alt="plush" style="width:140px">
-    <p class="big-line" style="margin-top:36px;max-width:5.6in">City water in.<br>Plush water out.</p>
+    <p class="big-line" style="margin-top:36px;max-width:5.6in;font-size:40px">City water in.<br>Plush water out.</p>
     <p class="lead" style="margin-top:18px;max-width:5.6in">Questions about your report, your shower or your order? Email <b>info.tryplush@gmail.com</b>. A real person reads every message, and we reply within 2 business days.</p>
+    <img class="photo" src="img/plush-marble.jpg" alt="" style="height:2.6in;margin-top:26px;object-position:85% 60%">
     <div style="margin-top:auto">
-      <p class="small muted"><b>Sources.</b> U.S. Environmental Protection Agency: Consumer Confidence Reports (epa.gov/ccr) and chloramines in drinking water. U.S. Geological Survey: hardness of water.</p>
-      <p class="small muted">This guide is for general information only and is not medical advice. Plush is not a medical device and is not intended to diagnose, treat, cure or prevent any condition. Plush is not a water softener. Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary.</p>
-      <p class="small muted">© 2026 Plush · myplush.us</p>
+      <p class="src"><b>Sources.</b> U.S. Environmental Protection Agency: Consumer Confidence Reports (epa.gov/ccr) and chloramines in drinking water. Federal disinfectant limits: 40 CFR 141.65. U.S. Geological Survey: hardness of water. Alliance for Water Efficiency, Home Water Works: shower water use.</p>
+      <p class="src">This guide is for general information only and is not medical advice. Plush is not a medical device and is not intended to diagnose, treat, cure or prevent any condition. Plush is not a water softener. Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary.</p>
+      <p class="src">© 2026 Plush · myplush.us</p>
     </div>
   </div>
 </section>

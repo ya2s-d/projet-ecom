@@ -2481,3 +2481,15 @@ doit aller dans la **traduction EN** (`translationsRegister`, ressource EmailTem
 À faire dès que Yasser a importé le PDF dans Contenu > Fichiers. URL attendue si le nom reste
 `Plush-Know-Your-Water.pdf` : `https://cdn.shopify.com/s/files/1/1112/3618/6451/files/Plush-Know-Your-Water.pdf`
 (à vérifier par l'API avant d'écrire le lien).
+
+**Ebook v2 (9 nov., soir)**, demandé par Yasser : 21 pages au lieu de 12, plus d'images, une vraie routine
+de douche (6 habitudes, la douche de 10 min, semaine / 30 j / 60 j / an, les 120 premiers jours), et Plush
+présenté comme la seule étape qui agit sur l'eau elle-même (page « The step a bottle can't do », « 48¢ a
+day »). Composition = texte en ligne de la fiche (« How It Works »). Couverture : photo `-24` du site (Plush
+sous la douche), texte incrusté effacé, 959×1600 donc nette en pleine page ; l'ancienne photo (700×836)
+était trop petite. L'agrandissement IA (Real-ESRGAN, modèle téléchargé) a été bloqué par le filtre de
+sécurité de la session. Nouvelle image cadeau pour la fiche : `assets/produit/plush-cadeau-ebook-v2.jpg`.
+Durée de la cartouche alignée sur la fiche : **60 jours** (la v1 disait 3 mois). ⚠️ Incohérence ouverte :
+le bloc abonnement de la page cartouche dit « every 3 months ». ⚠️ Bug de la fiche produit : l'onglet
+« Changing Your Filter » affiche l'ancien texte de composition (2 couches) au lieu des consignes de
+changement. `PLUSHFAM` est imprimé dans l'ebook avec « 20 % » : si la valeur change, refaire le PDF.
