@@ -2426,3 +2426,31 @@ Logo sur la boîte : face imprimée 18 × 13,5 cm, sticker 2,6 × 1,1 cm à 1,2 
 ✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
 On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
 (si < 7-12 jours : mettre à jour le texte de livraison au paiement, les onglets et le badge).
+
+## 9 novembre 2026 — header C en ligne, état réel avant le lancement des pubs
+
+**Header** : maquette C « Marque » + ligne de garanties, choisie par Yasser. Code :
+`shopify/liquid-perso/plush-header-bandeau.liquid` (au-dessus de « En-tête », porte tout le style et
+ajoute la carte produit au menu tel) + `plush-header-garanties.liquid` (juste en dessous). L'ancien
+« Countdown Timer » est à cacher. `track_url` (partie 2) = lien de la page 17TRACK, vide pour l'instant :
+**aucune page de suivi n'existe encore sur la boutique** (vérifié).
+
+**Vérifié sur la boutique en ligne le 9 nov.**
+
+| Point | État |
+|---|---|
+| Achat sur tel | ✅ Ajout panier → paiement Shopify OK (Duo 74,99 $) |
+| Pixel Meta | ✅ App Facebook & Instagram, pixel 1522240700051418, partage « optimized » |
+| Politiques | ✅ remboursement, livraison, confidentialité · 🔴 **conditions générales et infos de contact : 404** |
+| Ebook | 🔴 **Promis sur la fiche** (« by email after your order: your free eBook ») **mais il n'existe pas**. Bloquant avant la 1re vente |
+| Cartouche seule | En ligne à **24 $** (pas 29 $). Son coût DDP envoyée seule : **toujours inconnu** (manque depuis le 20 oct.) |
+| Erreurs JS fiche produit | 3 erreurs déjà présentes (« $ is not defined », « CartDrawer already declared », getBoundingClientRect au scroll). N'empêchent pas l'achat |
+
+**Abonnement cartouche (idée de Yasser, 9 nov.)** : recommandé **après** le test, pas avant. Le test mesure
+la 1re commande ; l'abonnement ne joue qu'à la 2e (2 à 5 mois plus tard, le Duo contient déjà une
+cartouche). Échelle proposée, à valider avec le coût DDP d'une cartouche seule : seule 29 $ · abonnement
+24 $ tous les 3 mois (seulement si le fournisseur confirme 3 mois de durée) · PLUSHFAM −20 % une fois.
+Aux US : conditions claires avant paiement + résiliation en ligne (app gratuite Shopify Subscriptions).
+
+**Condition de lancement des pubs** : échantillon qui passe les 3 tests (attendu semaine du 9 nov.) +
+ebook livrable (ou promesse retirée de la fiche) + créas prêtes (structure des pros : 25-30 créas, CBO).
