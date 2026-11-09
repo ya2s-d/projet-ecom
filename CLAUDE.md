@@ -2454,3 +2454,13 @@ Aux US : conditions claires avant paiement + résiliation en ligne (app gratuite
 
 **Condition de lancement des pubs** : échantillon qui passe les 3 tests (attendu semaine du 9 nov.) +
 ebook livrable (ou promesse retirée de la fiche) + créas prêtes (structure des pros : 25-30 créas, CBO).
+
+**Fait le 9 nov. après-midi** : cartouche passée à **29 $** + photo ajoutée · page cartouche à 2 offres
+(`shopify/liquid-perso/plush-cartouche.liquid`, abonnement visible dès que le plan Shopify Subscriptions
+existe : tous les 3 mois, −5 $) · **PLUSHFAM créé** : −20 % sur toute la commande, 1 fois par client, sans
+minimum ni fin (ajouter « abonnements : 1er paiement » quand l'app est installée ; la boutique n'accepte
+pas encore d'abonnements, `sellsSubscriptions: false`) · politiques écrites (`shopify/policies/` :
+conditions générales avec abonnements, infos de contact, annulation des abonnements) · **ebook livré** :
+`assets/ebook/Plush-Know-Your-Water.pdf` (12 pages), lien à mettre dans l'email de confirmation
+(`shopify/notifications/order-confirmation-ebook.html`). Faux abonnés Instagram : déconseillé à Yasser
+(règle FTC 16 CFR 465.8).
