@@ -8,8 +8,9 @@
   La partie 2 (plush-header-garanties.liquid) va JUSTE EN DESSOUS de « En-tête ».
 
   ⚠️ Ne supprime jamais cette section, même sans promo : c'est elle qui donne au header sa
-  couleur marron, son logo clair et le style du menu. Quand la promo est finie, seul le
-  bandeau se cache (dans l'éditeur il reste visible, pour que tu puisses le régler).
+  couleur marron, son logo clair, le style du menu, et qui ajoute la carte produit dans le
+  menu tel. Quand la promo est finie, seul le bandeau se cache (dans l'éditeur il reste
+  visible, pour que tu puisses le régler).
 
   LA PROMO, les 2 seules lignes à changer :
   - sale_end : dernier jour de la promo, format aaaa-mm-jj. Fin à 23:59, heure de New York.
@@ -77,7 +78,8 @@
   .pl-ts svg{flex:none;width:15px;height:15px;color:#8A4524}
   .pl-ts i{flex:none;width:3px;height:3px;border-radius:50%;background:#C4B59F}
   .pl-ts .pl-d{display:none}
-  @media (max-width:389px){.pl-ts{gap:7px;font-size:10.5px}.pl-ts svg{display:none}}
+  @media (max-width:389px){.pl-ts{gap:6px;padding:0 6px;font-size:10px}.pl-ts .pl-ti{gap:4px}.pl-ts svg{width:13px;height:13px}}
+  @media (max-width:339px){.pl-ts{gap:4px;font-size:9.5px}.pl-ts i{display:none}}
   @media (min-width:750px){
     .pl-ts{gap:16px;height:40px;font-size:13px}
     .pl-ts svg{width:17px;height:17px}
@@ -154,3 +156,43 @@
     })();
   </script>
 {%- endif -%}
+
+<script>
+  /* Carte produit + garanties dans le menu tel, bouton « Shop Plush » sur PC.
+     Le contenu vient de la partie 2 (plush-header-garanties). */
+  (function () {
+    function run() {
+      var tpl = document.getElementById('pl-dr-tpl');
+      if (!tpl) return;
+      var icons = document.querySelector('sticky-header .header__icons');
+      var cart = document.getElementById('cart-icon-bubble');
+      if (icons && cart && cart.parentNode === icons && !icons.querySelector('.pl-cta')) {
+        var a = document.createElement('a');
+        a.className = 'pl-cta';
+        a.href = tpl.getAttribute('data-url');
+        a.textContent = tpl.getAttribute('data-cta');
+        icons.insertBefore(a, cart);
+      }
+      var nav = document.querySelector('#menu-drawer .menu-drawer__navigation');
+      if (nav && !document.querySelector('#menu-drawer .pl-dr')) {
+        nav.insertAdjacentElement('afterend', tpl.content.firstElementChild.cloneNode(true));
+      }
+      var tk = document.getElementById('pl-tk');
+      var shop = document.querySelector('#menu-drawer a.menu-drawer__menu-item[href*="/products/"]');
+      if (shop && tk && tk.style.display !== 'none' && !shop.querySelector('.pl-badge')) {
+        shop.insertAdjacentHTML('beforeend', '<span class="pl-badge">Sale</span>');
+      }
+    }
+    function refresh() {
+      document.querySelectorAll('.pl-cta, #menu-drawer .pl-dr, #menu-drawer .pl-badge').forEach(function (el) { el.remove(); });
+      run();
+    }
+    window.plushHeader = run;
+    run();
+    document.addEventListener('DOMContentLoaded', run);
+    document.addEventListener('shopify:section:load', refresh);
+    document.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('header-drawer summary')) run();
+    }, true);
+  })();
+</script>

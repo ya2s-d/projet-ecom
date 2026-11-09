@@ -9,6 +9,8 @@
   - t1 à t3 : la ligne de garanties. _short = sur tel (court), _long = sur PC.
   - card_ : la carte produit dans le menu tel. Le prix vient tout seul de ta fiche produit.
   - card_image : Contenu > Fichiers > copier le lien. Vide = la 1re photo de ta fiche produit.
+  - track_url : le lien de ta page de suivi 17TRACK (dans l'app : copie le lien de la page
+    de suivi). Vide = « Track my order » envoie vers la connexion client de Shopify.
 {%- endcomment -%}
 
 {%- liquid
@@ -32,6 +34,7 @@
   assign menu_t3 = 'Installs in 2 minutes, no tools'
   assign brand_line = "We didn't make it brown.<br>Your water did."
   assign account_label = 'Track my order'
+  assign track_url = ''
 
   assign p = all_products[product_handle]
   assign v = p.selected_or_first_available_variant
@@ -45,7 +48,9 @@
   elsif p.featured_image
     assign card_src = p.featured_image | image_url: width: 240
   endif
-  if customer
+  if track_url != blank
+    assign account_url = track_url
+  elsif customer
     assign account_url = routes.account_url
   else
     assign account_url = routes.account_login_url
@@ -66,7 +71,7 @@
   <span class="pl-ti">{{ i_clock }}<span class="pl-m">{{ t3_short }}</span><span class="pl-d">{{ t3_long }}</span></span>
 </div>
 
-<template id="pl-dr-tpl">
+<template id="pl-dr-tpl" data-url="{{ product_url }}" data-cta="{{ cta_label | escape }}">
   <div class="pl-dr">
     <a class="pl-card" href="{{ product_url }}">
       <span class="pl-card__im">
@@ -91,29 +96,4 @@
   </div>
 </template>
 
-<script>
-  (function () {
-    function run() {
-      var icons = document.querySelector('sticky-header .header__icons');
-      var cart = document.getElementById('cart-icon-bubble');
-      if (icons && cart && cart.parentNode === icons && !icons.querySelector('.pl-cta')) {
-        var a = document.createElement('a');
-        a.className = 'pl-cta';
-        a.href = {{ product_url | json }};
-        a.textContent = {{ cta_label | json }};
-        icons.insertBefore(a, cart);
-      }
-      var nav = document.querySelector('#menu-drawer .menu-drawer__navigation');
-      var tpl = document.getElementById('pl-dr-tpl');
-      if (nav && tpl && !document.querySelector('#menu-drawer .pl-dr')) {
-        nav.insertAdjacentElement('afterend', tpl.content.firstElementChild.cloneNode(true));
-      }
-      var shop = document.querySelector('#menu-drawer a.menu-drawer__menu-item[href*="/products/"]');
-      if (shop && document.getElementById('pl-tk') && !shop.querySelector('.pl-badge')) {
-        shop.insertAdjacentHTML('beforeend', '<span class="pl-badge">Sale</span>');
-      }
-    }
-    run();
-    document.addEventListener('shopify:section:load', run);
-  })();
-</script>
+<script>window.plushHeader && window.plushHeader();</script>
