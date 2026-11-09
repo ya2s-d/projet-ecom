@@ -2472,3 +2472,12 @@ par l'API le 9 nov., page vide `our-story-1` supprimée). **Toute nouvelle page,
 comprise, doit être mise sur « our-story »**, sinon elle affiche Our Story à la place de son contenu.
 Vraie correction (éditeur de thème, pas faisable par l'API sur le thème en ligne) : vider `page.json`
 et déplacer Our Story dans un modèle à part.
+
+**⚠️ Piège des emails (9 nov.)** : langue principale de la boutique = **fr**, mais les clients US reçoivent
+la **traduction anglaise** de chaque notification (traductions EN fournies par Shopify, présentes pour les
+40 modèles, vérifié par l'API). Modifier « Confirmation de commande » dans l'admin ne change que la version
+**française**, que personne ne reçoit. Le bloc ebook (`shopify/notifications/order-confirmation-ebook.html`)
+doit aller dans la **traduction EN** (`translationsRegister`, ressource EmailTemplate, clé `body_html`).
+À faire dès que Yasser a importé le PDF dans Contenu > Fichiers. URL attendue si le nom reste
+`Plush-Know-Your-Water.pdf` : `https://cdn.shopify.com/s/files/1/1112/3618/6451/files/Plush-Know-Your-Water.pdf`
+(à vérifier par l'API avant d'écrire le lien).
