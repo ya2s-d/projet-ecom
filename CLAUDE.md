@@ -2464,3 +2464,11 @@ conditions générales avec abonnements, infos de contact, annulation des abonne
 `assets/ebook/Plush-Know-Your-Water.pdf` (12 pages), lien à mettre dans l'email de confirmation
 (`shopify/notifications/order-confirmation-ebook.html`). Faux abonnés Instagram : déconseillé à Yasser
 (règle FTC 16 CFR 465.8).
+
+**⚠️ Piège des modèles de page (9 nov.)** : le modèle **par défaut** (`page.json`) contient Our Story
+(section « Page » masquée). Le modèle **« our-story »** est en fait le modèle **propre** (titre + texte
+seulement). Page Our Story = modèle par défaut · page « Your privacy choices » = « our-story » (corrigé
+par l'API le 9 nov., page vide `our-story-1` supprimée). **Toute nouvelle page, celle de 17TRACK
+comprise, doit être mise sur « our-story »**, sinon elle affiche Our Story à la place de son contenu.
+Vraie correction (éditeur de thème, pas faisable par l'API sur le thème en ligne) : vider `page.json`
+et déplacer Our Story dans un modèle à part.
