@@ -62,7 +62,7 @@ Renting? Keep your old shower head in a drawer. Swap it back the day you move ou
 ## 4. Changing Your Filter
 
 ```
-Your filter does the work, so it needs a fresh one every 60 days.  [à confirmer : durée en gallons]
+Your filter does the work, so it needs a fresh one every 3 months.  [durée fournisseur, décision de Yasser du 10 nov. ; durée en gallons toujours à demander]
 
 • Unscrew, swap the cartridge, screw it back. Under a minute.  [à confirmer selon le modèle]
 • Go by the calendar, not the color. Depending on your water, the old filter can come out

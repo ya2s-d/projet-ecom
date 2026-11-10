@@ -58,7 +58,7 @@ Yes. Plush doesn't change your plumbing. Keep your old shower head in a drawer a
 
 ```
 5. How often should I change the filter?
-Every 60 days. Go by the calendar, not the color. With Plush Duo, your second filter is already in the box, so there's nothing to reorder.
+Every 3 months. Go by the calendar, not the color. With Plush Duo, your second filter is already in the box, so there's nothing to reorder.
 ```
 `[à confirmer : durée de la cartouche]`
 

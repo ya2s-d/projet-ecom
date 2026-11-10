@@ -4,6 +4,8 @@
 > Marque : Plush, pommeau de douche filtrant, myplush.us, marché US uniquement, compte Meta neuf (0 pub lancée).
 > Statuts : **FAIT** (source + date d'accès) · **INFÉRENCE** (dit comment on la déduit) · **HYPOTHÈSE** (à valider en ads).
 > Chiffres Plush (Phase 1, `../01_produit/audit-produit-offre.md`, 10 nov.) : AOV **70,49 $** (mix 70 % Duo / 30 % Solo) · frais cartes US **4,9 % + 0,25 €** · CPA de break-even (BE) **32,90 $ ≈ 28 €** · ROAS BE **2,14** · CPA cible **23 $ ≈ 20 €** · LTV 90 jours ≈ 1re commande. Si Meta facture la TVA belge (21 %, non confirmé) : CPA BE lu dans Ads Manager **≈ 27 $ ≈ 23 €**.
+>
+> ⚠️ **10 nov. — TVA confirmée** : le compte pub de Yasser n'a **pas de numéro de TVA**, donc Meta ajoute 21 % (à vérifier sur le 1er reçu). Ads Manager affiche la dépense **hors TVA** : **tous les seuils en € de ce playbook se divisent par 1,21** → CPA BE **28 → 23 €** · 2× BE **57 → 47 €** · 3× BE **85 → 70 €** · 1,5× BE **42 → 35 €** · CPA cible **20 → 16 €** · coût par ajout panier vert **8 → 7 €** · « non testée » **< 23 €**. ROAS BE lu dans Ads Manager **2,59** ; MER BE (CA Shopify ÷ dépense TTC) **2,14**, inchangé. 150 €/jour dans Ads Manager = **181,50 €/jour débités** (907,50 € sur 5 jours).
 > Plan du test 1 (décision de Yasser, 10 nov.) : **30 créas, 150 €/jour pendant 5 jours = 750 €** (≈ 174 $/jour, 1 € = 1,16 $), **une CBO, 2 ensembles** (images / vidéos). Compte pub neuf, 0 pub lancée, pixel installé. Échantillon pas reçu : pas de vidéo produit avant quelques jours.
 > Sources : identifiants [S1]…[S53] et [I1]…[I3], détaillés au §16.
 

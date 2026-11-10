@@ -255,7 +255,7 @@ Black Friday 27 nov., Cyber Monday 30 nov. **INFÉRENCE** : un test de 5-6 jours
 
 ## 10. Questions ouvertes pour Yasser (réponse en 1 mot chacune)
 
-1. **Ton compte pub Meta a-t-il un numéro de TVA dans la facturation ?** Sinon, +21 % sur chaque euro dépensé (§8.3).
-2. Devise de versement de Shopify Payments : EUR ou USD ? (Paramètres > Paiements)
-3. Durée de la cartouche à afficher : 3 mois (fournisseur) ou 60 jours (site actuel) ? (déjà posée)
+1. ✅ **Réponse du 10 nov. : pas de numéro de TVA** → +21 % sur chaque euro dépensé. CPA BE lu dans Ads Manager **≈ 23 €**, ROAS BE lu **2,59**, MER BE **2,14** (§8.3).
+2. ✅ Versements Shopify en **EUR** (10 nov.) → la conversion de 2 % s'applique : hypothèse de base confirmée.
+3. ✅ **3 mois partout** (décision du 10 nov.). Ebook corrigé le 10 nov. ; textes du thème à changer par Yasser (FAQ + onglet « Changing Your Filter »).
 4. Au fournisseur, par écrit : filetage ½" NPT ? débit en GPM ? document de certification chlore ? prix d'une cartouche envoyée seule ?

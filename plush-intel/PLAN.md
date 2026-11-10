@@ -4,7 +4,7 @@
 > compaction ou dans une nouvelle session. Mémoire générale du projet : `../CLAUDE.md` (on garde UNE seule
 > mémoire : le `CLAUDE.md` de fin de mission sera fusionné dans celui de la racine du dépôt, pas dupliqué).
 
-**Démarrée le** 9 nov. 2026 · **Statut (10 nov.)** : bloc 1 terminé (phases 0 à 3) → 🛑 **CHECKPOINT B envoyé**, en attente de Yasser (shortlist, date de lancement, TVA, devise, durée cartouche).
+**Démarrée le** 9 nov. 2026 · **Statut (10 nov.)** : CHECKPOINT B validé → **bloc 2 en mode court** (lancement des pubs avant le 18-19 nov.). Échantillon reçu le 10 nov.
 
 ## Calendrier qui commande tout
 
@@ -104,6 +104,20 @@
 s'affiche mais renvoie « No ads match » même pour eskiin (qui a des centaines d'ads actives) = résultats bloqués.
 L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont diffusées dans l'UE.
 → Phase 4 : export du 4 oct. + captures / liens envoyés par Yasser.
+
+## Réponses du CHECKPOINT B (Yasser, 10 nov.)
+
+| Question | Réponse | Conséquence |
+|---|---|---|
+| Date de lancement | **Avant le 18-19 nov.** | Bloc 2 resserré. Créas à produire du ~13 au 17 nov. |
+| Shortlist | « j'ai pas tout lu » : validée par défaut | Teardown sur les 12 |
+| Créas | **Basées principalement sur les créas concurrentes** (types de vidéos, formats), reproduites avec 2 IA vidéo (« Xfield » et « Kai AI », abonnement à venir) | La phase 4 devient le cœur de la production : un catalogue des formats concurrents à reproduire. Règle : on reproduit un format, jamais une créa ; pas de faux client ni de faux résultat générés par IA |
+| Durée de la cartouche | **3 mois partout** | Ebook corrigé le 10 nov. Thème : FAQ + onglet « Changing Your Filter » à changer par Yasser. La garantie de 60 jours ne bouge pas |
+| TVA du compte pub | **Aucun numéro de TVA** | +21 % : CPA BE lu dans Ads Manager ≈ 23 €, ROAS lu 2,59, MER BE 2,14. 150 €/jour = 181,50 € débités |
+| Versements Shopify | EUR | Conversion de 2 % confirmée |
+| Captures Ad Library + vidéos | Yasser les envoie (concurrents, ses vidéos IA du produit, son organique) | Format d'envoi donné le 10 nov. : un dossier Mega public |
+| Échantillon | **Reçu le 10 nov.** Yasser tourne de l'organique dès aujourd'hui | Liste de plans envoyée le 10 nov. |
+| Tokens | Yasser trouve la consommation trop forte | Fini les sous-agents en parallèle. Vidéos traitées par script (transcription + 4 images), jamais lues en entier |
 
 ## Journal
 
