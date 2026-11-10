@@ -1,0 +1,180 @@
+{%- comment -%}
+  PLUSH — section Avantages « façon Naked Paper », version « Liquid personnalisé ».
+  Colle tout ce code dans un bloc ou une section « Liquid personnalisé ».
+
+  PC : 3 avantages à gauche, ton produit au milieu, 3 à droite.
+  Téléphone : le produit reste fixe en haut, les avantages défilent un par un en dessous
+  (flèches en bas à droite, ou en glissant au doigt).
+
+  TON IMAGE
+  1. Contenu > Fichiers > Importer : importe la photo du pommeau, de préférence à fond
+     transparent (.png). Sinon tu auras un rectangle blanc sur la couleur.
+  2. Clique dessus > copie le lien (il commence par https://cdn.shopify.com/).
+  3. Colle-le entre les guillemets de image, juste en dessous.
+  Vide = la section prend la première photo de ta fiche produit.
+
+  TITRE DU HAUT : headline et subheadline. Mets '' pour en cacher un.
+  LES 6 AVANTAGES : title_1 à title_6 et text_1 à text_6. 1-2-3 à gauche, 4-5-6 à droite sur PC.
+
+  full_width = true : la couleur de fond va d'un bord à l'autre de l'écran, comme chez
+  Naked Paper. À utiliser quand la section prend toute la largeur de la page. Si la couleur
+  passe par-dessus autre chose, remets false : le bloc devient une carte aux coins arrondis.
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign image = ''
+
+  assign headline = "It's time to upgrade your old shower head."
+  assign subheadline = "Don't let a $10 shower head ruin your routine."
+
+  assign title_1 = "Showers that don't smell like a pool."
+  assign text_1 = "That chlorine smell you stopped noticing? You'll notice when it's gone."
+  assign title_2 = 'Your $30 shampoo deserves better.'
+  assign text_2 = "You've upgraded your products. Now upgrade the water you rinse them with."
+  assign title_3 = 'A bathroom that finally feels like yours.'
+  assign text_3 = 'Swap the shower head that came with the place for one you chose.'
+  assign title_4 = 'The 10 minutes that are just yours.'
+  assign text_4 = 'Make them feel like a hotel, not a rental.'
+  assign title_5 = 'Renting? Still yours in 2 minutes.'
+  assign text_5 = 'No plumber, no landlord. Take it with you when you move.'
+  assign title_6 = 'Love it, or get every dollar back.'
+  assign text_6 = "Try it for 60 days. On day 59, if you don't love it, it's a full refund."
+
+  assign full_width = true
+  assign c_bg = '#8A4524'
+  assign c_text = '#F6F2ED'
+  assign c_button = '#F6F2ED'
+  assign c_arrow = '#8A4524'
+  assign space_top = 0
+  assign space_bottom = 0
+-%}
+
+{%- liquid
+  if image != blank
+    assign img_src = image
+  elsif product.featured_image
+    assign img_src = product.featured_image | image_url: width: 1200
+  endif
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div
+  class="plush-np{% if full_width %} plush-np--full{% endif %}"
+  style="--np-bg:{{ c_bg }};--np-text:{{ c_text }};--np-btn:{{ c_button }};--np-arrow:{{ c_arrow }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+>
+  {%- if headline != blank or subheadline != blank -%}
+    <div class="np-head">
+      {%- if headline != blank -%}<h2 class="np-headline">{{ headline | escape }}</h2>{%- endif -%}
+      {%- if subheadline != blank -%}<p class="np-sub">{{ subheadline | escape }}</p>{%- endif -%}
+    </div>
+  {%- endif -%}
+  <div class="np-wrap">
+    <div class="np-img">
+      {%- if img_src != blank -%}
+        <img src="{{ img_src }}" alt="Plush filtered shower head" loading="lazy">
+      {%- endif -%}
+    </div>
+    <ul class="np-list" role="list" data-np-track>
+      {%- for i in (1..6) -%}
+        {%- liquid
+          case i
+            when 1
+              assign t = title_1
+              assign d = text_1
+            when 2
+              assign t = title_2
+              assign d = text_2
+            when 3
+              assign t = title_3
+              assign d = text_3
+            when 4
+              assign t = title_4
+              assign d = text_4
+            when 5
+              assign t = title_5
+              assign d = text_5
+            else
+              assign t = title_6
+              assign d = text_6
+          endcase
+        -%}
+        <li class="np-item np-item--{{ i }}">
+          <h3 class="np-title">{{ t | escape }}</h3>
+          <p class="np-text">{{ d | escape }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+    <div class="np-nav">
+      <button type="button" class="np-btn" data-np-prev aria-label="Previous">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </button>
+      <button type="button" class="np-btn" data-np-next aria-label="Next">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .plush-np{container-type:inline-size;background:var(--np-bg);color:var(--np-text);font-family:'Poppins',sans-serif;text-align:center;border-radius:20px;overflow:hidden}
+  .plush-np--full{border-radius:0;overflow:visible;box-shadow:0 0 0 100vmax var(--np-bg);clip-path:inset(0 -100vmax)}
+  .plush-np *{box-sizing:border-box}
+  .plush-np .np-head{padding:48px 20px 0}
+  .plush-np .np-headline{margin:0 auto;max-width:22ch;font-family:inherit;font-size:28px;font-size:clamp(24px,7cqi,38px);font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--np-text);text-wrap:balance}
+  .plush-np .np-sub{margin:12px auto 0;max-width:40ch;font-size:16px;font-weight:400;line-height:1.5;color:var(--np-text);text-wrap:balance}
+  .plush-np .np-wrap{padding:52px 0 32px}
+  .plush-np .np-head + .np-wrap{padding-top:36px}
+  .plush-np .np-img{width:72%;max-width:420px;margin:0 auto 40px}
+  .plush-np .np-img img{display:block;width:100%;height:auto}
+  .plush-np ul.np-list{list-style:none;margin:0;padding:0 8%;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .plush-np ul.np-list::-webkit-scrollbar{display:none}
+  .plush-np .np-item{flex:0 0 100%;margin:0;padding:0 6%;scroll-snap-align:center}
+  .plush-np .np-title{margin:0 0 10px;font-family:inherit;font-size:22px;font-weight:600;line-height:1.2;letter-spacing:-.01em;color:var(--np-text);text-wrap:balance}
+  .plush-np .np-text{margin:0;font-size:15px;font-weight:400;line-height:1.6;color:var(--np-text);text-wrap:pretty}
+  .plush-np .np-nav{display:flex;justify-content:flex-end;gap:10px;padding:32px 16px 0}
+  .plush-np .np-btn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:var(--np-btn);cursor:pointer}
+  .plush-np .np-btn svg{width:22px;height:22px;fill:none;stroke:var(--np-arrow);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  @container (min-width:900px){
+    .plush-np .np-head{padding:72px 4% 0}
+    .plush-np .np-sub{font-size:18px}
+    .plush-np .np-wrap{display:grid;grid-template-columns:1fr minmax(300px,34%) 1fr;grid-template-rows:repeat(3,auto);align-items:center;column-gap:4%;row-gap:72px;max-width:1440px;margin:0 auto;padding:80px 4%}
+    .plush-np .np-head + .np-wrap{padding-top:56px}
+    .plush-np .np-img{grid-column:2;grid-row:1 / 4;width:100%;max-width:none;margin:0}
+    .plush-np ul.np-list{display:contents}
+    .plush-np .np-item{padding:0;max-width:400px;justify-self:center}
+    .plush-np .np-item--1,.plush-np .np-item--4{grid-row:1}
+    .plush-np .np-item--2,.plush-np .np-item--5{grid-row:2}
+    .plush-np .np-item--3,.plush-np .np-item--6{grid-row:3}
+    .plush-np .np-item--1,.plush-np .np-item--2,.plush-np .np-item--3{grid-column:1}
+    .plush-np .np-item--4,.plush-np .np-item--5,.plush-np .np-item--6{grid-column:3}
+    .plush-np .np-title{font-size:23px}
+    .plush-np .np-nav{display:none}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('.plush-np').forEach(function (root) {
+      if (root.dataset.ready) return;
+      root.dataset.ready = '1';
+      var track = root.querySelector('[data-np-track]');
+      function step(dir) {
+        var item = track.querySelector('.np-item');
+        if (!item) return;
+        var w = item.getBoundingClientRect().width;
+        var max = track.scrollWidth - track.clientWidth;
+        var next = track.scrollLeft + dir * w;
+        if (next > max + 2) next = 0;
+        if (next < -2) next = max;
+        track.scrollTo({ left: next, behavior: 'smooth' });
+      }
+      root.querySelector('[data-np-prev]').addEventListener('click', function () { step(-1); });
+      root.querySelector('[data-np-next]').addEventListener('click', function () { step(1); });
+    });
+  })();
+</script>

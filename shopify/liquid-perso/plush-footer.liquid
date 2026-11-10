@@ -1,0 +1,216 @@
+{%- comment -%}
+  PLUSH — Footer (maquette A « Brun, le grand logo »), version « Liquid personnalisé ».
+
+  OÙ LE METTRE : Personnaliser > dans la colonne de gauche, tout en bas, la zone « Pied de page »
+  > Ajouter une section > « Liquid personnalisé » > colle tout ce code.
+  Puis, sur cette section : Marge de la section > Marge supérieure 0 et Marge inférieure 0.
+  Enfin, cache l'ancien « Pied de page » du thème et le bandeau défilant
+  (« Each item is carefully curated… ») avec l'icône de l'œil.
+
+  LES LIENS se remplissent tout seuls :
+  - Duo / Solo : ta fiche produit, avec la bonne variante.
+  - FAQ : descend jusqu'à ta section FAQ sur la fiche produit.
+  - Shipping, Returns & refunds, Privacy, Terms : tes pages légales Shopify. Un lien n'apparaît
+    que si la page existe (Paramètres > Politiques).
+  - filters_url : vide = « Replacement filters » est caché. Mets le lien quand la cartouche seule
+    sera en vente.
+
+  RÉSEAUX : colle le lien de ton compte dans instagram_url / tiktok_url. Vide = icône cachée.
+  NEWSLETTER : les emails arrivent dans Shopify > Clients, avec l'étiquette « newsletter ».
+  PAIEMENTS : les logos viennent tout seuls de tes moyens de paiement activés.
+  LE GRAND MOT : wordmark_font = la police du grand « plush ». "'League Spartan', sans-serif"
+  = le même dessin que ton logo.
+{%- endcomment -%}
+
+{%- liquid
+  assign news_kicker = 'Know your water'
+  assign news_title = "Short, useful emails. What's in city water, and what to do about it."
+  assign news_note = 'No spam. Unsubscribe anytime.'
+  assign news_button = 'Join'
+  assign news_thanks = "You're in. Check your inbox."
+
+  assign guarantee = "On day 59, if you don't love it, you get all your money back."
+  assign tagline = 'City water in. Plush water out.'
+  assign wordmark = 'plush'
+  assign wordmark_font = "'Poppins', sans-serif"
+
+  assign contact_email = shop.email
+  assign instagram_url = ''
+  assign tiktok_url = ''
+
+  assign product_url = '/products/plush-filtered-showerhead'
+  assign duo_variant = '55512601166163'
+  assign solo_variant = '55519393382739'
+  assign filters_url = ''
+  assign contact_url = '/pages/contact'
+
+  assign legal_text = 'Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary. Not a medical device and not intended to diagnose, treat, cure or prevent any condition.'
+  assign show_payments = true
+
+  assign c_bg = '#8A4524'
+  assign c_text = '#F6F2ED'
+  assign c_field = '#F6F2ED'
+  assign c_button = '#141414'
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="plush-foot" style="--pf-bg:{{ c_bg }};--pf-text:{{ c_text }};--pf-field:{{ c_field }};--pf-btn:{{ c_button }};--pf-word-font:{{ wordmark_font }};">
+  <div class="pf-in">
+  <div class="pf-top">
+    <div class="pf-news">
+      {%- if news_kicker != blank -%}<p class="pf-kicker">{{ news_kicker | escape }}</p>{%- endif -%}
+      <p class="pf-title">{{ news_title | escape }}</p>
+      {%- form 'customer', id: 'plush-footer-news', class: 'pf-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        {%- if form.posted_successfully? -%}
+          <p class="pf-ok">{{ news_thanks | escape }}</p>
+        {%- else -%}
+          <div class="pf-field">
+            <label class="pf-vh" for="pf-email">Email</label>
+            <input id="pf-email" type="email" name="contact[email]" placeholder="Your email" autocomplete="email" required>
+            <button type="submit">{{ news_button | escape }}</button>
+          </div>
+          {%- if form.errors -%}<p class="pf-err">Please check your email and try again.</p>{%- endif -%}
+        {%- endif -%}
+      {%- endform -%}
+      {%- if news_note != blank -%}<p class="pf-note">{{ news_note | escape }}</p>{%- endif -%}
+    </div>
+
+    <nav class="pf-links" aria-label="Footer">
+      <div class="pf-col">
+        <p class="pf-h">Shop</p>
+        <ul role="list">
+          <li><a href="{{ product_url }}?variant={{ duo_variant }}">Plush Duo</a></li>
+          <li><a href="{{ product_url }}?variant={{ solo_variant }}">Plush Solo</a></li>
+          {%- if filters_url != blank -%}<li><a href="{{ filters_url }}">Replacement filters</a></li>{%- endif -%}
+        </ul>
+      </div>
+      <div class="pf-col">
+        <p class="pf-h">Help</p>
+        <ul role="list">
+          <li><a href="{{ product_url }}#faq" data-pf-faq>FAQ</a></li>
+          {%- if shop.shipping_policy -%}<li><a href="{{ shop.shipping_policy.url }}">Shipping</a></li>{%- endif -%}
+          {%- if shop.refund_policy -%}<li><a href="{{ shop.refund_policy.url }}">Returns &amp; refunds</a></li>{%- endif -%}
+          <li><a href="{{ contact_url }}">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="pf-col">
+        <p class="pf-h">Legal</p>
+        <ul role="list">
+          {%- if shop.privacy_policy -%}<li><a href="{{ shop.privacy_policy.url }}">Privacy policy</a></li>{%- endif -%}
+          {%- if shop.terms_of_service -%}<li><a href="{{ shop.terms_of_service.url }}">Terms of service</a></li>{%- endif -%}
+          {%- if shop.refund_policy -%}<li><a href="{{ shop.refund_policy.url }}">Refund policy</a></li>{%- endif -%}
+          {%- assign privacy_choices = pages['data-sharing-opt-out'] -%}
+          {%- if privacy_choices.url and privacy_choices.url != blank -%}<li><a href="{{ privacy_choices.url }}">Your privacy choices</a></li>{%- endif -%}
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="pf-mid">
+    {%- if guarantee != blank -%}<p class="pf-guarantee">{{ guarantee | escape }}</p>{%- endif -%}
+    <div class="pf-social">
+      {%- if instagram_url != blank -%}
+        <a href="{{ instagram_url }}" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></svg></a>
+      {%- endif -%}
+      {%- if tiktok_url != blank -%}
+        <a href="{{ tiktok_url }}" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3.5v11a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3.5c.5 2.6 2.2 4.2 5 4.5"/></svg></a>
+      {%- endif -%}
+      {%- if contact_email != blank -%}<a class="pf-mail" href="mailto:{{ contact_email }}">{{ contact_email }}</a>{%- endif -%}
+    </div>
+  </div>
+
+  <div class="pf-bottom">
+    {%- if legal_text != blank -%}<p class="pf-legal">{{ legal_text | escape }}</p>{%- endif -%}
+    {%- if show_payments and shop.enabled_payment_types.size > 0 -%}
+      <ul class="pf-pay" role="list">
+        {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'pf-pay-icon' }}</li>{%- endfor -%}
+      </ul>
+    {%- endif -%}
+    <p class="pf-copy">© {{ 'now' | date: '%Y' }} Plush{% if tagline != blank %} · {{ tagline | escape }}{% endif %}</p>
+  </div>
+  </div>
+
+  <div class="pf-wordwrap" aria-hidden="true"><div class="pf-word">{{ wordmark | escape }}</div></div>
+</div>
+
+<style>
+  .plush-foot{container-type:inline-size;background:var(--pf-bg);color:var(--pf-text);font-family:'Poppins',sans-serif;overflow:hidden;box-shadow:0 0 0 100vmax var(--pf-bg);clip-path:inset(0 -100vmax)}
+  .plush-foot *{box-sizing:border-box}
+  .plush-foot p{margin:0}
+  .plush-foot a{color:inherit;text-decoration:none}
+  .plush-foot ul{list-style:none;margin:0;padding:0}
+  .plush-foot li{margin:0}
+  .plush-foot svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .plush-foot .pf-vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  .plush-foot .pf-in{padding:44px 20px 0}
+  .plush-foot .pf-top{display:grid;gap:36px}
+  .plush-foot .pf-kicker{margin-bottom:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+  .plush-foot .pf-title{margin-bottom:16px;font-size:20px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+  .plush-foot .pf-form{margin:0}
+  .plush-foot .pf-field{display:flex;gap:8px;padding:6px 6px 6px 18px;border-radius:999px;background:var(--pf-field)}
+  .plush-foot .pf-field input{flex:1 1 0;width:100%;min-width:0;height:auto;margin:0;padding:0;border:0;outline:0;box-shadow:none;background:transparent;color:#141414;font:inherit;font-size:15px;-webkit-appearance:none;appearance:none}
+  .plush-foot .pf-field input::placeholder{color:#6B6660;opacity:1}
+  .plush-foot .pf-field button{flex:none;margin:0;padding:12px 20px;border:0;border-radius:999px;background:var(--pf-btn);color:#F6F2ED;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+  .plush-foot .pf-note{margin-top:10px;font-size:12px;opacity:.7}
+  .plush-foot .pf-ok{padding:14px 18px;border-radius:999px;background:rgba(0,0,0,.15);font-size:15px;font-weight:500}
+  .plush-foot .pf-err{margin-top:8px;font-size:13px;font-weight:500}
+
+  .plush-foot .pf-links{display:grid;grid-template-columns:1fr 1fr;gap:28px 20px}
+  .plush-foot .pf-h{margin-bottom:12px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+  .plush-foot .pf-col li{margin-bottom:9px;font-size:15px;line-height:1.4}
+  .plush-foot .pf-col a:hover,.plush-foot .pf-mail:hover{text-decoration:underline;text-underline-offset:3px}
+
+  .plush-foot .pf-mid{display:grid;gap:16px;margin-top:36px;padding:22px 0;border-top:1px solid rgba(246,242,237,.25);border-bottom:1px solid rgba(246,242,237,.25)}
+  .plush-foot .pf-guarantee{font-size:15px;font-weight:500;line-height:1.45}
+  .plush-foot .pf-social{display:flex;flex-wrap:wrap;align-items:center;gap:14px;font-size:14px}
+  .plush-foot .pf-social a{display:inline-flex}
+  .plush-foot .pf-mail{opacity:.85;word-break:break-all}
+
+  .plush-foot .pf-bottom{display:grid;gap:14px;padding-top:22px}
+  .plush-foot .pf-legal{font-size:11px;line-height:1.5;opacity:.7}
+  .plush-foot ul.pf-pay{display:flex;flex-wrap:wrap;gap:6px}
+  .plush-foot .pf-pay-icon{display:block;width:38px;height:24px}
+  .plush-foot .pf-copy{font-size:12px;opacity:.75}
+
+  .plush-foot .pf-wordwrap{overflow:hidden;height:calc(min(37cqi, 640px) * .6);margin-top:22px}
+  .plush-foot .pf-word{margin-top:-.16em;font-family:var(--pf-word-font);font-size:min(37cqi, 640px);font-weight:700;line-height:1;letter-spacing:-.06em;text-align:center;color:var(--pf-text);white-space:nowrap}
+
+  @container (min-width:900px){
+    .plush-foot .pf-in{max-width:1340px;margin:0 auto;padding:72px 5% 0}
+    .plush-foot .pf-top{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:8%}
+    .plush-foot .pf-title{font-size:26px}
+    .plush-foot .pf-news{max-width:480px}
+    .plush-foot .pf-links{grid-template-columns:repeat(3,1fr)}
+    .plush-foot .pf-mid{grid-template-columns:1fr auto;align-items:center;margin-top:56px}
+    .plush-foot .pf-bottom{grid-template-columns:1.6fr auto;align-items:center;padding-top:24px}
+    .plush-foot .pf-copy{grid-column:1 / -1}
+    .plush-foot .pf-wordwrap{height:calc(min(36cqi, 640px) * .6);margin-top:34px}
+    .plush-foot .pf-word{font-size:min(36cqi, 640px)}
+  }
+</style>
+
+<script>
+  (function () {
+    function faqSection() {
+      return document.querySelector('[id^="shopify-section-"][id*="__collapsible_content"]');
+    }
+    function goFaq() {
+      var s = faqSection();
+      if (s) s.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return !!s;
+    }
+    document.querySelectorAll('[data-pf-faq]').forEach(function (a) {
+      if (a.dataset.ready) return;
+      a.dataset.ready = '1';
+      a.addEventListener('click', function (e) {
+        if (faqSection()) { e.preventDefault(); goFaq(); }
+      });
+    });
+    if (location.hash === '#faq') window.addEventListener('load', goFaq);
+  })();
+</script>

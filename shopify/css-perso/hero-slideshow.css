@@ -1,0 +1,6 @@
+.media>*{height:101%}
+.banner__box{position:static;transform:none}
+.button{position:absolute;min-height:0;font:600 3.8vw Poppins;border-radius:99px;background:#7D4532;color:#fff}
+.button:after{display:none}
+@media(max-width:749px){.button{left:5.3%;top:50.9%;width:41.3%;height:6.3%}}
+@media(min-width:750px){slideshow-component{margin:0 10vw}.large-up-hide{display:none}.page-width{max-width:none}.button{left:6.4%;top:76.5%;width:31%;height:7%;font-size:1.52vw}.button:hover{background:#6B3A2A}}

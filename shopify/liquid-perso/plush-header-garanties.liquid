@@ -1,0 +1,99 @@
+{%- comment -%}
+  PLUSH — Header, partie 2/2 : ligne de garanties + menu tel + bouton « Shop Plush » sur PC.
+
+  OÙ LE METTRE : Personnaliser > zone « En-tête » > Ajouter une section > « Liquid personnalisé »
+  > colle tout ce code. Glisse-la JUSTE EN DESSOUS de « En-tête ». Marges 0 et 0.
+  Elle ne marche qu'avec la partie 1 (plush-header-bandeau.liquid), qui porte les styles.
+
+  POUR MODIFIER : change seulement le texte entre les guillemets, juste en dessous.
+  - t1 à t3 : la ligne de garanties. _short = sur tel (court), _long = sur PC.
+  - card_ : la carte produit dans le menu tel. Le prix vient tout seul de ta fiche produit.
+  - card_image : Contenu > Fichiers > copier le lien. Vide = la 1re photo de ta fiche produit.
+  - track_url : le lien de ta page de suivi 17TRACK (dans l'app : copie le lien de la page
+    de suivi). Vide = « Track my order » envoie vers la connexion client de Shopify.
+{%- endcomment -%}
+
+{%- liquid
+  assign product_handle = 'plush-filtered-showerhead'
+  assign cta_label = 'Shop Plush'
+
+  assign t1_short = 'Free shipping'
+  assign t1_long = 'Free US shipping'
+  assign t2_short = '60-day guarantee'
+  assign t2_long = '60-day money-back guarantee'
+  assign t3_short = '2-min install'
+  assign t3_long = 'Installs in 2 minutes, no tools'
+
+  assign card_title = 'Plush Filtered Showerhead'
+  assign card_sub = '+ spare cartridge'
+  assign card_button = 'Shop now'
+  assign card_image = 'https://cdn.shopify.com/s/files/1/1112/3618/6451/files/plush_product_images_-2.png?v=1792740329'
+
+  assign menu_t1 = 'Free US shipping, 7–12 business days'
+  assign menu_t2 = '60-day money-back guarantee'
+  assign menu_t3 = 'Installs in 2 minutes, no tools'
+  assign brand_line = "We didn't make it brown.<br>Your water did."
+  assign account_label = 'Track my order'
+  assign track_url = ''
+
+  assign p = all_products[product_handle]
+  assign v = p.selected_or_first_available_variant
+  assign product_url = p.url | default: routes.all_products_collection_url
+  if card_image != blank
+    if card_image contains '?'
+      assign card_src = card_image | append: '&width=240'
+    else
+      assign card_src = card_image | append: '?width=240'
+    endif
+  elsif p.featured_image
+    assign card_src = p.featured_image | image_url: width: 240
+  endif
+  if track_url != blank
+    assign account_url = track_url
+  elsif customer
+    assign account_url = routes.account_url
+  else
+    assign account_url = routes.account_login_url
+  endif
+-%}
+
+{%- capture i_truck -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>{%- endcapture -%}
+{%- capture i_return -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>{%- endcapture -%}
+{%- capture i_clock -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>{%- endcapture -%}
+{%- capture i_user -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>{%- endcapture -%}
+{%- capture i_arrow -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>{%- endcapture -%}
+
+<div class="pl-ts">
+  <span class="pl-ti">{{ i_truck }}<span class="pl-m">{{ t1_short }}</span><span class="pl-d">{{ t1_long }}</span></span>
+  <i aria-hidden="true"></i>
+  <span class="pl-ti">{{ i_return }}<span class="pl-m">{{ t2_short }}</span><span class="pl-d">{{ t2_long }}</span></span>
+  <i aria-hidden="true"></i>
+  <span class="pl-ti">{{ i_clock }}<span class="pl-m">{{ t3_short }}</span><span class="pl-d">{{ t3_long }}</span></span>
+</div>
+
+<template id="pl-dr-tpl" data-url="{{ product_url }}" data-cta="{{ cta_label | escape }}">
+  <div class="pl-dr">
+    <a class="pl-card" href="{{ product_url }}">
+      <span class="pl-card__im">
+        {%- if card_src -%}<img src="{{ card_src }}" alt="" width="76" height="65" loading="lazy">{%- endif -%}
+      </span>
+      <span>
+        <span class="pl-card__t">{{ card_title }}</span>
+        <span class="pl-card__s">{{ card_sub }}</span>
+        {%- if v -%}
+          <span class="pl-card__p">{{ v.price | money }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money }}</s>{% endif %}</span>
+        {%- endif -%}
+      </span>
+      <span class="pl-card__b">{{ card_button }} {{ i_arrow }}</span>
+    </a>
+    <ul class="pl-tr">
+      <li>{{ i_truck }}{{ menu_t1 }}</li>
+      <li>{{ i_return }}{{ menu_t2 }}</li>
+      <li>{{ i_clock }}{{ menu_t3 }}</li>
+    </ul>
+    <p class="pl-dr__line">{{ brand_line }}</p>
+    <a class="pl-dr__acc" href="{{ account_url }}">{{ i_user }}{{ account_label }}</a>
+  </div>
+</template>
+
+<script>window.plushHeader && window.plushHeader();</script>

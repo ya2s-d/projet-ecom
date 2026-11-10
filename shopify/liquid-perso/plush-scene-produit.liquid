@@ -1,0 +1,198 @@
+{%- comment -%}
+  PLUSH — section « Le produit en scène » (maquette B), version « Liquid personnalisé ».
+  Pour la page d'accueil : elle envoie le client sur ta page produit.
+
+  INSTALLATION
+  1. Personnaliser > Accueil > Ajouter une section > « Liquid personnalisé ».
+  2. Colle tout ce code dans le champ.
+  3. Dans les réglages de la section : marge supérieure 0 et marge inférieure 0.
+
+  PC : le pommeau à gauche avec le sticker qui tourne, le texte et le bouton à droite,
+  la bande « City water in · Plush water out » qui défile en bas.
+  Téléphone : le pommeau en haut, puis le texte, le prix et le bouton sur toute la largeur.
+
+  LE PRIX ET LE LIEN viennent de Shopify, en direct (product_handle). Si tu changes le prix
+  du produit, la section suit toute seule. « From » s'affiche parce que Solo et Duo n'ont pas
+  le même prix. Aucun prix barré ici : c'est la page produit qui s'en charge.
+
+  TA PHOTO : product_image = le lien de ton pommeau détouré (PNG, fond transparent, au moins
+  1000 px de large). Contenu > Fichiers > Importer, puis copie le lien https://cdn.shopify.com/...
+  Vide = la section prend la photo principale de ton produit, dans une carte aux coins arrondis.
+  image_shape : 'cutout' = pommeau détouré qui flotte · 'card' = photo avec un fond, en carte.
+
+  LES TEXTES : uniquement des phrases vraies. Pas de promesse santé, pas de « clinically »,
+  pas de pourcentage, zéro point d'exclamation.
+  animate = false : tout reste immobile (sticker, bande, pommeau).
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign product_handle = 'plush-filtered-showerhead'
+  assign product_image = ''
+  assign image_shape = 'cutout'
+
+  assign eyebrow = 'The filtered shower head'
+  assign headline_1 = 'Same shower.'
+  assign headline_2 = 'Better water.'
+  assign text = 'Plush screws onto your shower arm in about two minutes. Every drop runs through the filter before it reaches you.'
+  assign check_1 = 'Installs in 2 minutes'
+  assign check_2 = 'No tools, no plumber'
+  assign check_3 = 'Renter friendly'
+  assign price_note = 'Free US shipping'
+  assign button = 'Shop Plush'
+
+  assign sticker_ring = '60-DAY MONEY-BACK GUARANTEE • FREE US SHIPPING •'
+  assign sticker_big = '60'
+  assign sticker_small = 'DAYS'
+  assign band_1 = 'City water in'
+  assign band_2 = 'Plush water out'
+  assign big_word = 'plush'
+
+  assign c_bg = '#8A4524'
+  assign c_text = '#F6F2ED'
+  assign c_band = '#141414'
+  assign c_star = '#A86B45'
+  assign animate = true
+-%}
+
+{%- liquid
+  assign p = all_products[product_handle]
+  assign link = routes.all_products_collection_url
+  assign price_label = ''
+  assign alt = 'Plush'
+  if p != blank and p.handle != blank
+    assign link = p.url
+    assign alt = p.title | escape
+    assign price_money = p.price_min | money
+    if p.price_varies
+      assign price_label = 'From ' | append: price_money
+    else
+      assign price_label = price_money
+    endif
+  endif
+
+  assign img = product_image | strip
+  assign shape = image_shape
+  if img != blank
+    if img contains '?'
+      assign img = img | append: '&width=1200'
+    else
+      assign img = img | append: '?width=1200'
+    endif
+  elsif p.featured_image
+    assign img = p.featured_image | image_url: width: 1200
+    assign shape = 'card'
+  endif
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="plush-stage{% unless animate %} ps-still{% endunless %}" style="--ps-bg:{{ c_bg }};--ps-text:{{ c_text }};--ps-band:{{ c_band }};--ps-star:{{ c_star }};">
+  <div class="ps-in">
+    <div class="ps-word" aria-hidden="true">{{ big_word | escape }}</div>
+
+    <div class="ps-stage">
+      {%- if img != blank -%}
+        <a class="ps-imglink" href="{{ link }}" tabindex="-1" aria-hidden="true">
+          <img class="ps-img{% if shape == 'card' %} is-card{% endif %}" src="{{ img }}" alt="{{ alt }}" loading="lazy" width="1200" height="1200">
+        </a>
+      {%- elsif request.design_mode -%}
+        <div class="ps-ph">Colle le lien de ton pommeau détouré dans product_image</div>
+      {%- endif -%}
+      <svg class="ps-sticker" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="ps-ring-{{ section.id }}" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+        <circle class="ps-st-bg" cx="100" cy="100" r="99"/>
+        <g class="ps-ring"><text class="ps-st-tx" font-size="15" font-weight="600"><textPath href="#ps-ring-{{ section.id }}" xlink:href="#ps-ring-{{ section.id }}" textLength="462" lengthAdjust="spacing">{{ sticker_ring | escape }}</textPath></text></g>
+        <text class="ps-st-tx" x="100" y="104" text-anchor="middle" font-size="46" font-weight="700">{{ sticker_big | escape }}</text>
+        <text class="ps-st-tx" x="100" y="128" text-anchor="middle" font-size="13" font-weight="600" letter-spacing="2">{{ sticker_small | escape }}</text>
+      </svg>
+    </div>
+
+    <div class="ps-txt">
+      {%- if eyebrow != blank -%}<p class="ps-eye">{{ eyebrow | escape }}</p>{%- endif -%}
+      <h2 class="ps-title">{{ headline_1 | escape }}<br>{{ headline_2 | escape }}</h2>
+      {%- if text != blank -%}<p class="ps-lead">{{ text | escape }}</p>{%- endif -%}
+      {%- capture ps_check -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>{%- endcapture -%}
+      <ul class="ps-checks">
+        {%- if check_1 != blank -%}<li>{{ ps_check }}{{ check_1 | escape }}</li>{%- endif -%}
+        {%- if check_2 != blank -%}<li>{{ ps_check }}{{ check_2 | escape }}</li>{%- endif -%}
+        {%- if check_3 != blank -%}<li>{{ ps_check }}{{ check_3 | escape }}</li>{%- endif -%}
+      </ul>
+      <div class="ps-buy">
+        {%- if price_label != blank -%}
+          <div class="ps-price"><b>{{ price_label }}</b>{%- if price_note != blank -%}<span>{{ price_note | escape }}</span>{%- endif -%}</div>
+        {%- endif -%}
+        <a class="ps-btn" href="{{ link }}">{{ button | escape }}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-band" aria-hidden="true">
+    <div class="ps-track">
+      {%- for i in (1..16) -%}<span>{{ band_1 | escape }}<i>✦</i>{{ band_2 | escape }}<i>✦</i></span>{%- endfor -%}
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var s = document.currentScript && document.currentScript.previousElementSibling;
+    if (!s || !s.classList.contains('plush-stage')) return;
+    if (!('IntersectionObserver' in window)) { s.classList.add('is-on'); return; }
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { s.classList.toggle('is-on', e.isIntersecting); });
+    }).observe(s);
+  })();
+</script>
+
+<style>
+  .plush-stage{--ps-play:paused;container-type:inline-size;position:relative;overflow:hidden;background:var(--ps-bg);color:var(--ps-text);font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased}
+  .plush-stage.is-on{--ps-play:running}
+  .plush-stage *{box-sizing:border-box}
+  .plush-stage .ps-in{position:relative;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:90px 48px 110px}
+  .plush-stage .ps-word{position:absolute;left:-1.5cqi;bottom:-6.2cqi;z-index:0;font-weight:700;font-size:min(29cqi,420px);letter-spacing:-.06em;line-height:1;color:var(--ps-text);opacity:.07;white-space:nowrap;pointer-events:none;user-select:none}
+  .plush-stage .ps-stage{position:relative;z-index:1;display:flex;justify-content:center}
+  .plush-stage .ps-imglink{display:block;width:min(92%,520px)}
+  .plush-stage .ps-img{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 50px rgba(40,15,5,.45));animation:ps-float 6s ease-in-out infinite;animation-play-state:var(--ps-play)}
+  .plush-stage .ps-img.is-card{aspect-ratio:1/1;object-fit:cover;border-radius:28px;filter:none;box-shadow:0 40px 60px -30px rgba(30,10,0,.55)}
+  .plush-stage .ps-ph{width:min(92%,520px);aspect-ratio:1/1;border:2px dashed rgba(246,242,237,.5);border-radius:28px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:14px;opacity:.8}
+  .plush-stage .ps-sticker{position:absolute;right:4%;top:-2%;z-index:2;width:clamp(104px,12cqi,168px);height:auto;transform:rotate(-12deg)}
+  .plush-stage .ps-st-bg{fill:var(--ps-text)}
+  .plush-stage .ps-st-tx{fill:var(--ps-bg);font-family:'Poppins',sans-serif}
+  .plush-stage .ps-ring{transform-box:view-box;transform-origin:100px 100px;animation:ps-spin 18s linear infinite;animation-play-state:var(--ps-play)}
+  .plush-stage .ps-txt{position:relative;z-index:1}
+  .plush-stage .ps-eye{margin:0 0 18px;font-size:13px;line-height:1.4;letter-spacing:.22em;font-weight:600;text-transform:uppercase;opacity:.75;color:inherit}
+  .plush-stage .ps-title{margin:0 0 22px;font-family:'Poppins',sans-serif;font-size:clamp(40px,5.6cqi,80px);line-height:1;letter-spacing:-.035em;font-weight:600;color:var(--ps-text)}
+  .plush-stage .ps-lead{margin:0 0 28px;max-width:470px;font-size:clamp(16px,1.35cqi,19px);line-height:1.55;letter-spacing:0;opacity:.85;color:inherit}
+  .plush-stage .ps-checks{list-style:none;padding:0;margin:0 0 34px;display:flex;flex-wrap:wrap;gap:10px}
+  .plush-stage .ps-checks li{display:inline-flex;align-items:center;gap:8px;margin:0;padding:9px 16px 9px 12px;border:1px solid rgba(246,242,237,.35);border:1px solid color-mix(in srgb,var(--ps-text) 35%,transparent);border-radius:999px;font-size:14px;line-height:1.2;font-weight:500}
+  .plush-stage .ps-checks svg{width:16px;height:16px;flex:none}
+  .plush-stage .ps-buy{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .plush-stage .ps-price b{display:block;font-size:30px;line-height:1.1;font-weight:600}
+  .plush-stage .ps-price span{display:block;margin-top:2px;font-size:13px;opacity:.75}
+  .plush-stage .ps-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:62px;padding:0 34px;border-radius:999px;background:var(--ps-text);color:var(--ps-bg);font-size:18px;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease}
+  .plush-stage .ps-btn svg{width:18px;height:18px;transition:transform .2s ease}
+  .plush-stage .ps-btn:hover{color:var(--ps-bg);text-decoration:none;transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+  .plush-stage .ps-btn:hover svg{transform:translateX(4px)}
+  .plush-stage .ps-btn:focus-visible{outline:2px solid var(--ps-text);outline-offset:4px}
+  .plush-stage .ps-band{position:relative;z-index:1;overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--ps-band);color:var(--ps-text);font-size:15px;line-height:1.4;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+  .plush-stage .ps-track{display:inline-flex;animation:ps-marq 40s linear infinite;animation-play-state:var(--ps-play)}
+  .plush-stage .ps-track i{font-style:normal;color:var(--ps-star);padding:0 18px}
+  .plush-stage.ps-still .ps-img,.plush-stage.ps-still .ps-ring,.plush-stage.ps-still .ps-track{animation:none}
+  @keyframes ps-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes ps-spin{to{transform:rotate(360deg)}}
+  @keyframes ps-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @container (max-width:760px){
+    .plush-stage .ps-in{grid-template-columns:1fr;gap:18px;padding:56px 22px 64px}
+    .plush-stage .ps-imglink,.plush-stage .ps-ph{width:78%}
+    .plush-stage .ps-sticker{right:2%;top:-4%;width:104px}
+    .plush-stage .ps-word{top:-4cqi;bottom:auto;left:-3cqi;font-size:46cqi}
+    .plush-stage .ps-title{font-size:clamp(36px,10.5cqi,48px)}
+    .plush-stage .ps-buy{flex-direction:column;align-items:stretch;gap:18px}
+    .plush-stage .ps-btn{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .plush-stage .ps-img,.plush-stage .ps-ring,.plush-stage .ps-track{animation:none}
+  }
+</style>

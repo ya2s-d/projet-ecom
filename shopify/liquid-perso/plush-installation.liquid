@@ -1,0 +1,233 @@
+{%- comment -%}
+  PLUSH — section Installation en 3 étapes (maquette A « La scène »), version « Liquid personnalisé ».
+  Colle tout ce code dans une section « Liquid personnalisé ».
+
+  Une grande animation joue les 3 étapes en boucle : l'ancien pommeau se dévisse et tombe,
+  la rondelle se pose, Plush se visse, l'eau coule. L'étape en cours s'allume en dessous
+  (téléphone) ou à droite (PC). L'animation démarre quand la section arrive à l'écran.
+
+  LES TEXTES : eyebrow, headline, title_1 à title_3, text_1 à text_3, footnote.
+  washer_label = le mot écrit à côté de la rondelle. show_washer = false pour l'enlever.
+
+  full_width = true : le brun va d'un bord à l'autre de l'écran.
+  Si la couleur passe par-dessus autre chose, mets false : la section devient une carte arrondie.
+  RÉGLAGE À FAIRE dans l'éditeur, sur cette section : Marge de la section > Marge supérieure 0
+  et Marge inférieure 0 (sinon une bande beige apparaît autour, comme sur la section Matières).
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign eyebrow = "No plumber. It's all in the box."
+  assign headline = 'If you can open a jar, you can install it.'
+
+  assign title_1 = 'Unscrew your old one'
+  assign text_1 = 'By hand. Stuck? Wrap it in a cloth and use a wrench.'
+  assign title_2 = 'Screw Plush on'
+  assign text_2 = 'Drop the little rubber washer in first. Then twist it on, hand-tight.'
+  assign title_3 = 'Turn on the water'
+  assign text_3 = "Your routine stays the same. The water doesn't."
+
+  assign footnote = 'About 2 minutes. Renting? Put your old one back the day you move out.'
+  assign washer_label = 'washer'
+  assign show_washer = true
+
+  assign full_width = true
+  assign c_bg = '#8A4524'
+  assign c_text = '#F6F2ED'
+  assign c_product = '#F6F2ED'
+  assign c_product_line = '#141414'
+  assign space_top = 0
+  assign space_bottom = 0
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div
+  class="plush-ins{% if full_width %} plush-ins--full{% endif %}"
+  style="--pi-bg:{{ c_bg }};--pi-text:{{ c_text }};--pi-prod:{{ c_product }};--pi-prod-line:{{ c_product_line }};margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+  data-plush-ins
+>
+  <div class="pi-in">
+    <div class="pi-head">
+      {%- if eyebrow != blank -%}<p class="pi-eyebrow">{{ eyebrow | escape }}</p>{%- endif -%}
+      {%- if headline != blank -%}<h2 class="pi-title">{{ headline | escape }}</h2>{%- endif -%}
+    </div>
+
+    <div class="pi-grid">
+      <div class="pi-stage">
+        <svg class="pi-sc" viewBox="40 0 160 245" aria-hidden="true">
+          <rect class="pi-pipe" x="110" y="-4" width="20" height="92"/>
+          <g class="pi-thread"><rect x="112" y="86" width="16" height="18" rx="2"/><path d="M112 90l16-3M112 95l16-3M112 100l16-3"/></g>
+
+          <g class="pi-old">
+            <rect x="104" y="90" width="32" height="18" rx="3"/>
+            <path class="pi-knurl" d="M110 93v12M116 93v12M122 93v12M128 93v12"/>
+            <path class="pi-cone" d="M110 108h20l40 42H70z"/>
+            <rect x="66" y="150" width="108" height="10" rx="5"/>
+            <path class="pi-dots" d="M84 155h.1M96 155h.1M108 155h.1M120 155h.1M132 155h.1M144 155h.1M156 155h.1"/>
+          </g>
+
+          {%- if show_washer -%}
+            <g class="pi-wsh">
+              <ellipse cx="120" cy="107" rx="10" ry="3.4"/>
+              <path class="pi-lead" d="M131 108l8 4"/>
+              <text x="141" y="116">{{ washer_label | escape }}</text>
+            </g>
+          {%- endif -%}
+
+          <g class="pi-pl">
+            <rect x="108" y="90" width="24" height="13" rx="3"/>
+            <path class="pi-fine" d="M113 93v7M118 93v7M123 93v7M128 93v7"/>
+            <rect x="113" y="103" width="14" height="7" rx="2"/>
+            <rect x="84" y="110" width="72" height="42" rx="9"/>
+            <path class="pi-fine" d="M92 114v7M97 114v7M102 114v7M107 114v7M112 114v7M117 114v7M122 114v7M127 114v7M132 114v7M137 114v7M142 114v7M147 114v7"/>
+            <text class="pi-word" x="120" y="141" text-anchor="middle">plush</text>
+            <rect x="74" y="152" width="92" height="14" rx="7"/>
+          </g>
+
+          <g class="pi-water">
+            <path d="M82 170V238"/><path d="M90 170V229" style="animation-delay:-.13s"/><path d="M98 170V220" style="animation-delay:-.26s"/>
+            <path d="M106 170V238" style="animation-delay:-.39s"/><path d="M114 170V229" style="animation-delay:-.52s"/><path d="M122 170V220" style="animation-delay:-.05s"/>
+            <path d="M130 170V238" style="animation-delay:-.18s"/><path d="M138 170V229" style="animation-delay:-.31s"/><path d="M146 170V220" style="animation-delay:-.44s"/>
+            <path d="M154 170V238" style="animation-delay:-.57s"/>
+          </g>
+
+          <g class="pi-arr pi-a1"><path class="pi-arc" pathLength="100" d="M152 99A32 11 0 0 1 88 99"/><path class="pi-hd" d="M83 103l5-6 6 5"/></g>
+          <g class="pi-arr pi-a2"><path class="pi-arc" pathLength="100" d="M88 99A32 11 0 0 0 152 99"/><path class="pi-hd" d="M146 102l6-5 5 6"/></g>
+          <g class="pi-chk"><circle cx="164" cy="82" r="11"/><path d="M159 82.3l3.5 3.5 6.6-7"/></g>
+        </svg>
+        <div class="pi-bars" aria-hidden="true"><span><i class="pi-b1"></i></span><span><i class="pi-b2"></i></span><span><i class="pi-b3"></i></span></div>
+      </div>
+
+      <ol class="pi-steps" role="list">
+        <li class="pi-s1"><span class="pi-n">01</span><div><h3>{{ title_1 | escape }}</h3><p>{{ text_1 | escape }}</p></div></li>
+        <li class="pi-s2"><span class="pi-n">02</span><div><h3>{{ title_2 | escape }}</h3><p>{{ text_2 | escape }}</p></div></li>
+        <li class="pi-s3"><span class="pi-n">03</span><div><h3>{{ title_3 | escape }}</h3><p>{{ text_3 | escape }}</p></div></li>
+      </ol>
+    </div>
+
+    {%- if footnote != blank -%}<p class="pi-foot">{{ footnote | escape }}</p>{%- endif -%}
+  </div>
+</div>
+
+<style>
+  .plush-ins{container-type:inline-size;background:var(--pi-bg);color:var(--pi-text);font-family:'Poppins',sans-serif;border-radius:20px;overflow:hidden;--pi-dur:9s;--pi-play:paused}
+  .plush-ins.is-on{--pi-play:running}
+  .plush-ins--full{border-radius:0;overflow:visible;box-shadow:0 0 0 100vmax var(--pi-bg);clip-path:inset(0 -100vmax)}
+  .plush-ins *{box-sizing:border-box}
+  .plush-ins .pi-in{max-width:1340px;margin:0 auto;padding:48px 20px 44px}
+  .plush-ins .pi-head{text-align:center;margin-bottom:28px}
+  .plush-ins .pi-eyebrow{margin:0 0 10px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pi-text);opacity:.75}
+  .plush-ins .pi-title{margin:0 auto;max-width:20ch;font-family:inherit;font-size:28px;font-size:clamp(28px,8cqi,46px);font-weight:600;line-height:1.08;letter-spacing:-.025em;color:var(--pi-text);text-wrap:balance}
+
+  /* La scène */
+  .plush-ins .pi-stage{position:relative;border-radius:22px;background:rgba(0,0,0,.13);padding:0 12% 30px;overflow:hidden}
+  .plush-ins .pi-sc{display:block;width:100%;max-width:280px;height:auto;margin:0 auto;overflow:hidden}
+  .plush-ins .pi-pipe,.plush-ins .pi-thread rect{fill:rgba(0,0,0,.12);stroke:var(--pi-text);stroke-width:1.5}
+  .plush-ins .pi-thread path,.plush-ins .pi-knurl{fill:none;stroke:var(--pi-text);stroke-width:.9;stroke-linecap:round}
+  .plush-ins .pi-old rect,.plush-ins .pi-cone{fill:none;stroke:var(--pi-text);stroke-opacity:.75;stroke-width:1.5;stroke-linejoin:round}
+  .plush-ins .pi-knurl{stroke-opacity:.75}
+  .plush-ins .pi-dots{fill:none;stroke:var(--pi-text);stroke-opacity:.75;stroke-width:2;stroke-linecap:round}
+  .plush-ins .pi-pl rect{fill:var(--pi-prod);stroke:var(--pi-prod-line);stroke-width:1.5}
+  .plush-ins .pi-fine{fill:none;stroke:var(--pi-prod-line);stroke-width:.8;stroke-linecap:round}
+  .plush-ins .pi-word{font:700 14px 'Poppins',sans-serif;letter-spacing:-.04em;fill:var(--pi-prod-line)}
+  .plush-ins .pi-wsh ellipse{fill:none;stroke:var(--pi-text);stroke-width:1.7}
+  .plush-ins .pi-lead{fill:none;stroke:var(--pi-text);stroke-width:.8;stroke-linecap:round}
+  .plush-ins .pi-wsh text{font:600 9px 'Poppins',sans-serif;fill:var(--pi-text)}
+  .plush-ins .pi-water path{fill:none;stroke:var(--pi-text);stroke-opacity:.8;stroke-width:1.3;stroke-linecap:round;stroke-dasharray:6 7.5}
+  .plush-ins .pi-arr path{fill:none;stroke:var(--pi-text);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .plush-ins .pi-arc{stroke-dasharray:100;stroke-dashoffset:100}
+  .plush-ins .pi-chk circle{fill:var(--pi-text)}
+  .plush-ins .pi-chk path{fill:none;stroke:var(--pi-bg);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .plush-ins .pi-chk{transform-box:fill-box;transform-origin:center;transform:scale(0)}
+  .plush-ins .pi-old,.plush-ins .pi-pl,.plush-ins .pi-wsh{transform-box:view-box}
+  .plush-ins .pi-wsh,.plush-ins .pi-pl,.plush-ins .pi-water{opacity:0}
+
+  .plush-ins .pi-bars{position:absolute;left:16px;right:16px;bottom:16px;display:flex;gap:6px}
+  .plush-ins .pi-bars span{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
+  .plush-ins .pi-bars i{display:block;height:100%;width:0;background:var(--pi-text)}
+
+  /* Les étapes */
+  .plush-ins ol.pi-steps{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:6px}
+  .plush-ins .pi-steps li{display:flex;gap:16px;align-items:flex-start;margin:0;padding:14px 16px;border-radius:16px;opacity:.38}
+  .plush-ins .pi-steps .pi-s1{opacity:1;background:rgba(0,0,0,.13)}
+  .plush-ins .pi-n{flex:none;width:22px;padding-top:5px;font-size:13px;font-weight:600;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+  .plush-ins .pi-steps h3{margin:0 0 3px;font-family:inherit;font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.3;color:var(--pi-text)}
+  .plush-ins .pi-steps p{margin:0;font-size:15px;line-height:1.5;color:var(--pi-text);opacity:.9}
+  .plush-ins .pi-foot{margin:22px 0 0;text-align:center;font-size:14px;line-height:1.5;color:var(--pi-text);opacity:.8}
+
+  /* L'animation (elle tourne quand la section est à l'écran) */
+  .plush-ins .pi-old{animation:pi-old var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-knurl{animation:pi-knurl .5s linear infinite var(--pi-play)}
+  .plush-ins .pi-a1 .pi-arc{animation:pi-a1 var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-a1 .pi-hd{animation:pi-a1h var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-wsh{animation:pi-wsh var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-pl{animation:pi-pl var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-a2 .pi-arc{animation:pi-a2 var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-a2 .pi-hd{animation:pi-a2h var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-chk{animation:pi-chk var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-water{animation:pi-water var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-water path{animation:pi-flow .6s linear infinite var(--pi-play)}
+  .plush-ins .pi-b1{animation:pi-b1 var(--pi-dur) linear infinite var(--pi-play)}
+  .plush-ins .pi-b2{animation:pi-b2 var(--pi-dur) linear infinite var(--pi-play)}
+  .plush-ins .pi-b3{animation:pi-b3 var(--pi-dur) linear infinite var(--pi-play)}
+  .plush-ins .pi-steps .pi-s1{animation:pi-s1 var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-steps .pi-s2{animation:pi-s2 var(--pi-dur) infinite var(--pi-play)}
+  .plush-ins .pi-steps .pi-s3{animation:pi-s3 var(--pi-dur) infinite var(--pi-play)}
+
+  @keyframes pi-flow{to{stroke-dashoffset:-13.5}}
+  @keyframes pi-knurl{to{transform:translateX(-6px)}}
+  @keyframes pi-old{0%,6%{transform:translateY(0);opacity:1}26%{transform:translateY(12px);opacity:1;animation-timing-function:ease-in}34%{transform:translateY(150px);opacity:0}92%{transform:translateY(0);opacity:0}100%{transform:translateY(0);opacity:1}}
+  @keyframes pi-a1{0%,5%{stroke-dashoffset:100;opacity:0}6%{stroke-dashoffset:100;opacity:1}24%{stroke-dashoffset:0;opacity:1}30%,100%{stroke-dashoffset:0;opacity:0}}
+  @keyframes pi-a1h{0%,20%{opacity:0}24%{opacity:1}30%,100%{opacity:0}}
+  @keyframes pi-wsh{0%,34%{opacity:0;transform:translateY(22px)}40%{opacity:1;transform:translateY(0)}52%{opacity:1}55%,100%{opacity:0}}
+  @keyframes pi-pl{0%,43%{transform:translateY(130px);opacity:0}53%{transform:translateY(14px);opacity:1;animation-timing-function:ease-in-out}62%{transform:translateY(0)}92%{transform:translateY(0);opacity:1}100%{transform:translateY(0);opacity:0}}
+  @keyframes pi-a2{0%,52%{stroke-dashoffset:100;opacity:0}53%{stroke-dashoffset:100;opacity:1}61%{stroke-dashoffset:0;opacity:1}65%,100%{stroke-dashoffset:0;opacity:0}}
+  @keyframes pi-a2h{0%,57%{opacity:0}61%{opacity:1}65%,100%{opacity:0}}
+  @keyframes pi-chk{0%,62%{transform:scale(0)}64%{transform:scale(1.18)}66%,90%{transform:scale(1)}94%,100%{transform:scale(0)}}
+  @keyframes pi-water{0%,64%{opacity:0}68%,90%{opacity:1}94%,100%{opacity:0}}
+  @keyframes pi-b1{0%{width:0}34%,100%{width:100%}}
+  @keyframes pi-b2{0%,34%{width:0}64%,100%{width:100%}}
+  @keyframes pi-b3{0%,64%{width:0}100%{width:100%}}
+  @keyframes pi-s1{0%,32%{opacity:1;background:rgba(0,0,0,.13)}36%,100%{opacity:.38;background:transparent}}
+  @keyframes pi-s2{0%,33%{opacity:.38;background:transparent}37%,62%{opacity:1;background:rgba(0,0,0,.13)}66%,100%{opacity:.38;background:transparent}}
+  @keyframes pi-s3{0%,63%{opacity:.38;background:transparent}67%,96%{opacity:1;background:rgba(0,0,0,.13)}100%{opacity:.38;background:transparent}}
+
+  /* Mouvements réduits (réglage du téléphone) : on montre directement Plush installé */
+  @media (prefers-reduced-motion:reduce){
+    .plush-ins .pi-sc *,.plush-ins .pi-bars i,.plush-ins .pi-steps li{animation:none !important}
+    .plush-ins .pi-old,.plush-ins .pi-wsh,.plush-ins .pi-arr{opacity:0}
+    .plush-ins .pi-pl,.plush-ins .pi-water{opacity:1}
+    .plush-ins .pi-chk{transform:scale(1)}
+    .plush-ins .pi-bars i{width:100%}
+    .plush-ins .pi-steps li,.plush-ins .pi-steps .pi-s1{opacity:1;background:transparent}
+  }
+
+  @container (min-width:900px){
+    .plush-ins .pi-in{padding:80px 4%}
+    .plush-ins .pi-head{margin-bottom:44px}
+    .plush-ins .pi-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:6%;align-items:center}
+    .plush-ins .pi-stage{padding:0 14% 36px}
+    .plush-ins .pi-sc{max-width:360px}
+    .plush-ins ol.pi-steps{margin:0;gap:10px}
+    .plush-ins .pi-steps li{padding:22px 24px}
+    .plush-ins .pi-steps h3{font-size:24px}
+    .plush-ins .pi-steps p{font-size:16px}
+    .plush-ins .pi-foot{margin-top:40px}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('[data-plush-ins]').forEach(function (root) {
+      if (root.dataset.ready) return;
+      root.dataset.ready = '1';
+      if (!('IntersectionObserver' in window)) { root.classList.add('is-on'); return; }
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { root.classList.toggle('is-on', e.isIntersecting); });
+      }, { threshold: 0.25 }).observe(root);
+    });
+  })();
+</script>

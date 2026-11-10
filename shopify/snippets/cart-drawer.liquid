@@ -1,0 +1,635 @@
+{%- comment -%}
+  PLUSH — panier (tiroir) « maquette B ». Remplace TOUT le contenu de snippets/cart-drawer.liquid.
+
+  AVANT DE COLLER : Boutique en ligne > Thèmes > … > Dupliquer (c'est ta sauvegarde).
+  Puis : … > Modifier le code > snippets/cart-drawer.liquid > tout sélectionner > coller > Enregistrer.
+  Retour en arrière : dans l'éditeur de code, « Anciennes versions » en haut du fichier.
+
+  CE QUI EST EN DIRECT (rien à toucher) : les articles, les quantités, la suppression, le prix,
+  la barre du kit, le bouton « + $15 » (Solo → Duo), les codes promo, la date de livraison
+  estimée (5 à 12 jours ouvrés) et le compte à rebours de la promo.
+
+  À REMPLIR :
+  - banner_image : le lien de ta bannière Canva 1200 × 500 (Contenu > Fichiers > copier le lien).
+    Vide = pas de bannière.
+  - gift_image : le lien de la couverture de l'ebook. Vide = une icône à la place.
+  - cartridge_handle : « plush-replacement-cartridge » (cartouche seule, 24 $, créée le 1er nov.).
+    Avec le Solo : « + $15 » pour passer au Duo, « Instead of $24 on its own ». Avec le Duo :
+    carte « Extra cartridge + $24 ». Vide = ces mentions disparaissent.
+  - protection_handle : « shipping-protection » (4,99 $, créé le 1er nov.). Vide = pas de carte.
+  - sale_end : la même date que ton bandeau. Le compte à rebours disparaît tout seul après.
+  - ship_min_days / ship_max_days : le délai affiché (5 à 12 jours ouvrés). eta_style = 'dates'
+    affiche des dates (ex. Nov 6 – Nov 17) au lieu du nombre de jours.
+
+  Le handle d'un produit = la fin de son lien : /products/le-handle
+  L'ebook est affiché comme cadeau dans le panier, ce n'est pas un article Shopify :
+  tu l'envoies par email après la commande.
+{%- endcomment -%}
+
+{%- liquid
+  assign plush_handle = 'plush-filtered-showerhead'
+  assign solo_variant_id = 55519393382739
+  assign duo_variant_id = 55512601166163
+  assign cartridge_handle = 'plush-replacement-cartridge'
+  assign protection_handle = 'shipping-protection'
+
+  assign banner_image = ''
+  assign banner_link = ''
+
+  assign sale_end = '2026-11-13'
+  assign sale_label = 'Fall Sale ends in'
+
+  assign gift_title = 'Know Your Water'
+  assign gift_subtitle = 'The Plush guide · ebook'
+  assign gift_image = ''
+  assign gift_value = '$20.00'
+
+  assign ship_min_days = 5
+  assign ship_max_days = 12
+  assign eta_style = 'days'
+  assign shipping_label = 'Free'
+  assign guarantee = "On day 59, if you don't love it, you get all your money back."
+
+  assign c_brown = '#8A4524'
+  assign c_paper = '#F6F2ED'
+  assign c_cream = '#EFE7DA'
+  assign c_ink = '#141414'
+-%}
+
+{%- liquid
+  assign plush = all_products[plush_handle]
+  assign solo_price = 0
+  assign duo_price = 0
+  for v in plush.variants
+    if v.id == solo_variant_id
+      assign solo_price = v.price
+    elsif v.id == duo_variant_id
+      assign duo_price = v.price
+    endif
+  endfor
+  assign swap_diff = duo_price | minus: solo_price
+
+  assign cartridge = nil
+  if cartridge_handle != blank
+    assign cartridge = all_products[cartridge_handle]
+  endif
+  assign protection = nil
+  if protection_handle != blank
+    assign protection = all_products[protection_handle]
+  endif
+
+  assign solo_qty = 0
+  assign duo_qty = 0
+  assign cartridge_in_cart = false
+  assign protection_in_cart = false
+  for item in cart.items
+    if item.variant_id == solo_variant_id
+      assign solo_qty = solo_qty | plus: item.quantity
+    elsif item.variant_id == duo_variant_id
+      assign duo_qty = duo_qty | plus: item.quantity
+    endif
+    if cartridge_handle != blank and item.product.handle == cartridge_handle
+      assign cartridge_in_cart = true
+    endif
+    if protection_handle != blank and item.product.handle == protection_handle
+      assign protection_in_cart = true
+    endif
+  endfor
+
+  assign kit_done = false
+  if duo_qty > 0 or cartridge_in_cart
+    assign kit_done = true
+  endif
+
+  assign show_swap = false
+  if solo_qty > 0 and duo_qty == 0 and swap_diff > 0
+    assign show_swap = true
+  endif
+  assign show_extra = false
+  if kit_done and cartridge and cartridge.available and cartridge_in_cart == false
+    assign show_extra = true
+  endif
+  assign show_protection = false
+  if protection and protection.available and protection_in_cart == false
+    assign show_protection = true
+  endif
+
+  assign sale_end_at = sale_end | append: 'T23:59:59-05:00'
+  assign sale_end_ts = sale_end_at | date: '%s' | plus: 0
+  assign now_ts = 'now' | date: '%s' | plus: 0
+  assign sale_live = false
+  if sale_end != blank and now_ts < sale_end_ts
+    assign sale_live = true
+  endif
+
+  assign applied_codes = ''
+  for app in cart.discount_applications
+    if app.type == 'discount_code'
+      assign applied_codes = applied_codes | append: app.title | append: ','
+    endif
+  endfor
+-%}
+
+{%- capture pc_x -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>{%- endcapture -%}
+{%- capture pc_bag -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>{%- endcapture -%}
+{%- capture pc_leaf -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg>{%- endcapture -%}
+{%- capture pc_truck -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>{%- endcapture -%}
+{%- capture pc_book -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>{%- endcapture -%}
+{%- capture pc_cart -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.6"/><path d="M7 6.5h10M7 17.5h10M10.2 9.3v5.4M13.8 9.3v5.4"/></svg>{%- endcapture -%}
+{%- capture pc_shield -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>{%- endcapture -%}
+{%- capture pc_cal -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>{%- endcapture -%}
+{%- capture pc_gift -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C9.5 3 11 5 12 8c1-3 2.5-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>{%- endcapture -%}
+{%- capture pc_trash -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>{%- endcapture -%}
+{%- capture pc_lock -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="10" x="4" y="11" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg>{%- endcapture -%}
+{%- capture pc_minus -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg>{%- endcapture -%}
+{%- capture pc_plus -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>{%- endcapture -%}
+{%- capture pc_check -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>{%- endcapture -%}
+
+{%- if settings.enable_cart_upsell -%}
+  {%- assign upsell_product = all_products[settings.cart_upsell_product_2] -%}
+  {%- if upsell_product -%}{%- assign variant_id = upsell_product.variants.first.id -%}{%- endif -%}
+  <script src="{{ 'cart.js' | asset_url }}" defer="defer" data-cart-upsell-variant-id="{{ variant_id }}"></script>
+{%- else -%}
+  <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+<script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<cart-drawer
+  id="drawerMode"
+  class="drawer{% if cart == empty %} is-empty{% endif %}{% if request.design_mode and settings.edit_mode %} active{% endif %}"
+  style="--pc-brown:{{ c_brown }};--pc-paper:{{ c_paper }};--pc-cream:{{ c_cream }};--pc-ink:{{ c_ink }};"
+>
+  <div id="CartDrawer" class="cart-drawer">
+    <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+    <div class="drawer__inner pc-drawer" role="dialog" aria-modal="true" aria-label="Your cart" tabindex="-1">
+      {%- if cart == empty -%}
+        <div class="drawer__inner-empty pc-empty">
+          <button class="pc-close pc-close--dark" type="button" onclick="this.closest('cart-drawer').close()" aria-label="Close">{{ pc_x }}</button>
+          <span class="pc-empty__icon">{{ pc_bag }}</span>
+          <p class="pc-empty__title">Your cart is empty</p>
+          <p class="pc-empty__text">Same shower. Better water. It starts here.</p>
+          <a class="pc-empty__btn" href="{% if plush %}{{ plush.url }}{% else %}{{ routes.all_products_collection_url }}{% endif %}">Shop Plush</a>
+          {%- comment -%} Éléments attendus par cart.js, même panier vide {%- endcomment -%}
+          <div id="CartDrawer-CartItems" class="visually-hidden"></div>
+          <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
+          <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status"></p>
+          <div id="CartDrawer-CartErrors" class="visually-hidden" role="alert"></div>
+        </div>
+      {%- else -%}
+        <div class="pc-scroll">
+          <div class="pc-top">
+            <span class="pc-top__word" aria-hidden="true">plush</span>
+            <div class="pc-head">
+              <p class="pc-title">{{ pc_bag }}Your cart <span class="pc-count">{{ cart.item_count }}</span></p>
+              <button class="pc-close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="Close">{{ pc_x }}</button>
+            </div>
+
+            {%- if sale_live -%}
+              <div class="pc-sale" data-pc-end="{{ sale_end_at }}">
+                <p class="pc-sale__label">{{ pc_leaf }}{{ sale_label | escape }}</p>
+                <div class="pc-clock">
+                  <span><b data-d>--</b><small>DAYS</small></span>
+                  <span><b data-h>--</b><small>HRS</small></span>
+                  <span><b data-m>--</b><small>MIN</small></span>
+                  <span><b data-s>--</b><small>SEC</small></span>
+                </div>
+              </div>
+            {%- endif -%}
+
+            <div class="pc-kit{% if kit_done %} is-done{% endif %}">
+              <div class="pc-kit__head">
+                {%- if kit_done -%}
+                  <span>Your Plush kit is <b>complete</b></span><span class="pc-kit__ok">{{ pc_check }}</span>
+                {%- else -%}
+                  <span>Your Plush kit · <b>2 of 3</b></span>
+                  {%- if show_swap -%}
+                    <button type="button" class="pc-kit__link" data-pc-swap data-solo="{{ solo_variant_id }}" data-duo="{{ duo_variant_id }}" data-qty="{{ solo_qty }}" data-duo-qty="{{ duo_qty }}">Complete it · {{ swap_diff | money_without_trailing_zeros }}</button>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+              <div class="pc-track">
+                <div class="pc-fill" style="width:{% if kit_done %}100{% else %}50{% endif %}%"></div>
+                <span class="pc-dot is-on" style="left:0%">{{ pc_truck }}</span>
+                <span class="pc-dot is-on" style="left:50%">{{ pc_book }}</span>
+                <span class="pc-dot{% if kit_done %} is-on{% endif %}" style="left:100%">{{ pc_cart }}</span>
+              </div>
+              <div class="pc-labels">
+                <span class="is-on">Free shipping</span><span class="is-on">Free ebook</span><span{% if kit_done %} class="is-on"{% endif %}>Spare cartridge</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pc-body">
+            {%- if banner_image != blank -%}
+              {%- if banner_link != blank -%}<a href="{{ banner_link }}" class="pc-banner">{%- else -%}<div class="pc-banner">{%- endif -%}
+              <img src="{{ banner_image }}{% if banner_image contains '?' %}&{% else %}?{% endif %}width=900" alt="" width="1200" height="500" loading="lazy">
+              {%- if banner_link != blank -%}</a>{%- else -%}</div>{%- endif -%}
+            {%- endif -%}
+
+            <cart-drawer-items>
+              <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
+                <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
+                  <div class="pc-items">
+                    {%- for item in cart.items -%}
+                      {%- assign idx = forloop.index -%}
+                      <div id="CartDrawer-Item-{{ idx }}" class="cart-item pc-item">
+                        <a href="{{ item.url }}" class="pc-thumb" tabindex="-1" aria-hidden="true">
+                          {%- if item.image -%}
+                            <img src="{{ item.image | image_url: width: 240 }}" alt="" width="120" height="120" loading="lazy">
+                          {%- elsif protection_handle != blank and item.product.handle == protection_handle -%}
+                            {{ pc_shield }}
+                          {%- else -%}
+                            {{ pc_cart }}
+                          {%- endif -%}
+                        </a>
+                        <div class="pc-item__mid">
+                          <a href="{{ item.url }}" class="pc-item__name cart-item__name">{{ item.product.title | escape }}</a>
+                          {%- unless item.product.has_only_default_variant -%}
+                            <span class="pc-item__var">{{ item.variant.title | escape }}</span>
+                          {%- endunless -%}
+                          {%- if item.selling_plan_allocation -%}
+                            <span class="pc-item__var">{{ item.selling_plan_allocation.selling_plan.name | escape }}</span>
+                          {%- endif -%}
+                          {%- for discount in item.line_level_discount_allocations -%}
+                            <span class="pc-item__disc">{{ discount.discount_application.title | escape }} (−{{ discount.amount | money }})</span>
+                          {%- endfor -%}
+                          {%- if protection_handle != blank and item.product.handle == protection_handle -%}
+                            <span class="pc-item__var">Lost or damaged? We resend it.</span>
+                            <input type="hidden" name="updates[]" value="{{ item.quantity }}" data-quantity-variant-id="{{ item.variant.id }}" data-index="{{ idx }}" id="Drawer-quantity-{{ idx }}">
+                          {%- else -%}
+                          <quantity-input class="pc-qty">
+                            <button class="quantity__button" name="minus" type="button" aria-label="Decrease quantity for {{ item.product.title | escape }}">{{ pc_minus }}</button>
+                            <input class="quantity__input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" step="1" data-quantity-variant-id="{{ item.variant.id }}" data-index="{{ idx }}" id="Drawer-quantity-{{ idx }}" aria-label="Quantity for {{ item.product.title | escape }}">
+                            <button class="quantity__button" name="plus" type="button" aria-label="Increase quantity for {{ item.product.title | escape }}">{{ pc_plus }}</button>
+                          </quantity-input>
+                          {%- endif -%}
+                          <div id="CartDrawer-LineItemError-{{ idx }}" class="cart-item__error" role="alert">
+                            <small class="cart-item__error-text"></small>
+                          </div>
+                        </div>
+                        <div class="pc-item__right">
+                          {%- if item.original_line_price != item.final_line_price -%}
+                            <s class="pc-item__was">{{ item.original_line_price | money }}</s>
+                          {%- endif -%}
+                          <b class="pc-item__price">{{ item.final_line_price | money }}</b>
+                          <cart-remove-button id="CartDrawer-Remove-{{ idx }}" data-index="{{ idx }}">
+                            <button type="button" class="pc-remove" aria-label="Remove {{ item.product.title | escape }}">{{ pc_trash }}</button>
+                          </cart-remove-button>
+                          <span class="pc-spin loading__spinner hidden" aria-hidden="true"></span>
+                        </div>
+                      </div>
+                    {%- endfor -%}
+
+                    <div class="pc-item pc-gift">
+                      <span class="pc-thumb pc-thumb--gift">
+                        {%- if gift_image != blank -%}<img src="{{ gift_image }}" alt="" width="120" height="120" loading="lazy">{%- else -%}{{ pc_book }}{%- endif -%}
+                      </span>
+                      <div class="pc-item__mid">
+                        <span class="pc-item__name">{{ gift_title | escape }}</span>
+                        <span class="pc-item__var">{{ gift_subtitle | escape }}</span>
+                        <span class="pc-chip">{{ pc_gift }}Free gift</span>
+                      </div>
+                      <div class="pc-item__right">
+                        <b class="pc-free">FREE</b>
+                        {%- if gift_value != blank -%}<s class="pc-item__was">{{ gift_value }}</s>{%- endif -%}
+                      </div>
+                    </div>
+                  </div>
+                  <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
+                  <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">Loading…</p>
+                </div>
+                <div id="CartDrawer-CartErrors" class="pc-errors" role="alert"></div>
+              </form>
+            </cart-drawer-items>
+
+            {%- if show_swap or show_extra or show_protection -%}
+              <p class="pc-label">{% if show_swap %}Complete your kit{% else %}Add-ons{% endif %}</p>
+            {%- endif -%}
+
+            {%- if show_swap -%}
+              <div class="pc-card pc-up">
+                <span class="pc-up__icon">{{ pc_cart }}</span>
+                <div>
+                  <b>Spare cartridge</b>
+                  <span>Switch to the Duo. Your next one, already home.</span>
+                  {%- if cartridge and cartridge.price > swap_diff -%}
+                    <span class="pc-up__save">Instead of {{ cartridge.price | money_without_trailing_zeros }} on its own</span>
+                  {%- endif -%}
+                </div>
+                <button type="button" class="pc-up__btn" data-pc-swap data-solo="{{ solo_variant_id }}" data-duo="{{ duo_variant_id }}" data-qty="{{ solo_qty }}" data-duo-qty="{{ duo_qty }}">+ {{ swap_diff | money_without_trailing_zeros }}</button>
+              </div>
+            {%- endif -%}
+
+            {%- if show_extra -%}
+              <div class="pc-card pc-up">
+                <span class="pc-up__icon">{{ pc_cart }}</span>
+                <div><b>Extra cartridge</b><span>For the next swap, already home.</span></div>
+                <button type="button" class="pc-up__btn" data-pc-add="{{ cartridge.selected_or_first_available_variant.id }}">+ {{ cartridge.price | money_without_trailing_zeros }}</button>
+              </div>
+            {%- endif -%}
+
+            {%- if show_protection -%}
+              <div class="pc-card pc-up">
+                <span class="pc-up__icon">{{ pc_shield }}</span>
+                <div><b>Shipping protection</b><span>Lost or damaged? We resend it.</span></div>
+                <button type="button" class="pc-up__btn pc-up__btn--soft" data-pc-add="{{ protection.selected_or_first_available_variant.id }}">+ {{ protection.price | money }}</button>
+              </div>
+            {%- endif -%}
+
+            <div class="pc-eta">
+              {{ pc_cal }}
+              <div><span>Estimated delivery</span>{%- if eta_style == 'dates' -%}<b data-pc-eta data-min="{{ ship_min_days }}" data-max="{{ ship_max_days }}">{{ ship_min_days }}–{{ ship_max_days }} business days</b>{%- else -%}<b>{{ ship_min_days }}–{{ ship_max_days }} business days</b>{%- endif -%}<span class="pc-eta__note">· free &amp; tracked</span></div>
+            </div>
+
+            <form class="pc-code" data-pc-discount data-codes="{{ applied_codes | escape }}">
+              <input type="text" name="discount" placeholder="Discount code" autocomplete="off" aria-label="Discount code">
+              <button type="submit">Apply</button>
+            </form>
+            <p class="pc-code__msg" data-pc-code-msg hidden></p>
+            {%- if applied_codes != blank -%}
+              <div class="pc-codes">
+                {%- assign code_list = applied_codes | split: ',' -%}
+                {%- for c in code_list -%}
+                  {%- assign others = '' -%}
+                  {%- for o in code_list -%}{%- if o != c -%}{%- assign others = others | append: o | append: ',' -%}{%- endif -%}{%- endfor -%}
+                  <span class="pc-codes__chip" data-pc-code="{{ c | downcase | escape }}">{{ c | escape }}<button type="button" data-pc-rmcode data-keep="{{ others | escape }}" aria-label="Remove {{ c | escape }}">{{ pc_x }}</button></span>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="drawer__footer cart-drawer__footer pc-foot">
+          {%- for discount in cart.cart_level_discount_applications -%}
+            <div class="pc-row pc-row--disc"><span>{{ discount.title | escape }}</span><span>−{{ discount.total_allocated_amount | money }}</span></div>
+          {%- endfor -%}
+          <div class="pc-row pc-row--total"><span>Subtotal</span><b>{{ cart.total_price | money }}</b></div>
+          <div class="pc-row pc-row--ship"><span>Shipping</span><span>{{ shipping_label | escape }}</span></div>
+          <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button pc-checkout" name="checkout" form="CartDrawer-Form">{{ pc_lock }}Checkout · {{ cart.total_price | money }}</button>
+          <ul class="pc-pay" role="list">
+            {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'pc-pay__icon' }}</li>{%- endfor -%}
+          </ul>
+          <p class="pc-guarantee">{{ guarantee | escape }}</p>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</cart-drawer>
+
+<script>
+  (function () {
+    if (window.PlushCart) return;
+    window.PlushCart = true;
+    var root = (window.Shopify && Shopify.routes && Shopify.routes.root) || '/';
+
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function addBusinessDays(n) {
+      var d = new Date();
+      while (n > 0) { d.setDate(d.getDate() + 1); var w = d.getDay(); if (w !== 0 && w !== 6) n--; }
+      return d;
+    }
+    function shortDate(d) { return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); }
+
+    function tick() {
+      document.querySelectorAll('[data-pc-end]').forEach(function (el) {
+        var left = new Date(el.getAttribute('data-pc-end')).getTime() - Date.now();
+        if (!(left > 0)) { el.hidden = true; return; }
+        var s = Math.floor(left / 1000);
+        el.querySelector('[data-d]').textContent = Math.floor(s / 86400);
+        el.querySelector('[data-h]').textContent = pad(Math.floor((s % 86400) / 3600));
+        el.querySelector('[data-m]').textContent = pad(Math.floor((s % 3600) / 60));
+        el.querySelector('[data-s]').textContent = pad(s % 60);
+      });
+      document.querySelectorAll('[data-pc-eta]:not([data-done])').forEach(function (el) {
+        el.textContent = shortDate(addBusinessDays(+el.dataset.min)) + ' – ' + shortDate(addBusinessDays(+el.dataset.max));
+        el.setAttribute('data-done', '');
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    function post(path, body) {
+      body.sections = 'cart-drawer,cart-icon-bubble';
+      body.sections_url = window.location.pathname;
+      return fetch(root + path, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(body)
+      }).then(function (r) { return r.json(); }).then(function (state) {
+        if (state.status && state.description) throw new Error(state.description);
+        return state;
+      });
+    }
+    function render(state) {
+      var drawer = document.querySelector('cart-drawer');
+      if (drawer && state.sections && state.sections['cart-drawer']) {
+        drawer.classList.remove('is-empty');
+        drawer.renderContents(state);
+        tick();
+      } else {
+        window.location.reload();
+      }
+    }
+    function fail(btn) {
+      if (btn) { btn.disabled = false; btn.classList.remove('is-loading'); }
+      var box = document.getElementById('CartDrawer-CartErrors');
+      if (box) box.textContent = 'Something went wrong. Please try again.';
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-pc-swap],[data-pc-add],[data-pc-rmcode]');
+      if (!btn || btn.disabled) return;
+      e.preventDefault();
+      btn.disabled = true;
+      btn.classList.add('is-loading');
+      var job;
+      if (btn.hasAttribute('data-pc-swap')) {
+        var updates = {};
+        updates[btn.dataset.solo] = 0;
+        updates[btn.dataset.duo] = (parseInt(btn.dataset.duoQty, 10) || 0) + (parseInt(btn.dataset.qty, 10) || 1);
+        job = post('cart/update.js', { updates: updates });
+      } else if (btn.hasAttribute('data-pc-add')) {
+        job = post('cart/add.js', { items: [{ id: parseInt(btn.dataset.pcAdd, 10), quantity: 1 }] });
+      } else {
+        job = post('cart/update.js', { discount: (btn.dataset.keep || '').replace(/,$/, '') });
+      }
+      job.then(render).catch(function () { fail(btn); });
+    });
+
+    document.addEventListener('submit', function (e) {
+      var form = e.target.closest('[data-pc-discount]');
+      if (!form) return;
+      e.preventDefault();
+      var input = form.querySelector('input');
+      var code = input.value.trim();
+      if (!code) return;
+      var codes = (form.dataset.codes || '').split(',').filter(Boolean);
+      if (codes.map(function (c) { return c.toLowerCase(); }).indexOf(code.toLowerCase()) === -1) codes.push(code);
+      var btn = form.querySelector('button');
+      btn.disabled = true;
+      post('cart/update.js', { discount: codes.join(',') }).then(function (state) {
+        render(state);
+        var ok = document.querySelector('[data-pc-code="' + code.toLowerCase().replace(/"/g, '') + '"]');
+        var bad = (state.discount_codes || []).some(function (d) { return d.code.toLowerCase() === code.toLowerCase() && d.applicable === false; });
+        if (!ok || bad) {
+          var msg = document.querySelector('[data-pc-code-msg]');
+          if (msg) { msg.textContent = 'This code doesn\'t apply to your cart.'; msg.hidden = false; }
+        }
+      }).catch(function () { btn.disabled = false; fail(); });
+    });
+  })();
+</script>
+
+<style>
+  .drawer{visibility:hidden}
+  .drawer.active{visibility:visible}
+  .pc-drawer{--pc-r:20px;font-family:'Poppins',sans-serif;color:var(--pc-ink);background:var(--pc-paper);-webkit-font-smoothing:antialiased;letter-spacing:0}
+  .drawer__inner.pc-drawer{width:44rem;padding:0;border:0;border-radius:var(--pc-r) !important;overflow:hidden}
+  .pc-drawer *{box-sizing:border-box}
+  .pc-drawer p{margin:0}
+  .pc-drawer button{font-family:inherit;cursor:pointer}
+  .pc-drawer svg{display:block;flex:none;pointer-events:none}
+  .pc-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .pc-drawer cart-drawer-items{display:block;overflow:visible;flex:none}
+  .pc-drawer .cart-drawer__form{display:block}
+  .pc-drawer .drawer__contents{display:block}
+
+  .pc-top{position:relative;overflow:hidden;background:var(--pc-brown);color:var(--pc-paper);border-radius:0 0 28px 28px;padding:20px 20px 22px}
+  .pc-top__word{position:absolute;right:-26px;bottom:-60px;font-size:150px;font-weight:700;letter-spacing:-.06em;line-height:1;opacity:.07;pointer-events:none}
+  .pc-head{position:relative;display:flex;align-items:center;justify-content:space-between}
+  .pc-title{display:flex;align-items:center;gap:10px;font-size:21px;line-height:1.2;font-weight:600;letter-spacing:-.02em}
+  .pc-title svg{width:22px;height:22px}
+  .pc-count{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;padding:0 7px;border-radius:99px;background:var(--pc-paper);color:var(--pc-brown);font-size:13px;font-weight:700}
+  .pc-close{width:38px;height:38px;flex:none;border-radius:99px;border:1px solid rgba(246,242,237,.35);background:transparent;color:inherit;display:flex;align-items:center;justify-content:center;padding:0}
+  .pc-close svg{width:18px;height:18px}
+  .pc-sale{position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}
+  .pc-sale[hidden]{display:none}
+  .pc-sale__label{display:flex;align-items:center;gap:6px;font-size:13px;opacity:.85}
+  .pc-sale__label svg{width:16px;height:16px}
+  .pc-clock{display:flex;gap:5px;font-variant-numeric:tabular-nums}
+  .pc-clock span{display:flex;flex-direction:column;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;background:rgba(246,242,237,.14)}
+  .pc-clock b{font-size:15px;line-height:1;font-weight:600}
+  .pc-clock small{font-size:9px;line-height:1;letter-spacing:.08em;opacity:.7;margin-top:4px}
+  .pc-kit{position:relative;margin-top:18px;padding:14px 14px 12px;border-radius:16px;background:rgba(20,20,20,.18)}
+  .pc-kit__head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13.5px;line-height:1.3}
+  .pc-kit__head b{font-weight:600}
+  .pc-kit__link{padding:0;border:0;background:none;color:var(--pc-paper);font-size:13.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+  .pc-kit__ok svg{width:18px;height:18px}
+  .pc-track{position:relative;height:6px;margin:24px 16px 0;border-radius:9px;background:rgba(246,242,237,.25)}
+  .pc-fill{position:absolute;left:0;top:0;bottom:0;border-radius:9px;background:var(--pc-paper);transition:width .6s ease}
+  .pc-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:99px;display:flex;align-items:center;justify-content:center;background:var(--pc-brown);border:1.5px solid rgba(246,242,237,.45);color:rgba(246,242,237,.8)}
+  .pc-dot svg{width:16px;height:16px}
+  .pc-dot.is-on{background:var(--pc-paper);border-color:var(--pc-paper);color:var(--pc-brown)}
+  .pc-labels{display:flex;justify-content:space-between;margin-top:22px;font-size:11.5px;line-height:1.3}
+  .pc-labels span{width:33%;text-align:center;opacity:.7}
+  .pc-labels span:first-child{text-align:left}
+  .pc-labels span:last-child{text-align:right}
+  .pc-labels .is-on{opacity:1;font-weight:600}
+
+  .pc-body{display:flex;flex-direction:column;gap:14px;padding:18px 20px 20px}
+  .pc-banner{display:block;border-radius:18px;overflow:hidden}
+  .pc-banner img{display:block;width:100%;height:auto}
+  .pc-items{background:#fff;border-radius:18px;padding:4px 16px}
+  .pc-drawer .pc-item{display:grid;grid-template-columns:76px 1fr auto;column-gap:14px;row-gap:0;align-items:start;margin:0;padding:14px 0}
+  .pc-drawer .pc-item + .pc-item{border-top:1px solid var(--pc-cream)}
+  .pc-thumb{width:76px;height:76px;border-radius:14px;background:var(--pc-cream);display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--pc-brown)}
+  .pc-thumb img{width:84%;height:84%;object-fit:contain}
+  .pc-thumb--gift img{width:100%;height:100%;object-fit:cover}
+  .pc-thumb svg{width:30px;height:30px}
+  .pc-item__mid{min-width:0}
+  .pc-item__name{display:block;font-size:14.5px;line-height:1.3;font-weight:600;color:var(--pc-ink);text-decoration:none}
+  .pc-item__var{display:block;margin-top:2px;font-size:12.5px;line-height:1.35;color:#6B6660}
+  .pc-item__disc{display:block;margin-top:4px;font-size:12px;color:var(--pc-brown);font-weight:500}
+  .pc-item__right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;position:relative}
+  .pc-item__price{font-size:15px;font-weight:600;white-space:nowrap}
+  .pc-item__was{font-size:12.5px;color:#9b948b;white-space:nowrap;margin-bottom:-6px}
+  .pc-free{font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--pc-brown)}
+  .pc-qty{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:3px;border-radius:99px;background:var(--pc-paper)}
+  .pc-drawer .pc-qty .quantity__button{width:26px;height:26px;min-width:0;padding:0;border:0;border-radius:99px;background:#fff;color:var(--pc-ink);display:flex;align-items:center;justify-content:center}
+  .pc-drawer .pc-qty .quantity__button svg{width:14px;height:14px}
+  .pc-drawer .pc-qty .quantity__input{width:22px;min-width:0;height:26px;padding:0;margin:0;border:0;background:transparent;text-align:center;font:600 14px/1 'Poppins',sans-serif;color:var(--pc-ink);opacity:1;-moz-appearance:textfield;appearance:textfield}
+  .pc-drawer .pc-qty .quantity__input::-webkit-outer-spin-button,.pc-drawer .pc-qty .quantity__input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .pc-remove{padding:0;border:0;background:none;color:#9b948b}
+  .pc-remove svg{width:18px;height:18px}
+  .pc-remove:hover{color:var(--pc-ink)}
+  .pc-chip{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border-radius:99px;background:var(--pc-ink);color:var(--pc-paper);font-size:11.5px;font-weight:600}
+  .pc-chip svg{width:14px;height:14px}
+  .pc-drawer .cart-item__error{margin-top:6px}
+  .pc-drawer .cart-item__error-text{font-size:12px;color:#b3261e}
+  .pc-drawer .cart-item__error-text:empty{display:none}
+  .pc-errors{font-size:13px;color:#b3261e;margin-top:8px}
+  .pc-errors:empty{display:none}
+  .pc-spin{position:absolute;inset:0;margin:auto;width:18px;height:18px;border-radius:99px;border:2px solid var(--pc-cream);border-top-color:var(--pc-brown);animation:pc-spin .7s linear infinite}
+  .pc-drawer .cart__items--disabled{opacity:.55;pointer-events:none}
+
+  .pc-label{margin:4px 4px -4px;font-size:12px;letter-spacing:.16em;font-weight:600;color:#6B6660;text-transform:uppercase}
+  .pc-card{background:#fff;border-radius:18px;padding:16px}
+  .pc-up{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center}
+  .pc-up .pc-up__icon{width:52px;height:52px;border-radius:12px;background:var(--pc-paper);color:var(--pc-brown);display:flex;align-items:center;justify-content:center}
+  .pc-up .pc-up__icon svg{width:26px;height:26px}
+  .pc-up b{display:block;font-size:14px;line-height:1.3;font-weight:600}
+  .pc-up span{display:block;font-size:12.5px;line-height:1.4;color:#6B6660}
+  .pc-up .pc-up__save{margin-top:3px;color:var(--pc-brown);font-weight:600}
+  .pc-up__btn{height:38px;padding:0 16px;border-radius:99px;border:1.5px solid var(--pc-brown);background:#fff;color:var(--pc-brown);font-size:13px;font-weight:600;white-space:nowrap;transition:background .2s ease,color .2s ease}
+  .pc-up__btn:hover{background:var(--pc-brown);color:var(--pc-paper)}
+  .pc-up__btn--soft{border-color:#d9d1c6;color:var(--pc-ink)}
+  .pc-up__btn--soft:hover{background:var(--pc-ink);border-color:var(--pc-ink);color:var(--pc-paper)}
+  .pc-drawer .is-loading{opacity:.55;pointer-events:none}
+  .pc-eta{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--pc-cream)}
+  .pc-eta > svg{width:20px;height:20px;color:var(--pc-brown)}
+  .pc-eta span{font-size:13px;color:#6B6660}
+  .pc-eta div > span:first-child{display:block}
+  .pc-eta b{font-size:14px;font-weight:600;color:var(--pc-ink)}
+  .pc-eta .pc-eta__note{margin-left:4px}
+  .pc-code{display:flex;gap:8px;margin:0}
+  .pc-code input{flex:1;min-width:0;height:46px;padding:0 18px;border:1px solid #d9d1c6;border-radius:99px;background:#fff;font:400 14px 'Poppins',sans-serif;color:var(--pc-ink);box-shadow:none;outline:none}
+  .pc-code input:focus{border-color:var(--pc-brown)}
+  .pc-code button{height:46px;padding:0 20px;border:0;border-radius:99px;background:var(--pc-ink);color:var(--pc-paper);font-size:14px;font-weight:600}
+  .pc-code__msg{margin:-6px 6px 0;font-size:12.5px;color:#b3261e}
+  .pc-codes{display:flex;flex-wrap:wrap;gap:8px;margin-top:-4px}
+  .pc-codes__chip{display:inline-flex;align-items:center;gap:6px;padding:5px 6px 5px 12px;border-radius:99px;background:var(--pc-cream);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  .pc-codes__chip button{width:20px;height:20px;padding:0;border:0;border-radius:99px;background:#fff;color:var(--pc-ink);display:flex;align-items:center;justify-content:center}
+  .pc-codes__chip svg{width:12px;height:12px}
+
+  .pc-drawer .drawer__footer.pc-foot{flex:none;position:relative;padding:18px 20px 20px;background:#fff;border-radius:28px 28px 0 0;box-shadow:0 -10px 30px -20px rgba(0,0,0,.25)}
+  .pc-row{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:#6B6660}
+  .pc-row--total{font-size:14px;color:var(--pc-ink)}
+  .pc-row--total b{font-size:20px;font-weight:600}
+  .pc-row--disc{color:var(--pc-brown);font-weight:500}
+  .pc-row + .pc-row{margin-top:4px}
+  .pc-checkout{width:100%;height:58px;margin:14px 0 12px;padding:0 20px;border:0;border-radius:99px;background:var(--pc-brown);color:var(--pc-paper);font-size:16.5px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .2s ease,box-shadow .2s ease}
+  .pc-checkout svg{width:18px;height:18px}
+  .pc-checkout:hover{transform:translateY(-1px);box-shadow:0 12px 26px -14px rgba(60,25,10,.6)}
+  .pc-pay{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0;padding:0;list-style:none}
+  .pc-pay li{margin:0;line-height:0}
+  .pc-pay__icon{width:38px;height:24px}
+  .pc-guarantee{margin-top:10px !important;text-align:center;font-size:12px;line-height:1.45;color:#6B6660}
+
+  .pc-empty{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%;padding:40px 28px;text-align:center}
+  .pc-close--dark{position:absolute;top:16px;right:16px;border-color:#d9d1c6;color:var(--pc-ink);background:#fff}
+  .pc-empty__icon{width:72px;height:72px;border-radius:99px;background:var(--pc-brown);color:var(--pc-paper);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+  .pc-empty__icon svg{width:30px;height:30px}
+  .pc-empty__title{font-size:22px;font-weight:600;letter-spacing:-.02em}
+  .pc-empty__text{font-size:14px;color:#6B6660}
+  .pc-empty__btn{margin-top:12px;display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 34px;border-radius:99px;background:var(--pc-brown);color:var(--pc-paper);font-size:16px;font-weight:600;text-decoration:none}
+  .pc-empty__btn:hover{color:var(--pc-paper)}
+
+  /* Blocs ajoutés par des apps (ex. Judge.me « Customers rate this store ») : masqués dans le panier */
+  .pc-empty{align-items:stretch}
+  .pc-empty .pc-empty__icon,.pc-empty .pc-empty__btn{align-self:center}
+  .pc-drawer [class*="jdgm"],.pc-drawer [id*="jdgm"],.pc-drawer [class*="judgeme"],.pc-drawer [id*="judgeme"],
+  .pc-scroll > :not(.pc-top):not(.pc-body),
+  .pc-body > :not([class*="pc-"]):not(cart-drawer-items),
+  .pc-drawer cart-drawer-items > :not(form),
+  .pc-drawer #CartDrawer-Form > :not(#CartDrawer-CartItems):not(#CartDrawer-CartErrors),
+  .pc-drawer #CartDrawer-CartItems > :not(.pc-items):not(#CartDrawer-LiveRegionText):not(#CartDrawer-LineItemStatus),
+  .pc-foot > :not([class*="pc-"]),
+  .pc-empty > :not([class*="pc-"]):not([id^="CartDrawer-"]){display:none !important}
+
+  @keyframes pc-spin{to{transform:rotate(360deg)}}
+  @media screen and (max-height:650px){.drawer__inner.pc-drawer{overflow:hidden}}
+  @media (prefers-reduced-motion:reduce){.pc-fill,.pc-checkout,.pc-up__btn{transition:none}}
+</style>

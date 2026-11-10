@@ -1,0 +1,139 @@
+{%- comment -%}
+  PLUSH — Upsell vers le pommeau, sur la page de la cartouche. Version « Liquid personnalisé ».
+
+  OÙ LE METTRE : modèle de produit « cartouche » > « Informations sur le produit »
+  > Ajouter un bloc > « Liquid personnalisé » > colle tout ce code > glisse le bloc
+  juste sous le bouton « Add to cart ».
+
+  CE QU'IL FAIT : propose le pommeau (le Duo par défaut) à qui achète une cartouche.
+  « Add to cart » l'ajoute au panier en 1 clic et ouvre le panier. Le prix vient tout seul
+  de ta fiche produit. Le bloc se cache si le pommeau est déjà dans le panier.
+
+  POUR MODIFIER : change seulement le texte entre les guillemets, juste en dessous.
+  - upsell_variant : 1 = la 1re variante de ta fiche (Duo), 2 = la 2e (Solo).
+  - card_image : Contenu > Fichiers > copier le lien. Vide = la 1re photo de la fiche.
+{%- endcomment -%}
+
+{%- liquid
+  assign base_handle = 'plush-filtered-showerhead'
+  assign upsell_variant = 1
+
+  assign kicker = "Don't have Plush yet?"
+  assign title = 'Plush Filtered Showerhead'
+  assign sub = 'Shower head + spare cartridge'
+  assign button = 'Add to cart'
+  assign details = 'See details'
+  assign note = 'This cartridge only fits the Plush shower head.'
+  assign card_image = 'https://cdn.shopify.com/s/files/1/1112/3618/6451/files/plush_product_images_-2.png?v=1792740329'
+
+  assign bp = all_products[base_handle]
+  assign vi = upsell_variant | minus: 1
+  assign bv = bp.variants[vi] | default: bp.selected_or_first_available_variant
+  assign uid = 'pu-' | append: product.id
+
+  assign in_cart = false
+  for item in cart.items
+    if item.product.handle == base_handle
+      assign in_cart = true
+    endif
+  endfor
+
+  if card_image != blank
+    if card_image contains '?'
+      assign img = card_image | append: '&width=240'
+    else
+      assign img = card_image | append: '?width=240'
+    endif
+  elsif bp.featured_image
+    assign img = bp.featured_image | image_url: width: 240
+  endif
+-%}
+
+{%- if bp and bv and bv.available and in_cart == false -%}
+<div id="{{ uid }}" class="pu">
+  <p class="pu-kicker">{{ kicker }}</p>
+  <div class="pu-card">
+    <a class="pu-im" href="{{ bp.url }}">{%- if img -%}<img src="{{ img }}" alt="{{ title | escape }}" width="80" height="69" loading="lazy">{%- endif -%}</a>
+    <div class="pu-info">
+      <a class="pu-t" href="{{ bp.url }}">{{ title }}</a>
+      <span class="pu-s">{{ sub }}</span>
+      <span class="pu-p">{{ bv.price | money }}{% if bv.compare_at_price > bv.price %}<s>{{ bv.compare_at_price | money }}</s>{% endif %}</span>
+    </div>
+    <div class="pu-act">
+      <button type="button" class="pu-btn" data-pk-add="{{ bv.id }}" data-label="{{ button | escape }}">{{ button }}</button>
+      <a class="pu-more" href="{{ bp.url }}">{{ details }}</a>
+    </div>
+  </div>
+  <p class="pu-note">{{ note }}</p>
+</div>
+
+<style>
+  #{{ uid }}{margin:18px 0 6px;color:#141414;font-family:'Poppins',sans-serif}
+  #{{ uid }} *{box-sizing:border-box}
+  #{{ uid }} .pu-kicker{margin:0 0 8px;color:#8A4524;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  #{{ uid }} .pu-card{display:grid;grid-template-columns:80px 1fr auto;gap:12px;align-items:center;padding:12px;border:1.5px solid #C9C2B8;border-radius:12px;background:#F6F2ED}
+  #{{ uid }} .pu-im{display:grid;place-items:center;width:80px;height:80px;border-radius:10px;background:#EFE7DA}
+  #{{ uid }} .pu-im img{width:68px;height:auto}
+  #{{ uid }} .pu-info{display:flex;flex-direction:column;min-width:0}
+  #{{ uid }} .pu-t{color:#141414;font-size:14.5px;font-weight:600;line-height:1.3;text-decoration:none}
+  #{{ uid }} .pu-s{margin-top:2px;color:#6B6660;font-size:12.5px;line-height:1.35}
+  #{{ uid }} .pu-p{margin-top:6px;color:#8A4524;font-size:15.5px;font-weight:700;line-height:1}
+  #{{ uid }} .pu-p s{margin-left:6px;color:#8F887F;font-size:12.5px;font-weight:400}
+  #{{ uid }} .pu-act{display:flex;flex-direction:column;align-items:center;gap:6px}
+  #{{ uid }} .pu-btn{min-width:108px;height:40px;padding:0 16px;border:0;border-radius:99px;background:#8A4524;color:#fff;font:600 13.5px/1 'Poppins',sans-serif;cursor:pointer;transition:background .2s}
+  #{{ uid }} .pu-btn:hover{background:#6B3A2A}
+  #{{ uid }} .pu-btn:disabled{cursor:default;opacity:.75}
+  #{{ uid }} .pu-btn.is-done{background:#2F6B3A;opacity:1}
+  #{{ uid }} .pu-more{color:#6B6660;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+  #{{ uid }} .pu-note{margin:8px 2px 0;color:#6B6660;font-size:12.5px;line-height:1.45}
+  @media (max-width:389px){
+    #{{ uid }} .pu-card{grid-template-columns:64px 1fr}
+    #{{ uid }} .pu-im{width:64px;height:64px}
+    #{{ uid }} .pu-im img{width:54px}
+    #{{ uid }} .pu-act{grid-column:1/-1;flex-direction:row;justify-content:space-between}
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('{{ uid }}');
+    if (!root) return;
+    var btn = root.querySelector('[data-pk-add]');
+    var base = (window.Shopify && Shopify.routes && Shopify.routes.root) || '/';
+    var fallback = {{ bp.url | json }};
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (btn.disabled) return;
+      btn.disabled = true;
+      btn.textContent = 'Adding…';
+      fetch(base + 'cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          items: [{ id: parseInt(btn.getAttribute('data-pk-add'), 10), quantity: 1 }],
+          sections: 'cart-drawer,cart-icon-bubble',
+          sections_url: window.location.pathname
+        })
+      }).then(function (r) { return r.json(); }).then(function (state) {
+        if (state.status && state.description) throw new Error(state.description);
+        var drawer = document.querySelector('cart-drawer');
+        if (drawer && drawer.renderContents && state.sections && state.sections['cart-drawer']) {
+          drawer.classList.remove('is-empty');
+          drawer.renderContents(state);
+          btn.classList.add('is-done');
+          btn.textContent = 'Added';
+          setTimeout(function () {
+            btn.disabled = false;
+            btn.classList.remove('is-done');
+            btn.textContent = btn.getAttribute('data-label');
+          }, 2500);
+        } else {
+          window.location.href = base + 'cart';
+        }
+      }).catch(function () {
+        window.location.href = fallback;
+      });
+    });
+  })();
+</script>
+{%- endif -%}

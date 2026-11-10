@@ -1,0 +1,539 @@
+{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .section-{{ section.id }}-margin {
+    padding-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-margin {
+      padding-top: {{ section.settings.margin_top }}px;
+      padding-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{% assign scheme1 = settings.color_schemes | first %}
+{%- comment -%}
+  La promo se termine à 23:59:59, heure de New York (EST, UTC-5), le jour choisi dans « Date ».
+  Après cette heure, le bandeau disparaît tout seul de la boutique (il reste visible dans l'éditeur).
+{%- endcomment -%}
+{%- assign end_at = section.settings.date | append: 'T23:59:59-05:00' -%}
+{%- assign end_ts = end_at | date: '%s' | plus: 0 -%}
+{%- assign now_ts = 'now' | date: '%s' | plus: 0 -%}
+
+{%- if now_ts < end_ts or request.design_mode -%}
+<div id="countdown-{{ section.id }}" class="section-{{ section.id }}-margin isolate{% if section.settings.layout == 'grid' %} page-width {% endif %}">
+  <div class="timer-wrapper content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="timer-width">
+      <span class="rte ct-text">
+        {{-
+          section.settings.message_main
+          | replace: '[', '<span class="lumin-text__fancy1">'
+          | replace: ']', '</span>'
+          | replace: '((', '<span class="lumin-text__fancy2">'
+          | replace: '))', '</span>'
+        }}
+      </span>
+      <span>
+        <div class="timer" id="timercount-1">
+          <div
+            class="count"
+            {% if section.settings.hide_days %}
+              style="display: none;"
+            {% endif %}
+          >
+            <span id="dayss" class="l-font-{{ section.settings.number_size }}">--</span>
+            <span class="timer-clock">{{ section.settings.timer_days }}</span>
+          </div>
+          <div class="">
+            <span
+              class="l-font-{{ section.settings.number_size }}"
+              {% if section.settings.hide_days %}
+                style="display: none;"
+              {% endif %}
+              >:</span
+            >
+          </div>
+          <div class="count">
+            <span id="hourss" class="l-font-{{ section.settings.number_size }}">--</span>
+            <span class="timer-clock">{{ section.settings.timer_hrs }}</span>
+          </div>
+          <div style="color:rgba(var(--color-foreground));" class=""><span class="l-font-{{ section.settings.number_size }}">:</span></div>
+          <div class="count">
+            <span id="minutess" class="l-font-{{ section.settings.number_size }}">--</span>
+            <span class="timer-clock">{{ section.settings.timer_min }}</span>
+          </div>
+          <div style="color:rgba(var(--color-foreground));" class=""><span class="l-font-{{ section.settings.number_size }}">:</span></div>
+          <div class="count">
+            <span id="secondss" class="l-font-{{ section.settings.number_size }}">--</span>
+            <span class="timer-clock">{{ section.settings.timer_sec }}</span>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    // Fin de la promo : {{ end_at }} (heure de New York)
+    var finalDate = new Date('{{ end_at }}');
+    var hideDays = {{ section.settings.hide_days | json }};
+    var box = document.getElementById('countdown-{{ section.id }}');
+
+    function pad(value) {
+      return value < 10 ? '0' + value : '' + value;
+    }
+    function set(id, value) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = value;
+    }
+
+    function updatetimercount1() {
+      var timeDifference = finalDate - new Date();
+
+      if (timeDifference > 0) {
+        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        // Jours cachés : les heures comptent tout (ex. 75:12:04 au lieu de 03:12:04)
+        if (hideDays) hours = Math.floor(timeDifference / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        set('dayss', pad(days));
+        set('hourss', pad(hours));
+        set('minutess', pad(minutes));
+        set('secondss', pad(seconds));
+
+        setTimeout(updatetimercount1, 1000);
+      } else if (box && !{{ request.design_mode | json }}) {
+        // La promo est terminée : le bandeau disparaît
+        box.style.display = 'none';
+      }
+    }
+
+    updatetimercount1();
+  })();
+</script>
+{%- endif -%}
+
+
+<style>
+    .timer-wrapper  {
+      {% if section.settings.layout == 'grid' %}
+        border-radius:{{ section.settings.video_border }}px;
+      {% endif %}
+      {% if section.settings.show_border %}
+        border:1px solid {{ section.settings.timer_border }};
+      {% endif %}
+       {% unless section.settings.layout == 'grid' %}
+        border-left:none; border-right:none;border-radius:0;
+      {% endunless %}
+
+    }
+
+    .timer-width {
+      max-width: {{section.settings.max_width}}px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      line-height: 1.1;
+      align-items: center;
+      padding-left: 40px;
+      padding-right: 40px;
+      row-gap:10px;
+      column-gap: 5px;
+    }
+
+    @media screen and (max-width: 740px) {
+    .timer-width {
+      flex-direction: row;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+      .ct-text{
+      text-align:{{ section.settings.text_layout }};
+      align-items:{{ section.settings.text_layout }};
+     /* width: calc(50% - 20px);*/
+      font-size: {{section.settings.timer_text_size}}px;
+      display: flex;
+      row-gap: 10px;
+  }
+
+    @media screen and (max-width: 740px){
+       .ct-text {
+      text-align:{{ section.settings.text_layout_mb }};
+      align-items:{{ section.settings.text_layout_mb }};
+      font-size: {{section.settings.timer_text_size_mb}}px;
+  }
+    }
+
+     .ct-text h1, .ct-text h2, .ct-text h3, .ct-text p, .ct-text h4, .ct-text h5, .ct-text h6  {
+      margin: 0;
+  }
+   .timer-clock {
+      font-size: 10px;
+      font-weight: bold;
+  }
+
+     .timer {
+      display: flex;
+      align-items: center;
+      color:{{section.settings.timer_color}};
+      flex-direction: row;
+      column-gap: 2px;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      zoom:{{section.settings.timer_size}};
+      min-width: max-content;
+  }
+      @media screen and (max-width: 740px){
+      .timer {
+       column-gap: 6px;
+        zoom:{{section.settings.timer_size_mb}};
+    }
+      }
+
+    .count {
+      display: flex;
+      background: {{section.settings.timer_bg}};
+      {% if section.settings.head_font %} font-family: var(--font-heading-family);{% endif %}
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.1rem 0.6rem;
+      border-radius: 2px;
+      line-height: 1.1;
+  }
+  .l-font-small {
+      font-size: 16px;
+      font-weight: {{section.settings.font_style}};
+  }
+    .l-font-medium {
+      font-size: 24px;
+      font-weight: {{section.settings.font_style}};
+  }
+    .l-font-large {
+      font-size: 40px;
+      font-weight: {{section.settings.font_style}};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Countdown Timer",
+     "enabled_on": {
+  "groups": ["header"]
+   },
+    "limit": 1,
+    "settings": [
+      {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "background-1"
+        },
+           {
+    "type": "select",
+    "id": "layout",
+    "options": [
+      {
+        "value": "full_bleed",
+        "label": "Full Width"
+      },
+      {
+        "value": "grid",
+        "label": "Grid"
+      }
+    ],
+    "default": "full_bleed",
+    "label": "Layout"
+  },
+      {
+    "type": "range",
+    "id": "max_width",
+    "min": 580,
+    "max": 1600,
+    "step": 20,
+    "unit": "px",
+    "label": "Container Width",
+    "default": 600,
+    "info": "Work on grid layout only"
+  },
+            {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Show Border",
+      "default": false
+    },
+      {
+        "type": "color",
+        "id": "timer_border",
+        "label": "Border Color",
+        "default": "#eeeeee"
+      },
+    {
+    "type": "range",
+    "id": "video_border",
+    "min": 0,
+    "max": 100,
+    "step": 2,
+    "unit": "px",
+    "label": "Corner Radius",
+    "default": 0,
+    "info": "Work on grid layout only"
+  },
+      {
+          "type": "richtext",
+          "id": "message_main",
+          "label": "Massage",
+          "info": "timercount Massage",
+          "default": "<p>Our Sale Ends In</p>"
+        },
+       {
+          "type": "range",
+          "id": "timer_text_size",
+          "min": 8,
+          "max": 30,
+          "step": 1,
+          "label": "Text Size on Desktop",
+          "default": 15
+        },
+      {
+          "type": "range",
+          "id": "timer_text_size_mb",
+          "min": 8,
+          "max": 30,
+          "step": 1,
+          "label": "Text Size on Mobile",
+          "default": 14
+        },
+              {
+    "type": "select",
+    "id": "text_layout",
+    "info": "Desktop Text Alignment",
+    "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      }
+    ],
+    "default": "left",
+    "label": "Left"
+  },
+                 {
+    "type": "select",
+    "id": "text_layout_mb",
+    "info": "Mobile Text Alignment",
+    "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      }
+    ],
+    "default": "center",
+    "label": "Center"
+  },
+      {
+        "type": "header",
+        "content": "Timer"
+      },
+         {
+          "type": "text",
+          "id": "date",
+          "default": "2026-11-13",
+          "label": "t:sections.countdown.settings.date.label",
+          "info": "Format: yyyy-mm-dd. Ends at 11:59 PM New York time, then the bar disappears."
+        },
+        {
+          "type": "select",
+          "id": "number_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "t:sections.countdown.settings.number_size.options__1.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.countdown.settings.number_size.options__2.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.countdown.settings.number_size.options__3.label"
+            }
+          ],
+          "default": "small",
+          "label": "t:sections.countdown.settings.number_size.label"
+        },
+          {
+        "type": "select",
+        "id": "font_style",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "bold",
+            "label": "Bold"
+          }
+        ],
+        "default": "normal",
+        "label": "Font Style"
+      },
+          {
+          "type": "range",
+          "id": "timer_size",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "label": "Timer Size on Desktop",
+          "default": 1
+        },
+      {
+          "type": "range",
+          "id": "timer_size_mb",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.1,
+          "label": "Timer Size on Mobile",
+          "default": 0.8
+        },
+      {
+          "type": "text",
+          "id": "timer_days",
+          "label": "Days text"
+        },
+      {
+        "type": "checkbox",
+        "id": "hide_days",
+        "label": "Hide Days",
+        "default": false
+      },
+        {
+          "type": "text",
+          "id": "timer_hrs",
+          "label": "Hours text"
+        },
+        {
+          "type": "text",
+          "id": "timer_min",
+          "label": "Minutes text"
+        },
+        {
+          "type": "text",
+          "id": "timer_sec",
+          "label": "Seconds text"
+        },
+       {
+        "type": "checkbox",
+        "id": "head_font",
+        "label": "Use Heading Fonts",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "timer_color",
+        "label": "timercount Color",
+        "default": "#212121"
+      },
+      {
+        "type": "color",
+        "id": "timer_bg",
+        "label": "timercount Background",
+        "default": "#ffffff"
+      },
+        {
+          "type": "richtext",
+          "id": "message",
+          "default": "<p>Sale is end!</p>",
+          "label": "t:sections.countdown.settings.message.label",
+          "info": "Not used anymore: the bar now disappears when the sale ends."
+        },
+        {
+    "type":      "range",
+    "id":        "message_size",
+    "min":       10,
+    "max":        50,
+    "step":       1,
+    "unit":       "px",
+    "label": "t:sections.countdown.settings.message_size.label",
+    "default":   20
+},
+      {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "Padding Top",
+    "default": 8
+  },
+  {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "Padding Bottom",
+    "default": 8
+  },
+    {
+    "type": "range",
+    "id": "margin_top",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "Margin Top",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "margin_bottom",
+    "min": 0,
+    "max": 100,
+    "step": 4,
+    "unit": "px",
+    "label": "Margin Bottom",
+    "default": 0
+  }
+      ],
+     "presets": [
+    {
+      "name": "Countdown Timer"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

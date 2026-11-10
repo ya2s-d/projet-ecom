@@ -1,0 +1,460 @@
+{%- comment -%}
+  ============================================================
+  PLUSH — Sélecteur de bundle + cadeaux offerts
+  À placer sous le titre, au-dessus du bouton « Ajouter au panier ».
+
+  OÙ MODIFIER LES TEXTES ET LES IMAGES
+  Admin Shopify > Contenu > Métaobjets > Plush bundle > main.
+  Chaque champ y a son nom (Pack 1 — Titre, Cadeau 1 — Image…).
+
+  AFFICHAGE : un bloc « Liquid personnalisé » dans la fiche produit,
+  placé sous le titre, contenant :
+  {% render 'plush-bundle', product: product %}
+  Le sélecteur de variantes du thème est masqué et piloté par les
+  cartes (prix, panier, URL).
+
+  CHAQUE CARTE = UNE VARIANTE DU PRODUIT, dans l'ordre de l'admin.
+  Carte 1 = 1re variante, carte 2 = 2e variante, carte 3 = 3e.
+
+  Sans métaobjet, les textes peuvent aussi être passés en
+  paramètres du {% render %} (o1_title, g1_label…).
+  Promo : « LAUNCH OFFER • SAVE 15% » → la partie après « • »
+  s'affiche en surbrillance.
+  ============================================================
+{%- endcomment -%}
+
+{%- liquid
+  # Contenu modifiable dans l'admin : Contenu > Métaobjets > Plush bundle > main.
+  # S'il existe, il remplace les paramètres passés au render.
+  assign pb = shop.metaobjects.plush_bundle.main
+  if pb
+    assign selected = pb.selected.value
+    assign o1_title = pb.o1_title.value
+    assign o1_tag = pb.o1_tag.value
+    assign o1_includes = pb.o1_includes.value
+    assign o1_promo = pb.o1_promo.value
+    assign o1_note = pb.o1_note.value
+    assign o2_title = pb.o2_title.value
+    assign o2_tag = pb.o2_tag.value
+    assign o2_includes = pb.o2_includes.value
+    assign o2_promo = pb.o2_promo.value
+    assign o2_note = pb.o2_note.value
+    assign o3_title = pb.o3_title.value
+    assign o3_tag = pb.o3_tag.value
+    assign o3_includes = pb.o3_includes.value
+    assign o3_promo = pb.o3_promo.value
+    assign o3_note = pb.o3_note.value
+    assign gifts_title = pb.gifts_title.value
+    assign gifts_title_rest = pb.gifts_title_rest.value
+    assign gifts_badge = pb.gifts_badge.value
+    assign g1_label = pb.g1_label.value
+    assign g1_image = pb.g1_image.value
+    assign g1_value = pb.g1_value.value
+    assign g2_label = pb.g2_label.value
+    assign g2_image = pb.g2_image.value
+    assign g2_value = pb.g2_value.value
+    assign g3_label = pb.g3_label.value
+    assign g3_image = pb.g3_image.value
+    assign g3_value = pb.g3_value.value
+    assign g4_label = pb.g4_label.value
+    assign g4_image = pb.g4_image.value
+    assign g4_value = pb.g4_value.value
+    assign color_title = pb.color_title.value
+    assign color_name = pb.color_name.value
+    assign color_image = pb.color_image.value
+    assign accent = pb.accent.value
+    assign highlight = pb.highlight.value
+  endif
+
+  assign uid = 'pb-' | append: product.id
+  assign sel = selected | default: 1
+  assign count = options | default: product.variants.size
+  if count > 3
+    assign count = 3
+  endif
+
+  assign c_accent = accent | default: '#8A4524'
+  assign c_ink = ink | default: '#141414'
+  assign c_card = card | default: '#F6F2ED'
+  assign c_line = line | default: '#C9C2B8'
+  assign c_muted = muted | default: '#6B6660'
+  assign c_light = light | default: '#EFE7DA'
+  assign c_hl = highlight | default: '#FFD9B8'
+
+  assign color_name = color_name | default: ''
+  assign color_image = color_image | default: ''
+  assign c_title = color_title | default: 'CHOOSE YOUR COLOR'
+
+  assign g_title = gifts_title | default: 'FREE GIFTS'
+  assign g_title_rest = gifts_title_rest | default: 'With Your Order'
+
+  assign g1_label = g1_label | default: ''
+  assign g2_label = g2_label | default: ''
+  assign g3_label = g3_label | default: ''
+  assign g4_label = g4_label | default: ''
+
+  assign gcount = 0
+  if g1_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+  if g2_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+  if g3_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+  if g4_label != blank
+    assign gcount = gcount | plus: 1
+  endif
+-%}
+
+{%- comment -%} Icônes de la marque (trait Rust, 24×24) {%- endcomment -%}
+{%- capture ic_head -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7a4 4 0 0 1 4 4"/><path d="M8 13a6 6 0 0 1 12 0z"/><path d="M10 16v1.5M14 16v2.5M18 16v1.5"/></svg>{%- endcapture -%}
+{%- capture ic_filter -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="3"/><path d="M7 8h10M7 16h10"/></svg>{%- endcapture -%}
+{%- capture ic_check -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{%- endcapture -%}
+{%- capture ic_truck -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11.5v10H2.5zM14 10h4.2l3.3 3.4v3.1H14"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17.5" cy="17.5" r="1.9"/></svg>{%- endcapture -%}
+{%- capture ic_book -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C9.8 5 6.8 4.5 3 5v13.5c3.8-.5 6.8 0 9 1.5 2.2-1.5 5.2-2 9-1.5V5c-3.8-.5-6.8 0-9 1.5z"/><path d="M12 6.5V20"/></svg>{%- endcapture -%}
+{%- capture ic_tag -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V3.5h8.5L21 13l-8 8z"/><circle cx="7.5" cy="8" r="1.6"/></svg>{%- endcapture -%}
+{%- capture ic_gift -%}<svg class="pb-gic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9C10.5 5 6 5 6 7.5S12 9 12 9zM12 9c1.5-4 6-4 6-1.5S12 9 12 9z"/></svg>{%- endcapture -%}
+{%- capture ic_head_big -%}<svg class="pb-cic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7a4 4 0 0 1 4 4"/><path d="M8 13a6 6 0 0 1 12 0z"/><path d="M10 16v1.5M14 16v2.5M18 16v1.5"/></svg>{%- endcapture -%}
+{%- capture ic_cycle -%}<svg class="pb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>{%- endcapture -%}
+
+<div
+  id="{{ uid }}"
+  class="pb"
+  data-selected="{{ sel }}"
+  style="--pb-accent:{{ c_accent }};--pb-ink:{{ c_ink }};--pb-card:{{ c_card }};--pb-line:{{ c_line }};--pb-muted:{{ c_muted }};--pb-light:{{ c_light }};--pb-hl:{{ c_hl }};--pb-cols:{{ gcount | at_least: 1 }};"
+>
+  {%- if color_name != blank -%}
+    <div class="pb-ctitle"><span>{{ c_title }}</span></div>
+    <div class="pb-colors">
+      <div class="pb-color is-on">
+        <div class="pb-cbox">
+          {%- if color_image != blank -%}
+            {%- if color_image.id -%}
+              {%- assign c_src = color_image | image_url: width: 300 -%}
+            {%- else -%}
+              {%- assign c_src = color_image -%}
+            {%- endif -%}
+            <img src="{{ c_src }}" alt="{{ color_name | escape }}" loading="lazy" width="150" height="60">
+          {%- else -%}
+            {{ ic_head_big }}
+          {%- endif -%}
+          <span class="pb-ccheck" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4L18 8.5"/></svg></span>
+        </div>
+        <span class="pb-clabel">{{ color_name }}</span>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="pb-opts" role="radiogroup">
+    {%- for i in (1..3) -%}
+      {%- liquid
+        assign vi = i | minus: 1
+        assign v = product.variants[vi]
+        case i
+          when 1
+            assign o_title = o1_title | default: ''
+            assign o_tag = o1_tag | default: ''
+            assign o_inc = o1_includes | default: ''
+            assign o_promo = o1_promo | default: ''
+            assign o_note = o1_note | default: ''
+          when 2
+            assign o_title = o2_title | default: ''
+            assign o_tag = o2_tag | default: ''
+            assign o_inc = o2_includes | default: ''
+            assign o_promo = o2_promo | default: ''
+            assign o_note = o2_note | default: ''
+          when 3
+            assign o_title = o3_title | default: ''
+            assign o_tag = o3_tag | default: ''
+            assign o_inc = o3_includes | default: ''
+            assign o_promo = o3_promo | default: ''
+            assign o_note = o3_note | default: ''
+        endcase
+      -%}
+      {%- if i <= count and v -%}
+        <label class="pb-opt{% if i == sel %} is-on{% endif %}{% unless v.available %} is-out{% endunless %}" data-variant="{{ v.id }}" data-i="{{ i }}" data-options="{{ v.options | json | escape }}">
+          <input
+            type="radio"
+            name="{{ uid }}-opt"
+            value="{{ v.id }}"
+            {% if i == sel %}checked{% endif %}
+            {% unless v.available %}disabled{% endunless %}
+          >
+          {%- if o_tag != blank -%}<span class="pb-pill">{{ o_tag }}</span>{%- endif -%}
+          <span class="pb-head">
+            <span class="pb-dot" aria-hidden="true"></span>
+            <span class="pb-name">
+              <span class="pb-title">{{ o_title | default: v.title }}</span>
+              {%- unless v.available -%}<span class="pb-soldout">Sold out</span>{%- endunless -%}
+            </span>
+            <span class="pb-price">
+              <span class="pb-now">{{ v.price | money }}</span>
+              {%- if v.compare_at_price > v.price -%}
+                <s class="pb-was">{{ v.compare_at_price | money }}</s>
+              {%- endif -%}
+            </span>
+          </span>
+
+          {%- if o_inc != blank -%}
+            {%- comment -%} « Includes: Shower head + 2 filters » devient des pastilles avec icône {%- endcomment -%}
+            {%- assign inc = o_inc | remove: 'Includes:' | strip -%}
+            {%- assign items = inc | split: ' + ' -%}
+            <span class="pb-chips">
+              {%- for it in items -%}
+                {%- assign low = it | downcase -%}
+                {%- if forloop.index > 1 -%}<span class="pb-plus" aria-hidden="true">+</span>{%- endif -%}
+                <span class="pb-chip">
+                  {%- if low contains 'head' -%}{{ ic_head }}{%- elsif low contains 'filter' or low contains 'cartridge' -%}{{ ic_filter }}{%- else -%}{{ ic_check }}{%- endif -%}
+                  <span>{{ it | strip }}</span>
+                </span>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+
+          {%- if o_promo != blank or o_note != blank -%}
+            <span class="pb-more">
+              {%- if o_promo != blank -%}
+                {%- assign parts = o_promo | split: ' • ' -%}
+                <span class="pb-promo">
+                  <span>
+                    {{- parts[0] -}}
+                    {%- if parts.size > 1 %} • <b class="pb-hl">{{ parts[1] }}</b>{%- endif -%}
+                  </span>
+                </span>
+              {%- endif -%}
+              {%- if o_note != blank -%}
+                <span class="pb-note">{{ ic_cycle }}<span>{{ o_note }}</span></span>
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+        </label>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- if gcount > 0 -%}
+    <div class="pb-gtitle"><span><b>{{ g_title }}</b> {{ g_title_rest }}</span></div>
+    <div class="pb-gifts">
+      {%- for i in (1..4) -%}
+        {%- liquid
+          case i
+            when 1
+              assign g_label = g1_label | default: ''
+              assign g_img = g1_image | default: ''
+              assign g_badge = g1_badge | default: ''
+              assign g_value = g1_value | default: ''
+            when 2
+              assign g_label = g2_label | default: ''
+              assign g_img = g2_image | default: ''
+              assign g_badge = g2_badge | default: ''
+              assign g_value = g2_value | default: ''
+            when 3
+              assign g_label = g3_label | default: ''
+              assign g_img = g3_image | default: ''
+              assign g_badge = g3_badge | default: ''
+              assign g_value = g3_value | default: ''
+            when 4
+              assign g_label = g4_label | default: ''
+              assign g_img = g4_image | default: ''
+              assign g_badge = g4_badge | default: ''
+              assign g_value = g4_value | default: ''
+          endcase
+        -%}
+        {%- if g_label != blank -%}
+          <div class="pb-gift">
+            <div class="pb-gbox">
+              <span class="pb-gbadge">
+                {{- g_badge | default: gifts_badge | default: 'FREE' -}}
+                {%- if g_value != blank %} <s>{{ g_value }}</s>{%- endif -%}
+              </span>
+              {%- if g_img != blank -%}
+                {%- comment -%} Image choisie dans l'admin (objet) ou lien collé (texte) {%- endcomment -%}
+                {%- if g_img.id -%}
+                  {%- assign g_src = g_img | image_url: width: 400 -%}
+                {%- else -%}
+                  {%- assign g_src = g_img -%}
+                {%- endif -%}
+                <img src="{{ g_src }}" alt="{{ g_label | escape }}" loading="lazy" width="300" height="300">
+              {%- else -%}
+                {%- comment -%} Pas d'image choisie : icône de la marque selon le nom du cadeau {%- endcomment -%}
+                {%- assign gl = g_label | downcase -%}
+                {%- if gl contains 'ship' or gl contains 'deliver' -%}{{ ic_truck }}
+                {%- elsif gl contains 'book' or gl contains 'guide' -%}{{ ic_book }}
+                {%- elsif gl contains 'discount' or gl contains 'off' or gl contains '%' -%}{{ ic_tag }}
+                {%- else -%}{{ ic_gift }}{%- endif -%}
+              {%- endif -%}
+            </div>
+            <span class="pb-glabel">{{ g_label }}</span>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  {%- comment -%} Le sélecteur du thème reste dans la page (il pilote le prix et le panier) mais il est masqué : les cartes le remplacent. {%- endcomment -%}
+  variant-radios[data-url="{{ product.url }}"],
+  variant-selects[data-url="{{ product.url }}"]{display:none!important}
+  {%- comment -%} ESPACEMENTS — pour rapprocher ou éloigner les blocs, change seulement ces deux chiffres (en px) {%- endcomment -%}
+  #{{ uid }}{--pb-space-color:10px;--pb-space-gifts:16px}
+  #{{ uid }}{margin:16px 0 20px;color:var(--pb-ink);font:inherit;container-type:inline-size}
+  #{{ uid }} *{box-sizing:border-box}
+  #{{ uid }} .pb-opts{display:flex;flex-direction:column;gap:18px;padding-top:10px}
+  #{{ uid }} .pb-opt{position:relative;display:block;cursor:pointer;border:1.5px solid var(--pb-line);border-radius:12px;padding:16px 14px 14px;background:transparent;transition:border-color .15s,background-color .15s}
+  #{{ uid }} .pb-opt.is-on{border-color:var(--pb-ink);background:var(--pb-card);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+  #{{ uid }} .pb-opt.is-out{cursor:not-allowed;opacity:.5}
+  #{{ uid }} .pb-opt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+  #{{ uid }} .pb-opt:has(input:focus-visible){outline:2px solid var(--pb-accent);outline-offset:2px}
+  #{{ uid }} .pb-head{display:flex;align-items:center;gap:12px}
+  #{{ uid }} .pb-dot{flex:0 0 22px;height:22px;border-radius:50%;border:2px solid var(--pb-line);background:#fff;position:relative}
+  #{{ uid }} .is-on .pb-dot{border-color:var(--pb-ink);background:var(--pb-ink)}
+  #{{ uid }} .is-on .pb-dot::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--pb-light)}
+  #{{ uid }} .pb-name{flex:1;display:flex;flex-direction:column;min-width:0}
+  #{{ uid }} .pb-title{font-weight:600;font-size:16px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-title{color:var(--pb-muted)}
+  #{{ uid }} .pb-pill{position:absolute;top:0;left:18px;transform:translateY(-50%);background:var(--pb-accent);color:var(--pb-light);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1;padding:6px 11px;border-radius:999px;box-shadow:0 2px 6px rgba(138,69,36,.25)}
+  #{{ uid }} .pb-soldout{font-weight:600;font-size:13px;color:var(--pb-muted);margin-top:2px}
+  #{{ uid }} .pb-price{display:flex;flex-direction:column;align-items:flex-end;text-align:right;line-height:1.2}
+  #{{ uid }} .pb-now{font-weight:700;font-size:17px;color:var(--pb-accent)}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-now{color:var(--pb-muted);font-weight:600}
+  #{{ uid }} .pb-was{font-size:13px;color:var(--pb-muted);margin-top:2px}
+  #{{ uid }} .pb-chips{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:10px;padding-left:34px}
+  #{{ uid }} .pb-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px 4px 6px;border-radius:999px;background:#fff;border:1px solid var(--pb-line);font-size:12px;font-size:clamp(10.5px,3.6cqi,12.5px);font-weight:600;line-height:1.2;white-space:nowrap}
+  #{{ uid }} .pb-plus{font-weight:700;color:var(--pb-accent)}
+  #{{ uid }} .pb-ic{width:15px;height:15px;flex:0 0 15px;fill:none;stroke:var(--pb-accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-chip{background:transparent;color:var(--pb-muted)}
+  #{{ uid }} .pb-more{display:block}
+  #{{ uid }} .pb-opt:not(.is-on) .pb-more{display:none}
+  #{{ uid }} .pb-promo{position:relative;overflow:hidden;display:flex;align-items:center;gap:6px;margin-top:12px;padding:9px 12px;border-radius:8px;background:var(--pb-accent);color:var(--pb-light);font-weight:700;font-size:12px;font-size:clamp(10.5px,3.9cqi,13px);letter-spacing:0;line-height:1.3;text-transform:uppercase}
+  #{{ uid }} .pb-promo::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);animation:pbShine 3.8s ease-in-out infinite}
+  @keyframes pbShine{0%,55%{left:-60%}100%{left:130%}}
+  @media (prefers-reduced-motion:reduce){#{{ uid }} .pb-promo::after{display:none}}
+  #{{ uid }} .pb-check{flex:0 0 20px;width:20px;height:20px}
+  #{{ uid }} .pb-check circle{fill:var(--pb-hl)}
+  #{{ uid }} .pb-check path{fill:none;stroke:var(--pb-accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-hl{color:var(--pb-hl)}
+  #{{ uid }} .pb-note{display:flex;align-items:flex-start;gap:8px;margin-top:10px;font-size:13px;line-height:1.45;color:var(--pb-muted)}
+  #{{ uid }} .pb-note .pb-ic{margin-top:1px}
+
+  #{{ uid }} .pb-ctitle{display:flex;align-items:center;gap:12px;margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--pb-muted);text-align:center}
+  #{{ uid }} .pb-ctitle::before,#{{ uid }} .pb-ctitle::after{content:"";flex:1;height:1.5px;background:var(--pb-line)}
+  #{{ uid }} .pb-colors{display:flex;justify-content:center;gap:10px;margin-bottom:var(--pb-space-color)}
+  #{{ uid }} .pb-color{display:flex;flex-direction:column;align-items:center;width:52%;max-width:210px}
+  #{{ uid }} .pb-cbox{position:relative;width:100%;aspect-ratio:5/2;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:flex-start;padding:4px 8px;background:linear-gradient(120deg,#f6f6f7 0%,#c7cad0 38%,#fbfbfb 58%,#aeb3ba 82%,#e4e6e9 100%);border:1.5px solid var(--pb-ink)}
+  #{{ uid }} .pb-cbox img{height:100%;width:auto;max-width:70%;object-fit:contain;display:block}
+  #{{ uid }} .pb-cic{height:78%;width:auto;fill:none;stroke:#3b3f45;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-ccheck{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;background:var(--pb-accent);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+  #{{ uid }} .pb-ccheck svg{width:13px;height:13px;fill:none;stroke:var(--pb-light);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  #{{ uid }} .pb-clabel{margin-top:6px;font-size:13px;font-weight:600}
+
+  #{{ uid }} .pb-gtitle{display:flex;align-items:center;gap:12px;margin:var(--pb-space-gifts) 0 14px;font-size:14px;color:var(--pb-accent);text-align:center}
+  #{{ uid }} .pb-gtitle::before,#{{ uid }} .pb-gtitle::after{content:"";flex:1;height:1.5px;background:var(--pb-accent)}
+  #{{ uid }} .pb-gtitle b{font-weight:700}
+  #{{ uid }} .pb-gifts{display:grid;grid-template-columns:repeat(var(--pb-cols),minmax(0,1fr));gap:10px}
+  #{{ uid }} .pb-gift{display:flex;flex-direction:column;align-items:stretch;text-align:center;min-width:0}
+  #{{ uid }} .pb-gbox{position:relative;width:100%;aspect-ratio:1/1;border:1.5px dashed var(--pb-accent);border-radius:10px;background:var(--pb-card);display:flex;align-items:center;justify-content:center;padding:10px;margin-top:9px}
+  #{{ uid }} .pb-gbox img{position:absolute;inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);object-fit:contain;display:block}
+  #{{ uid }} .pb-gbadge{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);white-space:nowrap;background:var(--pb-accent);color:var(--pb-light);font-size:11px;font-weight:700;letter-spacing:.06em;line-height:1;padding:5px 9px;border-radius:999px;box-shadow:0 2px 6px rgba(138,69,36,.25)}
+  #{{ uid }} .pb-gbadge s{opacity:.75;font-weight:600;margin-left:2px}
+  #{{ uid }} .pb-gic{width:46%;height:46%;fill:none;stroke:var(--pb-accent);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  {%- comment -%} Les 3 textes ont la même hauteur (2 lignes réservées) et partent du même point : ils restent alignés même si un nom est plus court {%- endcomment -%}
+  #{{ uid }} .pb-glabel{display:block;margin-top:8px;min-height:2.6em;font-size:13px;font-size:clamp(11px,3.5cqi,13px);font-weight:600;line-height:1.3;text-wrap:balance;overflow-wrap:break-word}
+  @media (max-width:380px){
+    #{{ uid }} .pb-gifts{gap:7px}
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('{{ uid }}');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = '1';
+
+    var cards = root.querySelectorAll('.pb-opt');
+    var ids = [];
+    cards.forEach(function (c) { ids.push(c.dataset.variant); });
+    {%- comment -%} Tous les ID de variantes du produit, pour ne viser que ses formulaires {%- endcomment -%}
+    var productIds = [{% for v in product.variants %}'{{ v.id }}'{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+    var section = root.closest('.shopify-section');
+    var optNames = {{ product.options | json }};
+    var productUrl = {{ product.url | json }};
+
+    // Sélectionne la même variante dans le sélecteur du thème (variant-radios / variant-selects),
+    // pour que le thème mette lui-même à jour le prix, l'URL et le formulaire d'achat.
+    function syncPicker(values) {
+      var pickers = (section || document).querySelectorAll('variant-radios, variant-selects');
+      var picker = null;
+      pickers.forEach(function (p) { if (!picker && p.dataset.url === productUrl) picker = p; });
+      if (!picker) return false;
+      var last = null;
+      values.forEach(function (val, i) {
+        var name = optNames[i];
+        picker.querySelectorAll('input[type="radio"]').forEach(function (r) {
+          if (r.name === name && r.value === val && !r.checked) { r.checked = true; last = r; }
+        });
+        picker.querySelectorAll('select').forEach(function (s) {
+          if (s.name === 'options[' + name + ']' && s.value !== val) { s.value = val; last = s; }
+        });
+      });
+      if (last) last.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    }
+
+    function targets() {
+      var out = [];
+      document.querySelectorAll('form[action*="/cart/add"] [name="id"]').forEach(function (el) {
+        var mine = productIds.indexOf(String(el.value)) !== -1;
+        var sameSection = section && el.closest('.shopify-section') === section;
+        if (mine || sameSection) out.push(el);
+      });
+      return out;
+    }
+
+    function apply(card) {
+      if (!card || card.classList.contains('is-out')) return;
+      cards.forEach(function (c) {
+        var on = c === card;
+        c.classList.toggle('is-on', on);
+        c.querySelector('input').checked = on;
+      });
+      var id = card.dataset.variant;
+      try { syncPicker(JSON.parse(card.dataset.options || '[]')); } catch (e) {}
+      targets().forEach(function (el) {
+        if (el.tagName === 'SELECT' && !el.querySelector('option[value="' + id + '"]')) return;
+        el.value = id;
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      try {
+        var url = new URL(window.location.href);
+        url.searchParams.set('variant', id);
+        window.history.replaceState({}, '', url.toString());
+      } catch (e) {}
+    }
+
+    cards.forEach(function (c) {
+      c.addEventListener('click', function (e) {
+        if (e.target.tagName === 'INPUT') return; // clavier : laisser le radio changer seul
+        e.preventDefault();
+        apply(c);
+      });
+      c.querySelector('input').addEventListener('change', function () { apply(c); });
+    });
+
+    // Le formulaire « Ajouter au panier » est plus bas dans la page :
+    // on attend qu'il existe avant de forcer la variante par défaut.
+    function init() {
+      var fromUrl = null;
+      try { fromUrl = new URL(window.location.href).searchParams.get('variant'); } catch (e) {}
+      var start = (fromUrl && ids.indexOf(fromUrl) !== -1)
+        ? root.querySelector('.pb-opt[data-variant="' + fromUrl + '"]')
+        : root.querySelector('.pb-opt[data-i="' + root.dataset.selected + '"]');
+      apply(start || cards[0]);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })();
+</script>

@@ -1,0 +1,210 @@
+{%- comment -%}
+  PLUSH — section Avant / Après « côte à côte », version « Liquid personnalisé ».
+  Colle tout ce code dans un bloc « Liquid personnalisé » de la page produit.
+
+  TES 2 VIDÉOS
+  1. Contenu > Fichiers > Importer : importe tes 2 vidéos (.mp4).
+  2. Clique sur chaque vidéo > copie le lien (il commence par https://cdn.shopify.com/).
+  3. Colle-les entre les guillemets de video_before et video_after, juste en dessous.
+  Tant qu'un lien est vide, la case montre un rappel au lieu de la vidéo.
+
+  VERSION PC (facultatif)
+  Sur PC les cases sont horizontales. Si tes vidéos sont filmées à la verticale, le PC coupe
+  le haut et le bas. Pour éviter ça, filme aussi une version à l'horizontale et colle-la dans
+  video_before_pc et video_after_pc. Vide = le PC reprend la vidéo du téléphone, recadrée.
+
+  FORMAT DES VIDÉOS
+  - ratio = la forme des 2 cases sur téléphone. '9 / 14' (vertical, par défaut),
+    '4 / 5' (un peu moins haute), '1 / 1' (carré).
+  - ratio_pc = la forme des 2 cases sur PC. '16 / 9' (horizontal, par défaut), '4 / 3'.
+  - Sur PC : pc_width = largeur des 2 vidéos ensemble, pc_gap = espace entre les deux (en px).
+  - Les vidéos tournent en boucle, sans le son, comme un GIF.
+
+  SOUS LES VIDÉOS : 4 coches (check_1 à check_4). Mets '' pour en cacher une.
+  SOUS LE BOUTON : 2 garanties avec icône (perk_1, perk_2). Mets '' pour en cacher une.
+
+  LE BOUTON remonte jusqu'au choix Duo / Solo. Le prix affiché vient tout seul de ta fiche
+  produit : si tu changes un prix dans Shopify, il change ici aussi.
+  Police : Poppins, uniquement dans ce bloc. Le reste du site n'est pas touché.
+{%- endcomment -%}
+
+{%- liquid
+  assign video_before = 'https://cdn.shopify.com/videos/c/vp/9d0860ca7fbf4433837bb12c0c8e25f4/9d0860ca7fbf4433837bb12c0c8e25f4.HD-720p-4.5Mbps-98566837.mp4'
+  assign video_after = 'https://cdn.shopify.com/videos/c/o/v/c9deb16558d74d0fa85c46c86b21a256.mp4'
+  assign video_before_pc = 'https://cdn.shopify.com/videos/c/vp/e2fd8d71e6494758bd191fb42cc9569b/e2fd8d71e6494758bd191fb42cc9569b.HD-720p-4.5Mbps-98566500.mp4'
+  assign video_after_pc = 'https://cdn.shopify.com/videos/c/o/v/770c06f567ce4ada87388e370c2d1294.mp4'
+  assign ratio = '9 / 14'
+  assign ratio_pc = '16 / 9'
+  assign pc_width = 1200
+  assign pc_gap = 48
+
+  assign label_before = 'Before'
+  assign caption_before = 'Your shower head'
+  assign label_after = 'After'
+  assign caption_after = 'Plush filtered'
+
+  assign headline = 'Your shower head came with the place.'
+  assign check_1 = 'Softer-feeling hair'
+  assign check_2 = 'No more tight skin'
+  assign check_3 = 'No more pool smell'
+  assign check_4 = '2-min install'
+  assign button = 'Get Plush'
+  assign perk_1 = 'Free U.S. shipping'
+  assign perk_2 = '60-day money back'
+  assign show_price = true
+
+  assign c_ink = '#141414'
+  assign c_muted = '#6B6660'
+  assign c_accent = '#8A4524'
+  assign space_top = 16
+  assign space_bottom = 32
+-%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div
+  class="plush-ba"
+  style="--pba-ink:{{ c_ink }};--pba-muted:{{ c_muted }};--pba-accent:{{ c_accent }};--pba-ratio:{{ ratio }};--pba-ratio-pc:{{ ratio_pc }};--pba-pc-w:{{ pc_width }}px;--pba-pc-gap:{{ pc_gap }}px;margin:{{ space_top }}px 0 {{ space_bottom }}px;"
+>
+  <h2 class="pba-title">{{ headline | escape }}</h2>
+
+  <div class="pba-media">
+    {%- for i in (1..2) -%}
+      {%- liquid
+        if i == 1
+          assign v_src = video_before
+          assign v_src_pc = video_before_pc
+          assign v_label = label_before
+          assign v_caption = caption_before
+          assign v_mod = 'before'
+          assign v_hint = 'video_before'
+        else
+          assign v_src = video_after
+          assign v_src_pc = video_after_pc
+          assign v_label = label_after
+          assign v_caption = caption_after
+          assign v_mod = 'after'
+          assign v_hint = 'video_after'
+        endif
+      -%}
+      <figure class="pba-item pba-item--{{ v_mod }}">
+        <div class="pba-card">
+          {%- if v_src != blank -%}
+            <video{% if v_src_pc != blank %} class="pba-v-m"{% endif %} src="{{ v_src }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+            {%- if v_src_pc != blank -%}
+              <video class="pba-v-pc" src="{{ v_src_pc }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ v_label | escape }} — {{ v_caption | escape }}"></video>
+            {%- endif -%}
+          {%- else -%}
+            <div class="pba-empty">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
+              <span>Colle le lien dans <b>{{ v_hint }}</b></span>
+            </div>
+          {%- endif -%}
+          <span class="pba-tag">{{ v_label | escape }}</span>
+        </div>
+        <figcaption class="pba-cap">{{ v_caption | escape }}</figcaption>
+      </figure>
+    {%- endfor -%}
+  </div>
+
+  {%- assign checks = check_1 | append: '|' | append: check_2 | append: '|' | append: check_3 | append: '|' | append: check_4 | split: '|' -%}
+  {%- assign checks_text = checks | join: '' -%}
+  {%- if checks_text != blank -%}
+    <ul class="pba-checks" role="list">
+      {%- for c in checks -%}
+        {%- if c != blank -%}
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>{{ c | escape }}</li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <div class="pba-copy">
+    {%- if show_price and product -%}
+      <p class="pba-price">
+        {%- if product.price_varies -%}<span class="pba-from">From{{ ' ' }}</span>{%- endif -%}
+        {{ product.price_min | money }}
+      </p>
+    {%- endif -%}
+    <a href="#" class="pba-btn" data-plush-ba-cta>{{ button | escape }}</a>
+    {%- if perk_1 != blank or perk_2 != blank -%}
+      <ul class="pba-perks" role="list">
+        {%- if perk_1 != blank -%}
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11.5v10H2.5zM14 10h4.2l3.3 3.4v3.1H14"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17.5" cy="17.5" r="1.9"/></svg>{{ perk_1 | escape }}</li>
+        {%- endif -%}
+        {%- if perk_2 != blank -%}
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>{{ perk_2 | escape }}</li>
+        {%- endif -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .plush-ba{container-type:inline-size;font-family:'Poppins',sans-serif;color:var(--pba-ink);text-align:center}
+  .plush-ba *{box-sizing:border-box}
+  .plush-ba .pba-title{margin:0 auto 18px;max-width:20ch;font-family:inherit;font-size:28px;font-size:clamp(24px,7.4cqi,38px);font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--pba-ink);text-wrap:balance}
+  .plush-ba .pba-media{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px;margin:0 auto}
+  .plush-ba .pba-item{margin:0;min-width:0}
+  .plush-ba .pba-card{position:relative;aspect-ratio:var(--pba-ratio);border-radius:16px;overflow:hidden;background:#141414}
+  .plush-ba .pba-card video{width:100%;height:100%;object-fit:cover;display:block}
+  .plush-ba .pba-card .pba-v-pc{display:none}
+  .plush-ba .pba-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;color:rgba(255,255,255,.7);font-size:12px;line-height:1.4}
+  .plush-ba .pba-empty svg{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linejoin:round}
+  .plush-ba .pba-empty b{color:#fff;font-weight:600;word-break:break-word}
+  .plush-ba .pba-tag{position:absolute;left:8px;top:8px;padding:5px 10px;border-radius:999px;background:#fff;color:#141414;font-size:10px;font-weight:600;line-height:1;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+  .plush-ba .pba-item--after .pba-tag{background:var(--pba-accent);color:#fff}
+  .plush-ba .pba-cap{margin-top:8px;font-size:13px;line-height:1.3;color:var(--pba-muted)}
+  .plush-ba .pba-copy{max-width:500px;margin:0 auto;padding:0 20px}
+  .plush-ba ul.pba-checks,.plush-ba ul.pba-perks{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center}
+  .plush-ba ul.pba-checks{display:grid;grid-template-columns:auto auto;justify-content:center;gap:8px 18px;margin:20px auto 0;text-align:left}
+  .plush-ba .pba-checks li{display:inline-flex;align-items:center;gap:5px;margin:0;font-size:14px;font-weight:500;line-height:1.3;color:var(--pba-ink)}
+  .plush-ba .pba-checks svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--pba-accent);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .plush-ba ul.pba-perks{flex-wrap:nowrap;gap:6px;margin:12px -12px 0}
+  .plush-ba .pba-perks li{display:inline-flex;align-items:center;gap:6px;margin:0;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid #DDD3C4;font-size:12px;font-weight:500;line-height:1.3;color:var(--pba-ink);white-space:nowrap}
+  .plush-ba .pba-perks svg{flex:none;width:16px;height:16px;fill:none;stroke:var(--pba-accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .plush-ba .pba-price{margin:16px 0 14px;font-size:22px;font-weight:600;color:var(--pba-ink)}
+  .plush-ba .pba-from{font-size:15px;font-weight:500;color:var(--pba-muted)}
+  .plush-ba .pba-btn{display:block;width:100%;padding:17px 20px;border-radius:12px;background:var(--pba-accent);color:#fff;font-size:16px;font-weight:600;letter-spacing:.01em;text-decoration:none;transition:filter .15s}
+  .plush-ba .pba-btn:hover{filter:brightness(1.08)}
+
+  @container (max-width:350px){
+    .plush-ba .pba-perks li{gap:4px;padding:6px 8px;font-size:11px}
+    .plush-ba .pba-perks svg{width:14px;height:14px}
+  }
+  @container (min-width:640px){
+    .plush-ba .pba-media{gap:14px}
+    .plush-ba .pba-tag{left:12px;top:12px;font-size:11px}
+    .plush-ba .pba-cap{font-size:14px}
+    .plush-ba .pba-checks li{font-size:15px}
+    .plush-ba ul.pba-checks{display:flex;gap:8px 24px}
+  }
+  @container (min-width:900px){
+    .plush-ba .pba-media{max-width:var(--pba-pc-w);gap:var(--pba-pc-gap)}
+    .plush-ba .pba-card{aspect-ratio:var(--pba-ratio-pc)}
+    .plush-ba .pba-card .pba-v-m{display:none}
+    .plush-ba .pba-card .pba-v-pc{display:block}
+    .plush-ba .pba-tag{left:16px;top:16px}
+    .plush-ba .pba-cap{margin-top:12px;font-size:15px}
+  }
+</style>
+
+<script>
+  (function () {
+    document.querySelectorAll('[data-plush-ba-cta]').forEach(function (btn) {
+      if (btn.dataset.ready) return;
+      btn.dataset.ready = '1';
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.querySelector('div.pb[data-selected]') || document.querySelector('form[action*="/cart/add"]');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+</script>

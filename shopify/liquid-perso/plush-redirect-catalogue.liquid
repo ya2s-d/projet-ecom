@@ -1,0 +1,14 @@
+{%- comment -%}
+  PLUSH — pas de page catalogue. À coller dans une section « Liquid personnalisé » en HAUT de :
+  - Collections > Collection par défaut  (couvre /collections/all et toutes les collections)
+  - Collections > Liste des collections  (/collections)
+  Le visiteur arrive directement sur la page produit. Dans l'éditeur de thème, rien ne se
+  passe : tu peux toujours modifier ces pages.
+  Le jour où tu veux un vrai catalogue avec plusieurs produits : supprime simplement la section.
+{%- endcomment -%}
+{%- unless request.design_mode -%}
+  {%- assign plush = all_products['plush-filtered-showerhead'] -%}
+  {%- if plush and plush.url != blank -%}
+    <script>window.location.replace({{ plush.url | json }});</script>
+  {%- endif -%}
+{%- endunless -%}

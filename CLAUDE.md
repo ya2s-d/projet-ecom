@@ -1537,3 +1537,959 @@ Concurrents (ajouter /products.json pour le catalogue complet)
   eskiin.com · afina.com · sproos.co · cloverandcove.com · getseoni.com
   jolieskinco.com · getcanopy.co (hors Trendtrack, à lire à la main)
 ```
+
+
+---
+
+## 2 octobre 2026 — export Trendtrack avant expiration, et 8 corrections du dossier
+
+Abonnement Trendtrack expire le **5 octobre**. Tout est sauvegardé dans
+**`research/trendtrack-export/`** (9 fichiers, ~4 000 lignes) : 120 ads avec copies intégrales et
+transcripts vidéo, 95 emails des 3 leaders, snapshot de 20 boutiques. **Lire `README.md` en premier.**
+
+### LA correction qui change la boutique
+
+**Le best-seller de la catégorie est la cartouche de rechange, pas le pommeau.** Mesuré sur les
+rangs de vente réels de Trendtrack, pas supposé :
+
+| Rang de vente | eskiin | Afina |
+|---|---|---|
+| **1** | **Replacement Filter 36 $** | **Replacement Filter 29 $** |
+| 2 | Showerhead 149 $ | Replacement Filter 40 $ |
+| 3 | Handheld 169 $ | Showerhead **129 $** |
+| 5 et 7 | — | **Buy 4 Get 2 Free 149 $** · **Buy 2 Get 1 Free 59 $** |
+
+→ **Le filtre seul (29 $), le pack de 2 (59 $) et le pack de 4 (149 $) doivent être en ligne le
+jour de l'ouverture.** Le pack de 4 rapporte plus que le pommeau et ne coûte aucune publicité :
+il se vend par email au client déjà acquis. C'est la ligne qui finance le CPA.
+
+### Les 7 autres corrections
+
+| Point | Dossier avant | Mesuré le 2 oct. |
+|---|---|---|
+| Ads d'Afina | 533 | **1 150** sur **4 pages Facebook** (Afina 609 · Showerlabs 347 · Afina Water Wellness 166 · page perso du fondateur 28). **Tout comptage d'ads par page de marque dans ce dossier est un plancher** |
+| Prix d'Afina | 89-129 $ | **129-159 $ affiché, 99 $ payé.** Soldé à −50 % toutes les 6-8 semaines (Memorial Day, été, Labor Day, printemps) |
+| Garantie | — | **Afina 90 jours** · eskiin 60 · Jolie 60 |
+| Durée du filtre | 3 mois (spec n°4 du brief fournisseur) | **60 jours chez Afina.** Notre spec promet plus long que ce que vend le n°2 → demander la durée **en gallons**, pas en mois |
+| Plus gros annonceur Meta | eskiin | **water2.com, 904 créas** sur 13 produits, 294k visites, 99-129 $. Absent du dossier. Puis filterbaby 514 · santevia 428 · flowpure 417 · helloklean 416 |
+| myoasishair | US | **Espagne à 100 %** (19 ads /20 ciblent ES, copy espagnole). Pas un concurrent, mais une preuve que le produit tient hors US : 715 créas, ads de 443 jours |
+| getcanopy.co | concurrent à 125 $ | **mort** : 426k → 145k (−66 %), 197 produits, best-sellers à 1,98 $ |
+
+### ⚠️ dermatologist-reviews.com — la machine à faux classements
+
+376 443 visites/mois · **zéro produit** · 125 ads Meta · créée nov. 2025.
+C'est d'où viennent les « Rated #1 by Oasis Health » et les « dermatologist recommended » de la
+catégorie. **Ce n'est pas de la presse, c'est de l'affiliation achetée.** Ne jamais acheter ce
+badge, et ne jamais lire le « #1 » d'un concurrent comme une validation.
+
+### Les 3 meilleurs hooks du marché — tous gratuits, zéro allégation
+
+```
+« How's the water? »                              (Jolie)
+  You notice when it's too hot. You notice when it's too cold.
+  But how often do you think about what's in it?
+
+« This is why travel skin happens ✈️ »            (Afina)
+  New city, same routine, totally different results?
+
+« Builder grade shower head got you down? »       (Sproos)
+```
+Le premier ne contient aucune affirmation, donc rien d'interdit. Le deuxième prouve la thèse par
+l'expérience du lecteur. Le troisième désigne le produit que 90 % des Américains ont déjà.
+
+**À mettre partout** : `Try VERRA risk-free | Free returns within 60 days` — en préheader de
+chaque email et en bandeau de la page produit. Jolie le fait sur 15 emails sur 25.
+
+### Les trois modèles email, et celui qu'on copie
+
+| | eskiin | Afina | Jolie |
+|---|---|---|---|
+| Emails/semaine | **8,01** | **1,09** | 2,02 |
+| Promo dominante | BOGO permanent | aucune | **aucune, 0 sur 25** |
+| Visites/mois | 969 366 | 277 160 | 214 346 |
+
+Les trois dépassent 214 000 visites : il n'y a pas une bonne méthode. Mais la méthode eskiin
+exige une base installée. **On copie Afina** : 1 email/semaine, éducation, zéro promo — c'est
+aussi la moins exposée côté allégations. Séquence de 6 emails écrite dans `emails-eskiin.md`.
+
+### Deux mécaniques confirmées par deux acteurs indépendants
+
+**La loterie du remboursement**, à 6 jours d'écart et avec le même émoji 👀 dans l'objet :
+eskiin rembourse 1 commande par heure pendant 24 h, puis nomme les gagnants (« Annie K. a
+commandé… ») ; Afina en rembourse 5. Coût plafonné d'avance, et seulement si on vend.
+**Version Yasser : 3 commandes sur la semaine de test, à garder en réserve pour relancer un J+4 mou.**
+
+**Le pivot saisonnier** : les 3 leaders basculent sur l'angle automne entre le 11 et le
+27 septembre, en même temps. La fenêtre de la catégorie s'ouvre maintenant — le lancement
+d'octobre tombe dedans.
+
+### Le prix d'entrée réel du canal
+
+Une créa gagnante chez eskiin : **8 à 25 variantes, 100 à 294 jours**. Pas 4 créas sur 7 jours.
+Et **eskiin n'envoie jamais sur une fiche produit Shopify** — `eskiin.com/products/*` = zéro ad
+active. Tout part sur des `/pages/` dédiées : `/pages/handheld` (16 ads sur 20),
+`/pages/adv-0003-9-reasons-hh` (advertorials numérotés), `/pages/holiday-flip-game` (LP gamifiée),
+`/pages/senior-wellness` (LP par segment), `/pages/maddiepov` (LP par créateur).
+
+### Sproos — l'angle sans allégation, et pourquoi il passe en n°2
+
+Sproos vend le même produit sur l'angle **design / couleur / locataire** : « 8 colorways »,
+« Damage-Free Installation », « No tools, no plumber », « renter-friendly ». **Zéro allégation
+santé.** Ses créas tournent depuis 486 jours.
+
+**Mais son trafic a perdu 48 % depuis son pic de juin** (191k → 99k). Des créas de 16 mois sur un
+trafic divisé par deux peuvent signifier « ça tient » ou « ils n'ont rien renouvelé, et c'est
+pour ça qu'ils baissent ». Je ne peux pas trancher. → **Angle n°2 à tester, pas angle principal.**
+Ce qui reste certain : c'est le seul angle du marché qui n'expose à rien.
+
+### Ce qu'on ne copie sous aucun prétexte
+
+```
+"clinically proven" · "reduces hair shedding" · "81% of users"
+"eczema" · "hormone disruptors" · "sleep apnea" · tout pourcentage inventé
+```
+eskiin a 969 000 visites, Jolie a une étude clinique et un référencement Target. Les deux ont des
+avocats. Un compte Meta neuf n'a ni l'un ni l'autre. **La règle du 25 septembre tient : l'angle
+porte sur ce que le filtre RETIENT, jamais sur le résultat.** On montre, le client conclut.
+
+### Sur la France, sans rouvrir la décision
+
+`puurefilters.com`, boutique **française** créée en novembre 2024 : **607 764 visites/mois**,
+131 créas Meta, pommeau à **54,90 €** — plus une version UK à 167 385 visites. `pureva.com`
+(FR) : 117 635 visites, 256 créas, 49,90-79,90 €.
+Ça ne contredit pas l'analyse du 24 septembre, qui tuait la France sur **le ticket et la TVA** :
+54,90 € est pile dans la bande 25-60 € relevée ce jour-là. **On reste US.** Mais c'est noté pour
+le jour où il y aura du cash et un compte Meta chaud.
+
+### Complément du 2 octobre — Hello Klean et Water2, deux acteurs hors du radar initial
+
+**`research/trendtrack-export/ads-helloklean.md` et `ads-water2.md`.**
+
+🟢 **La formule qui autorise à parler du chlore** — trouvée chez Water2 (243 M de reach cumulé,
+1 596 ads actives), qui l'écrit dans **chacune** de ses annonces :
+```
+Filter capabilities and/or contaminants referenced are reference to the efficacy of the
+filter and not the presence of said item in all water.
+```
+Traduit : *les contaminants mentionnés décrivent ce que le filtre est **capable** de retenir,
+pas ce qui est **garanti présent** dans ton eau.* C'est la formulation juridique de la règle du
+25 septembre, validée en production. **Version VERRA à mettre en bas de chaque annonce et sur la
+page produit** :
+```
+Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed
+presence of those substances in your water. Individual results vary. Not a medical device and
+not intended to diagnose, treat, cure or prevent any condition.
+```
+
+**Les pourcentages** : jamais « removes 99 % », toujours « catches **up to** 99.99 %* » avec
+astérisque et mention d'un test indépendant. **Aucun pourcentage avant d'avoir le rapport de
+test du fournisseur par écrit** — à ajouter aux 7 specs à faire confirmer.
+
+**Le format créa n°1 à tester** : le **dialogue à deux personnages** de Water2. Un sceptique pose
+l'objection, l'autre la lève. Trois objections par vidéo. Zéro acteur payé, zéro UGC acheté.
+Les trois objections de notre produit : « ça va faire baisser la pression » · « il faut un
+plombier » · « 89 $ pour un pommeau ? ». Transcript intégral dans `ads-water2.md`.
+
+**L'ennemi désigné n'est pas un concurrent, c'est l'objet que la cible a déjà.** Water2 n'attaque
+jamais les autres filtres : il attaque la carafe Brita. Moule : *« [la solution actuelle] a l'air
+pratique… jusqu'à ce que [4 frictions réelles]. »* Pour VERRA, l'ennemi est **le pommeau d'origine
+de l'appartement** — le *builder grade*.
+
+**Premières dépenses Meta réelles du dossier.** Hello Klean et Water2 ciblent l'UE/UK, donc Meta
+publie reach et dépense (null sur les ads US) :
+
+| | Reach cumulé | Dépense sur les créas lues |
+|---|---|---|
+| Hello Klean | 203 982 095 | **~90 700 $ sur 20 créas** (236 actives) · une seule à 8 592 $ |
+| Water2 | 243 462 832 | **~137 700 $ sur 10 créas** (1 596 actives) · une seule à **42 408 $** sur 241 jours |
+
+**Ce que ça impose d'admettre** : un installé de cette catégorie dépense de l'ordre du million
+par an. À 430 €, le test **ne départage pas un produit, il départage un créa.** Les seuils J+3
+(CTR ≥ 1,2 % · CPC sortant ≤ 1,00 $ · coût par ajout panier ≤ 15 $) restent les bons ; le seuil
+J+7 en ventes est une indication, pas un verdict.
+**Ce que ça ne change pas** : Meta n'est pas une enchère sur mot-clé, et le reach de Hello Klean
+est réparti sur 28 à 38 pays. L'argument du 25 septembre tient.
+
+### Le troisième angle du marché, jamais relevé : LE CALCAIRE SUR LES SURFACES
+
+| Angle | Qui le tient | Risque d'allégation |
+|---|---|---|
+| Toxines / peau et cheveux | eskiin, Afina, Jolie, Oasis | 🔴 élevé |
+| Design / couleur / locataire | Sproos (−48 % de trafic) | 🟢 nul |
+| **Calcaire sur les surfaces + filtre intelligent** | **Hello Klean** (419k visites, 416 ads) | 🟢 **nul** |
+
+Le calcaire sur le marbre et la robinetterie est **visible, photographiable et strictement non
+médical**. Ça se démontre en 8 secondes — le critère n°1 du 25 septembre — et on n'a même pas
+besoin du filtre marron. Signature de Hello Klean : **« Same bathroom, better water. »**
+
+**Leur différenciation produit** : filtre qui suit sa durée de vie **en litres, pas en mois**,
+plus une alerte de température. ⚠️ **Question de sourcing** : existe-t-il une version à LED
+**alimentée par le débit** (micro-turbine, zéro pile) ou un indicateur thermochromique ?
+Si oui, c'est le différenciateur de VERRA sans casser le gate lithium. Si c'est sur pile, on oublie.
+
+### Garanties du marché, relevées
+
+| Acteur | Garantie |
+|---|---|
+| Water2 | 100 jours |
+| Afina | 90 jours |
+| eskiin · Jolie · Sproos | **60 jours** ← le standard de la catégorie douche |
+
+On prend 60 jours, mais avec la formulation de Water2, qui est gratuite et meilleure :
+**« On day 59, if you don't love it, you get all your money back. »**
+
+### Les landing pages : 3 acteurs sur 3
+
+eskiin, Hello Klean et Water2 n'envoient **jamais** sur une fiche produit Shopify nue. Tout part
+sur des `/pages/` dédiées : advertorials numérotés, comparatifs « vs la carafe », LP par segment,
+LP par créateur, LP gamifiée, bundle produit + consommable, lien d'abonnement.
+**Ce n'est pas une préférence, c'est le standard du canal.**
+
+
+---
+
+## 3 octobre 2026 — le nom est verrouillé : PLUSH
+
+**VERRA est mort**, repéré par Yasser lui-même : **Verra Mobility** (NASDAQ : VRRM) est une société
+américaine cotée avec **~120 dépôts de marques**, et **verra.org** est le registre mondial des
+crédits carbone — donc un mot dont il ne prendra jamais la SERP.
+
+Également écartés après vérification : **Corra** (fade) · **Vella** (ne veut rien dire, et
+« vella » = *vieille* en catalan/galicien — Font Vella signifie littéralement « vieille
+fontaine ») · **Fount** (rejeté par Yasser) · **Raina** (🔴 `rainabathfittings.com` vend des
+pommeaux de douche — collision frontale en classe 11) · **Nimba** (🔴 `nimba.co` = marque
+lifestyle « wellness pour femmes modernes », exactement l'audience) · **Thalo** (🔴 4 entités
+dont Thalo Fragrance, fabricant *home care*).
+
+**Erreur reconnue** : j'ai justifié Vella sur une étymologie fausse (*vellus* n'est pas la racine
+de *velvet* — c'est *villus* ; *vellum* vient de *vitellus*, le veau). Et j'ai jugé des noms sur
+des racines latines alors que le seul juge est l'oreille américaine.
+
+### LE NOM
+
+```
+PLUSH
+Hard water in. Soft water out.
+```
+
+**Plush** = doux, moelleux, luxueux. C'est le mot que les Américains emploient déjà pour les
+serviettes et les hôtels. **Le nom est la promesse**, dans un mot que la cliente a déjà en bouche.
+1 syllabe, 5 lettres — le plus court du dossier, et il survit au test des 40 mm.
+
+| Vérification | État |
+|---|---|
+| **Classe 11** (robinetterie, douche) | 🟢 **libre** |
+| Marque de douche ou de filtre à eau | 🟢 aucune |
+| Seul dépôt « PLUSH » trouvé | Plush World LLC (Seattle), **instruments médicaux** — pas de conflit |
+| Force de la marque | 🟢 **suggestif, pas descriptif** (un pommeau n'est pas « plush ») → enregistrable |
+| Défaut assumé | « plush » = peluche. Sans effet : acquisition 100 % Meta, l'acheteur ne cherche pas |
+
+**Le test qui a tranché** : dire le nom à voix haute à la fin de sa propre annonce.
+*« Hard water in. Soft water out. — PLUSH. »* Verra passait ce test, Corra et Fount non.
+
+**Usage figé** : `PLUSH` en capitales dans le logo, `Plush` en minuscules partout ailleurs.
+
+### Règle 17 — un nom de marque se juge à l'oreille du marché, pas sur son étymologie
+
+Le bon test, dans l'ordre :
+```
+1. Ça sonne à côté de Jolie, Canopy, Caraway, Parachute ?   (le registre du prix visé)
+2. Un Américain l'épelle après l'avoir entendu UNE fois ?   (il entend le nom dans une vidéo
+                                                             Meta, puis il le tape)
+3. Ça survit à 5-6 lettres, 40 mm, une couleur ?            (le sticker de la boîte)
+```
+Et le territoire sémantique : toute la catégorie est sur **pure / flow / stream / clean** — quatre
+mots inappropriables. **RAIN est pris en classe 11** (Raina Bath Fittings, RAINSHOWER de
+S.C. Johnson). **SOFT était vide**, et c'est littéralement le produit.
+
+**Identité complète (logo, typo, couleurs, fichiers, réponses au questionnaire d'une IA de logo) :
+`research/brand/plush-identite.md`.**
+
+Décision structurante : **wordmark seul, aucun pictogramme.** Une IA de logo ajoute toujours une
+goutte d'eau, et goutte d'eau + pommeau stylisé = signature dropship. Les marques de la bande de
+prix visée vivent toutes sur un wordmark (eskiin, Afina, Jolie, Sproos, Canopy, Caraway).
+Et à 40 mm, un pictogramme plus un mot font deux taches.
+
+### L'image de marque PLUSH — l'idée, arrêtée le 3 octobre
+
+Référence donnée par Yasser : **Naked Paper**. Ce qu'on leur prend n'est pas le look, c'est la
+**structure** : toute leur marque tient sur une idée que le produit prouve tout seul — *le papier
+est brun parce qu'il n'est pas blanchi* (« We didn't make it brown, nature did »). La couleur du
+produit est à la fois la marque, la preuve, la palette et le titre.
+
+```
+Naked Paper  :  papier brun  →  pas de blanchiment       →  preuve visible
+PLUSH        :  filtre brun  →  ce que l'eau a laissé    →  preuve visible
+```
+
+**La ligne de marque : « We didn't make it brown. Your water did. »**
+Elle décrit l'objet, pas un résultat sur le corps — donc elle fait le travail du disclaimer
+Water2 toute seule. Zéro allégation.
+
+**Conséquence n°1 — l'objet héros n'est pas le pommeau, c'est la cartouche, en paire neuve /
+jour 30.** Ce n'est pas esthétique, c'est les rangs de vente : filtre n°1 chez eskiin ET Afina.
+
+**Conséquence n°2 — la photo à faire avant toutes les autres** : visser le pommeau chez lui,
+30 jours, sortir la cartouche, la poser à côté d'une neuve sur fond Paper.
+
+**Palette figée** : Ink `#141414` · Paper `#F6F2ED` (fond de tout, jamais blanc) ·
+**Day 30 `#A86B45` — la couleur d'un filtre à 30 jours**, 5 % de la surface max ·
+Stone `#C9C2B8` (traits seulement) · Smoke `#6B6660` (texte secondaire).
+Typo : **Jost**, une seule famille.
+
+Détail complet : `research/brand/plush-identite.md`.
+Board visuel : https://claude.ai/artifact/UseJuJH2yCQpZRxcECtChc
+
+### Logo verrouillé — 3 octobre 2026
+
+**`plush`, tout en bas de casse, graisse haute, espacement serré, `#141414`.** Choisi par Yasser
+parmi trois essais (bold bas de casse / light capitale initiale / le premier), motif : « c'est
+celle qui me parle le plus ». L'affinité est un critère du dossier (section 2), et le verrouillage
+du logo était le vrai enjeu — pas le dernier pourcent de typographie.
+
+| | Verrouillé |
+|---|---|
+| Casse | **`plush`** en bas de casse — registre eskiin / sproos / jolie, et ça sert le sens du mot |
+| Graisse | **haute** |
+| Espacement | **serré** (0 à +30). L'espacement large ne marche qu'en capitales |
+| Couleur | `#141414` sur `#F6F2ED` · version inversée en `#F6F2ED` sur `#141414` |
+| Pictogramme | **aucun** |
+
+**Correction de ce que j'avais écrit le 3 oct. au matin** : j'avais imposé les capitales. C'était
+une erreur de registre — eskiin, sproos et jolie sont tous en bas de casse, et « plush » veut dire
+*doux*. Yasser avait raison avant moi.
+
+**Usage figé** : `plush` en bas de casse dans le logo · `Plush` avec majuscule dans tous les
+textes (ads, emails, site). Jamais « PLUSH! ».
+
+**Le logo n'est pas une police, c'est un dessin figé.** Une fois exporté en SVG, la police
+d'origine n'a plus d'importance. **Jost reste la police de tout le reste** — titres, textes, site,
+ads, emails — et là, jamais Poppins, Montserrat, Arial ni Helvetica.
+
+**Le seul contrôle qui reste, 2 minutes et une fois pour toutes** : imprimer le logo à **40 mm en
+noir et blanc** et regarder **le trou du `s`**. S'il se remplit, descendre d'une graisse. C'est le
+seul risque d'une graisse haute à petite taille, et il se règle avant d'imprimer 300 stickers.
+
+**Fichiers à produire** : `plush-noir.svg` · `plush-blanc.svg` · `plush-noir.png` (fond
+transparent, 2000 px). Sans le SVG, les stickers et la boîte sont impossibles à sortir proprement.
+
+### Le fichier logo livré — lu et vérifié le 3 octobre
+
+`Logo_Typographique_Noir_Beige.pdf`, 11 347 octets, 1 page de 1500 × 1500 pt.
+
+| Fait | Lecture |
+|---|---|
+| **Vectoriel** | 🟢 **Oui.** Texte réel, police embarquée (`FontFile2`, sous-ensemble `AAAAAA+LeagueSpartan-Bold`). Aucun XObject image. **Un export PDF de Canva est vectoriel** — le PDF suffit au fournisseur pour l'impression, le SVG n'est pas indispensable |
+| **Police** | **League Spartan Bold** — SIL Open Font License, gratuite, usage commercial OK, sur Google Fonts |
+| Couleur du texte | `#222222` (`.1333 .1333 .1333 rg`), pas `#141414` |
+| Fond | **Blanc pur peint** (`1 1 1 rg`, rectangle plein), malgré le nom de fichier « Beige ». Donc **ni transparent, ni Paper** |
+| Occupation | Le mot fait **~723 pt de large sur une page de 1500** (48 %) et **~320 pt de haut** (21 %) → beaucoup de vide autour, à recadrer |
+
+**Erreur reconnue** : j'avais dit que la police ressemblait à Poppins et conseillé d'en changer.
+C'est **League Spartan**, qui est un bien meilleur choix — open source, géométrique, et beaucoup
+moins vue que Poppins ou Montserrat. Le conseil était faux, le fichier est bon.
+
+**Le test des 40 mm se règle par la géométrie, pas par une impression** : à 40 mm de large, la
+hauteur d'x fait ~7 mm et l'épaisseur de trait ~2,5 mm, donc les ouvertures du `s` tournent autour
+du millimètre — très au-dessus des ~0,2 mm que perd une impression vinyle. **Le risque que
+j'avais signalé ne se matérialise pas à cette graisse-là.**
+
+**Reste à produire** : la version à **fond transparent** (site, Shopify, favicon), la version
+**blanche** sur fond foncé, le **favicon** (le `p` seul, 512 × 512), et le **recadrage** serré.
+
+### L'avatar client — posé le 3 octobre 2026
+
+Trou relevé par Yasser : *« faut placer l'avatar client pour savoir comment lui parler »*. Toute
+la copy de la carte avait été écrite sans destinataire. **Fiche complète :
+`research/brand/plush-avatar-client.md`** — elle gouverne désormais les ads, les emails, la page
+produit et la carte.
+
+**v2 le 21 oct.** (demandée par Yasser pour la copy, les avis et les ads) : prix réels (74,99 $),
+4e peur (« encore un truc Amazon à 15 $ »), ses mots relevés mot pour mot, les 4 questions de
+demande d'avis, les règles FTC (jusqu'à 53 088 $ par faux avis), 7 accroches ads en image fixe.
+Peur n° 2 (la pression) sans réponse tant que le **test du seau** n'est pas fait sur l'échantillon.
+
+```
+Megan, 34 ans, Columbus (Ohio) · locataire ou propriétaire depuis moins de 3 ans
+Ménage 60-110k $ · achète sur son téléphone, le soir
+```
+
+Dérivée des copies réelles des 7 concurrents de `research/trendtrack-export/`, qui convergent sur
+un seul avatar : Sproos (« builder grade », « renter-friendly »), Afina (« travel skin »), Jolie
+(peau et cheveux), eskiin (LP par segment et par créatrice), Hello Klean (calcaire sur les
+surfaces), Water2 (ennemi = la carafe Brita).
+
+**Le point qui décide de tout** : *elle achète des produits depuis des mois pour un problème
+qu'aucun produit ne règle.* Elle a changé trois fois de shampooing. Elle n'a jamais pensé à l'eau,
+ou elle a cru qu'il fallait un plombier. ⚠️ **On n'affirme jamais que l'eau abîme ses cheveux** —
+on montre ce que le filtre retient, elle fait le lien seule.
+
+**Ses 3 peurs, et ce sont exactement les 3 objections du dialogue Water2** : « ça n'ira pas sur ma
+douche » · « ça va tuer la pression » · « 89 $ pour un pommeau ? ».
+
+**Ton** : « you » toujours · 8-12 mots par phrase · contractions oui · **zéro point
+d'exclamation** · une amie qui s'y connaît, pas un labo.
+
+### La carte d'insert — 3 corrections de Yasser le 3 octobre
+
+| Correction | Conséquence |
+|---|---|
+| L'avatar manquait | Fiche écrite avant de réécrire la copy |
+| **Aucune vidéo n'existe et il n'y en aura pas** | Tous les QR vidéo supprimés. **L'installation est entièrement imprimée sur le carton**, en 5 étapes. Il ne reste **qu'un seul QR** sur toute la carte |
+| Une seule carte, pas deux | Même carte dans les deux boîtes → zéro frais de calage, zéro risque d'inversion |
+
+**Structure retenue** : recto = merci court + 5 étapes d'installation · verso = jour 30 en
+3 étapes + la paire de cartouches + QR d'avis + **code promo**.
+
+**L'ordre du verso n'est pas décoratif** : filtre d'abord, avis ensuite, code **en dernier**. Un
+code placé avant la demande d'avis transforme la demande en achat d'avis — interdit par Amazon,
+Google et Trustpilot. Et on écrit « tell us what you saw », jamais « leave us 5 stars » : demander
+une note est ce qui a détruit graceease sur Trustpilot.
+
+**Les 3 règles d'un code promo imprimé en Chine** :
+1. **Aucun chiffre dans le nom** — `PLUSHFAM`, jamais `PLUSH20`. La valeur se change dans Shopify
+   sans réimprimer 300 cartes. C'est toute l'astuce
+2. **Aucune date imprimée** — « no expiry », la durée se pilote dans Shopify
+3. **1 usage par client dans Shopify** — un code imprimé finit toujours sur Honey
+
+Valeur recommandée : **−20 % sur les cartouches**, sans minimum (Afina fait un −33 % permanent via
+« Buy 4 Get 2 Free », rang 5 de ses ventes).
+
+**Question à poser au fournisseur par écrit** : la cartouche arrive-t-elle **déjà montée dans le
+pommeau** ou emballée à part ? L'étape 3 du recto en dépend.
+
+### 4 octobre 2026 — classement des ads concurrentes, dernier jour d'abonnement
+
+**135 annonces Meta actives** relevées et classées sur 10 concurrents, dédupliquées par créa.
+Fichiers : `research/trendtrack-export/ads-classement-4oct.md` (+ `.json`).
+Galerie cliquable : https://claude.ai/artifact/A3EiV4vTFVofygJY2dCQJ1
+
+#### Ce que « marche le mieux » peut vouloir dire — et ce que ça ne veut pas dire
+
+| Signal | Dispo | Valeur |
+|---|---|---|
+| Reach / dépense estimée | 🟢 **UE + UK uniquement** | Meta ne publie que là. **Sur une ad US, `reach: 0` ne veut pas dire zéro, ça veut dire non publié** — piège de lecture |
+| **Variantes** (`duplicates`) | 🟢 partout | Meilleur proxy US : personne ne décline 25 variantes d'une créa qui perd |
+| **Jours de diffusion** | 🟢 partout | Une créa qui perd est coupée en moins d'une semaine |
+| ROAS, conversion | 🔴 jamais | Une créa très diffusée prouve qu'elle rapporte au moins ce qu'elle coûte. Rien de plus |
+
+#### Les chiffres durs — palier 1, dépense vérifiée
+
+| Dépense | Reach | Annonceur | Lecture |
+|---|---|---|---|
+| **55 880 $** | 6 208 943 | **Oasis Biolabs** (myoasishair) | La plus grosse créa unique du dossier, et elle est **espagnole** |
+| 50 232 $ | 5 581 355 | Oasis Biolabs | 443 jours de diffusion |
+| **42 408 $** | 4 711 962 | Water2 | L'image « Think about it 👇 » contre la carafe |
+| 35 169 $ | 3 907 659 | Water2 / **Bear Grylls** | 444 jours. La page d'un partenaire, pas celle de la marque |
+| 21 066 $ | 2 340 657 | Hello Klean | |
+| 19 882 $ | 2 209 089 | Hello Klean | |
+
+#### Palier 2 — US, proxy variantes × jours
+
+| Score | Var | Jours | Marque |
+|---|---|---|---|
+| 5 875 | **25** | 235 | Eskiin |
+| 5 863 | 13 | **451** | Sproos |
+| 5 481 | **21** | 261 | Filterbaby — créa BOGO |
+| 4 928 | 22 | 224 | Eskiin |
+| 4 650 | 10 | 465 | Sproos |
+
+**Hello Klean pousse le plus loin la déclinaison** : jusqu'à **51 variantes** sur une seule créa.
+C'est le chiffre à retenir sur le coût d'entrée du canal.
+
+#### Trois mécaniques repérées dans ce relevé
+
+1. **Water2 fait porter ses plus grosses dépenses par des pages tierces** — Bear Grylls (13 M de
+   likes), The Durham Derwent, 90s Baby Show, CRS Nutrition. 4 des 10 plus grosses dépenses du
+   dossier sortent d'une page qui n'est pas la marque. Chaque partenaire a **son propre code promo**
+   (`CRS`, `the_durham_derwent`, `90SBABY`) — c'est de l'affiliation tracée, pas du branding.
+2. **Filterbaby démolit nommément le concurrent** : *« They are literally white labeling generic
+   $4 filters from Alibaba and slapping their label on it. »* 🔴 Angle interdit à Plush — c'est
+   exactement ce qu'est notre produit. Le relever, pas le copier.
+3. **La démo en 8 secondes existe déjà**, chez Filterbaby : mesurer le chlore d'un verre, y plonger
+   la main 30 secondes, remesurer, zéro. Format parfait, **conclusion interdite** (« it went right
+   into my blood » = allégation santé).
+
+#### Note technique à conserver
+
+Les médias Trendtrack sont sur **`medias.trendtrack.io`**, pas sur le CDN Facebook : URL à nom de
+hash, **non signées**, donc elles ne meurent pas en 24 h comme les liens de la bibliothèque Meta.
+⚠️ Le domaine est **bloqué par le proxy réseau de l'environnement Claude** (403 au CONNECT), donc
+aucun téléchargement de fichier n'est possible depuis une session — mais les liens s'ouvrent
+normalement depuis un navigateur.
+
+### 4 octobre, suite — les statiques, et deux corrections de méthode
+
+**66 publicités statiques** encore actives relevées sur US + UK/EU + FR, classées par dépense Meta
+publiée. `research/trendtrack-export/ads-statiques-4oct.md` · galerie :
+https://claude.ai/artifact/HSTpawSZk6pdLAthAoDD6b
+
+#### ⚠️ Correction — `duplicates` ne veut pas dire la même chose partout
+
+Le tri par variantes sur le marché US entier remonte des ads à **27 978 « variantes »** chez un
+labo B2B dont le reach est à 1. Ce ne sont pas des tests créa, ce sont des **catalogues
+dynamiques** : une campagne sur 400 produits compte 400 variantes.
+
+> **Le test créa réel vit entre 2 et ~100 variantes. Au-delà, c'est un catalogue.**
+
+Le classement du matin (eskiin 25, Hello Klean 51, Filterbaby 21) reste dans la bande valide.
+
+#### ⚠️ Correction — trier le marché entier par reach ne sert à rien
+
+Sans filtre, le top statique UK/EU est **Shopify, Uber, Adobe, Canva, Birkenstock, Turo**. Des
+annonceurs de marque qui achètent de la notoriété. Il faut **plafonner les likes de page**
+(250 000) pour faire apparaître les DTC.
+
+#### Le classement utile — statiques DTC, dépense vérifiée
+
+| $ | Var | Jours | Marque | Ce qu'il y a à voler |
+|---|---|---|---|---|
+| **228 718** | 96 | 458 | **Loop Earplugs** | Le **bundle 3 produits** vendu en une seule image |
+| 170 844 | 32 | 443 | Benjamin Berner | Copy de **4 mots** : « Swiss Genuine Leather Luxury Sneakers » |
+| **144 712** | **2** | **497** | **Serenium** (coussin, IT) | Point de douleur pur, 497 jours sur **2 variantes** |
+| **144 521** | 7 | 150 | **Chāmpo Haircare** (UK) | **La citation cliente comme visuel entier** — cheveux, audience de Megan |
+| 137 845 | 4 | 172 | Natur Gesund Check (DE) | Le **format chronologique** : jour 3 / semaine 2 / semaine 3 |
+| **136 305** | **3** | **697** | **Callie France** | 697 jours sur 3 variantes. La rente |
+| 121 752 | 75 | 338 | Virgin Voyages | « There's a deal waiting behind this post. Go on, tap it » |
+| 97 269 | 2 | **856** | My Variations (FR) | 856 jours sur **une seule image** |
+| 66 087 | 8 | **1 011** | My Variations (FR) | **L'avis client en copy intégrale**, 1 011 jours |
+| — | 19 | **1 506** | Space Artsy | **Record du relevé.** « Have you ever seen Aurora? » |
+
+#### Les quatre formats statiques qui durent
+
+1. **La citation cliente en visuel** — Chāmpo (144k $), My Variations (1 011 jours). Zéro
+   production, zéro acteur. **Le seul format que Plush peut sortir le jour 1**, dès le premier avis
+2. **Le point de douleur en une phrase** — Serenium : *« Fatigué de te réveiller avec une douleur
+   au cou ? »* 497 jours, 2 variantes
+3. **La chronologie** — Natur Gesund Check : jour 3 / semaine 2 / semaine 3. **C'est le jour 30 de
+   Plush**, déjà validé à 137 845 $ sur un autre produit
+4. **La copy ultra-courte** — Benjamin Berner 4 mots, Threadheads *« The perfect gift doesn't exi- »*
+
+#### Le fait qui concerne directement Plush
+
+**La catégorie filtre à douche ne dépense quasiment rien en statique.** Sur tout le champ eau /
+douche / calcaire, la plus grosse statique est à **15 078 $** (Libra Cases), Hello Klean à
+4 477 $, Water2 à 3 306 $. À comparer aux **21 066 $ et 42 408 $** de leurs vidéos.
+
+→ **Le marché est vidéo. Le statique y est un espace vide**, et c'est le format le moins cher à
+produire pour Yasser. Ce n'est pas une preuve que ça marche — c'est une asymétrie à tester.
+
+### 4 octobre, audit de couverture — les trous comblés
+
+Question de Yasser : *« t'as bien récupéré même les ads statiques ET vidéo de eskiin et de mes
+autres concurrents ? »* **Non, pas au départ.** Le tri `mostDuplicates` sans filtre de format
+remonte ce qui domine chez chaque marque, donc un seul des deux formats. Audit puis comblage.
+
+| Marque | Vidéo | Statique | Total |
+|---|---|---|---|
+| Eskiin | 31 | 8 | 39 |
+| Jolie | 19 | 7 | 26 |
+| Oasis Biolabs (myoasishair) | 12 | 8 | 20 |
+| Afina (3 pages) | 10 | 19 | 29 |
+| Hello Klean | 9 | 5 | 14 |
+| Water2 | 8 | 2 | 10 |
+| **Santevia** *(nouveau)* | 5 | 0 | 5 |
+| Sproos | 5 | 0 | 5 |
+| Filterbaby | 3 | 2 | 5 |
+
+**171 annonces au total.** `research/trendtrack-export/ads-classement-4oct.md`
+
+#### ⚠️ Deux pièges de requête, à retenir
+
+| Requête | Problème |
+|---|---|
+| `afina.com` | Remonte **Barrafina** (restaurant Dubaï), **Serafina** (uniformes AR), **Petrafina** (BR). Toujours requêter **`afina.com/products`** |
+| `eskiin.com/products` | **Zéro résultat** — eskiin n'envoie jamais sur une fiche produit. Requêter **`eskiin.com/pages`** |
+
+#### Le fait structurel découvert en comblant
+
+**eskiin n'a que 25 statiques au total** sur **452 annonces live** → il est à **~95 % vidéo**.
+Hello Klean pareil : 25 statiques sur 454 live. Ce n'était pas un trou de ma collecte, c'est la
+réalité du marché — et ça confirme l'asymétrie notée plus haut : **le statique est un espace vide
+dans cette catégorie.**
+
+#### Les statiques d'eskiin pointent vers ses LP, et c'est ça l'info
+
+`/pages/sp6-bogo` · `/pages/handheld-bogo` · **`/pages/game-fall-sale-box-flip`** (LP gamifiée,
+lancée il y a 4 jours, déjà 3 créas). Aucune ne va sur `/products/`. Le standard du canal, encore.
+
+#### Santevia — nouvel acteur, et il vend un FILTRE DE BAIN
+
+427 ads live. Sa créa n°1 absolue (**rang 1, 660 jours, 301 207 reach, 2 711 $**) n'est pas le
+système de filtration d'eau, c'est le **filtre de bain**. Deux formats à voler, zéro allégation :
+
+1. **Le démontage du filtre en direct** (481 j) — *« Let's see what's inside my bath filter.
+   Let's open up this little bag and see what's inside. »* **C'est la version filmable de la
+   cartouche brune, et elle n'attend pas 30 jours.**
+2. **Le dialogue intérieur** (598 j) — *« You need to stop taking chlorine baths. Who said that? »*
+
+⚠️ Leur copy reste interdite à Plush : *« worsen eczema »*, *« fluoride can be a neurotoxin »*,
+*« may cause thyroid and neurological problems »*. Le format se vole, la phrase non.
+
+### 4 octobre, clôture — tout le champ relevé : 294 créas, 52 pages, 884 778 $ vérifiés
+
+Dernier jour d'abonnement. Dix annonceurs jamais interrogés ajoutés au relevé.
+Fichier unique de référence : **`research/trendtrack-export/ads-final-4oct.md`** (+ `.json`).
+Galerie cliquable, filtrable par marque et par format : https://claude.ai/artifact/P4tqNnT979YyLxRiCywNp9
+
+```
+294 créas dédupliquées · 52 pages Facebook · 884 778 $ de dépense Meta vérifiée
+98 308 590 de reach cumulé · 199 vidéos / 95 statiques
+```
+
+#### PUURE — le plus gros annonceur du dossier, et il fait déjà Plush
+
+```
+puurefilters.com + uk./fr./de.  ·  154 ads live  ·  82 431 592 de reach  ·  3 951 546 / 30 j
+338 000 $ vérifiés sur 10 créas  ·  produit : filtre de ROBINET inox, pas un pommeau
+Offre inversée : « the stainless steel filter is free. You just cover the cartridges »
+```
+
+**Sa créa n°1 — 72 991 $, 8 110 063 de reach, 453 jours, 14 variantes :**
+> *« This is what our Puure Filter caught after just a few weeks. [...] the difference is pretty
+> clear when you look at **a fresh cartridge next to that**. »*
+
+🟢 **C'est la cartouche brune posée à côté d'une neuve — l'objet héros arrêté le 3 octobre.**
+Validation la plus forte du dossier : pas une intuition, la créa la plus chère de la catégorie,
+453 jours de diffusion, construite exactement comme la nôtre.
+🔴 **Et l'avertissement** : leur phrase nomme PFAS, microplastiques, rouille, 150 contaminants.
+Plush montre la cartouche et **ne nomme pas ce qu'il y a dedans** (règle du 25 sept., disclaimer
+Water2 du 2 oct.).
+
+Trois autres mécaniques, toutes sans allégation :
+
+| $ | Jours | Mécanique |
+|---|---|---|
+| 36 019 | 208 | **« This is a water filter in 1970, and this is a water filter in 2026 »** — porté par une page tierce (Keith Maynard). Meilleur hook du relevé pour Plush : attaque le *builder grade* par son âge, zéro affirmation sur un corps |
+| 13 000 | 363 | **La série de 5 cartouches** — *« Five cartridges, 90 days. That last one, it used to be white. »* Version supérieure du jour 30 : une cartouche est une anecdote, cinq sont une courbe |
+| 12 171 | 395 | **La série éditoriale** — *« Things You Didn't Know You Can Buy Plastic Free, Part 4 »* |
+
+**3e confirmation des pages tierces** : Puure/Keith Maynard 36 019 $ · Water2/Bear Grylls
+35 169 $ · Water2/Durham Derwent 12 518 $ · Water2/90s Baby 7 937 $ · Water2/CRS 7 124 $.
+
+#### Trois concurrents US que le dossier n'avait jamais vus
+
+| | Lecture |
+|---|---|
+| 🔴 **lucinn.com** | 175 ads live. **Plus gros score US du relevé : 21 672** (43 var × 504 j) et 8 224 (16 × 514). Pages satellites (Velvet Hair Salon, « Dr James Fetterman ») + liens d'affiliation. Copy entièrement interdite : *« #1 Recommendation by Dermatologists »*, *« 87% Reported Less Acne Breakouts »*, *« fixed what years of medication couldn't »*, *« stops germs before they touch your body »*, *« your water is making you ugly »*. **À voler quand même** : l'advertorial narratif `/pages/toxic-soil-theory-hair-loss` (*« She'd lived in her town her whole life and never thought twice about the water. Sure, it smelled a little like a pool sometimes. »* — aucune affirmation, c'est le hook Jolie en version longue) et la créa « on augmente les prix de 25 % » qui justifie le ticket par le KDF-55 |
+| 🔴 **unchemed.com** | Annoncé par une page au nom de **« Dr. Emily Harrison, PhD, MD » (192 ads live)** — un médecin qui n'existe pas. *« America's #1 Filtered Showerhead »*, *« 15-stage »*, *« 85 000+ customers »*. Même machine que `dermatologist-reviews.com` (2 oct.) |
+| 🟢 **vedyaonline.com** (Vedya Home) | **45 variantes STATIQUES sur 120 jours et 32 sur 213.** Seul gros joueur statique de la catégorie |
+
+⚠️ **Trois « numéro un » simultanés** : Lucinn « #1 by Dermatologists », Unchemed « America's #1 »,
+GetSeoni « #1 Pommeau Filtrant ». Le badge s'achète. Ne jamais l'acheter, ne jamais le lire comme
+une validation.
+
+#### Correction — « le statique est un espace vide » était à moitié faux
+
+Écrit le 4 oct. au matin sur la foi d'eskiin (25 statiques / 452 ads) et Hello Klean (25 / 454).
+Vrai pour eux, **faux comme règle du marché** : Vedya tient 45 variantes statiques sur 120 jours.
+**Le statique marche dans cette catégorie, il est juste sous-utilisé par les leaders.**
+L'asymétrie reste la bonne cible — mais ce n'est plus un pari aveugle, il y a un précédent.
+
+**Deuxième correction** : eskiin n'est pas le plus gros annonceur, ni water2. C'est **Puure**, et
+son produit n'est même pas un pommeau. Le plancher du comptage par page remonte encore :
+Oasis Biolabs **539** ads live, Water2 931, FlowPure 480.
+
+#### 🟢 LE mécanisme à copier — le rapport de qualité d'eau par région (Pureva, 3 065 $, 150 j)
+
+```
+pureva.com/pages/rapport-qualite-eau-du-robinet   «  Que contient l'eau de votre région ? »
+« On a compilé toutes les données publiques, région par région, et on en a fait un rapport
+  clair et gratuit. En quelques secondes, tu sais exactement ce qu'il y a dans ton eau. »
+```
+
+**Le meilleur mécanisme du relevé entier, et il est gratuit.** Les rapports CCR annuels de
+qualité d'eau sont **publics et obligatoires** pour chaque réseau américain. Donc :
+
+1. Elle entre son code postal → elle reçoit **sa** donnée, pas une affirmation
+2. On cite ce que **sa ville** publie — zéro exposition, c'est de la donnée publique relayée
+3. Ça capture un email **avant** l'achat, donc ça finance le CPA sur la 2e commande
+4. Ça résout le trou de l'avatar : *« elle n'a jamais pensé à l'eau »*
+
+Forme la plus aboutie de la règle du 25 septembre : **on montre, le client conclut.**
+
+#### 🟠 GetSeoni — le comparatif classé, et le dialogue qui traite la peur n°3 de Megan
+
+`getseoni.com`, 122 ads live, pommeau filtrant **77,50 €**, 45 153 $ vérifiés, LP dédiée
+`/pages/comparatif-pommeaux-douche` (6 211 $, 95 j). Leur créa à 14 480 $ est un **tier-list
+filmé qui note les concurrents par leur nom** (« Ecovia → F », « pommeaux à billes → D »).
+
+🟢 **Le critère « le vrai coût sur un an » est à prendre tel quel.** Seul angle qui justifie 89 $
+contre 25 $ sans parler du corps : un pommeau à 25 $ dont la cartouche coûte 15 $ tous les 2 mois
+coûte **115 $ la première année**. Ça retourne l'ancre Amazon au lieu de la subir.
+🔴 **Mais nommer et noter une marque expose à la diffamation commerciale.** Version autorisée :
+**on compare des types de produit, jamais des marques.**
+
+**Leur dialogue à deux voix est le modèle exact** — et c'est la seule créa du relevé qui traite
+de front la peur n°3 de l'avatar (*« 89 $ pour un pommeau ? »*) :
+> *« — T'as quand même pas acheté le pommeau à 79 € ? — Bah si. — 79 € pour un pommeau de
+> douche ? Tu regardes trop Instagram. — Très bien, continue de te laver avec une eau aussi sale
+> que ça. — Attends, mais c'est quoi cette couleur ? »*
+
+Elle retourne l'objection avec **la cartouche**, pas avec un argument. 4e confirmation du format
+dialogue (Water2, Santevia, GetSeoni).
+
+#### Les trois offres inversées — et pourquoi on n'en prend aucune
+
+| Marque | Offre | Ads live | Dépense |
+|---|---|---|---|
+| Puure | **Filtre inox GRATUIT, tu paies les cartouches** | 154 | 338 000 $ |
+| FlowPure | **6 mois de cartouches offerts** · record de longévité : **678 et 711 jours**, 48 et 32 variantes, 6 pays | 480 | 28 237 $ |
+| Clover & Cove | **Buy 1 Get 1 Free** permanent · 446 jours sur 58 variantes dans 14 pays, copy de 6 mots | 110 | 8 517 $ |
+
+Un BOGO double le coût produit et le poids du colis ; un pommeau gratuit transforme le test en
+acquisition d'abonnés qu'un compte neuf ne sait pas retenir. **Le test de 430 € mesure une créa,
+pas une offre** (admis le 2 oct.). On garde pommeau 89 $ + cartouche 29 $ + pack de 4 à 149 $ +
+Shipping Protection 4,99 $.
+
+Copy FlowPure reprenable telle quelle : **« The Last Water Filter You'll Ever Buy »** · *instant
+filtered water (no waiting like pitchers)* · *installs in 60 seconds (no plumber needed)*.
+⚠️ *« independently lab certified »* et tout `up to X %` exigent **le rapport de test du
+fournisseur par écrit** — déjà au brief depuis le 2 oct. Sans le rapport, aucun chiffre.
+
+#### Showery UK — l'autre moitié du marché, confirmée fermée
+
+63 ads live, 4 804 689 de reach, créa n°1 à 7 361 $ sur 481 jours. **Vend la pression**, le filtre
+en 4e ligne. Et 43 041 visites contre 969 366 pour eskiin — le positionnement pression est bien
+le trou du marché (établi le 25 sept. : pression 15-55 $, filtrant 89-169 $). `stone-stream.com`
+confirme : 7 ads live, 291 de reach sur sa meilleure, depuis 2022.
+
+🟢 **Deux emprunts** : la **liste de situations** (*« low-pressure showers · older UK homes ·
+flats and apartments · upstairs bathrooms · rental properties »*) — elle laisse l'acheteuse se
+reconnaître au lieu de lui affirmer quelque chose, et `rental properties` est l'angle Sproos.
+Et le premier mot de StoneStream : **« Limescale on your screen, dry skin, dull hair? That's hard
+water. »** — le calcaire sur la paroi, angle Hello Klean, **la seule chose de la catégorie qui se
+photographie au téléphone sans attendre 30 jours.**
+
+#### La liste close des interdits
+
+```
+ALLÉGATION DE SANTÉ OU DE RÉSULTAT CORPOREL
+  clinically proven · reduces hair shedding · 87% reported less acne breakouts
+  fixed what years of medication couldn't · stops germs before they touch your body
+  removes 99% sans "up to" ni rapport de test · your water is making you ugly
+  conseillé par les dermatologues · 86% des cheveux moins cassants
+  eczema · neurotoxin · thyroid · sleep apnea
+
+AUTORITÉ ACHETÉE OU INVENTÉE
+  #1 Recommended by Dermatologists · America's #1 · un médecin qui n'existe pas
+  un nombre de clients ou d'avis supérieur à la réalité
+
+NOMMER ET NOTER UN CONCURRENT
+  « Ecovia : F » · « white labeling generic $4 filters from Alibaba »
+  (on compare des TYPES de produit, jamais des marques)
+```
+
+**Autorisé, et c'est tout ce dont on a besoin** : la cartouche neuve à côté de celle du jour 30 ·
+la série de 5 cartouches sur 90 jours · le calcaire sur la paroi · « this is a shower head in
+1970, and this is one in 2026 » · la liste de situations · le coût réel sur 12 mois · le rapport
+de qualité d'eau de sa ville · « On day 59, if you don't love it, you get all your money back. »
+
+#### Sur la France, sans rouvrir la décision
+
+`pureva.com` 63 795 $ vérifiés, `getseoni.com` 45 153 $ à **77,50 €** le pommeau filtrant — le
+produit exact de Plush, sur le marché que le 24 septembre avait fermé. **Ça ne contredit rien** :
+l'analyse tuait la France sur le **ticket et la TVA**, pas sur l'existence du marché. 77,50 € TTC
+= 64,58 € HT, et il faut 35 € de marge. **On reste US.** Noté pour le jour où il y aura du cash.
+
+#### Pièges de requête accumulés
+
+| Requête | Problème |
+|---|---|
+| `afina.com` | Remonte Barrafina, Serafina, Petrafina → **`afina.com/products`** |
+| `eskiin.com/products` | Zéro résultat, eskiin n'envoie jamais sur une fiche → **`eskiin.com/pages`** |
+| `shower filter` générique | Remonte Eureka Forbes (Inde), Scrubsy-India, moodytiger — et des pages de faux praticiens |
+| tri par reach sans filtre | Remonte Shopify, Uber, Adobe, Canva → plafonner `max_facebook_likes: 250000` |
+| tri par `growth30d` | Artefact de mesure → trier par trafic et lire les courbes |
+| déduplication par `collationId` | ⚠️ **Les lignes saisies à la main n'en ont pas.** Dédupliquer sur `collationId` puis `id` puis un index, sinon 29 créas disparaissent d'un coup |
+
+**Crédits à la clôture : ~3 366.** Abonnement expiré le 5 octobre. Tout est dans
+`research/trendtrack-export/`.
+
+---
+
+## 2 novembre 2026 — top 100 des créas concurrentes et plan du test 1
+
+Page : https://claude.ai/artifact/JiPpREDxNfqn8wkba4rJNc · données annotées : `research/top100-creas.json`
+· angles : `research/angles-concurrents.md` · démarchage : `research/gifting/kit-demarchage.md`.
+
+Classement des 278 pubs eau/douche de l'export du 4 oct. sur leur meilleure preuve (dépense vérifiée
+UE/UK, ou jours × variantes), 12 créas max par marque. **43 copiables = 536 323 $ vérifiés, 64 % de
+l'argent prouvé du top 100** · 31 « format seulement » · 26 interdites (corps, « #1 », calcaire).
+Le plus gros de l'argent prouvé n'est pas sur la peau.
+
+**Test 1** : 3 angles × 2 accroches — la cartouche (n°1 Puure 72 991 $) · l'ennemi = le pommeau
+d'origine (n°15 Water2 42 408 $, n°21 avant/maintenant 36 019 $) · l'objection prix en dialogue
+(n°86 GetSeoni). Réglages et seuils du 25 sept. inchangés. Budget : 430 € min, 650 € recommandé.
+
+**Krea** est connecté à la session mais le compte est en plan gratuit à **0 crédit** au 2 nov. :
+aucune génération possible sans plan payant.
+
+## À faire plus tard — l'ebook « Know Your Water » (demandé par Yasser le 19 oct. 2026)
+
+**Engagement pris : écrire et designer l'ebook entier**, pas seulement la couverture.
+Pour l'instant seule la couverture existe : `assets/produit/plush-cadeau-ebook.jpg`.
+
+| | |
+|---|---|
+| Titre | **Plush: Know Your Water** |
+| Sous-titre | *What's in your city's water, and what to do about it.* |
+| Rôle | Cadeau n°2 de la section bundle, offert avec toute commande. Affiché « FREE ~~$20~~ » — décision de Yasser, point déjà discuté, ne pas le rouvrir |
+| Fond | Les rapports annuels de qualité d'eau (CCR), publics et obligatoires pour chaque réseau US : comment trouver celui de sa ville et le lire. Puis la routine douche, l'installation, le jour 30 de la cartouche |
+| Règles | Charte `research/brand/plush-identite.md` (Paper, Ink, Day 30) · zéro allégation santé · « La liste close des interdits » (4 oct.) |
+
+## 19 octobre 2026 — nouveau revenu, et deux bloquants de lancement
+
+**Yasser travaille chez Pizza Hut : ~600-800 €/mois en période scolaire** (13 h/semaine max).
+Les mois de vacances montent à ~1 100-1 150 € (semaines de 28-32 h) — précisé par Yasser le 1er nov.
+**Au 1er nov. : 1 580 € disponibles (535 + 845 + 200), plus ~1 200 € attendus dans les jours qui
+suivent.** Budget des campagnes : à fixer à la création des campagnes (Yasser, 1er nov.).
+Le test de 430 € n'est plus un coup unique :
+environ un test toutes les 5-6 semaines s'il en met la moitié de côté. La réserve de 396 € reste
+intouchable. Enveloppe mensuelle de test : à fixer par Yasser, **avant** de voir les résultats.
+Conséquence de méthode : un test raté ne tue pas Plush — on change la créa d'abord (2-3 tests)
+avant de changer de produit.
+
+**Bloquants trouvés dans les réglages Shopify le 19 oct.** (à vérifier avant tout lancement) :
+- Livraison US facturée **19,95 €** (zone « International » : US, CA, GB, AU…) alors que la page
+  affiche « FREE Shipping »
+- **Un seul marché actif : Pays-Bas.** Boutique montée sur un modèle néerlandais
+- ✅ **Corrigé le 19 oct. avec l'OK de Yasser** : marché « United States » créé (USD), marché
+  Pays-Bas supprimé ; zones Domestic / UE / International supprimées ; une seule zone
+  « United States » avec « Free Shipping · 7–12 business days » à 0 $
+- Reste ouvert : la zone couvre aussi Alaska, Hawaï, Porto Rico, Guam et les adresses militaires
+  (AA/AE/AP). À confirmer avec le fournisseur, sinon retirer ces États de la zone
+
+## 20 octobre 2026 — devis fournisseur reçu
+
+| Offre | Contenu | Prix fournisseur | Prix de vente | Marge après frais Shopify et 6 % de retours (1 € = 1,16 $) |
+|---|---|---|---|---|
+| **Plush Solo** | pommeau + cartouche + boîte logo + carte de remerciement | **21,50 €** | 59,99 $ | **~29 $** → seuil du test de 430 € : ~17 ventes |
+| **Plush Duo** | idem + cartouche de rechange | **27,08 €** (corrigé par Yasser le 20 oct., pas 27,50) | 74,99 $ | **~36,60 $** → seuil : ~13,6 ventes |
+
+La cartouche de rechange coûte donc **5,58 €** de plus dans le Duo, vendue 15 $ de plus : le Duo est
+la meilleure offre en marge absolue, d'où « Best Value » sélectionné par défaut.
+✅ **DDP confirmé par Yasser le 20 oct.** : prix finaux, livraison US et droits de douane inclus.
+Les marges ci-dessus sont donc les vraies. Manque encore : le prix d'une cartouche seule envoyée
+seule (produit de recharge).
+
+### 20 oct., soir — fournisseur n° 2, préféré par Yasser
+
+Fournisseur avec qui Yasser a **déjà travaillé**, jugé 100 % fiable, plus rapide à répondre et à
+livrer. Prix annoncés : **Solo 16,20 €** · **Duo 23,90 €** → la cartouche de rechange coûte **7,70 €**.
+
+**Cartes et stickers : NON inclus — 2 € la carte + 2 € le sticker** (réponse du 20 oct.).
+Le fournisseur 1 les facturait 0,50 € pièce (20,50 € sans, 21,50 € avec).
+
+| Coût rendu US | Solo | Duo | Marge Duo | Ventes pour rembourser 430 € |
+|---|---|---|---|---|
+| Fournisseur 1 (carte + sticker inclus) | 21,50 € | 27,08 € | 36,60 $ | 13,6 |
+| Fournisseur 2 à 2 € + 2 € | 20,20 € | **27,90 €** | 35,70 $ | 14,0 |
+| Fournisseur 2 à 0,50 € + 0,50 € (cible) | 17,20 € | 24,90 € | 39,10 $ | 12,7 |
+
+À 4 €, le n° 2 reste moins cher sur le Solo (−1,30 €) mais devient **plus cher sur le Duo
+(+0,82 €)**, l'offre affichée par défaut. Point de bascule : **carte + sticker ≤ 3,18 € les deux**.
+Négociation envoyée le 20 oct., cible 0,50 € pièce. Seuil posé avant sa réponse : même s'il
+refuse, on reste chez le n° 2 — l'écart est de ~11 € sur tout le test (~14 Duo × 0,82 €),
+moins qu'un seul colis perdu chez un fournisseur moins fiable.
+⚠️ Mon « pire cas » de ~2 € pour les deux était faux : c'est 4 €.
+**22 oct. — cartes en lot : 9,72 € les 200** (≈ 0,05 € la carte, contre 2 € à l'unité). Validé :
+même à 14 commandes seulement, ça coûte ~2,70 € de plus que le tarif à 0,50 € du n° 1, et c'est
+40× moins cher que 2 €. Duo avec carte en lot + sticker à 2 € = **25,95 €**, déjà sous le n° 1.
+Reste : demander le même lot pour les stickers. ⚠️ **Avant d'imprimer** : la carte contient
+`[TON EMAIL]` deux fois et la boutique n'a pas de domaine — 200 cartes figent l'adresse.
+**Domaine (22 oct., vérifié via Shopify)** : `tryplush.com` **pris** · `plushshower.com` **disponible
+(16 $ la 1re année)** · `tryplush.shop` 10 $ · `tryplush.store` 9 $. Recommandé : `plushshower.com`.
+**Boîte 18 × 16 × 13,5 cm** : carte **16 × 14 cm** à plat sur le pommeau (max 16,5 × 14,5) ·
+sticker logo **11 × 5 cm** centré sur le dessus. Schéma : `research/brand/plush-boite-schema.png`.
+⚠️ Vérifier que les 9,72 € / 200 cartes valent pour **ce format**, pas pour une carte de visite.
+### 22 oct., soir — DÉCISION : fournisseur n° 1 retenu (corrigé par Yasser)
+
+⚠️ **Mes notes ci-dessus sur le n° 2 « retenu » étaient fausses.** Le tarif 16,20 / 23,90 € du n° 2
+était un ancien tarif : son **prix final est Solo 25 € · Duo 39 €** → 🔴 KO, trop cher.
+Et les lots de cartes et de stickers viennent du **n° 1**, pas du n° 2.
+
+**Fournisseur retenu : le n° 1** — Solo **21,50 €** · Duo **27,08 €** · DDP.
+Lots chez lui : **200 cartes 16 × 14 cm = 9,72 €** · **100 stickers = 8,60 €** → achat unique **18,32 €**.
+1 seul sticker par commande, sur la boîte uniquement → 100 stickers = 100 commandes.
+
+| Par commande | Solo | Duo | Marge Duo | Seuil du test (430 €) |
+|---|---|---|---|---|
+| 21,50 / 27,08 + lots (0,05 € + 0,09 €) | 21,63 € | 27,21 € | ~36,45 $ | ~13,7 Duo |
+| Si 20,50 / 26,08 + lots (carte et sticker plus inclus dans le prix) | 20,63 € | 26,21 € | ~37,60 $ | ~13,3 Duo |
+
+⚠️ **Question ouverte** : le 20 oct., 21,50 € = 20,50 € de produit + 1 € pour carte et sticker. Si les
+lots remplacent ce 1 €, le prix par commande doit redescendre à 20,50 / 26,08 €. À faire préciser.
+Logo sur la boîte : face imprimée 18 × 13,5 cm, sticker 2,6 × 1,1 cm à 1,2 cm du bord gauche et
+3,1 cm du bas (choix de Yasser, boîte générique imposée, pas d'autre boîte possible).
+✅ **Même modèle confirmé par Yasser** (même pommeau, même filtre).
+✅ **DDP confirmé** (livraison US + droits inclus, prix total) · **délai réel ~7 jours, parfois 5**.
+On garde « 7–12 business days » affiché : promettre moins, livrer plus tôt.
+(si < 7-12 jours : mettre à jour le texte de livraison au paiement, les onglets et le badge).
+
+## 9 novembre 2026 — header C en ligne, état réel avant le lancement des pubs
+
+**Header** : maquette C « Marque » + ligne de garanties, choisie par Yasser. Code :
+`shopify/liquid-perso/plush-header-bandeau.liquid` (au-dessus de « En-tête », porte tout le style et
+ajoute la carte produit au menu tel) + `plush-header-garanties.liquid` (juste en dessous). L'ancien
+« Countdown Timer » est à cacher. `track_url` (partie 2) = lien de la page 17TRACK, vide pour l'instant :
+**aucune page de suivi n'existe encore sur la boutique** (vérifié).
+
+**Vérifié sur la boutique en ligne le 9 nov.**
+
+| Point | État |
+|---|---|
+| Achat sur tel | ✅ Ajout panier → paiement Shopify OK (Duo 74,99 $) |
+| Pixel Meta | ✅ App Facebook & Instagram, pixel 1522240700051418, partage « optimized » |
+| Politiques | ✅ remboursement, livraison, confidentialité · 🔴 **conditions générales et infos de contact : 404** |
+| Ebook | 🔴 **Promis sur la fiche** (« by email after your order: your free eBook ») **mais il n'existe pas**. Bloquant avant la 1re vente |
+| Cartouche seule | En ligne à **24 $** (pas 29 $). Son coût DDP envoyée seule : **toujours inconnu** (manque depuis le 20 oct.) |
+| Erreurs JS fiche produit | 3 erreurs déjà présentes (« $ is not defined », « CartDrawer already declared », getBoundingClientRect au scroll). N'empêchent pas l'achat |
+
+**Abonnement cartouche (idée de Yasser, 9 nov.)** : recommandé **après** le test, pas avant. Le test mesure
+la 1re commande ; l'abonnement ne joue qu'à la 2e (2 à 5 mois plus tard, le Duo contient déjà une
+cartouche). Échelle proposée, à valider avec le coût DDP d'une cartouche seule : seule 29 $ · abonnement
+24 $ tous les 3 mois (seulement si le fournisseur confirme 3 mois de durée) · PLUSHFAM −20 % une fois.
+Aux US : conditions claires avant paiement + résiliation en ligne (app gratuite Shopify Subscriptions).
+
+**Condition de lancement des pubs** : échantillon qui passe les 3 tests (attendu semaine du 9 nov.) +
+ebook livrable (ou promesse retirée de la fiche) + créas prêtes (structure des pros : 25-30 créas, CBO).
+
+**Fait le 9 nov. après-midi** : cartouche passée à **29 $** + photo ajoutée · page cartouche à 2 offres
+(`shopify/liquid-perso/plush-cartouche.liquid`, abonnement visible dès que le plan Shopify Subscriptions
+existe : tous les 3 mois, −5 $) · **PLUSHFAM créé** : −20 % sur toute la commande, 1 fois par client, sans
+minimum ni fin (ajouter « abonnements : 1er paiement » quand l'app est installée ; la boutique n'accepte
+pas encore d'abonnements, `sellsSubscriptions: false`) · politiques écrites (`shopify/policies/` :
+conditions générales avec abonnements, infos de contact, annulation des abonnements) · **ebook livré** :
+`assets/ebook/Plush-Know-Your-Water.pdf` (12 pages), lien à mettre dans l'email de confirmation
+(`shopify/notifications/order-confirmation-ebook.html`). Faux abonnés Instagram : déconseillé à Yasser
+(règle FTC 16 CFR 465.8).
+
+**⚠️ Piège des modèles de page (9 nov.)** : le modèle **par défaut** (`page.json`) contient Our Story
+(section « Page » masquée). Le modèle **« our-story »** est en fait le modèle **propre** (titre + texte
+seulement). Page Our Story = modèle par défaut · page « Your privacy choices » = « our-story » (corrigé
+par l'API le 9 nov., page vide `our-story-1` supprimée). **Toute nouvelle page, celle de 17TRACK
+comprise, doit être mise sur « our-story »**, sinon elle affiche Our Story à la place de son contenu.
+Vraie correction (éditeur de thème, pas faisable par l'API sur le thème en ligne) : vider `page.json`
+et déplacer Our Story dans un modèle à part.
+
+**⚠️ Piège des emails (9 nov.)** : langue principale de la boutique = **fr**, mais les clients US reçoivent
+la **traduction anglaise** de chaque notification (traductions EN fournies par Shopify, présentes pour les
+40 modèles, vérifié par l'API). Modifier « Confirmation de commande » dans l'admin ne change que la version
+**française**, que personne ne reçoit. Le bloc ebook (`shopify/notifications/order-confirmation-ebook.html`)
+doit aller dans la **traduction EN** (`translationsRegister`, ressource EmailTemplate, clé `body_html`).
+À faire dès que Yasser a importé le PDF dans Contenu > Fichiers. URL attendue si le nom reste
+`Plush-Know-Your-Water.pdf` : `https://cdn.shopify.com/s/files/1/1112/3618/6451/files/Plush-Know-Your-Water.pdf`
+(à vérifier par l'API avant d'écrire le lien).
+
+**Ebook v2 (9 nov., soir)**, demandé par Yasser : 21 pages au lieu de 12, plus d'images, une vraie routine
+de douche (6 habitudes, la douche de 10 min, semaine / 30 j / 60 j / an, les 120 premiers jours), et Plush
+présenté comme la seule étape qui agit sur l'eau elle-même (page « The step a bottle can't do », « 48¢ a
+day »). Composition = texte en ligne de la fiche (« How It Works »). Couverture : photo `-24` du site (Plush
+sous la douche), texte incrusté effacé, 959×1600 donc nette en pleine page ; l'ancienne photo (700×836)
+était trop petite. L'agrandissement IA (Real-ESRGAN, modèle téléchargé) a été bloqué par le filtre de
+sécurité de la session. Nouvelle image cadeau pour la fiche : `assets/produit/plush-cadeau-ebook-v2.jpg`.
+Durée de la cartouche alignée sur la fiche : **60 jours** (la v1 disait 3 mois). ⚠️ Incohérence ouverte :
+le bloc abonnement de la page cartouche dit « every 3 months ». ⚠️ Bug de la fiche produit : l'onglet
+« Changing Your Filter » affiche l'ancien texte de composition (2 couches) au lieu des consignes de
+changement. `PLUSHFAM` est imprimé dans l'ebook avec « 20 % » : si la valeur change, refaire le PDF.
