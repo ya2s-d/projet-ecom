@@ -79,7 +79,7 @@
 | 2 Marché | `02_marche/analyse-marche.md` + `amazon-bestsellers-2026-11-10.csv` | ✅ 10 nov. Trends bloqué (429) → consigne de 3 min pour Yasser en §7 · TikTok Creative Center non consulté · §5 réglementaire écrit sans recherche, à revérifier |
 | 3 Concurrents | `03_concurrents/liste-concurrents.csv` + `shortlist.md` | ✅ 10 nov. : 32 concurrents (6 premium · 10 directs · 6 dropshippers · 4 Amazon · 6 substituts), shortlist de 12. Activité pub = export du 4 oct. (Ad Library inaccessible) |
 | 🛑 B | playbook 10 lignes · audit 10 lignes · shortlist | ✅ envoyé le 10 nov. — en attente |
-| 4 Teardown ads | `ads-database.csv`, teardowns, `synthese-ads.md` | ⏳ |
+| 4 Teardown ads | `ads-database.csv`, teardowns, `synthese-ads.md` | 🟠 10 nov., version courte : `ads-database.csv` (294 créas de l'export du 4 oct., colonnes du brief, classement automatique à vérifier, âge/sexe non collectés) + `synthese-ads.md` = **catalogue de 12 formats à reproduire en IA** + top 15. Teardowns et landing pages par marque reportés (priorité : lancement ≤ 18-19 nov.). À mettre à jour avec les captures de Yasser |
 | 5 VOC | `verbatims.csv`, `synthese-voc.md` | ⏳ |
 | 6 Avatar | `avatar-principal.md`, `personas-secondaires.md` | ⏳ |
 | 7 Angles | banques angles + hooks, `matrice-test-DRAFT.md` | ⏳ |
@@ -111,8 +111,9 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 |---|---|---|
 | Date de lancement | **Avant le 18-19 nov.** | Bloc 2 resserré. Créas à produire du ~13 au 17 nov. |
 | Shortlist | « j'ai pas tout lu » : validée par défaut | Teardown sur les 12 |
-| Créas | **Basées principalement sur les créas concurrentes** (types de vidéos, formats), reproduites avec 2 IA vidéo (« Xfield » et « Kai AI », abonnement à venir) | La phase 4 devient le cœur de la production : un catalogue des formats concurrents à reproduire. Règle : on reproduit un format, jamais une créa ; pas de faux client ni de faux résultat générés par IA |
+| Créas | **Précisé le 10 nov. : la plupart des vidéos et des natives seront faites avec Higgsfield ou Kai AI**, inspirées des formats concurrents qui marchent, avec beaucoup d'angles différents et plusieurs formats UGC en IA | La phase 4 devient le cœur de la production : un catalogue des formats concurrents à reproduire. Règle : on reproduit un format, jamais une créa ; pas de faux client ni de faux résultat générés par IA |
 | Durée de la cartouche | **3 mois partout** | Ebook corrigé le 10 nov. Thème : FAQ + onglet « Changing Your Filter » à changer par Yasser. La garantie de 60 jours ne bouge pas |
+| Budget du test | **907 € réellement débités sur 5 jours, soit 150 €/jour dans Ads Manager** (décision du 10 nov.) | — |
 | TVA du compte pub | **Aucun numéro de TVA** | +21 % : CPA BE lu dans Ads Manager ≈ 23 €, ROAS lu 2,59, MER BE 2,14. 150 €/jour = 181,50 € débités |
 | Versements Shopify | EUR | Conversion de 2 % confirmée |
 | Captures Ad Library + vidéos | Yasser les envoie (concurrents, ses vidéos IA du produit, son organique) | Format d'envoi donné le 10 nov. : un dossier Mega public |
@@ -143,6 +144,7 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 
 ## Prochaines actions
 
-1. Fusionner et vérifier les livrables des sous-agents (playbook, marché, concurrents, formations)
-2. 🛑 CHECKPOINT B : playbook en 10 lignes, audit en 10 lignes, shortlist
-3. Questions à Yasser : TVA du compte pub · devise de versement · durée de la cartouche · 4 questions au fournisseur (`01_produit/audit-produit-offre.md` §10)
+1. Phase 7 d'abord, parce que c'est elle qui alimente la production IA : `06_angles/matrice-test-DRAFT.md`, 30 créas réparties sur les 12 formats F1-F12 de `03_concurrents/synthese-ads.md` × angles × personas. Puis `banque-angles.md` et `banque-hooks.md`
+2. Phase 5 VOC, version légère et plafonnée : les sources ouvertes seulement (Reddit, Trustpilot et Amazon bloqués), en annonçant le nombre réel de verbatims. Phase 6 : mise à jour de l'avatar v2 avec les données
+3. Intégrer les captures et vidéos de Yasser (dossier Mega) dès qu'elles arrivent : script de transcription + 4 images par vidéo
+4. Pour économiser les tokens : reprendre le bloc 2 dans une **nouvelle session**, à partir de ce fichier, avec un contexte léger
