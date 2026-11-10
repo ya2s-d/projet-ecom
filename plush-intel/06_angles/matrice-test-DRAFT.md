@@ -92,6 +92,8 @@ Ce qu'il faut savoir sur 30 créas à 150 €/jour : le test jugera au plus ~13 
 
 ### Ensemble B — vidéos (10)
 
+> ⚠️ **Remplacé le 10 nov.** par la v2 du §5 de `production-creas.md` : chaque vidéo copie une gagnante concurrente et vend le produit (accroche → problème → Plush → démo → objection → offre). Le tableau ci-dessous est l'ancienne version.
+
 | # | Nom | Format catalogue | Hypothèse testée |
 |---|---|---|---|
 | B01 | `C13_ANG-trajet_PER-P1_AW-UN_FMT-anim` | F5 | Un cartoon du trajet de l'eau, de la station à la douche, garde l'attention d'une audience inconsciente |

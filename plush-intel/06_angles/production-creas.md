@@ -2,7 +2,7 @@
 
 > Écrit le 10 nov. 2026, sur la matrice `matrice-test-DRAFT.md` (mêmes numéros A01-A20, B01-B10).
 > Chaque fiche contient ce qu'il faut pour générer sans repasser par moi : visuel + prompt, texte à l'écran, texte principal, titre, ou script vidéo.
-> Les hooks sont numérotés ici : `HK-01` à `HK-60`, 2 par créa (le principal + une alternative pour la réserve et les itérations). C'est la banque de hooks de la Phase 7.
+> Les hooks sont numérotés ici : `HK-01` à `HK-60` (vidéos refaites le 10 nov. : HK-41 à HK-60 = nouvelles accroches), 2 par créa (le principal + une alternative pour la réserve et les itérations). C'est la banque de hooks de la Phase 7.
 
 ---
 
@@ -92,8 +92,9 @@ Prompts en anglais, à générer en 4:5 avec la photo P1 en référence d'image 
 - **Titre** : Pick your own shower head
 - **Prompt** : `split product photo, left: old dull builder-grade chrome shower head with limescale, harsh light; right: [reference image] round chrome filtered shower head on warm beige paper background #F6F2ED, soft daylight, minimal, editorial, 4:5`
 
-### A04 — C03 prix sur 12 mois · note
-- **Texte à l'écran (note iPhone)** : `HK-07` « The math on a $74.99 shower head » → « $74.99 ÷ 182 days = 41¢ a day / 2 cartridges in the box / each one lasts 3 months / my coffee: $6.40 »
+### A04 — C03 prix sur 12 mois · ticket de caisse
+- **Visuel** : vrai ticket de caisse thermique photographié sur un plan de travail (généré), lignes imprimées.
+- **Texte à l'écran (le ticket)** : `HK-07` « The math on a $74.99 shower head » → « $74.99 ÷ 182 days = 41¢ a day / 2 cartridges in the box / each one lasts 3 months / my coffee: $6.40 »
 - `HK-08` (alt) : « 41¢ a day. That's the whole pitch. »
 - **Texte principal** : The Duo comes with 2 cartridges. Each one lasts 3 months. That's 6 months of filtered showers for $74.99, or 41¢ a day. And if you don't love it, you have 60 days to send it back.
 - **Titre** : 41¢ a day, 6 months covered
@@ -136,8 +137,9 @@ Prompts en anglais, à générer en 4:5 avec la photo P1 en référence d'image 
 - **Texte principal** : Step 1, unscrew the old one. Step 2, screw Plush on. Step 3, turn the water on. Moving out? Swap the old one back in.
 - **Titre** : Installs in 3 steps
 
-### A10 — C06 cadeau · note liste
-- **Texte à l'écran (note iPhone)** : `HK-19` « Gifts for someone who just moved in » → « ☑ good sheets / ☑ a plant they can't kill / ☐ a shower head that's not from 2009 »
+### A10 — C06 cadeau · liste manuscrite
+- **Visuel** : liste écrite au stylo sur un bloc-notes papier, photo réelle ou générée, posée à côté de la boîte Plush.
+- **Texte à l'écran (la liste)** : `HK-19` « Gifts for someone who just moved in » → « ☑ good sheets / ☑ a plant they can't kill / ☐ a shower head that's not from 2009 »
 - `HK-20` (alt) : « The housewarming gift nobody else will think of »
 - **Texte principal** : They have enough candles. Plush is the gift they'll use every morning. 2 cartridges in the Duo. Order by Dec 4 for delivery before Christmas (US).
 - **Titre** : The gift they'll use every day
@@ -178,8 +180,9 @@ Prompts en anglais, à générer en 4:5 avec la photo P1 en référence d'image 
 - **Texte principal** : The Duo comes with 2 cartridges. One goes in on day 1, the other in month 4. $74.99, free US shipping.
 - **Titre** : Duo: 6 months covered
 
-### A16 — C09 Duo · note
-- **Texte à l'écran (note iPhone)** : `HK-31` « What's actually in the box » → « 1 Plush shower head, chrome / 1 cartridge, already installed / 1 spare cartridge (3 months each) / a thank-you card with the 5-step install / the free eBook by email: Know Your Water »
+### A16 — C09 Duo · boîte ouverte étiquetée
+- **Visuel** : P2 vue de dessus, une étiquette fine par objet.
+- **Étiquettes** : `HK-31` « What's actually in the box » → « 1 Plush shower head, chrome / 1 cartridge, already installed / 1 spare cartridge (3 months each) / a thank-you card with the 5-step install / the free eBook by email: Know Your Water »
 - `HK-32` (alt) : « Unboxing a $74.99 shower head, honestly »
 - **Texte principal** : No subscription, no hidden fees. Everything you need for 6 months is in the box.
 - **Titre** : Everything in one box
@@ -215,79 +218,130 @@ Prompts en anglais, à générer en 4:5 avec la photo P1 en référence d'image 
 
 ---
 
-## 5. Ensemble B — vidéos (10)
+## 5. Ensemble B — vidéos (10) · v2 du 10 nov., refaite après le retour de Yasser
 
-Modèle recommandé par défaut : **Seedance 2.5** (30 s, audio natif, références produit) ; **Veo 3.1** pour les scènes réalistes avec voix ; plans réels pour tout ce qui montre l'installation. Sous-titres incrustés sur toutes les vidéos.
+**La règle, demandée par Yasser** : chaque vidéo **vend**. Pas de « concept » qui s'arrête à l'accroche. Chaque vidéo reprend, temps par temps, la structure d'une gagnante réelle des concurrents (transcriptions dans `../../research/trendtrack-export/ads-final-4oct.json`), et suit toujours le même arc :
 
-### B01 — C13 le trajet de l'eau · animation (20-25 s)
-- `HK-41` (0-2 s) : une goutte cartoon : « Before your shower, I traveled 12 miles. » · `HK-42` (alt) : « This is the trip your shower water takes. »
-- **Plans** : réservoir → station de traitement (« a little chlorine, to keep me safe ») → kilomètres de tuyaux → ton immeuble → le vieux pommeau → bascule sur Plush, la goutte traverse 6 couches → arrive douce sur un gant de toilette.
-- **Fin** : « Plush filters it at the last stop. » + produit réel + « Shop now ».
-- **Prompt de style** : `soft 3D claymation style, warm pastel palette, beige #F6F2ED and rust #A86B45 accents, friendly water droplet character, 9:16`
-- Hypothèse : l'audience qui ne pensait pas à son eau regarde jusqu'à la fin.
+```
+1. ACCROCHE      elle se reconnaît (0-3 s)
+2. PROBLÈME      ce qu'elle vit déjà, avec ses mots
+3. CE QU'ELLE A DÉJÀ ESSAYÉ    shampooing, Amazon pas cher, filtre qui tue la pression
+4. PLUSH         la réponse, montrée (produit réel)
+5. DÉMO          cartouche / installation / eau qui coule
+6. OBJECTION     prix, pression, plombier : levée en montrant
+7. OFFRE         Duo 2 cartouches · livraison offerte · 60 jours
+8. CTA           « Tap Shop now »
+```
 
-### B02 — C14 la chanson du pommeau « builder grade » (20-30 s)
-- `HK-43` : « 🎵 The shower head that came with my place… » · `HK-44` (alt) : « A song for every renter's shower head »
-- **Paroles** (country-pop léger, voix féminine, générée en audio) :
-  > The shower head that came with my place / was picked by a guy I'll never face / it's older than my car and twice as gray / so I unscrewed it on a Sunday // Plush on the arm, three steps, I'm done / filtered water for everyone / the old one's in a drawer for move-out day / la la la, that's my shower now
-- **Visuel** : montage des plans P6 → P4 → P7, texte des paroles en karaoké.
-- Hypothèse : se regarde jusqu'au bout et se partage.
+**La seule chose qu'on ne copie pas** : le témoignage « I finally got this one, my hair is softer » (FlowPure, Jolie, Oasis). Joué par une personne IA, c'est un faux témoignage (FTC) et une allégation. **On obtient le même effet avec le format POV** (« POV: you… », la spectatrice est l'héroïne), avec la voix de la marque (« we »), ou avec une scène jouée et marquée « Dramatization ». Le vrai témoignage arrivera au test 2 avec une vraie créatrice.
 
-### B03 — C15 l'éducatif long (3-4 min, voix off + présentatrice IA)
-- `HK-45` : « Your city publishes a report on your water every year. Here's how to read it in 3 minutes. » · `HK-46` (alt) : « Nobody told you how to read your water report. »
-- **Script** (≈ 450 mots, ton amie qui s'y connaît) :
+Outils : Seedance 2.5 ou Veo 3.1 pour les scènes et les voix, produit toujours généré à partir de la vraie photo, plans réels (§3) pour installation et cartouche. Sous-titres incrustés partout. Mention « Dramatization » ou « AI presenter » quand une personne IA joue.
+
+### B01 — Ouvrir la cartouche · copie de Puure (72 991 $, 453 j) + Santevia (481 j) · 25-30 s · voix de la marque
+- `HK-41` (0-3 s, gros plan, mains qui dévissent) : « What's actually inside a filter shower head? Let's open one. »
+- **2** : « Most filter shower heads won't let you look inside. Ours does. »
+- **3** : couche par couche sur la vraie cartouche (P3) : « Cotton for sediment. KDF-55 and calcium sulfite, designed to reduce chlorine. Carbon. Vitamin C. Steel mesh. »
+- **4-5** : « Why it matters: your city treats tap water with chlorine. Up to 4 mg/L is allowed. You filter what you drink. This is for what you shower in. » + P7
+- **6** : « Fits standard US shower arms. 3 steps. » + P4 accéléré
+- **7-8** : « The Duo comes with 2 cartridges, 6 months covered, 60 days to try it. Tap Shop now. »
+- `HK-42` (alt) : « You can't see inside most shower filters. Here's ours. »
+- **Version test 2** : dès qu'une vraie cartouche est marquée, l'accroche devient celle de Puure mot pour mot : « This is what our cartridge caught in [X] weeks. Here's a fresh one next to it. »
+
+### B02 — POV de l'emménagement · copie de l'arc d'Oasis (55 880 $, 318 j, la plus chère du relevé), sans ses allégations · 25-30 s
+- **Format** : POV, texte à l'écran + voix off douce, actrice IA filmée comme un téléphone posé (elle ne parle pas face caméra, elle vit la scène). « Dramatization ».
+- `HK-43` : « POV: you just moved into a new apartment and the shower smells like a pool. »
+- **2** : « You switch shampoo. Twice. Then conditioner. Nothing feels different. »
+- **3** : elle scrolle Amazon : « The cheap ones look sketchy. The fancy ones kill the pressure. » (ses mots, relevés dans l'avatar)
+- **4** : « Then you find one with a cartridge you can actually see. » → Plush réel
+- **5** : installation (P4) : « 3 steps. No plumber. No calling the landlord. »
+- **6** : eau qui coule (P7) : « Same apartment. Filtered shower. »
+- **7-8** : « 2 cartridges in the Duo. 60 days to try it. Tap Shop now. »
+- `HK-44` (alt) : « POV: your new rental came with a shower head from 2009. »
+- ⚠️ Aucun résultat sur la peau ou les cheveux. On s'arrête à « filtered shower ».
+
+### B03 — 1998 contre 2026 · copie de Puure / Keith Maynard (36 019 $, 208 j), script suivi phrase par phrase · 25-30 s
+- `HK-45` : « This is a shower head from 1998. And this is a shower head from 2026. Notice something? » (scène d'époque IA → Plush réel)
+- **2** : « Back then, a shower head did one job: spray water. That's it. »
+- **3** : « Today you filter your drinking water. A pitcher, a fridge filter. But your shower runs the same tap water, hot, for 10 minutes. »
+- **3 bis** : « And most cheap filters? A handful of colored beads. »
+- **4-5** : « It's 2026. There's a better way. » → Plush, cartouche 6 couches en vue éclatée animée sur la vraie photo
+- **6** : « Fits the arm you already have. 3 steps. »
+- **7-8** : Duo + 60 jours + « Tap Shop now. »
+- `HK-46` (alt) : « Your phone is from 2025. Your shower head is from 1998. »
+
+### B04 — Le dialogue des 3 objections · copie de GetSeoni (79 j) + Water2 (3 objections par vidéo) · 25-30 s · « Dramatization »
+- **Format** : 2 colocs IA dans la cuisine, voix natives.
+- `HK-47` : « — Wait. You paid seventy-five dollars for a shower head? »
+- **Objection prix** : « — For six months. Two cartridges in the box. — So like… — Forty-one cents a day. Less than your oat milk. »
+- **Objection plombier** : « — You needed a plumber though. — I needed three minutes. » → coupe sur P4
+- **Objection pression** : seulement si le test du seau (P5) est bon : « — It kills the pressure. — Watch. » → P5. Sinon, on la remplace par « — What does it even filter? » → la cartouche ouverte
+- **Fin** : « — Send me the link. » → produit, Duo, 60 jours, « Tap Shop now. »
+- `HK-48` (alt) : « — Don't tell me you bought the $75 shower head. »
+
+### B05 — Le classement des types · copie de GetSeoni (14 480 $, 91 j), même structure, sans aucune marque · 25-30 s
+- `HK-49` : « I ranked every type of shower head. Only one gets an A. »
+- **Critères** (repris de GetSeoni) : « My criteria: what it filters, whether you can see the cartridge, if it fits a US arm, and the real cost over a year. That's where it plays out. »
+- **D** : « The one that came with your apartment. Filters nothing. »
+- **C** : « Colored-bead filters. Cheap, but it's mostly beads. »
+- **B** : « The "15-stage" ones. Sealed, so you never see what's inside. »
+- **A** : « A 6-layer cartridge you can open, change every 3 months, and that fits your arm. » → Plush réel, P3, P4
+- **Fin** : « 41 cents a day with the Duo. 60 days to try it. Tap Shop now. »
+- `HK-50` (alt) : « Shower head tier list, from the one in your rental to the one in mine. »
+
+### B06 — L'installation chronométrée · copie de Hello Klean (19 882 $, 51 variantes) + Water2 « pod 2.0 » (10 922 $) · 20-25 s · 100 % réel
+- `HK-51` : « Timing myself installing a filter shower head. No tools, no plumber. » (chrono déjà lancé à l'écran)
+- **2** : on dévisse l'ancien pommeau (P6) : « This one came with the apartment. »
+- **3-5** : P4 en entier, accéléré aux temps morts, chrono qui tourne
+- **6** : P7 + « Moving out? The old one screws back on. »
+- **7** : copie de Water2 : « And if on day 59 you don't love it, you get all your money back. »
+- **8** : « 2 cartridges in the Duo. Tap Shop now. »
+- `HK-52` (alt) : « If you can open a jar, you can install this. »
+
+### B07 — « Don't buy this shower head » · copie de Sproos (420 j) · 20 s · voix de la marque
+- `HK-53` : « Don't buy this shower head. » (pause) « Unless… »
+- **2** : liste de situations, une par plan (copie de Showery, 481 j) : « …your rental came with a builder-grade one. / …your shower smells like a pool. / …you filter your drinking water but not your shower. / …you hate calling a plumber. »
+- **4-5** : Plush réel, cartouche, installation en 3 plans
+- **6-7** : « Fits standard US arms. 2 cartridges in the Duo. 60 days to try it. »
+- **8** : « But if you love your old shower head, Plush isn't for you. » + « Shop now »
+- `HK-54` (alt) : « This shower head is not for everyone. »
+
+### B08 — « Ta ville publie un rapport sur ton eau », version courte · copie de Pure Shower BR (419 et 426 j, 35 variantes) + accroche question de Jolie · 25-30 s · présentatrice IA
+- `HK-55` : « Did you know your city publishes a report on your water every year? »
+- **2** : « Search your city plus "consumer confidence report". Look for chlorine or chloramine. That's what keeps tap water safe on its way to you. »
+- **3** : « You probably filter what you drink. But your shower is the same water, hot, every morning. »
+- **4-5** : « That's what Plush is for. A 6-layer cartridge at the shower head. » + P3 + P7
+- **6-8** : « 3 steps to install. 2 cartridges in the Duo. 60 days. Tap Shop now. »
+- `HK-56` (alt) : « Your water company already told you what's in your shower. »
+
+### B09 — L'éducatif long (3-4 min) · copie de Pure Shower BR (419 j), en version longue · présentatrice IA
+- `HK-57` : « Your city publishes a report on your water every year. Here's how to read it in 3 minutes. »
+- **Script** :
   1. *0:00* Every water system in the US has to publish a report every year. It's called a Consumer Confidence Report. Most people have never opened theirs.
   2. *0:20* Here's how to find it: search your city's name plus "consumer confidence report". It's usually a PDF.
   3. *0:40* Skip to the table. Look for a line called disinfectant, chlorine or chloramine. That's what keeps tap water safe on its way to you. The EPA allows up to 4 milligrams per liter.
-  4. *1:20* Here's the part nobody mentions: you probably filter the water you drink. A pitcher, a fridge filter. But the water you shower in comes from the same pipes, and it's hot, and it runs for 10 minutes.
-  5. *2:00* That's why shower filters exist. A good one has a real cartridge: sediment layer, KDF-55, carbon. And you should be able to see it, and change it.
+  4. *1:20* Here's the part nobody mentions: you probably filter the water you drink. A pitcher, a fridge filter. But the water you shower in comes from the same pipes, it's hot, and it runs for 10 minutes.
+  5. *2:00* That's why shower filters exist. A good one has a real cartridge: a sediment layer, KDF-55, carbon. And you should be able to see it, and change it.
   6. *2:40* Here's our shower routine, the one in our free eBook: shorter, slightly cooler showers, conditioner last, and a filter at the shower head.
-  7. *3:10* Plush is the filter part. 6 layers, a cartridge that lasts 3 months, fits standard US arms. 60 days to try it. Link below.
-- **Visuel** : présentatrice IA dans une cuisine claire (Veo 3.1), inserts du PDF, du produit réel, de P7. Mention « AI presenter » discrète.
+  7. *3:10* Plush is the filter part. 6 layers, a cartridge that lasts 3 months, fits standard US arms. 2 cartridges in the Duo, 60 days to try it. Tap Shop now.
+- `HK-58` (alt) : « Nobody told you how to read your water report. »
 - Jugé sur le CPA, pas sur la rétention.
 
-### B04 — C02 « Things in your rental nobody replaces, Part 1 » (15-20 s)
-- `HK-47` : « Things in your rental nobody replaces. Part 1. » · `HK-48` (alt) : « Part 1 of things your landlord will never upgrade »
-- **Plans** : texte d'ouverture → gros plan P6 (« the shower head ») → « installed by the lowest bidder, probably in 2009 » → P4 accéléré → P7 → « Part 2: the blinds. (Kidding. Just the shower head.) »
-- Hypothèse : le format série crée un concept neuf pour Meta.
+### B10 — Le fondateur · copie de FlowPure (678 j, 48 variantes), version fondateur au lieu du faux témoignage · 30-45 s · toi, au téléphone
+- `HK-59` : « I'm 17 and I started a shower head brand. Here's the honest pitch. »
+- **2** : « Most shower heads in rentals were picked by the contractor. Nobody ever filters that water. »
+- **3** : « When I looked at filters, the cheap ones were colored beads, and the nice ones were $150. »
+- **4-5** : la cartouche dans ta main : « So Plush is a 6-layer cartridge you can actually see. You change it every 3 months. » + tu vises en 3 gestes
+- **6** : « What it won't do: soften hard water. That's a whole-house system. »
+- **7-8** : « Two cartridges in the Duo, free shipping, 60 days to try it. Link's right there. »
+- `HK-60` (alt) : « I'm the founder, and here's what my shower head won't do. »
+- **Si tu refuses de tourner** : remplacée par une 2e version de B02 (« POV: you're buying a housewarming gift »).
 
-### B05 — C03 le dialogue sur le prix (20-25 s, 2 acteurs IA, « Dramatization »)
-- `HK-49` : « — You paid $75 for a SHOWER HEAD? » · `HK-50` (alt) : « — It'll kill the water pressure. — Watch. »
-- **Script** :
-  > A: You paid seventy-five dollars for a shower head?
-  > B: For six months of filtered showers. Two cartridges in the box.
-  > A: That's like… what, forty cents a day?
-  > B: Forty-one. Less than your oat milk.
-  > A: And you needed a plumber.
-  > B: I needed three minutes. *(montre la douche)*
-  > A: …send me the link.
-- **Visuel** : 2 colocataires dans une cuisine (Veo 3.1, voix natives), puis plan réel du produit. « Dramatization » en bas à gauche pendant toute la scène.
-- ⚠️ Si P5 ne prouve rien sur la pression, on ne fait pas la version `HK-50`.
-
-### B06 — C04 la présentatrice et le rapport d'eau (25-30 s)
-- `HK-51` : « Your water company already told you what's in your water. » · `HK-52` (alt) : « Search this on Google tonight: your city + "water report" »
-- **Script** : Your water company publishes a report every year. It's public. Search your city plus "consumer confidence report". Look for chlorine or chloramine. That's in your shower too. Plush filters it at the shower head, 6 layers, 3 months per cartridge. Link below.
-- **Visuel** : présentatrice IA face caméra (Veo 3.1), inserts du PDF générique et du produit. « AI presenter » discret.
-
-### B07 — C05 l'installation réelle, chrono à l'écran (15-25 s)
-- `HK-53` : « Timing myself installing a shower filter. » · `HK-54` (alt) : « No plumber. No landlord. Watch the timer. »
-- **Plans** : P4 tel quel, coupé seulement aux temps morts, chrono incrusté en haut. Fin sur P7 + « Shop now ».
-- 100 % réel. L'IA ne touche pas à cette vidéo, sauf pour le sous-titrage.
-
-### B08 — C10 le classement des types (20-25 s)
-- `HK-55` : « Ranking shower head types, from worst to best. » · `HK-56` (alt) : « I ranked every kind of shower filter. No brands. »
-- **Plans** : grille de classement animée. « The one that came with your place » → D. « Colored-bead filter » → C. « "15-stage" filter you can't open » → B. « A filter with a cartridge you can see and change » → A, avec le produit réel.
-- ⚠️ Types uniquement, jamais une marque.
-
-### B09 — C12 de 1998 à aujourd'hui (10-15 s)
-- `HK-57` : « This is a shower head in 1998. » · `HK-58` (alt) : « Same rental. Same shower head. Since 1998. »
-- **Plans** : salle de bain années 90 en grain de film (Seedance 2.5) → « and this is one in 2026 » → Plush réel, lumière douce.
-- Hypothèse : le contraste sur l'objet arrête le scroll à froid.
-
-### B10 — C11 le fondateur face caméra (30-45 s) · toi, sinon remplacé par une vidéo cadeau (C06)
-- `HK-59` : « I'm the founder, and here's what my shower head won't do. » · `HK-60` (alt) : « I started a shower head brand at 17. Here's the honest pitch. »
-- **Script** : Hi, I'm Yasser, I started Plush. Quick honest list. Plush won't soften hard water, that's a whole-house system. It won't fix your plumbing. What it does: a 6-layer cartridge filters your water at the shower head, and you can see it, and change it every 3 months. 2 cartridges in the Duo, 60 days to try it. That's it.
-- Tourné au téléphone, lumière de fenêtre, une seule prise. Pas d'IA.
+### Ce qui a été retiré de la v1, et pourquoi
+| v1 | Pourquoi retiré |
+|---|---|
+| Cartoon de la goutte d'eau | Aucune gagnante de la catégorie derrière, et il ne vendait pas le produit |
+| Chanson « builder grade » | Idem. Conseil du media buyer, mais aucune preuve dans le relevé |
+| Série « Part 1 » | Fusionnée dans B07 (même angle, structure gagnante de Sproos) |
 
 ---
 
