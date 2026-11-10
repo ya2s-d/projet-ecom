@@ -33,11 +33,11 @@
 
 | # | Règle | Chiffre Plush | Statut |
 |---|---|---|---|
-| 1 | **Une campagne Ventes Advantage+, 1 ensemble (2 au maximum)**, optimisation Achat, enchère « plus haut volume », US, audience large | Formule Meta : budget hebdo ÷ (CPA × 50) = 1 218 $ ÷ (32,90 × 50) = **0,74 ensemble**. Même un seul ensemble ne sortira pas d'apprentissage | FAIT (formule [S18]) + INFÉRENCE |
-| 2 | **Le budget fixe le nombre de créas, pas l'inverse** | Juger une créa sur l'achat = 2× CPA BE = **57 €**. 750-900 € → **13 à 15 créas jugeables au maximum**, à dépense égale. Vague 1 = **12-14 ads** | INFÉRENCE [I1] |
-| 3 | **Compter les concepts, pas les fichiers.** Deux ads qui ont la même image ou la même 1re seconde = une seule créa pour Meta | Vague 1 : **10-12 concepts**, chacun différent des autres sur ≥ 2 dimensions (angle, persona, format, décor/créateur, niveau de conscience) | FAIT [S6] + INFÉRENCE |
+| 1 | **Une campagne CBO (budget de campagne Advantage+), 2 ensembles : images (natives + statiques) / vidéos.** Optimisation Achat, enchère « plus haut volume », US, audience Advantage+ | Décision de Yasser (10 nov.). Formule Meta : 1 218 $ ÷ (32,90 × 50) = **0,74 ensemble** soutenable → aucune structure ne sort d'apprentissage, on juge créa par créa sur des seuils posés avant | FAIT (formule [S18]) + décision |
+| 2 | **Règle « non testée »** : une créa sous **28 €** de dépense à J+5 et sans achat n'est pas perdante, elle repart dans la CBO suivante | 28 € = 1× CPA BE. Exception : hook raté dès 15 € (seuils §13) → nouveau 1er visuel avant de repartir | INFÉRENCE [I1] |
+| 3 | **Compter les concepts, pas les fichiers.** Deux ads qui ont la même image ou la même 1re seconde = une seule créa pour Meta | 30 créas = **au moins 15 concepts**, chacun différent des autres sur ≥ 2 dimensions (angle, persona, format, décor/créateur, niveau de conscience). Dans un même ensemble, jamais deux ads avec la même image ou la même 1re seconde | FAIT [S6] + INFÉRENCE |
 | 4 | **Lire le score « Creative diversity » 24 h après le lancement** : viser « High ». Si « Low », remplacer les quasi-doublons, ne pas en ajouter | Ads Manager, par ensemble | FAIT (l'indicateur existe [S7][S8]) · HYPOTHÈSE (effet sur les résultats) |
-| 5 | **72 h sans toucher** après un lancement ou un ajout. Modifications groupées en un seul passage tous les 3-4 jours | J+0, J+3, J+6 | FAIT (Meta recommande de grouper [S18]) + HYPOTHÈSE (72 h) |
+| 5 | **Un seul passage de modifications pendant le test** : J+3 (coupes aux seuils + entrée des vidéos produit en un lot). Rien d'autre avant J+5 | J0 lancement · J+3 passage unique · J+5 décision · J+7 relecture | FAIT (Meta recommande de grouper les modifications [S18]) + HYPOTHÈSE (calendrier) |
 | 6 | **Couper sans discuter** aux seuils posés avant | 28 € dépensés + 0 ajout panier + CTR lien < 0,8 % · 57 € + 0 achat · 85 € + CPA > 42 € | INFÉRENCE [I1] |
 | 7 | **Un gagnant = ≥ 3 achats à CPA ≤ 20 €.** On l'itère tout de suite en 3 variantes (hook, format, persona) | Fatigue attendue en 2-4 semaines | FAIT (fatigue [S13]) + INFÉRENCE |
 | 8 | **Scaler par paliers de +20 % tous les 3 jours** si le CPA sur 3 jours glissants ≤ CPA BE. Jamais de doublement | 150 → 180 → 216 €/jour | HYPOTHÈSE (heuristique de praticiens, aucune doc Meta) |
@@ -47,8 +47,8 @@
 | 12 | **Aucune allégation non prouvée** : aucun % de chlore tant que le certificat usine n'est pas lu · jamais « soft water », « adoucit », « anti-calcaire » (le produit n'adoucit pas) · aucun résultat sur la peau ou les cheveux · aucune question sur un attribut personnel | « Do you have eczema? » = refus Meta + risque FTC | FAIT [S33][S34][S35] + [I1] |
 | 13 | **Zéro faux avis, fausse capture, faux tweet, faux « #1 », faux expert** | Jusqu'à **53 088 $ par infraction** (16 CFR 465) | FAIT [S37] |
 | 14 | **Prix barrés** : 115 $ et 144,02 $ ne sont défendables que s'ils ont été réellement pratiqués, ouvertement et de bonne foi | Sinon « prix de référence fictif » (16 CFR 233.1). Ne pas les mettre dans une pub tant que ce n'est pas réglé | FAIT [S39] + INFÉRENCE |
-| 15 | **70 % de créas « produit / offre », 30 % d'éducation.** L'éducation se juge sur CTR et coût par ajout panier, pas sur l'achat à J+5 | Vague 1 : ~9 offre/produit, ~4 éducation | INFÉRENCE |
-| 16 | **Statiques et natives d'abord, vidéos produit en vague 2**, ajoutées via l'outil « Creative testing » de Meta (budget dédié) pour qu'elles reçoivent de la dépense | 5 à 10 ads par test selon le compte | FAIT [S24] + INFÉRENCE |
+| 15 | **70 % de créas « produit / offre », 30 % d'éducation.** L'éducation se juge sur CTR et coût par ajout panier, pas sur l'achat à J+5 | 30 créas : ~21 offre/produit, ~9 éducation | INFÉRENCE |
+| 16 | **L'ensemble vidéos part à J0 avec les VSL sans produit** (animation, chanson, éducatif) ; les vidéos produit entrent en un seul lot dès l'échantillon reçu, via l'outil « Creative testing » de Meta si le compte l'a | Minimum de dépense **45 €/jour** sur l'ensemble vidéos (§13) | FAIT [S24] + INFÉRENCE |
 | 17 | **Une créa = une page** : le 1er écran de la landing répète la promesse et le visuel du hook | PDP pour les créas offre ; advertorial seulement si une créa d'éducation gagne | INFÉRENCE |
 | 18 | **Pas de test pendant la semaine du BFCM** : tester du 11 au ~20 nov., puis BFCM (27-30 nov.) avec les 3-5 meilleures créas et une offre en valeur ajoutée (cartouche offerte) plutôt qu'une remise | CPM BFCM 2025 ≈ 22,26 $ contre une médiane annuelle de 15,06 $ (≈ +48 %, estimation) | FAIT [S25][S26] + INFÉRENCE |
 | 19 | **Date limite de Noël honnête** : « Order by Dec 7 » (pire cas 12 jours ouvrés). Après, plus d'angle « livré pour Noël » | La règle FTC exige une base raisonnable pour tout délai annoncé | FAIT [S40] + INFÉRENCE (date) |
@@ -99,11 +99,11 @@
 ### 1.4 Combien de concepts pour 25-30 créas, appliqué à Plush
 
 - **Règle de travail : 1 concept = 1 raison d'acheter distincte, montrée avec un visuel distinct.** Un hook réécrit sur la même image n'est pas un concept (INFÉRENCE de [S6][S9]).
-- **Vague 1 (sans échantillon) : 10-12 concepts × 1 exécution chacun, + 2 doublons d'exécution max sur les 2 concepts les plus forts = 12-14 ads.** Pas 25-30 : le budget ne les jugera pas (§3, §13).
-- **Vague 2 (échantillon reçu) : 5-8 vidéos** sur les angles qui ont reçu de la dépense en vague 1, plus 2-3 nouveaux concepts que seule la vidéo permet (installation chronométrée, test du seau, cartouche après 450 gallons [I1]).
+- **Plan retenu (Yasser, 10 nov.) : 30 créas = 15 concepts. Ensemble A : 20 images (10 natives + 10 statiques) sur C01-C12. Ensemble B : 10 vidéos (C13-C15 + 7 concepts de C01-C12).** Un même concept en image et en vidéo = 2 créas différentes pour Meta (format différent [S6]).
+- **Ce qui part à J0** : les 20 images et les VSL sans produit (animation, chanson, éducatif long, texte animé). **Ce qui entre à J+3** : les vidéos produit (installation chronométrée, test du seau, cartouche après 450 gallons [I1]), en un seul lot, en remplacement des VSL coupées aux seuils.
 - **Matrice des différences pour Plush** (une ligne = un concept, chaque ligne diffère des autres sur ≥ 2 colonnes) :
 
-| Concept | Angle | Persona | Niveau de conscience | Format vague 1 |
+| Concept | Angle | Persona | Niveau de conscience | Format image (ensemble A) |
 |---|---|---|---|---|
 | C01 | La cartouche neuve à côté d'une usée (preuve visuelle) | P1 Megan | Problem-aware | Statique photo produit (photo réelle uniquement, voir §11) |
 | C02 | L'ennemi = le pommeau « builder grade » de l'appartement | P1 locataire | Solution-aware | Note iPhone |
@@ -117,12 +117,17 @@
 | C10 | Ce qu'il y a dans la cartouche (composition affichée, sans promesse chiffrée ; le nombre de couches diffère encore entre la fiche et l'onglet [I1]) | P5 « ingénieur » | Solution-aware | Statique éclaté / schéma |
 | C11 | « Things we won't tell you » : ce que Plush ne fait pas (n'adoucit pas) | P5 | Product-aware | Statique texte, ton honnête |
 | C12 | Avant / maintenant : le pommeau des années 70 contre 2026 | P1 | Unaware | Statique ou animation simple |
+| C13 | Le trajet de l'eau, de la station à la douche | P1 | Unaware | Vidéo seulement (cartoon) |
+| C14 | Chanson / jingle sur le pommeau « builder grade » | P2 | Problem-aware | Vidéo seulement |
+| C15 | Éducatif 3-4 min : lire le rapport d'eau de sa ville, puis la routine douche | P5 | Problem → solution-aware | VSL long seulement |
+
+Ensemble B : C13-C15 + 7 concepts de C01-C12 déclinés en vidéo sans produit (voix off, texte animé, visuels d'eau) = 10 vidéos à J0.
 
 ### 1.5 Débats
 
 | Sujet | Position A | Position B | Notre lecture |
 |---|---|---|---|
-| Volume de créas | 25-50 ads par ensemble, le système trie (agences, conseil du media buyer de Yasser) | Loomer doute que 25-50 ads aident les petits annonceurs : commencer par 1-2, monter vers 20-30 « but you are not doing it all at once » [S15] ; CTC : **8-12 nouvelles créas distinctes par mois sous 10 k$/mois** [S13] | Plush est sous 10 k$/mois : 12-14 ads en vague 1, puis 4-6 par semaine |
+| Volume de créas | 25-50 ads par ensemble, le système trie (agences, conseil du media buyer de Yasser) | Loomer doute que 25-50 ads aident les petits annonceurs : commencer par 1-2, monter vers 20-30 « but you are not doing it all at once » [S15] ; CTC : **8-12 nouvelles créas distinctes par mois sous 10 k$/mois** [S13] | Décision prise : 30 créas pour le test 1. Ensuite, 4-6 nouvelles créas par semaine (le rythme CTC sous 10 k$/mois) |
 | Seuil de similarité | 40 % ou 60 % selon les outils | Meta ne publie aucun seuil [S6][S9] | On regarde le label High/Medium/Low, pas un pourcentage |
 | Andromeda responsable des baisses | « Andromeda a tué le ROAS » (CTC, [S13]) | Loomer : Andromeda ne fait que le retrieval, ne pas lui imputer tout [S50] | Sans historique, la question ne se pose pas pour Plush |
 
@@ -151,29 +156,29 @@
 | Ensembles « soutenables » selon la formule Meta [S18] | à CPA 23 $ (cible) : **1,06** · à 32,90 $ (BE) : **0,74** · à 45 $ : **0,54** |
 | Achats attendus sur le test (870-1 044 $) | à 23 $ : 38-45 · à 32,90 $ : 26-32 · à 45 $ : 19-23 |
 
-**Conclusion : 1 ensemble.** Un 2e ensemble divise des achats déjà trop rares. On lit les résultats par format grâce au nommage (§12), pas grâce aux ensembles.
+**Conclusion : à 1, 2 ou 3 ensembles, aucun ne sortira d'apprentissage.** La question n'est donc pas d'éviter l'apprentissage mais de lire chaque créa : c'est le rôle des seuils (§13) et du nommage (§12). Le plan retenu à 2 ensembles est compatible avec ça.
 
 ### 2.3 CBO, ABO ou Advantage+ pour tester ?
 
 | Option | Pour | Contre | Verdict Plush |
 |---|---|---|---|
-| **Advantage+ Ventes, budget campagne, 1 ensemble** | Consolidation maximale, c'est ce que Meta pousse [S18][S20] | Meta concentre la dépense sur 2-5 ads, les autres restent quasi à 0 (§3) | ✅ **Recommandé** |
-| CBO, 2 ensembles (statiques / vidéos) | Lecture par format | Divise l'apprentissage ; le minimum par ensemble n'est pas garanti [S23] ; la lecture par format se fait déjà par le nom | 🟠 Seulement quand les vidéos existent, et avec ≥ 50 % du budget sur l'ensemble qui convertit |
+| Advantage+ Ventes, budget campagne, 1 ensemble | Consolidation maximale, c'est ce que Meta pousse [S18][S20] | Les vidéos risquent de ne rien dépenser face aux images | 🟠 Repli si l'ensemble vidéos ne dépense pas malgré le minimum |
+| **CBO, 2 ensembles (images / vidéos)** | Lecture par format ; on peut protéger la dépense vidéo par un minimum d'ensemble | Le minimum n'est pas garanti [S23] ; deux ensembles au lieu d'un | ✅ **Plan retenu** (Yasser, 10 nov.) — réglages au §13 |
 | ABO, 3 ensembles × 50 € (une famille d'angles chacun) | Dépense forcée par famille, comparaison propre | 3 ensembles à ~1,5 achat/jour chacun : bruit maximal, 3× plus loin des 50 conversions | 🟠 Défendable seulement pour comparer 3 angles, pas 25 créas |
-| **Outil « Creative testing » de Meta** dans l'ensemble principal | 5 ads (10 sur certains comptes) reçoivent une part de budget dédiée, enchère « plus haut volume » obligatoire | Accès variable selon les comptes | ✅ Pour la vague 2 (vidéos) [S24][S15] |
+| **Outil « Creative testing » de Meta** dans l'ensemble vidéos | 5 ads (10 sur certains comptes) reçoivent une part de budget dédiée, enchère « plus haut volume » obligatoire | Accès variable selon les comptes | ✅ Pour le lot de vidéos produit à J+3 [S24][S15] |
 
-### 2.4 Réglages de l'ensemble (vague 1)
+### 2.4 Réglages (identiques pour les 2 ensembles)
 
 | Réglage | Valeur | Statut |
 |---|---|---|
 | Objectif | Ventes · événement **Purchase** | INFÉRENCE : avec 26-45 achats attendus, optimiser sur l'ajout panier achèterait des « ajouteurs » bon marché. Le plan du 25 sept. (optimiser sur l'ajout panier à 430 €) ne tient plus à 750-900 € |
 | Enchère | Plus haut volume, sans coût cible ni plafond | INFÉRENCE : un coût cible sans historique bride la diffusion |
-| Budget | 150 €/jour au niveau campagne | Plan Yasser |
+| Budget | 150 €/jour au niveau campagne · minimum 45 €/jour sur l'ensemble vidéos, aucun maximum (§13) | Plan Yasser + INFÉRENCE |
 | Audience | Advantage+, **États-Unis**. Suggestion facultative : femmes 25-54 (Megan) | HYPOTHÈSE : la suggestion n'est qu'un point de départ [S21] |
 | Exclusions géographiques | Alaska, Hawaï, Porto Rico, Guam, adresses militaires **si le fournisseur ne livre pas** (question ouverte, `../../CLAUDE.md`, 19 oct.) | À vérifier : qu'une exclusion géographique garde le statut Advantage+ |
 | Placements | Advantage+ (tous), avec visuels 4:5 et 9:16 | FAIT [S20] pour le statut |
 | Attribution | Défaut : 7 j clic / 1 j engage-through / 1 j vue | FAIT [S31] |
-| Nombre d'ads | 12-14 en vague 1, +5 en vague 2 via l'outil de test | INFÉRENCE |
+| Nombre d'ads | Ensemble A : 20 images · ensemble B : 10 vidéos à J0, vidéos produit à J+3 | Décision Yasser |
 
 ### 2.5 Quand consolider
 
@@ -182,7 +187,7 @@
 
 ### 2.6 Débats
 
-- **CBO ou ABO pour tester** : beaucoup de guides 2026 recommandent l'ABO pour tester et la CBO pour scaler (agences, sources secondaires citées en §16) ; Meta et CTC poussent la consolidation [S13][S18]. À 150 €/jour, l'argument de volume l'emporte : 1 ensemble.
+- **CBO ou ABO pour tester** : beaucoup de guides 2026 recommandent l'ABO pour tester et la CBO pour scaler (agences, sources secondaires citées en §16) ; Meta et CTC poussent la consolidation [S13][S18]. À 150 €/jour, l'argument de volume pousse à consolider ; le plan retenu garde 2 ensembles pour lire images et vidéos séparément et protéger la dépense vidéo (§13).
 - **Seuil d'apprentissage à 10 ou 50** : observations à 10, doc à 50 [S19]. Ça ne change rien pour Plush : on est sous les deux par ensemble et par semaine si on fragmente.
 
 ---
@@ -201,18 +206,18 @@
 ### 3.2 Ce que ça veut dire pour Plush (INFÉRENCE)
 
 - **Une ad à 0 € n'est pas une ad perdante, c'est une ad non jugée.** Le système l'a écartée sur sa prédiction, pas sur des achats. On ne tire **aucune conclusion** sur un angle qui n'a pas dépensé.
-- **5 % de gagnantes** : 25-30 créas donnent en espérance **1 à 1,5 gagnante**, 12-14 créas en donnent **0,6 à 0,7**. Ce qui augmente les chances, c'est la diversité des concepts, pas le nombre de fichiers [S6][S14].
-- **Le vrai plafond est le budget** : 750-900 € ÷ 57 € = 13-15 créas jugeables à dépense égale [I1]. Or une CBO ne dépense pas également : en pratique, **4 à 7 ads recevront assez pour être jugées**.
+- **La diversité des concepts compte plus que le nombre de fichiers** [S6][S14] : 30 créas sur 15 concepts valent mieux que 30 variantes de 5 concepts.
+- Le risque chiffré de ce plan est posé une seule fois, au §13.
 
 ### 3.3 La méthode (5 règles)
 
 | # | Règle | Détail |
 |---|---|---|
-| 1 | **Vagues, pas tout d'un coup** | Vague 1 (J0) : 12-14 ads. Vague 2 (J+3 ou J+4, échantillon reçu) : 5 vidéos via l'outil de test. Les créas restantes passent au test suivant |
-| 2 | **Regrouper par concept, jamais par variante** | 1 ad par concept en vague 1. Deux exécutions d'un même concept seulement si le visuel diffère vraiment |
-| 3 | **Forcer la dépense par l'outil de test, pas par des ensembles** | L'outil réserve une part du budget aux 5 (ou 10) ads testées. Les limites minimum par ensemble ne sont pas garanties [S23] |
+| 1 | **Tout ce qui est prêt part à J0, le reste en un seul lot** | J0 : 20 images + 10 VSL sans produit. J+3 : vidéos produit en un lot (outil de test si disponible). Pas d'ajout au fil de l'eau |
+| 2 | **Une ad par concept et par ensemble** | Ensemble A : 20 images sur C01-C12 (8 concepts en double exécution native + statique, avec des visuels différents). Ensemble B : 10 vidéos (C13-C15 + 7 concepts de C01-C12) |
+| 3 | **Protéger la dépense vidéo par un minimum d'ensemble, pas par un 3e ensemble** | Minimum 45 €/jour sur l'ensemble B (« best effort » [S23]) ; outil de test pour le lot de J+3 [S24] |
 | 4 | **Ne pas couper avant le seuil** | Une ad qui a reçu 10 € n'a rien prouvé. Seuils §5 |
-| 5 | **Relancer ce qui n'a pas dépensé, une fois** | Les 2-3 concepts de la vague 1 restés sous 10 € et jugés forts sur le papier repassent dans un test de l'outil, avec un nouveau 1er visuel. HYPOTHÈSE : un nouveau visuel change la prédiction |
+| 5 | **Règle « non testée »** | < 28 € à J+5 et 0 achat = non testée → CBO suivante (§13). Si le hook a raté dès 15 €, nouveau 1er visuel avant de repartir. HYPOTHÈSE : un nouveau visuel change la prédiction du système |
 
 ### 3.4 À partir de quelle dépense juger une créa
 
@@ -228,7 +233,275 @@ Statut : seuils en € = INFÉRENCE [I1] ; dépense pour juger un hook = HYPOTH�
 ### 3.5 Durée
 
 - **Minimum 3 jours par vague** avant toute coupe sur l'achat : avec une attribution à 7 jours clic, une partie des achats de J1 arrive J2-J7 [S31].
-- **Lecture finale du test à J+6 au plus tôt, relecture à J+8** pour récupérer les achats attribués en retard (INFÉRENCE).
+- **Décision à J+5 (plan de Yasser), relecture à J+7** pour les achats attribués en retard : la relecture peut seulement faire monter une créa (de « à confirmer » à « gagnante »), jamais en couper une de plus (INFÉRENCE).
+
+---
+
+## 4. Métriques, seuils et diagnostic
+
+### 4.1 Définitions (colonnes à activer dans Ads Manager)
+
+| Métrique | Formule | Ce qu'elle juge |
+|---|---|---|
+| Hook rate | Lectures vidéo de 3 s ÷ impressions | La 1re seconde (vidéo) |
+| Hold rate | ThruPlays ÷ lectures de 3 s (les définitions varient : certains prennent les vues de 15 s [S28]) | Le corps de la vidéo |
+| CTR lien | Clics sur le lien ÷ impressions (pas le CTR « tous clics ») | L'envie d'en savoir plus |
+| CPC lien | Dépense ÷ clics sur le lien | Prix du trafic |
+| CPM | Dépense ÷ impressions × 1 000 | Prix de l'enchère, qualité prédite de l'ad |
+| Coût par ajout panier | Dépense ÷ ajouts au panier | L'offre et la fiche produit |
+| Taux de conversion (clic → achat) | Achats ÷ clics sur le lien | Fiche + paiement |
+| CPA | Dépense ÷ achats | Rentabilité, à comparer au CPA BE |
+| ROAS | Valeur des achats attribués ÷ dépense | Rentabilité vue par Meta |
+| **MER** | **CA total Shopify ÷ dépense pub totale** | **La vérité** : Plush n'a qu'un canal payant, donc le MER suffit |
+
+### 4.2 Benchmarks sourcés (e-commerce US)
+
+| Donnée | Valeur | Source et limites |
+|---|---|---|
+| CPM Meta médian e-commerce | **15,06 $** (+13,24 % sur un an), août 2025 - juil. 2026 | FAIT [S25] Triple Whale, lu via le moteur de recherche (page 403 en direct) |
+| CPA médian / taux de conversion | **38,99 $** / 1,53 % (même période) | FAIT [S25] ; définition du taux de conversion non précisée |
+| ROAS médian par vertical | Home & Garden **2,25** · Health & Wellness **1,44** · Beauty 1,54 | FAIT [S25] |
+| BFCM 2025 (Meta) | CPM **22,26 $** (+7,8 %), ROAS 2,26, CPA 34,06 $ | FAIT secondaire [S26] (AdAdvisor citant Triple Whale) |
+| Prix moyen par ad, États-Unis et Canada | **+23 %** sur un an au T3 2026 (+14 % au T1, +20 % au T2) | FAIT [S27] (résultats Meta du 21 oct. 2026) |
+| Hook rate | Médiane ≈ 28 % sur Meta (attribué à Motion, non vérifié) ; « bon » ≥ 30 %, « à couper » < 25 % | FAIT secondaire [S28] |
+| Hold (définition 15 s) | < 15 % à couper, ~25 % bon | FAIT secondaire [S28] |
+
+**Lecture pour Plush (INFÉRENCE)** : le CPA BE de Plush (32,90 $) est **sous le CPA médian** de l'e-commerce US (38,99 $) et le ROAS BE (2,14) est proche du ROAS médian Home & Garden (2,25). Un compte neuf, sans avis, doit donc faire mieux que la médiane dès le premier test. Les leviers sont listés au §8.
+
+### 4.3 Le calcul qui fixe les seuils de haut de funnel (estimation)
+
+Méthode : `CPA = CPM ÷ (1 000 × CTR lien × taux clic → achat)`. Taux de conversion clic → achat **nécessaire** pour tenir le CPA :
+
+| CPM | CTR lien | Pour le CPA BE (32,90 $) | Pour le CPA cible (23 $) |
+|---|---|---|---|
+| 15 $ (médiane annuelle) | 1,5 % | 3,0 % | 4,3 % |
+| 15 $ | 2,0 % | 2,3 % | 3,3 % |
+| 20 $ (novembre, HYPOTHÈSE) | 1,5 % | 4,1 % | 5,8 % |
+| 20 $ | 2,0 % | 3,0 % | 4,3 % |
+| 25 $ (semaine BFCM, HYPOTHÈSE) | 2,0 % | 3,8 % | 5,4 % |
+
+**Conséquence** : à 20 $ de CPM, il faut **≥ 2 % de CTR lien et ≥ 3 % de conversion** pour être à l'équilibre. Le CPC lien maximal à 3 % de conversion = 32,90 × 0,03 = **0,99 $ ≈ 0,85 €**.
+
+### 4.4 Seuils Plush posés avant le lancement (vert / orange / rouge)
+
+| Métrique | 🟢 | 🟠 | 🔴 | Origine |
+|---|---|---|---|---|
+| Hook rate (vidéo) | ≥ 30 % | 25-30 % | < 25 % | [S28] |
+| Hold rate (ThruPlay ÷ 3 s), vidéos < 60 s | ≥ 25 % | 15-25 % | < 15 % | [S28] ; pas utilisé pour le VSL de 3-4 min |
+| CTR lien | ≥ 1,5 % | 0,8-1,5 % | < 0,8 % | §4.3 + seuil de coupe Phase 1 [I1] |
+| CPC lien | ≤ 0,85 € | 0,85-1,30 € | > 1,30 € | §4.3 (rouge = 1,5× le maximum) |
+| Coût par ajout panier | ≤ 8 € | 8-14 € | > 14 € | HYPOTHÈSE : 30 % des paniers deviennent des achats → 28 € × 0,30 ≈ 8 €. **À recaler dès 10 ajouts panier sur le compte** : seuil vert = 28 € × (achats ÷ ajouts panier) |
+| Coût par paiement initié | ≤ 15 € | 15-25 € | > 25 € | HYPOTHÈSE : 55 % des paiements initiés aboutissent |
+| CPA | ≤ 20 € (cible) | 20-28 € | > 28 € (BE) | [I1] |
+| MER du compte (Shopify) | ≥ 3,1 | 2,14-3,1 | < 2,14 (2,59 si TVA) | [I1] |
+
+### 4.5 Diagnostic d'une créa : hook, body, offre ou landing ?
+
+| Symptôme | Le problème est… | Action |
+|---|---|---|
+| Hook rate < 25 % (vidéo) ou CTR lien < 0,8 % avec CPM normal | **Le hook** (1re image, 1re seconde, 1re ligne) | Nouveau 1er visuel, même corps |
+| Hook ≥ 30 %, hold < 15 % | **Le corps** | Couper la vidéo, avancer la preuve (cartouche, installation) avant la seconde 5 |
+| Hook et hold bons, CTR lien < 0,8 % | **La raison de cliquer** | Ajouter l'offre (Duo, 2 cartouches, garantie 60 j) et un appel à l'action explicite |
+| CTR et CPC bons, coût par ajout panier > 14 € | **La fiche ou l'offre** | Vérifier la continuité ad → page (§8.4), le prix vu en premier, la vitesse mobile |
+| Ajouts panier bons, peu de paiements initiés | **Le panier** | Frais surprises, Shipping Protection pré-cochée (interdit, §8), délai mal affiché |
+| Paiements initiés bons, peu d'achats | **Le paiement** | Shop Pay / Apple Pay actifs, confiance, délai 7-12 jours vu avant de payer |
+| Achats Shopify ≠ achats Meta (écart > 20 %) | **Le tracking** | §9 |
+| CPM d'une ad 2× celui des autres | **Prédiction faible ou diffusion limitée** (règles) | Lire le statut de l'ad ; refaire le 1er visuel |
+
+### 4.6 Débats
+
+- **Les benchmarks de hook rate ne concordent pas** (médiane 28 % chez l'un, bandes 25/30/40 % chez d'autres, définitions du hold différentes) [S28]. On garde nos seuils, recalés sur nos propres médianes après le test 1.
+- **ROAS plateforme ou mesure incrémentale** : CTC demande de juger le haut de funnel au ROAS incrémental et au MER, pas au ROAS de plateforme [S13]. Pour Plush, un seul canal payant : le MER Shopify tranche.
+
+---
+
+## 5. Couper, itérer, scaler (calé sur le CPA BE de 28 €)
+
+### 5.1 La grille de décision au niveau de l'achat (posée avant, Phase 1)
+
+| Dépense de la créa | Condition | Décision |
+|---|---|---|
+| ≥ 28 € (1× CPA BE) | 0 ajout panier et CTR lien < 0,8 % | Couper |
+| ≥ 57 € (2× CPA BE) | 0 achat | Couper |
+| ≥ 85 € (3× CPA BE) | CPA > 42 € (1,5× BE) | Couper |
+| — | ≥ 2 achats, CPA ≤ 28 € | Garder |
+| — | ≥ 3 achats, CPA ≤ 20 € (cible) | **Gagnante** : itérer + candidate au scaling |
+
+Source : [I1] (INFÉRENCE). Les seuils de haut de funnel par palier de dépense sont au §13.3. Si la TVA de 21 % est confirmée, tous les seuils en € baissent de 17 % (÷ 1,21) : 23 € / 47 € / 70 €.
+
+### 5.2 Scaler
+
+| Mode | Règle Plush | Statut |
+|---|---|---|
+| **Vertical** (même campagne) | +20 % de budget tous les 3 jours si le CPA sur 3 jours glissants ≤ 28 € **et** le MER Shopify ≥ 2,14 | HYPOTHÈSE (heuristique de praticiens). Meta recommande seulement de grouper les modifications [S18] |
+| **Horizontal** (plan du media buyer) | Une CBO « scaling » qui ne reçoit que les gagnantes (par post ID), une CBO « test » à côté | Conforme au plan ; voir §13.6 pour le partage du budget |
+| Ne jamais | Doubler un budget d'un coup, relancer un ensemble qui marche « pour repartir de zéro », toucher à un gagnant pendant ses 3 premiers jours | INFÉRENCE |
+
+### 5.3 Itérer sur un gagnant
+
+| Itération | Ce qui change | Meta la verra comme nouvelle ? |
+|---|---|---|
+| Même angle, **nouveau hook** (nouvelle 1re image, nouvelle 1re seconde) | Le visuel d'entrée | Oui : c'est ce que compare le score [S7] |
+| Même hook, **nouvelle personne / nouveau décor** | Le visuel | Oui (INFÉRENCE de [S7]) |
+| **Statique gagnante → vidéo** (et l'inverse : la meilleure image de la vidéo + son titre) | Le format | Oui [S6] |
+| Même concept, **autre niveau de conscience** (l'offre devient une explication, ou l'inverse) | Le message | Oui [S6][S13] |
+| Même vidéo, **autre texte à l'écran** | Rien pour Meta | **Non** : « the same creative » [S9]. Utile seulement en A/B propre |
+| Même image, autre couleur ou autre titre | Rien pour Meta | Non [S8] |
+
+**Recette Plush** : pour chaque gagnante, 3 itérations dans la semaine (1 nouveau hook, 1 nouveau format, 1 nouvelle persona ou nouveau décor), lancées dans la CBO de test, jamais dans celle de scaling.
+
+### 5.4 Le post ID : ce qu'il garde, ce qu'il ne garde pas
+
+| Point | Ce qu'on sait | Statut |
+|---|---|---|
+| Ce que garde le post ID | Les réactions, commentaires et partages de la publication (la preuve sociale) | Fonctionnement d'Ads Manager (« Utiliser une publication existante ») — à vérifier dans l'interface |
+| Ajouter une ad relance-t-il l'apprentissage ? | Le Centre d'aide Meta : « a small edit, like adding a new ad, can reset the learning phase » | FAIT [S16] |
+| Ce que Loomer a observé | 1 ad ajoutée à un ensemble qui en comptait 22 : l'ensemble **n'est pas** reparti en apprentissage | FAIT [S16][S17] |
+| Les apprentissages suivent-ils la créa ? | Meta : pour des variations d'une même créa, apprentissages et optimisation sont **partagés au niveau de la créa** | FAIT [S6] → que ça vaille pour un post ID déplacé : HYPOTHÈSE |
+
+**Tranché** : les deux sources ne se contredisent pas. La doc dit « peut », Loomer a vu « pas toujours », sur un ajout de 1 ad pour 22. L'effet dépend très probablement de la part de l'ensemble qui change (INFÉRENCE). Règles Plush :
+1. On ajoute des ads **en un seul lot**, jamais une par une (J+3 pendant le test).
+2. On déplace les gagnantes par post ID **une fois par semaine au plus**, en un lot.
+3. On n'attend pas du post ID qu'il transporte la performance : il transporte la preuve sociale. La performance se reconstruit dans le nouvel ensemble (INFÉRENCE).
+4. Commentaires : répondre aux objections, masquer seulement le spam et les insultes. Un commentaire qui affirme un effet sur la santé n'est pas repris par la marque (§11).
+
+### 5.5 Débats
+
+- **Déplacer les gagnants ou les laisser où ils sont** : le plan du media buyer les déplace (par post ID) vers une CBO de scaling ; Loomer garde les ads testées dans l'ensemble principal et teste via l'outil de Meta [S15]. Les deux se défendent ; à 150 €/jour, on déplace une fois par semaine au plus.
+- **Fatigue** : CTC l'estime à 2-4 semaines en 2026 [S13]. Pour Plush, la question se posera au test 3, pas au test 1.
+
+---
+
+## 6. Formats qui performent en 2026
+
+**Principes sourcés** : Meta demande de diversifier entre texte, image et vidéo [S6] ; Motion conclut que le contexte (taille du compte, secteur, saison) compte plus qu'un « meilleur format » universel [S14] ; Barry Hott : faire des ads qu'on ne fait pas défiler, quitte à les faire « plus moches » qu'une pub léchée [S46]. Dans notre catégorie, les leaders sont à ~95 % en vidéo (eskiin : 25 statiques sur 452 ads), mais Vedya Home tient 45 variantes statiques sur 120 jours [I2] : **le statique est sous-utilisé, pas interdit** (INFÉRENCE).
+
+| Format | Version Plush | Avant échantillon ? | Conformité |
+|---|---|---|---|
+| Statique natif « note iPhone » | « Things I checked before buying a shower filter » (filetage ½", cartouche visible, garantie) | ✅ | ✅ Voix de la marque, pas d'un faux client |
+| Capture SMS / iMessage | Deux amies : « why does my shower smell like a pool » | ✅ | ⚠️ Mise en scène : ne doit pas passer pour un vrai échange client (§11) |
+| Capture tweet / Reddit | — | — | ❌ Tant qu'on n'a pas de vrai post, avec autorisation |
+| Capture d'avis | — | — | ❌ Aucun avis réel pour l'instant |
+| « Us vs them » | Plush contre **le pommeau d'origine** de l'appartement (un type, pas une marque) | ✅ | ✅ Si chaque ligne est vraie |
+| Comparatif de coût sur 12 mois | Duo 74,99 $ (2 cartouches) contre « un filtre à 25 $ + cartouches à 15 $ » | ✅ | ⚠️ Prix réels relevés et datés, types et pas marques |
+| Démo | Installation chronométrée, test du seau, cartouche après ~450 gallons [I1] | ❌ (J+3) | ⚠️ Le chlore de Bruxelles est plafonné à 0,25 mg/L contre 4 mg/L aux US : démo du chlore faible et non représentative [I1] |
+| Unboxing | La boîte, la carte, la 2e cartouche du Duo | ❌ (J+3) | ✅ |
+| UGC | Créatrice qui installe et utilise | ❌ | ⚠️ La créatrice doit réellement utiliser le produit, et ne dire que ce qu'elle a constaté (§11) |
+| Founder-led | Yasser, 17 ans, raconte pourquoi il a choisi ce produit | ✅ (sans produit possible) | ⚠️ Honnête sur l'origine (Bruxelles, dropshipping) : HYPOTHÈSE à tester |
+| Podcast / dialogue | Un sceptique, une convaincue, 3 objections (pression, plombier, prix) | ✅ en animation ou voix off | ✅ 4 concurrents l'utilisent [I2] |
+| Micro-trottoir | — | — | ⚠️ Des acteurs présentés comme des passants = faux consommateurs (§11) |
+| Carrousel | « 5 étapes d'installation » ; « ce que Plush ne fait pas » ; « le rapport d'eau de 5 villes » | ✅ | ✅ Données publiques datées (CCR [S42]) |
+| Cartoon / animation | C13, le trajet de l'eau | ✅ | ✅ |
+| Chanson | C14 | ✅ | ✅ |
+| Éducatif long (3-4 min) | C15, lire le rapport d'eau de sa ville | ✅ | ✅ Une seule ; jugée sur CTR et coût par ajout panier |
+
+**Spécifications** (sources secondaires [S47], à vérifier dans l'aperçu d'Ads Manager) :
+
+| Point | Règle |
+|---|---|
+| Ratios | **4:5** (1080 × 1350) pour le fil, **9:16** (1080 × 1920) pour Reels et Stories. Chaque créa livrée dans les deux |
+| Zones sûres 9:16 | Rien d'important dans les ~14 % du haut, les ~35 % du bas et ~6 % sur les côtés |
+| Sous-titres | Incrustés, gros, 2 lignes max. HYPOTHÈSE : une part du fil est regardée sans le son |
+| Son | Conçu pour Reels (son activé) mais compréhensible sans |
+| Rythme | Hook ≤ 2 s ; preuve (cartouche, installation, prix) visible avant 5 s ; UGC et démo 15-45 s ; VSL 60-90 s ; éducatif long : 1 seul |
+
+---
+
+## 7. Copy : frameworks appliqués à Plush
+
+### 7.1 Structure
+
+- **Hook** = 1re image + 1re ligne. Une seule idée.
+- **Body** = **une** croyance par ad (§7.3), avec sa preuve.
+- **CTA** = l'offre + la garantie : « 2 cartridges in the box. 60 days to decide. »
+- **PAS** pour les ads problem-aware : Problème (l'odeur de piscine, le pommeau d'origine) → Agitation **sans allégation santé** (« three shampoos later, you never checked the water ») → Solution (la cartouche qu'on voit, la garantie).
+- **Ton de Megan** : « you », 8-12 mots par phrase, contractions, **zéro point d'exclamation**, une amie qui s'y connaît [I2].
+
+### 7.2 Niveaux de conscience (Schwartz) [S43]
+
+| Niveau | Ce qu'elle sait | Hook Plush (anglais, conforme) |
+|---|---|---|
+| Unaware | Rien | « Your city publishes a water report every July. Most people never read it. » |
+| Problem-aware | Sa douche sent la piscine | « That pool smell in your shower has a name. » |
+| Solution-aware | Les filtres de douche existent | « I didn't want another shower filter with a cartridge I can't see. » |
+| Product-aware | Elle connaît Plush | « $74.99. Two cartridges in the box. » (+ la durée totale, une fois la durée de la cartouche tranchée : 6 mois à 3 mois par cartouche, 4 mois à 60 jours) |
+| Most aware | Elle hésite | « On day 59, if you don't love it, you get all your money back. » |
+
+**Sophistication du marché : stade 4-5** (INFÉRENCE : « 15-stage », « KDF-55 », « America's #1 » saturent les ads concurrentes [I2]). Conséquence : **ne pas entrer dans la course au mécanisme**. Gagner par l'identification (Megan), la preuve visible (la cartouche) et l'honnêteté (« What it won't do: soften hard water », déjà sur la fiche [I1]).
+
+### 7.3 La chaîne de croyances (dans l'ordre)
+
+| # | Elle doit croire que… | Preuve autorisée |
+|---|---|---|
+| 1 | L'eau de sa ville contient du chlore | Son rapport annuel (CCR), public et obligatoire, publié avant le 1er juillet [S42] |
+| 2 | Ça vaut la peine de le filtrer à la douche | Sensoriel seulement (odeur, sensation), jamais un effet sur la santé, la peau ou les cheveux |
+| 3 | Un filtre de douche peut le faire | La composition affichée ; **un % seulement avec le rapport de test lu** |
+| 4 | Plush ira sur sa douche, sans outil | Filetage ½" (à confirmer par écrit [I1]), 5 étapes, vidéo d'installation (J+3) |
+| 5 | 74,99 $ est un bon prix | 2 cartouches dans la boîte, coût sur 12 mois |
+| 6 | Elle ne prend aucun risque | Garantie 60 jours, livraison offerte |
+| 7 | C'est maintenant | Cadeau avant le 7 déc. (§10) ; jamais un faux compte à rebours |
+
+### 7.4 RMBC et Hormozi
+
+- **RMBC (Georgi)** : Research → Mechanism → Brief → Copy [S44]. Pour Plush : la recherche = Phase 5 (VOC) ; **le mécanisme = la cartouche qu'on voit, sans nom inventé** (recommandation Phase 1 [I1]) ; un brief par concept (C01-C15) ; la copy ensuite.
+- **Équation de valeur (Hormozi)** : valeur = (résultat rêvé × probabilité perçue) ÷ (délai × effort) [S45]. Plush agit sur la probabilité perçue (garantie, cartouche visible, limites avouées), le délai (dès la 1re douche, si c'est vrai pour le sensoriel) et l'effort (sans outil, sans plombier, 2e cartouche déjà là). **On ajoute de la valeur plutôt que de baisser le prix** (§10.3).
+
+---
+
+## 8. Offre et landing
+
+### 8.1 L'offre actuelle, lue avec les chiffres de la Phase 1 [I1]
+
+| Élément | Valeur | Ce qu'on en fait |
+|---|---|---|
+| Duo 74,99 $ (offre par défaut) | Marge 34,97 $ | Rester l'offre mise en avant dans 70 % des ads |
+| Solo 59,99 $ | Marge 28,07 $ | Jamais mis en avant dans une ad |
+| Cartouche seule 29 $ | Marge ≈ 14,44 $ (estimation) | Post-achat et email, pas en ad froide |
+| Shipping Protection 4,99 $ | ≈ +2,4 $ par commande à 50 % d'ajout → CPA BE ≈ 35 $ | Proposée, **jamais pré-cochée** (risque « frais cachés » aux US, interdit dans l'UE) [I1] |
+| LTV à 90 jours | ≈ 1re commande (la 2e cartouche est dans le Duo) | **On ne paie pas un client plus que le CPA BE** au test 1 [I1] |
+
+### 8.2 Leviers d'AOV, par ordre de priorité (INFÉRENCE)
+
+1. **Shipping Protection non pré-cochée**, bien présentée au panier.
+2. **Cartouche en 1 clic après l'achat** (post-purchase upsell Shopify) : n'ajoute aucun coût d'acquisition.
+3. **Offre BFCM en valeur ajoutée** (une cartouche de plus dans la boîte du Duo) plutôt qu'une remise (§10.3). Prix DDP d'une 3e cartouche dans la même boîte : **à demander au fournisseur**.
+4. **Abonnement cartouches** : seulement quand la durée réelle est tranchée (60 jours sur le site, 3 mois chez le fournisseur [I1]) et en conformité ROSCA (§11).
+
+### 8.3 Garantie
+
+« On day 59, if you don't love it, you get all your money back » est le bon levier de probabilité perçue (§7.4). Les conditions (comment demander, retour du produit ou non, délai de remboursement) doivent être écrites près de la promesse (exigence des guides FTC sur les garanties, 16 CFR 239 : **à vérifier**).
+
+### 8.4 PDP, advertorial ou listicle
+
+| Page | Pour quelles créas | Statut |
+|---|---|---|
+| **Fiche produit (PDP)** | Créas offre, produit, garantie, cadeau (≈ 70 % des 30) | ✅ Test 1 |
+| **Advertorial / listicle** (`/pages/…`) | Créas d'éducation (C04, C13, C15) | HYPOTHÈSE : à construire seulement si l'une d'elles a un bon CTR mais un mauvais coût par ajout panier sur la PDP. Les leaders de la catégorie envoient presque tout vers des `/pages/` [I2] |
+
+**Continuité ad → page (avant le lancement)** :
+- Le 1er écran répète la promesse du hook (cartouche, pommeau d'origine, prix ou cadeau).
+- Une seule promesse de délai : la fiche affiche « 5 to 12 » et le panier « 7–12 » [I1] → **7-12 jours ouvrés partout**.
+- **Aucune note ni aucun avis affiché tant qu'il n'existe aucune commande** : la fiche montre aujourd'hui 4 notes différentes (4.8, 4.7, 4.8/5, 5/5) sans aucune vente [I1]. Une note sans acheteur est un faux avis au sens de la règle FTC (§11).
+- Le badge « Stronger pressure » n'est pas prouvé tant que le test du seau n'est pas fait [I1] → le retirer ou le prouver.
+
+---
+
+## 9. Tracking : la checklist avant le premier euro
+
+| # | Contrôle | Où | Statut |
+|---|---|---|---|
+| 1 | Pixel d'app Meta en **« Always on »** (et non le partage « optimisé » par défaut depuis le 13 janv. 2026). Shopify suspend le partage quand il ne voit « aucun signal pendant des jours ou des semaines » : c'est le cas d'un pixel qui n'a jamais reçu de clic pub | Shopify > Paramètres > Événements clients > Pixels d'app | FAIT [S29] + INFÉRENCE |
+| 2 | Partage de données client au niveau **le plus élevé** (« Maximum » : envoi serveur via l'API Conversions) | App Facebook & Instagram > Paramètres de partage | Sources secondaires, noms des niveaux variables : **à vérifier dans l'admin** |
+| 3 | Achat test réel (puis remboursé) : ViewContent, AddToCart, InitiateCheckout, Purchase visibles **en navigateur ET en serveur**, avec le même `event_id`, et marqués dédoublonnés | Events Manager > Tester les événements | FAIT : Meta dédoublonne sur `event_name` + `event_id`, dans les 48 h [S30] |
+| 4 | Valeur et devise envoyées avec chaque achat (USD) | Events Manager > détail de l'événement | FAIT : demandé par Meta pour la haute saison [S18] |
+| 5 | Note de qualité de correspondance (EMQ) de l'achat lue et notée avant le lancement | Events Manager | Seuil officiel non trouvé : **à vérifier** |
+| 6 | Aucune bannière de restriction « santé et bien-être » sur le pixel. Meta limite depuis janv. 2025 les événements bas de funnel des sites classés santé [S32] | Events Manager > source de données | INFÉRENCE : une fiche qui parle d'eczéma ou de maladie peut faire classer le site. Raison de plus pour n'en parler nulle part |
+| 7 | Attribution par défaut : **7 j clic / 1 j engage-through / 1 j vue**. Depuis mars 2026, le « clic » = clic sur le lien uniquement ; likes, partages et enregistrements passent en « engage-through » | Ensemble > Attribution | FAIT [S31] |
+| 8 | UTM dynamiques sur chaque ad (copier tel quel) : `utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_term={{adset.name}}&utm_content={{ad.name}}` | Ad > Paramètres d'URL | Paramètres dynamiques Meta : à vérifier dans l'aperçu |
+| 9 | Rapprochement **chaque matin** : commandes Shopify (source facebook) contre achats Meta (7 j clic). Écart > 20 % → revoir les points 1 à 3 | Shopify Analytics + Ads Manager | INFÉRENCE |
+| 10 | Facture Meta : TVA appliquée ou non ? Limite de dépense quotidienne du compte neuf ≥ 150 € ? | Facturation | [I1] + [S48] |
+
+**Lecture des résultats** : on juge les créas sur « 7 jours clic » (colonne de comparaison d'attribution), et le compte sur le MER Shopify. La colonne « 1 jour vue » n'est jamais une raison de garder une créa (INFÉRENCE).
 
 ---
 
