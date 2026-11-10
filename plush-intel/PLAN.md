@@ -4,7 +4,7 @@
 > compaction ou dans une nouvelle session. Mémoire générale du projet : `../CLAUDE.md` (on garde UNE seule
 > mémoire : le `CLAUDE.md` de fin de mission sera fusionné dans celui de la racine du dépôt, pas dupliqué).
 
-**Démarrée le** 9 nov. 2026 · **Statut** : 🛑 CHECKPOINT A envoyé, en attente des réponses de Yasser.
+**Démarrée le** 9 nov. 2026 · **Statut (10 nov.)** : bloc 1 en cours. Phase 1 ✅ · Phases 0, 2, 3 et les fiches formations en cours (sous-agents) → 🛑 CHECKPOINT B ensuite.
 
 ## Calendrier qui commande tout
 
@@ -27,8 +27,8 @@
 | Cartouche | Site : « every 60 days » · bloc abonnement (pas encore actif) : « every 3 months » | ⚠️ incohérence ouverte — durée réelle fournisseur inconnue |
 | COGS (DDP, livraison + droits inclus) | Solo **21,50 €** · Duo **27,08 €** · cartes 9,72 €/200 · stickers 8,60 €/100 | FAIT — devis fournisseur n°1, `../CLAUDE.md` 20-22 oct. |
 | Cartouche seule envoyée seule | inconnu | ❓ à demander |
-| Frais de paiement | inconnus | ❓ à demander (sinon estimation 2,9 % + 0,30 $) |
-| Marge Duo | ~36,45 $ → CPA de break-even ≈ **36 $** | estimation du 22 oct., à refaire en Phase 1 |
+| Frais de paiement | **4,9 % + 0,25 €** : carte « internationale » 2,9 % + 0,25 € (plan Advanced, BE) + conversion de devise 2 % | FAIT 10 nov. (shopify.com/be-en/pricing + help.shopify.com). Les 1,6 % cités par Yasser = cartes européennes |
+| Marge / CPA de break-even | Duo 34,97 $ · Solo 28,07 $ → **CPA BE 32,90 $ ≈ 28 €**, ROAS BE 2,14 (mix 70/30) | ✅ Phase 1, 10 nov. Si TVA 21 % sur les pubs Meta : ≈ 23 € lus dans Ads Manager (❓ à confirmer) |
 | Avis Plush | source inconnue (un fichier `avis_plush.txt` existe dans Contenu > Fichiers, 27 oct.) | ❓ à demander |
 | Historique ads | aucune campagne lancée à ce jour (pixel Meta installé) | INFÉRENCE — `../CLAUDE.md` 9 nov., à confirmer |
 | Outils spy | TrendTrack : abonnement expiré le 5 oct., le connecteur demande une reconnexion · export du 4 oct. disponible | FAIT |
@@ -74,10 +74,10 @@
 |---|---|---|
 | Démarrage | arborescence, `MISSION.md`, `PLAN.md` | ✅ 9 nov. |
 | 🛑 A | plan + questions | ✅ envoyé 9 nov. — en attente |
-| 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ⏳ transcription des 3 formations en cours |
-| 1 Audit Plush | `01_produit/audit-produit-offre.md` | ⏳ |
-| 2 Marché | `02_marche/analyse-marche.md` | ⏳ |
-| 3 Concurrents | `03_concurrents/liste-concurrents.csv` + shortlist | ⏳ |
+| 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ⏳ sous-agents relancés le 10 nov. (playbook · formation 1 · formations A+B). 49 vidéos transcrites, dont la « 5. Éviter les bans » récupérée le 10 nov. |
+| 1 Audit Plush | `01_produit/audit-produit-offre.md` | ✅ 10 nov. |
+| 2 Marché | `02_marche/analyse-marche.md` | ⏳ sous-agent relancé le 10 nov. |
+| 3 Concurrents | `03_concurrents/liste-concurrents.csv` + shortlist | ⏳ sous-agent relancé le 10 nov. |
 | 🛑 B | playbook 10 lignes · audit 10 lignes · shortlist | ⏳ |
 | 4 Teardown ads | `ads-database.csv`, teardowns, `synthese-ads.md` | ⏳ |
 | 5 VOC | `verbatims.csv`, `synthese-voc.md` | ⏳ |
@@ -86,6 +86,25 @@
 | 8 Red team | corrections notées ici | ⏳ |
 | Livraison | `00_RESUME.md`, `visuels/`, `SOURCES.md`, mémoire | ⏳ |
 
+## Réponses du CHECKPOINT A (Yasser, 9 nov. soir)
+
+| Question | Réponse | Conséquence |
+|---|---|---|
+| Échantillon | pas reçu, « dans plusieurs jours » | vidéos produit impossibles pour l'instant → statiques / natives d'abord |
+| Preuve chlore | l'usine a fourni une certification | ❓ document pas encore vu → aucun chiffre (%) dans les ads tant qu'on ne l'a pas lu |
+| Durée cartouche | **3 mois** (fournisseur) | ⚠️ le site (FAQ + onglet) et l'ebook v2 disent 60 jours → décision à prendre |
+| Cartouche envoyée seule | « 27,08 − 21,50 » = 5,58 € | c'est le surcoût d'une cartouche **dans** une boîte Duo ; un envoi seul paie aussi son propre port → estimation à majorer, devis réel à demander |
+| Avis Plush | « avis réels, ventes en direct, dont aux US » | le seul fichier trouvé (`avis_plush.txt`, Contenu > Fichiers) contient des avis **rédigés** (mentions « Angle testé », « à vérifier sur une vraie expérience ») → non utilisé comme VOC ; export des vrais avis à récupérer |
+| Budget | **150 €/jour**, 5-6 jours | 750-900 € pour le test (≈ 174 $/jour) |
+| Frais de paiement | 1,6 % + 0,25 € | à vérifier : frais carte internationale et conversion de devise possibles sur des cartes US (compte belge) |
+| TrendTrack | non repris | Ad Library : voir ci-dessous |
+| Historique ads | 0 pub lancée | pas d'export à analyser |
+
+**Meta Ad Library depuis cet environnement (testé 9 nov.)** : `curl` → 403 ; navigateur automatisé → la page
+s'affiche mais renvoie « No ads match » même pour eskiin (qui a des centaines d'ads actives) = résultats bloqués.
+L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont diffusées dans l'UE.
+→ Phase 4 : export du 4 oct. + captures / liens envoyés par Yasser.
+
 ## Journal
 
 - 9 nov. : brief reçu. Arborescence créée. Accès testés (voir inventaire). 3 dossiers Mega de formation
@@ -93,8 +112,18 @@
   « Facebook Ads » ×10) et transcrits avec faster-whisper `small`, transcriptions dans le scratchpad de session
   → à recopier en fiches dans `00_knowledge/formations/`.
 
+- 9 nov., soir : les 4 sous-agents (playbook, marché, concurrents, formation 1) ont été coupés par la limite d'usage du compte (reset à 22h30 UTC). Leur travail a été repris le 10 nov. à partir de leurs transcriptions.
+- 10 nov. : la vidéo « 5. Éviter les bans » (formation B) n'avait pas été téléchargée : nom illisible, parce que la clé du nœud était dans la 2e entrée du champ `k`. Outil corrigé (`megafolder2.py`), vidéo téléchargée puis transcrite.
+- 10 nov. : **Phase 1 livrée.** Faits nouveaux :
+  - les cartes US paient 4,9 % + 0,25 €, pas 1,6 % ;
+  - Meta ajoute probablement 21 % de TVA si le compte n'a pas de numéro de TVA ;
+  - LTV 90 j ≈ 1re commande ;
+  - 25-30 créas à 57 € chacune pour juger sur l'achat = 2× le budget ;
+  - le chlore à Bruxelles est plafonné à 0,25 mg/L, donc la démo DPD y sera faible ;
+  - la fiche produit a des blocs de preuve sociale non documentables (0 commande), des avant/après et le badge « Stronger pressure ».
+
 ## Prochaines actions
 
-1. Recevoir les réponses du CHECKPOINT A
-2. Finir les transcriptions → fiches formations
-3. Phase 0 : playbook (sources Meta officielles + praticiens 2025-2026)
+1. Fusionner et vérifier les livrables des sous-agents (playbook, marché, concurrents, formations)
+2. 🛑 CHECKPOINT B : playbook en 10 lignes, audit en 10 lignes, shortlist
+3. Questions à Yasser : TVA du compte pub · devise de versement · durée de la cartouche · 4 questions au fournisseur (`01_produit/audit-produit-offre.md` §10)
