@@ -1,11 +1,11 @@
 # Playbook Meta Ads 2026 — Plush
 
-> Version du 9 novembre 2026 · Phase 0 de la mission `plush-intel` · rédigé en cours de recherche (sections complétées au fur et à mesure).
+> Version du 10 novembre 2026 · Phase 0 de la mission `plush-intel`.
 > Marque : Plush, pommeau de douche filtrant, myplush.us, marché US uniquement, compte Meta neuf (0 pub lancée).
 > Statuts : **FAIT** (source + date d'accès) · **INFÉRENCE** (dit comment on la déduit) · **HYPOTHÈSE** (à valider en ads).
 > Chiffres Plush (Phase 1, `../01_produit/audit-produit-offre.md`, 10 nov.) : AOV **70,49 $** (mix 70 % Duo / 30 % Solo) · frais cartes US **4,9 % + 0,25 €** · CPA de break-even (BE) **32,90 $ ≈ 28 €** · ROAS BE **2,14** · CPA cible **23 $ ≈ 20 €** · LTV 90 jours ≈ 1re commande. Si Meta facture la TVA belge (21 %, non confirmé) : CPA BE lu dans Ads Manager **≈ 27 $ ≈ 23 €**.
-> Budget du test : **150 €/jour × 5-6 jours = 750-900 €** (≈ 174 $/jour, 1 € = 1,16 $). Compte pub neuf, 0 pub lancée, pixel installé. Échantillon pas reçu : pas de vidéo produit avant quelques jours.
-> Sources : identifiants [S1]…[S52] et [I1]…[I3], détaillés au §16.
+> Plan du test 1 (décision de Yasser, 10 nov.) : **30 créas, 150 €/jour pendant 5 jours = 750 €** (≈ 174 $/jour, 1 € = 1,16 $), **une CBO, 2 ensembles** (images / vidéos). Compte pub neuf, 0 pub lancée, pixel installé. Échantillon pas reçu : pas de vidéo produit avant quelques jours.
+> Sources : identifiants [S1]…[S53] et [I1]…[I3], détaillés au §16.
 
 ## Sommaire
 
@@ -51,7 +51,7 @@
 | 16 | **L'ensemble vidéos part à J0 avec les VSL sans produit** (animation, chanson, éducatif) ; les vidéos produit entrent en un seul lot dès l'échantillon reçu, via l'outil « Creative testing » de Meta si le compte l'a | Minimum de dépense **45 €/jour** sur l'ensemble vidéos (§13) | FAIT [S24] + INFÉRENCE |
 | 17 | **Une créa = une page** : le 1er écran de la landing répète la promesse et le visuel du hook | PDP pour les créas offre ; advertorial seulement si une créa d'éducation gagne | INFÉRENCE |
 | 18 | **Pas de test pendant la semaine du BFCM** : tester du 11 au ~20 nov., puis BFCM (27-30 nov.) avec les 3-5 meilleures créas et une offre en valeur ajoutée (cartouche offerte) plutôt qu'une remise | CPM BFCM 2025 ≈ 22,26 $ contre une médiane annuelle de 15,06 $ (≈ +48 %, estimation) | FAIT [S25][S26] + INFÉRENCE |
-| 19 | **Date limite de Noël honnête** : « Order by Dec 7 » (pire cas 12 jours ouvrés). Après, plus d'angle « livré pour Noël » | La règle FTC exige une base raisonnable pour tout délai annoncé | FAIT [S40] + INFÉRENCE (date) |
+| 19 | **Date limite de Noël honnête** : « Order by Dec 4 » (pire cas : 12 jours ouvrés + 1-2 jours de préparation). Après, plus d'angle « livré pour Noël » | La règle FTC exige une base raisonnable pour tout délai annoncé | FAIT [S40] + INFÉRENCE (date) |
 | 20 | **Nommage strict de chaque ad** + UTM dynamiques | `C07_ANG-cartouche_PER-P1_FMT-stat_AW-PA_HK-03_V2` (§12) | INFÉRENCE |
 
 ---
@@ -154,7 +154,7 @@ Ensemble B : C13-C15 + 7 concepts de C01-C12 déclinés en vidéo sans produit (
 |---|---|
 | Budget hebdo | 150 € × 7 = 1 050 € ≈ **1 218 $** |
 | Ensembles « soutenables » selon la formule Meta [S18] | à CPA 23 $ (cible) : **1,06** · à 32,90 $ (BE) : **0,74** · à 45 $ : **0,54** |
-| Achats attendus sur le test (870-1 044 $) | à 23 $ : 38-45 · à 32,90 $ : 26-32 · à 45 $ : 19-23 |
+| Achats attendus sur le test (750 € ≈ 870 $) | à 23 $ : 38 · à 32,90 $ : 26 · à 45 $ : 19 |
 
 **Conclusion : à 1, 2 ou 3 ensembles, aucun ne sortira d'apprentissage.** La question n'est donc pas d'éviter l'apprentissage mais de lire chaque créa : c'est le rôle des seuils (§13) et du nommage (§12). Le plan retenu à 2 ensembles est compatible avec ça.
 
@@ -171,7 +171,7 @@ Ensemble B : C13-C15 + 7 concepts de C01-C12 déclinés en vidéo sans produit (
 
 | Réglage | Valeur | Statut |
 |---|---|---|
-| Objectif | Ventes · événement **Purchase** | INFÉRENCE : avec 26-45 achats attendus, optimiser sur l'ajout panier achèterait des « ajouteurs » bon marché. Le plan du 25 sept. (optimiser sur l'ajout panier à 430 €) ne tient plus à 750-900 € |
+| Objectif | Ventes · événement **Purchase** | INFÉRENCE : avec 19-38 achats attendus, optimiser sur l'ajout panier achèterait des « ajouteurs » bon marché. Le plan du 25 sept. (optimiser sur l'ajout panier à 430 €) ne tient plus à 750 € |
 | Enchère | Plus haut volume, sans coût cible ni plafond | INFÉRENCE : un coût cible sans historique bride la diffusion |
 | Budget | 150 €/jour au niveau campagne · minimum 45 €/jour sur l'ensemble vidéos, aucun maximum (§13) | Plan Yasser + INFÉRENCE |
 | Audience | Advantage+, **États-Unis**. Suggestion facultative : femmes 25-54 (Megan) | HYPOTHÈSE : la suggestion n'est qu'un point de départ [S21] |
@@ -228,11 +228,11 @@ Ensemble B : C13-C15 + 7 concepts de C01-C12 déclinés en vidéo sans produit (
 | La vente | **57 €** (2× CPA BE) | Achats, CPA |
 | Le gagnant | **85 €+** (3× CPA BE) | ≥ 3 achats à ≤ 20 € |
 
-Statut : seuils en € = INFÉRENCE [I1] ; dépense pour juger un hook = HYPOTHÈSE (estimation : 1 000 impressions ÷ 1 000 × CPM de 15-20 $ ≈ 13-17 $).
+Statut : seuils en € = INFÉRENCE [I1] ; dépense pour juger un hook = HYPOTHÈSE (estimation : 1 000 impressions à un CPM de 15-20 $ = 15-20 $ ≈ 13-17 €).
 
 ### 3.5 Durée
 
-- **Minimum 3 jours par vague** avant toute coupe sur l'achat : avec une attribution à 7 jours clic, une partie des achats de J1 arrive J2-J7 [S31].
+- **Aucune coupe sur l'achat avant J+3** (le passage unique) : avec une attribution à 7 jours clic, une partie des achats de J1 arrive J2-J7 [S31].
 - **Décision à J+5 (plan de Yasser), relecture à J+7** pour les achats attribués en retard : la relecture peut seulement faire monter une créa (de « à confirmer » à « gagnante »), jamais en couper une de plus (INFÉRENCE).
 
 ---
@@ -439,7 +439,7 @@ Source : [I1] (INFÉRENCE). Les seuils de haut de funnel par palier de dépense 
 | 4 | Plush ira sur sa douche, sans outil | Filetage ½" (à confirmer par écrit [I1]), 5 étapes, vidéo d'installation (J+3) |
 | 5 | 74,99 $ est un bon prix | 2 cartouches dans la boîte, coût sur 12 mois |
 | 6 | Elle ne prend aucun risque | Garantie 60 jours, livraison offerte |
-| 7 | C'est maintenant | Cadeau avant le 7 déc. (§10) ; jamais un faux compte à rebours |
+| 7 | C'est maintenant | Cadeau avant le 4 déc. (§10) ; jamais un faux compte à rebours |
 
 ### 7.4 RMBC et Hormozi
 
@@ -528,9 +528,9 @@ Source : [I1] (INFÉRENCE). Les seuils de haut de funnel par palier de dépense 
 | 17-23 nov. | CBO de scaling (gagnantes) + CBO de test 2 (non testées, vidéos produit, itérations) | INFÉRENCE |
 | ~21-23 nov. | Créas BFCM soumises à la validation Meta | HYPOTHÈSE : validations plus lentes en haute saison |
 | **24-30 nov.** | **Aucun nouveau test.** Gagnantes + offre BFCM seulement | INFÉRENCE (CPM ≈ +48 %) |
-| 1er-7 déc. | Angle cadeau, avec la date limite | INFÉRENCE |
-| **7 déc.** | **Dernier jour pour « livré avant Noël »** (24 déc. moins 12 jours ouvrés = expédition le 8 déc.) | Estimation, pire cas annoncé |
-| 8-14 déc. | « Cadeau tardif » seulement si le délai de 7 jours ouvrés est **confirmé par écrit** par le fournisseur | HYPOTHÈSE |
+| 1er-4 déc. | Angle cadeau, avec la date limite | INFÉRENCE |
+| **ven. 4 déc.** | **Dernier jour pour « livré avant Noël »** (24 déc. moins 12 jours ouvrés = expédition le mar. 8 déc., moins 1-2 jours ouvrés de préparation) | Estimation, pire cas annoncé. Date harmonisée le 10 nov. avec l'audit et l'analyse marché |
+| 5-14 déc. | « Cadeau tardif » seulement si le délai de 7 jours ouvrés est **confirmé par écrit** par le fournisseur | HYPOTHÈSE |
 | Après le 14 déc. | Plus d'angle Noël ; routine du Nouvel An, achat pour soi | INFÉRENCE |
 
 ### 10.3 Quelle offre pour le BFCM (estimation)
@@ -545,7 +545,7 @@ Méthode : prix − coût DDP 31,41 $ − carte et sticker 0,16 $ − frais 4,9 
 
 ### 10.4 L'angle cadeau, sans mentir
 
-- « The gift they'll use every morning » ; « 2 cartridges in the box » ; « Order by Dec 7 for Christmas delivery (US) ».
+- « The gift they'll use every morning » ; « 2 cartridges in the box » ; « Order by Dec 4 for Christmas delivery (US) ».
 - La boîte est générique [I2] : **ne pas promettre d'emballage cadeau**.
 - Toute date de livraison annoncée exige une base raisonnable ; en cas de retard, prévenir le client et lui proposer l'annulation avec remboursement (règle FTC sur la vente à distance [S40]).
 
@@ -711,3 +711,144 @@ Une créa non testée n'est **jamais** comptée comme perdante, et son angle n'e
 
 ---
 
+## 14. Quinze questions pièges de media buyer
+
+**1. La CBO met 90 % du budget sur une ad dont le CPA est 2× la cible (40 €). Que fais-tu ?**
+40 € est au-dessus du CPA BE (28 €) : elle perd de l'argent. Mais on applique le seuil, pas l'humeur : sous 85 € de dépense, on la laisse courir (sauf 0 achat à 57 €) ; au-delà de 85 € avec CPA > 42 €, on coupe (§13.4). Avant de couper, vérifier les achats Shopify (attribution en retard [S31]). Couper la seule ad qui dépense redistribue le budget vers des ads que le système juge moins bonnes : c'est voulu, et c'est le moment d'avoir des créas en attente.
+
+**2. On n'aura jamais 50 achats par semaine. On optimise sur l'ajout au panier ?**
+Non. La formule de Meta [S18] dit que même un seul ensemble resterait en « apprentissage limité » ; optimiser sur l'ajout panier apprendrait à trouver des gens qui ajoutent sans acheter. On optimise sur l'achat et on juge les créas sur nos seuils (§2.4, INFÉRENCE).
+
+**3. Une ad n'a rien dépensé en 2 jours. Je la duplique dans un nouvel ensemble ?**
+Non. Une copie identique est la même créa pour Meta [S6] et un ensemble de plus fragmente. Elle reste, et à J+5 elle suit la règle « non testée » (§13.5).
+
+**4. Meta annonce 10 achats, Shopify en compte 6. Qui a raison ?**
+Shopify, pour l'argent. Meta compte aussi la vue à 1 jour et l'« engage-through » [S31]. On compare sur « 7 jours clic » ; si l'écart dépasse 20 %, on contrôle le tracking (§9).
+
+**5. Le CPM passe de 15 $ à 28 $ le 24 nov. Le compte est cassé ?**
+Non : c'est la saison (BFCM 2025 ≈ 22 $ contre 15 $ sur l'année, et les prix Meta US sont à +23 % sur un an [S25][S26][S27]). On juge le CPA et le MER, pas le CPM, et on ne lance pas de test cette semaine-là (§10).
+
+**6. Le certificat de l'usine dit « 99 % ». Je peux l'écrire ?**
+Pas avant de l'avoir lu : porte-t-il sur ce produit fini, à température de douche, à quel débit, par quel labo ? Une étude d'ingrédient ne prouve pas le produit fini [S35] ; la référence du secteur est NSF/ANSI 177 [S38]. Même prouvé : « up to », avec les conditions en note.
+
+**7. Une créa gagne. Je double le budget pour attraper le BFCM ?**
+Non. +20 % tous les 3 jours (HYPOTHÈSE), ou une nouvelle CBO de scaling avec la créa par post ID. Un doublement brutal est une modification importante qui peut relancer l'apprentissage, au pire moment.
+
+**8. « Struggling with dry, itchy skin? » est mon meilleur hook. Je le garde ?**
+Non : attribut personnel de santé, refus probable [S33], et allégation santé implicite côté FTC [S35]. Réécrire sans « you have » et sans état de santé : « That pool smell in your shower has a name. »
+
+**9. Je peux montrer des cheveux avant / après ?**
+Non. Meta tolère l'avant/après cosmétique sans perception négative de soi [S34], mais la FTC exige de prouver que le filtre a produit l'effet et qu'il est représentatif [S35][S53]. On n'a ni l'un ni l'autre. La cartouche neuve contre usée, oui, si elle est réelle (§11).
+
+**10. Deux ads : même vidéo, sous-titres différents. Test utile ?**
+Non dans la CBO : c'est la même créa pour Meta [S9]. Pour tester des sous-titres, l'outil A/B ou l'outil de test créa, plus tard.
+
+**11. Mon ensemble est en « apprentissage limité » à J+2. J'augmente le budget ?**
+Non. C'était prévu (0,74 ensemble soutenable [S18]). Le statut est une étiquette ; Loomer en parle comme telle [S17]. On ne touche à rien avant le passage de J+3.
+
+**12. On n'a aucun avis. On importe ceux d'AliExpress pour le même produit ?**
+Non. Ce ne sont pas des clients de Plush : faux avis au sens de la règle FTC, jusqu'à 53 088 $ par infraction [S37]. Même chose pour les notes affichées sur la fiche sans aucune vente (§8.4).
+
+**13. Je mets un acteur dans un « micro-trottoir » pour faire vrai ?**
+Seulement en le disant clairement : des personnes présentées comme de vrais consommateurs doivent l'être [S53].
+
+**14. Le compte refuse de dépenser plus de X € par jour le jour du lancement.**
+Probable limite de dépense quotidienne d'un compte neuf, fixée par Meta et relevée avec l'historique [S48]. À vérifier dans Facturation **avant** le lancement ; ne pas lancer 30 créas sur un compte plafonné sous 150 €.
+
+**15. J'exclus l'Audience Network pour « faire propre » ?**
+Pas au test 1 : une exclusion de placement fait perdre le statut Advantage+ [S20], et rien ne prouve encore que ce placement est mauvais pour Plush. On lit la ventilation par placement à J+5 et on décide sur données.
+
+---
+
+## 15. Où une formation vidéo aiderait (précis)
+
+Les 3 formations déjà transcrites (« FB Ads 2021 » et suivantes, `formations/`) datent d'avant Andromeda : utiles pour la créa et la copy, **périmées pour la structure de compte**. Ce qui manque, par ordre d'utilité pour le test du 12 nov. :
+
+| # | Sujet | Pourquoi une vidéo plutôt qu'un texte |
+|---|---|---|
+| 1 | **Ads Manager 2026 en direct** : créer une CBO Advantage+ à 2 ensembles, poser un minimum de dépense par ensemble, utiliser l'outil « Creative testing », « Utiliser une publication existante » (post ID) | L'interface change tous les trimestres ; les menus exacts ne sont pas dans les sources lues |
+| 2 | **Events Manager** : outil de test d'événements, lecture du dédoublonnage navigateur/serveur, note EMQ, réglages Shopify « Maximum » et « Always on » | Vérification visuelle, écran par écran |
+| 3 | **Lire le score « Creative diversity »** et les « Top creative themes » sur un vrai compte | Indicateur récent (août 2026), peu documenté [S8] |
+| 4 | **Fabriquer des statiques natives** (note iPhone, SMS, comparatif) dans Canva ou Figma, avec zones sûres 4:5 et 9:16 | Savoir-faire de production |
+| 5 | **Monter un VSL sans produit** (animation, voix off, texte animé) et une chanson courte dans CapCut | Les 10 vidéos de J0 se font sans échantillon |
+| 6 | **Analyser un export Ads Manager par le nom des ads** (tableau croisé Sheets) | Geste à reproduire chaque J+5 |
+| 7 | **Refus Meta et appels** sur des cas réels de santé et d'attributs personnels | Les refus se jugent sur l'ad entière, pas sur une liste de mots [S33] |
+| 8 | **Media buying Q4 à petit budget**, contenu 2025-2026 uniquement | Aucun benchmark de courbe de CPM jour par jour trouvé dans les sources |
+| 9 | **Shopify** : upsell après achat et abonnement (Shopify Subscriptions), avec les mentions ROSCA | Réglages et écrans de paiement |
+
+---
+
+## 16. Sources
+
+Accès : « lu » = page ouverte et lue ; « via recherche » = contenu vu dans les résultats du moteur de recherche (page bloquée ou non ouverte) : à relire avant de citer à l'extérieur. Dates d'accès : 9-10 nov. 2026.
+
+### Meta (officiel)
+- **[S1]** Meta Engineering, « Meta Andromeda: Supercharging Advantage+ automation… », 2 déc. 2024 — https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/ — lu le 9 nov.
+- **[S2]** Meta Engineering, « Meta's Generative Ads Model (GEM)… », 10 nov. 2025 — https://engineering.fb.com/2025/11/10/ml-applications/metas-generative-ads-model-gem-the-central-brain-accelerating-ads-recommendation-ai-innovation/ — lu le 9 nov.
+- **[S3]** Meta Engineering, articles GEM 2026 : https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/ (3 août) · https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/ (5 août) · https://engineering.fb.com/2026/10/13/ml-applications/metas-generative-ads-model-gem-scaling-the-central-model-and-compute-engine-for-frontier-ads-ai (13 oct.) — via recherche, 9 nov.
+- **[S4]** Meta AI, Lattice, 11 mai 2023 — https://ai.meta.com/blog/ai-ads-performance-efficiency-meta-lattice/ · arXiv 2512.09200 (déc. 2025) — https://arxiv.org/abs/2512.09200 — via recherche, 9 nov.
+- **[S6]** Meta for Business, « Demystifying Creative Diversification », 16 déc. 2025 — https://www.facebook.com/business/news/demystifying-creative-diversification — lu le 10 nov.
+- **[S20]** Annonce Meta du 8 oct. 2025 (structure Advantage+), rapportée par ppc.land le 26 oct. 2025 — https://ppc.land/meta-deprecates-legacy-campaign-apis-for-advantage-structure/ — lu le 10 nov.
+- **[S23]** Meta Marketing API, Advantage campaign budget (limites par ensemble « best effort ») — https://developers.facebook.com/docs/marketing-api/bidding/guides/advantage-campaign-budget ; Jon Loomer, « Change to Ad Set Spending Limits » — https://www.jonloomer.com/qvt/ad-set-spending-limits-change/ — via recherche, 10 nov.
+- **[S30]** Meta for Developers, « Deduplicate Pixel and Server Events » — https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events — lu le 10 nov.
+- **[S33]** Meta Transparency Center, « Privacy violations and personal attributes » — https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/ — lu le 10 nov.
+- **[S34]** Meta Transparency Center, « Health and wellness » (version du 23 juil. 2026) — https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness — lu le 10 nov.
+- Centre d'aide Meta (« About the learning phase », « Creative diversity ») : pages non lisibles depuis l'environnement ; leur contenu est cité via [S7], [S16], [S19].
+
+### Presse spécialisée et analyses
+- **[S5]** ppc.land, page Andromeda (citation de Susan Li, 29 juil. 2026) — https://ppc.land/andromeda/ — via recherche, 9 nov. (transcription à vérifier)
+- **[S7]** Novoads, « Creative Diversity in Meta Ads… », 17 sept. 2026, MAJ 25 oct. — https://novoads.ai/en/blog/creative-diversity-meta-ads — lu le 10 nov. (cite le Centre d'aide : https://www.facebook.com/business/help/2371176336684086)
+- **[S8]** Common Thread Collective, « Meta's New Creative Diversity Score Is Live in Ads Manager », 9 sept. 2026 — https://commonthreadco.com/blogs/coachs-corner/metas-new-creative-diversity-score-is-live-in-ads-manager-what-ecommerce-brands-must-act-on-now — lu le 9 nov.
+- **[S9]** Marketing Brew, 28 sept. 2026 — https://www.marketingbrew.com/stories/meta-ad-creative-diversification-best-practices-advertiser-approach — lu le 10 nov.
+- **[S10]** Relevant Audience, résumé de [S9], 29 sept. 2026 — https://www.relevantaudience.com/meta/meta-ad-creative-diversification-same-hook-same-ad/ — lu le 9 nov. (non cité dans le texte)
+- **[S11]** DataAlly, « Meta's Creative Entity ID… », 12 oct. 2025 — https://www.dataally.ai/blog/metas-creative-entity-id-why-creative-diversification-is-essential — lu le 10 nov.
+- **[S12]** Praticiens sur l'Entity ID et les seuils de similarité : https://www.silverbackstrategies.com/blog/creative-is-the-new-targeting-how-to-master-entity-ids-and-unlock-scale/ · https://nikhil.pro/meta-ads-creative-similarity-explained/ · https://www.recharm.com/blog/what-is-andromeda-and-creative-similarity — via recherche, 9 nov.
+- **[S13]** Common Thread Collective, « Meta Andromeda Killed Your ROAS… », 6 mai 2026 — https://commonthreadco.com/blogs/coachs-corner/meta-andromeda-roas-creative-strategy-2026 — lu le 10 nov.
+- **[S14]** Motion, « Creative Benchmarks 2026 » (page redirigée vers runneth.com) — https://runneth.com/library/research/creative-benchmarks-2026/ — lu le 10 nov.
+- **[S18]** ppc.land, 25 oct. 2026, sur le guide Meta « Peak Season 2026 » du 21 oct. 2026 — https://ppc.land/meta-says-ad-sets-under-50-weekly-conversions-cost-28-more-per-purchase/ — lu le 10 nov.
+- **[S19]** ppc.land, explainer « learning phase » — https://ppc.land/learning-phase/ ; Jon Loomer, « Is the Learning Phase Changing? » — https://www.jonloomer.com/qvt/is-the-learning-phase-changing/ — via recherche, 10 nov.
+- **[S21]** adlibrary.com, « Advantage+ Ate Manual Campaigns. The Toggles Still Matter », 20 sept. 2026 — https://adlibrary.com/posts/advantage-plus-sales-campaigns-2026 — lu le 10 nov.
+- **[S25]** Triple Whale, « Facebook Ad Benchmarks by Industry (Updated 2026 Data) » — https://www.triplewhale.com/blog/facebook-ads-benchmarks — via recherche (403 en direct), 10 nov.
+- **[S26]** AdAdvisor, citant Triple Whale BFCM 2025 — https://adadvisor.ai/blog/black-friday-meta-ads-profit-nova ; https://www.triplewhale.com/bfcm-2025 — via recherche, 10 nov.
+- **[S27]** Relevant Audience, résultats Meta T3 2026 (21 oct. 2026) — https://www.relevantaudience.com/meta/meta-q3-2026-ad-price-impressions-asia-pacific/ — lu le 10 nov.
+- **[S28]** Hook rate : https://hawky.ai/blog/ad-creative-metrics (attribué à Motion) · https://taylorsicard.com/blog/meta-ads-creative-benchmarks-2026 (juil. 2026) — via recherche, 10 nov. (non vérifiés)
+- **[S31]** ppc.land, « Meta rewrites click attribution rules… », 4 mars 2026 (annonce Meta du 3 mars) — https://ppc.land/meta-rewrites-click-attribution-rules-finally-aligning-with-google-analytics/ — lu le 10 nov. ; Jon Loomer, « How Meta Ads Attribution Works in 2026 » — https://www.jonloomer.com/meta-ads-attribution-2026/ — via recherche
+- **[S32]** Digiday, restrictions santé et bien-être (nov. 2024) — https://digiday.com/marketing/as-health-and-wellness-brands-brace-for-ad-restrictions-on-meta-marketers-and-advertisers-seek-more-transparency ; Haus — https://www.haus.io/blog/meta-announces-new-health-wellness-conversion-restrictions — via recherche, 10 nov.
+- **[S47]** Zones sûres et ratios : https://billo.app/blog/meta-ads-safe-zones · https://blog.adnabu.com/meta-ads/meta-safe-zones/ — via recherche, 10 nov. (secondaires)
+
+### Praticiens
+- **[S15]** Jon Loomer, Pubcast « You're Overthinking Your Ad Setup », 10 déc. 2025 — https://pubcast.jonloomer.com/youre-overthinking-your-ad-setup/ — lu le 10 nov.
+- **[S16]** Vaizle, « Meta Might Have Quietly Changed How the Learning Phase Works » (test de Loomer), 29 sept. 2025 — https://insights.vaizle.com/news/meta-might-have-quietly-changed-how-the-learning-phase-works — lu le 10 nov.
+- **[S17]** Jon Loomer, Pubcast « The Learning Phase Is Just a Label », 15 oct. 2025 — https://pubcast.jonloomer.com/the-learning-phase-is-just-a-label/ — via recherche (429 en direct)
+- **[S22]** Jon Loomer, « Ad Set Budget Sharing » — https://www.jonloomer.com/qvt/ad-set-budget-sharing/ ; https://theoptimizer.io/blog/meta-ads-ad-set-budget-sharing-what-it-is-when-to-use-it-and-when-to-turn-it-off — via recherche, 10 nov.
+- **[S24]** Jon Loomer, « Meta's Creative Testing Tool » — https://www.jonloomer.com/meta-creative-testing/ ; « Is Meta Expanding Creative Testing to 10 Ads? » — https://www.jonloomer.com/qvt/meta-expanding-creative-testing-10-ads/ — via recherche, 10 nov.
+- **[S46]** Barry Hott, « Ugly ads perform best, marketer says » — https://www.practicalecommerce.com/ugly-ads-perform-best-marketer-says ; https://motionapp.com/library/expert/barry-hott/ — via recherche, 10 nov. (date de l'entretien non relevée)
+- **[S48]** Jon Loomer, glossaire « Daily Spending Limit » — https://www.jonloomer.com/glossary/daily-spending-limit/ — via recherche, 10 nov.
+- **[S49]** Jon Loomer, « Number of Ads Per Ad Set » (plafond de 50) — https://www.jonloomer.com/qvt/number-of-ads-per-ad-set/ — via recherche, 10 nov.
+- **[S50]** Jon Loomer, Pubcast « Stop Blaming Andromeda for Your Results » (3 déc. 2025) — https://pubcast.jonloomer.com/stop-blaming-andromeda-for-your-results/ ; « Creative Diversification Is the New Targeting » (3 sept. 2025) — https://pubcast.jonloomer.com/creative-diversification-is-the-new-targeting/ — via recherche
+- **[S51]** Andrew Foxwell, Scalability School, « How To Test Creative on Meta In 2026 », 26 févr. 2026 — via recherche (épisode non écouté, non cité dans le texte)
+
+### Fondamentaux copy et offre
+- **[S43]** Eugene Schwartz, *Breakthrough Advertising* (1966) ; résumé : https://selzee.com/eugene-schwartz-5-levels-of-awareness — via recherche, 10 nov.
+- **[S44]** Stefan Georgi, RMBC — https://www.stefanpaulgeorgi.com/blog/a-copywriting-breakthrough-this-morning/ ; https://thecopywriterclub.com/sales-letters-stefan-georgi — via recherche, 10 nov.
+- **[S45]** Alex Hormozi, *$100M Offers* (2021) ; résumé : https://www.supersummary.com/100m-offers/section-3-summary/ — via recherche, 10 nov.
+
+### Conformité US
+- **[S35]** FTC, « Health Products Compliance Guidance » (déc. 2022) — https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance — lu le 10 nov.
+- **[S36]** FTC, Policy Statement Regarding Advertising Substantiation — https://www.ftc.gov/sites/default/files/attachments/training-materials/policy_substantiation.pdf — via recherche, 10 nov.
+- **[S37]** FTC, Rule on the Use of Consumer Reviews and Testimonials (16 CFR 465), amende maximale 53 088 $ : Venable, déc. 2025 — https://www.venable.com/insights/publications/2025/12/ftc-signals-heightened-enforcement-of-new ; KJK, 6 août 2026 — https://kjk.com/2026/08/06/ftc-consumer-review-rule-enforcement-what-businesses-need-to-know/ — via recherche, 10 nov.
+- **[S38]** NSF/ANSI 177 : liste des produits certifiés — https://info.nsf.org/Certified/DWTU/listings.asp?Standard=177 ; WWD, 12 oct. 2004 — https://www.wwdmag.com/home/news/10909106/new-nsf-american-national-standard-verifies-shower-filtration-product-claims — via recherche, 10 nov.
+- **[S39]** 16 CFR 233.1, prix de référence (LII) — https://www.law.cornell.edu/cfr/text/16/233.1 — lu le 10 nov.
+- **[S40]** FTC, « Business Guide to the FTC's Mail, Internet, or Telephone Order Merchandise Rule » — https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule — lu le 10 nov.
+- **[S41]** Cooley, 11 juil. 2025, annulation de la règle « click-to-cancel » (8e circuit, 8 juil. 2025) — https://www.cooley.com/news/insight/2025/2025-07-11-click-to-cancel-just-got-cancelled-eighth-circuit-vacates-entirety-of-ftcs-negative-option-rule — via recherche, 10 nov.
+- **[S42]** EPA, rapports annuels de qualité de l'eau (CCR, avant le 1er juillet) — https://www.epa.gov/sites/default/files/2018-02/documents/epa-ogwdw-ccr-infographic-v5_508.pdf ; CDC — https://www.cdc.gov/drinking-water/about/how-to-read-drinking-water-quality-reports.html — via recherche, 10 nov. (plafond de chlore de 4 mg/L : à vérifier dans 40 CFR 141.65)
+- **[S53]** 16 CFR 255.2, guides FTC sur les recommandations (LII) — https://www.law.cornell.edu/cfr/text/16/255.2 — lu le 10 nov.
+
+### Shopify
+- **[S29]** Shopify Changelog, « New default setting for pixel data sharing », 13 janv. 2026 — https://changelog.shopify.com/posts/new-default-setting-for-pixel-data-sharing — lu le 10 nov.
+- **[S52]** Tarifs Shopify Payments Belgique et frais de conversion — https://www.shopify.com/be-en/pricing · https://help.shopify.com/en/manual/international/pricing/fees — lus par la Phase 1 le 10 nov.
+
+### Sources internes
+- **[I1]** `../01_produit/audit-produit-offre.md` (Phase 1, 10 nov. 2026) : CPA BE, ROAS BE, CPA cible, seuils en €, LTV, incohérences de la fiche.
+- **[I2]** `../../CLAUDE.md` (mémoire du projet) et `../../research/trendtrack-export/ads-final-4oct.md` : relevé de 294 créas concurrentes du 4 oct. 2026, avatar Megan.
+- **[I3]** `../PLAN.md` : réponses de Yasser du 9 nov. (budget, échantillon, certificat, avis).

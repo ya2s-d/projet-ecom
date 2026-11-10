@@ -28,4 +28,10 @@
 
 ## Externes — Phases 0, 2, 3
 
-*(Consolidées depuis le playbook, l'analyse marché et la liste des concurrents, à la fin du bloc 1.)*
+| Livrable | Où sont ses sources |
+|---|---|
+| Playbook (phase 0) | `00_knowledge/playbook-meta-ads-2026.md` §16 : [S1] à [S40]. Le Centre d'aide Meta, Triple Whale et jonloomer.com étaient bloqués en accès direct, donc cités via les résultats de recherche (marqués comme tels) |
+| Marché (phase 2) | `02_marche/analyse-marche.md`, section Sources · `02_marche/amazon-bestsellers-2026-11-10.csv` |
+| Concurrents (phase 3) | `03_concurrents/liste-concurrents.csv`, colonne `notes` (source + date par ligne) · `03_concurrents/shortlist.md` |
+
+Vérifié par moi le 10 nov. : [S29] [Shopify Changelog, 13 janv. 2026](https://changelog.shopify.com/posts/new-default-setting-for-pixel-data-sharing). Citation exacte : « When we see zero signals coming from a pixel over days or weeks, we will pause data sharing until we see new signals ».

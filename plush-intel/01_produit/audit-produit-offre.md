@@ -246,7 +246,7 @@ Ces seuils sont recalés sur le CPA de break-even. Les seuils de haut de funnel 
 
 | Livraison annoncée | Dernière expédition pour le 24 déc. | Dernière commande (avec 1-2 j de préparation) |
 |---|---|---|
-| 12 jours ouvrés (pire cas affiché) | mar. 8 déc. | **~sam. 5 - dim. 6 déc.** |
+| 12 jours ouvrés (pire cas affiché) | mar. 8 déc. | **ven. 4 déc.** (date retenue pour « Order by Dec 4 », harmonisée avec le playbook et l'analyse marché) |
 | 7 jours ouvrés (délai constaté par le fournisseur) | mar. 15 déc. | **~sam. 12 - dim. 13 déc.** |
 
 Black Friday 27 nov., Cyber Monday 30 nov. **INFÉRENCE** : un test de 5-6 jours lancé après le 20 nov. paiera le CPM de la BFCM. Le playbook (§10) chiffre l'écart.

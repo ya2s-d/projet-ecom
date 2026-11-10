@@ -4,7 +4,7 @@
 > compaction ou dans une nouvelle session. Mémoire générale du projet : `../CLAUDE.md` (on garde UNE seule
 > mémoire : le `CLAUDE.md` de fin de mission sera fusionné dans celui de la racine du dépôt, pas dupliqué).
 
-**Démarrée le** 9 nov. 2026 · **Statut (10 nov.)** : bloc 1 en cours. Phase 1 ✅ · Phases 0, 2, 3 et les fiches formations en cours (sous-agents) → 🛑 CHECKPOINT B ensuite.
+**Démarrée le** 9 nov. 2026 · **Statut (10 nov.)** : bloc 1 terminé (phases 0 à 3) → 🛑 **CHECKPOINT B envoyé**, en attente de Yasser (shortlist, date de lancement, TVA, devise, durée cartouche).
 
 ## Calendrier qui commande tout
 
@@ -74,11 +74,11 @@
 |---|---|---|
 | Démarrage | arborescence, `MISSION.md`, `PLAN.md` | ✅ 9 nov. |
 | 🛑 A | plan + questions | ✅ envoyé 9 nov. — en attente |
-| 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ⏳ playbook : sous-agent relancé le 10 nov. · **fiches formations arrêtées le 10 nov. à la demande de Yasser** (trop de tokens). Gardé : formation B §1-3, dont les passages « combien de créas » (§3.1). Formations 1 et A : squelettes seulement |
+| 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ✅ playbook 10 nov. (§0-16, ~14 000 mots, calé sur la décision de Yasser : 30 créas, 1 CBO, 2 ensembles, 5 j) · **fiches formations arrêtées le 10 nov. à la demande de Yasser** (trop de tokens). Gardé : formation B §1-3, dont les passages « combien de créas » (§3.1). Formations 1 et A : squelettes seulement |
 | 1 Audit Plush | `01_produit/audit-produit-offre.md` | ✅ 10 nov. |
 | 2 Marché | `02_marche/analyse-marche.md` + `amazon-bestsellers-2026-11-10.csv` | ✅ 10 nov. Trends bloqué (429) → consigne de 3 min pour Yasser en §7 · TikTok Creative Center non consulté · §5 réglementaire écrit sans recherche, à revérifier |
 | 3 Concurrents | `03_concurrents/liste-concurrents.csv` + `shortlist.md` | ✅ 10 nov. : 32 concurrents (6 premium · 10 directs · 6 dropshippers · 4 Amazon · 6 substituts), shortlist de 12. Activité pub = export du 4 oct. (Ad Library inaccessible) |
-| 🛑 B | playbook 10 lignes · audit 10 lignes · shortlist | ⏳ |
+| 🛑 B | playbook 10 lignes · audit 10 lignes · shortlist | ✅ envoyé le 10 nov. — en attente |
 | 4 Teardown ads | `ads-database.csv`, teardowns, `synthese-ads.md` | ⏳ |
 | 5 VOC | `verbatims.csv`, `synthese-voc.md` | ⏳ |
 | 6 Avatar | `avatar-principal.md`, `personas-secondaires.md` | ⏳ |
@@ -123,6 +123,9 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
   - la fiche produit a des blocs de preuve sociale non documentables (0 commande), des avant/après et le badge « Stronger pressure ».
 
 - 10 nov. : **décision de Yasser sur la structure du test** : 30 créas (natives, VSL, images), 150 €/jour, 5 jours, CBO avec 2 ad sets (3 au maximum), natives / vidéos. Le calcul de la Phase 1 (juger chaque créa sur l'achat coûterait 2× le budget) lui a été présenté. La décision est prise : la matrice (Phase 7) se construit sur ce plan, avec une règle « non testée » pour les créas qui ont trop peu dépensé.
+
+- 10 nov. : date limite de Noël harmonisée à **« Order by Dec 4 »** (12 jours ouvrés + 1-2 j de préparation) dans le playbook et l'audit. Le playbook disait 7 déc., l'analyse marché 4 déc.
+- 10 nov. : le playbook suppose un lancement le 12 nov. (« si lancement le 12 nov. »), ce qui est irréaliste sans les créas. La date de lancement est posée comme décision au checkpoint B.
 
 ## Prochaines actions
 
