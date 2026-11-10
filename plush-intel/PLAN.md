@@ -145,7 +145,7 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 
 ## Prochaines actions
 
-1. Phase 7, suite : `banque-angles.md` et `banque-hooks.md`, puis attribuer les `HK-xx` de la matrice. Points ouverts de la matrice : lancement au plus tard le 17 nov. (sinon J+5 tombe dans le BFCM) · C01 (cartouche) sort du test sans vraie cartouche marquée · Yasser accepte-t-il de tourner face caméra (B10) ?
+1. Phase 7 : `06_angles/production-creas.md` livré (fiches des 30 créas + réserve + BFCM, 60 hooks HK-01 à HK-60, liste des plans réels à tourner). 🔴 Bloquant : 6 des 7 photos de la fiche produit sont des avant/après interdits, à remplacer (§2 du pack). Outil : Krea (connecté) ou Kie.ai (clé API via le formulaire sécurisé), au choix de Yasser. Points ouverts de la matrice : lancement au plus tard le 17 nov. (sinon J+5 tombe dans le BFCM) · C01 (cartouche) sort du test sans vraie cartouche marquée · Yasser accepte-t-il de tourner face caméra (B10) ?
 2. Phase 5 VOC, version légère et plafonnée : les sources ouvertes seulement (Reddit, Trustpilot et Amazon bloqués), en annonçant le nombre réel de verbatims. Phase 6 : mise à jour de l'avatar v2 avec les données
 3. Intégrer les captures et vidéos de Yasser (dossier Mega) dès qu'elles arrivent : script de transcription + 4 images par vidéo
 4. Pour économiser les tokens : reprendre le bloc 2 dans une **nouvelle session**, à partir de ce fichier, avec un contexte léger

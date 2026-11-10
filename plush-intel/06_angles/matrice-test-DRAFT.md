@@ -72,7 +72,7 @@ Ce qu'il faut savoir sur 30 créas à 150 €/jour : le test jugera au plus ~13 
 | A01 | `C01_ANG-cartouche_PER-P1_AW-PA_FMT-stat` | F1 | Une vraie cartouche marquée à côté d'une neuve fait cliquer sans aucune promesse. **Seulement avec une vraie cartouche, sinon remplacée par R1** |
 | A02 | `C02_ANG-builtin_PER-P2_AW-SA_FMT-note` | F7 | La note « the shower head that came with my apartment » fait se reconnaître une locataire mieux qu'une photo produit |
 | A03 | `C02_ANG-builtin_PER-P2_AW-SA_FMT-stat` | F7 | Le même angle en photo produit propre bat la note (lecture du format à angle constant) |
-| A04 | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-note` | F10 | « 74,99 $ ÷ 365 = 20 ¢ par douche » lève l'objection prix mieux qu'une remise |
+| A04 | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-note` | F10 | « 74,99 $ pour 6 mois = 41 ¢ par jour » lève l'objection prix mieux qu'une remise |
 | A05 | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-comp` | F9 | Un comparatif par **types** (pommeau d'origine · billes colorées · « 15-stage » · Plush) convertit le sceptique |
 | A06 | `C04_ANG-ccr_PER-P1_AW-UN_FMT-note` | F5 | Une capture annotée du rapport d'eau d'une grande ville US arrête une audience qui ne pensait pas à son eau |
 | A07 | `C04_ANG-ccr_PER-P1_AW-PA_FMT-stat` | F5 | « Your city publishes a water report every year » en éditorial vaut la note en clics, plus en achats |
@@ -178,6 +178,6 @@ Après le 14 déc. : plus d'angle Noël. On repart sur la routine du Nouvel An e
 
 ## 8. Ce qui reste ouvert
 
-- Les numéros `HK-xx` : à attribuer avec `banque-hooks.md`.
+- Les numéros `HK-xx` sont attribués dans `production-creas.md` (HK-01 à HK-60).
 - Les personas et les niveaux de conscience viennent de l'avatar v2 (21 oct.), construit sur la copy des concurrents et pas sur la VOC. La Phase 5 peut faire bouger les personas P2 à P5.
 - Les ads concurrentes en ligne au 10 nov. (Black Friday compris) n'ont pas été relevées. Les captures de Yasser peuvent changer les formats de la réserve.
