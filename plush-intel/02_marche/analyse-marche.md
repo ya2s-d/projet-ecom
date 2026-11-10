@@ -6,17 +6,19 @@
 
 ## Plan et état
 
-| # | Section | État |
+| # | Section | État au 10 nov. |
 |---|---|---|
-| 1 | Prix et positionnement, coût réel sur 1 an | ⏳ |
-| 2 | Géographie : eau dure, chlore vs chloramine | ⏳ |
-| 3 | Conscience et sophistication (Schwartz) | ⏳ |
-| 4 | Canaux : Amazon, retail, DTC | ⏳ |
-| 5 | Cadre réglementaire des allégations | ⏳ |
-| 6 | Saisonnalité, Q4, BFCM, dates limites Noël | ⏳ |
-| 7 | Demande : Google Trends, TikTok, sources secondaires | ⏳ |
-| — | 10 conséquences pour nos ads | ⏳ |
-| — | Sources | ⏳ |
+| 1 | Prix et positionnement, coût réel sur 1 an | ✅ 13 marques + Amazon |
+| 2 | Géographie : eau dure, chlore vs chloramine | ✅ 16 grandes villes · 7 non relevées (budget) |
+| 3 | Conscience et sophistication (Schwartz) | ✅ |
+| 4 | Canaux : Amazon, retail, DTC | ✅ Amazon complet · Target et Costco non vérifiés |
+| 5 | Cadre réglementaire des allégations | ✅ écrit sans recherche web : textes à revérifier |
+| 6 | Saisonnalité, Q4, BFCM, dates limites Noël | ✅ |
+| 7 | Demande : Google Trends, TikTok, sources secondaires | 🟠 Trends bloqué → consigne pour Yasser · TikTok non consulté |
+| — | 10 conséquences pour nos ads | ✅ |
+| — | Sources | ✅ |
+
+Ordre de lecture du fichier : 1 → 2 → 3 → 4 → 5 → 6 → 7. Données brutes Amazon : `amazon-bestsellers-2026-11-10.csv` (même dossier).
 
 ## Faits Plush utilisés dans ce fichier (10 nov. 2026)
 
@@ -81,7 +83,7 @@ Statut : prix et durées = **FAIT** (relevés le 10 nov. 2026, URLs en fin de fi
 4. **La cartouche Plush à 29 $ n'est pas bon marché** : Afina vend la sienne 20 $ en pack de 6 (120 $/an), Canopy 27 $ en abonnement, MyHalos 15 $. À l'an 2, Plush (116 $ à 3 mois) n'est pas moins cher qu'Afina (120 $ à 2 mois). L'avantage de Plush est **à l'achat du pommeau**, pas sur la recharge. → Un pack de cartouches (2 ou 4) est à chiffrer avant de parler de coût annuel en pub. INFÉRENCE · coût d'une cartouche envoyée seule toujours inconnu.
 5. **Le consommable domine Amazon** : dans le top 30 « Showerhead Filters », **16 lignes sur 30 sont des cartouches de rechange** (dont n° 2 AquaBliss, n° 3 Jolie, n° 4 Afina, n° 11 eskiin), 9 des filtres en ligne, 5 des pommeaux filtrants. Confirme le constat Trendtrack du 2 oct. (cartouche = best-seller chez eskiin et Afina). FAIT (classement manuel du top 30, CSV).
 6. **Le prix barré est la norme… et un risque pour Plush** : Lucinn 99 $ barré 225 $, Afina 129 $ barré 179 $, Plush 59,99 $ barré 115 $ et 74,99 $ barré 144,02 $. Pour une marque qui n'a jamais vendu à 115 $, voir section 5 (prix de référence). FAIT (prix) · INFÉRENCE (risque).
-7. **Les offres BFCM de la catégorie empilent des cadeaux plutôt que des remises** : eskiin affiche en catalogue « FREE Beauty And Wellness E-Book » valorisé **20 $**, « FREE Hair Wrap Towel » 50 $, « FREE Detangling Hair Brush » 40 $, « FREE Diverter » 29 $, « FREE Shower Steamers » 30 $. → L'ebook gratuit « FREE ~~$20~~ » de Plush est **le standard de la catégorie, pas un différenciateur**. FAIT (eskiin.com/products.json, 10 nov.) · INFÉRENCE (conséquence).
+7. **À 17 jours du Black Friday, les offres de la catégorie empilent des cadeaux plutôt que des remises** : eskiin affiche en catalogue « FREE Beauty And Wellness E-Book » valorisé **20 $**, « FREE Hair Wrap Towel » 50 $, « FREE Detangling Hair Brush » 40 $, « FREE Diverter » 29 $, « FREE Shower Steamers » 30 $. → L'ebook gratuit « FREE ~~$20~~ » de Plush est **le standard de la catégorie, pas un différenciateur**. FAIT (eskiin.com/products.json, 10 nov.) · INFÉRENCE (conséquence).
 
 ### Ancres de prix Amazon des pommeaux filtrants (top 30, 10 nov.)
 
@@ -138,7 +140,7 @@ n.r. = non relevé. « Résumé » = valeur lue dans le résumé d'une recherche
 | Groupe | Villes | Plush y est… |
 |---|---|---|
 | 🟢 **Chlore libre** | New York, Chicago, Phoenix, Las Vegas, Seattle, Detroit, Columbus | **dans son registre** : KDF-55, sulfite de calcium et charbon visent le chlore. L'angle « odeur de piscine » est juste |
-| 🟠 **Chloramine** | Los Angeles, San Diego, San Francisco, Houston, Dallas, Washington DC, Philadelphie, Miami, Boston | **hors registre tant que la vitamine C et un test chloramine ne sont pas confirmés par écrit**. La chloramine sent moins le « piscine » : l'angle odeur y porte moins |
+| 🟠 **Chloramine** | Los Angeles, San Diego, San Francisco, Houston, Dallas, Washington DC, Philadelphie, Miami, Boston | **hors registre tant que la vitamine C et un test chloramine ne sont pas confirmés par écrit**. La chloramine sent généralement moins le « piscine » que le chlore libre (connu, non sourcé ici) : l'angle odeur y porte probablement moins (HYPOTHÈSE) |
 
 9 sur 16 grandes villes sont en chloramine, alors que l'EPA parle d'« un Américain sur cinq » au niveau national. **La chloramine est surreprésentée dans les grandes métropoles**, c'est-à-dire là où se concentre l'audience Meta. INFÉRENCE (échantillon de 16 villes, non représentatif au sens statistique).
 
@@ -178,7 +180,7 @@ Deux corpus : **77 titres Amazon** liés au filtre (best-sellers du 10 nov., CSV
 | « X-stage » | **23 titres / 77 (30 %)** · étages cités : 3, 15, 20, 23, 25, 30, 33 | « 25 Stage Shower Filter » 8,79 $ · « 33 Stage » · Unchemed « 15-stage inline » + 5 = « Twenty filtration stages » · Lucinn « 20 stages built from 10 filter media » | 🔴 surenchère numérique, dès 8,79 $ |
 | « Hard water » | **33 / 77 (43 %)** | quasi tous les titres d'entrée de gamme | 🔴 omniprésent |
 | « Water softener » / « soften » | **11 / 77 (14 %)** | Cobbe « Water Softener Filters Beads for Hard Water » · MyHalos « Water Softener » · eskiin « High Pressure Water Softener For Hard Water » | 🔴 **faux pour un média KDF / charbon / vitamine C** (la FAQ Plush le dit) |
-| « High pressure » | **26 / 77 (34 %)** | MyHalos, Afina, Jolie, AquaBliss SF100 | 🔴 usé, et invérifiable sans mesure |
+| « Pressure » (high pressure, etc.) | **26 / 77 (34 %)** | MyHalos, Afina, Jolie, AquaBliss SF100 | 🔴 usé, et invérifiable sans mesure |
 | Peau / cheveux | 22 / 77 (29 %) titres · **38 % des pubs Meta US** ouvrent sur un résultat corporel | Jolie « Clinically Tested to Reduce Hair Shedding » · AquaBliss « formulated with sensitive and eczema-prone skin in mind » | 🔴 usé **et** interdit à Plush |
 | Autorité (« #1 », dermatologue, docteur) | **38 % des pubs Meta US** · 0 titre Amazon « dermatolog » | Lucinn « #1 Recommendation by Dermatologists » · Unchemed « America's #1 » + page « Dr. Emily Harrison, PhD, MD » · Filterbaby « Doctor Developed » (titre Amazon) | 🔴 saturé sur Meta, interdit à Plush |
 | % chiffré | 5 / 77 titres | « Removes 99.947% » · « Reduce 97.45% Chlorine » · « 99.99% Remove Chlorine » · « 99.9% Chlorine & Chloramine Removal » · Clover & Cove « removes 99% of contaminants » | 🔴 précision factice (99,947 %) |
@@ -255,8 +257,8 @@ FAIT (relevé du 10 nov., `amazon-bestsellers-2026-11-10.csv`). Les rangs 31-50 
 
 ### 4.2 Ce qu'Amazon apprend
 
-1. **Le volume est en entrée de gamme, et c'est un filtre en ligne, pas un pommeau** : AquaBliss SF100 cumule 70 329 évaluations à 36,99 $ ; AquaBliss place **7 références** dans les 60 relevées. Un filtre en ligne **garde le vieux pommeau** — exactement l'objet que l'angle Plush (*builder grade*, « came with the apartment ») attaque. FAIT · INFÉRENCE.
-2. **Les marques DTC premium vivent aussi sur Amazon**, avec 1 647 à 2 585 évaluations pour leur pommeau (Jolie, Afina, eskiin) — 30 à 40 fois moins que le leader. Leur force sur Amazon, c'est **la cartouche** (Jolie n° 3, Afina n° 4). FAIT.
+1. **Le volume est en entrée de gamme, et c'est un filtre en ligne, pas un pommeau** : AquaBliss SF100 cumule 70 329 évaluations à 36,99 $ ; AquaBliss place **8 références** dans les 60 relevées (rangs 1, 2, 8, 12, 28, 51, 52, 72). Un filtre en ligne **garde le vieux pommeau** — exactement l'objet que l'angle Plush (*builder grade*, « came with the apartment ») attaque. FAIT · INFÉRENCE.
+2. **Les marques DTC premium vivent aussi sur Amazon**, avec 1 647 à 2 585 évaluations pour leur pommeau (Jolie, Afina, eskiin) — 27 à 43 fois moins que le leader. Leur force sur Amazon, c'est **la cartouche** (Jolie n° 3, Afina n° 4). FAIT.
 3. **Les cartouches des marques DTC sont déjà copiées** : « Replacement Compatible with Jolie » 32,99 $ les 3 (rang 57), « A-01 Replacement Filter for Afina » (rang 80), compatibles Weddell (rang 70) et Canopy (rang 79). FAIT. → Si la cartouche Plush est un format générique, des compatibles moins chers existent probablement déjà : le revenu « cartouche » est fragile. HYPOTHÈSE à vérifier (format de la cartouche auprès du fournisseur).
 4. **La note de Jolie sur Amazon (4,1) est la plus basse du top 10**, pour le prix le plus haut. Le premium à 169 $ ne protège pas des déçues. FAIT · INFÉRENCE.
 5. **La cliente qui voit une pub Plush sur Meta peut comparer en un onglet** : elle trouvera 20-50 $ et des milliers d'avis. Plush a 0 avis. La réponse n'est pas le prix : c'est la garantie 60 jours, le look (pommeau complet, pas un ajout), et l'honnêteté (« not a softener »). INFÉRENCE.
@@ -344,7 +346,7 @@ Statut : contenu de la norme = connu, non revérifié le 10 nov. · exemples = F
 | Le rapport d'eau de **sa** ville, cité tel quel avec sa source | « Same pressure » / « no pressure loss » → test du seau d'abord | Un prix barré jamais pratiqué |
 | « Plush isn't a water softener » | | « Made in USA » ou « designed in the USA » |
 
-### 5.5 Deux règles hors allégations qui touchent la pub
+### 5.5 Les règles hors allégations qui touchent la pub
 
 | Sujet | Règle | Conséquence | Statut |
 |---|---|---|---|
@@ -456,5 +458,65 @@ Déposer les fichiers dans `plush-intel/02_marche/trends/`. Les seuils de lectur
 | 7 | **Exclure la Californie du test 1** tant que débit (≤ 1,8 gpm), vitamine C et test chloramine ne sont pas confirmés par écrit : LA, San Diego et San Francisco sont en chloramine, et l'État plafonne le débit | Sections 2 et 5 | HYPOTHÈSE (décision à prendre) |
 | 8 | **Lire la certification usine avec la grille de la section 5.3 avant d'écrire « reduces chlorine »** ; « NSF » seulement si Plush est listé. Sans ça, on vend la cartouche visible, la pose, la garantie et le look | Section 5 | FAIT (règles connues, non revérifiées) |
 | 9 | **L'angle cadeau s'arrête le 4 décembre** (12 jours ouvrés + préparation) ; ensuite carte cadeau. Lancer le test avant le ~21 nov. ou à partir du 1er déc., pas pendant Black Friday-Cyber Monday | Section 6 | INFÉRENCE (calendrier) |
-| 10 | **Attaquer l'objet, pas la marque** : le n° 1 Amazon est un filtre en ligne qui garde le vieux pommeau ; Plush le remplace. « Your shower head came with the apartment » vise ce que 70 329 acheteuses ont gardé — sans jamais nommer un concurrent | Sections 3 et 4 | INFÉRENCE · HYPOTHÈSE (effet) |
+| 10 | **Attaquer l'objet, pas la marque** : le n° 1 Amazon (70 329 évaluations) est un filtre en ligne qui **garde** le vieux pommeau ; Plush le **remplace**. « Your shower head came with the apartment » vise cet objet — sans jamais nommer un concurrent | Sections 3 et 4 | INFÉRENCE · HYPOTHÈSE (effet) |
+
+---
+
+## Sources
+
+### Consultées le 10 nov. 2026
+
+**Prix et catalogues** (`/products.json`, relevé direct)
+- https://myplush.us/products.json · https://eskiin.com/products.json · https://afina.com/products.json · https://getcanopy.co/products.json · https://sproos.co/products.json · https://lucinn.com/products.json · https://unchemed.com/products.json · https://cloverandcove.com/products.json · https://vedyaonline.com/products.json · https://mizseishower.com/products.json · https://aquabliss.com/products.json · https://filterbaby.com/products.json · https://helloklean.com/products.json (prix en GBP, boutique britannique)
+- Jolie (site bloqué, 403) — prix relevés dans des résultats de recherche : https://www.ulta.com/p/jolie-filtered-showerhead-pimprod2048866 · https://bluemercury.com/collections/gifts-by-recipient/products/jolie-the-jolie-filtered-showerhead · https://goop.com/products/jolie-the-jolie-filtered-showerhead · durée 90 jours : https://bluemercury.com/products/jolie-the-jolie-replacement-filter, https://www.flawlessbymelissafox.com/products/jolie-filter-replacement
+
+**Amazon US** (pages Best Sellers, relevé direct ; données dans `amazon-bestsellers-2026-11-10.csv`)
+- https://www.amazon.com/Best-Sellers-Tools-Home-Improvement-Showerhead-Filters/zgbs/hi/1272504011 (pages 1 et 2)
+- https://www.amazon.com/Best-Sellers-Tools-Home-Improvement-Fixed-Showerheads/zgbs/hi/6810213011
+- https://www.amazon.com/Best-Sellers-Tools-Home-Improvement-Handheld-Showerheads/zgbs/hi/6810212011
+
+**Eau : repères nationaux**
+- USGS, Hardness of Water : https://www.usgs.gov/special-topics/water-science-school/science/hardness-water
+- EPA, Chloramines in Drinking Water (mise à jour 12 mars 2026) : https://www.epa.gov/dwreginfo/chloramines-drinking-water
+
+**Eau : rapports des distributeurs** (PDF lus = « rapport lu » ; sinon résumé de recherche restreinte au domaine officiel)
+- New York, rapport 2025 (lu) : https://www.nyc.gov/assets/dep/downloads/pdf/water/drinking-water/drinking-water-supply-quality-report/2025-drinking-water-supply-quality-report.pdf
+- Los Angeles, rapport 2025 (lu) : https://www.ladwp.com/sites/default/files/2026-07/2026_DWQR_Print_Rev2_Digital-remediated.pdf
+- Houston, rapport 2025 (lu) : https://www.houstonpublicworks.org/sites/g/files/nwywnm456/files/doc/003_2025_houston_water_quality_report.pdf
+- Phoenix, rapport 2025, version espagnole (lu) : https://www.phoenix.gov/content/dam/phoenix/waterservicessite/documents/wsdprimarywqrspa2025.pdf
+- Dallas, rapport 2025 (lu) : https://www.dallascityhall.com/departments/waterutilities/Documents/2025%20WQR-ENG-FINAL.pdf · page des rapports : https://dallascityhall.com/departments/waterutilities/Pages/water_quality_reports.aspx
+- Philadelphie, rapport 2024 (lu) : https://water.phila.gov/wp-content/uploads/files/2024-pwd-water-quality-report-wholesale.pdf · chloramine (presse) : https://www.audacy.com/kywnewsradio/news/local/philadelphia-water-dept-2025-report
+- Columbus, rapport 2025 (lu, copie publiée par Obetz ; l'original columbus.gov renvoie 403) : https://obetz.gov/wp-content/uploads/2026/06/City-of-Columbus-Consumer-Confidence-Report-2025.pdf
+- Chicago : https://311.chicago.gov/s/article/What-is-hardness-and-how-many-grains-per-gallon-GPG-are-in-the-city-s-water?language=en_US · https://www.chicago.gov/content/dam/city/depts/water/ConsumerConfidenceReports/2022_WaterQualityReport.pdf
+- Boston (MWRA) : https://www.mwra.com/your-water-system/drinking-water-quality/water-and-health · https://www.mwra.com/your-water-system/drinking-water-quality/annual-water-quality-test-results-main/2025-annual-water · https://www.mwra.com/your-water-system/drinking-water-quality/frequently-asked-questions-about-mwra-tap-water
+- San Francisco : https://www.sfpuc.gov/sites/default/files/accounts-and-services/water-quality/water-quality-en-regional-2025.pdf
+- Las Vegas : https://www.lvvwd.com/assets/pdf/water-quality-report-las-vegas-valley-current.pdf · https://www.lvvwd.com/water-quality/facts/index.html
+- Washington DC : https://www.dcwater.com/sites/default/files/document/2026-06/documents/2026_CCR_6.11.26_FINAL.pdf · https://www.dcwater.com/resources/waterquality/chlorine-switch
+- Miami-Dade : https://www.miamidade.gov/water/library/reports/water-quality-2024.pdf
+- Detroit : https://detroitmi.gov/sites/detroitmi.localhost/files/2026-06/DWSD%20-%20WQR%20-%202025%20-%20Final%20-1.pdf
+- Seattle : https://seattle.gov/utilities/about/reports/water-quality/monitoring-results
+- San Diego : https://www.sandiego.gov/sites/default/files/2025-06/pud-annual-drinking-water-quality-report-2024.pdf
+- Bruxelles : plafond de 0,25 mg/L transmis par le coordinateur (Bruxelles Environnement), URL à ajouter
+
+**Google Trends** (tentatives bloquées, 429) : https://trends.google.com/trends/explore?geo=US&q=shower%20filter
+
+### Textes réglementaires cités, connus mais non revérifiés le 10 nov. 2026
+- FTC, Health Products Compliance Guidance (déc. 2022) : https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance
+- FTC, Policy Statement Regarding Advertising Substantiation : https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation
+- FTC, Guides Against Deceptive Pricing (16 CFR 233) : https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233
+- Californie, Bus. & Prof. Code § 17501 : https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=17501
+- FTC, Consumer Reviews and Testimonials (16 CFR 465) : https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-465 · montant de 53 088 $ : https://www.foodnavigator-usa.com/Article/2026/01/07/ftc-signals-crackdown-on-fake-reviews-and-testimonials
+- FTC, Endorsement Guides (16 CFR 255) : https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255
+- EPA, pesticides (articles traités, dispositifs) : https://www.epa.gov/pesticide-registration
+- NSF/ANSI 177, Shower Filtration Systems — Aesthetic Effects : https://www.nsf.org
+- Débit fédéral (10 CFR 430.32) : https://www.ecfr.gov/current/title-10/chapter-II/subchapter-D/part-430/subpart-C/section-430.32
+- Californie, Title 20 (efficacité des appareils) : https://www.energy.ca.gov/rules-and-regulations/appliance-efficiency-regulations-title-20
+- Proposition 65 : https://www.p65warnings.ca.gov
+- EPA WaterSense, pommeaux de douche (15,8 gallons par douche) : https://www.epa.gov/watersense/showerheads
+
+### Sources internes
+- `../../CLAUDE.md` (sections du 25 sept. au 9 nov. 2026)
+- `../../research/trendtrack-export/marche-snapshot-2oct.md`, `ads-final-4oct.md` (export Trendtrack des 2 et 4 oct. 2026)
+- `../../research/angles-concurrents.md` (1er nov. 2026) · `../../research/brand/plush-avatar-client.md` (v2, 21 oct.) · `../../research/brand/plush-faq.md` (25 oct.)
+- `../PLAN.md` (réponses du checkpoint A, 9 nov.)
 

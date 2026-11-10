@@ -76,7 +76,7 @@
 | 🛑 A | plan + questions | ✅ envoyé 9 nov. — en attente |
 | 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ⏳ playbook : sous-agent relancé le 10 nov. · **fiches formations arrêtées le 10 nov. à la demande de Yasser** (trop de tokens). Gardé : formation B §1-3, dont les passages « combien de créas » (§3.1). Formations 1 et A : squelettes seulement |
 | 1 Audit Plush | `01_produit/audit-produit-offre.md` | ✅ 10 nov. |
-| 2 Marché | `02_marche/analyse-marche.md` | ⏳ sous-agent relancé le 10 nov. |
+| 2 Marché | `02_marche/analyse-marche.md` + `amazon-bestsellers-2026-11-10.csv` | ✅ 10 nov. Trends bloqué (429) → consigne de 3 min pour Yasser en §7 · TikTok Creative Center non consulté · §5 réglementaire écrit sans recherche, à revérifier |
 | 3 Concurrents | `03_concurrents/liste-concurrents.csv` + `shortlist.md` | ✅ 10 nov. : 32 concurrents (6 premium · 10 directs · 6 dropshippers · 4 Amazon · 6 substituts), shortlist de 12. Activité pub = export du 4 oct. (Ad Library inaccessible) |
 | 🛑 B | playbook 10 lignes · audit 10 lignes · shortlist | ⏳ |
 | 4 Teardown ads | `ads-database.csv`, teardowns, `synthese-ads.md` | ⏳ |

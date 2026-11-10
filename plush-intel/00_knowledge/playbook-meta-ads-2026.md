@@ -551,3 +551,163 @@ Méthode : prix − coût DDP 31,41 $ − carte et sticker 0,16 $ − frais 4,9 
 
 ---
 
+## 11. Conformité Meta + FTC pour un pommeau filtrant
+
+### 11.1 Les règles qui s'appliquent
+
+| Règle | Ce qu'elle dit | Source |
+|---|---|---|
+| Meta, attributs personnels | Pas d'ad qui « asserts or implies personal attributes », dont « physical or mental health (including medical conditions) ». Exemple de Meta : ✅ « Depression counseling » / ❌ « Depression getting you down? » | FAIT [S33] |
+| Meta, santé et bien-être (version du 23 juil. 2026) | Interdit : générer une perception négative de soi, les allégations de guérison (« cure, heal, or eliminate »). Avant/après cosmétique toléré **sans** perception négative ; anti-âge sans comparaison côte à côte | FAIT [S34] |
+| FTC, allégations santé | Toute allégation santé, **explicite ou implicite**, exige une « competent and reliable scientific evidence ». Un témoignage ne remplace pas la preuve ; « results not typical » ne corrige rien ; une étude sur un ingrédient ne prouve pas le produit fini | FAIT [S35] |
+| FTC, preuve des allégations | Il faut une « reasonable basis » **avant** de diffuser, pour chaque interprétation raisonnable de l'ad | FAIT [S36] |
+| FTC, avis et témoignages (16 CFR 465, en vigueur depuis le 21 oct. 2024) | Faux avis, avis achetés conditionnés, faux indicateurs sociaux (abonnés, likes achetés) : jusqu'à **53 088 $ par infraction** | FAIT [S37] |
+| FTC, guides sur les recommandations (16 CFR 255.2) | Des personnes présentées comme de « vrais consommateurs » doivent l'être, sinon il faut le dire clairement ; un témoignage laisse entendre que le résultat est **représentatif** | FAIT [S53] |
+| FTC, prix de référence (16 CFR 233.1) | Un prix barré doit être un prix réellement pratiqué, ouvertement, pendant une durée raisonnable | FAIT [S39] |
+| FTC, vente à distance | Base raisonnable pour tout délai annoncé ; retard = prévenir + proposer l'annulation | FAIT [S40] |
+| Abonnements | La règle « click-to-cancel » a été annulée le 8 juil. 2025, mais **ROSCA** s'applique toujours, ainsi que les lois des États (Californie modifiée au 1er juil. 2025) | FAIT [S41] |
+| Norme filtres de douche | **NSF/ANSI 177** : réduction du chlore libre, essais à température de douche. Jolie figure dans les produits certifiés | FAIT [S38] |
+
+### 11.2 La liste Plush
+
+| Statut | Formulation | Pourquoi |
+|---|---|---|
+| ❌ | « Do you have eczema? » · « Struggling with dry, itchy skin? » · « Is your hair falling out? » | Attribut personnel de santé [S33] + allégation santé [S35] |
+| ❌ | « Hard water in. Soft water out. » · « Softens your water » · « No more limescale » | Faux : Plush n'est pas un adoucisseur, la fiche le dit déjà [I1] |
+| ❌ | « Removes 99% of chlorine » sans rapport de test lu | Pas de base raisonnable [S36]. Le certificat de l'usine n'a pas été vu |
+| ❌ | « Clinically proven » · « Dermatologist recommended » · « Reduces hair shedding » · « Clearer skin in 7 days » | Aucune étude, aucun dermatologue [S35] ; allégations de résultat interdites par Meta [S34] |
+| ❌ | « America's #1 shower filter » · « Best-selling » | Supériorité non prouvée [S36] |
+| ❌ | Avis, notes, captures de tweets ou de SMS inventés ; avis d'AliExpress ou d'un autre produit ; notes affichées sans aucune commande | Faux avis [S37] |
+| ❌ | Acteurs présentés comme des clients ou des passants (micro-trottoir mis en scène) sans le dire | 16 CFR 255.2 [S53] |
+| ❌ | Avant/après de cheveux ou de peau, côte à côte | Aucune preuve de causalité ni de représentativité [S35][S53] ; risque de perception négative [S34] |
+| ❌ | « Was $115 » ou « $144.02 » tant que ces prix n'ont pas été pratiqués de bonne foi | Prix de référence fictif [S39] |
+| ❌ | Compte à rebours qui se relance, faux stock limité | Urgence trompeuse (guide FTC sur les « dark patterns » : à vérifier) |
+| ❌ | Shipping Protection pré-cochée | [I1] ; risque « frais cachés » |
+| ❌ | Nommer et noter un concurrent (« Brand X: F ») | Dénigrement [I2] ; on compare des types |
+| ⚠️ | « Filters chlorine » (sans chiffre) | Lire le certificat : porte-t-il sur **ce** produit, à quelle température, à quel débit ? Idéal : NSF/ANSI 177 [S38] |
+| ⚠️ | « Up to X% chlorine reduction* » | Seulement avec le rapport, conditions de test en note |
+| ⚠️ | « We didn't make it brown. Your water did. » | Cartouche réelle, non retouchée, usage réel, nombre de gallons à l'écran ; ne jamais nommer ce qu'elle contient [I1] |
+| ⚠️ | « Stronger pressure » | Prouvé par le test du seau, sinon retiré [I1] |
+| ⚠️ | « Installs in 60 seconds. No tools. » | Chronométré sur de vraies installations ; filetage ½" confirmé par écrit |
+| ⚠️ | « Lasts 3 months » | Une seule durée partout (60 jours sur le site aujourd'hui), adossée aux specs du fournisseur en gallons |
+| ⚠️ | Dialogue, SMS, podcast mis en scène | Montrer que c'est une mise en scène (« dramatization ») si ça peut passer pour de vrais clients [S53] |
+| ⚠️ | UGC payé | La créatrice utilise vraiment le produit, ne dit que ce qu'elle a constaté ; partenariat visible |
+| ⚠️ | « Your city's water contains chlorine » | Vrai seulement si le rapport de la ville le dit ; citer le rapport [S42] |
+| ✅ | « Your city publishes a water quality report every year. Here's how to read it. » | Donnée publique [S42] |
+| ✅ | « That pool smell in your shower. » | Sensoriel, général, aucune allégation |
+| ✅ | « 2 cartridges in the box. » · « Free US shipping, 7-12 business days. » | Vrai et vérifiable |
+| ✅ | « On day 59, if you don't love it, you get all your money back. » | Avec les conditions écrites à côté |
+| ✅ | « What it won't do: soften hard water. » | L'honnêteté est un argument |
+| ✅ | « This is a shower head from 1970. This is one from 2026. » | Aucune promesse sur le corps |
+
+---
+
+## 12. Convention de nommage (pour analyser l'export Ads Manager)
+
+**Format d'une ad** (champs séparés par `_`, valeurs par `-`, jamais d'espace ni d'accent) :
+
+`C07_ANG-odeur_PER-P1_AW-PA_FMT-sms_HK-03_V1_T1`
+
+| Champ | Codes autorisés |
+|---|---|
+| `C07` | Numéro de concept (C01-C15, matrice §1.4) |
+| `ANG-` | `cartouche` · `builtin` (pommeau d'origine) · `prix12m` · `ccr` (rapport d'eau) · `install` · `cadeau` · `odeur` · `garantie` · `duo` · `compo` · `honnete` · `1970` · `trajet` · `chanson` · `educ` |
+| `PER-` | `P1` Megan · `P2` locataire · `P3` sceptique du prix · `P4` acheteur de cadeau · `P5` « ingénieur » |
+| `AW-` | `UN` unaware · `PA` problem-aware · `SA` solution-aware · `PR` product-aware · `MA` most aware |
+| `FMT-` | `note` · `sms` · `stat` · `comp` · `carr` · `ugc` · `demo` · `unbox` · `found` · `pod` · `anim` · `song` · `vsl` |
+| `HK-` | Numéro du hook dans `../06_angles/banque-hooks.md` |
+| `V` | Version d'exécution (V1, V2… : nouveau visuel du même concept) |
+| `T` | Numéro du test où l'ad est née (T1 = test du 12 nov.) |
+
+**Campagnes et ensembles** : `PLUSH_T1_CBO_2026-11-12` ; ensembles `T1_A-images` et `T1_B-videos` ; scaling `PLUSH_SCALE_CBO`.
+
+**Analyse** : export Ads Manager au niveau ad (colonnes du §4.1, attribution 7 jours clic) → dans Google Sheets, `=SPLIT(A2;"_")` découpe le nom en colonnes → tableau croisé par `ANG`, `FMT`, `AW`, `PER`. Les commandes Shopify se rattachent à l'ad par `utm_content` (= nom de l'ad, §9). Une ad renommée en cours de route casse ce lien : **on ne renomme jamais une ad active**.
+
+---
+
+## 13. Le plan du media buyer, et comment faire marcher le plan retenu
+
+### 13.1 Le plan retenu (Yasser, 10 nov.)
+
+**30 créas** (natives, statiques, VSL…) · **150 €/jour pendant 5 jours** (750 €) · **une CBO, 2 ensembles** (3 au maximum) : **A = images** (10 natives + 10 statiques), **B = vidéos** (10 VSL à J0). Décision prise : ce qui suit sert à la faire marcher.
+
+### 13.2 Avis point par point sur les conseils du media buyer
+
+| Conseil | Avis | Pourquoi |
+|---|---|---|
+| 25-30 créas | ✅ Décidé | Marche si les 30 créas couvrent **≥ 15 concepts vraiment différents** (§1.4) : Meta regroupe les ads qui se ressemblent [S6] |
+| CBO à 150 €/jour | ✅ D'accord | Consolider est la consigne de Meta pour un petit budget [S18] |
+| 2 ensembles, « séparer ne change pas la perf, ça sert à lire la data » | 🟠 Nuance | La séparation **change la répartition du budget** : dans une CBO, l'ensemble vidéos peut être affamé par l'ensemble images. D'où le minimum du §13.6. La lecture par format se fait aussi par le nom des ads (§12) |
+| Mix 5 natives / 5 VSL / 5 statiques par tranche de 15 | ✅ D'accord | Conforme à « diversifier texte, image, vidéo » [S6]. Pour 30 : 10 / 10 / 10 |
+| 70 % bas de funnel / 30 % haut | ✅ Avec une nuance | Les créas d'éducation se jugent sur CTR et coût par ajout panier, pas sur l'achat à J+5 (attribution à 7 jours, CTC : ne pas couper le haut de funnel trop tôt [S13]) |
+| VSL variés (cartoon, chanson, éducatif 3-4 min, UGC) | ✅ D'accord | Autre storyline et autre visuel = autre créa pour Meta [S6]. L'UGC attend l'échantillon et une créatrice qui utilise vraiment le produit [S53] |
+| Au scaling, 80 % scaling / 20 % test | 🟠 Nuance | À 150 €/jour, 20 % = 30 €/jour : trop peu pour juger plus de 5 créas en 5 jours. **70/30 jusqu'à 300 €/jour**, puis 80/20 |
+| Tests dans une nouvelle CBO | ✅ D'accord | Lecture propre, les gagnantes ne sont pas dérangées ; Meta demande de grouper les modifications [S18] |
+| Gagnantes déplacées par post ID | ✅ Avec une nuance | Le post ID garde la preuve sociale ; la performance ne suit pas forcément (doc Meta contre test de Loomer, §5.4). Déplacer **en un lot, une fois par semaine** |
+
+### 13.3 Le risque, chiffré une fois
+
+Juger une créa sur la vente demande **57 €** (2× CPA BE) [I1] : 30 créas × 57 € = **1 710 €, soit 2,3× les 750 € du test**. Le test 1 jugera donc **au plus 13 créas sur la vente**, moins en pratique car la CBO concentre la dépense (les gagnantes captent 23 % à 55 % de la dépense selon la taille du compte [S14]). Il en jugera davantage sur le hook et l'intérêt, et laissera les autres **non testées**. Attendu : **19 à 27 achats** (750 € à 28-40 € de CPA) et, au taux observé par Motion (~5 %), **1 à 2 gagnantes** [S14]. C'est accepté : la règle « non testée » (§13.5) évite de jeter ce que le système n'a pas montré.
+
+### 13.4 Les seuils posés avant le lancement, par palier de dépense de chaque créa
+
+| Dépense de la créa (cumulée) | Images (ensemble A) | Vidéos (ensemble B) | Décision |
+|---|---|---|---|
+| **< 15 €** | — | — | Aucune lecture |
+| **15-28 €** | CTR lien < 0,8 % **et** CPC lien > 1,30 € | Hook rate < 25 % **et** CTR lien < 0,8 % | Drapeau **« hook raté »** (pas de coupe) |
+| | CTR lien ≥ 1,5 % | Hook rate ≥ 30 % et CTR lien ≥ 1,5 % | Drapeau **« hook fort »** |
+| **28-57 €** (1-2× BE) | 0 ajout panier et CTR lien < 0,8 % | idem | **Couper** [I1] |
+| | Coût par ajout panier > 14 € | idem ; hold < 15 % = problème de corps | Orange : laisser courir jusqu'à 57 € |
+| **57-85 €** (2-3× BE) | 0 achat | 0 achat | **Couper** [I1] |
+| **≥ 85 €** (3× BE) | CPA > 42 € | CPA > 42 € | **Couper** [I1] |
+| N'importe quel palier | ≥ 2 achats, CPA ≤ 28 € | idem | **Garder**, ne pas toucher |
+| N'importe quel palier | ≥ 3 achats, CPA ≤ 20 € | idem | **Gagnante** (§5.3) |
+
+Seuils de CTR, CPC, hook et coût par ajout panier : §4.4 (HYPOTHÈSES dérivées du CPA BE, à recaler sur nos médianes après le test). Coût par ajout panier recalé dès 10 ajouts sur le compte. Avec TVA confirmée : seuils en € ÷ 1,21.
+
+### 13.5 La règle « non testée »
+
+| À J+5 | Statut | Où elle va |
+|---|---|---|
+| < 15 € dépensés, 0 achat | ⚪ **Non testée** | CBO de test suivante, **telle quelle** |
+| 15-28 €, 0 achat, sans drapeau « hook raté » | ⚪ **Non testée** | CBO de test suivante, telle quelle, **en priorité si « hook fort »** |
+| 15-28 €, 0 achat, drapeau « hook raté » | ⚪↺ **Hook à refaire** | CBO suivante **avec un nouveau 1er visuel** (le corps est gardé) |
+| < 28 €, ≥ 1 achat | 🟠 **À confirmer** | CBO suivante en priorité |
+
+Une créa non testée n'est **jamais** comptée comme perdante, et son angle n'est jamais abandonné sur la foi du test 1 (INFÉRENCE : le système ne l'a pas montrée, il n'a pas jugé sa vente).
+
+### 13.6 Les limites de dépense par ensemble
+
+| Ensemble | Minimum | Maximum | Pourquoi |
+|---|---|---|---|
+| **B — vidéos** | **45 €/jour** (30 % du budget, la part des vidéos dans les 30 créas) | Aucun | Les vidéos coûtent le plus à produire ; sans plancher, la CBO peut les laisser à 0. 45 € × 5 jours = 225 € : de quoi amener ~8 vidéos au palier de 28 € |
+| **A — images** | Aucun | Aucun | Elles recevront la dépense si elles convertissent ; un maximum briderait une gagnante |
+
+- Le minimum est un objectif « best effort », pas une garantie, et Meta conseille de s'en servir peu [S23]. Ici, il sert une lecture de test, pas le scaling : on l'accepte.
+- **À J+3** (le seul passage de modifications) : si toutes les vidéos sont au rouge (hook < 25 % et CTR < 0,8 %) et qu'aucune vidéo produit n'arrive, **on retire le minimum**. Sinon, on le garde jusqu'à J+5.
+
+### 13.7 Deux ou trois ensembles : recommandation
+
+**Deux, pas trois.** Arguments :
+1. La formule de Meta donne **0,74 ensemble soutenable** à ce budget [S18] : chaque ensemble en plus divise ~20-27 achats en morceaux plus petits.
+2. Le seul candidat pour un 3e ensemble, ce sont les **vidéos produit** de l'échantillon. Si elles arrivent à J+3, un 3e ensemble ne leur laisse que 2 jours : elles finiraient quasi toutes « non testées ».
+3. Donc : vidéos produit prêtes **avant J+2** → elles entrent dans l'ensemble B en un lot, via l'outil « Creative testing » si le compte l'a (budget dédié aux ads testées [S24]), sinon en remplacement des VSL coupées. Prêtes **après J+2** → elles ouvrent la CBO de test 2, avec 5 jours pleins.
+
+### 13.8 Ce qu'on fait à J+5 (17 nov. si lancement le 12)
+
+1. **Export** au niveau ad, attribution 7 jours clic, + commandes Shopify rattachées par `utm_content` (§9, §12).
+2. **Classement des 30 créas** : 🏆 gagnante · 🟢 à garder · 🟠 à confirmer · 🔴 perdante · ⚪ non testée · ⚪↺ hook à refaire (tableaux §13.4 et §13.5).
+3. **Lecture du compte** : MER Shopify sur 5 jours contre 2,14 (2,59 si TVA).
+4. **Décisions** :
+
+| Situation à J+5 | Ce qu'on fait |
+|---|---|
+| ≥ 1 gagnante ou à garder | La CBO du test 1 **devient la CBO de scaling** : on y garde gagnantes et « à garder », on met en pause tout le reste. Rien n'est déplacé, l'historique de diffusion reste. Budget 105 €/jour (70 %). **CBO de test 2** à 45 €/jour (30 %) : 3 itérations par gagnante + vidéos produit + les « à confirmer » + les non testées marquées « hook fort », dans la limite de ce que 225 € peuvent juger (~8 créas au palier de 28 €) |
+| 0 gagnante, mais des « à confirmer » et un MER ≥ 1 | Test 2 à 150 €/jour, même structure, avec les « à confirmer », les non testées « hook fort » et les vidéos produit |
+| 0 achat ou MER < 1 | **Stop.** Diagnostic §4.5 (fiche, offre, paiement, tracking) avant de remettre un euro |
+
+5. **J+7 (19 nov.)** : relecture pour les achats attribués en retard. Elle peut faire monter une créa, jamais en couper une de plus.
+6. Les gagnantes des tests suivants rejoignent la CBO de scaling **par post ID, en un lot par semaine** (§5.4).
+
+---
+
