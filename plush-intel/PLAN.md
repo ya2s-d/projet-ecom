@@ -122,6 +122,8 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
   - le chlore à Bruxelles est plafonné à 0,25 mg/L, donc la démo DPD y sera faible ;
   - la fiche produit a des blocs de preuve sociale non documentables (0 commande), des avant/après et le badge « Stronger pressure ».
 
+- 10 nov. : **décision de Yasser sur la structure du test** : 30 créas (natives, VSL, images), 150 €/jour, 5 jours, CBO avec 2 ad sets (3 au maximum), natives / vidéos. Le calcul de la Phase 1 (juger chaque créa sur l'achat coûterait 2× le budget) lui a été présenté. La décision est prise : la matrice (Phase 7) se construit sur ce plan, avec une règle « non testée » pour les créas qui ont trop peu dépensé.
+
 ## Prochaines actions
 
 1. Fusionner et vérifier les livrables des sous-agents (playbook, marché, concurrents, formations)
