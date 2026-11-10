@@ -74,7 +74,7 @@
 |---|---|---|
 | Démarrage | arborescence, `MISSION.md`, `PLAN.md` | ✅ 9 nov. |
 | 🛑 A | plan + questions | ✅ envoyé 9 nov. — en attente |
-| 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ⏳ sous-agents relancés le 10 nov. (playbook · formation 1 · formations A+B). 49 vidéos transcrites, dont la « 5. Éviter les bans » récupérée le 10 nov. |
+| 0 Formation | `00_knowledge/playbook-meta-ads-2026.md` + fiches formations | ⏳ playbook : sous-agent relancé le 10 nov. · **fiches formations arrêtées le 10 nov. à la demande de Yasser** (trop de tokens). Gardé : formation B §1-3, dont les passages « combien de créas » (§3.1). Formations 1 et A : squelettes seulement |
 | 1 Audit Plush | `01_produit/audit-produit-offre.md` | ✅ 10 nov. |
 | 2 Marché | `02_marche/analyse-marche.md` | ⏳ sous-agent relancé le 10 nov. |
 | 3 Concurrents | `03_concurrents/liste-concurrents.csv` + shortlist | ⏳ sous-agent relancé le 10 nov. |

@@ -1,5 +1,8 @@
 # Formation B — « Facebook Ads »
 
+> ⚠️ **Fiche inachevée** : travail arrêté le 10 nov. 2026 à la demande de Yasser, parce que la lecture des transcriptions coûtait trop de tokens. Les transcriptions horodatées sont restées dans le scratchpad de la session (non versionnées, perdues à la fin de la session). Ce qui est fait : sections 1 à 3, dont **§3.1, les passages « combien de créas » en contexte**. Ce qui manque : sections 4 à 6 (classement 2026, plan du media buyer, application à Plush), reprises dans le playbook.
+
+
 > Fiche opérationnelle, usage interne Plush. Source : 10 transcriptions faster-whisper horodatées `[mm:ss]`.
 > Statut : ⏳ en cours de rédaction (10 nov. 2026). Les sections se remplissent au fil de la lecture.
 > Statuts utilisés : **FAIT** (dit dans la vidéo, horodaté) · **INFÉRENCE** (lecture de la fiche, justifiée).

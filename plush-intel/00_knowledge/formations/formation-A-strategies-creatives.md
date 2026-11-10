@@ -1,5 +1,8 @@
 # Formation A — « Partie 6 - Stratégies créatives »
 
+> ⚠️ **Fiche inachevée** : travail arrêté le 10 nov. 2026 à la demande de Yasser, parce que la lecture des transcriptions coûtait trop de tokens. Les transcriptions horodatées sont restées dans le scratchpad de la session (non versionnées, perdues à la fin de la session).
+
+
 > Fiche opérationnelle, usage interne Plush. Source : 14 transcriptions faster-whisper horodatées `[mm:ss]`.
 > Statut : ⏳ en cours de rédaction (10 nov. 2026). Les sections se remplissent au fil de la lecture.
 > Statuts utilisés : **FAIT** (dit dans la vidéo, horodaté) · **INFÉRENCE** (lecture de la fiche, justifiée).

@@ -1,5 +1,8 @@
 # Formation 1 — « 10 - FACEBOOK ADS » (formation E-com Plus)
 
+> ⚠️ **Fiche inachevée** : travail arrêté le 10 nov. 2026 à la demande de Yasser, parce que la lecture des transcriptions coûtait trop de tokens. Les transcriptions horodatées sont restées dans le scratchpad de la session (non versionnées, perdues à la fin de la session).
+
+
 > Fiche de synthèse, usage interne (formation achetée par Yasser). Source : 25 transcriptions faster-whisper
 > des vidéos 10.0 à 10.22, lues en entier. Horodatages au format `vidéo [mm:ss]`. Les erreurs de
 > reconnaissance évidentes sont corrigées entre crochets dans les citations. Rédigée le 10 nov. 2026.
