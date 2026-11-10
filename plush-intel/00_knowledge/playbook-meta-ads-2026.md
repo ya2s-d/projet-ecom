@@ -505,3 +505,49 @@ Source : [I1] (INFÉRENCE). Les seuils de haut de funnel par palier de dépense 
 
 ---
 
+## 10. BFCM et Q4 2026
+
+### 10.1 Les chiffres
+
+| Donnée | Valeur | Source |
+|---|---|---|
+| CPM Meta pendant le BFCM 2025 (28 nov. - 1er déc. 2025) | **22,26 $**, ROAS 2,26, CPA 34,06 $ | FAIT secondaire [S26] |
+| CPM médian sur 12 mois (août 2025 - juil. 2026) | 15,06 $ | FAIT [S25] |
+| Écart BFCM / année | **≈ +48 %** | Estimation : 22,26 ÷ 15,06, deux fenêtres de la même source |
+| Prix moyen par ad, US et Canada, T3 2026 | **+23 %** sur un an | FAIT [S27] → INFÉRENCE : le BFCM 2026 sera plus cher que celui de 2025 |
+| Consignes Meta pour la haute saison 2026 (21 oct.) | Consolider, grouper les modifications, figer l'optimisation sur une fenêtre mesurée, envoyer valeur et devise | FAIT [S18] |
+| Dépenses en ligne US prévues du 1er nov. au 31 déc. 2026 | 275,1 Md$ (+6,7 %, Adobe) | FAIT secondaire [S18] |
+
+### 10.2 Le calendrier Plush (si lancement le 12 nov.)
+
+| Dates | Action | Statut |
+|---|---|---|
+| 10-11 nov. | Tracking (§9), limite de dépense, fiche nettoyée (§8.4), nommage (§12) | — |
+| **12-16 nov.** | **Test 1** : 30 créas, CBO 150 €/jour, 2 ensembles (§13) | Décision Yasser |
+| 17 nov. (J+5) | Décision (§13.6) ; 19 nov. : relecture J+7 | — |
+| 17-23 nov. | CBO de scaling (gagnantes) + CBO de test 2 (non testées, vidéos produit, itérations) | INFÉRENCE |
+| ~21-23 nov. | Créas BFCM soumises à la validation Meta | HYPOTHÈSE : validations plus lentes en haute saison |
+| **24-30 nov.** | **Aucun nouveau test.** Gagnantes + offre BFCM seulement | INFÉRENCE (CPM ≈ +48 %) |
+| 1er-7 déc. | Angle cadeau, avec la date limite | INFÉRENCE |
+| **7 déc.** | **Dernier jour pour « livré avant Noël »** (24 déc. moins 12 jours ouvrés = expédition le 8 déc.) | Estimation, pire cas annoncé |
+| 8-14 déc. | « Cadeau tardif » seulement si le délai de 7 jours ouvrés est **confirmé par écrit** par le fournisseur | HYPOTHÈSE |
+| Après le 14 déc. | Plus d'angle Noël ; routine du Nouvel An, achat pour soi | INFÉRENCE |
+
+### 10.3 Quelle offre pour le BFCM (estimation)
+
+| Offre | Marge Duo | CPA BE | Lecture |
+|---|---|---|---|
+| Duo sans changement | 34,97 $ | 34,97 $ (≈ 32,90 $ en mix 70/30) | Référence [I1] |
+| **Duo + 3e cartouche offerte** | ≈ 28,50 $ | ≈ 28,50 $ | Coût estimé d'une cartouche en plus dans la boîte : 5,58 € ≈ 6,47 $ (27,08 − 21,50 €). **Prix réel à demander au fournisseur** |
+| Duo −20 % (59,99 $) | ≈ 21,60 $ | ≈ 21,60 $ | La remise coûte 2× plus cher que la cartouche offerte, pour une valeur perçue comparable (HYPOTHÈSE) |
+
+Méthode : prix − coût DDP 31,41 $ − carte et sticker 0,16 $ − frais 4,9 % + 0,29 $ − retours 6 %. **Recommandation : la cartouche offerte.** Le code PLUSHFAM (−20 %, imprimé sur la carte de la boîte) ne doit jamais apparaître dans une ad : il ramène le CPA BE vers 21-22 $.
+
+### 10.4 L'angle cadeau, sans mentir
+
+- « The gift they'll use every morning » ; « 2 cartridges in the box » ; « Order by Dec 7 for Christmas delivery (US) ».
+- La boîte est générique [I2] : **ne pas promettre d'emballage cadeau**.
+- Toute date de livraison annoncée exige une base raisonnable ; en cas de retard, prévenir le client et lui proposer l'annulation avec remboursement (règle FTC sur la vente à distance [S40]).
+
+---
+

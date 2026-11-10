@@ -391,3 +391,70 @@ Méthode : décompte à rebours des jours ouvrés (lundi-vendredi) depuis le jeu
 4. **Le test de 150 €/jour pendant 5-6 jours tombe au pire moment s'il démarre entre le 23 et le 30 nov.** (pic d'enchères, apprentissage sur des données BFCM non représentatives). Deux fenêtres propres : **avant le ~21 nov.** si l'échantillon arrive à temps, ou **à partir du 1er déc.** avec la date limite du 4 déc. dans la pub. INFÉRENCE (calendrier) · ampleur du pic de CPM à sourcer dans le playbook.
 5. **Saisonnalité de la demande Google : non mesurée** (Trends bloqué, section 7). Ne pas supposer un pic de janvier ou d'été sans la capture de Yasser.
 
+---
+
+## 7. Demande : Google Trends, TikTok, signaux secondaires
+
+### État
+
+| Source | Résultat | Statut |
+|---|---|---|
+| Google Trends | **Bloqué** : 429 en accès direct (9 nov.) et dans le navigateur automatisé (10 nov., une seule tentative, rythme humain). Non insisté | FAIT |
+| TikTok Creative Center | Joignable (200) mais **non consulté** : budget de recherche réservé aux sections 2 et 4 | FAIT |
+| Volumes de recherche | Aucun outil disponible dans la session | — |
+
+### La consigne pour Yasser — 3 minutes, dans son Chrome habituel
+
+**Google Trends (2 min)**
+
+| # | Ouvrir | Capturer |
+|---|---|---|
+| 1 | `https://trends.google.com/trends/explore?geo=US&date=today%205-y&q=shower%20filter,filtered%20shower%20head,shower%20head%20filter,hard%20water%20hair,vitamin%20c%20shower%20filter` | Capture du graphique « Interest over time » **+ le CSV** (flèche ↓ en haut à droite du graphique) |
+| 2 | Même lien en remplaçant `today%205-y` par `today%2012-m` | Capture + CSV |
+| 3 | `https://trends.google.com/trends/explore?geo=US&date=today%205-y&q=shower%20filter` | « Interest by subregion » : capture de la carte des États **+ CSV** ; puis bouton « Metro » : top 10 + CSV |
+| 4 | Même page, en bas | « Related queries » : onglets **Rising** et **Top**, une capture chacun |
+
+**TikTok Creative Center (1 min)**
+
+| # | Ouvrir | Réglages | Capturer |
+|---|---|---|---|
+| 5 | Keyword Insights : `https://ads.tiktok.com/business/creativecenter/keyword-insights/pc/en` | United States · Last 120 days | Lignes « shower filter », « hard water », « filtered shower head » : popularité, évolution, CTR, CVR |
+| 6 | Hashtags : `https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en` | United States · Last 120 days | `#showerfilter`, `#hardwater`, `#filteredshowerhead` : nombre de posts, vues, courbe, âge de l'audience |
+| 7 | Top Ads : `https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en` | United States · Last 30 days · mot-clé « shower filter » | Capture des 10 premières pubs |
+
+Déposer les fichiers dans `plush-intel/02_marche/trends/`. Les seuils de lecture, posés **avant** de voir les données :
+
+| Mesure | Lecture |
+|---|---|
+| Courbe 5 ans de « shower filter » | Pics annuels qui montent → catégorie en croissance · qui baissent → on le dit dans le résumé |
+| Mois du pic annuel | Si le pic est en **décembre** → l'angle cadeau est confirmé par la demande · s'il est en **janvier** → l'angle « nouvelle année » vaut plus que Noël |
+| États en tête | S'ils recoupent les villes en chlore libre de la section 2 (New York, Illinois, Arizona, Nevada, Washington, Ohio, Michigan) → ciblage et créas « ta ville » prioritaires là |
+| « hard water hair » vs « shower filter » | Si « hard water hair » ≥ 25 % du volume de « shower filter » → le problème est nommé par le public, l'audience est déjà « consciente du problème » |
+
+### Signaux secondaires déjà disponibles
+
+| Signal | Valeur | Limite | Statut |
+|---|---|---|---|
+| Évaluations Amazon du leader | AquaBliss SF100 : 70 329 · sa cartouche : 20 853 · SR SUN RISE : 13 995 · Cobbe à main : 20 372 | Cumul sur plusieurs années, pas un flux mensuel | FAIT (10 nov.) |
+| Trafic des sites DTC (mars → août 2026, milliers) | eskiin 924 → 640 → 494 → 594 → 604 → **969** · Hello Klean 334 → 383 → 414 → 328 → 308 → 419 · Jolie 230 → 208 → 340 → 181 → 201 → 214 | **Tiré par la pub**, pas par la demande organique : ne mesure pas la saisonnalité | FAIT (export du 2 oct.) |
+| Nombre de pubs Meta live | eskiin 934, Water2 931, Oasis 539, Filterbaby 529, FlowPure 480, Hello Klean 454 | Mesure l'offre publicitaire, pas la demande | FAIT (export du 4 oct.) |
+
+→ Ce qu'on peut dire sans Trends : **la catégorie fait vivre au moins un DTC à près d'un million de visites par mois et un produit Amazon à 70 000 évaluations**. Ce qu'on ne peut pas dire : si elle monte ou baisse, ni quand. INFÉRENCE.
+
+---
+
+## 10 conséquences pour nos ads
+
+| # | Conséquence | Sur quoi elle repose | Statut |
+|---|---|---|---|
+| 1 | **Le pitch prix est « coût sur un an », pas « moins cher »** : le Duo revient à 132,99 $ la 1re année contre 249-283 $ pour le premium. Contre Amazon (55-91 $), on ne parle pas de prix | Section 1 | INFÉRENCE |
+| 2 | **Une seule durée de cartouche partout avant la 1re pub** (3 mois fournisseur vs 60 jours sur le site et dans l'ebook) : elle change le coût annuel (132,99 $ ou 190,99 $) et le « ¢ par jour » (32¢ ou 48¢) | Section 1 | FAIT (incohérence) |
+| 3 | **Retirer les prix barrés jamais pratiqués** (115 $ / 144,02 $) et dire plutôt « Duo = 14 $ de moins que Solo + cartouche » : vrai, vérifiable, sans risque FTC ni Californie | Sections 1 et 5 | INFÉRENCE (risque juridique) |
+| 4 | **Zéro nombre d'étages, zéro %, zéro « softener »** : 30 % des titres Amazon comptent des étages (jusqu'à 33), 14 % promettent un adoucisseur. On nomme les 6 couches, on dit ce que Plush ne fait pas | Section 3 | FAIT (fréquences) · HYPOTHÈSE (effet) |
+| 5 | **Les preuves visuelles chlore et « jour 30 » doivent être tournées aux US**, idéalement dans une ville en chlore libre : l'eau de Bruxelles a 2,4 à 12 fois moins de chlore que les grandes villes US | Section 2 | INFÉRENCE |
+| 6 | **Créas « ta ville » d'abord pour les villes en chlore libre** (New York, Chicago, Phoenix, Las Vegas, Seattle, Detroit, Columbus) : c'est là que l'angle odeur de piscine est vrai pour notre composition | Section 2 | FAIT (désinfectants) · HYPOTHÈSE (performance) |
+| 7 | **Exclure la Californie du test 1** tant que débit (≤ 1,8 gpm), vitamine C et test chloramine ne sont pas confirmés par écrit : LA, San Diego et San Francisco sont en chloramine, et l'État plafonne le débit | Sections 2 et 5 | HYPOTHÈSE (décision à prendre) |
+| 8 | **Lire la certification usine avec la grille de la section 5.3 avant d'écrire « reduces chlorine »** ; « NSF » seulement si Plush est listé. Sans ça, on vend la cartouche visible, la pose, la garantie et le look | Section 5 | FAIT (règles connues, non revérifiées) |
+| 9 | **L'angle cadeau s'arrête le 4 décembre** (12 jours ouvrés + préparation) ; ensuite carte cadeau. Lancer le test avant le ~21 nov. ou à partir du 1er déc., pas pendant Black Friday-Cyber Monday | Section 6 | INFÉRENCE (calendrier) |
+| 10 | **Attaquer l'objet, pas la marque** : le n° 1 Amazon est un filtre en ligne qui garde le vieux pommeau ; Plush le remplace. « Your shower head came with the apartment » vise ce que 70 329 acheteuses ont gardé — sans jamais nommer un concurrent | Sections 3 et 4 | INFÉRENCE · HYPOTHÈSE (effet) |
+
