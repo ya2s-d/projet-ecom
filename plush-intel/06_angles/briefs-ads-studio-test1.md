@@ -101,3 +101,17 @@ Marque Ads Studio : `0513ab28-6364-460b-bd98-45240236994c` · produit : `fd69fae
 
 Ajouter à chaque texte : « Filter capabilities refer to what the filter is designed to reduce, not the guaranteed presence of those substances in your water. Not a medical device. Individual results vary. »
 Les images ne sont pas téléchargeables depuis la session (cartes Ads Studio seulement) : **le contrôle visuel (pommeau vissé, aucun texte interdit dans l'image) est à faire par Yasser sur les cartes.** Le n°7 est à surveiller en priorité (« stronger pressure » ou un prix barré peuvent aussi être dans l'image).
+
+## Lot 2 et 3 (11 nov.)
+
+| Pub | run_id |
+|---|---|
+| 11 Routine 9 étapes | 54c49707-ba5d-48a9-ba41-92ed5e6c67c6 |
+| 12 214 $ de produits capillaires | 299c1d51-30fe-4950-bc56-6ddbce22fc80 |
+| 13 « What about the water? » | f6bd7167-2ddf-4ce5-9dfa-a07d85e3b4c8 |
+| H1 Femme qui installe (UGC) | 47ebe66c-7851-4659-8c32-bbe0afda6d65 |
+| H2 Couple le jour du déménagement | cda71c40-83e9-43c9-8b0f-5a2aa5d6c10d |
+| H3 Déballage de la boîte Duo | 9505a817-d17b-4af6-b183-2c1a99ab6f54 |
+| H4 Deux amies, « $75 ? » (Dramatization) | f53eb586-bb4d-41d4-b024-594cc30d4c14 |
+
+Total dépensé en Ads Studio au 11 nov. : 17 × 4 = 68 crédits.
