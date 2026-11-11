@@ -2359,6 +2359,17 @@ avant de changer de produit.
   « United States » avec « Free Shipping · 7–12 business days » à 0 $
 - Reste ouvert : la zone couvre aussi Alaska, Hawaï, Porto Rico, Guam et les adresses militaires
   (AA/AE/AP). À confirmer avec le fournisseur, sinon retirer ces États de la zone
+- **11 nov. 2026 : boutique ouverte au monde entier, à la demande de Yasser.**
+  - Nouveau marché « International » : 237 pays, en **USD**, sans conversion vers la devise locale.
+  - Pays exclus : US (qui garde son propre marché) · Russie, Biélorussie, Cuba, Iran, Corée du Nord, Syrie (sanctions) · îles Bouvet et Heard (refusées par Shopify).
+  - Nouvelle zone d'expédition « Rest of world » : « Free Shipping · Tracked » à 0 $, sans délai promis.
+  - Les pubs Meta restent sur les US uniquement.
+  - ⚠️ Risques à suivre :
+    - le pommeau a un filetage US (½" NPT), alors que l'Europe, le Royaume-Uni et l'Australie sont au G½ ;
+    - le prix DDP du fournisseur ne couvre que les US ;
+    - les droits et la TVA d'import peuvent être réclamés au client à la livraison hors US ;
+    - vendre à des particuliers de l'UE depuis la Belgique implique la TVA, et Yasser n'a pas de numéro de TVA.
+  - Le test de paiement automatisé est bloqué par la vérification anti-robot de Shopify : test manuel à faire par Yasser.
 
 ## 20 octobre 2026 — devis fournisseur reçu
 
