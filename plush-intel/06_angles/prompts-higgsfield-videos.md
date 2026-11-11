@@ -7,8 +7,15 @@
 ## À coller à la fin de CHAQUE prompt (règles qui gardent le compte Meta en vie)
 
 ```
-Rules: the product is the Plush filtered shower head exactly as in the product photos (chrome, narrow top cone screwed onto the shower arm, wide body, round head with white perforated face), never redesigned. No medical claims: never say it cures, treats, regrows hair, fixes eczema, acne or hair loss. Characters can feel better, more confident, happier; never a before/after of a body. No "#1", no fake reviews, no strikethrough prices. Offer: Plush Duo $74.99, 2 cartridges = 6 months, free US shipping, 60-day money-back guarantee. Audience: women 25-45 in US cities, renters. English.
+Rules: the product is the Plush filtered shower head exactly as in the product photos (chrome, narrow top cone screwed onto the shower arm, wide body, round head with white perforated face), never redesigned. No medical claims: never say it cures, treats, regrows hair, fixes eczema, acne or hair loss. Characters can feel better, more confident, happier; never a before/after of a body. No "#1", no fake reviews, no strikethrough prices. Offer: Plush Duo $74.99, 2 cartridges = 6 months, free US shipping, 60-day money-back guarantee. Audience: women 25-45 in US cities, renters. English. This is a paid Meta ad: show the Plush shower head within the first 2 seconds, vertical 9:16, burned-in captions, strong hook in the first 3 seconds, end card with the offer and "Shop now".
 ```
+
+**Ce sont des pubs payantes Meta, pas de l'organique :**
+- **Durée : 15 à 45 s.** Les micro dramas de 2-4 min de Higgsfield sont trop longs pour la pub : garder les cartes courtes (claymation, cartoon ≤ 55 s) ou couper le film.
+- **Le produit à l'écran dans les 2 premières secondes** : c'est le cas dans 7 vidéos gagnantes concurrentes sur 10 (`../03_concurrents/analyse-visuelle.md`).
+- **Sous-titres incrustés** : la plupart des gens regardent sans le son.
+- **Les scènes jouées par 2 personnes** (2.6) portent la mention « Dramatization ».
+- **Nom de chaque pub dans Ads Manager** : `C##_ANG-xxx_PER-Px_AW-xx_FMT-xxx_HK-xx_V1_T1` (voir `matrice-test-DRAFT.md`), sinon on ne pourra pas lire les résultats.
 
 ---
 
