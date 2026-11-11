@@ -145,6 +145,8 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 
 ## Prochaines actions
 
+0. **11 nov. : Higgsfield connecté à la session** (plan gratuit, 4,94 crédits). Yasser choisit Higgsfield et le style « What If » : explication 3D façon documentaire, sous-titres mot à mot, une histoire qui retient (sa vidéo test : glacier → seau de 20 gallons de glace → tuyaux où s'accumulent chlore et calcaire → emplacements pour plans Plush réels). Les vidéos du pack passent dans ce style là où il colle (B01, B03, B05, B08, B09 + le trajet de l'eau). On garde B04 dialogue, B06 installation réelle et B10 fondateur pour la diversité. ⚠️ Dans sa vidéo test, le calcaire est montré comme ce que Plush retient : faux, Plush n'adoucit pas l'eau → à retirer.
+
 1. Phase 7 : `06_angles/production-creas.md` livré (fiches des 30 créas + réserve + BFCM, 60 hooks HK-01 à HK-60, liste des plans réels à tourner). 🔴 Bloquant : 6 des 7 photos de la fiche produit sont des avant/après interdits, à remplacer (§2 du pack). Outil : Krea (connecté) ou Kie.ai (clé API via le formulaire sécurisé), au choix de Yasser. Points ouverts de la matrice : lancement au plus tard le 17 nov. (sinon J+5 tombe dans le BFCM) · C01 (cartouche) sort du test sans vraie cartouche marquée · Yasser accepte-t-il de tourner face caméra (B10) ?
 2. Phase 5 VOC, version légère et plafonnée : les sources ouvertes seulement (Reddit, Trustpilot et Amazon bloqués), en annonçant le nombre réel de verbatims. Phase 6 : mise à jour de l'avatar v2 avec les données
 3. Intégrer les captures et vidéos de Yasser (dossier Mega) dès qu'elles arrivent : script de transcription + 4 images par vidéo
