@@ -1,21 +1,20 @@
-# Test 1 — images générées (11 nov. 2026, Higgsfield gpt_image_2_6)
+# Test 1 — images v2 (11 nov. 2026, soir)
 
-Toutes vérifiées à l'œil : orthographe, produit fidèle à la vraie photo, cartouche fidèle à la vraie (S02 refaite pour ça), aucune promesse interdite.
-Texte principal et titre de chaque pub : `../../06_angles/production-creas.md` (§4 et §4 bis). Ajouter à chaque texte principal la ligne de disclaimer du §1.
+**Règle : l'IA ne dessine jamais le produit.** Chaque Plush visible est une vraie photo du fournisseur, détourée (`assets/produit/detoures/`) ou utilisée telle quelle (pommeau monté avec l'eau). L'IA n'a fait que 2 accessoires qui ne sont pas notre produit (le vieux pommeau d'origine, le filtre à billes). Mise en page faite en code (`assets/produit/build_statiques_v2.py`) dans la charte : Paper #F6F2ED · Ink #141414 · Day 30 #A86B45 · Stone · Smoke · Jost · logo plush. Format 1080 × 1350 (4:5).
 
-| Fichier | Nom de l'ad dans Ads Manager | Copiée sur |
+| Fichier | Copiée sur | Nom de l'ad |
 |---|---|---|
-| S01-offre-hero.jpg | `C09_ANG-duo_PER-P1_AW-PR_FMT-stat_HK-29_V1_T1` | Water2 (42 408 $) |
-| S02-bandeau-2cartouches.jpg | `C09_ANG-duo_PER-P1_AW-PR_FMT-stat_HK-30_V2_T1` | Puure (40 661 $) |
-| S03-standard-vs-plush.jpg | `C02_ANG-builtin_PER-P2_AW-SA_FMT-comp_HK-05_V1_T1` | Oasis (367 j) |
-| S04-plush-vs-billes.jpg | `C10_ANG-compo_PER-P5_AW-SA_FMT-comp_HK-10_V1_T1` | GetSeoni (6 211 $) |
-| S05-rental-hero.jpg | `C02_ANG-builtin_PER-P2_AW-SA_FMT-stat_HK-06_V2_T1` | FlowPure (353 j) |
-| S06-native-main.jpg | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-ugc_HK-08_V1_T1` | GetSeoni (164 j) |
-| S07-probleme-solution.jpg | `C02_ANG-builtin_PER-P1_AW-PA_FMT-stat_HK-03_V3_T1` | Vedya Home (32 var.) |
-| A04-ticket.jpg | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-note_HK-07_V1_T1` | native |
-| A06-rapport-eau.jpg | `C04_ANG-ccr_PER-P1_AW-UN_FMT-note_HK-11_V1_T1` | native (Pureva, rapport d'eau) |
-| A12-sms.jpg (9:16, Stories/Reels) | `C07_ANG-odeur_PER-P1_AW-PA_FMT-sms_HK-23_V1_T1` | native |
-| A18-note-honnete.jpg | `C11_ANG-honnete_PER-P5_AW-PR_FMT-note_HK-35_V1_T1` | native |
+| S01-offre-ink.jpg | Water2 (42 408 $) | `C09_ANG-duo_PER-P1_AW-PR_FMT-stat_HK-29_V1_T1` |
+| S02-bandeau-2-cartouches.jpg | Puure (40 661 $) | `C09_ANG-duo_PER-P1_AW-PR_FMT-stat_HK-30_V2_T1` |
+| S03-origine-vs-plush.jpg | Oasis (367 j) | `C02_ANG-builtin_PER-P2_AW-SA_FMT-comp_HK-05_V1_T1` |
+| S04-plush-vs-billes.jpg | GetSeoni (6 211 $) | `C10_ANG-compo_PER-P5_AW-SA_FMT-comp_HK-10_V1_T1` |
+| S05-location-hero.jpg | FlowPure (353 j) | `C02_ANG-builtin_PER-P2_AW-SA_FMT-stat_HK-06_V2_T1` |
+| S07-probleme-solution.jpg | Vedya (32 var.) — vraie photo du pommeau monté | `C02_ANG-builtin_PER-P1_AW-PA_FMT-stat_HK-03_V3_T1` |
+| A04-ticket.jpg | native | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-note_HK-07_V1_T1` |
+| A06-rapport-eau.jpg | native | `C04_ANG-ccr_PER-P1_AW-UN_FMT-note_HK-11_V1_T1` |
+| A12-sms.jpg (9:16) | native | `C07_ANG-odeur_PER-P1_AW-PA_FMT-sms_HK-23_V1_T1` |
+| A18-note-honnete.jpg | native | `C11_ANG-honnete_PER-P5_AW-PR_FMT-note_HK-35_V1_T1` |
 
-Pas encore faites : S08 (nature morte de preuve, il faut une vraie cartouche marquée), les vidéos.
-Références sur Higgsfield : pommeau `5dd928ad-b2bf-4307-8fc5-9442101b7032`, cartouche **réelle** `3c7a8fa8-d2f0-4000-96ea-6bf041fe9994` (photo de Yasser du 11 nov., `assets/produit/plush-cartouche-reelle.jpg`). Ne plus utiliser `4189a1c1…` (vue en coupe de la fiche).
+Retirée : S06 (main), photo source trop petite → flou. `_archive-produit-IA/` = 1re version où l'IA avait redessiné le produit : **ne pas utiliser**.
+Les 17 pubs Ads Studio (cartes Higgsfield) : l'outil redessine aussi le produit → ne garder que celles où le pommeau est identique.
+Textes principaux : `../../06_angles/production-creas.md` et `briefs-ads-studio-test1.md`, + la ligne de disclaimer.
