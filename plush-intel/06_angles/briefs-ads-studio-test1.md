@@ -66,3 +66,20 @@ Clean editorial layout like the style image: off-white #F6F2ED background, Plush
 3. Aucune phrase interdite dans l'image, le texte principal ou le titre.
 4. L'orthographe.
 5. Une pub qui rate un point est refaite, pas corrigée à la main.
+
+## Runs lancés le 11 nov. (40 crédits)
+
+| Brief | run_id |
+|---|---|
+| 1 Water2 | 91bec542-9eb4-48c4-8043-bb8101ca82d9 |
+| 2 Puure | 9e200828-ff12-4e7e-8dca-1eb62fd0acc2 |
+| 3 Oasis | a83c0046-3f79-460a-8eea-4e20a1f20e35 |
+| 4 GetSeoni VS | d928dc94-dfe8-4b92-91a6-ef9b7eae7ca8 |
+| 5 FlowPure | 9501d1bf-591e-4cea-acfa-eba2a15eb5a0 |
+| 6 GetSeoni native | d9884759-785f-4894-9f4b-675c316f0f1f |
+| 7 Vedya | b5f96380-3aa6-48ac-bad9-37db76cda946 |
+| 8 Emménagement | 54fbdca0-df85-4ea1-b232-2738a9fc165b |
+| 9 Rapport d'eau | 9470ab96-e748-42b4-80ac-1e40519ac1aa |
+| 10 Honnêteté | 09cfff61-2215-4c2a-ba8f-e09985dbf30f |
+
+Marque Ads Studio : `0513ab28-6364-460b-bd98-45240236994c` · produit : `fd69fae1-e55d-466c-adc6-9e20074877e1`. Prompts limités à 1 000 caractères : version courte envoyée, même contenu.
