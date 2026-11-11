@@ -218,6 +218,25 @@ Prompts en anglais, à générer en 4:5 avec la photo P1 en référence d'image 
 
 ---
 
+## 4 bis. Statiques v2 — copiées sur les statiques concurrentes qui dépensent le plus (11 nov.)
+
+> Source : les 8 statiques du marché qui ont le plus de preuve, regardées pour de vrai (`../03_concurrents/analyse-visuelle.md`).
+> Higgsfield `gpt_image_2_6`, **0,25 crédit l'image**, 4:5, photo produit en référence (média `5dd928ad-b2bf-4307-8fc5-9442101b7032` = `plush-chrome-tuile.png`). Demande le plan **Basic** au minimum.
+> Ces 10 statiques remplacent en priorité les notes iPhone du §4 : A02, A08, A10, A16 et A20 sortent du test 1, A04 (ticket), A06 (rapport), A12 (SMS) et A18 (ce que Plush ne fait pas) restent pour la diversité.
+
+| # | Copie de | Preuve | Ce qu'on reproduit | Version Plush |
+|---|---|---|---|---|
+| S01 | **Water2** | **42 408 $** · 243 j | Produit héros sur fond uni saturé, l'offre en énorme | Plush sur fond Ink, « Duo · 2 cartridges · $74.99 » + pastille « Free US shipping ». **Sans prix barré** |
+| S02 | **Puure** | **40 661 $** · 276 j | Fond blanc, bandeau rouge « THIS WEEK ONLY », gros prix, pastille ronde | Bandeau Day 30 « 2 CARTRIDGES IN THE BOX », pastille « 6 layers », prix. Version BFCM : « 3rd cartridge free » (offre à valider) |
+| S03 | **Oasis** | 7 895 $ · **367 j** | Haut/bas : « pommeau standard » avec liste ✕, puis le produit avec liste ✓ | Haut : « Standard Shower Head » (filters nothing, came with the apartment…). Bas : Plush (6-layer cartridge, fits US arms, 2 cartridges, 60 days). **Prompt prêt, testé jusqu'au paiement** |
+| S04 | **GetSeoni** | 6 211 $ · 9 var. | Nous contre eux en 2 colonnes, ✓ contre ✕ | Plush contre « Bead filter shower head » (un **type**, jamais une marque) |
+| S05 | **FlowPure** | 353 j · 12 var. | Produit propre sur dégradé, gros titre, « risk free » | « THE SHOWER HEAD YOUR RENTAL SHOULD HAVE COME WITH. » + « Try it risk-free for 60 days » |
+| S06 | **GetSeoni** | 164 j · 8 var. | Native : photo au téléphone, une main qui tient le produit dans une salle de bain, titre + 3 puces | « The $75 upgrade my bathroom needed » **en voix de la marque** : « The $75 upgrade your bathroom needed » + 3 puces vraies |
+| S07 | **Vedya Home** | 213 j · 32 var. | Infographie « The Problem / The Solution » autour du produit, 4 pictos | Problème : « Builder-grade head, no filtration ». Solution : Plush, 4 pictos (6 layers · fits US arms · 3-month cartridge · 60 days) |
+| S08 | **Afina / Showerlabs** | 78 j · 8 var. | Nature morte de la preuve : verres d'eau, vieux filtre, testeur | **Uniquement avec une vraie cartouche marquée** (photo réelle) |
+| S09 | **Water2** | 3 306 $ | Native « avis 1 étoile » humoristique sur photo produit | 🔴 **Non reproduit** : avis inventé = faux avis (FTC), même pour rire. Revient avec un vrai avis client |
+| S10 | **Oasis** | 6 929 $ | « Trouve le faux » | 🔴 **Non reproduit** : Plush est un produit d'usine générique, l'angle se retourne contre nous |
+
 ## 5. Ensemble B — vidéos (10) · v2 du 10 nov., refaite après le retour de Yasser
 
 **La règle, demandée par Yasser** : chaque vidéo **vend**. Pas de « concept » qui s'arrête à l'accroche. Chaque vidéo reprend, temps par temps, la structure d'une gagnante réelle des concurrents (transcriptions dans `../../research/trendtrack-export/ads-final-4oct.json`), et suit toujours le même arc :
