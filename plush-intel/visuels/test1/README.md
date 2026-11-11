@@ -18,4 +18,4 @@ Texte principal et titre de chaque pub : `../../06_angles/production-creas.md` (
 | A18-note-honnete.jpg | `C11_ANG-honnete_PER-P5_AW-PR_FMT-note_HK-35_V1_T1` | native |
 
 Pas encore faites : S08 (nature morte de preuve, il faut une vraie cartouche marquée), les vidéos.
-Références sur Higgsfield : pommeau `5dd928ad-b2bf-4307-8fc5-9442101b7032`, cartouche `4189a1c1-a1db-4267-864f-8e2835d793de`.
+Références sur Higgsfield : pommeau `5dd928ad-b2bf-4307-8fc5-9442101b7032`, cartouche **réelle** `3c7a8fa8-d2f0-4000-96ea-6bf041fe9994` (photo de Yasser du 11 nov., `assets/produit/plush-cartouche-reelle.jpg`). Ne plus utiliser `4189a1c1…` (vue en coupe de la fiche).
