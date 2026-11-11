@@ -32,3 +32,14 @@ L'IA génère la scène (même lumière et même rideau que la vraie photo du po
 | H05-rapport-eau-cuisine.jpg | Rapport d'eau | `C04_ANG-ccr_PER-P1_AW-PA_FMT-ugc_HK-11_V2_T1` |
 
 Écartées : la scène sous la douche (refusée par le filtre Higgsfield, risquée sur Meta) et la scène du lit (vue de dessus incompatible avec les photos produit : rendu faux).
+
+## Douches réalistes N01-N04 (11 nov., soir) — angles émotionnels
+
+Méthode : l'IA génère une vraie douche, puis on lui fait **retirer son pommeau en gardant le bras** ; la **vraie tête de pommeau** (`head_dry`, sans le bras de la photo fournisseur) est vissée sur l'embout du bras, couleurs ajustées à la scène. N02 garde le vrai jet d'eau.
+
+| Fichier | Émotion vendue | Nom de l'ad |
+|---|---|---|
+| N01-marbre.jpg | Le moment à soi (« The 10 minutes of your day that are just yours ») | `C16_ANG-moment_PER-P1_AW-PA_FMT-stat_HK-61_V1_T1` |
+| N02-zellige-main.jpg | Le matin qui change (« Mornings feel different now ») | `C16_ANG-moment_PER-P1_AW-PA_FMT-stat_HK-62_V1_T1` |
+| N03-location-ancien-pommeau.jpg | La fierté d'être chez soi (« Your rental. Your shower. ») | `C02_ANG-builtin_PER-P2_AW-SA_FMT-stat_HK-63_V1_T1` |
+| N04-ardoise.jpg | Le luxe d'hôtel à la maison (« Hotel shower. At home. ») | `C17_ANG-hotel_PER-P1_AW-PR_FMT-stat_HK-64_V1_T1` |
