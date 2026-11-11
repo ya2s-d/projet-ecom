@@ -19,65 +19,130 @@ Rules: the product is the Plush filtered shower head exactly as in the product p
 
 ---
 
-## 1. LE FILM (Ads Studio → Micro drama → style Claymation → carte « Failed remedies »)
+## 1. LE FILM — Ads Studio → Micro drama → style Claymation → carte « Failed remedies » (45 s, 9:16)
 
-Cliquer « Recreate Ad », produit Plush, et coller l'histoire :
+« Recreate Ad », produit Plush, puis coller :
 
 ```
-Claymation, 45 seconds, told by Megan, 34, a clay woman in a small rental apartment.
-1. She stands at her bathroom mirror, hair flat and frizzy, sighing. "Third shampoo this year."
-2. Quick funny montage of failed remedies: a $40 shampoo, a hair mask, a hair oil, a fancy serum, each one tried and tossed in a growing pile. Her clay hair stays sad.
-3. Her friend comes over, sniffs the shower: "Your shower smells like the community pool." Megan freezes.
-4. The friend points at the old dull builder-grade shower head on the wall, crusty and ancient, which grumbles like a grumpy old man.
-5. Megan unscrews the grumpy old head in 3 easy turns and screws on Plush, the shiny filtered shower head. Close-up: the 6-layer cartridge sliding in.
-6. Next morning: warm light, steam, Megan humming in the shower, eyes closed, smiling. Mirror shot: she touches her hair and smiles at herself, confident.
-7. Final card: "Same shower. Better water." Plush Duo, 2 cartridges, 6 months. 60 days to try it.
+STYLE: warm stop-motion claymation, soft pastel bathroom colors (cream, sage, terracotta), visible fingerprints in the clay, cozy and funny tone. Vertical 9:16, 45 seconds, captions burned in, upbeat ukulele music.
+MAIN CHARACTER: Megan, 34, clay woman, messy brown bun, oversized cream sweater, lives alone in a small rental apartment. She narrates in first person, warm and self-mocking voice.
+SIDE CHARACTERS: Jess, her best friend, curly hair, green jacket, blunt and funny. The OLD SHOWER HEAD: a crusty, grey builder-grade shower head with a grumpy old-man face and white limescale "beard".
+PRODUCT: the Plush filtered shower head, exactly as in the product photos: polished chrome, narrow top cone screwed onto the shower arm, wide cylindrical body, flared round head with a white perforated face. It never gets a face. It stays a real, shiny object.
+
+SCENE 1 (0-4s) HOOK: Plush already appears small and shiny on the shelf in the background. Close-up of Megan at the mirror holding up a limp strand of clay hair, deadpan. Caption: "Third shampoo this year." Voice: "Third shampoo this year. Still nothing."
+SCENE 2 (4-12s) FAILED REMEDIES: fast funny montage, one product per beat, each tossed onto a growing pile with a "boing" sound: a fancy $40 shampoo, a hair mask, an oil, a silk pillowcase. Caption counter: "$40… $68… $95…" Voice: "Masks. Oils. Serums. I tried everything."
+SCENE 3 (12-18s) THE CLUE: Jess walks out of the steamy bathroom holding her nose. Jess: "Why does your shower smell like the community pool?" Megan freezes, eyes wide. Caption: "…the pool?"
+SCENE 4 (18-24s) THE VILLAIN: camera pushes in on the old shower head on the wall; it wakes up, coughs, grumbles "Been here since 2009, kid." Voice: "Turns out the problem was never my shampoo. It was the water."
+SCENE 5 (24-32s) THE SWAP: Megan unscrews the grumpy old head in 3 satisfying clay turns (counter "1… 2… 3"), drops it in a cardboard box labelled "move-out day". She screws on Plush, shiny chrome catching the light. Insert close-up: a white cartridge with six visible layers sliding into Plush. Caption: "6-layer filter. 3 steps. No plumber."
+SCENE 6 (32-40s) THE EMOTION: next morning, golden light, gentle steam. Megan in the shower, eyes closed, humming, relaxed for the first time. Cut to the mirror: she touches her hair, smiles at herself, confident. Voice: "The ten minutes of my day that are finally just mine."
+SCENE 7 (40-45s) END CARD: Plush on the arm, water running. Text: "Same shower. Better water." / "Plush Duo · 2 cartridges · 6 months · $74.99" / "60 days to try it". Button: "Shop now".
 ```
 
 ---
 
-## 2. UGC — Marketing Studio → UGC (importer la photo `assets/produit/fournisseur/plush-photo-5.jpg` ou la photo du pommeau monté)
+## 2. UGC — Marketing Studio → UGC (importer `assets/produit/fournisseur/plush-photo-5.jpg` ou le pommeau monté)
 
-Chaque bloc = 1 vidéo. Choisir le preset indiqué, coller le script dans le champ texte.
+Un bloc = une vidéo. Structure commune : **Character / Setting / Camera / Script seconde par seconde / Captions / End card**. Coller le bloc entier + les règles du haut.
 
-**2.1 · Classic Unboxing** — copie de FlowPure (678 jours)
+**2.1 · Classic Unboxing** — copie de FlowPure (678 j, 48 variantes) · 25 s
 ```
-Excited woman, 30, in a bright apartment, opens a Plush box: "Okay, I finally got the filter shower head everyone keeps asking me about." Shows the chrome shower head, then two white cartridges: "Two cartridges, so I'm set for six months." Screws it on the shower arm in three turns. Turns the water on, smiles: "My shower honestly feels like a hotel now." End: "Plush Duo, 60 days to try it."
-```
-
-**2.2 · UGC Addiction** — l'émotion « le moment à soi »
-```
-Woman, 33, in a cozy robe, talking to camera in her bathroom, warm morning light: "I didn't think a shower head could change my mornings. But this is the only ten minutes of my day that are just mine, and now they actually feel like a spa." Shows Plush on the arm, water running, steam. "You filter what you drink. Why not what you shower in?" End: "Same shower. Better water."
-```
-
-**2.3 · Mystery Box** — la curiosité
-```
-Woman, 28, with a plain brown box: "What's in the box? The upgrade nobody sees but everyone notices." Opens it: Plush filtered shower head and two cartridges. "It screws onto the arm you already have. No plumber, no landlord." Quick install shot. "My rental finally feels like mine."
+CHARACTER: woman, 30, natural makeup, hair in a claw clip, white tank top, friendly and genuinely excited, American accent.
+SETTING: bright small apartment bathroom, white subway tile, morning window light, a plant on the sink.
+CAMERA: handheld phone selfie style, vertical, slight natural shake, close framing.
+0-2s: she holds the Plush box up to camera, Plush shower head already visible in her other hand. Caption: "the shower head everyone asked about".
+2-7s: "Okay, I finally got the filter shower head everyone keeps asking me about." She turns the chrome head in the light.
+7-12s: she pulls out two white cartridges: "Two cartridges in the box, so I'm set for six months."
+12-19s: she unscrews her old crusty shower head and screws Plush on in three turns, close-up on her hands. Caption: "3 turns. no plumber."
+19-25s: water on, steam, she puts her hand under the water and smiles at camera: "My shower honestly feels like a hotel now."
+END CARD: "Plush Duo · $74.99 · 6 months · 60 days to try it" + Shop now.
 ```
 
-**2.4 · Talking head** — copie de Pureva (« Ma mère est venue chez moi », 15 560 $)
+**2.2 · UGC Addiction** — émotion « le moment à soi » · 20 s
 ```
-Woman, 31, kitchen then bathroom, casual and funny: "My mom came over, took a shower, and came out like: why does your water smell like a pool? So she made me buy this." Shows Plush and opens it to show the cartridge: "There's a six-layer filter inside, look." Installs it. "Now my mom wants one." End card: "Plush Duo $74.99 · 60 days to try it."
-```
-
-**2.5 · Talking head** — copie de Puure / Keith Maynard (« 1970 vs 2026 », 36 019 $)
-```
-Man, 50, friendly teacher energy, two shower heads on a counter with sticky notes "1998" and "2026": "This is a shower head from 1998. And this is one from 2026. Spot the difference." Points at the old one: "Back then it did one job: spray water." Picks up Plush: "This one has a six-layer filter cartridge you can open and change every three months. It's 2026. Your shower should be too."
-```
-
-**2.6 · Talking head** — copie de GetSeoni (dialogue sur le prix)
-```
-Two women friends in a bathroom. Skeptical one: "You paid seventy-five dollars for a shower head?" Other one: "For six months. Two cartridges in the box. Forty-one cents a day." Skeptical: "You needed a plumber though." Other: "I needed three minutes." Shows Plush on the arm. Skeptical, smiling: "Send me the link." Small text: Dramatization.
+CHARACTER: woman, 33, wavy brown hair, cream fluffy robe, calm warm voice, talking like to a close friend.
+SETTING: cozy bathroom at 7am, warm lamp light, steam on the mirror, candle on the counter.
+CAMERA: phone propped on the counter, vertical, she talks to it, then a cut to the shower.
+0-3s: hook, Plush running in the background, she leans in: "Nobody warned me a shower head could change my mornings."
+3-9s: "These are the only ten minutes of my day that are just mine. Kids, emails, all of it waits."
+9-14s: cut: close-up of Plush on the arm, water running through the light, steam. Caption: "filtered at the shower head".
+14-20s: back to her, eyes closed, smiling: "You filter what you drink. Why not what you shower in?" 
+END CARD: "Same shower. Better water." + Plush Duo $74.99 + Shop now.
 ```
 
-**2.7 · Talking head** — l'émotion « emménager »
+**2.3 · Mystery Box** — curiosité · 20 s
 ```
-Young couple on moving day, boxes everywhere, she holds the old crusty shower head and laughs: "First thing we unpacked? Not the plates." He screws Plush onto the shower arm: "New apartment, new shower." She: "We're keeping the old one in a box for move-out day." End: "Your rental. Your shower."
+CHARACTER: woman, 28, oversized hoodie, playful energy, quick talker.
+SETTING: living room floor next to moving boxes, daylight.
+CAMERA: top-down then handheld, vertical.
+0-2s: plain brown box shaken at camera. Caption: "the upgrade nobody sees". Voice: "What's in the box?"
+2-7s: she opens it slowly, reveals the chrome Plush shower head and two white cartridges. "The one upgrade nobody sees, but everyone notices."
+7-14s: quick cut to the shower: she screws it onto the arm. "Screws onto the arm you already have. No plumber, no landlord."
+14-20s: water on, she grins at camera: "My rental finally feels like mine."
+END CARD: "Your rental. Your shower." + $74.99 · 60 days to try it.
 ```
 
-**2.8 · Talking head** — copie de Water2 (fondateur, 10 922 $)
+**2.4 · Talking head** — copie de Pureva (« ma mère est venue », 15 560 $, 354 j) · 25 s
 ```
-Young founder, 20s, in a hi-vis vest and safety glasses for fun, holding Plush: "Every rental in America comes with the cheapest shower head the contractor could find. Nobody filters that water. So I made this: a six-layer cartridge, screws onto any standard US arm, three steps. What it won't do: soften hard water. What it does: filter the water before it hits your hair and skin. Sixty days, or your money back."
+CHARACTER: woman, 31, blonde bob, mustard sweater, funny, slightly exasperated storyteller.
+SETTING: kitchen, then bathroom of a small apartment, natural light.
+CAMERA: phone held at arm's length, vertical, walking from kitchen to bathroom.
+0-3s: Plush in her hand from the first frame: "My mom came over, took a shower, and came out like…"
+3-7s: she imitates her mom: "Why does your water smell like a swimming pool?"
+7-12s: "So she made me buy this." She twists the head open and shows the white cartridge: "There's a six-layer filter in there, look."
+12-19s: she screws it onto the arm in three turns, water on, close-up of the spray.
+19-25s: back to camera, laughing: "Now my mom wants one." Caption: "moms know."
+END CARD: "Plush Duo $74.99 · 2 cartridges · 60 days to try it" + Shop now.
+```
+
+**2.5 · Talking head** — copie de Puure / Keith Maynard (« 1970 vs 2026 », 36 019 $) · 35 s
+```
+CHARACTER: man, 50, grey hair, rolled-up flannel sleeves, calm friendly teacher energy, deep voice.
+SETTING: kitchen counter, two shower heads side by side with yellow sticky notes "1998" and "2026".
+CAMERA: static medium shot, then close-ups on each object, vertical.
+0-3s: "This is a shower head from 1998. And this is one from 2026. Spot the difference."
+3-10s: picks up the old dull one: "Back then, a shower head did one job: spray water. That's it."
+10-18s: "Today you filter your drinking water. A pitcher, a fridge filter. But your shower runs the same tap water, hot, every single morning."
+18-28s: picks up Plush, twists it open, shows the cartridge: "This one has a six-layer filter cartridge. You can open it, see it, change it every three months."
+28-35s: looks at camera: "It's 2026. Your shower should be too." 
+END CARD: "Plush Duo $74.99 · 6 months · 60 days to try it" + Shop now.
+```
+
+**2.6 · Talking head** — copie de GetSeoni (dialogue sur le prix) · 20 s · « Dramatization » en petit
+```
+CHARACTERS: two women, early 30s, best friends. Left: skeptical, arms crossed, black sweater. Right: proud, beige sweater.
+SETTING: bright apartment bathroom, Plush mounted on the arm, water running.
+CAMERA: static two-shot, vertical, quick cuts on each line.
+0-3s: Plush on the arm in frame. Skeptical: "Wait. You paid seventy-five dollars for a shower head?"
+3-8s: Proud: "For six months. Two cartridges in the box. Forty-one cents a day."
+8-12s: Skeptical: "You needed a plumber though." Proud: "I needed three minutes."
+12-17s: close-up of Plush, water through the light. Caption: "6-layer filter".
+17-20s: Skeptical, smiling despite herself: "…send me the link."
+SMALL TEXT bottom corner the whole time: "Dramatization". END CARD: $74.99 · 60 days to try it.
+```
+
+**2.7 · Talking head** — émotion « emménager » · 20 s
+```
+CHARACTERS: young couple, late 20s, in t-shirts, laughing, sweaty from moving.
+SETTING: new apartment bathroom on moving day, cardboard boxes in the doorway, tape roll on the sink.
+CAMERA: handheld by a friend, vertical, warm afternoon light.
+0-2s: she holds the crusty old shower head up to camera, Plush shiny on the arm behind: "First thing we unpacked? Not the plates."
+2-8s: he finishes screwing Plush on: "New apartment, new shower."
+8-14s: water on, both look up at it, she laughs: "The old one goes in a box for move-out day."
+14-20s: caption over the running water: "Your rental. Your shower."
+END CARD: Plush Duo $74.99 · fits standard US arms · Shop now.
+```
+
+**2.8 · Talking head** — copie de Water2 (fondateur en gilet, 10 922 $) · 30 s
+```
+CHARACTER: young founder, early 20s, hi-vis safety vest and clear safety glasses worn for fun, playful but sincere.
+SETTING: a plain rental bathroom, Plush in hand.
+CAMERA: direct to camera, vertical, punchy jump cuts every 3-4 seconds.
+0-3s: holding Plush: "Every rental in America comes with the cheapest shower head the contractor could find."
+3-8s: "Nobody filters that water. So I made this."
+8-15s: twists it open: "Six-layer cartridge. Screws onto any standard US arm. Three steps."
+15-22s: counts on fingers: "What it won't do: soften hard water. What it does: filter the water before it hits your hair and skin."
+22-30s: "Sixty days to try it. If you don't love it, you get your money back."
+END CARD: Plush Duo $74.99 + Shop now.
 ```
 
 ---
