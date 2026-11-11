@@ -83,3 +83,21 @@ Clean editorial layout like the style image: off-white #F6F2ED background, Plush
 | 10 Honnêteté | 09cfff61-2215-4c2a-ba8f-e09985dbf30f |
 
 Marque Ads Studio : `0513ab28-6364-460b-bd98-45240236994c` · produit : `fd69fae1-e55d-466c-adc6-9e20074877e1`. Prompts limités à 1 000 caractères : version courte envoyée, même contenu.
+
+## Contrôle des textes (11 nov.) — l'Ads Studio a glissé des interdits malgré la consigne
+
+| # | Verdict | Problème | Texte principal à coller dans Ads Manager à la place |
+|---|---|---|---|
+| 1 Water2 | ✅ | — | tel quel |
+| 2 Puure | 🔴 | « heavy metals, rust » (pas dans nos faits) + « keeps strong pressure » | How many times will you reorder this year? With the Plush Duo, you don't. Two cartridges are already in the box: 6 months of filtered showers from day one. A chrome filtered shower head with a 6-layer cartridge designed to reduce chlorine and catch sediment. Screws onto standard US 1/2" shower arms in 3 steps. Duo $74.99, free US shipping, 60-day money-back guarantee. |
+| 3 Oasis | 🟠 | « no tools beyond what is in the box » (installation pas encore chronométrée) | tel quel, en retirant la phrase « Install in 3 steps, hand-tight, no tools beyond what is in the box » |
+| 4 GetSeoni VS | 🔴 | « keeping pressure strong », « rust » | Not all filter shower heads are built the same. Most hide colored beads behind clear plastic, sealed shut. Plush has a 6-layer cartridge you can unscrew and see: PP cotton, KDF-55, calcium sulfite, activated carbon, vitamin C beads, steel mesh, designed to reduce chlorine and catch sediment. Fits standard US 1/2" arms in 3 steps. Duo $74.99 with 2 cartridges, free US shipping, 60-day money-back guarantee. |
+| 5 FlowPure | 🟠 | « universal fit », « no tools beyond a twist », « swaps in minutes » | You already have the shower arm. Plush screws onto the standard US 1/2" arm in 3 steps, no plumber, no landlord. When you move out, the old head goes back on. Inside, a 6-layer cartridge designed to reduce chlorine and catch sediment from city water. Try it 60 days: if you don't love it by day 59, you get all your money back. Duo $74.99, free US shipping. |
+| 6 native | ✅ | — | tel quel |
+| 7 Vedya | 🔴🔴 | « stronger pressure » + **« was $144.02 »** (faux prix de référence, FTC) + « no tools » | You upgraded the towels, the mirror, the bottles on the ledge. The one thing you stand under every day is still the builder-grade head that came with the apartment. Plush filters city water at the shower head with a 6-layer cartridge designed to reduce chlorine and catch sediment. Fits standard US 1/2" arms in 3 steps. Duo $74.99 for 6 months, free US shipping, 60-day money-back guarantee. |
+| 8 Emménagement | 🔴 | « Pressure stays strong… », « no tools », texte trop long | You just got the keys. Before you unpack the kitchen, swap the one thing the last tenant used for years. Plush screws onto standard US 1/2" shower arms in 3 steps and filters city water with a 6-layer cartridge designed to reduce chlorine and catch sediment. Keep the old head in a box for move-out day. Duo $74.99 for 6 months, free US shipping, 60-day money-back guarantee. |
+| 9 Rapport d'eau | ✅ | — | tel quel |
+| 10 Honnêteté | ✅ | — | tel quel |
+
+Ajouter à chaque texte : « Filter capabilities refer to what the filter is designed to reduce, not the guaranteed presence of those substances in your water. Not a medical device. Individual results vary. »
+Les images ne sont pas téléchargeables depuis la session (cartes Ads Studio seulement) : **le contrôle visuel (pommeau vissé, aucun texte interdit dans l'image) est à faire par Yasser sur les cartes.** Le n°7 est à surveiller en priorité (« stronger pressure » ou un prix barré peuvent aussi être dans l'image).
