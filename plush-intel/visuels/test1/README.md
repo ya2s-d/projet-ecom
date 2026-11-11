@@ -18,3 +18,17 @@
 Retirée : S06 (main), photo source trop petite → flou. `_archive-produit-IA/` = 1re version où l'IA avait redessiné le produit : **ne pas utiliser**.
 Les 17 pubs Ads Studio (cartes Higgsfield) : l'outil redessine aussi le produit → ne garder que celles où le pommeau est identique.
 Textes principaux : `../../06_angles/production-creas.md` et `briefs-ads-studio-test1.md`, + la ligne de disclaimer.
+
+## Images avec personnes (H01-H05) — méthode « échange de produit »
+
+L'IA génère la scène (même lumière et même rideau que la vraie photo du pommeau monté), on efface son pommeau, on colle le **vrai pommeau détouré** (`assets/produit/detoures/cut-mount.png`, en miroir pour H03 : produit symétrique, sans texte). Cuisine : vrai pommeau + vraie cartouche posés avec ombres. Script : `assets/produit/swap_produit.py`. Texte en voix de marque (aucune personne IA ne dit « je »).
+
+| Fichier | Angle | Nom de l'ad |
+|---|---|---|
+| H01-femme-regarde-plush.jpg | Location | `C02_ANG-builtin_PER-P2_AW-SA_FMT-ugc_HK-05_V3_T1` |
+| H02-serviette.jpg | Tagline de marque | `C07_ANG-odeur_PER-P1_AW-PA_FMT-ugc_HK-25_V2_T1` |
+| H03-deux-amies.jpg (Dramatization) | Objection prix | `C03_ANG-prix12m_PER-P3_AW-PR_FMT-ugc_HK-49_V2_T1` |
+| H04-demenagement.jpg | Emménagement | `C06_ANG-cadeau_PER-P2_AW-PR_FMT-ugc_HK-19_V2_T1` |
+| H05-rapport-eau-cuisine.jpg | Rapport d'eau | `C04_ANG-ccr_PER-P1_AW-PA_FMT-ugc_HK-11_V2_T1` |
+
+Écartées : la scène sous la douche (refusée par le filtre Higgsfield, risquée sur Meta) et la scène du lit (vue de dessus incompatible avec les photos produit : rendu faux).
