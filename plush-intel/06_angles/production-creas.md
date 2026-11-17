@@ -30,7 +30,8 @@
 **Faits utilisables partout** (vrais, vérifiables) : Solo **$59.99** · Duo **$74.99** avec 2 cartouches · cartouche seule **$29** · **une cartouche dure 3 mois** · livraison US offerte, **7-12 business days** · **60 jours** satisfait ou remboursé · 6 couches : PP cotton, KDF-55, calcium sulfite, activated carbon, vitamin C beads, steel mesh · l'EPA autorise jusqu'à **4 mg/L** de chlore dans l'eau du robinet · chaque réseau d'eau US publie un rapport annuel (Consumer Confidence Report).
 **Calcul du prix par jour** : Duo $74.99 = 2 cartouches × 3 mois = 182 jours → **41¢ a day**.
 
-**Pas encore utilisable** : « stronger pressure » (test du seau) · « installs in 60 seconds / no tools » (installation chronométrée) · tout pourcentage de chlore (certificat pas lu) · tout prix barré.
+**Débloqué le 17 nov. 2026 (Yasser : test du seau, installation et certificats faits et vérifiés)** : « stronger pressure » · « no tools / no plumber » · pourcentages et contaminants **tels qu'écrits dans le rapport de labo**, avec « up to » et astérisque.
+**Toujours interdit (règle Meta, pas une question de test)** : tout résultat sur le corps (peau, cheveux, chute, eczéma) · tout prix barré.
 
 ---
 
