@@ -50,7 +50,7 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 | Canal | **Meta Ads uniquement.** Google Ads abandonné pour Plush. La « configuration figée Google Ads » de septembre est morte | 25 sept. |
 | Cible des pubs | **États-Unis**, en anglais, en USD | — |
 | Boutique | Ouverte au monde entier : marché « International » de 237 pays, en USD, livraison gratuite. Les pubs restent ciblées sur les US | 11 nov. |
-| Test 1 | 1 CBO à 150 €/jour HT pendant 5 jours, 2 ensembles, 30 créas, ≥ 15 concepts (§4) | 10 nov. |
+| Test 1 | 1 CBO à 150 €/jour HT pendant **5 à 6 jours**, 2 ensembles, 30 créas, ≥ 15 concepts (§4). **Aucun autre budget** : après le test, on ne continue qu'avec ce que les ventes rapportent | 10 nov. · précisé le 19 nov. |
 | Production des créas | Surtout **Higgsfield** (connecté, style « What If » pour les vidéos) et **Kai AI**, à partir des formats concurrents qui marchent, avec plein d'angles et plusieurs formats UGC en IA (§6) | 10-11 nov. |
 | Cartouche | **3 mois**, partout (site, ebook, emails) | 10 nov. |
 | Garantie | **60 jours** : « On day 59, if you don't love it, you get all your money back. » | — |
@@ -66,7 +66,7 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 | Réglage | Valeur | Pourquoi |
 |---|---|---|
 | Campagne | Objectif **Ventes**, **budget de campagne Advantage+ (CBO)**, **150 €/jour HT** | Décision de Yasser. Sans numéro de TVA, Meta débite **181,50 €/jour** |
-| Durée et budget | **5 jours = 750 € HT = 907,50 € réellement débités** (décision du 10 nov.). Plafond de dépenses de la campagne : **750 €** | Avec un plafond à 480 €, le test s'arrête au 3e jour, avant même la décision de J+5 |
+| Durée et budget | **5 à 6 jours = 750-900 € HT = 907,50-1 089 € réellement débités** (Yasser, 19 nov. : « 150/day pendant 5 à 6 jours, c'est tout »). Plafond de dépenses de la campagne : **900 €** (6 jours au maximum) | Avec un plafond à 480 €, le test s'arrêtait au 3e jour, avant même la décision de J+5 |
 | Optimisation | **Achat** · stratégie « volume le plus élevé » · attribution 7 jours après clic | Optimiser sur l'ajout au panier trouve des gens qui ajoutent, pas des acheteurs (playbook §2) |
 | Audience | US · 18-65+ · **aucun intérêt** (Advantage+) · placements Advantage+ · aucune exclusion | En 2026, c'est la créa qui fait le ciblage |
 | Ensembles | **2** : **A = images** (natives + statiques, 20 créas) · **B = vidéos** (10 créas), avec un **minimum de dépense de 45 €/jour sur B** | Lecture par format. Le minimum évite que les images, qui démarrent plus vite, prennent tout le budget |
@@ -94,7 +94,7 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 | CPA cible | **16,50 €** dans Ads Manager |
 | Rentabilité | **ROAS de break-even dans Ads Manager : 2,59** · **MER de break-even (CA Shopify ÷ facture Meta TTC) : 2,14**. La vérité, c'est le MER Shopify |
 | Valeur client à 90 jours | ≈ la 1re commande : le Duo contient déjà la 2e cartouche. **On n'achète jamais un client à perte en comptant sur les cartouches** |
-| Test de 750 € HT | ~**26 à 32 commandes** pour finir à zéro |
+| Test de 5-6 jours | 907,50-1 089 € débités, donc **~32 à 38 commandes** pour finir à zéro (~6,4 par jour) |
 
 **La grille par créa, à appliquer à J+3 et J+5** (matrice §5) :
 

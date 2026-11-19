@@ -38,7 +38,7 @@
 | 3. ABO, 3 ensembles à budget fixe (images · vidéos IA · vidéos produit) | Chaque format reçoit sa dépense, à coup sûr | 3 ensembles se partagent ~20-27 achats → aucun ne sort de l'apprentissage · dépense forcée sur les perdantes |
 
 **Réglages** (playbook §2.4) : objectif Ventes, optimisation Achat, broad US 18-65+, placements Advantage+, attribution 7 jours clic, aucune exclusion.
-**Budget** : 150 €/jour HT dans Ads Manager = 181,50 € débités. 5 jours = 750 € HT / 907,50 € TTC.
+**Budget** : 150 €/jour HT dans Ads Manager = 181,50 € débités. **5 à 6 jours** (Yasser, 19 nov.) = 750-900 € HT / 907,50-1 089 € TTC. Plafond de la campagne : 900 €. Aucun budget au-delà.
 
 Ce qu'il faut savoir sur 30 créas à 150 €/jour : le test jugera au plus ~13 créas sur la vente (§13.3). Les autres seront jugées sur le hook ou marquées « non testées ». C'est accepté et la règle §5.3 l'encadre.
 

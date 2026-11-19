@@ -152,6 +152,8 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 
   `CLAUDE.md` a été réécrit court, avec l'état actuel en tête. L'ancien est archivé mot pour mot dans `dossiers/archive-claude-md-sept-nov-2026.md`. Les 20 règles du playbook (§0) sont passées en montants HT.
 
+- 19 nov., soir : **Yasser précise le budget** : 150 €/jour pendant **5 à 6 jours**, rien de plus. Pas de plafond à 480 €. Plafond de campagne : 900 €. L'après-test (couper, garder, CBO de scaling, nouveau test) sera décidé à J+5 sur l'export, avec la grille déjà écrite (`CLAUDE.md` §5, matrice §5.2).
+
 ## Prochaines actions
 
 0 ter. **11 nov. — 2e document : « Verification of Compliance » GTS** (`01_produit/preuves/fournisseur-certificat-GTS-CE.webp`). Fabricant : **Shenzhen Calux Purification Tech Co., Ltd** · produit « Shower head », modèles **CL-SH5 à CL-SH10** · norme **EN 12902:2004** · rapport n° **TCGD24050857646** · émis le 10 mai 2024, valable jusqu'au 9 mai 2029 · autorise le marquage **CE**. Lecture : c'est une attestation de conformité européenne, **pas un résultat de filtration du chlore** ; le CE ne vaut rien aux US. À faire : confirmer le n° de modèle de Plush (dans la liste ?) et demander le **rapport complet** TCGD24050857646.
