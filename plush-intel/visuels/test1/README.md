@@ -1,5 +1,7 @@
 # Test 1 — images v2 (11 nov. 2026, soir)
 
+> **Lancement du 20 nov. : la liste finale des 30 pubs (fichiers, noms d'ads, ensembles, réserve) est dans `LANCEMENT-T1.md`.**
+
 **Règle : l'IA ne dessine jamais le produit.** Chaque Plush visible est une vraie photo du fournisseur, détourée (`assets/produit/detoures/`) ou utilisée telle quelle (pommeau monté avec l'eau). L'IA n'a fait que 2 accessoires qui ne sont pas notre produit (le vieux pommeau d'origine, le filtre à billes). Mise en page faite en code (`assets/produit/build_statiques_v2.py`) dans la charte : Paper #F6F2ED · Ink #141414 · Day 30 #A86B45 · Stone · Smoke · Jost · logo plush. Format 1080 × 1350 (4:5).
 
 | Fichier | Copiée sur | Nom de l'ad |
