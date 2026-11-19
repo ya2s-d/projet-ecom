@@ -1,5 +1,5 @@
 {%- comment -%}
-  PLUSH — Header, partie 1/2 : bandeau défilant + style du header (maquette C « Marque »).
+  PLUSH — Header, partie 1/2 : barre promo avec compte à rebours + style du header (maquette C « Marque »).
 
   OÙ LE METTRE : Personnaliser > colonne de gauche, zone « En-tête » > Ajouter une section
   > « Liquid personnalisé » > colle tout ce code.
@@ -9,17 +9,20 @@
 
   ⚠️ Ne supprime jamais cette section, même sans promo : c'est elle qui donne au header sa
   couleur marron, son logo clair, le style du menu, et qui ajoute la carte produit dans le
-  menu tel. Quand la promo est finie, seul le bandeau se cache (dans l'éditeur il reste
+  menu tel. Quand la promo est finie, seule la barre promo se cache (dans l’éditeur elle reste
   visible, pour que tu puisses le régler).
 
-  LA PROMO, les 2 seules lignes à changer :
+  LA PROMO, les 3 seules lignes à changer :
   - sale_end : dernier jour de la promo, format aaaa-mm-jj. Fin à 23:59, heure de New York.
-  - sale_items : les messages qui défilent, séparés par |. [countdown] = le compte à rebours.
+  - sale_name : le nom de la promo (barre noire, en haut à gauche).
+  - sale_offer : l'offre, affichée sur PC seulement (le tel n'a pas la place).
+  Le compte à rebours suit sale_end tout seul. À la fin, la barre disparaît d'elle-même.
 {%- endcomment -%}
 
 {%- liquid
-  assign sale_end = '2026-11-13'
-  assign sale_items = '🍂 Fall Sale|Ends in [countdown]'
+  assign sale_end = '2026-11-29'
+  assign sale_name = 'Black Friday'
+  assign sale_offer = 'Duo $74.99 <s>$144.02</s>'
 
   assign end_at = sale_end | append: 'T23:59:59-05:00'
   assign end_ts = end_at | date: '%s' | plus: 0
@@ -33,7 +36,6 @@
   assign cd_m = left | modulo: 3600 | divided_by: 60 | prepend: '0' | slice: -2, 2
   assign cd_s = left | modulo: 60 | prepend: '0' | slice: -2, 2
   assign cd_html = '<b class="pl-cd">' | append: cd_d | append: 'd ' | append: cd_h | append: 'h ' | append: cd_m | append: 'm ' | append: cd_s | append: 's</b>'
-  assign items = sale_items | split: '|'
 -%}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,16 +43,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* ---------- Bandeau défilant ---------- */
-  .pl-tk{display:flex;align-items:center;height:30px;overflow:hidden;background:#F7F2EA;color:#8A4524;border-bottom:1px solid #E2D6C5;font:600 10.5px/1 'Poppins',sans-serif;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-  .pl-tk__track{display:flex;flex:none;animation:pl-tk 60s linear infinite}
-  .pl-tk__seq{display:flex;flex:none;align-items:center}
-  .pl-tk__seq span{padding:0 14px}
-  .pl-tk__seq i{font:inherit;opacity:.5}
-  .pl-cd{font-weight:600;font-variant-numeric:tabular-nums}
-  @keyframes pl-tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  @media (prefers-reduced-motion:reduce){.pl-tk__track{animation:none}}
-  @media (min-width:750px){.pl-tk{height:36px;font-size:12px}}
+  /* ---------- Barre promo (Black Friday) : fixe, noire, compte à rebours en évidence ---------- */
+  .pl-bf{display:flex;align-items:center;justify-content:center;gap:10px;height:42px;padding:0 12px;overflow:hidden;background:#141414;color:#F6F2ED;font:600 12px/1 'Poppins',sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+  .pl-bf__n{font-weight:700}
+  .pl-bf__o{display:none;font-weight:500;letter-spacing:.06em;opacity:.85}
+  .pl-bf__o s{opacity:.6;margin-left:4px}
+  .pl-bf__e{font-weight:500;opacity:.85}
+  .pl-cd{display:inline-block;padding:6px 9px;border-radius:99px;background:#A86B45;color:#fff;font-weight:700;letter-spacing:.04em;text-transform:none;font-variant-numeric:tabular-nums}
+  @media (max-width:369px){.pl-bf{gap:7px;font-size:11px;letter-spacing:.06em}.pl-cd{padding:5px 7px}}
+  @media (min-width:750px){.pl-bf{gap:14px;height:46px;font-size:13.5px}.pl-bf__o{display:inline}}
 
   /* ---------- Header marron, logo clair ---------- */
   sticky-header.header-wrapper{--color-background:138,69,36;--gradient-background:#8A4524;--color-foreground:247,242,234;background:#8A4524;border-bottom:0}
@@ -119,18 +120,11 @@
 </style>
 
 {%- if left > 0 or request.design_mode -%}
-  <div id="pl-tk" class="pl-tk" data-end="{{ end_at }}">
-    <div class="pl-tk__track">
-      {%- for r in (1..2) -%}
-        <div class="pl-tk__seq"{% if r == 2 %} aria-hidden="true"{% endif %}>
-          {%- for k in (1..8) -%}
-            {%- for it in items -%}
-              <span{% if k > 1 %} aria-hidden="true"{% endif %}>{{ it | replace: '[countdown]', cd_html }}</span><i aria-hidden="true">✦</i>
-            {%- endfor -%}
-          {%- endfor -%}
-        </div>
-      {%- endfor -%}
-    </div>
+  <div id="pl-tk" class="pl-bf" data-end="{{ end_at }}" role="region" aria-label="{{ sale_name }}">
+    <span class="pl-bf__n">{{ sale_name }}</span>
+    <span class="pl-bf__o">{{ sale_offer }}</span>
+    <span class="pl-bf__e">Ends in</span>
+    {{ cd_html }}
   </div>
 
   <script>

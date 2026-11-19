@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only"><meta name="supported-color-schemes" content="light">
+<title>Your Plush arrives today</title>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light only}
+body{margin:0;padding:0;background:#E9E1D6;-webkit-text-size-adjust:100%}
+img{border:0;line-height:100%;outline:none;text-decoration:none}
+a{color:#141414}
+@media (max-width:620px){
+  .pl-wrap{width:100%!important}
+  .pl-h1{font-size:31px!important}
+  .pl-pad{padding-left:22px!important;padding-right:22px!important}
+  .pl-card{padding-left:14px!important;padding-right:14px!important}
+}
+</style></head>
+<body style="margin:0;padding:0;background:#E9E1D6;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#E9E1D6;"><tr><td align="center" style="padding:24px 0;">
+<table role="presentation" class="pl-wrap" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#F6F2ED;border-radius:4px;">
+<tr><td align="center" style="padding:30px 0 22px;"><a href="{{ shop.url }}" style="text-decoration:none;"><img src="https://cdn.shopify.com/s/files/1/1112/3618/6451/files/plush-email-logo.png?v=1795092462" width="104" alt="plush" style="display:block;width:104px;height:auto;"></a></td></tr><tr><td align="center" style="background:#8A4524;padding:13px 20px;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.4;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#F7F2EA;">Free US shipping &middot; 60 days to try it</td></tr><tr><td align="center" class="pl-pad" style="padding:38px 40px 0;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#A86B45;">Order {{ order_name }}</td></tr><tr><td align="center" class="pl-pad" style="padding:14px 44px 0;"><h1 class="pl-h1" style="margin:0;font-family:'League Spartan','Poppins',Helvetica,Arial,sans-serif;font-size:38px;line-height:1.08;font-weight:700;letter-spacing:-.01em;color:#141414;">Your Plush is out for delivery.</h1></td></tr><tr><td align="center" class="pl-pad" style="padding:16px 56px 0;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65;color:#3F3B37;">It should reach you today. Tonight's shower could be your first filtered one.</td></tr><tr><td align="center" style="padding:26px 24px 16px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" bgcolor="#141414" style="border-radius:99px;">
+<a href="{%- if fulfillment.tracking_url -%}{{ fulfillment.tracking_url }}{%- elsif fulfillment.tracking_urls.first -%}{{ fulfillment.tracking_urls.first }}{%- else -%}{{ order_status_url }}{%- endif -%}" style="display:inline-block;padding:16px 36px;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:#F6F2ED;text-decoration:none;border-radius:99px;">Track your package</a>
+</td></tr></table></td></tr>{%- if fulfillment.tracking_numbers.size > 0 -%}<tr><td align="center" class="pl-pad" style="padding:0 40px 30px;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;color:#6B6660;">{%- if fulfillment.tracking_company -%}{{ fulfillment.tracking_company }} &middot; {% endif -%}Tracking number {% for n in fulfillment.tracking_numbers %}{% if fulfillment.tracking_urls[forloop.index0] %}<a href="{{ fulfillment.tracking_urls[forloop.index0] }}" style="color:#141414;font-weight:600;">{{ n }}</a>{% else %}<b style="color:#141414;">{{ n }}</b>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</td></tr>{%- endif -%}<tr><td style="padding:0;"><img src="https://cdn.shopify.com/s/files/1/1112/3618/6451/files/plush-email-hero-shower.jpg?v=1795092463" width="600" alt="Plush filtered shower head" style="display:block;width:100%;max-width:600px;height:auto;"></td></tr><tr><td class="pl-card" style="padding:28px 28px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FFFFFF;border-radius:20px;"><tr><td style="padding:24px 24px 22px;">
+<div style="font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6B6660;padding-bottom:14px;">In this shipment</div>
+{%- for line in fulfillment.fulfillment_line_items -%}{%- if line.line_item.product.title -%}{%- assign pl_t = line.line_item.product.title -%}{%- else -%}{%- assign pl_t = line.line_item.title -%}{%- endif -%}{%- capture pl_img -%}{%- if line.line_item.image -%}<img src="{{ line.line_item | img_url: 'compact_cropped' }}" width="64" height="64" alt="" style="display:block;width:64px;height:64px;border-radius:12px;background:#F3EEE7;object-fit:cover;">{%- else -%}<img src="https://cdn.shopify.com/s/files/1/1112/3618/6451/files/plush-email-protection.png?v=1795092727" width="64" height="64" alt="" style="display:block;width:64px;height:64px;border-radius:12px;">{%- endif -%}{%- endcapture -%}{%- capture pl_sub -%}{%- if line.line_item.variant.title != 'Default Title' and line.line_item.variant.title != blank -%}<br><span style="color:#6B6660;font-size:13px;">{{ line.line_item.variant.title }}</span>{%- endif -%}{%- endcapture -%}<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #EFE9E1;"><tr>
+<td width="72" style="padding:14px 0;vertical-align:middle;">{{ pl_img }}</td>
+<td style="padding:14px 10px 14px 14px;vertical-align:middle;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.4;color:#141414;"><b style="font-weight:600;">{{ pl_t }}</b>{{ pl_sub }}<br><span style="color:#6B6660;font-size:13px;">Qty {{ line.quantity }}</span></td>
+<td align="right" style="padding:14px 0;vertical-align:middle;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;color:#141414;white-space:nowrap;"></td></tr></table>{%- endfor -%}
+</td></tr></table></td></tr><tr><td align="center" class="pl-pad" style="padding:40px 44px 0;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#3F3B37;">Questions? Just reply to this email.<br>A real person answers, usually within a day.</td></tr>
+<tr><td align="center" style="padding:30px 24px 34px;"><img src="https://cdn.shopify.com/s/files/1/1112/3618/6451/files/plush-email-logo.png?v=1795092462" width="64" alt="plush" style="display:block;width:64px;height:auto;margin:0 auto 10px;opacity:.85;">
+<div style="font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.7;color:#6B6660;">Same shower. Better water.<br><a href="{{ shop.url }}" style="color:#6B6660;">myplush.us</a> &middot; <a href="mailto:{{ shop.email }}" style="color:#6B6660;">{{ shop.email }}</a></div></td></tr>
+</table>
+</td></tr></table>
+</body></html>
