@@ -159,7 +159,6 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 - un nombre d'avis ou de clients supérieur à la réalité ;
 - nommer ou noter un concurrent : on compare des **types** de produits ;
 - un faux compte à rebours ;
-- un **prix barré jamais pratiqué** (16 CFR 233.1). Les 115 $ et 144,02 $ affichés sont à risque.
 
 **Autorisé** :
 - la cartouche neuve à côté de la cartouche usée, si elle est réelle ;
@@ -170,6 +169,8 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 - l'installation sans outils ;
 - l'angle locataire ;
 - « On day 59… ».
+
+**Yasser corrige lui-même la conformité des créas (19 nov.).** Claude ne refait jamais une créa finie pour une raison de conformité : il le signale en une ligne au plus, puis passe à la suite.
 
 **Mention en bas de chaque pub et de la fiche** : *Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary. Not a medical device and not intended to diagnose, treat, cure or prevent any condition.*
 
@@ -254,7 +255,7 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 11. On juge sur la fenêtre 7 jours après clic, recoupée avec les UTM.
 12. Aucune allégation non prouvée.
 13. Zéro faux avis, faux expert ou faux « #1 ».
-14. Prix barrés : seulement s'ils ont été réellement pratiqués.
+14. Prix barrés : décision de Yasser (temporaires, Black Friday), on n'y touche pas.
 15. 70 % de créas produit / offre, 30 % d'éducation.
 16. L'ensemble vidéos part à J0 avec un minimum de 45 €/jour.
 17. Une créa = une page : le haut de la landing répète la promesse et le visuel du hook.

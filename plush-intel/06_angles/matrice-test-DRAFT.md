@@ -107,7 +107,7 @@ Ce qu'il faut savoir sur 30 créas à 150 €/jour : le test jugera au plus ~13 
 | B09 | `C12_ANG-1970_PER-P1_AW-UN_FMT-anim` | F2 | Les scènes d'époque en IA, de l'ancien pommeau à Plush, arrêtent le scroll à froid |
 | B10 | `C11_ANG-honnete_PER-P5_AW-PR_FMT-found` | F4 | Yasser face caméra, en tant que fondateur (« what it won't do »), convertit mieux qu'une voix IA. **Si Yasser refuse de tourner : remplacé par C06 cadeau en vidéo** |
 
-**Interdits pour toutes les créas** (playbook §11.2, liste close du 4 oct.) : aucune personne IA présentée comme une cliente · aucun avant/après de cheveux ou de peau · aucun chiffre de chlore sans rapport lu · aucun prix barré (115 $ / 144,02 $) · « stronger pressure » seulement après le test du seau · PLUSHFAM jamais en pub.
+**Interdits pour toutes les créas** (playbook §11.2, liste close du 4 oct.) : aucune personne IA présentée comme une cliente · aucun avant/après de cheveux ou de peau · aucun chiffre de chlore sans rapport lu · « stronger pressure » seulement après le test du seau · PLUSHFAM jamais en pub.
 
 ---
 
@@ -168,7 +168,7 @@ Après le 14 déc. : plus d'angle Noël. On repart sur la routine du Nouvel An e
 | # | Prérequis | Pourquoi | État |
 |---|---|---|---|
 | 1 | Pixel + API Conversions + UTM dynamiques (`utm_content={{ad.name}}`) | Sans eux, la grille du §5 ne se lit pas | Pixel ✅ · CAPI et UTM ❓ (playbook §9) |
-| 2 | Fiche produit sans prix barrés ni blocs de preuve sociale non documentables | Les ads renvoient vers la fiche. Un faux prix de référence = risque FTC | ❓ (audit Phase 1) |
+| 2 | Fiche produit sans blocs de preuve sociale non documentables | Les ads renvoient vers la fiche. Un faux prix de référence = risque FTC | ❓ (audit Phase 1) |
 | 3 | Installation chronométrée et filetage ½" confirmés | A08, A09, B07 | Échantillon reçu, à tourner |
 | 4 | Test du seau (débit avant/après) | Sans lui, aucune mention de pression | ❓ |
 | 5 | Certificat chlore de l'usine **lu** | Sans lui, « filters chlorine » sans chiffre seulement | ❓ document pas vu |
