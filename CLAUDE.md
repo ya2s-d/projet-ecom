@@ -2504,3 +2504,20 @@ Durée de la cartouche alignée sur la fiche : **60 jours** (la v1 disait 3 mois
 le bloc abonnement de la page cartouche dit « every 3 months ». ⚠️ Bug de la fiche produit : l'onglet
 « Changing Your Filter » affiche l'ancien texte de composition (2 couches) au lieu des consignes de
 changement. `PLUSHFAM` est imprimé dans l'ebook avec « 20 % » : si la valeur change, refaire le PDF.
+
+## 19 novembre 2026 — test 1 Meta : réglages arrêtés
+
+**Budget : 150 €/jour** (décidé par Yasser dans une autre conversation, rappelé le 19 nov.), plafond de
+dépenses de campagne à **480 €**, soit environ 3 jours. Départ programmé vendredi 20 nov. 6h00 Bruxelles
+(= minuit New York).
+
+| Réglage | Valeur |
+|---|---|
+| Campagne | Ventes, budget de campagne Advantage+, plafond de dépenses 480 € |
+| Conversion | Site web, pixel 1522240700051418, **Ajout au panier** |
+| Audience | US, 18-65, aucun intérêt · placements Advantage+ · améliorations IA de Meta désactivées |
+| Pubs | 1 ensemble, les 6 accroches `videos/hooks/V11-H1…H6` (même corps, seule l'ouverture change) |
+
+**Seuils posés avant lancement** (marge Duo ~36,45 $, 1 € = 1,16 $) :
+- Au bout de ~150-185 € dépensés : on garde les pubs à CTR lien ≥ 1,2 % · CPC ≤ 1 $ · coût par ajout panier ≤ 15 $
+- À 480 € : équilibre = **~15 Duo** · moins de 8 → on coupe · 8 à 14 → on corrige page et offre · 15 et + → on continue

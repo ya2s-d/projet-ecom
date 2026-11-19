@@ -82,7 +82,7 @@
 | 4 Teardown ads | `ads-database.csv`, teardowns, `synthese-ads.md` | 🟠 10 nov., version courte : `ads-database.csv` (294 créas de l'export du 4 oct., colonnes du brief, classement automatique à vérifier, âge/sexe non collectés) + `synthese-ads.md` = **catalogue de 12 formats à reproduire en IA** + top 15. Teardowns et landing pages par marque reportés (priorité : lancement ≤ 18-19 nov.). À mettre à jour avec les captures de Yasser |
 | 5 VOC | `verbatims.csv`, `synthese-voc.md` | ⏳ |
 | 6 Avatar | `avatar-principal.md`, `personas-secondaires.md` | ⏳ |
-| 7 Angles | banques angles + hooks, `matrice-test-DRAFT.md` | ⏳ |
+| 7 Angles | banques angles + hooks, `matrice-test-DRAFT.md` | 🟠 10 nov. : `06_angles/matrice-test-DRAFT.md` livré (30 créas nommées avec leur hypothèse, 15 concepts, 11 formats sur 12, seuils ÷ 1,21, réserve de 5 + 4 statiques BFCM, prérequis). Banques angles et hooks ⏳ |
 | 8 Red team | corrections notées ici | ⏳ |
 | Livraison | `00_RESUME.md`, `visuels/`, `SOURCES.md`, mémoire | ⏳ |
 
@@ -140,11 +140,17 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 - 10 nov. : **décision de Yasser sur la structure du test** : 30 créas (natives, VSL, images), 150 €/jour, 5 jours, CBO avec 2 ad sets (3 au maximum), natives / vidéos. Le calcul de la Phase 1 (juger chaque créa sur l'achat coûterait 2× le budget) lui a été présenté. La décision est prise : la matrice (Phase 7) se construit sur ce plan, avec une règle « non testée » pour les créas qui ont trop peu dépensé.
 
 - 10 nov. : date limite de Noël harmonisée à **« Order by Dec 4 »** (12 jours ouvrés + 1-2 j de préparation) dans le playbook et l'audit. Le playbook disait 7 déc., l'analyse marché 4 déc.
+- 10 nov. (nouvelle session) : la mission était sur la branche `claude/last-private-message-spio8a`, ramenée sur `claude/plush-intel-mission-bph3rb`. Matrice du test 1 écrite. Écart relevé : le mix réel est 60 % bas de funnel / 40 % haut, pas 70/30.
 - 10 nov. : le playbook suppose un lancement le 12 nov. (« si lancement le 12 nov. »), ce qui est irréaliste sans les créas. La date de lancement est posée comme décision au checkpoint B.
 
 ## Prochaines actions
 
-1. Phase 7 d'abord, parce que c'est elle qui alimente la production IA : `06_angles/matrice-test-DRAFT.md`, 30 créas réparties sur les 12 formats F1-F12 de `03_concurrents/synthese-ads.md` × angles × personas. Puis `banque-angles.md` et `banque-hooks.md`
+0 ter. **11 nov. — 2e document : « Verification of Compliance » GTS** (`01_produit/preuves/fournisseur-certificat-GTS-CE.webp`). Fabricant : **Shenzhen Calux Purification Tech Co., Ltd** · produit « Shower head », modèles **CL-SH5 à CL-SH10** · norme **EN 12902:2004** · rapport n° **TCGD24050857646** · émis le 10 mai 2024, valable jusqu'au 9 mai 2029 · autorise le marquage **CE**. Lecture : c'est une attestation de conformité européenne, **pas un résultat de filtration du chlore** ; le CE ne vaut rien aux US. À faire : confirmer le n° de modèle de Plush (dans la liste ?) et demander le **rapport complet** TCGD24050857646.
+0 bis. **11 nov. — « certificat » de l'usine lu** (`01_produit/preuves/fournisseur-labo-CNAS.jpg`) : c'est une page marketing Alibaba qui montre que **l'usine a un laboratoire accrédité CNAS** (accréditation chinoise des labos), avec les normes chinoises QB/T 4143-2010, QB/T 4144-2010 et GB/T 5750-2006. **Ce n'est pas un rapport de test du produit** : aucun modèle, aucun résultat, aucun % de chlore, aucune condition (débit, température, volume). Conséquence : toujours **aucun chiffre** ni « lab-tested » / « certified » dans les pubs. À demander au fournisseur : le rapport de test de CE modèle (n° de rapport, labo, date, % de chlore réduit, conditions), idéalement un labo tiers (SGS, Intertek) ou NSF/ANSI 177.
+
+0. **11 nov. : Higgsfield connecté à la session** (plan gratuit, 4,94 crédits). Yasser choisit Higgsfield et le style « What If » : explication 3D façon documentaire, sous-titres mot à mot, une histoire qui retient (sa vidéo test : glacier → seau de 20 gallons de glace → tuyaux où s'accumulent chlore et calcaire → emplacements pour plans Plush réels). Les vidéos du pack passent dans ce style là où il colle (B01, B03, B05, B08, B09 + le trajet de l'eau). On garde B04 dialogue, B06 installation réelle et B10 fondateur pour la diversité. ⚠️ Dans sa vidéo test, le calcaire est montré comme ce que Plush retient : faux, Plush n'adoucit pas l'eau → à retirer.
+
+1. Phase 7 : `06_angles/production-creas.md` livré (fiches des 30 créas + réserve + BFCM, 60 hooks HK-01 à HK-60, liste des plans réels à tourner). 🔴 Bloquant : 6 des 7 photos de la fiche produit sont des avant/après interdits, à remplacer (§2 du pack). Outil : Krea (connecté) ou Kie.ai (clé API via le formulaire sécurisé), au choix de Yasser. Points ouverts de la matrice : lancement au plus tard le 17 nov. (sinon J+5 tombe dans le BFCM) · C01 (cartouche) sort du test sans vraie cartouche marquée · Yasser accepte-t-il de tourner face caméra (B10) ?
 2. Phase 5 VOC, version légère et plafonnée : les sources ouvertes seulement (Reddit, Trustpilot et Amazon bloqués), en annonçant le nombre réel de verbatims. Phase 6 : mise à jour de l'avatar v2 avec les données
 3. Intégrer les captures et vidéos de Yasser (dossier Mega) dès qu'elles arrivent : script de transcription + 4 images par vidéo
 4. Pour économiser les tokens : reprendre le bloc 2 dans une **nouvelle session**, à partir de ce fichier, avec un contexte léger

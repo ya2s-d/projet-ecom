@@ -1,0 +1,10 @@
+{
+ "order_confirmation":    ["gid://shopify/EmailTemplate/129930297683", "57845872774fd64a1045c6d5b94e9de54c268ee0dc846a0fd385092d206d176d", "d9dd0d4fac8e5d6be902df037222b96ef051437ec641526627b97c8699ba333c"],
+ "shipping_confirmation": ["gid://shopify/EmailTemplate/129930363219", "bd49f49a628ec31f915cd98fabffcf124822a363710cf37e1502945314cb469e", "83c0dbfb820466522911c01feb25c9e76b2f00111f99096cbe69ec98e559ca21"],
+ "shipping_update":       ["gid://shopify/EmailTemplate/129931346259", "afcc471461ced090203d4ed07a75b1df6d2af805220457b347a11cc02f5a0232", "c98f626981af1df84e72b231ae2bdb1d5d617a3bb4123457a0197e2fe1221c2a"],
+ "out_for_delivery":      ["gid://shopify/EmailTemplate/129931379027", "00d3e497b98873c0f144ce567b410c189fc086e44467d06d04721064ce57a487", "606104c7b04e7a2734138611790eb0a67c6a336fba90f7af4353b5ad265f8f43"],
+ "delivered":             ["gid://shopify/EmailTemplate/129931411795", "aeee093d6f6a055125a3567a953a976d8c86da70b665b164f2f3dadd310b9f52", "2e57065adac0532acf173c0b4d7ac9ecb83b27e10028045fb4cec350f42c9254"],
+ "order_canceled":        ["gid://shopify/EmailTemplate/129930723667", "b83ccf3b37b7c62a24a8d837987f6d2e006ef994f097681bb322aa25e47bc1ee", "8f3d3aebd7857f233dc399769032d2d3fbe9a526bfcd84e33e9ad5c6998d6b85"],
+ "refund":                ["gid://shopify/EmailTemplate/129930789203", "c82fccd71d5e6c318b0d7c17f7ff003030c90c1d6e1fdde44508a830499782f7", "41bdc083ef963c03a83e5ee35a4b76bb2487b7db2179e445c11f6ebd0bffdb2a"],
+ "abandoned_checkout":    ["gid://shopify/EmailTemplate/129930821971", "86d40ccb423d618dc1cc5ab3fa9b79ee3a199b158b78e0bcbc771ef06e610c70", "50d3dc8651109595e056821804d4b810c322d3a5adb452da55b7d5e5dbff4a89"]
+}

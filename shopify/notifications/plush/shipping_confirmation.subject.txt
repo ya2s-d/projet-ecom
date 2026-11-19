@@ -1,0 +1,1 @@
+Your Plush is on its way ({{ name }})
