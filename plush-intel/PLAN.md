@@ -4,7 +4,7 @@
 > compaction ou dans une nouvelle session. Mémoire générale du projet : `../CLAUDE.md` (on garde UNE seule
 > mémoire : le `CLAUDE.md` de fin de mission sera fusionné dans celui de la racine du dépôt, pas dupliqué).
 
-**Démarrée le** 9 nov. 2026 · **Statut (10 nov.)** : CHECKPOINT B validé → **bloc 2 en mode court** (lancement des pubs avant le 18-19 nov.). Échantillon reçu le 10 nov.
+**Démarrée le** 9 nov. 2026 · **Statut (19 nov.)** : créas du test 1 produites (`visuels/test1/`) · lancement programmé **ven. 20 nov. 6h Bruxelles** · ⚠️ réglages du 19 nov. corrigés (voir journal du 19 nov.) · `../CLAUDE.md` réécrit le 19 nov. : l'état réel et les bons réglages ads y sont en tête
 
 ## Calendrier qui commande tout
 
@@ -142,6 +142,15 @@ L'API officielle `ads_archive` ne couvre les pubs commerciales que si elles sont
 - 10 nov. : date limite de Noël harmonisée à **« Order by Dec 4 »** (12 jours ouvrés + 1-2 j de préparation) dans le playbook et l'audit. Le playbook disait 7 déc., l'analyse marché 4 déc.
 - 10 nov. (nouvelle session) : la mission était sur la branche `claude/last-private-message-spio8a`, ramenée sur `claude/plush-intel-mission-bph3rb`. Matrice du test 1 écrite. Écart relevé : le mix réel est 60 % bas de funnel / 40 % haut, pas 70/30.
 - 10 nov. : le playbook suppose un lancement le 12 nov. (« si lancement le 12 nov. »), ce qui est irréaliste sans les créas. La date de lancement est posée comme décision au checkpoint B.
+
+- **19 nov. — correction des réglages du test 1.** Une session a noté dans CLAUDE.md : « 1 ensemble, 6 accroches de V11, optimisation Ajout au panier, plafond 480 € ». C'était recopié du protocole du 25 sept., resté en apparence « en vigueur » dans l'ancien CLAUDE.md. Ces réglages contredisent la décision de Yasser du 10 nov. et la matrice. **Réglages valables** :
+  - CBO à 150 €/jour HT pendant 5 jours (750 € HT = 907,50 € débités), plafond de campagne à 750 € ;
+  - optimisation **Achat** ;
+  - **2 ensembles** (images 20 / vidéos 10, minimum de 45 €/jour sur les vidéos) ;
+  - 30 créas, ≥ 15 concepts : les 6 accroches de V11 comptent pour **1** concept ;
+  - seuils HT : 23 / 47 / 70 € · gagnante ≤ 16,50 €.
+
+  `CLAUDE.md` a été réécrit court, avec l'état actuel en tête. L'ancien est archivé mot pour mot dans `dossiers/archive-claude-md-sept-nov-2026.md`. Les 20 règles du playbook (§0) sont passées en montants HT.
 
 ## Prochaines actions
 

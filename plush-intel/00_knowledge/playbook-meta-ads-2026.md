@@ -33,17 +33,19 @@
 
 ## 0. Les 20 règles qu'on applique
 
+> **Montants en € = HT, tels que lus dans Ads Manager** (TVA belge de 21 % confirmée le 10 nov. : le compte n'a pas de numéro de TVA). Mis à jour le 19 nov. : 28 → 23 € · 57 → 47 € · 85 → 70 € · 42 → 35 € · 20 → 16,50 €.
+
 | # | Règle | Chiffre Plush | Statut |
 |---|---|---|---|
 | 1 | **Une campagne CBO (budget de campagne Advantage+), 2 ensembles : images (natives + statiques) / vidéos.** Optimisation Achat, enchère « plus haut volume », US, audience Advantage+ | Décision de Yasser (10 nov.). Formule Meta : 1 218 $ ÷ (32,90 × 50) = **0,74 ensemble** soutenable → aucune structure ne sort d'apprentissage, on juge créa par créa sur des seuils posés avant | FAIT (formule [S18]) + décision |
-| 2 | **Règle « non testée »** : une créa sous **28 €** de dépense à J+5 et sans achat n'est pas perdante, elle repart dans la CBO suivante | 28 € = 1× CPA BE. Exception : hook raté dès 15 € (seuils §13) → nouveau 1er visuel avant de repartir | INFÉRENCE [I1] |
+| 2 | **Règle « non testée »** : une créa sous **23 €** de dépense à J+5 et sans achat n'est pas perdante, elle repart dans la CBO suivante | 23 € = 1× CPA BE (HT). Exception : hook raté dès 12 € (seuils §13) → nouveau 1er visuel avant de repartir | INFÉRENCE [I1] |
 | 3 | **Compter les concepts, pas les fichiers.** Deux ads qui ont la même image ou la même 1re seconde = une seule créa pour Meta | 30 créas = **au moins 15 concepts**, chacun différent des autres sur ≥ 2 dimensions (angle, persona, format, décor/créateur, niveau de conscience). Dans un même ensemble, jamais deux ads avec la même image ou la même 1re seconde | FAIT [S6] + INFÉRENCE |
 | 4 | **Lire le score « Creative diversity » 24 h après le lancement** : viser « High ». Si « Low », remplacer les quasi-doublons, ne pas en ajouter | Ads Manager, par ensemble | FAIT (l'indicateur existe [S7][S8]) · HYPOTHÈSE (effet sur les résultats) |
 | 5 | **Un seul passage de modifications pendant le test** : J+3 (coupes aux seuils + entrée des vidéos produit en un lot). Rien d'autre avant J+5 | J0 lancement · J+3 passage unique · J+5 décision · J+7 relecture | FAIT (Meta recommande de grouper les modifications [S18]) + HYPOTHÈSE (calendrier) |
-| 6 | **Couper sans discuter** aux seuils posés avant | 28 € dépensés + 0 ajout panier + CTR lien < 0,8 % · 57 € + 0 achat · 85 € + CPA > 42 € | INFÉRENCE [I1] |
-| 7 | **Un gagnant = ≥ 3 achats à CPA ≤ 20 €.** On l'itère tout de suite en 3 variantes (hook, format, persona) | Fatigue attendue en 2-4 semaines | FAIT (fatigue [S13]) + INFÉRENCE |
+| 6 | **Couper sans discuter** aux seuils posés avant | 23 € dépensés + 0 ajout panier + CTR lien < 0,8 % · 47 € + 0 achat · 70 € + CPA > 35 € | INFÉRENCE [I1] |
+| 7 | **Un gagnant = ≥ 3 achats à CPA ≤ 16,50 €.** On l'itère tout de suite en 3 variantes (hook, format, persona) | Fatigue attendue en 2-4 semaines | FAIT (fatigue [S13]) + INFÉRENCE |
 | 8 | **Scaler par paliers de +20 % tous les 3 jours** si le CPA sur 3 jours glissants ≤ CPA BE. Jamais de doublement | 150 → 180 → 216 €/jour | HYPOTHÈSE (heuristique de praticiens, aucune doc Meta) |
-| 9 | **La rentabilité se lit dans Shopify** : MER = CA Shopify ÷ dépense Meta | MER BE = **2,14** (2,59 si TVA 21 % facturée) | INFÉRENCE [I1] |
+| 9 | **La rentabilité se lit dans Shopify** : MER = CA Shopify ÷ dépense Meta | MER BE = **2,14** (CA Shopify ÷ facture Meta TTC) · ROAS BE lu dans Ads Manager (HT) = **2,59** | INFÉRENCE [I1] |
 | 10 | **Tracking vérifié avant le 1er euro** : partage « Maximum » (API Conversions), pixel d'app en **« Always on »** (pas « Optimized »), achat test, dédoublonnage | Shopify peut suspendre un pixel sans signal depuis des jours, or le nôtre n'a jamais reçu de clic pub | FAIT [S29][S30] + INFÉRENCE |
 | 11 | **Juger sur « 7 jours clic »**, recouper avec les commandes Shopify via `utm_content={{ad.name}}` | Défaut Meta 2026 : 7 j clic / 1 j engage-through / 1 j vue | FAIT [S31] |
 | 12 | **Aucune allégation non prouvée** : aucun % de chlore tant que le certificat usine n'est pas lu · jamais « soft water », « adoucit », « anti-calcaire » (le produit n'adoucit pas) · aucun résultat sur la peau ou les cheveux · aucune question sur un attribut personnel | « Do you have eczema? » = refus Meta + risque FTC | FAIT [S33][S34][S35] + [I1] |

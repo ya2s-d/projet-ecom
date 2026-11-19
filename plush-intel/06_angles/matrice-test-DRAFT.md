@@ -20,7 +20,7 @@
 |---|---|
 | 10-12 nov. | Prérequis (§7) · plans réels avec l'échantillon : installation chronométrée, test du seau, photos de la cartouche neuve |
 | 13-16 nov. | Production des 30 créas + 5 de réserve + 4 statiques BFCM (§6) |
-| **lun. 16 ou mar. 17 nov.** | **Lancement (J0)** |
+| **lun. 16 ou mar. 17 nov.** | **Lancement (J0)** — *décalé : départ programmé le ven. 20 nov. à 6h Bruxelles (19 nov.)* |
 | J+3 (19-20 nov.) | **Le seul passage de modifications** (§5.1) |
 | J+5 (21-22 nov.) | Décision (§5.2). Les créas BFCM sont soumises à Meta le même jour |
 | J+7 (23-24 nov.) | Relecture des achats attribués en retard |
@@ -127,7 +127,7 @@ Seuils du playbook §13.4 divisés par 1,21. CPA de break-even = **23 €** (32,
 | Tout palier | ≥ 2 achats, CPA ≤ 23 € | **Garder**, ne pas toucher |
 | Tout palier | ≥ 3 achats, CPA ≤ 16,50 € | 🏆 **Gagnante** |
 
-Compte entier : MER Shopify < 2,59 sur 5 jours = sous le break-even.
+Compte entier sur 5 jours : sous le break-even si le CA Shopify ÷ la dépense lue dans Ads Manager (HT) est < 2,59, soit un MER sur la facture Meta TTC < 2,14.
 
 ### 5.1 J+3 — un seul passage de modifications
 
