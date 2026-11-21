@@ -74,9 +74,9 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 | Contrôle à J+1 | Score **« Creative diversity »** de chaque ensemble : viser « High ». Sur « Low », remplacer les quasi-doublons | Playbook §1 |
 | Modifications | **Une seule fois, à J+3** : on coupe selon la grille, puis la réserve entre en un seul lot. Rien d'autre avant J+5 | Chaque modification relance l'apprentissage |
 | Nommage | `C07_ANG-…_PER-P1_AW-…_FMT-…_HK-03_V2_T1` + UTM `utm_content={{ad.name}}` | Lire l'export par angle, persona, format et hook (playbook §12) |
-| Départ | Programmé **ven. 20 nov., 6h à Bruxelles** (minuit à New York) | J+5 tombe le 25 nov., en semaine de Black Friday : lecture plus bruitée, assumée |
+| Départ | **Reporté.** Le 20 nov., le profil Facebook « Plush », seul admin du portefeuille TryPlush, de la Page, du compte pub et du pixel, a été **désactivé définitivement** (un profil au nom d'une marque). **Plan B** : le vrai profil d'un adulte de la famille crée un nouveau portefeuille et un nouveau compte pub (EUR, heure de Bruxelles), avec sa carte ; on reconnecte l'app Facebook & Instagram de Shopify (nouveau pixel) et l'Insta tryplush. Yasser ne se recrée jamais de profil | Lancer dès que le plan B est en place, même pendant la semaine du Black Friday |
 
-**Les 30 créas et leurs hypothèses** : `plush-intel/06_angles/matrice-test-DRAFT.md`. **Les fichiers et leurs noms d'ads** : `plush-intel/visuels/test1/README.md`.
+**Créas finales du 20 nov.** : 29 images de Yasser en 3 formats (9:16, 1:1, 1,91:1), soit 87 fichiers dans `plush-intel/visuels/test1/formats-meta/` ; textes et suite dans `plush-intel/visuels/test1/LANCEMENT-T1.md`. **Les 30 créas et leurs hypothèses (plan d'origine)** : `plush-intel/06_angles/matrice-test-DRAFT.md`. **Les fichiers et leurs noms d'ads** : `plush-intel/visuels/test1/README.md`.
 
 ---
 

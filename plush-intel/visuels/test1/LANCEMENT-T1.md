@@ -2,6 +2,30 @@
 
 Réglages : CLAUDE.md §4 · grille de décision : CLAUDE.md §5 · choix des 30 créas : 19 nov.
 
+## État au 21 nov. (à lire d'abord)
+
+- Le profil Facebook « Plush » a été **désactivé définitivement** le 20 nov. Il était le seul admin de tout (portefeuille TryPlush, Page, compte pub, pixel 1522240700051418). Plus aucun accès.
+- **Plan B** : le vrai profil d'un adulte de la famille (son appareil, sa carte) crée un nouveau portefeuille et un nouveau compte pub (EUR, Europe/Bruxelles). On débranche puis on reconnecte l'app Facebook & Instagram de Shopify (nouveau pixel), et on connecte l'Insta tryplush à une Page TryPlush. Yasser ne se recrée pas de profil.
+- **Créas finales** : 29 images de Yasser (01 à 29) en 3 formats, dans `formats-meta/` (`NN_9x16.jpg`, `NN_1x1.jpg`, `NN_191x1.jpg`). Le 1,91:1 = image entière au centre, côtés floutés. Les visuels 10, 12, 19 et 20 à 29 affichent « Black Friday price » : à remplacer après le 30 nov.
+- **Réglages de la nouvelle interface (campagne de ventes Advantage+)** : Ventes · budget de campagne 150 €/jour · limite de campagne 900 € · ensemble : Site Web, Maximiser le nombre de conversions, pixel, **Achat** (pas « Vue du contenu »), modèle Standard, US sans la Californie, âge min. 18, placements Advantage+ · pub : **Importation manuelle** (pas le catalogue), multi-annonceurs décoché, Produits désactivé, aucune génération d'images, améliorations toutes désactivées, une seule option de texte, bouton Acheter, URL + UTM ci-dessous.
+- **Textes (les mêmes pour les 29 pubs, sans date ni prix)** :
+
+Texte principal :
+```
+Most shower heads just spray water. Plush filters it first.
+
+– 6-layer cartridge designed to reduce chlorine and sediment
+– Screws onto standard US 1/2" arms in 3 steps. No tools, no plumber.
+– You change the cartridge every 3 months. The Duo comes with 2, so 6 months are covered.
+
+Free US shipping. On day 59, if you don't love it, you get all your money back.
+
+Filter capabilities refer to what the filter is designed to reduce, not to the guaranteed presence of those substances in your water. Individual results vary. Not a medical device and not intended to diagnose, treat, cure or prevent any condition.
+```
+Titre : `Filter your shower in 3 steps` · Description : `Free US shipping · 60 days to try it`
+
+- **Avant de publier** : un achat test visible dans « Événements de test » (Purchase). Depuis la Belgique, accepter les cookies (consentement obligatoire en UE ; pas aux US).
+
 ## Campagne `T1_CBO_US_ACHAT`
 
 | Réglage | Valeur |
