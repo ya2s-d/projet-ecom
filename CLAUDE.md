@@ -74,7 +74,7 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 | Contrôle à J+1 | Score **« Creative diversity »** de chaque ensemble : viser « High ». Sur « Low », remplacer les quasi-doublons | Playbook §1 |
 | Modifications | **Une seule fois, à J+3** : on coupe selon la grille, puis la réserve entre en un seul lot. Rien d'autre avant J+5 | Chaque modification relance l'apprentissage |
 | Nommage | `C07_ANG-…_PER-P1_AW-…_FMT-…_HK-03_V2_T1` + UTM `utm_content={{ad.name}}` | Lire l'export par angle, persona, format et hook (playbook §12) |
-| Départ | **Reporté.** Le 20 nov., le profil Facebook « Plush », seul admin du portefeuille TryPlush, de la Page, du compte pub et du pixel, a été **désactivé définitivement** (un profil au nom d'une marque). **Plan B** : le vrai profil d'un adulte de la famille crée un nouveau portefeuille et un nouveau compte pub (EUR, heure de Bruxelles), avec sa carte ; on reconnecte l'app Facebook & Instagram de Shopify (nouveau pixel) et l'Insta tryplush. Yasser ne se recrée jamais de profil | Lancer dès que le plan B est en place, même pendant la semaine du Black Friday |
+| Départ | **Reporté.** Le 20 nov., le profil Facebook « Plush », seul admin du portefeuille TryPlush, de la Page, du compte pub et du pixel, a été **désactivé définitivement** (un profil au nom d'une marque). **Plan B** : le vrai profil d'un adulte de la famille crée un nouveau portefeuille et un nouveau compte pub (EUR, heure de Bruxelles), avec sa carte ; on reconnecte l'app Facebook & Instagram de Shopify (nouveau pixel) et l'Insta tryplush. Yasser ne se recrée jamais de profil | **Décision du 22 nov. : lancement le mar. 1er déc. à 6h (Bruxelles) = minuit à New York**, après une semaine d'organique et de mise en place : `plush-intel/PLAN-ORGA-22-30-NOV.md` |
 
 **Créas finales du 20 nov.** : 29 images de Yasser en 3 formats (9:16, 1:1, 1,91:1), soit 87 fichiers dans `plush-intel/visuels/test1/formats-meta/` ; textes et suite dans `plush-intel/visuels/test1/LANCEMENT-T1.md`. **Les 30 créas et leurs hypothèses (plan d'origine)** : `plush-intel/06_angles/matrice-test-DRAFT.md`. **Les fichiers et leurs noms d'ads** : `plush-intel/visuels/test1/README.md`.
 
@@ -181,7 +181,8 @@ Yasser Kejiou, 17 ans, Bruxelles (Schaerbeek), dernière année de secondaire. E
 | Date | Règle |
 |---|---|
 | 24-30 nov. (Black Friday le 27, Cyber Monday le 30) | **Aucun nouveau test.** Gagnantes + offre BFCM seulement. Offre recommandée : **Duo + 3e cartouche offerte** (≈ 28,50 $ de marge) plutôt que −20 % (≈ 21,60 $). Les coûts des pubs (CPM) sont estimés à environ +48 % |
-| 1er-4 déc. | Test 2 : itérations + créas non testées, angle cadeau |
+| 22-30 nov. | Organique (2 vidéos par jour), mise en place Meta avec le profil de la mère de Yasser, 3 vraies preuves filmées : `plush-intel/PLAN-ORGA-22-30-NOV.md` |
+| **mar. 1er déc.** | **Lancement du test 1** (J+3 le 4 déc., J+5 le 6 déc.). Le test 2 vient après |
 | **ven. 4 déc.** | **« Order by Dec 4 »** : dernier jour pour une livraison avant Noël (12 jours ouvrés + préparation) |
 | Après le 4 déc. | Plus aucune promesse « livré pour Noël ». Du 5 au 14 déc., « cadeau tardif » seulement si le délai de 7 jours est confirmé par écrit |
 
