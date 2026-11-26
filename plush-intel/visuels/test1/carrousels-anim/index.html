@@ -11,7 +11,11 @@
 :root{--paper:#F6F2ED;--ink:#141414;--brown:#8A4524;--d30:#A86B45;--stone:#C9C2B8;--smoke:#6B6660;--card:#1D1A17;--cream:#FBF8F3;--water:#B9CFD6;--water2:#8EB0BB}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden;background:var(--paper)}
+#o{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--paper)}
 #s{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Pop}
+/* 9:16 TikTok : la slide 4:5 réduite dans la zone sûre (hors boutons à droite et légende en bas) */
+.f916,.f916 body,.f916 #o{height:1920px}
+.f916 #s{transform-origin:0 0;transform:translate(13px,170px) scale(.905)}
 .ab{position:absolute}
 .handle{top:52px;left:0;width:100%;text-align:center;font:500 25px Mono;letter-spacing:.03em;color:#3b342e}
 .foot{left:62px;bottom:56px;display:flex;align-items:center;gap:20px}
@@ -32,11 +36,12 @@ html,body{width:1080px;height:1350px;overflow:hidden;background:var(--paper)}
 .mono{font-family:Mono}
 .cta{font:700 40px/1.25 Pop;text-align:center}
 </style></head>
-<body><div id="s"></div>
+<body><div id="o"><div id="s"></div></div>
 <script src="lib.js"></script>
 <script src="slides.js"></script>
 <script>
-const id=new URLSearchParams(location.search).get('id');
+const qs=new URLSearchParams(location.search), id=qs.get('id');
+if(qs.get('f')==='916')document.documentElement.classList.add('f916');
 const cur=S[id];
 document.getElementById('s').innerHTML=cur.html;
 window.cur=cur;
