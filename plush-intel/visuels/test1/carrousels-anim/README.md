@@ -3,7 +3,7 @@
 Le format reprend celui des carrousels « éducatifs + data » (titre géant, graphique qui monte au swipe, « SAVE THIS » à la fin), avec les couleurs et les polices Plush. Tout est fait en code, sans IA et sans crédit. Le produit n'apparaît que sur de vraies photos détourées.
 
 - **Instagram** : `NN.mp4` (1080×1350, 4:5, 6-8 s), un fichier par slide, à poster dans l'ordre. À l'import, choisir le format 4:5.
-- **TikTok, mode photo** : `tiktok-9x16/CX-NN.png` (1080×1920). Le contenu est placé dans la zone sûre : sous les onglets, à gauche des boutons et au-dessus de la légende. Les `NN.png` en 4:5 restent dans chaque dossier.
+- **TikTok, mode photo** : `tiktok-9x16/CX-NN.png` (1080×1920). Le contenu est la slide 4:5 à 92 %, centrée (mêmes marges en haut et en bas, à gauche et à droite). Les `NN.png` en 4:5 restent dans chaque dossier.
 - **Refaire le rendu** : `node render.js` (ou `node render.js C8` pour un seul carrousel). Le contenu est dans `slides.js`, le moteur et les illustrations dans `lib.js`.
 
 | Carrousel | Slides | Accroche | Question de fin | Sources |
