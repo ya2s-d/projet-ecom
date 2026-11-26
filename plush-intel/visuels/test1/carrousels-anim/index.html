@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(fonts/anton-latin-400-normal.woff2)}
+@font-face{font-family:Mono;src:url(fonts/dm-mono-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Mono;src:url(fonts/dm-mono-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Pop;src:url(fonts/Poppins-Medium.ttf);font-weight:500}
+@font-face{font-family:Pop;src:url(fonts/Poppins-SemiBold.ttf);font-weight:600}
+@font-face{font-family:Pop;src:url(fonts/Poppins-Bold.ttf);font-weight:700}
+@font-face{font-family:LS;src:url(fonts/LeagueSpartan-VF.ttf);font-weight:100 900}
+:root{--paper:#F6F2ED;--ink:#141414;--brown:#8A4524;--d30:#A86B45;--stone:#C9C2B8;--smoke:#6B6660;--card:#1D1A17;--cream:#FBF8F3;--water:#B9CFD6;--water2:#8EB0BB}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:var(--paper)}
+#s{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Pop}
+.ab{position:absolute}
+.handle{top:52px;left:0;width:100%;text-align:center;font:500 25px Mono;letter-spacing:.03em;color:#3b342e}
+.foot{left:62px;bottom:56px;display:flex;align-items:center;gap:20px}
+.wm{font:700 46px LS;letter-spacing:-.035em;line-height:1}
+.pg{font:500 25px Mono;color:#3b342e}
+.next{right:56px;bottom:44px;background:var(--cream);border:3px solid var(--ink);border-radius:999px;padding:13px 30px;font:500 26px Mono;letter-spacing:.12em;box-shadow:0 6px 0 var(--ink);text-transform:uppercase}
+.main{position:absolute;left:56px;right:56px;top:104px;bottom:136px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.big{font-family:Anton;text-transform:uppercase;line-height:.9;text-align:center;letter-spacing:.004em;white-space:nowrap}
+.h{font:500 56px/1.13 Pop;text-align:center;letter-spacing:-.018em;max-width:940px}
+.h b{font-weight:700}.h em{font-style:normal;font-weight:700;color:var(--brown)}
+.p{font:500 36px/1.36 Pop;text-align:center;color:#2b2520;max-width:900px}
+.p b{font-weight:700;color:var(--ink)}
+.pill{display:inline-block;background:var(--brown);color:var(--cream);font:500 30px Mono;padding:11px 24px;border-radius:14px;white-space:nowrap}
+.pill.lt{background:var(--cream);color:var(--ink);border:3px solid var(--ink)}
+.card{background:var(--card);border-radius:30px;color:var(--cream)}
+.cap{font:500 26px Mono;color:#BFB3A7;text-align:center}
+.src{font:400 19px/1.55 Mono;color:#7a7067;text-align:center;max-width:960px}
+.mono{font-family:Mono}
+.cta{font:700 40px/1.25 Pop;text-align:center}
+</style></head>
+<body><div id="s"></div>
+<script src="lib.js"></script>
+<script src="slides.js"></script>
+<script>
+const id=new URLSearchParams(location.search).get('id');
+const cur=S[id];
+document.getElementById('s').innerHTML=cur.html;
+window.cur=cur;
+</script>
+</body></html>
