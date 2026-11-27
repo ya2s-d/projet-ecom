@@ -1,0 +1,3 @@
+{"_note": "Découpe des voix en répliques. S01 : python3 split_voice.py voix/S01-quiz.mp3 8 (automatique). S02 et S03 : bornes manuelles en secondes (les pauses internes étaient aussi longues que les pauses entre répliques), coupées à -0,04 s / +0,06 s.",
+ "S02-tier": [[0.00,1.90],[2.35,5.71],[6.31,9.55],[10.12,11.96],[12.50,15.74],[16.40,19.47],[20.03,23.53],[24.06,25.31]],
+ "S03-redflags": [[0.00,3.49],[4.39,6.99],[7.96,9.39],[10.10,13.06],[14.18,19.42],[21.18,23.64]]}

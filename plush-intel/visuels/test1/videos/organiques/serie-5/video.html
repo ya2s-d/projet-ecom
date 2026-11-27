@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(../../../carrousels-anim/fonts/anton-latin-400-normal.woff2)}
+@font-face{font-family:Mono;src:url(../../../carrousels-anim/fonts/dm-mono-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Mono;src:url(../../../carrousels-anim/fonts/dm-mono-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Pop;src:url(../../../carrousels-anim/fonts/Poppins-Medium.ttf);font-weight:500}
+@font-face{font-family:Pop;src:url(../../../carrousels-anim/fonts/Poppins-SemiBold.ttf);font-weight:600}
+@font-face{font-family:Pop;src:url(../../../carrousels-anim/fonts/Poppins-Bold.ttf);font-weight:700}
+@font-face{font-family:LS;src:url(../../../carrousels-anim/fonts/LeagueSpartan-VF.ttf);font-weight:100 900}
+:root{--paper:#F6F2ED;--ink:#141414;--brown:#8A4524;--d30:#A86B45;--red:#C2412D}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--paper)}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Pop}
+#s.dark{background:radial-gradient(130% 60% at 50% 0%,#3d2618 0%,#141414 62%);color:#FBF8F3}
+.ab{position:absolute}
+.main{position:absolute;left:70px;right:70px;top:250px;bottom:250px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.big{font-family:Anton;text-transform:uppercase;line-height:.92;text-align:center;white-space:nowrap}
+.h{font:700 66px/1.16 Pop;text-align:center;letter-spacing:-.02em;max-width:920px}
+.h em{font-style:normal;color:var(--brown)}
+.dark .h em{color:#E0A57E}
+.p{font:500 44px/1.35 Pop;text-align:center;max-width:900px}
+.pill{display:inline-block;background:var(--brown);color:#FBF8F3;font:500 34px Mono;padding:12px 26px;border-radius:14px;white-space:nowrap}
+.pill.lt{background:#FBF8F3;color:#141414;border:3px solid #141414}
+.pill.red{background:var(--red)}
+.mono{font-family:Mono}
+.wm{font:700 66px LS;letter-spacing:-.035em;line-height:1}
+.cap{font:500 32px Mono;color:#5b524a;text-align:center}
+.card{background:#FBF8F3;border:6px solid #141414;border-radius:36px;box-shadow:0 10px 0 #141414;display:flex;align-items:center;justify-content:center;overflow:hidden}
+</style></head>
+<body><div id="s"></div>
+<script src="../../../carrousels-anim/lib.js"></script>
+<script src="voix/durees.js"></script>
+<script src="v.js"></script>
+<script>
+const V = VIDS[new URLSearchParams(location.search).get('v')];
+const starts = []; { let a = 0; for (const sc of V.scenes) { starts.push(a); a += sc.d; } V.total = a; }
+let ci = -1;
+window.renderV = T => {
+  let i = V.scenes.length - 1; while (i > 0 && T < starts[i]) i--;
+  const sc = V.scenes[i];
+  if (i !== ci) { ci = i; const s = document.getElementById('s'); s.className = sc.cls || V.cls || ''; s.innerHTML = sc.html; window.cur = sc; fit(); }
+  render(T - starts[i]);
+};
+</script>
+</body></html>
